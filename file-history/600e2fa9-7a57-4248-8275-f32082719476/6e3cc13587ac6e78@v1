@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  html { background: #ffffff; }
+  body {
+    width: 720pt; height: 405pt; margin: 0; padding: 0;
+    background: #1C2833; font-family: Arial, sans-serif;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+  }
+  h1 { color: #FFFFFF; font-size: 36pt; margin: 0 0 30pt 0; }
+
+  .summary-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30pt; border-radius: 10pt;
+    border: 1pt solid #F1C40F;
+    text-align: center;
+  }
+
+  ul { list-style: none; padding: 0; margin: 0; }
+  li {
+    color: #ECF0F1; font-size: 22pt; margin: 15pt 0;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .check { color: #F1C40F; margin-right: 10pt; font-weight: bold; }
+</style>
+</head>
+<body>
+  <h1>总结与启示</h1>
+  <div class="summary-box">
+    <ul>
+      <li><span class="check">✓</span> 建立系统的金融认知框架</li>
+      <li><span class="check">✓</span> 掌握理性投资的底层逻辑</li>
+      <li><span class="check">✓</span> 实现财富的保值与增值</li>
+    </ul>
+  </div>
+  <p style="color: #7F8C8D; margin-top: 40pt; font-size: 14pt;">感谢观看 · 秒懂金融</p>
+</body>
+</html>

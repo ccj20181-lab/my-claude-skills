@@ -1,0 +1,192 @@
+{
+  "numStartups": 70,
+  "installMethod": "homebrew",
+  "hasSeenTasksHint": true,
+  "customApiKeyResponses": {
+    "approved": [
+      "4a90910eb8986683686d"
+    ],
+    "rejected": []
+  },
+  "tipsHistory": {
+    "new-user-warmup": 9,
+    "plan-mode-for-complex-tasks": 70,
+    "terminal-setup": 64,
+    "shift-enter-setup": 64,
+    "memory-command": 61,
+    "theme-command": 61,
+    "colorterm-truecolor": 61,
+    "status-line": 26,
+    "stickers-command": 63,
+    "prompt-queue": 2,
+    "enter-to-steer-in-relatime": 63,
+    "todo-list": 64,
+    "install-github-app": 64,
+    "install-slack-app": 64,
+    "drag-and-drop-images": 64,
+    "paste-images-mac": 65,
+    "double-esc-code-restore": 65,
+    "continue": 65,
+    "shift-tab": 68,
+    "image-paste": 64,
+    "ultrathink-keyword": 68,
+    "desktop-app": 64,
+    "web-app": 64,
+    "mobile-app": 65,
+    "custom-agents": 67,
+    "permissions": 61,
+    "rename-conversation": 56,
+    "custom-commands": 57,
+    "frontend-design-plugin": 20,
+    "git-worktrees": 61
+  },
+  "promptQueueUseCount": 298,
+  "cachedStatsigGates": {
+    "tengu_prompt_suggestion": false,
+    "tengu_streaming_tool_execution2": false,
+    "tengu_session_memory": false
+  },
+  "cachedDynamicConfigs": {
+    "tengu-top-of-feed-tip": {
+      "tip": "",
+      "color": "dim"
+    }
+  },
+  "mcpServers": {
+    "Playwright": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp@latest"
+      ],
+      "env": {}
+    }
+  },
+  "hasCompletedOnboarding": true,
+  "firstStartTime": "2026-01-08T01:54:42.334Z",
+  "sonnet45MigrationComplete": true,
+  "opus45MigrationComplete": true,
+  "thinkingMigrationComplete": true,
+  "userID": "56d6cfba5de702a38f4ecac9188be230f33620db55cedcdfc73e010ab761e8ac",
+  "lastReleaseNotesSeen": "2.1.1",
+  "projects": {
+    "/Users/henry": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {
+        "chrome-devtools": {
+          "type": "stdio",
+          "command": "npx",
+          "args": [
+            "-y",
+            "chrome-devtools-mcp@latest"
+          ],
+          "env": {}
+        },
+        "tavily": {
+          "type": "stdio",
+          "command": "npx",
+          "args": [
+            "-y",
+            "tavily-mcp"
+          ],
+          "env": {
+            "TAVILY_API_KEY": "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"
+          }
+        },
+        "rednote": {
+          "type": "stdio",
+          "command": "node",
+          "args": [
+            "/Users/henry/.npm-global/lib/node_modules/rednote-mcp/dist/cli.js",
+            "--stdio"
+          ],
+          "env": {}
+        }
+      },
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": false,
+      "projectOnboardingSeenCount": 1,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [],
+      "reactVulnerabilityCache": {
+        "detected": false,
+        "package": null,
+        "packageName": null,
+        "version": null,
+        "packageManager": null
+      },
+      "lastCost": 3.173595599999999,
+      "lastAPIDuration": 489620,
+      "lastAPIDurationWithoutRetries": 489582,
+      "lastToolDuration": 2796852,
+      "lastDuration": 6507060,
+      "lastLinesAdded": 4,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 407078,
+      "lastTotalOutputTokens": 12484,
+      "lastTotalCacheCreationInputTokens": 0,
+      "lastTotalCacheReadInputTokens": 2937304,
+      "lastTotalWebSearchRequests": 0,
+      "lastModelUsage": {
+        "claude-opus-4-5-20251101": {
+          "inputTokens": 285244,
+          "outputTokens": 9195,
+          "cacheReadInputTokens": 2713728,
+          "cacheCreationInputTokens": 0,
+          "webSearchRequests": 0,
+          "costUSD": 3.012959
+        },
+        "claude-haiku-4-5-20251001": {
+          "inputTokens": 121834,
+          "outputTokens": 3289,
+          "cacheReadInputTokens": 223576,
+          "cacheCreationInputTokens": 0,
+          "webSearchRequests": 0,
+          "costUSD": 0.16063660000000002
+        }
+      },
+      "lastSessionId": "01344556-17cf-406d-90d1-ac2cf0ec90fd",
+      "disabledMcpServers": []
+    }
+  },
+  "officialMarketplaceAutoInstallAttempted": true,
+  "officialMarketplaceAutoInstalled": true,
+  "skillUsage": {
+    "document-skills:docx": {
+      "usageCount": 3,
+      "lastUsedAt": 1767925124057
+    },
+    "document-skills:pptx": {
+      "usageCount": 2,
+      "lastUsedAt": 1767867559134
+    },
+    "document-skills:pdf": {
+      "usageCount": 1,
+      "lastUsedAt": 1767867920268
+    },
+    "finance-infographic": {
+      "usageCount": 4,
+      "lastUsedAt": 1767933279347
+    },
+    "document-skills:xlsx": {
+      "usageCount": 3,
+      "lastUsedAt": 1767936823497
+    },
+    "document-skills:skill-creator": {
+      "usageCount": 1,
+      "lastUsedAt": 1767928521810
+    },
+    "miaodong-finance-writer": {
+      "usageCount": 5,
+      "lastUsedAt": 1767942771022
+    },
+    "document-skills:theme-factory": {
+      "usageCount": 1,
+      "lastUsedAt": 1767932025911
+    }
+  }
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "content": "分析Claude官方开源的skill和agent列表",
+    "status": "completed",
+    "activeForm": "已完成分析Claude官方skill列表"
+  },
+  {
+    "content": "创建自动化skill安装脚本",
+    "status": "completed",
+    "activeForm": "已完成创建skill安装脚本"
+  },
+  {
+    "content": "配置Claude环境以支持skill",
+    "status": "completed",
+    "activeForm": "已完成配置Claude环境"
+  },
+  {
+    "content": "测试安装的skill功能",
+    "status": "in_progress",
+    "activeForm": "正在测试skill功能"
+  }
+]

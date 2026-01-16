@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  html { background: #ffffff; }
+  body {
+    width: 720pt; height: 405pt; margin: 0; padding: 0;
+    background: #1C2833; font-family: Arial, sans-serif;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  h1 { color: #FFFFFF; font-size: 40pt; margin: 0 0 20pt 0; text-transform: uppercase; letter-spacing: 2pt; }
+  h2 { color: #F1C40F; font-size: 22pt; margin: 0; font-weight: normal; }
+  /* Use div for decorative line, no text */
+  .line { width: 100pt; height: 4pt; background: #F1C40F; margin: 30pt auto; }
+</style>
+</head>
+<body>
+  <h1>秒懂金融</h1>
+  <div class="line"></div>
+  <h2>金融知识普及与实战指南</h2>
+  <p style="color: #BDC3C7; font-size: 14pt; margin-top: 30pt;">核心理念 • 底层逻辑 • 投资实战</p>
+</body>
+</html>

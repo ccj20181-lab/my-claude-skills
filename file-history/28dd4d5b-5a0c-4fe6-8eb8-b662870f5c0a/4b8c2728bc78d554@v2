@@ -1,0 +1,122 @@
+#!/usr/bin/env node
+
+const { Server } = require('@modelcontextprotocol/sdk/server/index.js');
+const { StdioServerTransport } = require('@modelcontextprotocol/sdk/server/stdio.js');
+const { TavilySearchAPI } = require('./tavily-search.js');
+const { tavilyConfig } = require('./config.js');
+
+async function main() {
+  const tavilyAPI = new TavilySearchAPI(tavilyConfig.apiKey);
+
+  const server = new Server(
+    {
+      name: 'tavily-search',
+      version: '1.0.0'
+    },
+    {
+      capabilities: {
+        tools: {
+          search: {
+            description: 'Search the web using Tavily API',
+            inputSchema: {
+              type: 'object',
+              properties: {
+                query: {
+                  type: 'string',
+                  description: 'The search query'
+                },
+                max_results: {
+                  type: 'number',
+                  description: 'Maximum number of results to return',
+                  default: 10
+                },
+                search_depth: {
+                  type: 'string',
+                  description: 'Search depth: basic or advanced',
+                  enum: ['basic', 'advanced'],
+                  default: 'basic'
+                }
+              },
+              required: ['query']
+            }
+          }
+        }
+      }
+    }
+  );
+
+  // Register the search tool
+  server.setRequestHandler('tools/list', async () => ({
+    tools: [
+      {
+        name: 'search',
+        description: 'Search the web using Tavily API',
+        inputSchema: {
+          type: 'object',
+          properties: {
+            query: {
+              type: 'string',
+              description: 'The search query'
+            },
+            max_results: {
+              type: 'number',
+              description: 'Maximum number of results to return',
+              default: 10
+            },
+            search_depth: {
+              type: 'string',
+              description: 'Search depth: basic or advanced',
+              enum: ['basic', 'advanced'],
+              default: 'basic'
+            }
+          },
+          required: ['query']
+        }
+      }
+    ]
+  }));
+
+  // Handle tool execution
+  server.setRequestHandler('tools/call', async (request) => {
+    const { name, arguments: args } = request.params;
+
+    if (name === 'search') {
+      try {
+        const results = await tavilyAPI.search(args.query, {
+          max_results: args.max_results || 10,
+          search_depth: args.search_depth || 'basic'
+        });
+
+        return {
+          content: [
+            {
+              type: 'text',
+              text: JSON.stringify(results, null, 2)
+            }
+          ]
+        };
+      } catch (error) {
+        return {
+          content: [
+            {
+              type: 'text',
+              text: `Error: ${error.message}`
+            }
+          ],
+          isError: true
+        };
+      }
+    }
+
+    throw new Error(`Unknown tool: ${name}`);
+  });
+
+  const transport = new StdioServerTransport();
+  server.connect(transport);
+  console.error('Tavily MCP server started');
+}
+
+main().catch((error) => {
+  console.error('Server failed:', error);
+  process.exit(1);
+});

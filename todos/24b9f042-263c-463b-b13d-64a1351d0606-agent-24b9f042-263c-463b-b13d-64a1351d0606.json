@@ -1,0 +1,22 @@
+[
+  {
+    "content": "读取并分析第1、4张图的问题",
+    "status": "in_progress",
+    "activeForm": "检查问题图中"
+  },
+  {
+    "content": "找出为什么保留了参考图内容",
+    "status": "pending",
+    "activeForm": "分析问题根源"
+  },
+  {
+    "content": "明确禁止使用参考图文字",
+    "status": "pending",
+    "activeForm": "优化提示词"
+  },
+  {
+    "content": "修正问题后重新生成",
+    "status": "pending",
+    "activeForm": "重新生成"
+  }
+]

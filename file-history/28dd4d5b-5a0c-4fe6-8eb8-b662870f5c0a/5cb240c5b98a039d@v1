@@ -1,0 +1,113 @@
+# 🚀 Tavily MCP 快速开始指南
+
+## 第一步: 获取API密钥
+
+1. 访问 [tavily.com](https://tavily.com)
+2. 注册并登录
+3. 在Dashboard中复制API密钥
+
+## 第二步: 配置环境
+
+```bash
+cd ~/mcp-servers/tavily-mcp
+
+# 复制环境变量模板
+cp .env.example .env
+
+# 编辑.env文件
+nano .env
+```
+
+在`.env`中填入你的API密钥:
+```env
+TAVILY_API_KEY=your_actual_api_key_here
+```
+
+## 第三步: 测试连接
+
+```bash
+# 运行测试脚本
+npm test
+
+# 或直接测试
+node test.js
+```
+
+## 第四步: 启动服务器
+
+```bash
+# 使用启动脚本
+./start.sh
+
+# 或使用npm
+npm start
+```
+
+## 第五步: 在Claude中使用
+
+### Claude Desktop配置
+
+编辑 `~/Library/Application Support/Claude/claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "tavily-search": {
+      "command": "node",
+      "args": ["/Users/henry/mcp-servers/tavily-mcp/index.js"],
+      "env": {
+        "TAVILY_API_KEY": "your_api_key_here"
+      }
+    }
+  }
+}
+```
+
+### Claude CLI配置
+
+```bash
+export MCP_SERVERS='{
+  "tavily-search": {
+    "command": "node",
+    "args": ["/Users/henry/mcp-servers/tavily-mcp/index.js"],
+    "env": {
+      "TAVILY_API_KEY": "your_api_key_here"
+    }
+  }
+}'
+```
+
+## 📝 使用示例
+
+启动后，你可以在Claude中输入:
+
+```
+请搜索"最新的AI技术趋势"
+```
+
+或指定更多参数:
+
+```
+搜索"Python编程教程"，返回5个结果，使用高级搜索
+```
+
+## ✅ 验证安装
+
+运行测试脚本确保一切正常:
+
+```bash
+cd ~/mcp-servers/tavily-mcp
+npm test
+```
+
+如果看到 "🎉 所有测试通过!" 说明安装成功!
+
+## 🆘 需要帮助?
+
+- 查看详细文档: `README.md`
+- 检查日志: `DEBUG=mcp:* npm start`
+- 查看Tavily API文档: https://docs.tavily.com
+
+---
+
+**提示**: 确保API密钥安全，不要提交到代码仓库中!

@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "env": {
+    "DISABLE_TELEMETRY": "1",
+    "DISABLE_ERROR_REPORTING": "1",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "MCP_TIMEOUT": "60000",
+    "ANTHROPIC_BASE_URL": "https://open.bigmodel.cn/api/anthropic",
+    "TAVILY_API_KEY": "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",
+    "ANTHROPIC_AUTH_TOKEN": "1969492e83ed4a519f86f577a2bdf4c9.r1QC0aAPcviNOY1T"
+  },
+  "includeCoAuthoredBy": false,
+  "permissions": {
+    "allow": [
+      "Bash",
+      "BashOutput",
+      "Edit",
+      "Glob",
+      "Grep",
+      "KillShell",
+      "NotebookEdit",
+      "Read",
+      "SlashCommand",
+      "Task",
+      "TodoWrite",
+      "WebFetch",
+      "WebSearch",
+      "Write",
+      "mcp__ide",
+      "mcp__exa",
+      "mcp__context7",
+      "mcp__mcp-deepwiki",
+      "mcp__Playwright",
+      "mcp__spec-workflow",
+      "mcp__open-websearch",
+      "mcp__serena",
+      "mcp__tavily",
+      "mcp__xiaohongshu"
+    ],
+    "deny": []
+  },
+  "hooks": {},
+  "outputStyle": "nekomata-engineer",
+  "enabledPlugins": {
+    "document-skills@anthropic-agent-skills": true
+  }
+}

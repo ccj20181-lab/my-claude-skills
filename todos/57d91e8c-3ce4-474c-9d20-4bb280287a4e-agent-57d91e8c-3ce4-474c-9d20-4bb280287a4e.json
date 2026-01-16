@@ -1,0 +1,47 @@
+[
+  {
+    "content": "安装 notebooklm-py CLI",
+    "status": "completed",
+    "activeForm": "正在安装 notebooklm-py CLI"
+  },
+  {
+    "content": "安装 Python 3.11",
+    "status": "completed",
+    "activeForm": "正在安装 Python 3.11"
+  },
+  {
+    "content": "使用 Python 3.11 重新安装 notebooklm-py",
+    "status": "completed",
+    "activeForm": "正在重新安装 notebooklm-py"
+  },
+  {
+    "content": "认证 Google NotebookLM",
+    "status": "in_progress",
+    "activeForm": "正在认证 Google NotebookLM"
+  },
+  {
+    "content": "创建《秒懂金融》研究 notebook",
+    "status": "pending",
+    "activeForm": "正在创建《秒懂金融》研究 notebook"
+  },
+  {
+    "content": "添加相关源（搜索秒懂金融相关内容）",
+    "status": "pending",
+    "activeForm": "正在添加相关源"
+  },
+  {
+    "content": "测试研究自动化功能",
+    "status": "pending",
+    "activeForm": "正在测试研究自动化功能"
+  },
+  {
+    "content": "测试内容生成（播客/测验/报告）",
+    "status": "pending",
+    "activeForm": "正在测试内容生成功能"
+  },
+  {
+    "content": "提交 skills 变更到 GitHub",
+    "status": "pending",
+    "activeForm": "正在提交变更到 GitHub"
+  }
+]

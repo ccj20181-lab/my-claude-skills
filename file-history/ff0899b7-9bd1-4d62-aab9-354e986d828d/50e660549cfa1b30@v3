@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "xiaohongshu": {
+      "command": "xiaohongshu-mcp",
+      "args": []
+    }
+  }
+}

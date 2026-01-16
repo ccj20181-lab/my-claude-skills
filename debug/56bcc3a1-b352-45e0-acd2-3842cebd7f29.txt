@@ -1,0 +1,1832 @@
+2026-01-08T02:18:23.384Z [DEBUG] Watching for changes in setting files /Users/henry/.claude, /Users/henry/.claude...
+2026-01-08T02:18:23.384Z [DEBUG] [init] configureGlobalMTLS starting
+2026-01-08T02:18:23.384Z [DEBUG] [init] configureGlobalMTLS complete
+2026-01-08T02:18:23.384Z [DEBUG] [init] configureGlobalAgents starting
+2026-01-08T02:18:23.384Z [DEBUG] [init] configureGlobalAgents complete
+2026-01-08T02:18:23.389Z [DEBUG] [LSP MANAGER] initializeLspServerManager() called
+2026-01-08T02:18:23.389Z [DEBUG] [LSP MANAGER] Created manager instance, state=pending
+2026-01-08T02:18:23.389Z [DEBUG] [LSP MANAGER] Starting async initialization (generation 1)
+2026-01-08T02:18:23.390Z [DEBUG] Applying permission update: Adding 22 allow rule(s) to destination 'userSettings': ["Bash","BashOutput","Edit","Glob","Grep","KillShell","NotebookEdit","Read","SlashCommand","Task","TodoWrite","WebFetch","WebSearch","Write","mcp__ide","mcp__exa","mcp__context7","mcp__mcp-deepwiki","mcp__Playwright","mcp__spec-workflow","mcp__open-websearch","mcp__serena"]
+2026-01-08T02:18:23.390Z [DEBUG] Applying permission update: Adding 22 allow rule(s) to destination 'projectSettings': ["Bash","BashOutput","Edit","Glob","Grep","KillShell","NotebookEdit","Read","SlashCommand","Task","TodoWrite","WebFetch","WebSearch","Write","mcp__ide","mcp__exa","mcp__context7","mcp__mcp-deepwiki","mcp__Playwright","mcp__spec-workflow","mcp__open-websearch","mcp__serena"]
+2026-01-08T02:18:23.390Z [DEBUG] [STARTUP] Loading MCP configs...
+2026-01-08T02:18:23.390Z [DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+2026-01-08T02:18:23.390Z [DEBUG] Total LSP servers loaded: 0
+2026-01-08T02:18:23.391Z [DEBUG] [LSP SERVER MANAGER] getAllLspServers returned 0 server(s)
+2026-01-08T02:18:23.391Z [DEBUG] LSP manager initialized with 0 servers
+2026-01-08T02:18:23.391Z [DEBUG] [STARTUP] MCP configs loaded in 1ms
+2026-01-08T02:18:23.391Z [DEBUG] LSP server manager initialized successfully
+2026-01-08T02:18:23.391Z [DEBUG] LSP notification handlers registered successfully for all 0 server(s)
+2026-01-08T02:18:23.391Z [DEBUG] [STARTUP] Running setup()...
+2026-01-08T02:18:23.392Z [DEBUG] Stats cache does not exist, returning empty cache
+2026-01-08T02:18:23.392Z [DEBUG] Stats cache empty, processing all historical data in background
+2026-01-08T02:18:23.392Z [DEBUG] Plugin autoupdate: skipped (auto-updater disabled)
+2026-01-08T02:18:23.393Z [DEBUG] Loading skills from: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/henry/.claude/skills, project=[]
+2026-01-08T02:18:23.444Z [DEBUG] installed_plugins.json doesn't exist, returning empty V2 object
+2026-01-08T02:18:23.448Z [DEBUG] Writing to temp file: /Users/henry/.claude/todos/56bcc3a1-b352-45e0-acd2-3842cebd7f29-agent-56bcc3a1-b352-45e0-acd2-3842cebd7f29.json.tmp.3655.1767838703448
+2026-01-08T02:18:23.448Z [DEBUG] Temp file written successfully, size: 2 bytes
+2026-01-08T02:18:23.448Z [DEBUG] Renaming /Users/henry/.claude/todos/56bcc3a1-b352-45e0-acd2-3842cebd7f29-agent-56bcc3a1-b352-45e0-acd2-3842cebd7f29.json.tmp.3655.1767838703448 to /Users/henry/.claude/todos/56bcc3a1-b352-45e0-acd2-3842cebd7f29-agent-56bcc3a1-b352-45e0-acd2-3842cebd7f29.json
+2026-01-08T02:18:23.448Z [DEBUG] File /Users/henry/.claude/todos/56bcc3a1-b352-45e0-acd2-3842cebd7f29-agent-56bcc3a1-b352-45e0-acd2-3842cebd7f29.json written atomically
+2026-01-08T02:18:23.449Z [DEBUG] getPluginSkills: Processing 0 enabled plugins
+2026-01-08T02:18:23.449Z [DEBUG] Total plugin skills loaded: 0
+2026-01-08T02:18:23.449Z [DEBUG] Total plugin commands loaded: 0
+2026-01-08T02:18:23.449Z [DEBUG] Registered 0 hooks from 0 plugins
+2026-01-08T02:18:23.449Z [DEBUG] [STARTUP] setup() completed in 58ms
+2026-01-08T02:18:23.449Z [DEBUG] [STARTUP] Loading commands and agents...
+2026-01-08T02:18:23.475Z [DEBUG] Loaded 11 unique skills (managed: 0, user: 0, project: 0, legacy commands: 11)
+2026-01-08T02:18:23.475Z [DEBUG] getSkills returning: 11 skill dir commands, 0 plugin skills
+2026-01-08T02:18:23.477Z [DEBUG] Git remote URL: null
+2026-01-08T02:18:23.477Z [DEBUG] No git remote URL found
+2026-01-08T02:18:23.477Z [DEBUG] Not in a GitHub repository, skipping path mapping update
+2026-01-08T02:18:23.478Z [DEBUG] Creating shell snapshot for zsh (/bin/zsh)
+2026-01-08T02:18:23.478Z [DEBUG] Looking for shell config file: /Users/henry/.zshrc
+2026-01-08T02:18:23.478Z [DEBUG] Shell config file not found: /Users/henry/.zshrc, creating snapshot with Claude Code defaults only
+2026-01-08T02:18:23.478Z [DEBUG] Snapshots directory: /Users/henry/.claude/shell-snapshots
+2026-01-08T02:18:23.478Z [DEBUG] Creating snapshot at: /Users/henry/.claude/shell-snapshots/snapshot-zsh-1767838703478-ny2rx4.sh
+2026-01-08T02:18:23.478Z [DEBUG] Shell binary exists: true
+2026-01-08T02:18:23.478Z [DEBUG] Execution timeout: 10000ms
+2026-01-08T02:18:23.481Z [DEBUG] Total plugin agents loaded: 0
+2026-01-08T02:18:23.481Z [DEBUG] [STARTUP] Commands and agents loaded in 32ms
+2026-01-08T02:18:23.481Z [DEBUG] [STARTUP] Running showSetupScreens()...
+2026-01-08T02:18:23.481Z [DEBUG] [render] initYoga starting
+2026-01-08T02:18:23.484Z [DEBUG] [render] initYoga complete
+2026-01-08T02:18:23.498Z [DEBUG] Shell snapshot created successfully (582 bytes)
+2026-01-08T02:18:24.554Z [DEBUG] [STARTUP] showSetupScreens() completed in 1073ms
+2026-01-08T02:18:24.561Z [DEBUG] MCP server "Playwright": Starting connection with timeout of 60000ms
+2026-01-08T02:18:24.565Z [DEBUG] MCP server "tavily": Starting connection with timeout of 60000ms
+2026-01-08T02:18:24.570Z [DEBUG] Initialized versioned plugins system with 0 plugins
+2026-01-08T02:18:24.572Z [DEBUG] Writing to temp file: /Users/henry/.claude.json.tmp.3655.1767838704572
+2026-01-08T02:18:24.572Z [DEBUG] Preserving file permissions: 100644
+2026-01-08T02:18:24.572Z [DEBUG] Temp file written successfully, size: 2705 bytes
+2026-01-08T02:18:24.572Z [DEBUG] Applied original permissions to temp file
+2026-01-08T02:18:24.572Z [DEBUG] Renaming /Users/henry/.claude.json.tmp.3655.1767838704572 to /Users/henry/.claude.json
+2026-01-08T02:18:24.573Z [DEBUG] File /Users/henry/.claude.json written atomically
+2026-01-08T02:18:24.788Z [DEBUG] Skipping SessionStart:startup hook execution - workspace trust not accepted
+2026-01-08T02:18:24.788Z [DEBUG] [render] initYoga starting
+2026-01-08T02:18:24.788Z [DEBUG] [render] initYoga complete
+2026-01-08T02:18:24.790Z [DEBUG] Summarizing all 12 messages (~3667 tokens)
+2026-01-08T02:18:24.790Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:18:24.791Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:18:24.791Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:18:24.791Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:18:24.796Z [DEBUG] Skipping SubagentStart:Plan hook execution - workspace trust not accepted
+2026-01-08T02:18:24.799Z [DEBUG] Skipping SubagentStart:Explore hook execution - workspace trust not accepted
+2026-01-08T02:18:24.802Z [DEBUG] Skipping SubagentStart:Bash hook execution - workspace trust not accepted
+2026-01-08T02:18:24.903Z [DEBUG] Writing to temp file: /Users/henry/.claude.json.tmp.3655.1767838704903
+2026-01-08T02:18:24.903Z [DEBUG] Preserving file permissions: 100644
+2026-01-08T02:18:24.903Z [DEBUG] Temp file written successfully, size: 2597 bytes
+2026-01-08T02:18:24.903Z [DEBUG] Applied original permissions to temp file
+2026-01-08T02:18:24.903Z [DEBUG] Renaming /Users/henry/.claude.json.tmp.3655.1767838704903 to /Users/henry/.claude.json
+2026-01-08T02:18:24.903Z [DEBUG] File /Users/henry/.claude.json written atomically
+2026-01-08T02:18:24.904Z [DEBUG] Detected Homebrew cask installation: /opt/homebrew/Caskroom/claude-code/2.1.1/claude
+2026-01-08T02:18:24.904Z [DEBUG] [REPL:mount] REPL mounted, disabled=false
+2026-01-08T02:18:24.905Z [DEBUG] Detected Homebrew cask installation: /opt/homebrew/Caskroom/claude-code/2.1.1/claude
+2026-01-08T02:18:24.905Z [DEBUG] Official marketplace auto-install skipped: unknown
+2026-01-08T02:18:24.905Z [DEBUG] performStartupChecks called
+2026-01-08T02:18:24.905Z [DEBUG] Trust not accepted for current directory - skipping plugin installations
+2026-01-08T02:18:24.909Z [DEBUG] Writing to temp file: /Users/henry/.claude.json.tmp.3655.1767838704909
+2026-01-08T02:18:24.909Z [DEBUG] Preserving file permissions: 100644
+2026-01-08T02:18:24.909Z [DEBUG] Temp file written successfully, size: 2705 bytes
+2026-01-08T02:18:24.909Z [DEBUG] Applied original permissions to temp file
+2026-01-08T02:18:24.909Z [DEBUG] Renaming /Users/henry/.claude.json.tmp.3655.1767838704909 to /Users/henry/.claude.json
+2026-01-08T02:18:24.909Z [DEBUG] File /Users/henry/.claude.json written atomically
+2026-01-08T02:18:24.909Z [DEBUG] AutoUpdaterWrapper: Installation type: package-manager
+2026-01-08T02:18:24.909Z [DEBUG] Showing marketplace installation failure notification
+2026-01-08T02:18:24.909Z [DEBUG] Loaded plugins - Enabled: 0, Disabled: 0, Commands: 0, Agents: 0, Errors: 0
+2026-01-08T02:18:24.938Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:18:24.938Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:18:24.938Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:18:24.941Z [DEBUG] Skills and commands included in Skill tool: zcf:git-worktree, zcf:bmad-init, zcf:workflow, zcf:feat, zcf:init-project, zcf:git-commit, zcf:git-cleanBranches, zcf:git-rollback, oncall-triage, commit-push-pr, dedupe
+2026-01-08T02:18:24.941Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:18:24.941Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:18:24.941Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:18:24.941Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:18:24.941Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:18:24.941Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:18:24.941Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:18:24.942Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:18:24.942Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:18:24.945Z [DEBUG] Detected Homebrew cask installation: /opt/homebrew/Caskroom/claude-code/2.1.1/claude
+2026-01-08T02:18:24.959Z [DEBUG] Writing to temp file: /Users/henry/.claude.json.tmp.3655.1767838704959
+2026-01-08T02:18:24.959Z [DEBUG] Preserving file permissions: 100644
+2026-01-08T02:18:24.959Z [DEBUG] Temp file written successfully, size: 2705 bytes
+2026-01-08T02:18:24.959Z [DEBUG] Applied original permissions to temp file
+2026-01-08T02:18:24.959Z [DEBUG] Renaming /Users/henry/.claude.json.tmp.3655.1767838704959 to /Users/henry/.claude.json
+2026-01-08T02:18:24.959Z [DEBUG] File /Users/henry/.claude.json written atomically
+2026-01-08T02:18:25.517Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:18:26.280Z [DEBUG] MCP server "Playwright": Successfully connected to stdio server in 1723ms
+2026-01-08T02:18:26.280Z [DEBUG] MCP server "Playwright": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"Playwright","version":"0.0.54"}}
+2026-01-08T02:18:26.590Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:18:26.626Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:18:27.917Z [DEBUG] Summarizing all 10 messages (~3667 tokens)
+2026-01-08T02:18:27.917Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:18:27.918Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:18:27.918Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:18:27.918Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:18:28.006Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:18:28.007Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:18:28.021Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:18:28.022Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:18:28.022Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:18:28.022Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:18:28.329Z [DEBUG] Skipping SubagentStop hook execution - workspace trust not accepted
+2026-01-08T02:18:28.898Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:18:29.089Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:18:29.583Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:18:29.583Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:18:29.599Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:18:29.600Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:18:29.600Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:18:29.600Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:18:30.416Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:18:30.645Z [DEBUG] Summarizing all 13 messages (~3667 tokens)
+2026-01-08T02:18:30.645Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:18:30.645Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:18:30.645Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:18:30.645Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:18:30.663Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:18:30.856Z [DEBUG] executePreToolHooks called for tool: Glob
+2026-01-08T02:18:30.856Z [DEBUG] Skipping PreToolUse:Glob hook execution - workspace trust not accepted
+2026-01-08T02:18:30.867Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:18:30.868Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:18:30.868Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:18:30.868Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:18:31.295Z [DEBUG] Skipping SubagentStop hook execution - workspace trust not accepted
+2026-01-08T02:18:31.518Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:18:31.814Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:18:32.192Z [DEBUG] executePreToolHooks called for tool: Read
+2026-01-08T02:18:32.192Z [DEBUG] Skipping PreToolUse:Read hook execution - workspace trust not accepted
+2026-01-08T02:18:32.206Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:18:32.207Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:18:32.207Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:18:32.207Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:18:33.207Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:18:34.048Z [DEBUG] Summarizing all 15 messages (~3667 tokens)
+2026-01-08T02:18:34.049Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:18:34.049Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:18:34.049Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:18:34.049Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:18:35.085Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:18:36.259Z [ERROR] MCP server "tavily" Server stderr: Tavily MCP server running on stdio
+2026-01-08T02:18:36.261Z [DEBUG] MCP server "tavily": Successfully connected to stdio server in 11697ms
+2026-01-08T02:18:36.261Z [DEBUG] MCP server "tavily": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"tavily-mcp","version":"0.2.10"}}
+2026-01-08T02:18:36.351Z [DEBUG] Skipping SubagentStop hook execution - workspace trust not accepted
+2026-01-08T02:18:36.483Z [DEBUG] Summarizing all 16 messages (~3667 tokens)
+2026-01-08T02:18:36.483Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:18:36.483Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:18:36.483Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:18:36.483Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:18:37.466Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:18:40.844Z [DEBUG] Summarizing all 17 messages (~5084 tokens)
+2026-01-08T02:18:40.844Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:18:40.844Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:18:40.844Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:18:40.844Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:18:41.470Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:18:45.532Z [DEBUG] Summarizing all 9 messages (~3667 tokens)
+2026-01-08T02:18:45.533Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:18:45.533Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:18:45.533Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:18:45.533Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:18:46.671Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:18:50.334Z [DEBUG] Summarizing all 14 messages (~3667 tokens)
+2026-01-08T02:18:50.335Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:18:50.335Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:18:50.335Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:18:50.335Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:18:51.391Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:18:52.100Z [DEBUG] MCP server "tavily": Sending SIGINT to MCP server process
+2026-01-08T02:18:52.153Z [DEBUG] MCP server "tavily": MCP server process exited cleanly
+2026-01-08T02:18:52.154Z [DEBUG] MCP server "tavily": Starting connection with timeout of 60000ms
+2026-01-08T02:18:53.732Z [ERROR] MCP server "tavily" Server stderr: Tavily MCP server running on stdio
+2026-01-08T02:18:53.734Z [DEBUG] MCP server "tavily": Successfully connected to stdio server in 1581ms
+2026-01-08T02:18:53.734Z [DEBUG] MCP server "tavily": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"tavily-mcp","version":"0.2.10"}}
+2026-01-08T02:18:53.736Z [DEBUG] FileHistory: Added snapshot for d89f6df4-52fd-4d44-bb4a-ac41e215257c, tracking 0 files
+2026-01-08T02:18:53.737Z [DEBUG] UserCommandMessage rendering: "mcp" (args: "none")
+2026-01-08T02:18:53.737Z [DEBUG] isSkillFormat: false
+2026-01-08T02:18:53.741Z [DEBUG] Detected Homebrew cask installation: /opt/homebrew/Caskroom/claude-code/2.1.1/claude
+2026-01-08T02:18:53.745Z [DEBUG] AutoUpdaterWrapper: Installation type: package-manager
+2026-01-08T02:18:54.406Z [DEBUG] Summarizing all 8 messages (~3667 tokens)
+2026-01-08T02:18:54.407Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:18:54.407Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:18:54.407Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:18:54.407Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:18:55.264Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:18:57.326Z [DEBUG] Summarizing all 14 messages (~5083 tokens)
+2026-01-08T02:18:57.327Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:18:57.327Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:18:57.327Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:18:57.327Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:18:57.876Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:19:05.346Z [DEBUG] UserCommandMessage rendering: "mcp" (args: "none")
+2026-01-08T02:19:05.346Z [DEBUG] isSkillFormat: false
+2026-01-08T02:19:05.353Z [DEBUG] Detected Homebrew cask installation: /opt/homebrew/Caskroom/claude-code/2.1.1/claude
+2026-01-08T02:19:05.358Z [DEBUG] AutoUpdaterWrapper: Installation type: package-manager
+2026-01-08T02:19:06.105Z [DEBUG] Summarizing all 22 messages (~6551 tokens)
+2026-01-08T02:19:06.106Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:19:06.107Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:19:06.107Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:19:06.107Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:19:07.098Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:19:10.550Z [DEBUG] Summarizing all 38 messages (~8949 tokens)
+2026-01-08T02:19:10.551Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:19:10.552Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:19:10.552Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:19:10.552Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:19:11.484Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:19:13.240Z [DEBUG] Summarizing all 42 messages (~9586 tokens)
+2026-01-08T02:19:13.240Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:19:13.240Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:19:13.240Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:19:13.240Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:19:14.207Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:19:16.839Z [DEBUG] Summarizing all 43 messages (~9586 tokens)
+2026-01-08T02:19:16.840Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:19:16.840Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:19:16.840Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:19:16.840Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:19:19.742Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:19:19.742Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:19:19.742Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:19:19.742Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:19:19.753Z [DEBUG] Skipping UserPromptSubmit hook execution - workspace trust not accepted
+2026-01-08T02:19:19.757Z [DEBUG] FileHistory: Making snapshot for message 286d1ff4-10b9-48ff-8ae8-9cabb9edce40
+2026-01-08T02:19:19.757Z [DEBUG] FileHistory: Added snapshot for 286d1ff4-10b9-48ff-8ae8-9cabb9edce40, tracking 0 files
+2026-01-08T02:19:19.766Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:19:19.766Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:19:19.766Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:19:19.766Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:19:19.776Z [DEBUG] Total plugin output styles loaded: 0
+2026-01-08T02:19:19.776Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:19:19.781Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:19:19.781Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:19:19.781Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:19:20.779Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:19:22.007Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:19:22.585Z [DEBUG] executePreToolHooks called for tool: WebSearch
+2026-01-08T02:19:22.585Z [DEBUG] Skipping PreToolUse:WebSearch hook execution - workspace trust not accepted
+2026-01-08T02:19:22.593Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:19:22.594Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:19:22.594Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:19:22.594Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:19:22.713Z [ERROR] Error streaming, falling back to non-streaming mode: 400 {"type":"error","error":{"type":"invalid_request_error","message":"invalid params, function name or parameters is empty (2013)"},"request_id":"05ae472a15c6b28f9e92b2b88608cd2c"}
+2026-01-08T02:19:22.713Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:19:22.713Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:19:22.713Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:19:22.817Z [ERROR] Error in non-streaming fallback: 400 {"type":"error","error":{"type":"invalid_request_error","message":"invalid params, function name or parameters is empty (2013)"},"request_id":"05ae472ae8d3bb3fb37d4ac0f32d2c46"}
+2026-01-08T02:19:22.820Z [DEBUG] Skipping PostToolUse:WebSearch hook execution - workspace trust not accepted
+2026-01-08T02:19:22.832Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:19:22.832Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:19:22.832Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:19:22.832Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:19:22.848Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:19:22.849Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:19:22.849Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:19:22.849Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:19:23.824Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:19:24.162Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:19:24.479Z [DEBUG] executePreToolHooks called for tool: mcp__tavily__tavily-search
+2026-01-08T02:19:24.479Z [DEBUG] Skipping PreToolUse:mcp__tavily__tavily-search hook execution - workspace trust not accepted
+2026-01-08T02:19:24.509Z [DEBUG] executePermissionRequestHooks called for tool: mcp__tavily__tavily-search
+2026-01-08T02:19:24.510Z [DEBUG] Skipping PermissionRequest:mcp__tavily__tavily-search hook execution - workspace trust not accepted
+2026-01-08T02:19:25.194Z [DEBUG] Summarizing all 47 messages (~9966 tokens)
+2026-01-08T02:19:25.196Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:19:25.197Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:19:25.197Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:19:25.197Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:19:26.306Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:19:28.079Z [DEBUG] Summarizing all 53 messages (~13839 tokens)
+2026-01-08T02:19:28.079Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:19:28.080Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:19:28.080Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:19:28.080Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:19:28.904Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:19:29.789Z [DEBUG] Persisting permission update: addRules to source 'localSettings'
+2026-01-08T02:19:29.790Z [DEBUG] Persisting 1 allow rule(s) to localSettings
+2026-01-08T02:19:29.791Z [DEBUG] Writing to temp file: /Users/henry/.claude/settings.local.json.tmp.3655.1767838769791
+2026-01-08T02:19:29.792Z [DEBUG] Temp file written successfully, size: 83 bytes
+2026-01-08T02:19:29.792Z [DEBUG] Renaming /Users/henry/.claude/settings.local.json.tmp.3655.1767838769791 to /Users/henry/.claude/settings.local.json
+2026-01-08T02:19:29.792Z [DEBUG] File /Users/henry/.claude/settings.local.json written atomically
+2026-01-08T02:19:29.795Z [DEBUG] Applying permission update: Adding 1 allow rule(s) to destination 'localSettings': ["mcp__tavily__tavily-search"]
+2026-01-08T02:19:29.800Z [DEBUG] MCP server "tavily": Calling MCP tool: tavily-search
+2026-01-08T02:19:29.808Z [DEBUG] Detected Homebrew cask installation: /opt/homebrew/Caskroom/claude-code/2.1.1/claude
+2026-01-08T02:19:29.809Z [DEBUG] AutoUpdaterWrapper: Installation type: package-manager
+2026-01-08T02:19:31.071Z [DEBUG] Summarizing all 59 messages (~15165 tokens)
+2026-01-08T02:19:31.072Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:19:31.072Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:19:31.072Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:19:31.072Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:19:31.626Z [DEBUG] MCP server "tavily": Tool 'tavily-search' failed after 1s: MCP error -32603: Invalid API key
+2026-01-08T02:19:31.629Z [DEBUG] Skipping PostToolUseFailure:mcp__tavily__tavily-search hook execution - workspace trust not accepted
+2026-01-08T02:19:31.640Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:19:31.640Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:19:31.640Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:19:31.640Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:19:31.654Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:19:31.655Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:19:31.655Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:19:31.655Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:19:31.884Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:19:32.908Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:19:33.690Z [DEBUG] executePreToolHooks called for tool: WebFetch
+2026-01-08T02:19:33.691Z [DEBUG] Skipping PreToolUse:WebFetch hook execution - workspace trust not accepted
+2026-01-08T02:19:35.033Z [DEBUG] Summarizing all 60 messages (~15165 tokens)
+2026-01-08T02:19:35.033Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:19:35.033Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:19:35.033Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:19:35.033Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:19:35.809Z [DEBUG] Skipping PostToolUseFailure:WebFetch hook execution - workspace trust not accepted
+2026-01-08T02:19:35.819Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:19:35.819Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:19:35.819Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:19:35.819Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:19:35.833Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:19:35.835Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:19:35.835Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:19:35.835Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:19:35.943Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:19:36.657Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:19:38.449Z [DEBUG] Summarizing all 61 messages (~15165 tokens)
+2026-01-08T02:19:38.450Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:19:38.450Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:19:38.450Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:19:38.450Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:19:39.064Z [DEBUG] Skipping Stop hook execution - workspace trust not accepted
+2026-01-08T02:19:39.176Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:19:41.908Z [DEBUG] Summarizing all 64 messages (~17073 tokens)
+2026-01-08T02:19:41.909Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:19:41.909Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:19:41.909Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:19:41.910Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:19:42.590Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:19:45.738Z [DEBUG] Summarizing all 68 messages (~17654 tokens)
+2026-01-08T02:19:45.738Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:19:45.739Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:19:45.739Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:19:45.739Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:19:46.746Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:19:55.272Z [DEBUG] Summarizing all 69 messages (~17654 tokens)
+2026-01-08T02:19:55.274Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:19:55.275Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:19:55.275Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:19:55.275Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:19:55.745Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:19:58.877Z [DEBUG] Summarizing all 88 messages (~22830 tokens)
+2026-01-08T02:19:58.878Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:19:58.879Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:19:58.879Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:19:58.879Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:19:59.796Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:20:02.189Z [DEBUG] Summarizing all 92 messages (~25233 tokens)
+2026-01-08T02:20:02.190Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:20:02.191Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:20:02.191Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:20:02.191Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:20:03.008Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:20:05.851Z [DEBUG] Summarizing all 98 messages (~32037 tokens)
+2026-01-08T02:20:05.852Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:20:05.852Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:20:05.852Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:20:05.852Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:20:06.667Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:20:09.408Z [DEBUG] Summarizing all 124 messages (~37793 tokens)
+2026-01-08T02:20:09.409Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:20:09.410Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:20:09.410Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:20:09.410Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:20:10.656Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:20:35.823Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:20:35.823Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:20:35.823Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:20:35.823Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:20:35.830Z [DEBUG] Skipping UserPromptSubmit hook execution - workspace trust not accepted
+2026-01-08T02:20:35.834Z [DEBUG] FileHistory: Making snapshot for message fe328cd5-b4e1-4d18-82d0-bc97cf205172
+2026-01-08T02:20:35.834Z [DEBUG] FileHistory: Added snapshot for fe328cd5-b4e1-4d18-82d0-bc97cf205172, tracking 0 files
+2026-01-08T02:20:35.845Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:20:35.845Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:20:35.846Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:20:35.846Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:20:35.848Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:20:35.852Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:20:35.852Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:20:35.852Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:20:36.826Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:20:37.217Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:20:38.474Z [DEBUG] executePreToolHooks called for tool: WebSearch
+2026-01-08T02:20:38.474Z [DEBUG] Skipping PreToolUse:WebSearch hook execution - workspace trust not accepted
+2026-01-08T02:20:38.485Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:20:38.485Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:20:38.485Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:20:38.485Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:20:38.589Z [ERROR] Error streaming, falling back to non-streaming mode: 400 {"type":"error","error":{"type":"invalid_request_error","message":"invalid params, function name or parameters is empty (2013)"},"request_id":"05ae47764ddd4a792afecbf955391e4c"}
+2026-01-08T02:20:38.589Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:20:38.589Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:20:38.589Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:20:38.709Z [ERROR] Error in non-streaming fallback: 400 {"type":"error","error":{"type":"invalid_request_error","message":"invalid params, function name or parameters is empty (2013)"},"request_id":"05ae47764f54caee4a215edd33ef357b"}
+2026-01-08T02:20:38.710Z [DEBUG] Skipping PostToolUse:WebSearch hook execution - workspace trust not accepted
+2026-01-08T02:20:38.721Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:20:38.721Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:20:38.721Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:20:38.721Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:20:38.737Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:20:38.738Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:20:38.738Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:20:38.738Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:20:39.895Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:20:40.354Z [DEBUG] executePreToolHooks called for tool: mcp__tavily__tavily-search
+2026-01-08T02:20:40.355Z [DEBUG] Skipping PreToolUse:mcp__tavily__tavily-search hook execution - workspace trust not accepted
+2026-01-08T02:20:40.370Z [DEBUG] MCP server "tavily": Calling MCP tool: tavily-search
+2026-01-08T02:20:42.172Z [DEBUG] MCP server "tavily": Tool 'tavily-search' failed after 1s: MCP error -32603: Invalid API key
+2026-01-08T02:20:42.173Z [DEBUG] Skipping PostToolUseFailure:mcp__tavily__tavily-search hook execution - workspace trust not accepted
+2026-01-08T02:20:42.184Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:20:42.184Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:20:42.184Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:20:42.184Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:20:42.199Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:20:42.201Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:20:42.201Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:20:42.201Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:20:43.726Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:20:47.002Z [DEBUG] Streaming aborted by user: Request was aborted.
+2026-01-08T02:20:47.002Z [ERROR] Error in non-streaming fallback: Request was aborted.
+2026-01-08T02:21:12.000Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:21:12.000Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:21:12.000Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:21:12.000Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:21:12.006Z [DEBUG] Skipping UserPromptSubmit hook execution - workspace trust not accepted
+2026-01-08T02:21:12.006Z [DEBUG] FileHistory: Making snapshot for message 4745c548-e5d4-41b2-a710-c297e5b5df54
+2026-01-08T02:21:12.007Z [DEBUG] FileHistory: Added snapshot for 4745c548-e5d4-41b2-a710-c297e5b5df54, tracking 0 files
+2026-01-08T02:21:12.016Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:21:12.016Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:21:12.016Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:21:12.016Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:21:12.022Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:21:12.027Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:21:12.027Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:21:12.027Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:21:12.995Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:21:13.471Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:21:15.124Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:21:15.125Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:21:15.159Z [DEBUG] tree-sitter: loaded from embedded
+2026-01-08T02:21:15.167Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:21:15.167Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:21:15.167Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:21:15.167Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:21:15.978Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:21:18.095Z [DEBUG] No session environment scripts found
+2026-01-08T02:21:18.114Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:21:18.114Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:21:18.114Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:21:18.114Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:21:18.118Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:21:18.124Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:21:18.124Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:21:18.124Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:21:18.124Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:21:18.135Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:21:18.137Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:21:18.137Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:21:18.137Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:21:19.051Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:21:19.062Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:21:19.555Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:21:19.555Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:21:19.587Z [DEBUG] Skipping PostToolUseFailure:Bash hook execution - workspace trust not accepted
+2026-01-08T02:21:19.591Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:21:19.591Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:21:19.591Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:21:19.591Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:21:19.596Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:21:19.597Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:21:19.597Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:21:19.597Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:21:20.871Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:21:21.300Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:21:21.300Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:21:21.319Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:21:21.319Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:21:21.319Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:21:21.319Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:21:21.319Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:21:21.319Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:21:21.319Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:21:21.319Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:21:21.319Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:21:21.319Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:21:21.319Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:21:21.319Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:21:22.220Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:21:22.225Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:21:22.229Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:21:51.402Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:21:51.402Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:21:51.402Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:21:51.402Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:21:51.406Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:21:51.412Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:21:51.412Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:21:51.412Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:21:51.412Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:21:51.422Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:21:51.423Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:21:51.423Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:21:51.423Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:21:52.536Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:21:52.812Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:21:53.468Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:21:53.468Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:21:53.490Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:21:53.490Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:21:53.490Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:21:53.490Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:21:53.805Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:23:24.555Z [DEBUG] BigQuery metrics export: trust not established, skipping
+2026-01-08T02:23:30.670Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:23:30.670Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:23:30.670Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:23:30.670Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:23:30.677Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:23:30.683Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:23:30.683Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:23:30.683Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:23:30.683Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:23:30.689Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:23:30.691Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:23:30.691Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:23:30.691Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:23:31.517Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:23:31.976Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:23:33.204Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:23:33.204Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:23:33.229Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:23:33.229Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:23:33.229Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:23:33.229Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:23:33.229Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:23:33.229Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:23:33.229Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:23:33.229Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:23:33.798Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:23:33.950Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:23:41.882Z [DEBUG] Skipping PostToolUseFailure:Bash hook execution - workspace trust not accepted
+2026-01-08T02:23:41.894Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:23:41.894Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:23:41.894Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:23:41.894Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:23:41.906Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:23:41.907Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:23:41.907Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:23:41.907Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:23:42.741Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:23:44.404Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:23:44.405Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:23:44.429Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:23:44.429Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:23:44.429Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:23:44.429Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:23:44.429Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:23:44.429Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:23:44.429Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:23:44.429Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:23:44.429Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:23:44.429Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:23:44.429Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:23:44.429Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:23:45.177Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:23:45.179Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:23:45.479Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:23:56.317Z [DEBUG] Skipping PostToolUseFailure:Bash hook execution - workspace trust not accepted
+2026-01-08T02:23:56.328Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:23:56.328Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:23:56.328Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:23:56.328Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:23:56.340Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:23:56.341Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:23:56.341Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:23:56.341Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:23:57.469Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:23:59.744Z [DEBUG] executePreToolHooks called for tool: Write
+2026-01-08T02:23:59.745Z [DEBUG] Skipping PreToolUse:Write hook execution - workspace trust not accepted
+2026-01-08T02:23:59.766Z [DEBUG] FileHistory: Tracked file modification for /Users/henry/test_tavily.py
+2026-01-08T02:23:59.773Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .py
+2026-01-08T02:24:00.279Z [DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/opt/homebrew/Caskroom/claude-code/2.1.1/claude)
+2026-01-08T02:24:00.765Z [DEBUG] rg error (signal=undefined, code=ABORT_ERR, stderr: rg: /Users/henry/Library/Caches/com.apple.ap.adprivacyd: Operation not permitted (os error 1)
+rg: /Users/henry/Library/Suggestions: Operation not permitted (os error 1)
+rg: /Users/henry/Library/Trial: Operation not permitted (os error 1)
+rg: /Users/henry/Library/Mail: Operation not permitted (os error 1)
+rg: /Users/henry/Library/Preferences/com.apple.homed.plist: Operation not permitted (os error 1)
+rg: /Users/henry/Library/Preferences/com.apple.MobileSMS.plist: Operation not permitted (os error 1)
+rg: /Users/henry/Library/Preferences/com.apple.homed.notbackedup.plist: Operation not permitted (os error 1)
+rg: /Users/henry/Library/DuetExpertCenter: Operation not permitted (os error 1)
+rg: /Users/henry/Library/AppleMediaServices: Operation not permitted (os error 1)
+rg: /Users/henry/Library/Accounts: Operation not permitted (os error 1)
+rg: /Users/henry/Library/IntelligencePlatform: Operation not permitted (os error 1)
+rg: /Users/henry/Library/Biome: Operation not permitted (os error 1)
+rg: /Users/henry/Library/Safari: Operation not permitted (os error 1)
+rg: /Users/henry/Library/Shortcuts: Operation not permitted (os error 1)
+rg: /Users/henry/Library/com.apple.aiml.instrumentation: Operation not permitted (os error 1)
+rg: /Users/henry/Library/Caches/com.apple.homed: Operation not permitted (os error 1)
+rg: /Users/henry/Library/DoNotDisturb: Operation not permitted (os error 1)
+rg: /Users/henry/Library/StatusKit: Operation not permitted (os error 1)
+rg: /Users/henry/Library/CoreFollowUp: Operation not permitted (os error 1)
+rg: /Users/henry/Library/Cookies: Operation not permitted (os error 1)
+rg: /Users/henry/Library/Calendars: Operation not permitted (os error 1)
+rg: /Users/henry/Library/IdentityServices: Operation not permitted (os error 1)
+rg: /Users/henry/Library/Metadata/CoreSpotlight: Operation not permitted (os error 1)
+rg: /Users/henry/Library/Autosave Information: Operation not permitted (os error 1)
+rg: /Users/henry/Library/Daemon Containers: Operation not permitted (os error 1)
+rg: /Users/henry/Library/Assistant/SiriVocabulary: Operation not permitted (os error 1)
+rg: /Users/henry/Library/PersonalizationPortrait: Operation not permitted (os error 1)
+rg: /Users/henry/Library/ContainerManager: Operation not permitted (os error 1)
+rg: /Users/henry/Library/Application Support/CallHistoryDB: Operation not permitted (os error 1)
+rg: /Users/henry/Library/Application Support/FaceTime: Operation not permitted (os error 1)
+rg: /Users/henry/Library/Application Support/FileProvider: Operation not permitted (os error 1)
+rg: /Users/henry/Library/Application Support/com.apple.TCC: Operation not permitted (os error 1)
+rg: /Users/henry/Library/Application Support/Knowledge: Operation not permitted (os error 1)
+rg: /Users/henry/Library/Application Support/com.apple.sharedfilelist: Operation not permitted (os error 1)
+rg: /Users/henry/Library/Application Support/CloudDocs/session/db: Operation not permitted (os error 1)
+rg: /Users/henry/Library/Application Support/CallHistoryTransactions: Operation not permitted (os error 1)
+rg: /Users/henry/Library/Sharing: Operation not permitted (os error 1)
+rg: /Users/henry/Library/HomeKit: Operation not permitted (os error 1)
+rg: /Users/henry/Library/Messages: Operation not permitted (os error 1)
+), 1859 results
+2026-01-08T02:24:00.766Z [DEBUG] Writing to temp file: /Users/henry/test_tavily.py.tmp.3655.1767839040766
+2026-01-08T02:24:00.767Z [DEBUG] Temp file written successfully, size: 663 bytes
+2026-01-08T02:24:00.767Z [DEBUG] Renaming /Users/henry/test_tavily.py.tmp.3655.1767839040766 to /Users/henry/test_tavily.py
+2026-01-08T02:24:00.767Z [DEBUG] File /Users/henry/test_tavily.py written atomically
+2026-01-08T02:24:00.767Z [DEBUG] Skipping PostToolUse:Write hook execution - workspace trust not accepted
+2026-01-08T02:24:00.786Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:24:00.786Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:24:00.786Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:24:00.786Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:24:00.796Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:24:00.797Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:24:00.797Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:24:00.797Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:24:02.025Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:24:02.936Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:24:02.936Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:24:02.960Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:24:02.960Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:24:02.960Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:24:02.960Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:24:02.960Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:24:02.960Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:24:02.960Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:24:02.960Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:24:03.681Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:24:03.823Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:24:12.166Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:24:12.167Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:24:12.167Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:24:12.167Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:24:12.172Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:24:12.185Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:24:12.185Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:24:12.185Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:24:12.185Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:24:12.193Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:24:12.194Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:24:12.194Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:24:12.194Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:24:13.069Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:24:13.155Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:24:14.426Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:24:14.427Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:24:14.451Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:24:14.452Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:24:14.452Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:24:14.452Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:24:15.693Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:24:19.862Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:24:19.862Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:24:19.862Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:24:19.863Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:24:19.870Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:24:19.880Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:24:19.880Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:24:19.880Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:24:19.880Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:24:19.896Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:24:19.897Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:24:19.897Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:24:19.897Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:24:20.783Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:24:21.250Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:24:21.669Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:24:21.670Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:24:21.698Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:24:21.698Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:24:21.698Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:24:21.698Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:24:21.702Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:24:21.707Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:24:21.707Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:24:21.707Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:24:21.707Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:24:21.718Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:24:21.719Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:24:21.719Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:24:21.719Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:24:22.199Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:24:23.371Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:24:23.841Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:24:23.842Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:24:23.866Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:24:23.866Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:24:23.866Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:24:23.866Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:24:24.641Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:24:56.429Z [DEBUG] Skipping PostToolUseFailure:Bash hook execution - workspace trust not accepted
+2026-01-08T02:25:16.518Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:25:16.518Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:25:16.518Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:25:16.518Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:25:16.523Z [DEBUG] Skipping UserPromptSubmit hook execution - workspace trust not accepted
+2026-01-08T02:25:16.523Z [DEBUG] FileHistory: Making snapshot for message 7724b825-5ad3-4574-88c3-5a425e097830
+2026-01-08T02:25:16.524Z [DEBUG] FileHistory: Added snapshot for 7724b825-5ad3-4574-88c3-5a425e097830, tracking 1 files
+2026-01-08T02:25:16.532Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:25:16.532Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:25:16.532Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:25:16.532Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:25:16.534Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:25:16.545Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:25:16.545Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:25:16.545Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:25:17.468Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:25:18.668Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:25:20.013Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:25:20.014Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:25:20.032Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:25:20.032Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:25:20.032Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:25:20.032Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:25:20.856Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:25:27.328Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:25:27.329Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:25:27.329Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:25:27.329Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:25:27.333Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:25:27.343Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:25:27.343Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:25:27.343Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:25:27.343Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:25:27.349Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:25:27.350Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:25:27.350Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:25:27.350Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:25:28.212Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:25:28.842Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:25:30.867Z [DEBUG] Skipping Stop hook execution - workspace trust not accepted
+2026-01-08T02:26:40.505Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:26:40.505Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:26:40.505Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:26:40.505Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:26:40.511Z [DEBUG] Skipping UserPromptSubmit hook execution - workspace trust not accepted
+2026-01-08T02:26:40.515Z [DEBUG] FileHistory: Making snapshot for message f0a54147-fcd6-458e-bc9f-08db669329e6
+2026-01-08T02:26:40.516Z [DEBUG] FileHistory: Added snapshot for f0a54147-fcd6-458e-bc9f-08db669329e6, tracking 1 files
+2026-01-08T02:26:40.527Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:26:40.528Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:26:40.528Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:26:40.528Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:26:40.530Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:26:40.535Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:26:40.535Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:26:40.535Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:26:41.457Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:26:41.505Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:26:43.006Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:26:43.006Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:26:43.029Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:26:43.029Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:26:43.029Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:26:43.029Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:26:43.910Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:26:46.843Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:26:46.844Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:26:46.844Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:26:46.844Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:26:46.856Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:26:46.873Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:26:46.873Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:26:46.873Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:26:46.873Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:26:46.887Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:26:46.889Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:26:46.889Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:26:46.889Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:26:47.733Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:26:48.757Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:26:50.562Z [DEBUG] executePreToolHooks called for tool: Write
+2026-01-08T02:26:50.562Z [DEBUG] Skipping PreToolUse:Write hook execution - workspace trust not accepted
+2026-01-08T02:26:50.580Z [DEBUG] Writing to temp file: /Users/henry/test_new_key.py.tmp.3655.1767839210580
+2026-01-08T02:26:50.581Z [DEBUG] Temp file written successfully, size: 475 bytes
+2026-01-08T02:26:50.581Z [DEBUG] Renaming /Users/henry/test_new_key.py.tmp.3655.1767839210580 to /Users/henry/test_new_key.py
+2026-01-08T02:26:50.581Z [DEBUG] File /Users/henry/test_new_key.py written atomically
+2026-01-08T02:26:50.585Z [DEBUG] FileHistory: Tracked file modification for /Users/henry/test_new_key.py
+2026-01-08T02:26:50.589Z [DEBUG] Skipping PostToolUse:Write hook execution - workspace trust not accepted
+2026-01-08T02:26:50.589Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .py
+2026-01-08T02:26:50.604Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:26:50.604Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:26:50.604Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:26:50.604Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:26:50.613Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:26:50.614Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:26:50.614Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:26:50.614Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:26:51.932Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:26:52.162Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:26:52.163Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:26:52.185Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:26:52.185Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:26:52.185Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:26:52.185Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:26:53.288Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:26:56.682Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:26:56.682Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:26:56.682Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:26:56.682Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:26:56.686Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:26:56.694Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:26:56.694Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:26:56.694Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:26:56.694Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:26:56.699Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:26:56.700Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:26:56.700Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:26:56.700Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:26:57.722Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:26:58.201Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:26:58.823Z [DEBUG] executePreToolHooks called for tool: mcp__tavily__tavily-search
+2026-01-08T02:26:58.824Z [DEBUG] Skipping PreToolUse:mcp__tavily__tavily-search hook execution - workspace trust not accepted
+2026-01-08T02:26:58.832Z [DEBUG] MCP server "tavily": Calling MCP tool: tavily-search
+2026-01-08T02:27:01.277Z [DEBUG] MCP server "tavily": Tool 'tavily-search' failed after 2s: MCP error -32603: Invalid API key
+2026-01-08T02:27:01.279Z [DEBUG] Skipping PostToolUseFailure:mcp__tavily__tavily-search hook execution - workspace trust not accepted
+2026-01-08T02:27:01.290Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:27:01.290Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:27:01.290Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:27:01.290Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:27:01.307Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:27:01.309Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:27:01.309Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:27:01.309Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:27:03.794Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:27:08.365Z [DEBUG] executePreToolHooks called for tool: Write
+2026-01-08T02:27:08.365Z [DEBUG] Skipping PreToolUse:Write hook execution - workspace trust not accepted
+2026-01-08T02:27:08.378Z [DEBUG] Writing to temp file: /Users/henry/search_zhuzhou.py.tmp.3655.1767839228378
+2026-01-08T02:27:08.378Z [DEBUG] Temp file written successfully, size: 1893 bytes
+2026-01-08T02:27:08.378Z [DEBUG] Renaming /Users/henry/search_zhuzhou.py.tmp.3655.1767839228378 to /Users/henry/search_zhuzhou.py
+2026-01-08T02:27:08.378Z [DEBUG] File /Users/henry/search_zhuzhou.py written atomically
+2026-01-08T02:27:08.382Z [DEBUG] FileHistory: Tracked file modification for /Users/henry/search_zhuzhou.py
+2026-01-08T02:27:08.386Z [DEBUG] Skipping PostToolUse:Write hook execution - workspace trust not accepted
+2026-01-08T02:27:08.387Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .py
+2026-01-08T02:27:08.402Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:27:08.402Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:27:08.402Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:27:08.402Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:27:08.414Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:27:08.415Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:27:08.415Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:27:08.415Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:27:09.875Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:27:10.804Z [DEBUG] executePreToolHooks called for tool: TodoWrite
+2026-01-08T02:27:10.804Z [DEBUG] Skipping PreToolUse:TodoWrite hook execution - workspace trust not accepted
+2026-01-08T02:27:10.823Z [DEBUG] Writing to temp file: /Users/henry/.claude/todos/56bcc3a1-b352-45e0-acd2-3842cebd7f29-agent-56bcc3a1-b352-45e0-acd2-3842cebd7f29.json.tmp.3655.1767839230823
+2026-01-08T02:27:10.823Z [DEBUG] Preserving file permissions: 100644
+2026-01-08T02:27:10.823Z [DEBUG] Temp file written successfully, size: 405 bytes
+2026-01-08T02:27:10.823Z [DEBUG] Applied original permissions to temp file
+2026-01-08T02:27:10.823Z [DEBUG] Renaming /Users/henry/.claude/todos/56bcc3a1-b352-45e0-acd2-3842cebd7f29-agent-56bcc3a1-b352-45e0-acd2-3842cebd7f29.json.tmp.3655.1767839230823 to /Users/henry/.claude/todos/56bcc3a1-b352-45e0-acd2-3842cebd7f29-agent-56bcc3a1-b352-45e0-acd2-3842cebd7f29.json
+2026-01-08T02:27:10.824Z [DEBUG] File /Users/henry/.claude/todos/56bcc3a1-b352-45e0-acd2-3842cebd7f29-agent-56bcc3a1-b352-45e0-acd2-3842cebd7f29.json written atomically
+2026-01-08T02:27:10.828Z [DEBUG] Skipping PostToolUse:TodoWrite hook execution - workspace trust not accepted
+2026-01-08T02:27:10.841Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:27:10.841Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:27:10.841Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:27:10.841Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:27:10.851Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:27:10.853Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:27:10.853Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:27:10.853Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:27:12.182Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:27:12.313Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:27:12.313Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:27:12.333Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:27:12.333Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:27:12.333Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:27:12.333Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:27:13.560Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:27:28.952Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:27:28.953Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:27:28.953Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:27:28.953Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:27:28.962Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:27:28.973Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:27:28.973Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:27:28.973Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:27:28.973Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:27:28.985Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:27:28.987Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:27:28.987Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:27:28.987Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:27:31.074Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:27:31.992Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:27:33.431Z [DEBUG] executePreToolHooks called for tool: TodoWrite
+2026-01-08T02:27:33.432Z [DEBUG] Skipping PreToolUse:TodoWrite hook execution - workspace trust not accepted
+2026-01-08T02:27:33.460Z [DEBUG] Writing to temp file: /Users/henry/.claude/todos/56bcc3a1-b352-45e0-acd2-3842cebd7f29-agent-56bcc3a1-b352-45e0-acd2-3842cebd7f29.json.tmp.3655.1767839253460
+2026-01-08T02:27:33.460Z [DEBUG] Preserving file permissions: 100644
+2026-01-08T02:27:33.460Z [DEBUG] Temp file written successfully, size: 408 bytes
+2026-01-08T02:27:33.460Z [DEBUG] Applied original permissions to temp file
+2026-01-08T02:27:33.460Z [DEBUG] Renaming /Users/henry/.claude/todos/56bcc3a1-b352-45e0-acd2-3842cebd7f29-agent-56bcc3a1-b352-45e0-acd2-3842cebd7f29.json.tmp.3655.1767839253460 to /Users/henry/.claude/todos/56bcc3a1-b352-45e0-acd2-3842cebd7f29-agent-56bcc3a1-b352-45e0-acd2-3842cebd7f29.json
+2026-01-08T02:27:33.460Z [DEBUG] File /Users/henry/.claude/todos/56bcc3a1-b352-45e0-acd2-3842cebd7f29-agent-56bcc3a1-b352-45e0-acd2-3842cebd7f29.json written atomically
+2026-01-08T02:27:33.466Z [DEBUG] Skipping PostToolUse:TodoWrite hook execution - workspace trust not accepted
+2026-01-08T02:27:33.472Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:27:33.472Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:27:33.472Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:27:33.472Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:27:33.481Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:27:33.483Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:27:33.483Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:27:33.483Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:27:35.012Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:27:35.188Z [DEBUG] executePreToolHooks called for tool: Read
+2026-01-08T02:27:35.188Z [DEBUG] Skipping PreToolUse:Read hook execution - workspace trust not accepted
+2026-01-08T02:27:35.207Z [DEBUG] Skipping PostToolUse:Read hook execution - workspace trust not accepted
+2026-01-08T02:27:35.212Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:27:35.212Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:27:35.212Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:27:35.212Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:27:35.219Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:27:35.220Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:27:35.220Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:27:35.220Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:27:38.304Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:28:02.991Z [DEBUG] executePreToolHooks called for tool: Write
+2026-01-08T02:28:02.992Z [DEBUG] Skipping PreToolUse:Write hook execution - workspace trust not accepted
+2026-01-08T02:28:03.010Z [DEBUG] Writing to temp file: /Users/henry/株洲产业投资深度研究报告.md.tmp.3655.1767839283010
+2026-01-08T02:28:03.010Z [DEBUG] Temp file written successfully, size: 4229 bytes
+2026-01-08T02:28:03.010Z [DEBUG] Renaming /Users/henry/株洲产业投资深度研究报告.md.tmp.3655.1767839283010 to /Users/henry/株洲产业投资深度研究报告.md
+2026-01-08T02:28:03.011Z [DEBUG] File /Users/henry/株洲产业投资深度研究报告.md written atomically
+2026-01-08T02:28:03.012Z [DEBUG] FileHistory: Tracked file modification for /Users/henry/株洲产业投资深度研究报告.md
+2026-01-08T02:28:03.015Z [DEBUG] Skipping PostToolUse:Write hook execution - workspace trust not accepted
+2026-01-08T02:28:03.015Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .md
+2026-01-08T02:28:03.030Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:28:03.030Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:28:03.030Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:28:03.030Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:28:03.042Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:28:03.044Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:28:03.044Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:28:03.044Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:28:04.567Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:28:05.136Z [DEBUG] executePreToolHooks called for tool: TodoWrite
+2026-01-08T02:28:05.136Z [DEBUG] Skipping PreToolUse:TodoWrite hook execution - workspace trust not accepted
+2026-01-08T02:28:05.157Z [DEBUG] Writing to temp file: /Users/henry/.claude/todos/56bcc3a1-b352-45e0-acd2-3842cebd7f29-agent-56bcc3a1-b352-45e0-acd2-3842cebd7f29.json.tmp.3655.1767839285157
+2026-01-08T02:28:05.157Z [DEBUG] Preserving file permissions: 100644
+2026-01-08T02:28:05.157Z [DEBUG] Temp file written successfully, size: 2 bytes
+2026-01-08T02:28:05.157Z [DEBUG] Applied original permissions to temp file
+2026-01-08T02:28:05.157Z [DEBUG] Renaming /Users/henry/.claude/todos/56bcc3a1-b352-45e0-acd2-3842cebd7f29-agent-56bcc3a1-b352-45e0-acd2-3842cebd7f29.json.tmp.3655.1767839285157 to /Users/henry/.claude/todos/56bcc3a1-b352-45e0-acd2-3842cebd7f29-agent-56bcc3a1-b352-45e0-acd2-3842cebd7f29.json
+2026-01-08T02:28:05.157Z [DEBUG] File /Users/henry/.claude/todos/56bcc3a1-b352-45e0-acd2-3842cebd7f29-agent-56bcc3a1-b352-45e0-acd2-3842cebd7f29.json written atomically
+2026-01-08T02:28:05.160Z [DEBUG] Skipping PostToolUse:TodoWrite hook execution - workspace trust not accepted
+2026-01-08T02:28:05.169Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:28:05.169Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:28:05.169Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:28:05.169Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:28:05.176Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:28:05.178Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:28:05.178Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:28:05.178Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:28:06.288Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:28:07.032Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:28:07.033Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:28:07.067Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:28:07.067Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:28:07.067Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:28:07.067Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:28:07.893Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:28:09.103Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:28:09.103Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:28:09.103Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:28:09.103Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:28:09.109Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:28:09.115Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:28:09.115Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:28:09.115Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:28:09.115Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:28:09.123Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:28:09.124Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:28:09.124Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:28:09.124Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:28:10.115Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:28:10.833Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:28:14.733Z [DEBUG] Skipping Stop hook execution - workspace trust not accepted
+2026-01-08T02:28:24.549Z [DEBUG] BigQuery metrics export: trust not established, skipping
+2026-01-08T02:29:14.749Z [DEBUG] Skipping Notification:idle_prompt hook execution - workspace trust not accepted
+2026-01-08T02:41:05.125Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:41:05.125Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:41:05.125Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:41:05.125Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:41:05.137Z [DEBUG] Skipping UserPromptSubmit hook execution - workspace trust not accepted
+2026-01-08T02:41:05.141Z [DEBUG] FileHistory: Making snapshot for message 0be448e5-d45e-4e69-bb5f-3ba44e1c7e90
+2026-01-08T02:41:05.141Z [DEBUG] FileHistory: Missing tracked file: test_tavily.py
+2026-01-08T02:41:05.141Z [DEBUG] FileHistory: Missing tracked file: test_new_key.py
+2026-01-08T02:41:05.141Z [DEBUG] FileHistory: Missing tracked file: search_zhuzhou.py
+2026-01-08T02:41:05.143Z [DEBUG] FileHistory: Added snapshot for 0be448e5-d45e-4e69-bb5f-3ba44e1c7e90, tracking 4 files
+2026-01-08T02:41:05.160Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:41:05.162Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:41:05.162Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:41:05.162Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:41:05.169Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:41:05.177Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:41:05.177Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:41:05.177Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:41:09.811Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:41:11.922Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:41:13.161Z [DEBUG] executePreToolHooks called for tool: mcp__tavily__tavily-search
+2026-01-08T02:41:13.161Z [DEBUG] Skipping PreToolUse:mcp__tavily__tavily-search hook execution - workspace trust not accepted
+2026-01-08T02:41:13.172Z [DEBUG] MCP server "tavily": Calling MCP tool: tavily-search
+2026-01-08T02:41:14.397Z [DEBUG] MCP server "tavily": Tool 'tavily-search' failed after 1s: MCP error -32603: Invalid API key
+2026-01-08T02:41:14.399Z [DEBUG] Skipping PostToolUseFailure:mcp__tavily__tavily-search hook execution - workspace trust not accepted
+2026-01-08T02:41:14.414Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:41:14.414Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:41:14.414Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:41:14.414Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:41:14.424Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:41:14.426Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:41:14.426Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:41:14.426Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:41:17.350Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:41:18.024Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:41:18.024Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:41:18.045Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:41:18.045Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:41:18.045Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:41:18.045Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:41:18.872Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:41:22.651Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:41:22.652Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:41:22.652Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:41:22.652Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:41:22.660Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:41:22.677Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:41:22.677Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:41:22.677Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:41:22.677Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:41:22.691Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:41:22.692Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:41:22.692Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:41:22.692Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:41:23.781Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:41:24.985Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:41:28.228Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:41:28.229Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:41:28.248Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:41:28.248Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:41:28.248Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:41:28.248Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:41:29.889Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:41:33.810Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:41:33.810Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:41:33.810Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:41:33.811Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:41:33.814Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:41:33.823Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:41:33.823Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:41:33.823Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:41:33.823Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:41:33.830Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:41:33.832Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:41:33.832Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:41:33.832Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:41:35.350Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:41:37.743Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:41:39.881Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:41:39.881Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:41:39.912Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:41:39.912Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:41:39.912Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:41:39.912Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:41:40.506Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:42:56.785Z [ERROR] Error streaming, falling back to non-streaming mode: Unexpected event order, got message_start before receiving "message_stop"
+2026-01-08T02:42:56.785Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:42:56.785Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:42:56.785Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:43:07.837Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:43:07.838Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:43:07.838Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:43:07.838Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:43:07.846Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:43:07.861Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:43:07.861Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:43:07.861Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:43:07.861Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:43:07.872Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:43:07.874Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:43:07.874Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:43:07.874Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:43:08.672Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:43:14.180Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:43:14.270Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:43:14.271Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:43:14.686Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:43:14.686Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:43:14.686Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:43:14.686Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:43:14.694Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:43:14.709Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:43:14.709Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:43:14.709Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:43:14.709Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:43:14.724Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:43:14.726Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:43:14.726Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:43:14.726Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:43:15.981Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:43:16.950Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:43:17.782Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:43:17.783Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:43:17.812Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:43:17.812Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:43:17.812Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:43:17.812Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:43:21.117Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:43:24.540Z [DEBUG] BigQuery metrics export: trust not established, skipping
+2026-01-08T02:43:24.984Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:43:24.984Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:43:24.984Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:43:24.984Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:43:24.992Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:43:25.002Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:43:25.002Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:43:25.002Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:43:25.002Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:43:25.019Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:43:25.020Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:43:25.020Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:43:25.020Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:43:28.210Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:43:28.270Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:43:28.288Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:43:28.288Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:43:28.311Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:43:28.311Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:43:28.311Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:43:28.311Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:43:30.112Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:43:33.453Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:43:33.454Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:43:33.454Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:43:33.454Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:43:33.462Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:43:33.476Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:43:33.476Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:43:33.476Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:43:33.476Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:43:33.494Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:43:33.496Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:43:33.496Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:43:33.496Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:43:34.826Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:43:35.935Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:43:37.842Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:43:37.843Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:43:37.868Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:43:37.868Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:43:37.868Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:43:37.868Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:43:37.868Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:43:37.868Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:43:37.868Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:43:37.868Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:43:38.446Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:43:43.933Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:43:46.424Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:43:46.425Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:43:46.425Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:43:46.425Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:43:46.433Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:43:46.444Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:43:46.444Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:43:46.444Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:43:46.444Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:43:46.460Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:43:46.461Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:43:46.461Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:43:46.461Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:43:49.507Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:43:51.663Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:43:51.924Z [DEBUG] executePreToolHooks called for tool: TodoWrite
+2026-01-08T02:43:51.924Z [DEBUG] Skipping PreToolUse:TodoWrite hook execution - workspace trust not accepted
+2026-01-08T02:43:51.948Z [DEBUG] Writing to temp file: /Users/henry/.claude/todos/56bcc3a1-b352-45e0-acd2-3842cebd7f29-agent-56bcc3a1-b352-45e0-acd2-3842cebd7f29.json.tmp.3655.1767840231948
+2026-01-08T02:43:51.948Z [DEBUG] Preserving file permissions: 100644
+2026-01-08T02:43:51.948Z [DEBUG] Temp file written successfully, size: 427 bytes
+2026-01-08T02:43:51.948Z [DEBUG] Applied original permissions to temp file
+2026-01-08T02:43:51.948Z [DEBUG] Renaming /Users/henry/.claude/todos/56bcc3a1-b352-45e0-acd2-3842cebd7f29-agent-56bcc3a1-b352-45e0-acd2-3842cebd7f29.json.tmp.3655.1767840231948 to /Users/henry/.claude/todos/56bcc3a1-b352-45e0-acd2-3842cebd7f29-agent-56bcc3a1-b352-45e0-acd2-3842cebd7f29.json
+2026-01-08T02:43:51.949Z [DEBUG] File /Users/henry/.claude/todos/56bcc3a1-b352-45e0-acd2-3842cebd7f29-agent-56bcc3a1-b352-45e0-acd2-3842cebd7f29.json written atomically
+2026-01-08T02:43:51.954Z [DEBUG] Skipping PostToolUse:TodoWrite hook execution - workspace trust not accepted
+2026-01-08T02:43:51.965Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:43:51.965Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:43:51.965Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:43:51.965Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:43:51.974Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:43:51.975Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:43:51.975Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:43:51.975Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:43:54.759Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:43:55.548Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:43:55.548Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:43:57.159Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:43:57.159Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:43:57.159Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:43:57.159Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:43:57.164Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:43:57.171Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:43:57.171Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:43:57.171Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:43:57.171Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:43:57.182Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:43:57.183Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:43:57.183Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:43:57.183Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:43:59.495Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:43:59.631Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:44:16.210Z [DEBUG] executePreToolHooks called for tool: Write
+2026-01-08T02:44:16.210Z [DEBUG] Skipping PreToolUse:Write hook execution - workspace trust not accepted
+2026-01-08T02:44:16.230Z [DEBUG] Writing to temp file: /Users/henry/install_claude_skills.py.tmp.3655.1767840256230
+2026-01-08T02:44:16.230Z [DEBUG] Temp file written successfully, size: 7379 bytes
+2026-01-08T02:44:16.230Z [DEBUG] Renaming /Users/henry/install_claude_skills.py.tmp.3655.1767840256230 to /Users/henry/install_claude_skills.py
+2026-01-08T02:44:16.230Z [DEBUG] File /Users/henry/install_claude_skills.py written atomically
+2026-01-08T02:44:16.232Z [DEBUG] FileHistory: Tracked file modification for /Users/henry/install_claude_skills.py
+2026-01-08T02:44:16.236Z [DEBUG] Skipping PostToolUse:Write hook execution - workspace trust not accepted
+2026-01-08T02:44:16.239Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .py
+2026-01-08T02:44:16.259Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:44:16.259Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:44:16.260Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:44:16.260Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:44:16.273Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:44:16.274Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:44:16.274Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:44:16.275Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:44:19.830Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:45:38.331Z [DEBUG] Detected change to /Users/henry/.claude/settings.local.json
+2026-01-08T02:45:38.333Z [DEBUG] Settings changed from localSettings, updating AppState
+2026-01-08T02:45:38.333Z [DEBUG] Replacing all allow rules for destination 'userSettings' with 22 rule(s): ["Bash","BashOutput","Edit","Glob","Grep","KillShell","NotebookEdit","Read","SlashCommand","Task","TodoWrite","WebFetch","WebSearch","Write","mcp__ide","mcp__exa","mcp__context7","mcp__mcp-deepwiki","mcp__Playwright","mcp__spec-workflow","mcp__open-websearch","mcp__serena"]
+2026-01-08T02:45:38.333Z [DEBUG] Replacing all allow rules for destination 'projectSettings' with 22 rule(s): ["Bash","BashOutput","Edit","Glob","Grep","KillShell","NotebookEdit","Read","SlashCommand","Task","TodoWrite","WebFetch","WebSearch","Write","mcp__ide","mcp__exa","mcp__context7","mcp__mcp-deepwiki","mcp__Playwright","mcp__spec-workflow","mcp__open-websearch","mcp__serena"]
+2026-01-08T02:45:38.333Z [DEBUG] Replacing all allow rules for destination 'localSettings' with 2 rule(s): ["mcp__tavily__tavily-search","mcp__tavily__tavily-crawl"]
+2026-01-08T02:45:47.658Z [ERROR] Error streaming, falling back to non-streaming mode: Unexpected event order, got message_start before receiving "message_stop"
+2026-01-08T02:45:47.658Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:45:47.658Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:45:47.658Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:46:10.833Z [DEBUG] executePreToolHooks called for tool: Write
+2026-01-08T02:46:10.834Z [DEBUG] Skipping PreToolUse:Write hook execution - workspace trust not accepted
+2026-01-08T02:46:10.848Z [DEBUG] Writing to temp file: /Users/henry/install_claude_skills.sh.tmp.3655.1767840370848
+2026-01-08T02:46:10.848Z [DEBUG] Temp file written successfully, size: 7096 bytes
+2026-01-08T02:46:10.848Z [DEBUG] Renaming /Users/henry/install_claude_skills.sh.tmp.3655.1767840370848 to /Users/henry/install_claude_skills.sh
+2026-01-08T02:46:10.848Z [DEBUG] File /Users/henry/install_claude_skills.sh written atomically
+2026-01-08T02:46:10.849Z [DEBUG] FileHistory: Tracked file modification for /Users/henry/install_claude_skills.sh
+2026-01-08T02:46:10.852Z [DEBUG] Skipping PostToolUse:Write hook execution - workspace trust not accepted
+2026-01-08T02:46:10.855Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .sh
+2026-01-08T02:46:10.867Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:46:10.867Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:46:10.867Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:46:10.867Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:46:10.875Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:46:10.877Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:46:10.877Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:46:10.877Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:46:15.429Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:46:16.966Z [DEBUG] executePreToolHooks called for tool: TodoWrite
+2026-01-08T02:46:16.966Z [DEBUG] Skipping PreToolUse:TodoWrite hook execution - workspace trust not accepted
+2026-01-08T02:46:16.972Z [DEBUG] Writing to temp file: /Users/henry/.claude/todos/56bcc3a1-b352-45e0-acd2-3842cebd7f29-agent-56bcc3a1-b352-45e0-acd2-3842cebd7f29.json.tmp.3655.1767840376972
+2026-01-08T02:46:16.972Z [DEBUG] Preserving file permissions: 100644
+2026-01-08T02:46:16.974Z [DEBUG] Temp file written successfully, size: 433 bytes
+2026-01-08T02:46:16.974Z [DEBUG] Applied original permissions to temp file
+2026-01-08T02:46:16.974Z [DEBUG] Renaming /Users/henry/.claude/todos/56bcc3a1-b352-45e0-acd2-3842cebd7f29-agent-56bcc3a1-b352-45e0-acd2-3842cebd7f29.json.tmp.3655.1767840376972 to /Users/henry/.claude/todos/56bcc3a1-b352-45e0-acd2-3842cebd7f29-agent-56bcc3a1-b352-45e0-acd2-3842cebd7f29.json
+2026-01-08T02:46:16.974Z [DEBUG] File /Users/henry/.claude/todos/56bcc3a1-b352-45e0-acd2-3842cebd7f29-agent-56bcc3a1-b352-45e0-acd2-3842cebd7f29.json written atomically
+2026-01-08T02:46:16.977Z [DEBUG] Skipping PostToolUse:TodoWrite hook execution - workspace trust not accepted
+2026-01-08T02:46:16.984Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:46:16.984Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:46:16.984Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:46:16.984Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:46:16.992Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:46:16.993Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:46:16.993Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:46:16.993Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:46:19.446Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:46:19.453Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:46:19.453Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:46:19.463Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:46:19.464Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:46:19.464Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:46:19.464Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:46:20.959Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:46:23.432Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:46:23.432Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:46:23.432Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:46:23.432Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:46:23.435Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:46:23.440Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:46:23.440Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:46:23.440Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:46:23.440Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:46:23.451Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:46:23.452Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:46:23.452Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:46:23.452Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:46:25.846Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:46:30.568Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:46:30.817Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:46:30.817Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:46:30.826Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:46:30.827Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:46:30.827Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:46:30.827Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:46:37.187Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:47:50.206Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:47:50.206Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:47:50.206Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:47:50.206Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:47:50.211Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:47:50.219Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:47:50.219Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:47:50.219Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:47:50.219Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:47:50.235Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:47:50.236Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:47:50.236Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:47:50.236Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:47:51.582Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:47:54.338Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:47:54.378Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:47:54.379Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:47:54.391Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:47:54.391Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:47:54.391Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:47:54.391Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:47:57.245Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:48:07.866Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:48:07.866Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:48:07.866Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:48:07.866Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:48:07.874Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:48:07.881Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:48:07.881Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:48:07.881Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:48:07.881Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:48:07.890Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:48:07.892Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:48:07.892Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:48:07.892Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:48:09.471Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:48:10.318Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:48:24.535Z [DEBUG] BigQuery metrics export: trust not established, skipping
+2026-01-08T02:48:43.904Z [DEBUG] executePreToolHooks called for tool: Write
+2026-01-08T02:48:43.904Z [DEBUG] Skipping PreToolUse:Write hook execution - workspace trust not accepted
+2026-01-08T02:48:43.915Z [DEBUG] Writing to temp file: /Users/henry/install_claude_skills_v2.sh.tmp.3655.1767840523915
+2026-01-08T02:48:43.915Z [DEBUG] Temp file written successfully, size: 11060 bytes
+2026-01-08T02:48:43.915Z [DEBUG] Renaming /Users/henry/install_claude_skills_v2.sh.tmp.3655.1767840523915 to /Users/henry/install_claude_skills_v2.sh
+2026-01-08T02:48:43.915Z [DEBUG] File /Users/henry/install_claude_skills_v2.sh written atomically
+2026-01-08T02:48:43.916Z [DEBUG] FileHistory: Tracked file modification for /Users/henry/install_claude_skills_v2.sh
+2026-01-08T02:48:43.919Z [DEBUG] Skipping PostToolUse:Write hook execution - workspace trust not accepted
+2026-01-08T02:48:43.922Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .sh
+2026-01-08T02:48:43.935Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:48:43.935Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:48:43.935Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:48:43.935Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:48:43.949Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:48:43.952Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:48:43.952Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:48:43.952Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:48:49.643Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:48:49.773Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:48:49.773Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:48:49.788Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:48:49.788Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:48:49.788Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:48:49.788Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:48:51.483Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:48:53.034Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:48:53.034Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:48:53.034Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:48:53.034Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:48:53.038Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:48:53.044Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:48:53.044Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:48:53.044Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:48:53.044Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:48:53.058Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:48:53.059Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:48:53.059Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:48:53.059Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:48:55.575Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:48:55.669Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:48:57.065Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:48:57.066Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:48:57.083Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:48:57.083Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:48:57.083Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:48:57.083Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:48:58.181Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:50:07.178Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:50:07.179Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:50:07.179Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:50:07.179Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:50:07.186Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:50:07.194Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:50:07.194Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:50:07.194Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:50:07.194Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:50:07.202Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:50:07.204Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:50:07.204Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:50:07.204Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:50:08.441Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:50:11.354Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:50:11.666Z [DEBUG] executePreToolHooks called for tool: TodoWrite
+2026-01-08T02:50:11.666Z [DEBUG] Skipping PreToolUse:TodoWrite hook execution - workspace trust not accepted
+2026-01-08T02:50:11.675Z [DEBUG] Writing to temp file: /Users/henry/.claude/todos/56bcc3a1-b352-45e0-acd2-3842cebd7f29-agent-56bcc3a1-b352-45e0-acd2-3842cebd7f29.json.tmp.3655.1767840611675
+2026-01-08T02:50:11.675Z [DEBUG] Preserving file permissions: 100644
+2026-01-08T02:50:11.675Z [DEBUG] Temp file written successfully, size: 436 bytes
+2026-01-08T02:50:11.675Z [DEBUG] Applied original permissions to temp file
+2026-01-08T02:50:11.675Z [DEBUG] Renaming /Users/henry/.claude/todos/56bcc3a1-b352-45e0-acd2-3842cebd7f29-agent-56bcc3a1-b352-45e0-acd2-3842cebd7f29.json.tmp.3655.1767840611675 to /Users/henry/.claude/todos/56bcc3a1-b352-45e0-acd2-3842cebd7f29-agent-56bcc3a1-b352-45e0-acd2-3842cebd7f29.json
+2026-01-08T02:50:11.675Z [DEBUG] File /Users/henry/.claude/todos/56bcc3a1-b352-45e0-acd2-3842cebd7f29-agent-56bcc3a1-b352-45e0-acd2-3842cebd7f29.json written atomically
+2026-01-08T02:50:11.678Z [DEBUG] Skipping PostToolUse:TodoWrite hook execution - workspace trust not accepted
+2026-01-08T02:50:11.686Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:50:11.686Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:50:11.686Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:50:11.686Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:50:11.693Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:50:11.694Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:50:11.694Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:50:11.694Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:50:13.553Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:50:15.353Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:50:15.353Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:50:15.381Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:50:15.381Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:50:15.381Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:50:15.381Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:50:15.384Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:50:15.391Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:50:15.391Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:50:15.391Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:50:15.391Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:50:15.402Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:50:15.404Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:50:15.404Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:50:15.404Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:50:17.262Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:50:27.800Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:50:27.810Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:50:27.810Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:50:27.834Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:50:27.835Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:50:27.835Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:50:27.835Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:50:27.838Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:50:27.845Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:50:27.845Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:50:27.845Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:50:27.845Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:50:27.858Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:50:27.860Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:50:27.860Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:50:27.860Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:50:30.134Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:50:30.401Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:50:31.635Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:50:31.635Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:50:31.652Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:50:31.652Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:50:31.652Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:50:31.652Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:50:33.780Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:50:36.241Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:50:36.241Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:50:36.241Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:50:36.241Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:50:36.245Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:50:36.250Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:50:36.250Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:50:36.251Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:50:36.251Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:50:36.263Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:50:36.264Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:50:36.264Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:50:36.264Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:50:38.695Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:50:40.141Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:50:46.080Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:50:46.080Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:50:46.096Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:50:46.096Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:50:46.096Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:50:46.096Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:50:48.080Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:50:55.168Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:50:55.168Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:50:55.168Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:50:55.168Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:50:55.172Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:50:55.178Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:50:55.178Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:50:55.178Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:50:55.178Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:50:55.190Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:50:55.192Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:50:55.192Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:50:55.192Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:50:56.515Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:50:59.315Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:51:23.560Z [DEBUG] executePreToolHooks called for tool: Write
+2026-01-08T02:51:23.560Z [DEBUG] Skipping PreToolUse:Write hook execution - workspace trust not accepted
+2026-01-08T02:51:23.573Z [DEBUG] Writing to temp file: /Users/henry/install_claude_skills_complete.sh.tmp.3655.1767840683573
+2026-01-08T02:51:23.574Z [DEBUG] Temp file written successfully, size: 8844 bytes
+2026-01-08T02:51:23.574Z [DEBUG] Renaming /Users/henry/install_claude_skills_complete.sh.tmp.3655.1767840683573 to /Users/henry/install_claude_skills_complete.sh
+2026-01-08T02:51:23.574Z [DEBUG] File /Users/henry/install_claude_skills_complete.sh written atomically
+2026-01-08T02:51:23.574Z [DEBUG] FileHistory: Tracked file modification for /Users/henry/install_claude_skills_complete.sh
+2026-01-08T02:51:23.577Z [DEBUG] Skipping PostToolUse:Write hook execution - workspace trust not accepted
+2026-01-08T02:51:23.578Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .sh
+2026-01-08T02:51:23.588Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:51:23.588Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:51:23.588Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:51:23.588Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:51:23.601Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:51:23.603Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:51:23.603Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:51:23.603Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:53:24.533Z [DEBUG] BigQuery metrics export: trust not established, skipping
+2026-01-08T02:55:31.769Z [DEBUG] Streaming aborted by user: Request was aborted.
+2026-01-08T02:55:31.769Z [ERROR] Error in non-streaming fallback: Request was aborted.
+2026-01-08T02:55:36.632Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:55:36.632Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:55:36.632Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:55:36.632Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:55:36.636Z [DEBUG] Skipping UserPromptSubmit hook execution - workspace trust not accepted
+2026-01-08T02:55:36.637Z [DEBUG] FileHistory: Making snapshot for message 06fe1c8b-47f4-4c80-8a7f-02f63f4daade
+2026-01-08T02:55:36.637Z [DEBUG] FileHistory: Missing tracked file: test_tavily.py
+2026-01-08T02:55:36.637Z [DEBUG] FileHistory: Missing tracked file: test_new_key.py
+2026-01-08T02:55:36.637Z [DEBUG] FileHistory: Missing tracked file: search_zhuzhou.py
+2026-01-08T02:55:36.639Z [DEBUG] FileHistory: Added snapshot for 06fe1c8b-47f4-4c80-8a7f-02f63f4daade, tracking 8 files
+2026-01-08T02:55:36.646Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:55:36.646Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:55:36.646Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:55:36.646Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:55:36.648Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:55:36.655Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:55:36.655Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:55:36.655Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:56:05.890Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:56:06.977Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:56:07.387Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:56:07.388Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:56:07.400Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:56:07.400Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:56:07.400Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:56:07.400Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:56:07.400Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:56:07.400Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:56:07.400Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:56:07.400Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:56:07.400Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:56:07.400Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:56:07.400Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:56:07.400Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:56:09.788Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:56:13.935Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:57:11.780Z [ERROR] Error streaming, falling back to non-streaming mode: Connection error.
+2026-01-08T02:57:11.781Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:57:11.781Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:57:11.781Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:57:23.616Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:57:23.616Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:57:23.616Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:57:23.617Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:57:23.627Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:57:23.636Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:57:23.636Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:57:23.636Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:57:23.636Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:57:23.650Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:57:23.652Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:57:23.652Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:57:23.652Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:57:26.230Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:57:27.970Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:57:29.051Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:57:29.052Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:57:29.097Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:57:29.097Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:57:29.097Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:57:29.097Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:57:29.101Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:57:29.107Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:57:29.107Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:57:29.107Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:57:29.107Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:57:29.120Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:57:29.121Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:57:29.121Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:57:29.121Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:57:30.356Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:57:32.376Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:57:32.384Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:57:32.384Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:57:32.412Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:57:32.412Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:57:32.412Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:57:32.413Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:57:32.417Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:57:32.423Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:57:32.423Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:57:32.423Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:57:32.423Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:57:32.432Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:57:32.433Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:57:32.433Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:57:32.433Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:57:33.621Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:57:39.383Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:57:39.637Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:57:39.637Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:57:39.669Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:57:39.669Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:57:39.669Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:57:39.669Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:57:39.673Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:57:39.680Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:57:39.680Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:57:39.680Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:57:39.680Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:57:39.695Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:57:39.696Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:57:39.696Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:57:39.696Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:57:42.921Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:57:43.228Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:57:45.600Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:57:45.600Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:57:47.830Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:57:47.830Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:57:47.830Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:57:47.830Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:57:47.834Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:57:47.844Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:57:47.844Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:57:47.844Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:57:47.844Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:57:47.852Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:57:47.854Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:57:47.854Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:57:47.854Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:57:50.089Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:57:50.396Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:57:51.045Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:57:51.045Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:57:54.099Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:57:54.099Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:57:54.099Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:57:54.099Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:57:54.103Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:57:54.110Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:57:54.110Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:57:54.110Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:57:54.110Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:57:54.118Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:57:54.120Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:57:54.120Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:57:54.120Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:57:55.229Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:57:57.023Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:57:57.039Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:57:57.039Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:57:57.068Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:57:57.068Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:57:57.068Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:57:57.068Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:57:57.072Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:57:57.078Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:57:57.078Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:57:57.078Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:57:57.078Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:57:57.091Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:57:57.092Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:57:57.092Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:57:57.092Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:57:57.851Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:57:59.241Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:58:00.541Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:58:00.541Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:58:01.254Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:58:01.254Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:58:01.254Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:58:01.254Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:58:01.258Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:58:01.267Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:58:01.267Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:58:01.267Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:58:01.267Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:58:01.275Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:58:01.277Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:58:01.277Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:58:01.277Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:58:03.918Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:58:04.355Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:58:04.940Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:58:04.940Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:58:05.632Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:58:05.633Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:58:05.633Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:58:05.633Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:58:05.638Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:58:05.647Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:58:05.647Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:58:05.647Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:58:05.647Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:58:05.662Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:58:05.665Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:58:05.665Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:58:05.665Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:58:08.153Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:58:08.521Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:58:09.472Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:58:09.473Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:58:09.500Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:58:09.500Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:58:09.500Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:58:09.500Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:58:10.368Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:58:14.608Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:58:14.609Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:58:14.609Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:58:14.609Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:58:14.619Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:58:14.627Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:58:14.628Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:58:14.628Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:58:14.628Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:58:14.642Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:58:14.644Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:58:14.644Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:58:14.644Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:58:16.874Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:58:19.026Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:58:24.532Z [DEBUG] BigQuery metrics export: trust not established, skipping
+2026-01-08T02:58:39.824Z [DEBUG] executePreToolHooks called for tool: Write
+2026-01-08T02:58:39.825Z [DEBUG] Skipping PreToolUse:Write hook execution - workspace trust not accepted
+2026-01-08T02:58:39.844Z [DEBUG] Writing to temp file: /Users/henry/install_claude_skills_final.sh.tmp.3655.1767841119844
+2026-01-08T02:58:39.844Z [DEBUG] Temp file written successfully, size: 8831 bytes
+2026-01-08T02:58:39.844Z [DEBUG] Renaming /Users/henry/install_claude_skills_final.sh.tmp.3655.1767841119844 to /Users/henry/install_claude_skills_final.sh
+2026-01-08T02:58:39.844Z [DEBUG] File /Users/henry/install_claude_skills_final.sh written atomically
+2026-01-08T02:58:39.846Z [DEBUG] FileHistory: Tracked file modification for /Users/henry/install_claude_skills_final.sh
+2026-01-08T02:58:39.849Z [DEBUG] Skipping PostToolUse:Write hook execution - workspace trust not accepted
+2026-01-08T02:58:39.850Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .sh
+2026-01-08T02:58:39.870Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:58:39.870Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:58:39.870Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:58:39.870Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:58:39.883Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:58:39.885Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:58:39.885Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:58:39.885Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:58:44.156Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:58:49.905Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T02:58:49.905Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:58:49.936Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:58:49.936Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:58:49.936Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:58:49.936Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:58:49.936Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:58:49.936Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:58:49.936Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:58:49.936Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:58:49.936Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:58:49.936Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:58:49.937Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:58:49.937Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:58:51.534Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:58:52.144Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:58:55.460Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:59:32.760Z [DEBUG] Detected change to /Users/henry/.claude/settings.json
+2026-01-08T02:59:32.764Z [DEBUG] Settings changed from userSettings, updating AppState
+2026-01-08T02:59:32.765Z [DEBUG] Replacing all allow rules for destination 'userSettings' with 22 rule(s): ["Bash","BashOutput","Edit","Glob","Grep","KillShell","NotebookEdit","Read","SlashCommand","Task","TodoWrite","WebFetch","WebSearch","Write","mcp__ide","mcp__exa","mcp__context7","mcp__mcp-deepwiki","mcp__Playwright","mcp__spec-workflow","mcp__open-websearch","mcp__serena"]
+2026-01-08T02:59:32.765Z [DEBUG] Replacing all allow rules for destination 'projectSettings' with 22 rule(s): ["Bash","BashOutput","Edit","Glob","Grep","KillShell","NotebookEdit","Read","SlashCommand","Task","TodoWrite","WebFetch","WebSearch","Write","mcp__ide","mcp__exa","mcp__context7","mcp__mcp-deepwiki","mcp__Playwright","mcp__spec-workflow","mcp__open-websearch","mcp__serena"]
+2026-01-08T02:59:32.765Z [DEBUG] Replacing all allow rules for destination 'localSettings' with 2 rule(s): ["mcp__tavily__tavily-search","mcp__tavily__tavily-crawl"]
+2026-01-08T02:59:37.426Z [DEBUG] Detected change to /Users/henry/.claude/settings.json
+2026-01-08T02:59:37.427Z [DEBUG] Settings changed from userSettings, updating AppState
+2026-01-08T02:59:37.428Z [DEBUG] Replacing all allow rules for destination 'userSettings' with 23 rule(s): ["Bash","BashOutput","Edit","Glob","Grep","KillShell","NotebookEdit","Read","SlashCommand","Task","TodoWrite","WebFetch","WebSearch","Write","mcp__ide","mcp__exa","mcp__context7","mcp__mcp-deepwiki","mcp__Playwright","mcp__spec-workflow","mcp__open-websearch","mcp__serena","mcp__tavily"]
+2026-01-08T02:59:37.428Z [DEBUG] Replacing all allow rules for destination 'projectSettings' with 23 rule(s): ["Bash","BashOutput","Edit","Glob","Grep","KillShell","NotebookEdit","Read","SlashCommand","Task","TodoWrite","WebFetch","WebSearch","Write","mcp__ide","mcp__exa","mcp__context7","mcp__mcp-deepwiki","mcp__Playwright","mcp__spec-workflow","mcp__open-websearch","mcp__serena","mcp__tavily"]
+2026-01-08T02:59:37.428Z [DEBUG] Replacing all allow rules for destination 'localSettings' with 2 rule(s): ["mcp__tavily__tavily-search","mcp__tavily__tavily-crawl"]
+2026-01-08T02:59:52.941Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:59:52.942Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:59:52.942Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:59:52.942Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:59:52.946Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T02:59:52.954Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T02:59:52.954Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T02:59:52.954Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T02:59:52.954Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T02:59:52.967Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T02:59:52.968Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T02:59:52.968Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T02:59:52.968Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T02:59:54.403Z [DEBUG] Stream started - received first chunk
+2026-01-08T02:59:56.405Z [DEBUG] Skipping SessionEnd:other hook execution - workspace trust not accepted

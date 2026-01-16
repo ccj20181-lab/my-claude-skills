@@ -1,0 +1,10 @@
+2026-01-08T03:21:44.588Z [DEBUG] Watching for changes in setting files /Users/henry/.claude, /Users/henry/.claude, /Users/henry/.claude...
+2026-01-08T03:21:44.609Z [DEBUG] [init] configureGlobalMTLS starting
+2026-01-08T03:21:44.609Z [DEBUG] [init] configureGlobalMTLS complete
+2026-01-08T03:21:44.609Z [DEBUG] [init] configureGlobalAgents starting
+2026-01-08T03:21:44.609Z [DEBUG] [init] configureGlobalAgents complete
+2026-01-08T03:21:44.615Z [DEBUG] MCP server "tavily": Starting connection with timeout of 60000ms
+2026-01-08T03:21:44.636Z [DEBUG] Watching for changes in skill directories: /Users/henry/.claude/skills, /Users/henry/.claude/skills...
+2026-01-08T03:21:44.655Z [DEBUG] Git remote URL: null
+2026-01-08T03:21:44.655Z [DEBUG] No git remote URL found
+2026-01-08T03:21:44.655Z [DEBUG] Not in a GitHub repository, skipping path mapping update

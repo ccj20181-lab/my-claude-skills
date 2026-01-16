@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+.header {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 70pt;
+  background: #1C2833;
+  padding: 20pt 40pt;
+  box-sizing: border-box;
+}
+.header h1 {
+  font-size: 28pt;
+  color: #F4F6F6;
+  margin: 0;
+}
+.content {
+  position: absolute;
+  top: 70pt; left: 0; right: 0; bottom: 0;
+  padding: 25pt 40pt 40pt 40pt;
+  box-sizing: border-box;
+}
+.layout {
+  display: flex;
+  gap: 25pt;
+  height: 100%;
+}
+.left {
+  flex: 1.2;
+}
+.right {
+  flex: 1;
+}
+.section {
+  margin-bottom: 18pt;
+}
+h2 {
+  font-size: 16pt;
+  color: #D4AF37;
+  margin: 0 0 8pt 0;
+  font-weight: bold;
+}
+ul {
+  margin: 0;
+  padding-left: 22pt;
+  font-size: 13pt;
+  color: #2E4053;
+  line-height: 1.5;
+}
+.chart-box {
+  background: #ffffff;
+  border-radius: 10pt;
+  padding: 15pt;
+  box-shadow: 0 2pt 8pt rgba(0,0,0,0.1);
+  height: 100%;
+}
+.chart-box h3 {
+  font-size: 15pt;
+  color: #1C2833;
+  margin: 0 0 10pt 0;
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>宏观环境：复苏与分化并存</h1>
+</div>
+<div class="content">
+  <div class="layout">
+    <div class="left">
+      <div class="section">
+        <h2>📈 全球视角</h2>
+        <ul>
+          <li>美联储降息周期开启，全球流动性改善</li>
+          <li>新兴市场资金回流，估值修复空间大</li>
+          <li>地缘政治风险持续，避险情绪升温</li>
+        </ul>
+      </div>
+      <div class="section">
+        <h2>🏛️ 国内视角</h2>
+        <ul>
+          <li>财政货币政策协同发力，稳增长信号明确</li>
+          <li>消费、投资双轮驱动，内需持续修复</li>
+          <li>资本市场改革深化，投资者信心增强</li>
+        </ul>
+      </div>
+      <div class="section">
+        <h2>📊 关键指标</h2>
+        <ul>
+          <li>GDP目标增长5%左右，经济韧性凸显</li>
+          <li>CPI温和回升至2.5%，通胀可控</li>
+          <li>M2增速8-9%，流动性合理充裕</li>
+        </ul>
+      </div>
+    </div>
+    <div class="right">
+      <div class="chart-box" id="macro-chart" class="placeholder" style="width: 100%; height: 100%;"></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

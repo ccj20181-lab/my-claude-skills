@@ -1,0 +1,185 @@
+2026-01-08T06:53:42.177Z [DEBUG] Watching for changes in setting files /Users/henry/.claude, /Users/henry/.claude, /Users/henry/.claude...
+2026-01-08T06:53:42.178Z [DEBUG] [init] configureGlobalMTLS starting
+2026-01-08T06:53:42.178Z [DEBUG] [init] configureGlobalMTLS complete
+2026-01-08T06:53:42.178Z [DEBUG] [init] configureGlobalAgents starting
+2026-01-08T06:53:42.178Z [DEBUG] [init] configureGlobalAgents complete
+2026-01-08T06:53:42.181Z [DEBUG] [LSP MANAGER] initializeLspServerManager() called
+2026-01-08T06:53:42.181Z [DEBUG] [LSP MANAGER] Created manager instance, state=pending
+2026-01-08T06:53:42.181Z [DEBUG] [LSP MANAGER] Starting async initialization (generation 1)
+2026-01-08T06:53:42.182Z [DEBUG] Applying permission update: Adding 23 allow rule(s) to destination 'userSettings': ["Bash","BashOutput","Edit","Glob","Grep","KillShell","NotebookEdit","Read","SlashCommand","Task","TodoWrite","WebFetch","WebSearch","Write","mcp__ide","mcp__exa","mcp__context7","mcp__mcp-deepwiki","mcp__Playwright","mcp__spec-workflow","mcp__open-websearch","mcp__serena","mcp__tavily"]
+2026-01-08T06:53:42.182Z [DEBUG] Applying permission update: Adding 23 allow rule(s) to destination 'projectSettings': ["Bash","BashOutput","Edit","Glob","Grep","KillShell","NotebookEdit","Read","SlashCommand","Task","TodoWrite","WebFetch","WebSearch","Write","mcp__ide","mcp__exa","mcp__context7","mcp__mcp-deepwiki","mcp__Playwright","mcp__spec-workflow","mcp__open-websearch","mcp__serena","mcp__tavily"]
+2026-01-08T06:53:42.182Z [DEBUG] Applying permission update: Adding 2 allow rule(s) to destination 'localSettings': ["mcp__tavily__tavily-search","mcp__tavily__tavily-crawl"]
+2026-01-08T06:53:42.182Z [DEBUG] [STARTUP] Loading MCP configs...
+2026-01-08T06:53:42.182Z [DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+2026-01-08T06:53:42.182Z [DEBUG] Total LSP servers loaded: 0
+2026-01-08T06:53:42.182Z [DEBUG] [LSP SERVER MANAGER] getAllLspServers returned 0 server(s)
+2026-01-08T06:53:42.182Z [DEBUG] LSP manager initialized with 0 servers
+2026-01-08T06:53:42.182Z [DEBUG] [STARTUP] MCP configs loaded in 0ms
+2026-01-08T06:53:42.182Z [DEBUG] LSP server manager initialized successfully
+2026-01-08T06:53:42.182Z [DEBUG] LSP notification handlers registered successfully for all 0 server(s)
+2026-01-08T06:53:42.183Z [DEBUG] [STARTUP] Running setup()...
+2026-01-08T06:53:42.183Z [DEBUG] Stats cache does not exist, returning empty cache
+2026-01-08T06:53:42.184Z [DEBUG] Stats cache empty, processing all historical data in background
+2026-01-08T06:53:42.184Z [DEBUG] Plugin autoupdate: skipped (auto-updater disabled)
+2026-01-08T06:53:42.186Z [DEBUG] Loading skills from: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/henry/.claude/skills, project=[]
+2026-01-08T06:53:42.230Z [DEBUG] installed_plugins.json doesn't exist, returning empty V2 object
+2026-01-08T06:53:42.234Z [DEBUG] Writing to temp file: /Users/henry/.claude/todos/1eb94742-8224-4245-bb19-e9d42f24714f-agent-1eb94742-8224-4245-bb19-e9d42f24714f.json.tmp.1353.1767855222234
+2026-01-08T06:53:42.234Z [DEBUG] Temp file written successfully, size: 2 bytes
+2026-01-08T06:53:42.234Z [DEBUG] Renaming /Users/henry/.claude/todos/1eb94742-8224-4245-bb19-e9d42f24714f-agent-1eb94742-8224-4245-bb19-e9d42f24714f.json.tmp.1353.1767855222234 to /Users/henry/.claude/todos/1eb94742-8224-4245-bb19-e9d42f24714f-agent-1eb94742-8224-4245-bb19-e9d42f24714f.json
+2026-01-08T06:53:42.234Z [DEBUG] File /Users/henry/.claude/todos/1eb94742-8224-4245-bb19-e9d42f24714f-agent-1eb94742-8224-4245-bb19-e9d42f24714f.json written atomically
+2026-01-08T06:53:42.235Z [DEBUG] getPluginSkills: Processing 0 enabled plugins
+2026-01-08T06:53:42.235Z [DEBUG] Total plugin skills loaded: 0
+2026-01-08T06:53:42.235Z [DEBUG] Total plugin commands loaded: 0
+2026-01-08T06:53:42.235Z [DEBUG] Registered 0 hooks from 0 plugins
+2026-01-08T06:53:42.235Z [DEBUG] [STARTUP] setup() completed in 52ms
+2026-01-08T06:53:42.235Z [DEBUG] [STARTUP] Loading commands and agents...
+2026-01-08T06:53:42.239Z [DEBUG] Watching for changes in skill directories: /Users/henry/.claude/skills, /Users/henry/.claude/skills...
+2026-01-08T06:53:42.251Z [DEBUG] Loaded 11 unique skills (managed: 0, user: 0, project: 0, legacy commands: 11)
+2026-01-08T06:53:42.251Z [DEBUG] getSkills returning: 11 skill dir commands, 0 plugin skills
+2026-01-08T06:53:42.258Z [DEBUG] Total plugin agents loaded: 0
+2026-01-08T06:53:42.258Z [DEBUG] [STARTUP] Commands and agents loaded in 23ms
+2026-01-08T06:53:42.258Z [DEBUG] [STARTUP] Running showSetupScreens()...
+2026-01-08T06:53:42.258Z [DEBUG] [render] initYoga starting
+2026-01-08T06:53:42.263Z [DEBUG] [render] initYoga complete
+2026-01-08T06:53:42.298Z [DEBUG] Git remote URL: null
+2026-01-08T06:53:42.298Z [DEBUG] No git remote URL found
+2026-01-08T06:53:42.298Z [DEBUG] Not in a GitHub repository, skipping path mapping update
+2026-01-08T06:53:42.299Z [DEBUG] Creating shell snapshot for zsh (/bin/zsh)
+2026-01-08T06:53:42.299Z [DEBUG] Looking for shell config file: /Users/henry/.zshrc
+2026-01-08T06:53:42.299Z [DEBUG] Shell config file not found: /Users/henry/.zshrc, creating snapshot with Claude Code defaults only
+2026-01-08T06:53:42.299Z [DEBUG] Snapshots directory: /Users/henry/.claude/shell-snapshots
+2026-01-08T06:53:42.299Z [DEBUG] Creating snapshot at: /Users/henry/.claude/shell-snapshots/snapshot-zsh-1767855222299-3rjtkz.sh
+2026-01-08T06:53:42.299Z [DEBUG] Shell binary exists: true
+2026-01-08T06:53:42.299Z [DEBUG] Execution timeout: 10000ms
+2026-01-08T06:53:42.305Z [DEBUG] Shell snapshot created successfully (582 bytes)
+2026-01-08T06:53:43.354Z [DEBUG] [STARTUP] showSetupScreens() completed in 1096ms
+2026-01-08T06:53:43.364Z [DEBUG] MCP server "Playwright": Starting connection with timeout of 60000ms
+2026-01-08T06:53:43.371Z [DEBUG] Initialized versioned plugins system with 0 plugins
+2026-01-08T06:53:43.373Z [DEBUG] Writing to temp file: /Users/henry/.claude.json.tmp.1353.1767855223373
+2026-01-08T06:53:43.373Z [DEBUG] Preserving file permissions: 100644
+2026-01-08T06:53:43.374Z [DEBUG] Temp file written successfully, size: 3424 bytes
+2026-01-08T06:53:43.374Z [DEBUG] Applied original permissions to temp file
+2026-01-08T06:53:43.374Z [DEBUG] Renaming /Users/henry/.claude.json.tmp.1353.1767855223373 to /Users/henry/.claude.json
+2026-01-08T06:53:43.374Z [DEBUG] File /Users/henry/.claude.json written atomically
+2026-01-08T06:53:43.966Z [DEBUG] Skipping SessionStart:startup hook execution - workspace trust not accepted
+2026-01-08T06:53:43.966Z [DEBUG] [render] initYoga starting
+2026-01-08T06:53:43.966Z [DEBUG] [render] initYoga complete
+2026-01-08T06:53:43.976Z [DEBUG] Skipping SubagentStart:Explore hook execution - workspace trust not accepted
+2026-01-08T06:53:43.982Z [DEBUG] Skipping SubagentStart:Plan hook execution - workspace trust not accepted
+2026-01-08T06:53:43.984Z [DEBUG] Skipping SubagentStart:Bash hook execution - workspace trust not accepted
+2026-01-08T06:53:44.144Z [DEBUG] Writing to temp file: /Users/henry/.claude.json.tmp.1353.1767855224144
+2026-01-08T06:53:44.144Z [DEBUG] Preserving file permissions: 100644
+2026-01-08T06:53:44.144Z [DEBUG] Temp file written successfully, size: 3316 bytes
+2026-01-08T06:53:44.144Z [DEBUG] Applied original permissions to temp file
+2026-01-08T06:53:44.144Z [DEBUG] Renaming /Users/henry/.claude.json.tmp.1353.1767855224144 to /Users/henry/.claude.json
+2026-01-08T06:53:44.145Z [DEBUG] File /Users/henry/.claude.json written atomically
+2026-01-08T06:53:44.145Z [DEBUG] Detected Homebrew cask installation: /opt/homebrew/Caskroom/claude-code/2.1.1/claude
+2026-01-08T06:53:44.146Z [DEBUG] [REPL:mount] REPL mounted, disabled=false
+2026-01-08T06:53:44.146Z [DEBUG] Detected Homebrew cask installation: /opt/homebrew/Caskroom/claude-code/2.1.1/claude
+2026-01-08T06:53:44.146Z [DEBUG] performStartupChecks called
+2026-01-08T06:53:44.146Z [DEBUG] Trust not accepted for current directory - skipping plugin installations
+2026-01-08T06:53:44.150Z [DEBUG] Writing to temp file: /Users/henry/.claude.json.tmp.1353.1767855224150
+2026-01-08T06:53:44.150Z [DEBUG] Preserving file permissions: 100644
+2026-01-08T06:53:44.151Z [DEBUG] Temp file written successfully, size: 3424 bytes
+2026-01-08T06:53:44.151Z [DEBUG] Applied original permissions to temp file
+2026-01-08T06:53:44.151Z [DEBUG] Renaming /Users/henry/.claude.json.tmp.1353.1767855224150 to /Users/henry/.claude.json
+2026-01-08T06:53:44.151Z [DEBUG] File /Users/henry/.claude.json written atomically
+2026-01-08T06:53:44.151Z [DEBUG] AutoUpdaterWrapper: Installation type: package-manager
+2026-01-08T06:53:44.152Z [DEBUG] Attempting to auto-install official marketplace
+2026-01-08T06:53:44.154Z [DEBUG] Loaded plugins - Enabled: 0, Disabled: 0, Commands: 0, Agents: 0, Errors: 0
+2026-01-08T06:53:44.161Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T06:53:44.161Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T06:53:44.162Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T06:53:44.164Z [DEBUG] Skills and commands included in Skill tool: zcf:git-worktree, zcf:bmad-init, zcf:workflow, zcf:feat, zcf:init-project, zcf:git-commit, zcf:git-cleanBranches, zcf:git-rollback, oncall-triage, commit-push-pr, dedupe
+2026-01-08T06:53:44.165Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T06:53:44.165Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T06:53:44.165Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T06:53:44.167Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T06:53:44.167Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T06:53:44.167Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T06:53:44.167Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T06:53:44.167Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T06:53:44.167Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T06:53:44.171Z [DEBUG] Detected Homebrew cask installation: /opt/homebrew/Caskroom/claude-code/2.1.1/claude
+2026-01-08T06:53:44.178Z [DEBUG] Writing to temp file: /Users/henry/.claude.json.tmp.1353.1767855224178
+2026-01-08T06:53:44.178Z [DEBUG] Preserving file permissions: 100644
+2026-01-08T06:53:44.178Z [DEBUG] Temp file written successfully, size: 3424 bytes
+2026-01-08T06:53:44.178Z [DEBUG] Applied original permissions to temp file
+2026-01-08T06:53:44.178Z [DEBUG] Renaming /Users/henry/.claude.json.tmp.1353.1767855224178 to /Users/henry/.claude.json
+2026-01-08T06:53:44.179Z [DEBUG] File /Users/henry/.claude.json written atomically
+2026-01-08T06:53:44.439Z [DEBUG] MCP server "Playwright": Successfully connected to stdio server in 1079ms
+2026-01-08T06:53:44.439Z [DEBUG] MCP server "Playwright": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"Playwright","version":"0.0.54"}}
+2026-01-08T06:53:45.139Z [ERROR] Error streaming, falling back to non-streaming mode: 429 {"error":{"message":"All 1 attempts failed. Last error: HTTP 429 Too Many Requests: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"Resource has been exhausted (e.g. check quota).\",\n    \"status\": \"RESOURCE_EXHAUSTED\"\n  }\n}\n","type":"overloaded_error"},"type":"error"}
+2026-01-08T06:53:45.139Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T06:53:45.139Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T06:53:45.139Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T06:53:45.140Z [ERROR] Error streaming, falling back to non-streaming mode: 429 {"error":{"message":"All 1 attempts failed. Last error: HTTP 429 Too Many Requests: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"Resource has been exhausted (e.g. check quota).\",\n    \"status\": \"RESOURCE_EXHAUSTED\"\n  }\n}\n","type":"overloaded_error"},"type":"error"}
+2026-01-08T06:53:45.140Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T06:53:45.140Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T06:53:45.140Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T06:53:45.141Z [ERROR] Error streaming, falling back to non-streaming mode: 429 {"error":{"message":"All 1 attempts failed. Last error: HTTP 429 Too Many Requests: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"Resource has been exhausted (e.g. check quota).\",\n    \"status\": \"RESOURCE_EXHAUSTED\"\n  }\n}\n","type":"overloaded_error"},"type":"error"}
+2026-01-08T06:53:45.141Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T06:53:45.141Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T06:53:45.141Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T06:53:46.170Z [INFO] SSH not configured for GitHub, using HTTPS for anthropics/claude-plugins-official
+2026-01-08T06:53:47.229Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T06:53:47.229Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T06:53:47.229Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T06:53:47.229Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T06:53:47.237Z [DEBUG] Skipping UserPromptSubmit hook execution - workspace trust not accepted
+2026-01-08T06:53:47.241Z [DEBUG] FileHistory: Added snapshot for b150d335-3e9d-49ea-9e87-d4e5dcda9073, tracking 0 files
+2026-01-08T06:53:47.249Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T06:53:47.250Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T06:53:47.250Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T06:53:47.250Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T06:53:47.252Z [DEBUG] Total plugin output styles loaded: 0
+2026-01-08T06:53:47.253Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T06:53:47.257Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T06:53:47.257Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T06:53:47.257Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T06:53:47.403Z [ERROR] Error streaming, falling back to non-streaming mode: 429 {"error":{"message":"All 1 attempts failed. Last error: HTTP 429 Too Many Requests: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"Resource has been exhausted (e.g. check quota).\",\n    \"status\": \"RESOURCE_EXHAUSTED\"\n  }\n}\n","type":"overloaded_error"},"type":"error"}
+2026-01-08T06:53:47.403Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T06:53:47.403Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T06:53:47.403Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T06:53:47.668Z [DEBUG] Added marketplace source: claude-plugins-official
+2026-01-08T06:53:47.668Z [DEBUG] Successfully auto-installed official marketplace
+2026-01-08T06:53:47.668Z [DEBUG] Writing to temp file: /Users/henry/.claude.json.tmp.1353.1767855227668
+2026-01-08T06:53:47.668Z [DEBUG] Preserving file permissions: 100644
+2026-01-08T06:53:47.668Z [DEBUG] Temp file written successfully, size: 3187 bytes
+2026-01-08T06:53:47.668Z [DEBUG] Applied original permissions to temp file
+2026-01-08T06:53:47.668Z [DEBUG] Renaming /Users/henry/.claude.json.tmp.1353.1767855227668 to /Users/henry/.claude.json
+2026-01-08T06:53:47.668Z [DEBUG] File /Users/henry/.claude.json written atomically
+2026-01-08T06:53:47.669Z [DEBUG] Showing marketplace installation success notification
+2026-01-08T06:53:47.881Z [DEBUG] Stream started - received first chunk
+2026-01-08T06:58:49.940Z [DEBUG] BigQuery metrics export: trust not established, skipping
+2026-01-08T07:01:12.709Z [ERROR] Error in non-streaming fallback: Connection error.
+2026-01-08T07:01:12.710Z [ERROR] Connection error details: code=ConnectionRefused, message=Unable to connect. Is the computer able to access the url?
+2026-01-08T07:01:12.715Z [DEBUG] Skipping Stop hook execution - workspace trust not accepted
+2026-01-08T07:01:12.751Z [DEBUG] Writing to temp file: /Users/henry/.claude.json.tmp.1353.1767855672751
+2026-01-08T07:01:12.751Z [DEBUG] Preserving file permissions: 100644
+2026-01-08T07:01:12.751Z [DEBUG] Temp file written successfully, size: 3188 bytes
+2026-01-08T07:01:12.751Z [DEBUG] Applied original permissions to temp file
+2026-01-08T07:01:12.751Z [DEBUG] Renaming /Users/henry/.claude.json.tmp.1353.1767855672751 to /Users/henry/.claude.json
+2026-01-08T07:01:12.751Z [DEBUG] File /Users/henry/.claude.json written atomically
+2026-01-08T07:01:12.753Z [DEBUG] Writing to temp file: /Users/henry/.claude.json.tmp.1353.1767855672753
+2026-01-08T07:01:12.753Z [DEBUG] Preserving file permissions: 100644
+2026-01-08T07:01:12.753Z [DEBUG] Temp file written successfully, size: 3189 bytes
+2026-01-08T07:01:12.753Z [DEBUG] Applied original permissions to temp file
+2026-01-08T07:01:12.753Z [DEBUG] Renaming /Users/henry/.claude.json.tmp.1353.1767855672753 to /Users/henry/.claude.json
+2026-01-08T07:01:12.754Z [DEBUG] File /Users/henry/.claude.json written atomically
+2026-01-08T07:01:39.828Z [ERROR] Error in non-streaming fallback: Connection error.
+2026-01-08T07:01:39.828Z [ERROR] Connection error details: code=ConnectionRefused, message=Unable to connect. Is the computer able to access the url?
+2026-01-08T07:01:39.875Z [DEBUG] Skipping SubagentStop hook execution - workspace trust not accepted
+2026-01-08T07:01:49.800Z [ERROR] Error in non-streaming fallback: Connection error.
+2026-01-08T07:01:49.801Z [ERROR] Connection error details: code=ConnectionRefused, message=Unable to connect. Is the computer able to access the url?
+2026-01-08T07:01:49.827Z [DEBUG] Skipping SubagentStop hook execution - workspace trust not accepted
+2026-01-08T07:02:12.743Z [DEBUG] Skipping Notification:idle_prompt hook execution - workspace trust not accepted
+2026-01-08T07:02:16.258Z [ERROR] Error in non-streaming fallback: Connection error.
+2026-01-08T07:02:16.259Z [ERROR] Connection error details: code=ConnectionRefused, message=Unable to connect. Is the computer able to access the url?
+2026-01-08T07:02:16.293Z [DEBUG] Skipping SubagentStop hook execution - workspace trust not accepted
+2026-01-08T07:03:49.849Z [DEBUG] BigQuery metrics export: trust not established, skipping
+2026-01-08T07:08:39.862Z [DEBUG] Detected change to /Users/henry/.claude/settings.json
+2026-01-08T07:08:39.879Z [DEBUG] Settings changed from userSettings, updating AppState
+2026-01-08T07:08:39.881Z [DEBUG] Replacing all allow rules for destination 'userSettings' with 23 rule(s): ["Bash","BashOutput","Edit","Glob","Grep","KillShell","NotebookEdit","Read","SlashCommand","Task","TodoWrite","WebFetch","WebSearch","Write","mcp__ide","mcp__exa","mcp__context7","mcp__mcp-deepwiki","mcp__Playwright","mcp__spec-workflow","mcp__open-websearch","mcp__serena","mcp__tavily"]
+2026-01-08T07:08:39.881Z [DEBUG] Replacing all allow rules for destination 'projectSettings' with 23 rule(s): ["Bash","BashOutput","Edit","Glob","Grep","KillShell","NotebookEdit","Read","SlashCommand","Task","TodoWrite","WebFetch","WebSearch","Write","mcp__ide","mcp__exa","mcp__context7","mcp__mcp-deepwiki","mcp__Playwright","mcp__spec-workflow","mcp__open-websearch","mcp__serena","mcp__tavily"]
+2026-01-08T07:08:39.881Z [DEBUG] Replacing all allow rules for destination 'localSettings' with 2 rule(s): ["mcp__tavily__tavily-search","mcp__tavily__tavily-crawl"]

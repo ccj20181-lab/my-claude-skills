@@ -1,0 +1,67 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+使用python-docx应用模板格式到源文档
+"""
+
+from docx import Document
+from docx.shared import Pt, Inches
+from copy import deepcopy
+
+def apply_formatting(source_path, template_path, output_path):
+    """
+    将模板文档的格式应用到源文档
+    """
+    print("正在读取源文档...")
+    source_doc = Document(source_path)
+
+    print("正在读取模板文档...")
+    template_doc = Document(template_path)
+
+    print("正在分析模板格式...")
+
+    # 获取模板的样式
+    template_styles = {}
+    for style in template_doc.styles:
+        try:
+            if style.type == 1:  # WD_STYLE_TYPE.PARAGRAPH
+                template_styles[style.name] = style
+        except:
+            pass
+
+    print(f"找到 {len(template_styles)} 个模板样式")
+
+    # 应用段落后式
+    print("正在应用段落格式...")
+    for i, para in enumerate(source_doc.paragraphs):
+        if para.style.name in template_styles:
+            try:
+                # 尝试应用模板样式
+                template_style = template_styles[para.style.name]
+                # 保持内容，更新格式
+                para.style = template_style
+            except Exception as e:
+                if i < 5:  # 只打印前几个错误
+                    print(f"  段落 {i} 应用样式失败: {e}")
+
+    # 应用表格样式
+    print("正在应用表格格式...")
+    for table in source_doc.tables:
+        try:
+            # 设置表格样式
+            if 'Table Grid' in template_styles:
+                table.style = template_styles['Table Grid']
+        except Exception as e:
+            print(f"表格应用样式失败: {e}")
+
+    # 保存文档
+    print(f"正在保存到: {output_path}")
+    source_doc.save(output_path)
+    print("✓ 完成！")
+
+if __name__ == "__main__":
+    apply_formatting(
+        "20260109产投集团十四五评估总结报告.(1).docx",
+        "20251201产投集团十四五评估总结报告(1).docx",
+        "20260109产投集团十四五评估总结报告(已调整排版v2).docx"
+    )

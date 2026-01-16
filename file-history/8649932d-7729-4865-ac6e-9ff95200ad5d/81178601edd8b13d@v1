@@ -1,0 +1,68 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+打开专业版特斯拉财务数据Excel文件
+"""
+
+import pandas as pd
+import sys
+
+def open_professional_excel():
+    """打开并显示专业版Excel文件"""
+    try:
+        # 读取Excel文件
+        excel_file = "/Users/henry/特斯拉财务数据报告_专业版.xlsx"
+
+        # 获取所有工作表名称
+        xl = pd.ExcelFile(excel_file)
+        sheet_names = xl.sheet_names
+
+        print("📊 特斯拉财务数据表格 (专业版)")
+        print("=" * 80)
+        print(f"📁 文件: 特斯拉财务数据报告_专业版.xlsx")
+        print(f"📋 工作表数量: {len(sheet_names)}")
+        print(f"📋 工作表列表: {', '.join(sheet_names)}")
+        print("=" * 80)
+
+        # 逐个显示每个工作表
+        for i, sheet_name in enumerate(sheet_names, 1):
+            print(f"\n【工作表 {i}: {sheet_name}】")
+            print("-" * 60)
+
+            df = pd.read_excel(excel_file, sheet_name=sheet_name)
+            print(df.to_string(index=False, max_rows=20))
+
+            print(f"\n📊 数据信息: {df.shape[0]} 行 × {df.shape[1]} 列")
+
+            # 显示列信息
+            print("📋 列信息:")
+            for col in df.columns:
+                print(f"   - {col}")
+
+            print("-" * 60)
+
+        # 显示关键财务亮点
+        print("\n🔍 关键财务亮点:")
+        print("• 总收入: 280.95亿美元")
+        print("• 净利润: 13.73亿美元 (净利润率4.89%)")
+        print("• 运营现金流: 62.38亿美元")
+        print("• 自由现金流: 38.70亿美元")
+        print("• 现金储备: 416.47亿美元")
+        print("• 总资产: 1,337.35亿美元")
+
+        return True
+
+    except FileNotFoundError:
+        print(f"❌ 错误: 找不到文件")
+        return False
+    except Exception as e:
+        print(f"❌ 错误: {str(e)}")
+        return False
+
+if __name__ == "__main__":
+    success = open_professional_excel()
+    if success:
+        print("\n✅ 专业版Excel文件打开成功！")
+        print("📁 文件位置: /Users/henry/特斯拉财务数据报告_专业版.xlsx")
+    else:
+        print("\n❌ 打开Excel文件失败！")

@@ -1,0 +1,15 @@
+Always respond in Chinese-simplified
+
+Always use python3 when executing Python scripts
+
+When calling skills, always read the skill documentation first before using them properly
+
+## Claude Code Skills Directory
+
+All Claude Code skills are installed in: `/Users/henry/.claude/skills/`
+
+When working with skills:
+- The skills directory contains all available skills
+- Each skill has its own subdirectory with a SKILL.md file
+- To use a skill, first read its SKILL.md documentation
+- Skills are registered in `/Users/henry/.claude/skills.json`

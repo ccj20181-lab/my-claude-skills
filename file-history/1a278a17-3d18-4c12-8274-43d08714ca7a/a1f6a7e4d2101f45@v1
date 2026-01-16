@@ -1,0 +1,40 @@
+const path = require('path');
+const pptxgen = require('pptxgenjs');
+const html2pptx = require('/Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pptx/scripts/html2pptx.js');
+
+async function createPresentation() {
+  const pptx = new pptxgen();
+  pptx.layout = 'LAYOUT_16x9';
+  pptx.author = '浮浮酱 (AI 分析师)';
+  pptx.title = '2025金融市场展望与投资策略 - 秒懂金融研究报告';
+
+  const slidesDir = path.join(__dirname, 'slides');
+
+  // Slide 1: Title
+  await html2pptx(path.join(slidesDir, 'slide01-title.html'), pptx);
+
+  // Slide 2: Executive Summary
+  await html2pptx(path.join(slidesDir, 'slide02-executive.html'), pptx);
+
+  // Slide 3: Macro Outlook
+  await html2pptx(path.join(slidesDir, 'slide03-macro.html'), pptx);
+
+  // Slide 4: Gold
+  await html2pptx(path.join(slidesDir, 'slide04-gold.html'), pptx);
+
+  // Slide 5: Technology
+  await html2pptx(path.join(slidesDir, 'slide05-tech.html'), pptx);
+
+  // Slide 6: Dividend Strategy
+  await html2pptx(path.join(slidesDir, 'slide06-dividend.html'), pptx);
+
+  // Slide 7: Conclusion
+  await html2pptx(path.join(slidesDir, 'slide07-conclusion.html'), pptx);
+
+  const outputPath = path.join(__dirname, '2025金融市场展望与投资策略.pptx');
+  await pptx.writeFile({ fileName: outputPath });
+
+  console.log('✓ Presentation created:', outputPath);
+}
+
+createPresentation().catch(console.error);

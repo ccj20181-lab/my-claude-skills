@@ -1,0 +1,71 @@
+#!/usr/bin/env node
+
+// Tavily MCP服务器测试脚本
+
+require('dotenv').config();
+const { TavilySearchAPI } = require('./tavily-search.js');
+
+async function testTavilyAPI() {
+  console.log('🧪 测试Tavily API连接...\n');
+
+  // 检查API密钥
+  const apiKey = process.env.TAVILY_API_KEY;
+  if (!apiKey || apiKey === 'your_api_key_here') {
+    console.error('❌ 错误: 请在.env文件中设置有效的TAVILY_API_KEY');
+    console.log('📝 提示: 复制.env.example为.env并填入你的API密钥');
+    process.exit(1);
+  }
+
+  // 显示API密钥前8位
+  console.log(`🔑 使用API密钥: ${apiKey.substring(0, 8)}***\n`);
+
+  try {
+    const tavilyAPI = new TavilySearchAPI(apiKey);
+
+    // 执行测试搜索
+    console.log('🔍 执行测试搜索: "人工智能"');
+    const results = await tavilyAPI.search('人工智能', {
+      max_results: 3,
+      search_depth: 'basic'
+    });
+
+    // 显示结果
+    console.log('✅ 搜索成功!\n');
+    console.log('📊 搜索结果:');
+    console.log(`查询: ${results.query}`);
+    console.log(`响应时间: ${results.response_time}秒`);
+    console.log(`搜索ID: ${results.search_id}`);
+    console.log(`结果数量: ${results.results.length}`);
+
+    if (results.answer) {
+      console.log('\n💡 答案:');
+      console.log(results.answer);
+    }
+
+    console.log('\n📄 相关结果:');
+    results.results.forEach((result, index) => {
+      console.log(`\n${index + 1}. ${result.title}`);
+      console.log(`   URL: ${result.url}`);
+      console.log(`   分数: ${result.score}`);
+    });
+
+    console.log('\n🎉 所有测试通过! MCP服务器可以正常工作');
+
+  } catch (error) {
+    console.error('\n❌ 测试失败:');
+    console.error(`错误类型: ${error.constructor.name}`);
+    console.error(`错误信息: ${error.message}`);
+
+    if (error.message.includes('401') || error.message.includes('403')) {
+      console.log('\n💡 可能的原因:');
+      console.log('1. API密钥无效或已过期');
+      console.log('2. Tavily账户状态异常');
+      console.log('3. API使用配额已超限');
+    }
+
+    process.exit(1);
+  }
+}
+
+// 运行测试
+testTavilyAPI();

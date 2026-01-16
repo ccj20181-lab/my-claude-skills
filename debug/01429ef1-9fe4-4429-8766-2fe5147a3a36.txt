@@ -1,0 +1,254 @@
+2026-01-08T07:09:28.644Z [DEBUG] Watching for changes in setting files /Users/henry/.claude, /Users/henry/.claude, /Users/henry/.claude...
+2026-01-08T07:09:28.645Z [DEBUG] [init] configureGlobalMTLS starting
+2026-01-08T07:09:28.645Z [DEBUG] [init] configureGlobalMTLS complete
+2026-01-08T07:09:28.645Z [DEBUG] [init] configureGlobalAgents starting
+2026-01-08T07:09:28.645Z [DEBUG] [init] configureGlobalAgents complete
+2026-01-08T07:09:28.649Z [DEBUG] [LSP MANAGER] initializeLspServerManager() called
+2026-01-08T07:09:28.649Z [DEBUG] [LSP MANAGER] Created manager instance, state=pending
+2026-01-08T07:09:28.649Z [DEBUG] [LSP MANAGER] Starting async initialization (generation 1)
+2026-01-08T07:09:28.651Z [DEBUG] Applying permission update: Adding 23 allow rule(s) to destination 'userSettings': ["Bash","BashOutput","Edit","Glob","Grep","KillShell","NotebookEdit","Read","SlashCommand","Task","TodoWrite","WebFetch","WebSearch","Write","mcp__ide","mcp__exa","mcp__context7","mcp__mcp-deepwiki","mcp__Playwright","mcp__spec-workflow","mcp__open-websearch","mcp__serena","mcp__tavily"]
+2026-01-08T07:09:28.651Z [DEBUG] Applying permission update: Adding 23 allow rule(s) to destination 'projectSettings': ["Bash","BashOutput","Edit","Glob","Grep","KillShell","NotebookEdit","Read","SlashCommand","Task","TodoWrite","WebFetch","WebSearch","Write","mcp__ide","mcp__exa","mcp__context7","mcp__mcp-deepwiki","mcp__Playwright","mcp__spec-workflow","mcp__open-websearch","mcp__serena","mcp__tavily"]
+2026-01-08T07:09:28.651Z [DEBUG] Applying permission update: Adding 2 allow rule(s) to destination 'localSettings': ["mcp__tavily__tavily-search","mcp__tavily__tavily-crawl"]
+2026-01-08T07:09:28.651Z [DEBUG] [STARTUP] Loading MCP configs...
+2026-01-08T07:09:28.652Z [DEBUG] Loading plugin document-skills from source: "./"
+2026-01-08T07:09:28.670Z [DEBUG] Watching for changes in skill directories: /Users/henry/.claude/skills, /Users/henry/.claude/skills...
+2026-01-08T07:09:28.684Z [DEBUG] Git remote URL: null
+2026-01-08T07:09:28.684Z [DEBUG] No git remote URL found
+2026-01-08T07:09:28.684Z [DEBUG] Not in a GitHub repository, skipping path mapping update
+2026-01-08T07:09:28.685Z [DEBUG] Using git SHA for document-skills@anthropic-agent-skills: 69c0b1a06741
+2026-01-08T07:09:28.685Z [DEBUG] Plugin document-skills@anthropic-agent-skills version 69c0b1a06741 already cached at /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741
+2026-01-08T07:09:28.685Z [DEBUG] Copied local plugin document-skills to versioned cache: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741
+2026-01-08T07:09:28.685Z [DEBUG] Processing 4 skill paths for plugin document-skills
+2026-01-08T07:09:28.685Z [DEBUG] Checking skill path: ./skills/xlsx -> /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/xlsx (exists: true)
+2026-01-08T07:09:28.685Z [DEBUG] Checking skill path: ./skills/docx -> /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/docx (exists: true)
+2026-01-08T07:09:28.685Z [DEBUG] Checking skill path: ./skills/pptx -> /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pptx (exists: true)
+2026-01-08T07:09:28.685Z [DEBUG] Checking skill path: ./skills/pdf -> /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pdf (exists: true)
+2026-01-08T07:09:28.685Z [DEBUG] Found 4 valid skill paths for plugin document-skills, setting skillsPaths
+2026-01-08T07:09:28.685Z [DEBUG] Found 1 plugins (1 enabled, 0 disabled)
+2026-01-08T07:09:28.685Z [DEBUG] [STARTUP] MCP configs loaded in 34ms
+2026-01-08T07:09:28.685Z [DEBUG] [STARTUP] Running setup()...
+2026-01-08T07:09:28.686Z [DEBUG] Stats cache does not exist, returning empty cache
+2026-01-08T07:09:28.686Z [DEBUG] Stats cache empty, processing all historical data in background
+2026-01-08T07:09:28.686Z [DEBUG] Plugin autoupdate: skipped (auto-updater disabled)
+2026-01-08T07:09:28.688Z [DEBUG] Loading skills from: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/henry/.claude/skills, project=[]
+2026-01-08T07:09:28.741Z [DEBUG] Loaded 1 installed plugins from /Users/henry/.claude/plugins/installed_plugins.json
+2026-01-08T07:09:28.744Z [DEBUG] Writing to temp file: /Users/henry/.claude/todos/01429ef1-9fe4-4429-8766-2fe5147a3a36-agent-01429ef1-9fe4-4429-8766-2fe5147a3a36.json.tmp.1879.1767856168744
+2026-01-08T07:09:28.744Z [DEBUG] Temp file written successfully, size: 2 bytes
+2026-01-08T07:09:28.744Z [DEBUG] Renaming /Users/henry/.claude/todos/01429ef1-9fe4-4429-8766-2fe5147a3a36-agent-01429ef1-9fe4-4429-8766-2fe5147a3a36.json.tmp.1879.1767856168744 to /Users/henry/.claude/todos/01429ef1-9fe4-4429-8766-2fe5147a3a36-agent-01429ef1-9fe4-4429-8766-2fe5147a3a36.json
+2026-01-08T07:09:28.744Z [DEBUG] File /Users/henry/.claude/todos/01429ef1-9fe4-4429-8766-2fe5147a3a36-agent-01429ef1-9fe4-4429-8766-2fe5147a3a36.json written atomically
+2026-01-08T07:09:28.744Z [DEBUG] getPluginSkills: Processing 1 enabled plugins
+2026-01-08T07:09:28.744Z [DEBUG] Checking plugin document-skills: skillsPath=exists, skillsPaths=4 paths
+2026-01-08T07:09:28.744Z [DEBUG] Attempting to load skills from plugin document-skills default skillsPath: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills
+2026-01-08T07:09:28.750Z [DEBUG] Total plugin commands loaded: 0
+2026-01-08T07:09:28.750Z [DEBUG] Registered 0 hooks from 1 plugins
+2026-01-08T07:09:28.750Z [DEBUG] [STARTUP] setup() completed in 65ms
+2026-01-08T07:09:28.750Z [DEBUG] [STARTUP] Loading commands and agents...
+2026-01-08T07:09:28.750Z [DEBUG] Loaded 16 skills from plugin document-skills default directory
+2026-01-08T07:09:28.750Z [DEBUG] Attempting to load skills from plugin document-skills skillsPaths: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/xlsx, /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/docx, /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pptx, /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pdf
+2026-01-08T07:09:28.750Z [DEBUG] Loading from skillPath: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/xlsx for plugin document-skills
+2026-01-08T07:09:28.750Z [DEBUG] Loaded 0 skills from plugin document-skills custom path: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/xlsx
+2026-01-08T07:09:28.750Z [DEBUG] Loading from skillPath: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/docx for plugin document-skills
+2026-01-08T07:09:28.750Z [DEBUG] Loaded 0 skills from plugin document-skills custom path: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/docx
+2026-01-08T07:09:28.750Z [DEBUG] Loading from skillPath: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pptx for plugin document-skills
+2026-01-08T07:09:28.750Z [DEBUG] Loaded 0 skills from plugin document-skills custom path: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pptx
+2026-01-08T07:09:28.750Z [DEBUG] Loading from skillPath: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pdf for plugin document-skills
+2026-01-08T07:09:28.750Z [DEBUG] Loaded 0 skills from plugin document-skills custom path: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pdf
+2026-01-08T07:09:28.750Z [DEBUG] Total plugin skills loaded: 16
+2026-01-08T07:09:28.751Z [DEBUG] Total LSP servers loaded: 0
+2026-01-08T07:09:28.751Z [DEBUG] [LSP SERVER MANAGER] getAllLspServers returned 0 server(s)
+2026-01-08T07:09:28.751Z [DEBUG] LSP manager initialized with 0 servers
+2026-01-08T07:09:28.751Z [DEBUG] LSP server manager initialized successfully
+2026-01-08T07:09:28.751Z [DEBUG] LSP notification handlers registered successfully for all 0 server(s)
+2026-01-08T07:09:28.758Z [DEBUG] Creating shell snapshot for zsh (/bin/zsh)
+2026-01-08T07:09:28.758Z [DEBUG] Looking for shell config file: /Users/henry/.zshrc
+2026-01-08T07:09:28.758Z [DEBUG] Shell config file not found: /Users/henry/.zshrc, creating snapshot with Claude Code defaults only
+2026-01-08T07:09:28.758Z [DEBUG] Snapshots directory: /Users/henry/.claude/shell-snapshots
+2026-01-08T07:09:28.758Z [DEBUG] Creating snapshot at: /Users/henry/.claude/shell-snapshots/snapshot-zsh-1767856168758-ph33ux.sh
+2026-01-08T07:09:28.758Z [DEBUG] Shell binary exists: true
+2026-01-08T07:09:28.758Z [DEBUG] Execution timeout: 10000ms
+2026-01-08T07:09:28.766Z [DEBUG] Shell snapshot created successfully (582 bytes)
+2026-01-08T07:09:28.767Z [DEBUG] Loaded 11 unique skills (managed: 0, user: 0, project: 0, legacy commands: 11)
+2026-01-08T07:09:28.767Z [DEBUG] getSkills returning: 11 skill dir commands, 16 plugin skills
+2026-01-08T07:09:28.769Z [DEBUG] Total plugin agents loaded: 0
+2026-01-08T07:09:28.769Z [DEBUG] [STARTUP] Commands and agents loaded in 19ms
+2026-01-08T07:09:28.769Z [DEBUG] [STARTUP] Running showSetupScreens()...
+2026-01-08T07:09:28.769Z [DEBUG] [render] initYoga starting
+2026-01-08T07:09:28.772Z [DEBUG] [render] initYoga complete
+2026-01-08T07:09:30.621Z [DEBUG] [STARTUP] showSetupScreens() completed in 1852ms
+2026-01-08T07:09:30.631Z [DEBUG] MCP server "Playwright": Starting connection with timeout of 60000ms
+2026-01-08T07:09:30.634Z [DEBUG] All plugins already exist, skipping migration
+2026-01-08T07:09:30.637Z [DEBUG] Initialized versioned plugins system with 1 plugins
+2026-01-08T07:09:30.639Z [DEBUG] Writing to temp file: /Users/henry/.claude.json.tmp.1879.1767856170639
+2026-01-08T07:09:30.639Z [DEBUG] Preserving file permissions: 100644
+2026-01-08T07:09:30.640Z [DEBUG] Temp file written successfully, size: 3197 bytes
+2026-01-08T07:09:30.640Z [DEBUG] Applied original permissions to temp file
+2026-01-08T07:09:30.640Z [DEBUG] Renaming /Users/henry/.claude.json.tmp.1879.1767856170639 to /Users/henry/.claude.json
+2026-01-08T07:09:30.640Z [DEBUG] File /Users/henry/.claude.json written atomically
+2026-01-08T07:09:31.138Z [DEBUG] Skipping SessionStart:startup hook execution - workspace trust not accepted
+2026-01-08T07:09:31.139Z [DEBUG] [render] initYoga starting
+2026-01-08T07:09:31.139Z [DEBUG] [render] initYoga complete
+2026-01-08T07:09:31.146Z [DEBUG] Skipping SubagentStart:Explore hook execution - workspace trust not accepted
+2026-01-08T07:09:31.150Z [DEBUG] Skipping SubagentStart:Plan hook execution - workspace trust not accepted
+2026-01-08T07:09:31.152Z [DEBUG] Skipping SubagentStart:Bash hook execution - workspace trust not accepted
+2026-01-08T07:09:31.274Z [DEBUG] Writing to temp file: /Users/henry/.claude.json.tmp.1879.1767856171274
+2026-01-08T07:09:31.274Z [DEBUG] Preserving file permissions: 100644
+2026-01-08T07:09:31.274Z [DEBUG] Temp file written successfully, size: 3089 bytes
+2026-01-08T07:09:31.274Z [DEBUG] Applied original permissions to temp file
+2026-01-08T07:09:31.274Z [DEBUG] Renaming /Users/henry/.claude.json.tmp.1879.1767856171274 to /Users/henry/.claude.json
+2026-01-08T07:09:31.274Z [DEBUG] File /Users/henry/.claude.json written atomically
+2026-01-08T07:09:31.275Z [DEBUG] Detected Homebrew cask installation: /opt/homebrew/Caskroom/claude-code/2.1.1/claude
+2026-01-08T07:09:31.276Z [DEBUG] [REPL:mount] REPL mounted, disabled=false
+2026-01-08T07:09:31.276Z [DEBUG] Detected Homebrew cask installation: /opt/homebrew/Caskroom/claude-code/2.1.1/claude
+2026-01-08T07:09:31.276Z [DEBUG] Official marketplace auto-install skipped: already_attempted
+2026-01-08T07:09:31.276Z [DEBUG] performStartupChecks called
+2026-01-08T07:09:31.276Z [DEBUG] Trust not accepted for current directory - skipping plugin installations
+2026-01-08T07:09:31.281Z [DEBUG] Writing to temp file: /Users/henry/.claude.json.tmp.1879.1767856171281
+2026-01-08T07:09:31.281Z [DEBUG] Preserving file permissions: 100644
+2026-01-08T07:09:31.281Z [DEBUG] Temp file written successfully, size: 3197 bytes
+2026-01-08T07:09:31.281Z [DEBUG] Applied original permissions to temp file
+2026-01-08T07:09:31.281Z [DEBUG] Renaming /Users/henry/.claude.json.tmp.1879.1767856171281 to /Users/henry/.claude.json
+2026-01-08T07:09:31.281Z [DEBUG] File /Users/henry/.claude.json written atomically
+2026-01-08T07:09:31.281Z [DEBUG] AutoUpdaterWrapper: Installation type: package-manager
+2026-01-08T07:09:31.282Z [DEBUG] Loaded plugins - Enabled: 1, Disabled: 0, Commands: 0, Agents: 0, Errors: 0
+2026-01-08T07:09:31.290Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T07:09:31.290Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T07:09:31.290Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T07:09:31.292Z [DEBUG] Skill prompt: showing "document-skills:theme-factory" (userFacingName="theme-factory")
+2026-01-08T07:09:31.292Z [DEBUG] Skill prompt: showing "document-skills:doc-coauthoring" (userFacingName="doc-coauthoring")
+2026-01-08T07:09:31.292Z [DEBUG] Skill prompt: showing "document-skills:xlsx" (userFacingName="xlsx")
+2026-01-08T07:09:31.292Z [DEBUG] Skill prompt: showing "document-skills:pdf" (userFacingName="pdf")
+2026-01-08T07:09:31.292Z [DEBUG] Skill prompt: showing "document-skills:algorithmic-art" (userFacingName="algorithmic-art")
+2026-01-08T07:09:31.292Z [DEBUG] Skill prompt: showing "document-skills:internal-comms" (userFacingName="internal-comms")
+2026-01-08T07:09:31.292Z [DEBUG] Skill prompt: showing "document-skills:skill-creator" (userFacingName="skill-creator")
+2026-01-08T07:09:31.292Z [DEBUG] Skill prompt: showing "document-skills:canvas-design" (userFacingName="canvas-design")
+2026-01-08T07:09:31.292Z [DEBUG] Skill prompt: showing "document-skills:pptx" (userFacingName="pptx")
+2026-01-08T07:09:31.292Z [DEBUG] Skill prompt: showing "document-skills:slack-gif-creator" (userFacingName="slack-gif-creator")
+2026-01-08T07:09:31.292Z [DEBUG] Skill prompt: showing "document-skills:webapp-testing" (userFacingName="webapp-testing")
+2026-01-08T07:09:31.292Z [DEBUG] Skill prompt: showing "document-skills:frontend-design" (userFacingName="frontend-design")
+2026-01-08T07:09:31.292Z [DEBUG] Skill prompt: showing "document-skills:mcp-builder" (userFacingName="mcp-builder")
+2026-01-08T07:09:31.292Z [DEBUG] Skill prompt: showing "document-skills:brand-guidelines" (userFacingName="brand-guidelines")
+2026-01-08T07:09:31.292Z [DEBUG] Skill prompt: showing "document-skills:docx" (userFacingName="docx")
+2026-01-08T07:09:31.292Z [DEBUG] Skill prompt: showing "document-skills:web-artifacts-builder" (userFacingName="web-artifacts-builder")
+2026-01-08T07:09:31.292Z [DEBUG] Skills and commands included in Skill tool: zcf:git-worktree, zcf:bmad-init, zcf:workflow, zcf:feat, zcf:init-project, zcf:git-commit, zcf:git-cleanBranches, zcf:git-rollback, oncall-triage, commit-push-pr, dedupe, theme-factory, doc-coauthoring, xlsx, pdf, algorithmic-art, internal-comms, skill-creator, canvas-design, pptx, slack-gif-creator, webapp-testing, frontend-design, mcp-builder, brand-guidelines, docx, web-artifacts-builder
+2026-01-08T07:09:31.293Z [DEBUG] Skill prompt: showing "document-skills:theme-factory" (userFacingName="theme-factory")
+2026-01-08T07:09:31.293Z [DEBUG] Skill prompt: showing "document-skills:doc-coauthoring" (userFacingName="doc-coauthoring")
+2026-01-08T07:09:31.293Z [DEBUG] Skill prompt: showing "document-skills:xlsx" (userFacingName="xlsx")
+2026-01-08T07:09:31.293Z [DEBUG] Skill prompt: showing "document-skills:pdf" (userFacingName="pdf")
+2026-01-08T07:09:31.293Z [DEBUG] Skill prompt: showing "document-skills:algorithmic-art" (userFacingName="algorithmic-art")
+2026-01-08T07:09:31.293Z [DEBUG] Skill prompt: showing "document-skills:internal-comms" (userFacingName="internal-comms")
+2026-01-08T07:09:31.293Z [DEBUG] Skill prompt: showing "document-skills:skill-creator" (userFacingName="skill-creator")
+2026-01-08T07:09:31.293Z [DEBUG] Skill prompt: showing "document-skills:canvas-design" (userFacingName="canvas-design")
+2026-01-08T07:09:31.293Z [DEBUG] Skill prompt: showing "document-skills:pptx" (userFacingName="pptx")
+2026-01-08T07:09:31.293Z [DEBUG] Skill prompt: showing "document-skills:slack-gif-creator" (userFacingName="slack-gif-creator")
+2026-01-08T07:09:31.293Z [DEBUG] Skill prompt: showing "document-skills:webapp-testing" (userFacingName="webapp-testing")
+2026-01-08T07:09:31.293Z [DEBUG] Skill prompt: showing "document-skills:frontend-design" (userFacingName="frontend-design")
+2026-01-08T07:09:31.293Z [DEBUG] Skill prompt: showing "document-skills:mcp-builder" (userFacingName="mcp-builder")
+2026-01-08T07:09:31.293Z [DEBUG] Skill prompt: showing "document-skills:brand-guidelines" (userFacingName="brand-guidelines")
+2026-01-08T07:09:31.293Z [DEBUG] Skill prompt: showing "document-skills:docx" (userFacingName="docx")
+2026-01-08T07:09:31.293Z [DEBUG] Skill prompt: showing "document-skills:web-artifacts-builder" (userFacingName="web-artifacts-builder")
+2026-01-08T07:09:31.293Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T07:09:31.293Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T07:09:31.293Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T07:09:31.294Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T07:09:31.295Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T07:09:31.295Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T07:09:31.295Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T07:09:31.295Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T07:09:31.295Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T07:09:31.298Z [DEBUG] Detected Homebrew cask installation: /opt/homebrew/Caskroom/claude-code/2.1.1/claude
+2026-01-08T07:09:31.305Z [DEBUG] Writing to temp file: /Users/henry/.claude.json.tmp.1879.1767856171305
+2026-01-08T07:09:31.305Z [DEBUG] Preserving file permissions: 100644
+2026-01-08T07:09:31.305Z [DEBUG] Temp file written successfully, size: 3197 bytes
+2026-01-08T07:09:31.305Z [DEBUG] Applied original permissions to temp file
+2026-01-08T07:09:31.305Z [DEBUG] Renaming /Users/henry/.claude.json.tmp.1879.1767856171305 to /Users/henry/.claude.json
+2026-01-08T07:09:31.306Z [DEBUG] File /Users/henry/.claude.json written atomically
+2026-01-08T07:09:31.659Z [DEBUG] MCP server "Playwright": Successfully connected to stdio server in 1032ms
+2026-01-08T07:09:31.659Z [DEBUG] MCP server "Playwright": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"Playwright","version":"0.0.54"}}
+2026-01-08T07:09:37.035Z [DEBUG] Stream started - received first chunk
+2026-01-08T07:09:37.061Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T07:09:37.061Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T07:09:37.076Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T07:09:37.076Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T07:09:37.076Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T07:09:37.076Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T07:09:38.752Z [DEBUG] Stream started - received first chunk
+2026-01-08T07:09:38.945Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T07:09:38.945Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T07:09:38.959Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T07:09:38.960Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T07:09:38.960Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T07:09:38.960Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T07:09:39.367Z [DEBUG] Stream started - received first chunk
+2026-01-08T07:09:39.389Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T07:09:39.389Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T07:09:39.409Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T07:09:39.410Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T07:09:39.410Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T07:09:39.410Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T07:09:40.941Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T07:09:40.942Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T07:09:40.942Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T07:09:40.942Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T07:09:40.950Z [DEBUG] Skipping UserPromptSubmit hook execution - workspace trust not accepted
+2026-01-08T07:09:40.955Z [DEBUG] FileHistory: Added snapshot for fd30aa5c-8fb0-4adf-aa4e-9c6ef21d635b, tracking 0 files
+2026-01-08T07:09:40.963Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T07:09:40.964Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T07:09:40.964Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T07:09:40.964Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T07:09:40.968Z [DEBUG] Total plugin output styles loaded: 0
+2026-01-08T07:09:40.968Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T07:09:40.972Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T07:09:40.972Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T07:09:40.972Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T07:09:40.982Z [DEBUG] Stream started - received first chunk
+2026-01-08T07:09:40.992Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T07:09:40.992Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T07:09:41.000Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T07:09:41.001Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T07:09:41.001Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T07:09:41.001Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T07:09:43.200Z [ERROR] Error streaming, falling back to non-streaming mode: 429 {"error":{"message":"All 1 attempts failed. Last error: HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You have exhausted your capacity on this model. Your quota will reset after 0s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"RATE_LIMIT_EXCEEDED\",\n        \"domain\": \"cloudcode-pa.googleapis.com\",\n        \"metadata\": {\n          \"model\": \"gemini-3-pro-high\",\n          \"quotaResetDelay\": \"856.346036ms\",\n          \"quotaResetTimeStamp\": \"2026-01-08T07:09:43Z\",\n          \"uiMessage\": \"true\"\n        }\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.RetryInfo\",\n        \"retryDelay\": \"0.856346036s\"\n      }\n    ]\n  }\n}\n","type":"overloaded_error"},"type":"error"}
+2026-01-08T07:09:43.200Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T07:09:43.200Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T07:09:43.200Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T07:09:43.342Z [ERROR] Error streaming, falling back to non-streaming mode: 429 {"error":{"message":"All 1 attempts failed. Last error: HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You have exhausted your capacity on this model. Your quota will reset after 0s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"RATE_LIMIT_EXCEEDED\",\n        \"domain\": \"cloudcode-pa.googleapis.com\",\n        \"metadata\": {\n          \"quotaResetTimeStamp\": \"2026-01-08T07:09:43Z\",\n          \"uiMessage\": \"true\",\n          \"model\": \"gemini-3-pro-high\",\n          \"quotaResetDelay\": \"391.36224ms\"\n        }\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.RetryInfo\",\n        \"retryDelay\": \"0.391362240s\"\n      }\n    ]\n  }\n}\n","type":"overloaded_error"},"type":"error"}
+2026-01-08T07:09:43.342Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T07:09:43.342Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T07:09:43.342Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T07:09:45.935Z [DEBUG] Stream started - received first chunk
+2026-01-08T07:09:46.002Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T07:09:46.003Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T07:09:46.020Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T07:09:46.021Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T07:09:46.021Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T07:09:46.021Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T07:09:54.419Z [DEBUG] Stream started - received first chunk
+2026-01-08T07:09:54.470Z [DEBUG] Skipping SubagentStop hook execution - workspace trust not accepted
+2026-01-08T07:09:55.651Z [DEBUG] Stream started - received first chunk
+2026-01-08T07:09:55.670Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T07:09:55.670Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T07:09:55.685Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T07:09:55.686Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T07:09:55.686Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T07:09:55.686Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T07:09:58.106Z [DEBUG] Stream started - received first chunk
+2026-01-08T07:09:58.125Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T07:09:58.125Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T07:09:58.140Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T07:09:58.140Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T07:09:58.140Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T07:09:58.140Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T07:10:03.020Z [DEBUG] Stream started - received first chunk
+2026-01-08T07:10:03.042Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T07:10:03.043Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T07:10:03.058Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T07:10:03.059Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T07:10:03.059Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T07:10:03.059Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T07:10:04.830Z [DEBUG] Stream started - received first chunk
+2026-01-08T07:10:04.851Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-08T07:10:04.852Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-08T07:10:04.867Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T07:10:04.868Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T07:10:04.868Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T07:10:04.868Z [DEBUG] [API:auth] OAuth token check complete

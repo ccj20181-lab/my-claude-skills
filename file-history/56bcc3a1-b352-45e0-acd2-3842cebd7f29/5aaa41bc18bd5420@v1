@@ -1,0 +1,430 @@
+#!/bin/bash
+
+# Claude官方Skill完整安装脚本
+# 通过克隆GitHub仓库获取完整的skill文件
+
+set -e
+
+# 颜色定义
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+PURPLE='\033[0;35m'
+CYAN='\033[0;36m'
+NC='\033[0m' # No Color
+
+# 日志函数
+log_info() {
+    echo -e "${BLUE}ℹ️  $1${NC}"
+}
+
+log_success() {
+    echo -e "${GREEN}✅ $1${NC}"
+}
+
+log_warning() {
+    echo -e "${YELLOW}⚠️  $1${NC}"
+}
+
+log_error() {
+    echo -e "${RED}❌ $1${NC}"
+}
+
+log_header() {
+    echo -e "${PURPLE}🎯 $1${NC}"
+}
+
+log_skill() {
+    echo -e "${CYAN}🔧 $1${NC}"
+}
+
+# 清理旧安装
+cleanup_old_install() {
+    log_header "清理旧安装..."
+
+    if [ -d "/tmp/claude-code-repo" ]; then
+        rm -rf /tmp/claude-code-repo
+        log_success "清理旧的仓库文件"
+    fi
+}
+
+# 克隆完整仓库
+clone_repository() {
+    log_header "克隆Claude Code官方仓库..."
+
+    if git clone --depth 1 https://github.com/anthropics/claude-code.git /tmp/claude-code-repo; then
+        log_success "仓库克隆成功"
+        return 0
+    else
+        log_error "仓库克隆失败"
+        return 1
+    fi
+}
+
+# 检查仓库结构
+check_repository_structure() {
+    log_header "检查仓库结构..."
+
+    if [ ! -d "/tmp/claude-code-repo/.claude-plugin" ]; then
+        log_error "仓库结构不正确，缺少.claude-plugin目录"
+        return 1
+    fi
+
+    log_success "仓库结构验证通过"
+
+    # 列出可用的skill
+    if [ -d "/tmp/claude-code-repo/.claude-plugin/plugins" ]; then
+        log_info "找到plugins目录"
+        ls -la /tmp/claude-code-repo/.claude-plugin/plugins/
+    fi
+
+    return 0
+}
+
+# 创建目录结构
+create_directories() {
+    log_header "创建目录结构..."
+
+    SKILLS_DIR="$HOME/.claude/skills"
+    CLAUDE_DIR="$HOME/.claude"
+
+    mkdir -p "$SKILLS_DIR"
+    mkdir -p "$CLAUDE_DIR"
+
+    log_success "创建目录: $SKILLS_DIR"
+    export SKILLS_DIR CLAUDE_DIR
+}
+
+# 复制skill文件
+copy_skill_files() {
+    local skill_name="$1"
+    local source_dir="/tmp/claude-code-repo/.claude-plugin/plugins/$skill_name"
+    local target_dir="$SKILLS_DIR/$skill_name"
+
+    log_skill "正在安装: $skill_name"
+
+    # 检查源目录是否存在
+    if [ ! -d "$source_dir" ]; then
+        log_warning "Skill目录不存在: $source_dir"
+        return 1
+    fi
+
+    # 创建目标目录
+    mkdir -p "$target_dir"
+
+    # 复制所有文件
+    cp -r "$source_dir"/* "$target_dir/" 2>/dev/null || true
+
+    # 检查是否有文件被复制
+    if [ "$(ls -A $target_dir)" ]; then
+        # 创建配置文件
+        cat > "$target_dir/skill.config.json" << EOF
+{
+  "name": "$skill_name",
+  "description": "Claude官方Skill",
+  "category": "official",
+  "author": "Anthropic",
+  "enabled": true,
+  "auto_activate": false,
+  "installed_at": "$(date -u +"%Y-%m-%dT%H:%M:%SZ")",
+  "source": "GitHub Repository"
+}
+EOF
+
+        log_success "✅ 成功安装: $skill_name"
+        return 0
+    else
+        log_warning "⚠️  跳过: $skill_name (无文件)"
+        return 1
+    fi
+}
+
+# 安装所有skill
+install_all_skills() {
+    log_header "开始安装Skill..."
+
+    local plugins_dir="/tmp/claude-code-repo/.claude-plugin/plugins"
+    local installed_count=0
+    local total_count=0
+
+    # 获取所有skill目录
+    for skill_dir in "$plugins_dir"/*; do
+        if [ -d "$skill_dir" ]; then
+            skill_name=$(basename "$skill_dir")
+            ((total_count++))
+
+            if copy_skill_files "$skill_name"; then
+                ((installed_count++))
+            fi
+        fi
+    done
+
+    log_success "安装完成! 成功安装: $installed_count/$total_count 个skill"
+
+    return 0
+}
+
+# 创建skill索引
+create_skill_index() {
+    log_header "创建Skill索引..."
+
+    index_file="$SKILLS_DIR/SKILL_INDEX.md"
+
+    cat > "$index_file" << 'EOF'
+# Claude官方Skill索引
+
+## 📋 已安装的Skill列表
+
+EOF
+
+    # 添加每个skill的详细信息
+    for skill_dir in "$SKILLS_DIR"/*; do
+        if [ -d "$skill_dir" ] && [ "$(basename "$skill_dir")" != "README.md" ] && [ "$(basename "$skill_dir")" != "QUICK_REFERENCE.md" ]; then
+            skill_name=$(basename "$skill_dir")
+
+            # 读取skill配置
+            if [ -f "$skill_dir/skill.config.json" ]; then
+                cat >> "$index_file" << EOF
+
+### 🔧 $skill_name
+- **路径**: \`$skill_dir/\`
+- **配置文件**: \`$skill_dir/skill.config.json\`
+
+EOF
+
+                # 如果有README，添加前几行
+                if [ -f "$skill_dir/README.md" ]; then
+                    echo "**README预览**:"
+                    echo '```'
+                    head -10 "$skill_dir/README.md"
+                    echo '```'
+                    echo ""
+                fi
+            fi
+        fi
+    done
+
+    log_success "Skill索引已创建: $index_file"
+}
+
+# 创建完整的使用指南
+create_complete_guide() {
+    log_header "创建完整使用指南..."
+
+    guide_file="$SKILLS_DIR/COMPLETE_GUIDE.md"
+
+    cat > "$guide_file" << 'EOF'
+# Claude官方Skill完整使用指南
+
+## 🎯 概述
+
+本指南包含了Claude Code官方开源的所有Skill和Agent的详细使用方法。
+
+## 📦 已安装的Skill
+
+EOF
+
+    # 列出所有skill
+    for skill_dir in "$SKILLS_DIR"/*; do
+        if [ -d "$skill_dir" ] && [ "$(basename "$skill_dir")" != "README.md" ] && [ "$(basename "$skill_dir")" != "QUICK_REFERENCE.md" ] && [ "$(basename "$skill_dir")" != "SKILL_INDEX.md" ]; then
+            skill_name=$(basename "$skill_dir")
+            cat >> "$guide_file" << EOF
+
+### 🔧 $skill_name
+- **位置**: \`$skill_dir/\`
+- **文件列表**:
+EOF
+
+            # 列出skill目录中的文件
+            for file in "$skill_dir"/*; do
+                if [ -f "$file" ]; then
+                    file_name=$(basename "$file")
+                    echo "  - \`$file_name\`"
+                fi
+            done
+            echo ""
+        fi
+    done
+
+    cat >> "$guide_file" << 'EOF'
+
+## 🚀 使用方法
+
+### 1. 启用Skill
+在Claude Code中，您可以通过以下方式使用skill：
+
+```bash
+# 直接调用skill（如果支持）
+/skill-name
+
+# 或者通过配置文件
+```
+
+### 2. 配置Skill
+编辑skill配置文件：
+```bash
+nano ~/.claude/skills/skill-name/skill.config.json
+```
+
+### 3. 查看Skill详情
+```bash
+# 查看skill目录
+ls -la ~/.claude/skills/skill-name/
+
+# 查看配置文件
+cat ~/.claude/skills/skill-name/skill.config.json
+```
+
+## 📚 常用Skill类别
+
+### 🔧 开发工具
+- **agent-sdk-dev**: Claude Agent SDK开发工具
+- **plugin-dev**: Claude Code插件开发
+- **feature-dev**: 功能开发工作流
+- **frontend-design**: 前端设计工具
+
+### 🔍 代码质量
+- **code-review**: 代码审查工具
+- **pr-review-toolkit**: PR审查工具
+- **commit-commands**: Git提交工作流
+
+### 📖 学习辅助
+- **explanatory-output-style**: 解释性输出
+- **learning-output-style**: 交互式学习
+
+### 🔒 安全
+- **security-guidance**: 安全提醒
+
+### 🔄 特殊工具
+- **claude-opus-4-5-migration**: 版本迁移
+- **ralph-wiggum**: 迭代开发
+- **hookify**: Hook创建
+
+## 🛠️ 维护命令
+
+### 更新Skill
+```bash
+# 重新运行安装脚本
+bash install_claude_skills_complete.sh
+```
+
+### 清理安装
+```bash
+rm -rf ~/.claude/skills/
+bash install_claude_skills_complete.sh
+```
+
+### 查看日志
+```bash
+# 查看Claude Code日志
+tail -f ~/.claude/logs/claude-code.log
+```
+
+## 📁 文件结构
+
+```
+~/.claude/
+├── skills/                    # Skill目录
+│   ├── agent-sdk-dev/        # Agent SDK工具
+│   ├── code-review/          # 代码审查
+│   ├── feature-dev/         # 功能开发
+│   ├── plugin-dev/          # 插件开发
+│   ├── frontend-design/     # 前端设计
+│   ├── security-guidance/   # 安全提醒
+│   ├── ...                  # 其他skill
+│   ├── README.md            # 基础指南
+│   ├── QUICK_REFERENCE.md   # 快速参考
+│   ├── SKILL_INDEX.md       # Skill索引
+│   └── COMPLETE_GUIDE.md    # 完整指南
+└── skills.json              # 全局配置
+```
+
+## 📞 支持
+
+- [官方文档](https://code.claude.com/docs)
+- [GitHub仓库](https://github.com/anthropics/claude-code)
+- [Claude API文档](https://docs.anthropic.com)
+
+## 更新日志
+EOF
+
+    echo "- **安装时间**: $(date)" >> "$guide_file"
+    echo "- **安装版本**: Complete Edition" >> "$guide_file"
+
+    log_success "完整使用指南已创建: $guide_file"
+}
+
+# 清理临时文件
+cleanup_temp_files() {
+    log_header "清理临时文件..."
+
+    if [ -d "/tmp/claude-code-repo" ]; then
+        rm -rf /tmp/claude-code-repo
+        log_success "清理临时仓库文件"
+    fi
+
+    if [ -f "/tmp/marketplace.json" ]; then
+        rm -f /tmp/marketplace.json
+        log_success "清理临时marketplace文件"
+    fi
+}
+
+# 主函数
+main() {
+    echo ""
+    echo "╔══════════════════════════════════════════════════════════════╗"
+    echo "║          Claude官方Skill完整安装器 (Complete Edition)      ║"
+    echo "║                                                              ║"
+    echo "║    🚀 通过克隆GitHub仓库获取完整的Skill文件               ║"
+    echo "║    📦 包含所有skill文件和详细文档                           ║"
+    echo "╚══════════════════════════════════════════════════════════════╝"
+    echo ""
+
+    # 清理旧安装
+    cleanup_old_install
+
+    # 克隆仓库
+    if ! clone_repository; then
+        log_error "无法克隆仓库，请检查网络连接"
+        exit 1
+    fi
+
+    # 检查仓库结构
+    if ! check_repository_structure; then
+        log_error "仓库结构不正确"
+        exit 1
+    fi
+
+    # 创建目录
+    create_directories
+
+    # 安装skill
+    install_all_skills
+
+    # 创建文档
+    create_skill_index
+    create_complete_guide
+
+    # 清理临时文件
+    cleanup_temp_files
+
+    echo ""
+    echo "🎉 恭喜！Claude官方Skill完整安装成功！"
+    echo ""
+    echo "📁 Skill目录: $SKILLS_DIR"
+    echo "📖 完整指南: $SKILLS_DIR/COMPLETE_GUIDE.md"
+    echo "📋 Skill索引: $SKILLS_DIR/SKILL_INDEX.md"
+    echo "⚡ 快速参考: $SKILLS_DIR/QUICK_REFERENCE.md"
+    echo ""
+    echo "✨ 现在您可以享受完整的Claude官方skill功能了！"
+    echo ""
+    echo "💡 提示："
+    echo "   - 查看 COMPLETE_GUIDE.md 了解详细使用方法"
+    echo "   - 查看 SKILL_INDEX.md 浏览所有skill"
+    echo "   - 编辑 skill.config.json 启用/禁用skill"
+    echo ""
+}
+
+# 运行主函数
+main "$@"

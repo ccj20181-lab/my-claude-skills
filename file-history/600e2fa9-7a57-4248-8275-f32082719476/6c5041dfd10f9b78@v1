@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  html { background: #ffffff; }
+  body {
+    width: 720pt; height: 405pt; margin: 0; padding: 0;
+    background: #FFFFFF; font-family: Arial, sans-serif;
+    display: flex; flex-direction: column;
+  }
+  .header {
+    background: #2C3E50; padding: 20pt 40pt;
+    height: 40pt; display: flex; align-items: center;
+  }
+  h1 { color: #FFFFFF; font-size: 28pt; margin: 0; }
+  .content { padding: 40pt; display: flex; justify-content: space-between; }
+  .left-col { width: 60%; }
+  .right-col { width: 35%; display: flex; flex-direction: column; justify-content: center; }
+
+  ul { margin: 0; padding-left: 20pt; }
+  li { margin-bottom: 20pt; color: #34495E; font-size: 18pt; line-height: 1.5; }
+  strong { color: #E67E22; }
+
+  .box {
+    background: #F8F9F9; border: 2pt solid #BDC3C7; border-radius: 8pt;
+    padding: 20pt; text-align: center;
+  }
+  .box h3 { margin: 0 0 10pt 0; color: #2C3E50; }
+  .highlight { font-size: 24pt; color: #C0392B; font-weight: bold; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <h1>第一篇：金融常识与底层逻辑</h1>
+  </div>
+  <div class="content">
+    <div class="left-col">
+      <ul>
+        <li><strong>货币的本质：</strong> 理解货币供应 (M2) 与通货膨胀的关系，看清钱袋子的缩水真相。</li>
+        <li><strong>宏观经济：</strong> 掌握经济周期的运行规律，在繁荣与萧条中寻找机会。</li>
+        <li><strong>核心思维：</strong>
+          <ul style="margin-top: 10pt; font-size: 16pt;">
+            <li>复利思维：时间是财富的朋友。</li>
+            <li>风险分散：不要把鸡蛋放在一个篮子里。</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="right-col">
+      <div class="box">
+        <h3>核心公式</h3>
+        <p class="highlight">收益 = 本金 × (1 + 收益率)^时间</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

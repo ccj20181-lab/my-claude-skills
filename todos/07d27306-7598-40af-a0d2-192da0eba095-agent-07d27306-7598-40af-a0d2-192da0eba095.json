@@ -1,0 +1,17 @@
+[
+  {
+    "content": "测试报错的 API 端点连通性 (curl)",
+    "status": "completed",
+    "activeForm": "正在测试 API 端点连通性喵"
+  },
+  {
+    "content": "使用浏览器 User-Agent 模拟 POST 请求以排除简单拦截",
+    "status": "completed",
+    "activeForm": "正在模拟浏览器请求进行测试"
+  },
+  {
+    "content": "根据多次测试结果总结故障原因并提供建议",
+    "status": "in_progress",
+    "activeForm": "正在总结故障原因"
+  }
+]

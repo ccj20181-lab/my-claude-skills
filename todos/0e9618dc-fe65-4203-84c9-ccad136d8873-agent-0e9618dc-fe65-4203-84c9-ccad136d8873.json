@@ -1,0 +1,27 @@
+[
+  {
+    "content": "Use npx skillslm to install teng-lin/notebooklm-py",
+    "status": "in_progress",
+    "activeForm": "Installing skill via skillslm"
+  },
+  {
+    "content": "Check if the skill was installed successfully",
+    "status": "pending",
+    "activeForm": "Verifying installation"
+  },
+  {
+    "content": "Copy the installed skill to ~/Documents/my-claude-skills/",
+    "status": "pending",
+    "activeForm": "Copying to local repo"
+  },
+  {
+    "content": "Update skills.json and README.md in the repo",
+    "status": "pending",
+    "activeForm": "Updating repo config"
+  },
+  {
+    "content": "Commit and push changes to remote",
+    "status": "pending",
+    "activeForm": "Pushing to GitHub"
+  }
+]

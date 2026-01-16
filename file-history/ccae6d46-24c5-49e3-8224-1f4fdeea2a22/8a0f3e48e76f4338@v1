@@ -1,0 +1,78 @@
+#!/usr/bin/env python3
+"""
+独立脚本:批量获取用户粉丝数
+运行方式:python3 /tmp/fetch_followers.py
+"""
+import json
+import requests
+import sys
+
+MCP_URL = "http://localhost:18060/mcp"
+
+def get_user_followers(user_id, xsec_token):
+    """调用 MCP 获取用户粉丝数,只返回需要的字段"""
+    payload = {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "tools/call",
+        "params": {
+            "name": "user_profile",
+            "arguments": {
+                "user_id": user_id,
+                "xsec_token": xsec_token
+            }
+        }
+    }
+    try:
+        resp = requests.post(MCP_URL, json=payload, timeout=30)
+        data = resp.json()
+        # 只提取需要的字段！
+        user_info = data.get("result", {}).get("userBasicInfo", {})
+        return {
+            "user_id": user_id,
+            "followers": user_info.get("fans", 0),
+            "nickname": user_info.get("nickname", "")
+        }
+    except Exception as e:
+        return {"user_id": user_id, "followers": -1, "error": str(e)}
+
+def main():
+    # 读取候选数据
+    try:
+        with open("/tmp/xhs_candidates.json", "r") as f:
+            candidates = json.load(f)
+    except FileNotFoundError:
+        print("[ERROR] /tmp/xhs_candidates.json 不存在")
+        sys.exit(1)
+
+    if not candidates:
+        print("[INFO] 没有候选笔记")
+        sys.exit(0)
+
+    # 去重用户 ID
+    unique_users = {}
+    for c in candidates:
+        uid = c["user_id"]
+        if uid not in unique_users:
+            unique_users[uid] = c["xsec_token"]
+
+    print(f"[INFO] 开始获取 {len(unique_users)} 个用户的粉丝数...")
+
+    # 批量获取粉丝数
+    followers_map = {}
+    for i, (uid, token) in enumerate(unique_users.items(), 1):
+        result = get_user_followers(uid, token)
+        followers = result.get("followers", -1)
+        nickname = result.get("nickname", "")
+        followers_map[uid] = followers
+        print(f"[{i}/{len(unique_users)}] {nickname}: {followers} 粉丝")
+
+    # 保存结果(精简数据！)
+    with open("/tmp/xhs_followers.json", "w") as f:
+        json.dump(followers_map, f, ensure_ascii=False)
+
+    print(f"\n✅ 完成！获取了 {len(followers_map)} 个用户的粉丝数")
+    print(f"✅ 结果已保存到 /tmp/xhs_followers.json")
+
+if __name__ == "__main__":
+    main()

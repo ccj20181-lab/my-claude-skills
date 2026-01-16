@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+.header {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 70pt;
+  background: #1C2833;
+  padding: 20pt 40pt;
+  box-sizing: border-box;
+}
+.header h1 {
+  font-size: 28pt;
+  color: #F4F6F6;
+  margin: 0;
+}
+.content {
+  margin: 90pt 40pt 30pt 40pt;
+}
+.section {
+  margin-bottom: 25pt;
+}
+h2 {
+  font-size: 20pt;
+  color: #D4AF37;
+  margin: 0 0 10pt 0;
+  font-weight: bold;
+}
+ul {
+  margin: 0;
+  padding-left: 30pt;
+  font-size: 16pt;
+  color: #2E4053;
+  line-height: 1.6;
+}
+.highlight {
+  background: #D4AF37;
+  padding: 15pt 20pt;
+  border-radius: 8pt;
+  margin-top: 15pt;
+}
+.highlight p {
+  font-size: 16pt;
+  color: #1C2833;
+  margin: 0;
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>红利资产：确定性的避风港</h1>
+</div>
+<div class="content">
+  <div class="section">
+    <h2>背景</h2>
+    <ul>
+      <li>低利率环境下，高股息资产吸引力凸显</li>
+    </ul>
+  </div>
+  <div class="section">
+    <h2>数据支撑</h2>
+    <ul>
+      <li>2025年广东上市公司分红创历史新高</li>
+      <li>股东回报意识增强</li>
+    </ul>
+  </div>
+  <div class="section">
+    <h2>投资标的</h2>
+    <ul>
+      <li>银行、能源、公用事业等现金流充沛板块</li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

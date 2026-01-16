@@ -1,0 +1,64 @@
+import os
+import shutil
+import datetime
+
+desktop_path = "/Users/henry/Desktop"
+archive_folder_name = f"桌面归档_{datetime.datetime.now().strftime('%Y%m%d')}"
+archive_path = os.path.join(desktop_path, archive_folder_name)
+temp_folders_to_delete = [
+    "source_unpacked",
+    "template_unpacked",
+    "source_formatted",
+    "source_unpacked_new"
+]
+
+# Create archive directory
+try:
+    if not os.path.exists(archive_path):
+        os.makedirs(archive_path)
+        print(f"Created archive folder: {archive_path}")
+    else:
+        print(f"Archive folder already exists: {archive_path}")
+except Exception as e:
+    print(f"Error creating archive folder: {e}")
+
+# Process files
+for item in os.listdir(desktop_path):
+    item_path = os.path.join(desktop_path, item)
+
+    # Skip the archive folder itself
+    if item_path == archive_path:
+        continue
+
+    # Skip system files/hidden files/Apps
+    if item.startswith('.') or item.endswith('.app'):
+        print(f"Skipping system/app file: {item}")
+        continue
+
+    # Delete temp folders
+    if item in temp_folders_to_delete and os.path.isdir(item_path):
+        try:
+            shutil.rmtree(item_path)
+            print(f"Deleted temporary folder: {item}")
+        except Exception as e:
+            print(f"Error deleting {item}: {e}")
+        continue
+
+    # Move other files/folders to archive
+    try:
+        # Check if it's the cleanup script itself
+        if item == "desktop_cleanup.py":
+            continue
+
+        destination = os.path.join(archive_path, item)
+        if os.path.exists(destination):
+            # Rename if exists
+            base, ext = os.path.splitext(item)
+            timestamp = datetime.datetime.now().strftime("%H%M%S")
+            new_name = f"{base}_{timestamp}{ext}"
+            destination = os.path.join(archive_path, new_name)
+
+        shutil.move(item_path, destination)
+        print(f"Moved {item} to archive")
+    except Exception as e:
+        print(f"Error moving {item}: {e}")

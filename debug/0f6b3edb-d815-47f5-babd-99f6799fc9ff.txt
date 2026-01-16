@@ -1,0 +1,1493 @@
+2026-01-09T12:51:51.273Z [DEBUG] Watching for changes in setting files /Users/henry/.claude, /Users/henry/.claude, /Users/henry/.claude...
+2026-01-09T12:51:51.274Z [DEBUG] [init] configureGlobalMTLS starting
+2026-01-09T12:51:51.274Z [DEBUG] [init] configureGlobalMTLS complete
+2026-01-09T12:51:51.274Z [DEBUG] [init] configureGlobalAgents starting
+2026-01-09T12:51:51.274Z [DEBUG] [init] configureGlobalAgents complete
+2026-01-09T12:51:51.283Z [DEBUG] [LSP MANAGER] initializeLspServerManager() called
+2026-01-09T12:51:51.283Z [DEBUG] [LSP MANAGER] Created manager instance, state=pending
+2026-01-09T12:51:51.283Z [DEBUG] [LSP MANAGER] Starting async initialization (generation 1)
+2026-01-09T12:51:51.285Z [DEBUG] Applying permission update: Adding 24 allow rule(s) to destination 'userSettings': ["Bash","BashOutput","Edit","Glob","Grep","KillShell","NotebookEdit","Read","SlashCommand","Task","TodoWrite","WebFetch","WebSearch","Write","mcp__ide","mcp__exa","mcp__context7","mcp__mcp-deepwiki","mcp__Playwright","mcp__spec-workflow","mcp__open-websearch","mcp__serena","mcp__tavily","mcp__xiaohongshu"]
+2026-01-09T12:51:51.285Z [DEBUG] Applying permission update: Adding 24 allow rule(s) to destination 'projectSettings': ["Bash","BashOutput","Edit","Glob","Grep","KillShell","NotebookEdit","Read","SlashCommand","Task","TodoWrite","WebFetch","WebSearch","Write","mcp__ide","mcp__exa","mcp__context7","mcp__mcp-deepwiki","mcp__Playwright","mcp__spec-workflow","mcp__open-websearch","mcp__serena","mcp__tavily","mcp__xiaohongshu"]
+2026-01-09T12:51:51.285Z [DEBUG] Applying permission update: Adding 20 allow rule(s) to destination 'localSettings': ["mcp__tavily__tavily-search","mcp__tavily__tavily-crawl","mcp__chrome-devtools__list_pages","mcp__chrome-devtools__new_page","mcp__chrome-devtools__select_page","mcp__chrome-devtools__navigate_page","mcp__chrome-devtools__take_screenshot","mcp__chrome-devtools__take_snapshot","mcp__chrome-devtools__click","mcp__chrome-devtools__fill_form","Skill(document-skills:skill-creator)","mcp__chrome-devtools__list_network_requests","mcp__chrome-devtools__list_console_messages","mcp__chrome-devtools__evaluate_script","mcp__chrome-devtools__resize_page","mcp__chrome-devtools__emulate","Skill(miaodong-finance-writer)","Skill(finance-infographic)","mcp__chrome-devtools__fill","Skill(document-skills:theme-factory)"]
+2026-01-09T12:51:51.285Z [DEBUG] [STARTUP] Loading MCP configs...
+2026-01-09T12:51:51.287Z [DEBUG] Loading plugin document-skills from source: "./"
+2026-01-09T12:51:51.304Z [DEBUG] Watching for changes in skill directories: /Users/henry/.claude/skills, /Users/henry/.claude/skills...
+2026-01-09T12:51:51.333Z [DEBUG] Git remote URL: null
+2026-01-09T12:51:51.333Z [DEBUG] No git remote URL found
+2026-01-09T12:51:51.333Z [DEBUG] Not in a GitHub repository, skipping path mapping update
+2026-01-09T12:51:51.333Z [DEBUG] Using git SHA for document-skills@anthropic-agent-skills: 69c0b1a06741
+2026-01-09T12:51:51.334Z [DEBUG] Plugin document-skills@anthropic-agent-skills version 69c0b1a06741 already cached at /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741
+2026-01-09T12:51:51.334Z [DEBUG] Copied local plugin document-skills to versioned cache: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741
+2026-01-09T12:51:51.334Z [DEBUG] Processing 4 skill paths for plugin document-skills
+2026-01-09T12:51:51.334Z [DEBUG] Checking skill path: ./skills/xlsx -> /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/xlsx (exists: true)
+2026-01-09T12:51:51.334Z [DEBUG] Checking skill path: ./skills/docx -> /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/docx (exists: true)
+2026-01-09T12:51:51.334Z [DEBUG] Checking skill path: ./skills/pptx -> /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pptx (exists: true)
+2026-01-09T12:51:51.334Z [DEBUG] Checking skill path: ./skills/pdf -> /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pdf (exists: true)
+2026-01-09T12:51:51.334Z [DEBUG] Found 4 valid skill paths for plugin document-skills, setting skillsPaths
+2026-01-09T12:51:51.334Z [DEBUG] Found 1 plugins (1 enabled, 0 disabled)
+2026-01-09T12:51:51.334Z [DEBUG] [STARTUP] MCP configs loaded in 49ms
+2026-01-09T12:51:51.334Z [DEBUG] [STARTUP] Running setup()...
+2026-01-09T12:51:51.337Z [DEBUG] Stats cache is up to date
+2026-01-09T12:51:51.337Z [DEBUG] Plugin autoupdate: skipped (auto-updater disabled)
+2026-01-09T12:51:51.338Z [DEBUG] Loading skills from: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/henry/.claude/skills, project=[]
+2026-01-09T12:51:51.390Z [DEBUG] Loaded 1 installed plugins from /Users/henry/.claude/plugins/installed_plugins.json
+2026-01-09T12:51:51.393Z [DEBUG] Writing to temp file: /Users/henry/.claude/todos/0f6b3edb-d815-47f5-babd-99f6799fc9ff-agent-0f6b3edb-d815-47f5-babd-99f6799fc9ff.json.tmp.55184.1767963111393
+2026-01-09T12:51:51.393Z [DEBUG] Temp file written successfully, size: 2 bytes
+2026-01-09T12:51:51.393Z [DEBUG] Renaming /Users/henry/.claude/todos/0f6b3edb-d815-47f5-babd-99f6799fc9ff-agent-0f6b3edb-d815-47f5-babd-99f6799fc9ff.json.tmp.55184.1767963111393 to /Users/henry/.claude/todos/0f6b3edb-d815-47f5-babd-99f6799fc9ff-agent-0f6b3edb-d815-47f5-babd-99f6799fc9ff.json
+2026-01-09T12:51:51.393Z [DEBUG] File /Users/henry/.claude/todos/0f6b3edb-d815-47f5-babd-99f6799fc9ff-agent-0f6b3edb-d815-47f5-babd-99f6799fc9ff.json written atomically
+2026-01-09T12:51:51.394Z [DEBUG] getPluginSkills: Processing 1 enabled plugins
+2026-01-09T12:51:51.394Z [DEBUG] Checking plugin document-skills: skillsPath=exists, skillsPaths=4 paths
+2026-01-09T12:51:51.394Z [DEBUG] Attempting to load skills from plugin document-skills default skillsPath: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills
+2026-01-09T12:51:51.400Z [DEBUG] Total plugin commands loaded: 0
+2026-01-09T12:51:51.400Z [DEBUG] Registered 0 hooks from 1 plugins
+2026-01-09T12:51:51.401Z [DEBUG] [STARTUP] setup() completed in 67ms
+2026-01-09T12:51:51.401Z [DEBUG] [STARTUP] Loading commands and agents...
+2026-01-09T12:51:51.401Z [DEBUG] Loaded 16 skills from plugin document-skills default directory
+2026-01-09T12:51:51.401Z [DEBUG] Attempting to load skills from plugin document-skills skillsPaths: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/xlsx, /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/docx, /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pptx, /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pdf
+2026-01-09T12:51:51.401Z [DEBUG] Loading from skillPath: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/xlsx for plugin document-skills
+2026-01-09T12:51:51.401Z [DEBUG] Loaded 0 skills from plugin document-skills custom path: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/xlsx
+2026-01-09T12:51:51.401Z [DEBUG] Loading from skillPath: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/docx for plugin document-skills
+2026-01-09T12:51:51.401Z [DEBUG] Loaded 0 skills from plugin document-skills custom path: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/docx
+2026-01-09T12:51:51.401Z [DEBUG] Loading from skillPath: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pptx for plugin document-skills
+2026-01-09T12:51:51.401Z [DEBUG] Loaded 0 skills from plugin document-skills custom path: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pptx
+2026-01-09T12:51:51.401Z [DEBUG] Loading from skillPath: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pdf for plugin document-skills
+2026-01-09T12:51:51.401Z [DEBUG] Loaded 0 skills from plugin document-skills custom path: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pdf
+2026-01-09T12:51:51.401Z [DEBUG] Total plugin skills loaded: 16
+2026-01-09T12:51:51.401Z [DEBUG] Total LSP servers loaded: 0
+2026-01-09T12:51:51.401Z [DEBUG] [LSP SERVER MANAGER] getAllLspServers returned 0 server(s)
+2026-01-09T12:51:51.401Z [DEBUG] LSP manager initialized with 0 servers
+2026-01-09T12:51:51.401Z [DEBUG] LSP server manager initialized successfully
+2026-01-09T12:51:51.401Z [DEBUG] LSP notification handlers registered successfully for all 0 server(s)
+2026-01-09T12:51:51.423Z [DEBUG] Creating shell snapshot for zsh (/bin/zsh)
+2026-01-09T12:51:51.423Z [DEBUG] Looking for shell config file: /Users/henry/.zshrc
+2026-01-09T12:51:51.423Z [DEBUG] Snapshots directory: /Users/henry/.claude/shell-snapshots
+2026-01-09T12:51:51.424Z [DEBUG] Creating snapshot at: /Users/henry/.claude/shell-snapshots/snapshot-zsh-1767963111423-ajxwut.sh
+2026-01-09T12:51:51.424Z [DEBUG] Shell binary exists: true
+2026-01-09T12:51:51.424Z [DEBUG] Execution timeout: 10000ms
+2026-01-09T12:51:51.432Z [DEBUG] Loaded 17 unique skills (managed: 0, user: 6, project: 0, legacy commands: 11)
+2026-01-09T12:51:51.432Z [DEBUG] getSkills returning: 17 skill dir commands, 16 plugin skills
+2026-01-09T12:51:51.434Z [DEBUG] Total plugin agents loaded: 0
+2026-01-09T12:51:51.434Z [DEBUG] [STARTUP] Commands and agents loaded in 33ms
+2026-01-09T12:51:51.434Z [DEBUG] [STARTUP] Running showSetupScreens()...
+2026-01-09T12:51:51.434Z [DEBUG] [render] initYoga starting
+2026-01-09T12:51:51.443Z [DEBUG] [render] initYoga complete
+2026-01-09T12:51:51.457Z [DEBUG] Shell snapshot created successfully (758 bytes)
+2026-01-09T12:51:52.083Z [DEBUG] [STARTUP] showSetupScreens() completed in 649ms
+2026-01-09T12:51:52.100Z [DEBUG] MCP server "Playwright": Starting connection with timeout of 60000ms
+2026-01-09T12:51:52.103Z [DEBUG] MCP server "chrome-devtools": Starting connection with timeout of 60000ms
+2026-01-09T12:51:52.104Z [DEBUG] MCP server "tavily": Starting connection with timeout of 60000ms
+2026-01-09T12:51:52.107Z [DEBUG] All plugins already exist, skipping migration
+2026-01-09T12:51:52.112Z [DEBUG] Initialized versioned plugins system with 1 plugins
+2026-01-09T12:51:52.114Z [DEBUG] Writing to temp file: /Users/henry/.claude.json.tmp.55184.1767963112114
+2026-01-09T12:51:52.114Z [DEBUG] Preserving file permissions: 100644
+2026-01-09T12:51:52.114Z [DEBUG] Temp file written successfully, size: 4871 bytes
+2026-01-09T12:51:52.114Z [DEBUG] Applied original permissions to temp file
+2026-01-09T12:51:52.114Z [DEBUG] Renaming /Users/henry/.claude.json.tmp.55184.1767963112114 to /Users/henry/.claude.json
+2026-01-09T12:51:52.114Z [DEBUG] File /Users/henry/.claude.json written atomically
+2026-01-09T12:51:52.684Z [DEBUG] Skipping SessionStart:startup hook execution - workspace trust not accepted
+2026-01-09T12:51:52.684Z [DEBUG] [render] initYoga starting
+2026-01-09T12:51:52.684Z [DEBUG] [render] initYoga complete
+2026-01-09T12:51:52.690Z [DEBUG] Summarizing all 9 messages (~0 tokens)
+2026-01-09T12:51:52.691Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:51:52.693Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:51:52.693Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:51:52.694Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:51:52.702Z [DEBUG] Skipping SubagentStart:Explore hook execution - workspace trust not accepted
+2026-01-09T12:51:52.704Z [DEBUG] Skipping SubagentStart:Plan hook execution - workspace trust not accepted
+2026-01-09T12:51:52.707Z [DEBUG] Skipping SubagentStart:Bash hook execution - workspace trust not accepted
+2026-01-09T12:51:52.871Z [DEBUG] Writing to temp file: /Users/henry/.claude.json.tmp.55184.1767963112871
+2026-01-09T12:51:52.871Z [DEBUG] Preserving file permissions: 100644
+2026-01-09T12:51:52.871Z [DEBUG] Temp file written successfully, size: 4763 bytes
+2026-01-09T12:51:52.871Z [DEBUG] Applied original permissions to temp file
+2026-01-09T12:51:52.871Z [DEBUG] Renaming /Users/henry/.claude.json.tmp.55184.1767963112871 to /Users/henry/.claude.json
+2026-01-09T12:51:52.871Z [DEBUG] File /Users/henry/.claude.json written atomically
+2026-01-09T12:51:52.873Z [DEBUG] Detected Homebrew cask installation: /opt/homebrew/Caskroom/claude-code/2.1.1/claude
+2026-01-09T12:51:52.873Z [DEBUG] [REPL:mount] REPL mounted, disabled=false
+2026-01-09T12:51:52.874Z [DEBUG] Detected Homebrew cask installation: /opt/homebrew/Caskroom/claude-code/2.1.1/claude
+2026-01-09T12:51:52.874Z [DEBUG] Official marketplace auto-install skipped: already_attempted
+2026-01-09T12:51:52.874Z [DEBUG] performStartupChecks called
+2026-01-09T12:51:52.874Z [DEBUG] Trust not accepted for current directory - skipping plugin installations
+2026-01-09T12:51:52.879Z [DEBUG] Writing to temp file: /Users/henry/.claude.json.tmp.55184.1767963112879
+2026-01-09T12:51:52.879Z [DEBUG] Preserving file permissions: 100644
+2026-01-09T12:51:52.879Z [DEBUG] Temp file written successfully, size: 4871 bytes
+2026-01-09T12:51:52.879Z [DEBUG] Applied original permissions to temp file
+2026-01-09T12:51:52.879Z [DEBUG] Renaming /Users/henry/.claude.json.tmp.55184.1767963112879 to /Users/henry/.claude.json
+2026-01-09T12:51:52.879Z [DEBUG] File /Users/henry/.claude.json written atomically
+2026-01-09T12:51:52.879Z [DEBUG] AutoUpdaterWrapper: Installation type: package-manager
+2026-01-09T12:51:52.880Z [DEBUG] Loaded plugins - Enabled: 1, Disabled: 0, Commands: 0, Agents: 0, Errors: 0
+2026-01-09T12:51:52.889Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:51:52.889Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T12:51:52.889Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T12:51:52.891Z [DEBUG] Skill prompt: showing "document-skills:theme-factory" (userFacingName="theme-factory")
+2026-01-09T12:51:52.891Z [DEBUG] Skill prompt: showing "document-skills:doc-coauthoring" (userFacingName="doc-coauthoring")
+2026-01-09T12:51:52.891Z [DEBUG] Skill prompt: showing "document-skills:xlsx" (userFacingName="xlsx")
+2026-01-09T12:51:52.891Z [DEBUG] Skill prompt: showing "document-skills:pdf" (userFacingName="pdf")
+2026-01-09T12:51:52.891Z [DEBUG] Skill prompt: showing "document-skills:algorithmic-art" (userFacingName="algorithmic-art")
+2026-01-09T12:51:52.891Z [DEBUG] Skill prompt: showing "document-skills:internal-comms" (userFacingName="internal-comms")
+2026-01-09T12:51:52.891Z [DEBUG] Skill prompt: showing "document-skills:skill-creator" (userFacingName="skill-creator")
+2026-01-09T12:51:52.891Z [DEBUG] Skill prompt: showing "document-skills:canvas-design" (userFacingName="canvas-design")
+2026-01-09T12:51:52.891Z [DEBUG] Skill prompt: showing "document-skills:pptx" (userFacingName="pptx")
+2026-01-09T12:51:52.891Z [DEBUG] Skill prompt: showing "document-skills:slack-gif-creator" (userFacingName="slack-gif-creator")
+2026-01-09T12:51:52.891Z [DEBUG] Skill prompt: showing "document-skills:webapp-testing" (userFacingName="webapp-testing")
+2026-01-09T12:51:52.891Z [DEBUG] Skill prompt: showing "document-skills:frontend-design" (userFacingName="frontend-design")
+2026-01-09T12:51:52.891Z [DEBUG] Skill prompt: showing "document-skills:mcp-builder" (userFacingName="mcp-builder")
+2026-01-09T12:51:52.891Z [DEBUG] Skill prompt: showing "document-skills:brand-guidelines" (userFacingName="brand-guidelines")
+2026-01-09T12:51:52.891Z [DEBUG] Skill prompt: showing "document-skills:docx" (userFacingName="docx")
+2026-01-09T12:51:52.891Z [DEBUG] Skill prompt: showing "document-skills:web-artifacts-builder" (userFacingName="web-artifacts-builder")
+2026-01-09T12:51:52.891Z [DEBUG] Skills and commands included in Skill tool: finance-infographic, miaodong-finance-writer, playwright-skill, notebooklm, report-hunter, zcf:git-worktree, zcf:bmad-init, zcf:workflow, zcf:feat, zcf:init-project, zcf:git-commit, zcf:git-cleanBranches, zcf:git-rollback, oncall-triage, commit-push-pr, dedupe, theme-factory, doc-coauthoring, xlsx, pdf, algorithmic-art, internal-comms, skill-creator, canvas-design, pptx, slack-gif-creator, webapp-testing, frontend-design, mcp-builder, brand-guidelines, docx, web-artifacts-builder
+2026-01-09T12:51:52.891Z [DEBUG] Skill prompt: showing "document-skills:theme-factory" (userFacingName="theme-factory")
+2026-01-09T12:51:52.891Z [DEBUG] Skill prompt: showing "document-skills:doc-coauthoring" (userFacingName="doc-coauthoring")
+2026-01-09T12:51:52.891Z [DEBUG] Skill prompt: showing "document-skills:xlsx" (userFacingName="xlsx")
+2026-01-09T12:51:52.891Z [DEBUG] Skill prompt: showing "document-skills:pdf" (userFacingName="pdf")
+2026-01-09T12:51:52.891Z [DEBUG] Skill prompt: showing "document-skills:algorithmic-art" (userFacingName="algorithmic-art")
+2026-01-09T12:51:52.891Z [DEBUG] Skill prompt: showing "document-skills:internal-comms" (userFacingName="internal-comms")
+2026-01-09T12:51:52.891Z [DEBUG] Skill prompt: showing "document-skills:skill-creator" (userFacingName="skill-creator")
+2026-01-09T12:51:52.891Z [DEBUG] Skill prompt: showing "document-skills:canvas-design" (userFacingName="canvas-design")
+2026-01-09T12:51:52.891Z [DEBUG] Skill prompt: showing "document-skills:pptx" (userFacingName="pptx")
+2026-01-09T12:51:52.891Z [DEBUG] Skill prompt: showing "document-skills:slack-gif-creator" (userFacingName="slack-gif-creator")
+2026-01-09T12:51:52.891Z [DEBUG] Skill prompt: showing "document-skills:webapp-testing" (userFacingName="webapp-testing")
+2026-01-09T12:51:52.891Z [DEBUG] Skill prompt: showing "document-skills:frontend-design" (userFacingName="frontend-design")
+2026-01-09T12:51:52.891Z [DEBUG] Skill prompt: showing "document-skills:mcp-builder" (userFacingName="mcp-builder")
+2026-01-09T12:51:52.891Z [DEBUG] Skill prompt: showing "document-skills:brand-guidelines" (userFacingName="brand-guidelines")
+2026-01-09T12:51:52.891Z [DEBUG] Skill prompt: showing "document-skills:docx" (userFacingName="docx")
+2026-01-09T12:51:52.891Z [DEBUG] Skill prompt: showing "document-skills:web-artifacts-builder" (userFacingName="web-artifacts-builder")
+2026-01-09T12:51:52.892Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:51:52.892Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:51:52.892Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:51:52.892Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:51:52.892Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:51:52.892Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:51:52.892Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:51:52.893Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:51:52.893Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:51:52.896Z [DEBUG] Detected Homebrew cask installation: /opt/homebrew/Caskroom/claude-code/2.1.1/claude
+2026-01-09T12:51:52.899Z [DEBUG] Writing to temp file: /Users/henry/.claude.json.tmp.55184.1767963112899
+2026-01-09T12:51:52.899Z [DEBUG] Preserving file permissions: 100644
+2026-01-09T12:51:52.899Z [DEBUG] Temp file written successfully, size: 4871 bytes
+2026-01-09T12:51:52.899Z [DEBUG] Applied original permissions to temp file
+2026-01-09T12:51:52.899Z [DEBUG] Renaming /Users/henry/.claude.json.tmp.55184.1767963112899 to /Users/henry/.claude.json
+2026-01-09T12:51:52.899Z [DEBUG] File /Users/henry/.claude.json written atomically
+2026-01-09T12:51:54.293Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:51:54.421Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:51:54.543Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:51:54.798Z [DEBUG] Summarizing all 30 messages (~4678 tokens)
+2026-01-09T12:51:54.798Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:51:54.798Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:51:54.798Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:51:54.798Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:51:54.913Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:51:55.086Z [ERROR] MCP server "tavily" Server stderr: Tavily MCP server running on stdio
+2026-01-09T12:51:55.090Z [DEBUG] MCP server "tavily": Successfully connected to stdio server in 2986ms
+2026-01-09T12:51:55.090Z [DEBUG] MCP server "tavily": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"tavily-mcp","version":"0.2.10"}}
+2026-01-09T12:51:55.129Z [DEBUG] MCP server "Playwright": Successfully connected to stdio server in 3031ms
+2026-01-09T12:51:55.129Z [DEBUG] MCP server "Playwright": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"Playwright","version":"0.0.54"}}
+2026-01-09T12:51:55.267Z [ERROR] MCP server "chrome-devtools" Server stderr: chrome-devtools-mcp exposes content of the browser instance to the MCP clients allowing them to inspect,
+debug, and modify any data in the browser or DevTools.
+Avoid sharing sensitive or personal information that you do not want to share with MCP clients.
+2026-01-09T12:51:55.269Z [DEBUG] MCP server "chrome-devtools": Successfully connected to stdio server in 3167ms
+2026-01-09T12:51:55.269Z [DEBUG] MCP server "chrome-devtools": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"chrome_devtools","title":"Chrome DevTools MCP server","version":"0.12.1"}}
+2026-01-09T12:51:55.314Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:51:55.573Z [DEBUG] Skipping SubagentStop hook execution - workspace trust not accepted
+2026-01-09T12:51:55.625Z [DEBUG] Summarizing all 200 messages (~53456 tokens)
+2026-01-09T12:51:55.625Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:51:55.626Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:51:55.626Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:51:55.626Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:51:56.255Z [DEBUG] Skipping SubagentStop hook execution - workspace trust not accepted
+2026-01-09T12:51:56.485Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-09T12:51:56.486Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:51:56.500Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:51:56.501Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:51:56.501Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:51:56.501Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:51:56.863Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:51:57.083Z [DEBUG] Summarizing all 7 messages (~114 tokens)
+2026-01-09T12:51:57.083Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:51:57.084Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:51:57.084Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:51:57.084Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:51:57.250Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:51:57.589Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:51:57.843Z [DEBUG] Summarizing all 11 messages (~1185 tokens)
+2026-01-09T12:51:57.843Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:51:57.844Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:51:57.844Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:51:57.844Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:51:58.104Z [DEBUG] executePreToolHooks called for tool: Read
+2026-01-09T12:51:58.104Z [DEBUG] Skipping PreToolUse:Read hook execution - workspace trust not accepted
+2026-01-09T12:51:58.116Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:51:58.117Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:51:58.117Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:51:58.117Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:51:58.490Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:51:58.714Z [DEBUG] Summarizing all 15 messages (~1845 tokens)
+2026-01-09T12:51:58.714Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:51:58.715Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:51:58.715Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:51:58.715Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:51:58.819Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:51:59.366Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:51:59.466Z [DEBUG] Summarizing all 22 messages (~2335 tokens)
+2026-01-09T12:51:59.466Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:51:59.466Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:51:59.466Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:51:59.466Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:51:59.942Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-09T12:51:59.943Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:51:59.955Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:51:59.956Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:51:59.956Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:51:59.956Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:00.274Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:00.626Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:00.739Z [DEBUG] Summarizing all 26 messages (~6036 tokens)
+2026-01-09T12:52:00.739Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:52:00.740Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:00.740Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:00.740Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:01.901Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:01.904Z [DEBUG] Summarizing all 30 messages (~6942 tokens)
+2026-01-09T12:52:01.904Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:52:01.904Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:01.904Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:01.904Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:02.403Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:02.466Z [DEBUG] Summarizing all 34 messages (~7036 tokens)
+2026-01-09T12:52:02.467Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:52:02.467Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:02.467Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:02.467Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:03.202Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:03.438Z [DEBUG] Summarizing all 38 messages (~18912 tokens)
+2026-01-09T12:52:03.438Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:52:03.439Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:03.439Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:03.439Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:04.021Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:04.024Z [DEBUG] Summarizing all 42 messages (~30465 tokens)
+2026-01-09T12:52:04.024Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:52:04.024Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:04.024Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:04.024Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:04.516Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:04.565Z [DEBUG] Summarizing all 46 messages (~31043 tokens)
+2026-01-09T12:52:04.566Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:52:04.566Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:04.566Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:04.566Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:05.249Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:05.326Z [DEBUG] Summarizing all 50 messages (~31481 tokens)
+2026-01-09T12:52:05.326Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:52:05.327Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:05.327Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:05.327Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:05.927Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:05.959Z [DEBUG] Summarizing all 54 messages (~32787 tokens)
+2026-01-09T12:52:05.959Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:52:05.959Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:05.959Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:05.960Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:06.582Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:06.626Z [DEBUG] Summarizing all 58 messages (~33388 tokens)
+2026-01-09T12:52:06.627Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:52:06.627Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:06.627Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:06.627Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:07.756Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:07.758Z [DEBUG] Summarizing all 62 messages (~33646 tokens)
+2026-01-09T12:52:07.759Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:52:07.759Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:07.759Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:07.759Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:08.278Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:08.564Z [DEBUG] Summarizing all 66 messages (~39195 tokens)
+2026-01-09T12:52:08.565Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:52:08.565Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:08.565Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:08.566Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:09.139Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:09.335Z [DEBUG] Summarizing all 84 messages (~39195 tokens)
+2026-01-09T12:52:09.336Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:52:09.337Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:09.337Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:09.337Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:09.835Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:09.969Z [DEBUG] Summarizing all 93 messages (~39358 tokens)
+2026-01-09T12:52:09.969Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:52:09.970Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:09.970Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:09.970Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:10.538Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:10.545Z [DEBUG] Summarizing all 98 messages (~39724 tokens)
+2026-01-09T12:52:10.546Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:52:10.547Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:10.547Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:10.547Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:11.397Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:11.671Z [DEBUG] Summarizing all 107 messages (~44388 tokens)
+2026-01-09T12:52:11.671Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:52:11.671Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:11.671Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:11.671Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:12.345Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:12.447Z [DEBUG] Summarizing all 112 messages (~45849 tokens)
+2026-01-09T12:52:12.447Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:52:12.447Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:12.447Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:12.448Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:12.954Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:12.993Z [DEBUG] Summarizing all 117 messages (~46859 tokens)
+2026-01-09T12:52:12.993Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:52:12.993Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:12.993Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:12.993Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:13.857Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:13.917Z [DEBUG] Summarizing all 126 messages (~47720 tokens)
+2026-01-09T12:52:13.918Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:52:13.918Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:13.918Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:13.918Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:14.138Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-09T12:52:14.139Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-09T12:52:14.139Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-09T12:52:14.139Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-09T12:52:14.146Z [DEBUG] Skipping UserPromptSubmit hook execution - workspace trust not accepted
+2026-01-09T12:52:14.147Z [DEBUG] FileHistory: Added snapshot for 22890862-a9ea-4087-b2d2-e52390f833c7, tracking 0 files
+2026-01-09T12:52:14.156Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:52:14.156Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:14.156Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:14.156Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:14.163Z [DEBUG] Total plugin output styles loaded: 0
+2026-01-09T12:52:14.164Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T12:52:14.169Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:14.169Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:14.169Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:14.865Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:15.167Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:15.489Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:15.598Z [DEBUG] Summarizing all 131 messages (~48525 tokens)
+2026-01-09T12:52:15.599Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:52:15.599Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:15.599Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:15.599Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:16.178Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:16.229Z [DEBUG] Summarizing all 136 messages (~48525 tokens)
+2026-01-09T12:52:16.229Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:52:16.229Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:16.229Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:16.230Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:16.744Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:16.939Z [DEBUG] Summarizing all 141 messages (~48862 tokens)
+2026-01-09T12:52:16.940Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:52:16.940Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:16.940Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:16.940Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:17.588Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:17.640Z [DEBUG] Summarizing all 146 messages (~49167 tokens)
+2026-01-09T12:52:17.640Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:52:17.640Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:17.640Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:17.640Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:18.068Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-09T12:52:18.068Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:52:18.080Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:52:18.080Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:18.080Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:18.080Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:18.360Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:18.698Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:18.736Z [DEBUG] Summarizing all 151 messages (~49512 tokens)
+2026-01-09T12:52:18.737Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:52:18.738Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:18.738Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:18.738Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:19.352Z [DEBUG] executePreToolHooks called for tool: WebSearch
+2026-01-09T12:52:19.353Z [DEBUG] Skipping PreToolUse:WebSearch hook execution - workspace trust not accepted
+2026-01-09T12:52:19.363Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:52:19.365Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:19.365Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:19.365Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:19.569Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:21.250Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-09T12:52:21.251Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-09T12:52:21.251Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-09T12:52:21.251Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-09T12:52:21.267Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T12:52:21.274Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:21.274Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:21.274Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:21.556Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:22.037Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:22.132Z [DEBUG] Summarizing all 160 messages (~50896 tokens)
+2026-01-09T12:52:22.132Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:52:22.132Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:22.132Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:22.133Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:22.641Z [DEBUG] executePreToolHooks called for tool: Glob
+2026-01-09T12:52:22.641Z [DEBUG] Skipping PreToolUse:Glob hook execution - workspace trust not accepted
+2026-01-09T12:52:22.838Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:22.973Z [DEBUG] Summarizing all 169 messages (~51309 tokens)
+2026-01-09T12:52:22.974Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:52:22.974Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:22.974Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:22.974Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:23.322Z [DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/opt/homebrew/Caskroom/claude-code/2.1.1/claude)
+2026-01-09T12:52:23.556Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:23.606Z [DEBUG] Summarizing all 190 messages (~52673 tokens)
+2026-01-09T12:52:23.607Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:52:23.607Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:23.607Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:23.607Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:24.135Z [DEBUG] Skipping PostToolUse:Glob hook execution - workspace trust not accepted
+2026-01-09T12:52:24.141Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-09T12:52:24.141Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-09T12:52:24.141Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-09T12:52:24.141Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-09T12:52:24.146Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T12:52:24.147Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:24.147Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:24.147Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:24.287Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:24.654Z [DEBUG] Summarizing all 212 messages (~57136 tokens)
+2026-01-09T12:52:24.655Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:52:24.655Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:24.655Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:24.655Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:24.855Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:25.671Z [DEBUG] executePreToolHooks called for tool: Glob
+2026-01-09T12:52:25.671Z [DEBUG] Skipping PreToolUse:Glob hook execution - workspace trust not accepted
+2026-01-09T12:52:25.890Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:25.973Z [DEBUG] Skipping SubagentStop hook execution - workspace trust not accepted
+2026-01-09T12:52:25.977Z [DEBUG] Summarizing all 236 messages (~61194 tokens)
+2026-01-09T12:52:25.978Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:52:25.978Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:25.978Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:25.978Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:26.163Z [DEBUG] Skipping PostToolUse:Glob hook execution - workspace trust not accepted
+2026-01-09T12:52:26.169Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-09T12:52:26.169Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-09T12:52:26.169Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-09T12:52:26.169Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-09T12:52:26.178Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T12:52:26.179Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:26.179Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:26.179Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:26.591Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:26.794Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:27.080Z [DEBUG] Summarizing all 249 messages (~63265 tokens)
+2026-01-09T12:52:27.081Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:52:27.081Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:27.081Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:27.081Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:27.515Z [DEBUG] executePreToolHooks called for tool: Read
+2026-01-09T12:52:27.516Z [DEBUG] Skipping PreToolUse:Read hook execution - workspace trust not accepted
+2026-01-09T12:52:27.537Z [DEBUG] Skipping PostToolUse:Read hook execution - workspace trust not accepted
+2026-01-09T12:52:27.547Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-09T12:52:27.547Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-09T12:52:27.547Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-09T12:52:27.547Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-09T12:52:27.558Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T12:52:27.559Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:27.559Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:27.559Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:27.627Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:27.886Z [DEBUG] Summarizing all 254 messages (~64396 tokens)
+2026-01-09T12:52:27.887Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:52:27.887Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:27.887Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:27.887Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:28.319Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:28.396Z [DEBUG] Summarizing all 259 messages (~64995 tokens)
+2026-01-09T12:52:28.396Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:52:28.397Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:28.397Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:28.397Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:29.051Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:29.203Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:29.234Z [DEBUG] Summarizing all 343 messages (~107092 tokens)
+2026-01-09T12:52:29.235Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:52:29.235Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:29.235Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:29.236Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:30.259Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:30.738Z [DEBUG] Summarizing all 342 messages (~107092 tokens)
+2026-01-09T12:52:30.739Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:52:30.739Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:30.739Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:30.739Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:30.750Z [DEBUG] executePreToolHooks called for tool: Read
+2026-01-09T12:52:30.750Z [DEBUG] Skipping PreToolUse:Read hook execution - workspace trust not accepted
+2026-01-09T12:52:30.772Z [DEBUG] Skipping PostToolUse:Read hook execution - workspace trust not accepted
+2026-01-09T12:52:30.778Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-09T12:52:30.778Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-09T12:52:30.778Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-09T12:52:30.778Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-09T12:52:30.791Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T12:52:30.792Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:30.792Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:30.792Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:31.388Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:32.267Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:32.671Z [DEBUG] Summarizing all 348 messages (~107092 tokens)
+2026-01-09T12:52:32.673Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:52:32.673Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:32.673Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:32.673Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:33.287Z [DEBUG] executePreToolHooks called for tool: Glob
+2026-01-09T12:52:33.287Z [DEBUG] Skipping PreToolUse:Glob hook execution - workspace trust not accepted
+2026-01-09T12:52:33.287Z [DEBUG] executePreToolHooks called for tool: Grep
+2026-01-09T12:52:33.287Z [DEBUG] Skipping PreToolUse:Grep hook execution - workspace trust not accepted
+2026-01-09T12:52:33.388Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:33.817Z [DEBUG] Skipping PostToolUse:Glob hook execution - workspace trust not accepted
+2026-01-09T12:52:33.827Z [DEBUG] Summarizing all 352 messages (~115214 tokens)
+2026-01-09T12:52:33.828Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:52:33.828Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:33.828Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:33.828Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:34.191Z [DEBUG] Skipping PostToolUse:Grep hook execution - workspace trust not accepted
+2026-01-09T12:52:34.196Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-09T12:52:34.196Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-09T12:52:34.197Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-09T12:52:34.197Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-09T12:52:34.206Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T12:52:34.207Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:34.207Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:34.207Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:35.041Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:35.213Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:38.246Z [DEBUG] executePreToolHooks called for tool: Glob
+2026-01-09T12:52:38.246Z [DEBUG] Skipping PreToolUse:Glob hook execution - workspace trust not accepted
+2026-01-09T12:52:38.246Z [DEBUG] executePreToolHooks called for tool: Glob
+2026-01-09T12:52:38.247Z [DEBUG] Skipping PreToolUse:Glob hook execution - workspace trust not accepted
+2026-01-09T12:52:38.247Z [DEBUG] executePreToolHooks called for tool: Glob
+2026-01-09T12:52:38.247Z [DEBUG] Skipping PreToolUse:Glob hook execution - workspace trust not accepted
+2026-01-09T12:52:48.282Z [DEBUG] Skipping PostToolUse:Glob hook execution - workspace trust not accepted
+2026-01-09T12:52:48.293Z [DEBUG] Skipping PostToolUse:Glob hook execution - workspace trust not accepted
+2026-01-09T12:52:48.293Z [DEBUG] Skipping PostToolUse:Glob hook execution - workspace trust not accepted
+2026-01-09T12:52:48.303Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-09T12:52:48.303Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-09T12:52:48.303Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-09T12:52:48.303Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-09T12:52:48.311Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T12:52:48.313Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:48.313Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:48.313Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:48.798Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:52:52.250Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-09T12:52:52.251Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:52:52.251Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-09T12:52:52.251Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:52:52.290Z [DEBUG] tree-sitter: loaded from embedded
+2026-01-09T12:52:52.325Z [DEBUG] No session environment scripts found
+2026-01-09T12:52:52.342Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:52:52.343Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:52:52.343Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:52:52.343Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:52:52.346Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:52:53.331Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:53:22.369Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:53:22.370Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:53:22.370Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:53:22.370Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:53:22.376Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:53:22.385Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-09T12:53:22.386Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-09T12:53:22.386Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-09T12:53:22.386Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-09T12:53:22.393Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T12:53:22.394Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:53:22.394Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:53:22.394Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:53:22.795Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:53:22.885Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:53:24.110Z [DEBUG] executePreToolHooks called for tool: TaskOutput
+2026-01-09T12:53:24.111Z [DEBUG] Skipping PreToolUse:TaskOutput hook execution - workspace trust not accepted
+2026-01-09T12:53:34.166Z [DEBUG] Skipping PostToolUse:TaskOutput hook execution - workspace trust not accepted
+2026-01-09T12:53:34.175Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-09T12:53:34.175Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-09T12:53:34.175Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-09T12:53:34.175Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-09T12:53:34.183Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T12:53:34.184Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:53:34.184Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:53:34.184Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:53:34.746Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:53:37.299Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-09T12:53:37.300Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:53:37.331Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:53:37.331Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:53:37.331Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:53:37.331Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:53:37.335Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:53:37.339Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-09T12:53:37.340Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:53:37.356Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:53:37.356Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:53:37.356Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:53:37.356Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:53:37.356Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:53:37.356Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:53:37.356Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:53:37.356Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:53:37.356Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:53:37.356Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:53:37.356Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:53:37.356Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:53:37.756Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:53:37.859Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:53:37.907Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:53:37.927Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:53:37.927Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:53:37.927Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:53:37.927Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:53:37.931Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:53:37.936Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-09T12:53:37.936Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-09T12:53:37.936Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-09T12:53:37.936Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-09T12:53:37.943Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T12:53:37.944Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:53:37.944Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:53:37.944Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:53:38.112Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:53:38.484Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:53:38.508Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:53:44.915Z [DEBUG] Skipping Stop hook execution - workspace trust not accepted
+2026-01-09T12:53:44.929Z [DEBUG] Writing to temp file: /Users/henry/.claude.json.tmp.55184.1767963224929
+2026-01-09T12:53:44.929Z [DEBUG] Preserving file permissions: 100644
+2026-01-09T12:53:44.930Z [DEBUG] Temp file written successfully, size: 4871 bytes
+2026-01-09T12:53:44.930Z [DEBUG] Applied original permissions to temp file
+2026-01-09T12:53:44.930Z [DEBUG] Renaming /Users/henry/.claude.json.tmp.55184.1767963224929 to /Users/henry/.claude.json
+2026-01-09T12:53:44.930Z [DEBUG] File /Users/henry/.claude.json written atomically
+2026-01-09T12:54:10.443Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-09T12:54:10.443Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-09T12:54:10.443Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-09T12:54:10.443Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-09T12:54:10.449Z [DEBUG] Skipping UserPromptSubmit hook execution - workspace trust not accepted
+2026-01-09T12:54:10.449Z [DEBUG] FileHistory: Making snapshot for message 960096ec-71fc-4b67-9ef0-f37b4310ee21
+2026-01-09T12:54:10.449Z [DEBUG] FileHistory: Added snapshot for 960096ec-71fc-4b67-9ef0-f37b4310ee21, tracking 0 files
+2026-01-09T12:54:10.456Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:54:10.456Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:54:10.456Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:54:10.456Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:54:10.459Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T12:54:10.470Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:54:10.470Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:54:10.470Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:54:11.116Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:54:11.415Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:54:15.103Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-09T12:54:15.103Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:54:15.103Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-09T12:54:15.104Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:54:15.640Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:54:15.640Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:54:15.640Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:54:15.640Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:54:15.645Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:54:15.645Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:54:15.645Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:54:15.645Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:54:15.645Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:54:15.650Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:54:15.656Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-09T12:54:15.656Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:54:15.675Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:54:15.675Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:54:15.675Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:54:15.675Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:54:15.675Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:54:15.675Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:54:15.675Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:54:15.675Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:54:15.675Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:54:15.675Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:54:15.675Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:54:15.675Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:54:15.675Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:54:15.675Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:54:15.675Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:54:15.675Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:54:16.014Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:54:16.053Z [DEBUG] Writing to temp file: /Users/henry/.claude.json.tmp.55184.1767963256053
+2026-01-09T12:54:16.053Z [DEBUG] Preserving file permissions: 100644
+2026-01-09T12:54:16.053Z [DEBUG] Temp file written successfully, size: 4871 bytes
+2026-01-09T12:54:16.053Z [DEBUG] Applied original permissions to temp file
+2026-01-09T12:54:16.053Z [DEBUG] Renaming /Users/henry/.claude.json.tmp.55184.1767963256053 to /Users/henry/.claude.json
+2026-01-09T12:54:16.053Z [DEBUG] File /Users/henry/.claude.json written atomically
+2026-01-09T12:54:16.097Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:54:16.608Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:54:16.729Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:54:17.406Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:54:19.725Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:54:19.834Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:54:19.834Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:54:19.834Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:54:19.834Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:54:19.838Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:54:19.848Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-09T12:54:19.848Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-09T12:54:19.848Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-09T12:54:19.848Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-09T12:54:19.855Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T12:54:19.856Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:54:19.856Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:54:19.856Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:54:20.256Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:54:20.531Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:54:25.027Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-09T12:54:25.027Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:54:25.438Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:54:25.438Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:54:25.438Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:54:25.438Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:54:25.442Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:54:25.446Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-09T12:54:25.446Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:54:25.462Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:54:25.462Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:54:25.462Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:54:25.462Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:54:25.462Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:54:25.462Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:54:25.462Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:54:25.462Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:54:25.462Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:54:25.462Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:54:25.462Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:54:25.462Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:54:25.982Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:54:25.983Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:54:26.082Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:54:27.251Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:54:27.252Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:54:27.252Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:54:27.252Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:54:27.258Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:54:27.263Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-09T12:54:27.264Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:54:27.279Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:54:27.283Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:54:27.283Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:54:27.283Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:54:27.283Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:54:27.695Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:54:27.814Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:54:27.814Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:54:27.814Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:54:27.814Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:54:27.819Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:54:27.825Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-09T12:54:27.825Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-09T12:54:27.825Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-09T12:54:27.825Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-09T12:54:27.837Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T12:54:27.838Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:54:27.838Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:54:27.838Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:54:28.106Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:54:28.202Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:54:28.219Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:54:37.767Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-09T12:54:37.767Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:54:37.791Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:54:37.791Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:54:37.791Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:54:37.791Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:54:37.791Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:54:37.791Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:54:37.791Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:54:37.791Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:54:38.175Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:54:38.354Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:54:38.393Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:54:38.393Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:54:38.393Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:54:38.393Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:54:38.399Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:54:38.421Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-09T12:54:38.421Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-09T12:54:38.421Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-09T12:54:38.421Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-09T12:54:38.437Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T12:54:38.439Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:54:38.439Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:54:38.439Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:54:38.764Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:54:39.456Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:54:46.540Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-09T12:54:46.541Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:54:46.565Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:54:46.565Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:54:46.566Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:54:46.566Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:54:46.566Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:54:46.566Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:54:46.566Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:54:46.566Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:54:47.142Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:54:48.737Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:54:49.496Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:54:49.497Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:54:49.497Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:54:49.497Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:54:49.502Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:54:49.511Z [DEBUG] executePreToolHooks called for tool: Read
+2026-01-09T12:54:49.511Z [DEBUG] Skipping PreToolUse:Read hook execution - workspace trust not accepted
+2026-01-09T12:54:49.528Z [DEBUG] Skipping PostToolUse:Read hook execution - workspace trust not accepted
+2026-01-09T12:54:49.535Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-09T12:54:49.535Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-09T12:54:49.535Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-09T12:54:49.535Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-09T12:54:49.550Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T12:54:49.552Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:54:49.552Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:54:49.552Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:54:50.043Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:54:50.149Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:54:51.975Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-09T12:54:51.975Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:54:52.013Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:54:52.013Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:54:52.013Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:54:52.013Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:54:52.018Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:54:52.023Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-09T12:54:52.023Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-09T12:54:52.023Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-09T12:54:52.023Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-09T12:54:52.035Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T12:54:52.036Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:54:52.036Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:54:52.036Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:54:52.567Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:54:53.309Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:54:54.680Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-09T12:54:54.681Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:54:54.693Z [DEBUG] executePreToolHooks called for tool: Read
+2026-01-09T12:54:54.693Z [DEBUG] Skipping PreToolUse:Read hook execution - workspace trust not accepted
+2026-01-09T12:54:54.723Z [DEBUG] Skipping PostToolUse:Read hook execution - workspace trust not accepted
+2026-01-09T12:54:54.739Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:54:54.739Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:54:54.739Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:54:54.739Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:54:54.744Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:54:54.750Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-09T12:54:54.750Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-09T12:54:54.750Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-09T12:54:54.750Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-09T12:54:54.762Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T12:54:54.763Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:54:54.763Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:54:54.763Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:54:55.987Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:54:57.225Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:55:02.052Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-09T12:55:02.052Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:56:21.166Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:56:21.167Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:56:21.167Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:56:21.167Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:56:21.171Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:56:21.175Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-09T12:56:21.175Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:56:21.194Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:56:21.194Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:56:21.194Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:56:21.194Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:56:21.194Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:56:21.194Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:56:21.194Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:56:21.194Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:56:21.194Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:56:21.194Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:56:21.194Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:56:21.194Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:56:21.980Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:56:21.984Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:56:22.245Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:56:22.293Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:56:22.471Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:56:22.472Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:56:22.472Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:56:22.472Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:56:22.478Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:56:22.487Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-09T12:56:22.487Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-09T12:56:22.487Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-09T12:56:22.487Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-09T12:56:22.501Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T12:56:22.503Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:56:22.503Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:56:22.503Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:56:22.999Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:56:24.166Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:56:27.610Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-09T12:56:27.611Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:56:27.611Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-09T12:56:27.611Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:56:27.686Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:56:27.686Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:56:27.686Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:56:27.686Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:56:27.690Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:56:28.256Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:56:52.083Z [DEBUG] BigQuery metrics export: trust not established, skipping
+2026-01-09T12:57:49.253Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:57:49.254Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:57:49.254Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:57:49.254Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:57:49.259Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:57:49.269Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-09T12:57:49.269Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-09T12:57:49.269Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-09T12:57:49.269Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-09T12:57:49.277Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T12:57:49.278Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:57:49.278Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:57:49.278Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:57:49.807Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:57:50.005Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:57:52.126Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-09T12:57:52.126Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:57:52.127Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-09T12:57:52.127Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:57:52.179Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:57:52.180Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:57:52.180Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:57:52.180Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:57:52.193Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:57:52.201Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:57:52.201Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:57:52.201Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:57:52.201Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:57:52.207Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:57:52.213Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-09T12:57:52.213Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-09T12:57:52.213Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-09T12:57:52.213Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-09T12:57:52.225Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T12:57:52.226Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:57:52.226Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:57:52.226Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:57:52.664Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:57:52.813Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:57:52.914Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:58:00.681Z [DEBUG] Skipping Stop hook execution - workspace trust not accepted
+2026-01-09T12:58:00.703Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-09T12:58:00.703Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-09T12:58:00.703Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-09T12:58:00.703Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-09T12:58:00.709Z [DEBUG] Skipping UserPromptSubmit hook execution - workspace trust not accepted
+2026-01-09T12:58:00.709Z [DEBUG] FileHistory: Making snapshot for message 1a0b7851-4691-40b2-a96c-1316bb651440
+2026-01-09T12:58:00.709Z [DEBUG] FileHistory: Added snapshot for 1a0b7851-4691-40b2-a96c-1316bb651440, tracking 0 files
+2026-01-09T12:58:00.715Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:58:00.715Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:58:00.715Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:58:00.715Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:58:00.717Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T12:58:00.720Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:58:00.720Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:58:00.720Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:58:01.383Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:58:01.419Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:58:02.683Z [DEBUG] executePreToolHooks called for tool: Read
+2026-01-09T12:58:02.683Z [DEBUG] Skipping PreToolUse:Read hook execution - workspace trust not accepted
+2026-01-09T12:58:02.705Z [DEBUG] Skipping PostToolUse:Read hook execution - workspace trust not accepted
+2026-01-09T12:58:02.710Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-09T12:58:02.710Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-09T12:58:02.710Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-09T12:58:02.710Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-09T12:58:02.722Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T12:58:02.723Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:58:02.723Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:58:02.723Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:58:02.997Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:58:05.948Z [DEBUG] executePreToolHooks called for tool: Read
+2026-01-09T12:58:05.949Z [DEBUG] Skipping PreToolUse:Read hook execution - workspace trust not accepted
+2026-01-09T12:58:05.973Z [DEBUG] Skipping PostToolUse:Read hook execution - workspace trust not accepted
+2026-01-09T12:58:05.984Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-09T12:58:05.984Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-09T12:58:05.984Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-09T12:58:05.984Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-09T12:58:05.992Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T12:58:05.994Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:58:05.994Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:58:05.994Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:58:06.257Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:58:07.429Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-09T12:58:07.429Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:58:07.446Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:58:07.447Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:58:07.447Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:58:07.447Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:58:07.953Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:58:07.980Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:58:07.980Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:58:07.980Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:58:07.980Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:58:07.985Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:58:07.996Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-09T12:58:07.996Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-09T12:58:07.996Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-09T12:58:07.996Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-09T12:58:08.003Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T12:58:08.005Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:58:08.005Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:58:08.005Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:58:08.389Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:58:08.803Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:58:10.329Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-09T12:58:10.329Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:58:10.372Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:58:10.372Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:58:10.372Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:58:10.372Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:58:10.376Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:58:10.384Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-09T12:58:10.384Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-09T12:58:10.384Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-09T12:58:10.384Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-09T12:58:10.391Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T12:58:10.392Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:58:10.392Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:58:10.392Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:58:11.128Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:58:11.626Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:58:14.559Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-09T12:58:14.559Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:58:14.591Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:58:14.591Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:58:14.591Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:58:14.591Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:58:14.591Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:58:14.591Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:58:14.591Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:58:14.591Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:58:15.442Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:58:15.443Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:58:15.500Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:58:15.500Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:58:15.500Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:58:15.500Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:58:15.506Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:58:15.516Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-09T12:58:15.517Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:58:15.537Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:58:15.537Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:58:15.537Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:58:15.537Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:58:15.930Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:58:15.961Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:58:15.980Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T12:58:15.980Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:58:15.980Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:58:15.980Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:58:15.986Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T12:58:15.993Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-09T12:58:15.993Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-09T12:58:15.993Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-09T12:58:15.993Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-09T12:58:16.004Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T12:58:16.005Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T12:58:16.005Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T12:58:16.005Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T12:58:16.498Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:58:16.724Z [DEBUG] Stream started - received first chunk
+2026-01-09T12:58:22.772Z [DEBUG] Skipping Stop hook execution - workspace trust not accepted
+2026-01-09T12:59:22.795Z [DEBUG] Skipping Notification:idle_prompt hook execution - workspace trust not accepted
+2026-01-09T13:01:52.073Z [DEBUG] BigQuery metrics export: trust not established, skipping
+2026-01-09T13:01:54.553Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-09T13:01:54.553Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-09T13:01:54.553Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-09T13:01:54.553Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-09T13:01:54.562Z [DEBUG] Skipping UserPromptSubmit hook execution - workspace trust not accepted
+2026-01-09T13:01:54.562Z [DEBUG] FileHistory: Making snapshot for message bfd2320d-c082-4842-ab67-e6fcef7bb447
+2026-01-09T13:01:54.563Z [DEBUG] FileHistory: Added snapshot for bfd2320d-c082-4842-ab67-e6fcef7bb447, tracking 0 files
+2026-01-09T13:01:54.572Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T13:01:54.574Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T13:01:54.574Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T13:01:54.575Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T13:01:54.579Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T13:01:54.591Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T13:01:54.591Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T13:01:54.591Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T13:02:13.637Z [DEBUG] Stream started - received first chunk
+2026-01-09T13:02:31.424Z [DEBUG] Stream started - received first chunk
+2026-01-09T13:02:35.437Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-09T13:02:35.438Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T13:02:35.502Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T13:02:35.503Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T13:02:35.503Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T13:02:35.503Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T13:02:35.507Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T13:02:35.512Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-09T13:02:35.512Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-09T13:02:35.512Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-09T13:02:35.512Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-09T13:02:35.524Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T13:02:35.525Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T13:02:35.525Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T13:02:35.525Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T13:02:35.922Z [DEBUG] Stream started - received first chunk
+2026-01-09T13:02:35.927Z [DEBUG] Stream started - received first chunk
+2026-01-09T13:02:37.780Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-09T13:02:37.780Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T13:02:37.780Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-09T13:02:37.780Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T13:02:37.854Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T13:02:37.854Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T13:02:37.854Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T13:02:37.854Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T13:02:37.858Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T13:02:38.001Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T13:02:38.001Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T13:02:38.002Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T13:02:38.002Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T13:02:38.005Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T13:02:38.011Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-09T13:02:38.011Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-09T13:02:38.011Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-09T13:02:38.011Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-09T13:02:38.017Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T13:02:38.018Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T13:02:38.018Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T13:02:38.018Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T13:02:38.291Z [DEBUG] Stream started - received first chunk
+2026-01-09T13:02:38.400Z [DEBUG] Stream started - received first chunk
+2026-01-09T13:02:38.569Z [DEBUG] Stream started - received first chunk
+2026-01-09T13:02:39.890Z [DEBUG] executePreToolHooks called for tool: Read
+2026-01-09T13:02:39.890Z [DEBUG] Skipping PreToolUse:Read hook execution - workspace trust not accepted
+2026-01-09T13:02:39.917Z [DEBUG] Skipping PostToolUse:Read hook execution - workspace trust not accepted
+2026-01-09T13:02:39.923Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-09T13:02:39.923Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-09T13:02:39.923Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-09T13:02:39.923Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-09T13:02:39.932Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T13:02:39.933Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T13:02:39.933Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T13:02:39.933Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T13:02:40.269Z [DEBUG] Stream started - received first chunk
+2026-01-09T13:02:49.976Z [DEBUG] executePreToolHooks called for tool: Edit
+2026-01-09T13:02:49.976Z [DEBUG] Skipping PreToolUse:Edit hook execution - workspace trust not accepted
+2026-01-09T13:02:50.001Z [DEBUG] Writing to temp file: /Users/henry/.claude.json.tmp.55184.1767963770001
+2026-01-09T13:02:50.001Z [DEBUG] Preserving file permissions: 100644
+2026-01-09T13:02:50.002Z [DEBUG] Temp file written successfully, size: 5115 bytes
+2026-01-09T13:02:50.002Z [DEBUG] Applied original permissions to temp file
+2026-01-09T13:02:50.002Z [DEBUG] Renaming /Users/henry/.claude.json.tmp.55184.1767963770001 to /Users/henry/.claude.json
+2026-01-09T13:02:50.002Z [DEBUG] File /Users/henry/.claude.json written atomically
+2026-01-09T13:02:50.009Z [DEBUG] FileHistory: Tracked file modification for /Users/henry/.claude.json
+2026-01-09T13:02:50.013Z [DEBUG] Skipping PostToolUse:Edit hook execution - workspace trust not accepted
+2026-01-09T13:02:50.014Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .json
+2026-01-09T13:02:50.039Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-09T13:02:50.039Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-09T13:02:50.039Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-09T13:02:50.039Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-09T13:02:50.052Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T13:02:50.053Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T13:02:50.053Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T13:02:50.053Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T13:02:50.361Z [DEBUG] Stream started - received first chunk
+2026-01-09T13:03:00.028Z [DEBUG] executePreToolHooks called for tool: Edit
+2026-01-09T13:03:00.028Z [DEBUG] Skipping PreToolUse:Edit hook execution - workspace trust not accepted
+2026-01-09T13:03:00.048Z [DEBUG] Writing to temp file: /Users/henry/.claude/settings.json.tmp.55184.1767963780048
+2026-01-09T13:03:00.048Z [DEBUG] Preserving file permissions: 100644
+2026-01-09T13:03:00.049Z [DEBUG] Temp file written successfully, size: 1294 bytes
+2026-01-09T13:03:00.049Z [DEBUG] Applied original permissions to temp file
+2026-01-09T13:03:00.049Z [DEBUG] Renaming /Users/henry/.claude/settings.json.tmp.55184.1767963780048 to /Users/henry/.claude/settings.json
+2026-01-09T13:03:00.049Z [DEBUG] File /Users/henry/.claude/settings.json written atomically
+2026-01-09T13:03:00.056Z [DEBUG] FileHistory: Tracked file modification for /Users/henry/.claude/settings.json
+2026-01-09T13:03:00.060Z [DEBUG] Skipping PostToolUse:Edit hook execution - workspace trust not accepted
+2026-01-09T13:03:00.060Z [DEBUG] [lspRecommendation] Looking for LSP plugins for .json
+2026-01-09T13:03:00.071Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-09T13:03:00.071Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-09T13:03:00.071Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-09T13:03:00.071Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-09T13:03:00.083Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T13:03:00.084Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T13:03:00.084Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T13:03:00.084Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T13:03:00.365Z [DEBUG] Stream started - received first chunk
+2026-01-09T13:03:01.058Z [DEBUG] Detected change to /Users/henry/.claude/settings.json
+2026-01-09T13:03:01.064Z [DEBUG] Settings changed from userSettings, updating AppState
+2026-01-09T13:03:01.065Z [DEBUG] Replacing all allow rules for destination 'userSettings' with 25 rule(s): ["Bash","BashOutput","Edit","Glob","Grep","KillShell","NotebookEdit","Read","SlashCommand","Task","TodoWrite","WebFetch","WebSearch","Write","mcp__ide","mcp__exa","mcp__context7","mcp__mcp-deepwiki","mcp__Playwright","mcp__spec-workflow","mcp__open-websearch","mcp__serena","mcp__tavily","mcp__xiaohongshu","mcp__rednote"]
+2026-01-09T13:03:01.065Z [DEBUG] Replacing all allow rules for destination 'projectSettings' with 25 rule(s): ["Bash","BashOutput","Edit","Glob","Grep","KillShell","NotebookEdit","Read","SlashCommand","Task","TodoWrite","WebFetch","WebSearch","Write","mcp__ide","mcp__exa","mcp__context7","mcp__mcp-deepwiki","mcp__Playwright","mcp__spec-workflow","mcp__open-websearch","mcp__serena","mcp__tavily","mcp__xiaohongshu","mcp__rednote"]
+2026-01-09T13:03:01.066Z [DEBUG] Replacing all allow rules for destination 'localSettings' with 20 rule(s): ["mcp__tavily__tavily-search","mcp__tavily__tavily-crawl","mcp__chrome-devtools__list_pages","mcp__chrome-devtools__new_page","mcp__chrome-devtools__select_page","mcp__chrome-devtools__navigate_page","mcp__chrome-devtools__take_screenshot","mcp__chrome-devtools__take_snapshot","mcp__chrome-devtools__click","mcp__chrome-devtools__fill_form","Skill(document-skills:skill-creator)","mcp__chrome-devtools__list_network_requests","mcp__chrome-devtools__list_console_messages","mcp__chrome-devtools__evaluate_script","mcp__chrome-devtools__resize_page","mcp__chrome-devtools__emulate","Skill(miaodong-finance-writer)","Skill(finance-infographic)","mcp__chrome-devtools__fill","Skill(document-skills:theme-factory)"]
+2026-01-09T13:03:05.109Z [DEBUG] Skipping Stop hook execution - workspace trust not accepted
+2026-01-09T13:04:05.126Z [DEBUG] Skipping Notification:idle_prompt hook execution - workspace trust not accepted
+2026-01-09T13:05:59.648Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-09T13:05:59.648Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-09T13:05:59.648Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-09T13:05:59.648Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-09T13:05:59.661Z [DEBUG] Skipping UserPromptSubmit hook execution - workspace trust not accepted
+2026-01-09T13:05:59.661Z [DEBUG] FileHistory: Making snapshot for message 914d4f80-74ce-48e1-b8ce-a1f35971c0a5
+2026-01-09T13:05:59.662Z [DEBUG] FileHistory: Added snapshot for 914d4f80-74ce-48e1-b8ce-a1f35971c0a5, tracking 2 files
+2026-01-09T13:05:59.680Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T13:05:59.681Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T13:05:59.681Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T13:05:59.681Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T13:05:59.686Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T13:05:59.701Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T13:05:59.701Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T13:05:59.701Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T13:06:31.748Z [DEBUG] Stream started - received first chunk
+2026-01-09T13:06:36.048Z [DEBUG] Stream started - received first chunk
+2026-01-09T13:06:42.006Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-09T13:06:42.008Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T13:06:42.027Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T13:06:42.027Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T13:06:42.027Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T13:06:42.027Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T13:06:42.424Z [DEBUG] Stream started - received first chunk
+2026-01-09T13:06:52.057Z [DEBUG] BigQuery metrics export: trust not established, skipping
+2026-01-09T13:07:12.031Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T13:07:12.034Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T13:07:12.034Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T13:07:12.034Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T13:07:12.062Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T13:07:12.077Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-09T13:07:12.077Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-09T13:07:12.077Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-09T13:07:12.077Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-09T13:07:12.089Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T13:07:12.093Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T13:07:12.093Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T13:07:12.093Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T13:07:12.561Z [DEBUG] Stream started - received first chunk
+2026-01-09T13:07:13.362Z [DEBUG] Stream started - received first chunk
+2026-01-09T13:07:19.173Z [DEBUG] Writing to temp file: /Users/henry/.claude.json.tmp.55184.1767964039173
+2026-01-09T13:07:19.173Z [DEBUG] Preserving file permissions: 100644
+2026-01-09T13:07:19.174Z [DEBUG] Temp file written successfully, size: 5115 bytes
+2026-01-09T13:07:19.174Z [DEBUG] Applied original permissions to temp file
+2026-01-09T13:07:19.174Z [DEBUG] Renaming /Users/henry/.claude.json.tmp.55184.1767964039173 to /Users/henry/.claude.json
+2026-01-09T13:07:19.174Z [DEBUG] File /Users/henry/.claude.json written atomically
+2026-01-09T13:07:20.981Z [DEBUG] Skipping Stop hook execution - workspace trust not accepted
+2026-01-09T13:07:21.006Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-09T13:07:21.006Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-09T13:07:21.006Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-09T13:07:21.006Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-09T13:07:21.017Z [DEBUG] Skipping UserPromptSubmit hook execution - workspace trust not accepted
+2026-01-09T13:07:21.018Z [DEBUG] FileHistory: Making snapshot for message ae754bb6-b22d-45c6-b65e-75ff7da755a6
+2026-01-09T13:07:21.018Z [DEBUG] FileHistory: Added snapshot for ae754bb6-b22d-45c6-b65e-75ff7da755a6, tracking 2 files
+2026-01-09T13:07:21.025Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T13:07:21.025Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T13:07:21.025Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T13:07:21.025Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T13:07:21.027Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T13:07:21.030Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T13:07:21.030Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T13:07:21.030Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T13:07:21.349Z [DEBUG] Stream started - received first chunk
+2026-01-09T13:07:21.640Z [DEBUG] Stream started - received first chunk
+2026-01-09T13:07:27.334Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-09T13:07:27.334Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T13:07:27.368Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T13:07:27.368Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T13:07:27.368Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T13:07:27.368Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T13:07:27.368Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T13:07:27.368Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T13:07:27.368Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T13:07:27.368Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T13:07:28.785Z [DEBUG] Stream started - received first chunk
+2026-01-09T13:07:29.504Z [DEBUG] Stream started - received first chunk
+2026-01-09T13:07:29.570Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T13:07:29.571Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T13:07:29.571Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T13:07:29.571Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T13:07:29.575Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T13:07:29.581Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-09T13:07:29.581Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-09T13:07:29.581Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-09T13:07:29.581Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-09T13:07:29.592Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T13:07:29.593Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T13:07:29.593Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T13:07:29.593Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T13:07:30.066Z [DEBUG] Stream started - received first chunk
+2026-01-09T13:07:30.353Z [DEBUG] Stream started - received first chunk
+2026-01-09T13:07:33.425Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-09T13:07:33.425Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T13:07:33.461Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T13:07:33.461Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T13:07:33.461Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T13:07:33.461Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T13:07:33.461Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T13:07:33.461Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T13:07:33.461Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T13:07:33.461Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T13:07:33.877Z [DEBUG] Stream started - received first chunk
+2026-01-09T13:07:33.878Z [DEBUG] Stream started - received first chunk
+2026-01-09T13:07:34.359Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T13:07:34.360Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T13:07:34.360Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T13:07:34.360Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T13:07:34.364Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T13:07:34.370Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-09T13:07:34.370Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-09T13:07:34.370Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-09T13:07:34.370Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-09T13:07:34.383Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T13:07:34.385Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T13:07:34.385Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T13:07:34.385Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T13:07:34.709Z [DEBUG] Stream started - received first chunk
+2026-01-09T13:07:34.790Z [DEBUG] Stream started - received first chunk
+2026-01-09T13:07:38.023Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-09T13:07:38.024Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T13:07:55.620Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T13:07:55.623Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T13:07:55.623Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T13:07:55.623Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T13:07:55.631Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T13:07:55.643Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-09T13:07:55.643Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-09T13:07:55.643Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-09T13:07:55.643Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-09T13:07:55.654Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T13:07:55.657Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T13:07:55.657Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T13:07:55.657Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T13:07:56.153Z [DEBUG] Stream started - received first chunk
+2026-01-09T13:07:56.181Z [DEBUG] Stream started - received first chunk
+2026-01-09T13:08:05.734Z [DEBUG] Skipping Stop hook execution - workspace trust not accepted
+2026-01-09T13:08:05.752Z [DEBUG] Writing to temp file: /Users/henry/.claude.json.tmp.55184.1767964085752
+2026-01-09T13:08:05.752Z [DEBUG] Preserving file permissions: 100644
+2026-01-09T13:08:05.752Z [DEBUG] Temp file written successfully, size: 5115 bytes
+2026-01-09T13:08:05.752Z [DEBUG] Applied original permissions to temp file
+2026-01-09T13:08:05.752Z [DEBUG] Renaming /Users/henry/.claude.json.tmp.55184.1767964085752 to /Users/henry/.claude.json
+2026-01-09T13:08:05.752Z [DEBUG] File /Users/henry/.claude.json written atomically
+2026-01-09T13:08:05.754Z [DEBUG] Writing to temp file: /Users/henry/.claude.json.tmp.55184.1767964085754
+2026-01-09T13:08:05.754Z [DEBUG] Preserving file permissions: 100644
+2026-01-09T13:08:05.754Z [DEBUG] Temp file written successfully, size: 5115 bytes
+2026-01-09T13:08:05.754Z [DEBUG] Applied original permissions to temp file
+2026-01-09T13:08:05.754Z [DEBUG] Renaming /Users/henry/.claude.json.tmp.55184.1767964085754 to /Users/henry/.claude.json
+2026-01-09T13:08:05.754Z [DEBUG] File /Users/henry/.claude.json written atomically
+2026-01-09T13:09:11.652Z [DEBUG] Skipping Notification:idle_prompt hook execution - workspace trust not accepted
+2026-01-09T13:25:59.182Z [DEBUG] BigQuery metrics export: trust not established, skipping
+2026-01-09T23:58:45.522Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-09T23:58:45.522Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-09T23:58:45.522Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-09T23:58:45.522Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-09T23:58:45.535Z [DEBUG] Skipping UserPromptSubmit hook execution - workspace trust not accepted
+2026-01-09T23:58:45.535Z [DEBUG] FileHistory: Making snapshot for message 0652a422-a029-4e66-889d-e3316867045d
+2026-01-09T23:58:45.539Z [DEBUG] FileHistory: Added snapshot for 0652a422-a029-4e66-889d-e3316867045d, tracking 2 files
+2026-01-09T23:58:45.558Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T23:58:45.559Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T23:58:45.559Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T23:58:45.559Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T23:58:45.571Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T23:58:45.586Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T23:58:45.586Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T23:58:45.586Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T23:58:46.199Z [DEBUG] Stream started - received first chunk
+2026-01-09T23:58:46.657Z [DEBUG] Stream started - received first chunk
+2026-01-09T23:58:53.340Z [DEBUG] executePreToolHooks called for tool: TodoWrite
+2026-01-09T23:58:53.341Z [DEBUG] Skipping PreToolUse:TodoWrite hook execution - workspace trust not accepted
+2026-01-09T23:58:53.358Z [DEBUG] Writing to temp file: /Users/henry/.claude/todos/0f6b3edb-d815-47f5-babd-99f6799fc9ff-agent-0f6b3edb-d815-47f5-babd-99f6799fc9ff.json.tmp.55184.1768003133358
+2026-01-09T23:58:53.358Z [DEBUG] Preserving file permissions: 100644
+2026-01-09T23:58:53.358Z [DEBUG] Temp file written successfully, size: 458 bytes
+2026-01-09T23:58:53.358Z [DEBUG] Applied original permissions to temp file
+2026-01-09T23:58:53.358Z [DEBUG] Renaming /Users/henry/.claude/todos/0f6b3edb-d815-47f5-babd-99f6799fc9ff-agent-0f6b3edb-d815-47f5-babd-99f6799fc9ff.json.tmp.55184.1768003133358 to /Users/henry/.claude/todos/0f6b3edb-d815-47f5-babd-99f6799fc9ff-agent-0f6b3edb-d815-47f5-babd-99f6799fc9ff.json
+2026-01-09T23:58:53.359Z [DEBUG] File /Users/henry/.claude/todos/0f6b3edb-d815-47f5-babd-99f6799fc9ff-agent-0f6b3edb-d815-47f5-babd-99f6799fc9ff.json written atomically
+2026-01-09T23:58:53.363Z [DEBUG] Skipping PostToolUse:TodoWrite hook execution - workspace trust not accepted
+2026-01-09T23:58:53.373Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-09T23:58:53.373Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-09T23:58:53.373Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-09T23:58:53.373Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-09T23:58:53.382Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T23:58:53.383Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T23:58:53.383Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T23:58:53.383Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T23:58:53.852Z [DEBUG] Stream started - received first chunk
+2026-01-09T23:58:59.043Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-09T23:58:59.043Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T23:59:33.371Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T23:59:33.375Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T23:59:33.375Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T23:59:33.375Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T23:59:33.394Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T23:59:33.423Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-09T23:59:33.423Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-09T23:59:34.083Z [DEBUG] Stream started - received first chunk
+2026-01-10T00:00:00.960Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-10T00:00:00.961Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-10T00:00:00.961Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-10T00:00:00.962Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-10T00:00:00.973Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-10T00:00:00.982Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-10T00:00:00.984Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-10T00:00:01.625Z [DEBUG] Stream started - received first chunk
+2026-01-10T00:00:27.761Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-10T00:00:27.762Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-10T00:00:27.762Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-10T00:00:27.762Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-10T00:00:27.781Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-10T00:00:27.790Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-10T00:00:27.790Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-10T00:00:28.357Z [DEBUG] Stream started - received first chunk
+2026-01-10T00:00:53.456Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-10T00:00:53.458Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-10T00:00:53.458Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-10T00:00:53.458Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-10T00:00:53.484Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-10T00:00:53.497Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-10T00:00:53.498Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-10T00:00:54.942Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-10T00:00:54.943Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-10T00:00:54.943Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-10T00:00:54.943Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-10T00:00:54.951Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-10T00:00:54.976Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-10T00:00:54.976Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-10T00:00:54.976Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-10T00:00:54.976Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-10T00:00:54.991Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-10T00:00:54.994Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-10T00:00:54.994Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-10T00:00:54.994Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-10T00:00:55.447Z [DEBUG] Stream started - received first chunk
+2026-01-10T00:00:55.915Z [DEBUG] Streaming aborted by user: Request was aborted.
+2026-01-10T00:00:55.915Z [ERROR] Error in non-streaming fallback: Request was aborted.
+2026-01-10T00:01:12.054Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-10T00:01:12.054Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-10T00:01:12.054Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-10T00:01:12.054Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-10T00:01:12.060Z [DEBUG] Skipping UserPromptSubmit hook execution - workspace trust not accepted
+2026-01-10T00:01:12.065Z [DEBUG] FileHistory: Making snapshot for message cad04e3c-9c80-431b-aaf7-b3d94bf61270
+2026-01-10T00:01:12.066Z [DEBUG] FileHistory: Added snapshot for cad04e3c-9c80-431b-aaf7-b3d94bf61270, tracking 2 files
+2026-01-10T00:01:12.077Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-10T00:01:12.077Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-10T00:01:12.077Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-10T00:01:12.077Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-10T00:01:12.082Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-10T00:01:12.087Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-10T00:01:12.087Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-10T00:01:12.087Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-10T00:01:12.593Z [DEBUG] Stream started - received first chunk
+2026-01-10T00:01:12.789Z [DEBUG] Stream started - received first chunk
+2026-01-10T00:01:18.002Z [DEBUG] Stream started - received first chunk
+2026-01-10T00:01:18.003Z [DEBUG] Stream started - received first chunk
+2026-01-10T00:01:18.705Z [DEBUG] executePreToolHooks called for tool: TodoWrite
+2026-01-10T00:01:18.705Z [DEBUG] Skipping PreToolUse:TodoWrite hook execution - workspace trust not accepted
+2026-01-10T00:01:18.720Z [DEBUG] Writing to temp file: /Users/henry/.claude/todos/0f6b3edb-d815-47f5-babd-99f6799fc9ff-agent-0f6b3edb-d815-47f5-babd-99f6799fc9ff.json.tmp.55184.1768003278720
+2026-01-10T00:01:18.720Z [DEBUG] Preserving file permissions: 100644
+2026-01-10T00:01:18.720Z [DEBUG] Temp file written successfully, size: 196 bytes
+2026-01-10T00:01:18.720Z [DEBUG] Applied original permissions to temp file
+2026-01-10T00:01:18.720Z [DEBUG] Renaming /Users/henry/.claude/todos/0f6b3edb-d815-47f5-babd-99f6799fc9ff-agent-0f6b3edb-d815-47f5-babd-99f6799fc9ff.json.tmp.55184.1768003278720 to /Users/henry/.claude/todos/0f6b3edb-d815-47f5-babd-99f6799fc9ff-agent-0f6b3edb-d815-47f5-babd-99f6799fc9ff.json
+2026-01-10T00:01:18.721Z [DEBUG] File /Users/henry/.claude/todos/0f6b3edb-d815-47f5-babd-99f6799fc9ff-agent-0f6b3edb-d815-47f5-babd-99f6799fc9ff.json written atomically
+2026-01-10T00:01:18.724Z [DEBUG] Skipping PostToolUse:TodoWrite hook execution - workspace trust not accepted
+2026-01-10T00:01:18.731Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-10T00:01:18.731Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-10T00:01:18.731Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-10T00:01:18.731Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-10T00:01:18.746Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-10T00:01:18.747Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-10T00:01:18.747Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-10T00:01:18.747Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-10T00:01:19.345Z [DEBUG] Stream started - received first chunk
+2026-01-10T00:01:25.024Z [DEBUG] Streaming aborted by user: Request was aborted.
+2026-01-10T00:01:25.024Z [ERROR] Error in non-streaming fallback: Request was aborted.
+2026-01-10T00:02:25.039Z [DEBUG] Skipping Notification:idle_prompt hook execution - workspace trust not accepted
+2026-01-10T00:03:03.318Z [DEBUG] BigQuery metrics export: trust not established, skipping
+2026-01-10T00:20:26.799Z [DEBUG] Skipping SessionEnd:prompt_input_exit hook execution - workspace trust not accepted

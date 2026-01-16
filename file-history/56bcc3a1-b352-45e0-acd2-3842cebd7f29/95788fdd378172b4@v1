@@ -1,0 +1,62 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+深度研究株洲产投
+"""
+from tavily import TavilyClient
+import json
+
+def search_zhuzhou_investment():
+    client = TavilyClient(api_key="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")
+
+    search_queries = [
+        "株洲产业投资集团 2025",
+        "株洲市产业投资 政策",
+        "株洲产业投资基金",
+        "株洲市国有资本投资运营集团",
+        "株洲产投集团 发展"
+    ]
+
+    all_results = {}
+
+    for query in search_queries:
+        try:
+            print(f"\n=== 搜索: {query} ===")
+            result = client.search(query, max_results=8)
+
+            # 提取关键信息
+            results = result.get('results', [])
+            all_results[query] = {
+                'count': len(results),
+                'query_time': result.get('response_time', 0),
+                'results': []
+            }
+
+            for i, item in enumerate(results, 1):
+                result_info = {
+                    'title': item.get('title', ''),
+                    'url': item.get('url', ''),
+                    'content': item.get('content', '')[:200] + '...' if len(item.get('content', '')) > 200 else item.get('content', ''),
+                    'score': item.get('score', 0)
+                }
+                all_results[query]['results'].append(result_info)
+
+                print(f"{i}. {item.get('title', '')}")
+                print(f"   链接: {item.get('url', '')}")
+                print(f"   分数: {item.get('score', 0):.3f}")
+                print(f"   内容: {item.get('content', '')[:100]}...")
+                print()
+
+        except Exception as e:
+            print(f"搜索 '{query}' 失败: {e}")
+
+    return all_results
+
+if __name__ == "__main__":
+    results = search_zhuzhou_investment()
+
+    # 保存结果到文件
+    with open('/Users/henry/zhuzhou_investment_research.json', 'w', encoding='utf-8') as f:
+        json.dump(results, f, ensure_ascii=False, indent=2)
+
+    print("\n研究结果已保存到 zhuzhou_investment_research.json")

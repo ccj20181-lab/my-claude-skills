@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "plugins": {
+    "document-skills@anthropic-agent-skills": [
+      {
+        "scope": "user",
+        "installPath": "/Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/unknown",
+        "version": "unknown",
+        "installedAt": "2026-01-08T07:08:38.354Z",
+        "lastUpdated": "2026-01-08T07:08:38.354Z"
+      }
+    ]
+  }
+}

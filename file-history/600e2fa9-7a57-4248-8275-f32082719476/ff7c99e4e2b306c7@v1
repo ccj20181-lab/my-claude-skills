@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  html { background: #ffffff; }
+  body {
+    width: 720pt; height: 405pt; margin: 0; padding: 0;
+    background: #FFFFFF; font-family: Arial, sans-serif;
+    display: flex; flex-direction: column;
+  }
+  .header {
+    background: #2C3E50; padding: 20pt 40pt;
+    height: 40pt; display: flex; align-items: center;
+  }
+  h1 { color: #FFFFFF; font-size: 28pt; margin: 0; }
+  .content { padding: 30pt 40pt; }
+
+  .section { margin-bottom: 25pt; }
+  .section-title {
+    font-size: 20pt; color: #1C2833; font-weight: bold;
+    border-bottom: 3pt solid #F1C40F; display: inline-block; margin-bottom: 10pt;
+  }
+  p, li { font-size: 16pt; color: #555; line-height: 1.4; margin: 5pt 0; }
+  ul { margin-top: 5pt; padding-left: 20pt; }
+
+  .grid { display: flex; gap: 20pt; }
+  .col { flex: 1; background: #F4F6F6; padding: 15pt; border-radius: 5pt; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <h1>第二篇：投资实战与操作指南</h1>
+  </div>
+  <div class="content">
+    <div class="section">
+      <div class="section-title">投资哲学</div>
+      <p>少输比多赢更重要。建立概率思维，追求长期稳健的收益。</p>
+    </div>
+
+    <div class="grid">
+      <div class="col">
+        <div class="section-title" style="font-size: 18pt;">资产配置</div>
+        <p><strong>美林时钟 (Merrill Lynch Clock)</strong></p>
+        <p>指导大类资产配置，顺应经济周期轮动。</p>
+      </div>
+      <div class="col">
+        <div class="section-title" style="font-size: 18pt;">股票投资基础</div>
+        <ul>
+          <li><strong>价值投资：</strong> 寻找被低估的优质资产，做时间的朋友。</li>
+          <li><strong>分析方法：</strong> 掌握基本面指标 (PE, PB) 与 K 线图基础。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

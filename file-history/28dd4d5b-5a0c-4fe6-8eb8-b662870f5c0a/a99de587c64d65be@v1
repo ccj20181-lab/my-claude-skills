@@ -1,0 +1,138 @@
+# Tavily MCP 服务器
+
+这是一个Model Context Protocol (MCP) 服务器，用于将Tavily AI搜索引擎集成到Claude等AI助手中。
+
+## 📋 安装步骤
+
+### 1. 获取Tavily API密钥
+
+1. 访问 [Tavily官网](https://tavily.com)
+2. 注册账户并验证邮箱
+3. 登录后在Dashboard中查看你的API密钥
+4. 复制API密钥
+
+### 2. 配置环境
+
+```bash
+# 复制环境变量模板
+cp .env.example .env
+
+# 编辑.env文件，填入你的API密钥
+nano .env
+```
+
+在`.env`文件中设置:
+```env
+TAVILY_API_KEY=your_actual_api_key_here
+```
+
+### 3. 启动服务器
+
+```bash
+# 使用启动脚本
+./start.sh
+
+# 或直接运行
+node index.js
+```
+
+## 🛠️ 服务器功能
+
+### 搜索工具
+
+**名称**: `search`
+
+**描述**: 使用Tavily API搜索网络
+
+**参数**:
+- `query` (必需): 搜索查询字符串
+- `max_results` (可选): 最大结果数量 (默认: 10)
+- `search_depth` (可选): 搜索深度 - "basic" 或 "advanced" (默认: "basic")
+
+**示例**:
+```json
+{
+  "query": "最新的人工智能技术",
+  "max_results": 5,
+  "search_depth": "advanced"
+}
+```
+
+## 🔧 在Claude中使用
+
+在Claude Desktop或Claude CLI中配置MCP服务器：
+
+### Claude Desktop配置
+
+编辑 `~/Library/Application Support/Claude/claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "tavily-search": {
+      "command": "node",
+      "args": ["/Users/henry/mcp-servers/tavily-mcp/index.js"],
+      "env": {
+        "TAVILY_API_KEY": "your_api_key_here"
+      }
+    }
+  }
+}
+```
+
+### Claude CLI配置
+
+```bash
+export MCP_SERVERS='{
+  "tavily-search": {
+    "command": "node",
+    "args": ["/Users/henry/mcp-servers/tavily-mcp/index.js"],
+    "env": {
+      "TAVILY_API_KEY": "your_api_key_here"
+    }
+  }
+}'
+```
+
+## 📝 使用示例
+
+启动服务器后，你可以在Claude中这样使用:
+
+```
+请搜索"最新的机器学习算法"
+```
+
+服务器会返回:
+- 搜索答案摘要
+- 相关结果列表 (标题、URL、内容)
+- 搜索时间
+- 搜索ID
+
+## 🔍 故障排除
+
+### 常见问题
+
+1. **API密钥无效**
+   - 确保在.env文件中设置了正确的API密钥
+   - 检查Tavily账户状态
+
+2. **连接错误**
+   - 确认网络连接正常
+   - 检查防火墙设置
+
+3. **服务器无法启动**
+   - 确认已安装所有依赖: `npm install`
+   - 检查Node.js版本 (推荐: 16+)
+
+### 调试模式
+
+设置环境变量启用详细日志:
+```bash
+DEBUG=mcp:* ./start.sh
+```
+
+## 📚 更多资源
+
+- [Tavily API文档](https://docs.tavily.com)
+- [Model Context Protocol文档](https://modelcontextprotocol.io)
+- [MCP服务器示例](https://github.com/modelcontextprotocol/servers)

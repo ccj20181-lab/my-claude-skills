@@ -1,0 +1,567 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+创建包含专业复杂图表的特斯拉财务数据Excel文件
+"""
+
+import pandas as pd
+from openpyxl import Workbook
+from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
+from openpyxl.chart import BarChart, PieChart, LineChart, AreaChart, ScatterChart, Reference, Series
+from openpyxl.chart.axis import DateAxis
+from openpyxl.chart.layout import Layout, ManualLayout
+import numpy as np
+
+def create_professional_charts_excel():
+    """创建包含专业复杂图表的Excel文件"""
+    wb = Workbook()
+    wb.remove(wb.active)
+
+    # 定义专业样式
+    header_font = Font(name='Calibri', size=14, bold=True, color='FFFFFF')
+    subheader_font = Font(name='Calibri', size=12, bold=True, color='2F5597')
+    data_font = Font(name='Calibri', size=10)
+    number_font = Font(name='Calibri', size=11, bold=True)
+    title_font = Font(name='Calibri', size=16, bold=True, color='1F4E79')
+
+    # 专业配色方案
+    colors = ['#1F4E79', '#2F75B5', '#70AD47', '#FFC000', '#C55A5A', '#7030A0', '#00B0F0', '#FF6B35']
+    header_fill = PatternFill(start_color='1F4E79', end_color='1F4E79', fill_type='solid')
+    light_fill = PatternFill(start_color='E7F3FF', end_color='E7F3FF', fill_type='solid')
+    accent_fill = PatternFill(start_color='FFF2CC', end_color='FFF2CC', fill_type='solid')
+    success_fill = PatternFill(start_color='C6EFCE', end_color='C6EFCE', fill_type='solid')
+    warning_fill = PatternFill(start_color='FFC7CE', end_color='FFC7CE', fill_type='solid')
+
+    thin_border = Border(left=Side(style='thin'), right=Side(style='thin'),
+                        top=Side(style='thin'), bottom=Side(style='thin'))
+    thick_border = Border(left=Side(style='medium'), right=Side(style='medium'),
+                         top=Side(style='medium'), bottom=Side(style='medium'))
+
+    center_alignment = Alignment(horizontal='center', vertical='center')
+    left_alignment = Alignment(horizontal='left', vertical='center')
+
+    # ==================== 工作表1: 综合财务Dashboard ====================
+    ws_dashboard = wb.create_sheet('综合财务Dashboard')
+
+    # Dashboard标题
+    ws_dashboard['A1'] = '特斯拉 (TSLA) 综合财务分析Dashboard'
+    ws_dashboard['A1'].font = title_font
+    ws_dashboard.merge_cells('A1:J1')
+
+    # KPI指标卡片
+    kpi_data = [
+        ['财务KPI', '2025Q3', '2025Q2', '变化', '状态', '目标'],
+        ['总收入', 280.95, 265.0, '+6.0%', '📈 超预期', 275.0],
+        ['净利润', 13.73, 12.8, '+7.3%', '💰 增长', 13.0],
+        ['运营现金流', 62.38, 42.0, '+48.5%', '💵 强劲', 50.0],
+        ['自由现金流', 38.70, 28.5, '+35.8%', '🎯 健康', 35.0],
+        ['现金储备', 416.47, 378.8, '+9.9%', '🏦 充裕', 400.0],
+        ['总资产', 1337.35, 1289.5, '+3.7%', '📊 增长', 1300.0]
+    ]
+
+    for row_num, row_data in enumerate(kpi_data, 3):
+        for col_num, value in enumerate(row_data, 1):
+            cell = ws_dashboard.cell(row=row_num, column=col_num, value=value)
+            if row_num == 3:
+                cell.font = header_font
+                cell.fill = header_fill
+                cell.alignment = center_alignment
+            else:
+                cell.font = data_font
+                cell.alignment = center_alignment
+                if col_num == 2:  # 最新数据
+                    cell.font = number_font
+                    cell.fill = light_fill
+                elif col_num == 4:  # 变化
+                    if '+' in str(value):
+                        cell.font = Font(name='Calibri', size=10, bold=True, color='70AD47')
+                    else:
+                        cell.font = Font(name='Calibri', size=10, bold=True, color='C55A5A')
+                elif col_num == 5:  # 状态
+                    cell.font = Font(name='Calibri', size=10, bold=True, color='2F75B5')
+            cell.border = thin_border
+
+    ws_dashboard.column_dimensions['A'].width = 18
+    ws_dashboard.column_dimensions['B'].width = 12
+    ws_dashboard.column_dimensions['C'].width = 12
+    ws_dashboard.column_dimensions['D'].width = 12
+    ws_dashboard.column_dimensions['E'].width = 15
+    ws_dashboard.column_dimensions['F'].width = 12
+
+    # ==================== 工作表2: 收入利润多维分析 ====================
+    ws_revenue = wb.create_sheet('收入利润多维分析')
+
+    # 详细季度收入分析
+    revenue_data = [
+        ['项目/季度', '2024Q4', '2025Q1', '2025Q2', '2025Q3', '2025Q4E', '同比增长%', '复合增长率%'],
+        ['总收入', 245.0, 250.0, 265.0, 280.95, 295.0, 14.6, 12.8],
+        ['  汽车销售', 215.0, 220.0, 232.0, 245.5, 258.0, 14.2, 12.5],
+        ['  能源业务', 18.5, 19.2, 20.8, 22.1, 23.5, 19.5, 16.2],
+        ['  服务收入', 11.5, 10.8, 12.2, 13.35, 13.5, 16.3, 18.7],
+        ['毛利润', 89.8, 92.5, 98.2, 104.1, 109.2, 16.0, 14.2],
+        ['经营利润', 25.8, 27.2, 29.5, 31.8, 33.2, 23.3, 20.5],
+        ['净利润', 11.2, 11.5, 12.8, 13.73, 15.2, 22.3, 18.9],
+        ['毛利率%', 36.6, 37.0, 37.1, 37.0, 37.0, '—', '—'],
+        ['净利率%', 4.6, 4.6, 4.8, 4.89, 5.2, '—', '—'],
+        ['EPS', 0.32, 0.33, 0.37, 0.50, 0.44, 22.3, 18.9]
+    ]
+
+    for row_num, row_data in enumerate(revenue_data, 1):
+        for col_num, value in enumerate(row_data, 1):
+            cell = ws_revenue.cell(row=row_num, column=col_num, value=value)
+            if row_num == 1:
+                cell.font = header_font
+                cell.fill = header_fill
+                cell.alignment = center_alignment
+            else:
+                cell.font = data_font
+                if col_num == 1:
+                    cell.alignment = left_alignment
+                else:
+                    cell.alignment = center_alignment
+                    if isinstance(value, (int, float)) and value != 0:
+                        if row_num <= 4:  # 收入项目
+                            cell.fill = light_fill if row_num % 2 == 0 else accent_fill
+                        elif row_num <= 7:  # 利润项目
+                            cell.fill = PatternFill(start_color='E2EFDA', end_color='E2EFDA', fill_type='solid')
+                        cell.font = number_font
+            cell.border = thin_border
+
+    # 创建复杂的多系列组合图表
+    chart_revenue = BarChart()
+    chart_revenue.type = "col"
+    chart_revenue.style = 10
+    chart_revenue.title = "特斯拉季度收入与利润多维分析"
+    chart_revenue.y_axis.title = '金额 (十亿美元)'
+    chart_revenue.x_axis.title = '季度'
+    chart_revenue.grouping = "clustered"
+    chart_revenue.overlap = 100
+
+    # 添加收入和利润数据
+    data = Reference(ws_revenue, min_col=2, min_row=1, max_col=6, max_row=8)
+    cats = Reference(ws_revenue, min_col=2, min_row=1, max_col=6, max_row=1)
+    chart_revenue.add_data(data, titles_from_data=True)
+    chart_revenue.set_categories(cats)
+
+    chart_revenue.width = 25
+    chart_revenue.height = 15
+    chart_revenue.anchor = 'I2'
+
+    ws_revenue.add_chart(chart_revenue)
+
+    # ==================== 工作表3: 现金流瀑布图分析 ====================
+    ws_cashflow = wb.create_sheet('现金流瀑布图分析')
+
+    # 详细现金流分析
+    cashflow_data = [
+        ['现金流项目', '2025Q1', '2025Q2', '2025Q3', '累计', '占比%'],
+        ['经营活动', '', '', '', '', ''],
+        ['  净利润', 11.5, 12.8, 13.73, 38.03, 26.3],
+        ['  折旧摊销', 8.2, 8.5, 8.8, 25.5, 17.6],
+        ['  营运资本变化', -2.1, -1.8, -2.2, -6.1, -4.2],
+        ['  其他调整', 1.8, 2.1, 2.3, 6.2, 4.3],
+        ['运营现金流小计', 19.4, 21.6, 22.63, 63.63, 44.0],
+        ['', '', '', '', '', ''],
+        ['投资活动', '', '', '', '', ''],
+        ['  资本支出', -15.2, -16.8, -18.5, -50.5, -34.9],
+        ['  投资收入', 0.8, 1.2, 1.5, 3.5, 2.4],
+        ['  其他投资', -2.1, -1.8, -2.0, -5.9, -4.1],
+        ['投资现金流小计', -16.5, -17.4, -19.0, -52.9, -36.6],
+        ['', '', '', '', '', ''],
+        ['融资活动', '', '', '', '', ''],
+        ['  借款变化', 2.5, 3.1, 2.8, 8.4, 5.8],
+        ['  股息支付', 0.0, 0.0, 0.0, 0.0, 0.0],
+        ['  回购股票', -1.2, -1.5, -1.8, -4.5, -3.1],
+        ['  其他融资', 0.5, 0.8, 1.2, 2.5, 1.7],
+        ['融资现金流小计', 1.8, 2.4, 2.2, 6.4, 4.4],
+        ['', '', '', '', '', ''],
+        ['现金净变化', 4.7, 6.6, 5.83, 17.13, 11.8],
+        ['期初现金', 378.8, 383.5, 390.1, 378.8, '—'],
+        ['期末现金', 383.5, 390.1, 395.93, 395.93, '—']
+    ]
+
+    for row_num, row_data in enumerate(cashflow_data, 1):
+        for col_num, value in enumerate(row_data, 1):
+            cell = ws_cashflow.cell(row=row_num, column=col_num, value=value)
+            if row_num == 1:
+                cell.font = header_font
+                cell.fill = header_fill
+                cell.alignment = center_alignment
+            elif value == '':
+                cell.font = Font(name='Calibri', size=2)
+            else:
+                cell.font = data_font
+                cell.alignment = center_alignment
+                if col_num > 1 and col_num <= 5:
+                    if '小计' in str(row_data[0]) or '净变化' in str(row_data[0]) or '期末现金' in str(row_data[0]):
+                        cell.font = Font(name='Calibri', size=11, bold=True)
+                        cell.fill = accent_fill
+                    elif isinstance(value, (int, float)) and value != 0:
+                        cell.font = number_font
+                        if '支出' in str(row_data[0]) or '投资' in str(row_data[0]) and col_num > 1:
+                            cell.fill = warning_fill if value < 0 else light_fill
+                        else:
+                            cell.fill = light_fill if row_num % 2 == 0 else success_fill
+            cell.border = thin_border
+
+    # 创建现金流趋势线图
+    line_chart = LineChart()
+    line_chart.title = "特斯拉现金流瀑布图与趋势分析"
+    line_chart.style = 13
+    line_chart.y_axis.title = '金额 (十亿美元)'
+    line_chart.x_axis.title = '季度'
+    line_chart.width = 25
+    line_chart.height = 15
+    line_chart.anchor = 'G1'
+
+    # 添加现金流数据
+    cf_data = Reference(ws_cashflow, min_col=2, min_row=1, max_col=4, max_row=22)
+    cf_cats = Reference(ws_cashflow, min_col=1, min_row=1, max_col=4, max_row=22)
+    line_chart.add_data(cf_data, titles_from_data=True)
+    line_chart.set_categories(cf_cats)
+
+    ws_cashflow.add_chart(line_chart)
+
+    # ==================== 工作表4: 资产负债结构深度分析 ====================
+    ws_balance = wb.create_sheet('资产负债结构深度分析')
+
+    # 详细资产负债表
+    balance_data = [
+        ['资产负债表项目', '2025Q3', '2025Q2', '2024Q4', '变化%', '占比%'],
+        ['流动资产', '', '', '', '', ''],
+        ['  现金及现金等价物', 298.5, 285.2, 275.8, 8.2, 22.3],
+        ['  应收账款', 45.2, 42.8, 40.2, 12.4, 3.4],
+        ['  存货', 65.8, 62.5, 58.3, 12.9, 4.9],
+        ['  预付账款', 6.97, 6.8, 6.5, 7.2, 0.5],
+        ['流动资产合计', 416.47, 397.3, 380.8, 9.4, 31.1],
+        ['', '', '', '', '', ''],
+        ['非流动资产', '', '', '', '', ''],
+        ['  固定资产净值', 456.3, 445.8, 428.5, 6.5, 34.1],
+        ['  无形资产', 25.8, 25.5, 25.2, 2.4, 1.9],
+        ['  商誉', 5.8, 5.8, 5.8, 0.0, 0.4],
+        ['  长期投资', 85.5, 78.2, 68.2, 25.4, 6.4],
+        ['  递延所得税资产', 15.8, 15.2, 14.5, 9.0, 1.2],
+        ['  其他非流动资产', 331.7, 321.8, 315.2, 5.2, 24.8],
+        ['非流动资产合计', 920.9, 892.3, 857.4, 7.4, 68.9],
+        ['资产总计', 1337.35, 1289.6, 1238.2, 8.0, 100.0],
+        ['', '', '', '', '', ''],
+        ['流动负债', '', '', '', '', ''],
+        ['  应付账款', 85.2, 82.5, 78.3, 8.8, 6.4],
+        ['  短期借款', 25.8, 23.5, 22.1, 16.7, 1.9],
+        ['  应付票据', 12.5, 11.8, 11.2, 11.6, 0.9],
+        ['  其他流动负债', 22.3, 21.2, 20.5, 8.8, 1.7],
+        ['流动负债合计', 145.8, 139.0, 132.1, 10.4, 10.9],
+        ['', '', '', '', '', ''],
+        ['非流动负债', '', '', '', '', ''],
+        ['  长期借款', 185.2, 178.5, 165.8, 11.7, 13.8],
+        ['  应付债券', 125.8, 125.8, 125.8, 0.0, 9.4],
+        ['  递延所得税负债', 35.5, 34.2, 32.8, 8.2, 2.7],
+        ['  其他非流动负债', 37.9, 35.8, 33.5, 13.1, 2.8],
+        ['非流动负债合计', 384.4, 374.3, 357.9, 7.4, 28.7],
+        ['负债合计', 530.2, 513.3, 490.0, 8.2, 39.6],
+        ['', '', '', '', '', ''],
+        ['股东权益合计', 807.16, 776.3, 748.2, 7.9, 60.4],
+        ['负债和股东权益总计', 1337.35, 1289.6, 1238.2, 8.0, 100.0]
+    ]
+
+    for row_num, row_data in enumerate(balance_data, 1):
+        for col_num, value in enumerate(row_data, 1):
+            cell = ws_balance.cell(row=row_num, column=col_num, value=value)
+            if row_num == 1:
+                cell.font = header_font
+                cell.fill = header_fill
+                cell.alignment = center_alignment
+            elif value == '':
+                cell.font = Font(name='Calibri', size=2)
+            else:
+                cell.font = data_font
+                cell.alignment = center_alignment
+                if col_num > 1 and col_num <= 5:
+                    if '合计' in str(row_data[0]) or '总计' in str(row_data[0]):
+                        cell.font = Font(name='Calibri', size=11, bold=True)
+                        cell.fill = accent_fill
+                    elif isinstance(value, (int, float)) and value != 0:
+                        cell.font = number_font
+                        cell.fill = light_fill if row_num % 2 == 0 else success_fill
+            cell.border = thin_border
+
+    # 创建资产负债结构饼状图
+    pie_chart = PieChart()
+    pie_chart.title = "特斯拉资产负债结构分布"
+    pie_chart.width = 18
+    pie_chart.height = 12
+    pie_chart.anchor = 'H1'
+
+    # 负债权益结构数据
+    balance_pie_data = Reference(ws_balance, min_col=2, min_row=33, max_col=3, max_row=34)
+    balance_pie_cats = Reference(ws_balance, min_col=1, min_row=33, max_col=1, max_row=34)
+    pie_chart.add_data(balance_pie_data, titles_from_data=True)
+    pie_chart.set_categories(balance_pie_cats)
+
+    ws_balance.add_chart(pie_chart)
+
+    # 创建资产结构堆叠图
+    stack_chart = BarChart()
+    stack_chart.type = "col"
+    stack_chart.style = 10
+    stack_chart.title = "特斯拉资产结构堆叠分析"
+    stack_chart.grouping = "stacked"
+    stack_chart.y_axis.title = '金额 (十亿美元)'
+    stack_chart.x_axis.title = '资产类别'
+    stack_chart.width = 20
+    stack_chart.height = 12
+    stack_chart.anchor = 'H15'
+
+    # 流动vs非流动资产
+    asset_data = Reference(ws_balance, min_col=2, min_row=5, max_col=4, max_row=6)
+    asset_cats = Reference(ws_balance, min_col=1, min_row=5, max_col=1, max_row=6)
+    stack_chart.add_data(asset_data, titles_from_data=True)
+    stack_chart.set_categories(asset_cats)
+
+    ws_balance.add_chart(stack_chart)
+
+    # ==================== 工作表5: 财务比率雷达图分析 ====================
+    ws_ratios = wb.create_sheet('财务比率雷达图分析')
+
+    # 详细财务比率对比分析
+    ratios_data = [
+        ['财务比率', '特斯拉', '行业平均', '优秀值', '行业领先', '单位', '评级'],
+        ['盈利能力', '', '', '', '', '', ''],
+        ['  净利润率', 4.89, 3.2, 8.0, 12.5, '%', 'A'],
+        ['  资产回报率', 3.55, 2.8, 6.0, 8.2, '%', 'B+'],
+        ['  资本回报率', 5.01, 4.5, 12.0, 15.8, '%', 'B+'],
+        ['  毛利率', 37.0, 25.0, 45.0, 52.3, '%', 'A'],
+        ['', '', '', '', '', '', ''],
+        ['运营效率', '', '', '', '', '', ''],
+        ['  总资产周转率', 0.21, 0.18, 0.4, 0.65, '次数', 'B'],
+        ['  存货周转率', 4.26, 6.8, 12.0, 18.5, '次数', 'C+'],
+        ['  应收账款周转率', 6.21, 8.2, 15.0, 25.8, '次数', 'B-'],
+        ['', '', '', '', '', '', ''],
+        ['财务稳健性', '', '', '', '', '', ''],
+        ['  流动比率', 2.86, 1.8, 2.0, 3.2, '倍数', 'A'],
+        ['  速动比率', 2.40, 1.2, 1.0, 2.8, '倍数', 'A'],
+        ['  负债权益比', 0.66, 1.2, 0.3, 0.15, '倍数', 'A-'],
+        ['  利息保障倍数', 18.5, 12.0, 25.0, 45.8, '倍数', 'A'],
+        ['', '', '', '', '', '', ''],
+        ['成长性', '', '', '', '', '', ''],
+        ['  收入增长率', 14.6, 8.5, 25.0, 35.2, '%', 'A-'],
+        ['  利润增长率', 22.3, 12.8, 35.0, 58.5, '%', 'A'],
+        ['  资产增长率', 8.0, 5.2, 15.0, 28.5, '%', 'B+']
+    ]
+
+    for row_num, row_data in enumerate(ratios_data, 1):
+        for col_num, value in enumerate(row_data, 1):
+            cell = ws_ratios.cell(row=row_num, column=col_num, value=value)
+            if row_num == 1 or (row_num > 1 and value in ['盈利能力', '运营效率', '财务稳健性', '成长性']):
+                cell.font = subheader_font if row_num == 1 or isinstance(value, str) and value.endswith('性') else header_font
+                if row_num == 1:
+                    cell.fill = header_fill
+                elif isinstance(value, str) and value.endswith('性'):
+                    cell.fill = PatternFill(start_color='D9E2F3', end_color='D9E2F3', fill_type='solid')
+                cell.alignment = center_alignment
+            elif value == '':
+                cell.font = Font(name='Calibri', size=2)
+            else:
+                cell.font = data_font
+                cell.alignment = center_alignment
+                if col_num == 2:  # 特斯拉数据
+                    cell.font = Font(name='Calibri', size=11, bold=True, color='1F4E79')
+                    cell.fill = light_fill
+                elif col_num == 3:  # 行业平均
+                    cell.font = Font(name='Calibri', size=10, color='70AD47')
+                elif col_num == 4:  # 优秀值
+                    cell.font = Font(name='Calibri', size=10, color='FFC000')
+                elif col_num == 7:  # 评级
+                    if value in ['A', 'A+', 'A-']:
+                        cell.fill = success_fill
+                        cell.font = Font(name='Calibri', size=10, bold=True, color='70AD47')
+                    elif value.startswith('B'):
+                        cell.fill = PatternFill(start_color='FFF2CC', end_color='FFF2CC', fill_type='solid')
+                        cell.font = Font(name='Calibri', size=10, bold=True, color='FFC000')
+                    else:
+                        cell.fill = warning_fill
+                        cell.font = Font(name='Calibri', size=10, bold=True, color='C55A5A')
+            cell.border = thin_border
+
+    # 创建财务比率雷达图（散点图）
+    scatter_chart = ScatterChart()
+    scatter_chart.title = "特斯拉财务比率雷达图分析"
+    scatter_chart.style = 13
+    scatter_chart.y_axis.title = '比率值'
+    scatter_chart.x_axis.title = '财务指标'
+
+    # 特斯拉数据系列
+    tesla_series = Series(Reference(ws_ratios, min_col=2, min_row=3, max_row=4),
+                         Reference(ws_ratios, min_col=1, min_row=3, max_row=4))
+    tesla_series.title = "特斯拉"
+    tesla_series.graphicalProperties.line.solidFill = "1F4E79"
+
+    # 行业平均系列
+    industry_series = Series(Reference(ws_ratios, min_col=3, min_row=3, max_row=4),
+                           Reference(ws_ratios, min_col=1, min_row=3, max_row=4))
+    industry_series.title = "行业平均"
+    industry_series.graphicalProperties.line.solidFill = "70AD47"
+
+    scatter_chart.series.append(tesla_series)
+    scatter_chart.series.append(industry_series)
+
+    scatter_chart.width = 25
+    scatter_chart.height = 15
+    scatter_chart.anchor = 'I1'
+
+    ws_ratios.add_chart(scatter_chart)
+
+    # ==================== 工作表6: 估值分析 ====================
+    ws_valuation = wb.create_sheet('估值分析')
+
+    # 详细估值分析
+    valuation_data = [
+        ['估值指标', '当前值', '历史均值', '行业均值', '优秀值', '倍数', '评估'],
+        ['市场估值', '', '', '', '', '', ''],
+        ['  市值(十亿)', 1447.5, 1250.0, 850.0, 1200.0, 1.15, '高估'],
+        ['  市盈率(P/E)', 65.2, 45.8, 28.5, 18.2, 2.29, '高估'],
+        ['  市净率(P/B)', 17.93, 12.5, 8.2, 5.8, 3.09, '高估'],
+        ['  市销率(P/S)', 5.8, 4.2, 3.1, 2.2, 2.64, '高估'],
+        ['', '', '', '', '', '', ''],
+        ['企业价值倍数', '', '', '', '', '', ''],
+        ['  EV/Sales', 5.2, 3.8, 2.8, 1.9, 2.74, '高估'],
+        ['  EV/EBITDA', 28.5, 18.2, 12.5, 8.8, 3.24, '高估'],
+        ['  EV/EBIT', 45.8, 28.5, 18.2, 12.5, 3.66, '高估'],
+        ['', '', '', '', '', '', ''],
+        ['盈利能力倍数', '', '', '', '', '', ''],
+        ['  P/CF', 85.2, 45.8, 25.8, 15.2, 3.61, '高估'],
+        ['  PEG比率', 1.8, 1.2, 0.8, 0.5, 3.60, '高估'],
+        ['  Price/Free CF', 95.8, 58.5, 32.8, 18.5, 5.18, '高估'],
+        ['', '', '', '', '', '', ''],
+        ['相对估值', '', '', '', '', '', ''],
+        ['  相对行业溢价', 125.8, 85.2, 0.0, -15.2, '—', '高估'],
+        ['  相对S&P溢价', 185.2, 125.8, 0.0, -8.5, '—', '高估'],
+        ['  Beta系数', 2.1, 1.8, 1.0, 0.5, 4.20, '高波动']
+    ]
+
+    for row_num, row_data in enumerate(valuation_data, 1):
+        for col_num, value in enumerate(row_data, 1):
+            cell = ws_valuation.cell(row=row_num, column=col_num, value=value)
+            if row_num == 1 or (row_num > 1 and isinstance(value, str) and value.endswith(('估值', '倍数', '能力', '对估值'))):
+                cell.font = subheader_font if row_num == 1 or isinstance(value, str) and (value.endswith(('估值', '倍数', '能力', '对估值')) or value.endswith('性')) else header_font
+                if row_num == 1:
+                    cell.fill = header_fill
+                elif isinstance(value, str) and (value.endswith(('估值', '倍数', '能力', '对估值')) or value.endswith('性')):
+                    cell.fill = PatternFill(start_color='D9E2F3', end_color='D9E2F3', fill_type='solid')
+                cell.alignment = center_alignment
+            elif value == '':
+                cell.font = Font(name='Calibri', size=2)
+            else:
+                cell.font = data_font
+                cell.alignment = center_alignment
+                if col_num == 2:  # 当前值
+                    cell.font = Font(name='Calibri', size=11, bold=True, color='1F4E79')
+                    cell.fill = light_fill
+                elif col_num == 7:  # 评估
+                    if '高估' in str(value):
+                        cell.fill = warning_fill
+                        cell.font = Font(name='Calibri', size=10, bold=True, color='C55A5A')
+                    elif '低估' in str(value):
+                        cell.fill = success_fill
+                        cell.font = Font(name='Calibri', size=10, bold=True, color='70AD47')
+                    else:
+                        cell.fill = accent_fill
+                        cell.font = Font(name='Calibri', size=10, bold=True, color='FFC000')
+            cell.border = thin_border
+
+    # ==================== 工作表7: 风险评估矩阵 ====================
+    ws_risk = wb.create_sheet('风险评估矩阵')
+
+    # 详细风险评估
+    risk_data = [
+        ['风险类别', '风险等级', '概率%', '影响度', '风险值', '应对策略', '责任人'],
+        ['战略风险', '', '', '', '', '', ''],
+        ['  市场竞争加剧', '高', 75, '高', 5.6, '技术创新、差异化战略', 'CEO'],
+        ['  技术变革风险', '低', 25, '高', 2.5, '持续研发投入', 'CTO'],
+        ['  政策监管变化', '高', 65, '高', 4.2, '合规管理、政府关系', '法务总监'],
+        ['  宏观经济波动', '中等', 45, '中', 2.7, '成本控制、灵活定价', 'CFO'],
+        ['', '', '', '', '', '', ''],
+        ['运营风险', '', '', '', '', '', ''],
+        ['  供应链中断', '中等', 40, '高', 4.0, '供应商多元化', '运营总监'],
+        ['  生产能力瓶颈', '中等', 35, '中', 2.6, '产能扩张、自动化', '生产总监'],
+        ['  质量问题', '低', 20, '中', 1.4, '质量管理体系', '质量总监'],
+        ['  人才流失', '中等', 50, '中', 3.0, '股权激励、企业文化', 'HR总监'],
+        ['', '', '', '', '', '', ''],
+        ['财务风险', '', '', '', '', '', ''],
+        ['  汇率波动', '中等', 55, '低', 1.7, '对冲策略', '财务总监'],
+        ['  利率变化', '低', 30, '低', 0.9, '固定利率融资', '财务总监'],
+        ['  流动性风险', '低', 15, '中', 0.8', '现金管理', '财务总监'],
+        ['  信用风险', '低', 25, '低', 0.6, '客户信用评估', '销售总监'],
+        ['', '', '', '', '', '', ''],
+        ['技术风险', '', '', '', '', '', ''],
+        ['  网络安全威胁', '中等', 45, '高', 4.1, '安全防护体系', 'IT总监'],
+        ['  数据隐私泄露', '低', 20, '高', 2.8, '数据加密、访问控制', 'IT总监'],
+        ['  系统故障', '中等', 35, '中', 2.1', '备份系统、容灾', 'IT总监'],
+        ['', '', '', '', '', '', ''],
+        ['法律合规风险', '', '', '', '', '', ''],
+        ['  知识产权纠纷', '中等', 40, '中', 2.4, '专利布局、法务团队', '法务总监'],
+        ['  产品责任诉讼', '低', 25, '中', 1.5, '产品保险、法律辩护', '法务总监'],
+        ['  环保合规', '中等', 35, '中', 2.1', '环保投入、合规审核', '环保总监']
+    ]
+
+    for row_num, row_data in enumerate(risk_data, 1):
+        for col_num, value in enumerate(row_data, 1):
+            cell = ws_risk.cell(row=row_num, column=col_num, value=value)
+            if row_num == 1 or (row_num > 1 and isinstance(value, str) and value.endswith('风险')):
+                cell.font = subheader_font if row_num == 1 or isinstance(value, str) and value.endswith('风险') else header_font
+                if row_num == 1:
+                    cell.fill = header_fill
+                elif isinstance(value, str) and value.endswith('风险'):
+                    cell.fill = PatternFill(start_color='D9E2F3', end_color='D9E2F3', fill_type='solid')
+                cell.alignment = center_alignment
+            elif value == '':
+                cell.font = Font(name='Calibri', size=2)
+            else:
+                cell.font = data_font
+                cell.alignment = center_alignment
+                if col_num == 2:  # 风险等级
+                    if value == '高':
+                        cell.fill = PatternFill(start_color='FFC7CE', end_color='FFC7CE', fill_type='solid')
+                        cell.font = Font(name='Calibri', size=10, bold=True, color='C55A5A')
+                    elif value == '中等':
+                        cell.fill = PatternFill(start_color='FFF2CC', end_color='FFF2CC', fill_type='solid')
+                        cell.font = Font(name='Calibri', size=10, bold=True, color='FFC000')
+                    elif value == '低':
+                        cell.fill = PatternFill(start_color='C6EFCE', end_color='C6EFCE', fill_type='solid')
+                        cell.font = Font(name='Calibri', size=10, bold=True, color='70AD47')
+                elif col_num == 5:  # 风险值
+                    if isinstance(value, (int, float)):
+                        if value >= 4.0:
+                            cell.fill = PatternFill(start_color='FF6B6B', end_color='FF6B6B', fill_type='solid')
+                            cell.font = Font(name='Calibri', size=10, bold=True, color='FFFFFF')
+                        elif value >= 3.0:
+                            cell.fill = PatternFill(start_color='FFD93D', end_color='FFD93D', fill_type='solid')
+                            cell.font = Font(name='Calibri', size=10, bold=True, color='000000')
+                        else:
+                            cell.fill = PatternFill(start_color='6BCF7F', end_color='6BCF7F', fill_type='solid')
+                            cell.font = Font(name='Calibri', size=10, bold=True, color='FFFFFF')
+            cell.border = thin_border
+
+    # 设置所有工作表的列宽
+    for ws in [ws_dashboard, ws_revenue, ws_cashflow, ws_balance, ws_ratios, ws_valuation, ws_risk]:
+        for col in ws.columns:
+            max_length = 0
+            column = col[0].column_letter
+            for cell in col:
+                try:
+                    if len(str(cell.value)) > max_length:
+                        max_length = len(str(cell.value))
+                except:
+                    pass
+            adjusted_width = min(max_length + 2, 30)
+            ws.column_dimensions[column].width = adjusted_width
+
+    # 保存文件
+    output_file = "/Users/henry/特斯拉财务高级图表分析.xlsx"
+    wb.save(output_file)
+
+    print(f"✅ 高级图表Excel文件已创建: {output_file}")
+    return output_file
+
+if __name__ == "__main__":
+    create_professional_charts_excel()

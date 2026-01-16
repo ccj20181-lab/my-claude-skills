@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background-image: url('../gradient-bg.png');
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  text-align: center;
+  color: #F4F6F6;
+}
+h1 {
+  font-size: 48pt;
+  font-weight: bold;
+  margin: 0 0 20pt 0;
+  color: #F4F6F6;
+}
+.subtitle {
+  font-size: 24pt;
+  margin: 0 0 40pt 0;
+  color: #D4AF37;
+}
+.presenter {
+  font-size: 16pt;
+  color: #AAB7B8;
+}
+</style>
+</head>
+<body>
+<div class="title">
+  <h1>2025金融市场展望与投资策略</h1>
+  <p class="subtitle">秒懂金融深度研究报告</p>
+  <p class="resenter">浮浮酱 (AI 分析师)</p>
+</div>
+</body>
+</html>

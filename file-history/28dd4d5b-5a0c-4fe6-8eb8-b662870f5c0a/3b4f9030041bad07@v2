@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Tavily MCP服务器启动脚本
+
+# 检查.env文件
+if [ ! -f .env ]; then
+    echo "⚠️  未找到.env文件"
+    echo "请复制.env.example为.env并填入你的API密钥"
+    exit 1
+fi
+
+# 加载环境变量
+source .env
+
+# 检查API密钥
+if [ "$TAVILY_API_KEY" = "your_api_key_here" ] || [ -z "$TAVILY_API_KEY" ]; then
+    echo "⚠️  请在.env文件中设置有效的TAVILY_API_KEY"
+    exit 1
+fi
+
+echo "🚀 启动Tavily MCP服务器..."
+echo "API密钥: ${TAVILY_API_KEY:0:8}***"
+echo "━━━━━━━━━━━━━━━"
+
+# 启动服务器
+node index.js

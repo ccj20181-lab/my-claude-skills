@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+*.egg-info/
+venv/
+.venv/
+
+# 数据文件（通常不想提交到 GitHub）
+*.json
+!config.json
+!package.json
+
+# 日志和临时文件
+*.log
+*.tmp
+nul_
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 敏感信息
+.env
+*.secret
+credentials.json
+cookies.json

@@ -1,0 +1,26 @@
+Always respond in Chinese-simplified
+
+Always use python3 when executing Python scripts
+
+When calling skills, always read the skill documentation first before using them properly
+
+## Installed Skills Paths
+
+Three custom skills are installed in Claude Code at the following locations:
+
+1. **notebooklm** - NotebookLM Research Assistant
+   - Path: `/Users/henry/.claude/skills/notebooklm/`
+   - Documentation: `/Users/henry/.claude/skills/notebooklm/SKILL.md`
+   - Usage: Query Google NotebookLM notebooks for source-grounded answers
+
+2. **playwright-skill** - Browser Automation
+   - Path: `/Users/henry/.claude/skills/playwright/`
+   - Documentation: `/Users/henry/.claude/skills/playwright/SKILL.md`
+   - Usage: Complete browser automation with Playwright
+
+3. **report-hunter** - Research Report Hunter
+   - Path: `/Users/henry/.claude/skills/report-hunter/`
+   - Documentation: `/Users/henry/.claude/skills/report-hunter/SKILL.md`
+   - Usage: Automated research report collection and download
+
+When using these skills, reference their SKILL.md files for proper usage instructions.

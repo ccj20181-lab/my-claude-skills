@@ -1,0 +1,1700 @@
+2026-01-11T04:32:59.026Z [DEBUG] Watching for changes in setting files /Users/henry/.claude, /Users/henry/.happy/tmp/hooks...
+2026-01-11T04:32:59.026Z [DEBUG] [init] configureGlobalMTLS starting
+2026-01-11T04:32:59.026Z [DEBUG] [init] configureGlobalMTLS complete
+2026-01-11T04:32:59.026Z [DEBUG] [init] configureGlobalAgents starting
+2026-01-11T04:32:59.027Z [DEBUG] [init] configureGlobalAgents complete
+2026-01-11T04:32:59.030Z [DEBUG] [LSP MANAGER] initializeLspServerManager() called
+2026-01-11T04:32:59.030Z [DEBUG] [LSP MANAGER] Created manager instance, state=pending
+2026-01-11T04:32:59.030Z [DEBUG] [LSP MANAGER] Starting async initialization (generation 1)
+2026-01-11T04:32:59.032Z [DEBUG] Applying permission update: Adding 25 allow rule(s) to destination 'userSettings': ["Bash","BashOutput","Edit","Glob","Grep","KillShell","NotebookEdit","Read","SlashCommand","Task","TodoWrite","WebFetch","WebSearch","Write","mcp__ide","mcp__exa","mcp__context7","mcp__mcp-deepwiki","mcp__Playwright","mcp__spec-workflow","mcp__open-websearch","mcp__serena","mcp__tavily","mcp__xiaohongshu","mcp__rednote"]
+2026-01-11T04:32:59.032Z [DEBUG] [STARTUP] Loading MCP configs...
+2026-01-11T04:32:59.034Z [DEBUG] Loading plugin document-skills from source: "./"
+2026-01-11T04:32:59.051Z [DEBUG] Watching for changes in skill directories: /Users/henry/.claude/skills...
+2026-01-11T04:32:59.084Z [DEBUG] Git remote URL: null
+2026-01-11T04:32:59.084Z [DEBUG] No git remote URL found
+2026-01-11T04:32:59.084Z [DEBUG] Not in a GitHub repository, skipping path mapping update
+2026-01-11T04:32:59.084Z [DEBUG] Using git SHA for document-skills@anthropic-agent-skills: 69c0b1a06741
+2026-01-11T04:32:59.084Z [DEBUG] Plugin document-skills@anthropic-agent-skills version 69c0b1a06741 already cached at /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741
+2026-01-11T04:32:59.084Z [DEBUG] Copied local plugin document-skills to versioned cache: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741
+2026-01-11T04:32:59.084Z [DEBUG] Processing 4 skill paths for plugin document-skills
+2026-01-11T04:32:59.084Z [DEBUG] Checking skill path: ./skills/xlsx -> /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/xlsx (exists: true)
+2026-01-11T04:32:59.084Z [DEBUG] Checking skill path: ./skills/docx -> /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/docx (exists: true)
+2026-01-11T04:32:59.084Z [DEBUG] Checking skill path: ./skills/pptx -> /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pptx (exists: true)
+2026-01-11T04:32:59.084Z [DEBUG] Checking skill path: ./skills/pdf -> /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pdf (exists: true)
+2026-01-11T04:32:59.084Z [DEBUG] Found 4 valid skill paths for plugin document-skills, setting skillsPaths
+2026-01-11T04:32:59.084Z [DEBUG] Found 1 plugins (1 enabled, 0 disabled)
+2026-01-11T04:32:59.084Z [DEBUG] [STARTUP] MCP configs loaded in 52ms
+2026-01-11T04:32:59.085Z [DEBUG] [STARTUP] Running setup()...
+2026-01-11T04:32:59.086Z [DEBUG] Stats cache is up to date
+2026-01-11T04:32:59.086Z [DEBUG] Plugin autoupdate: skipped (auto-updater disabled)
+2026-01-11T04:32:59.087Z [DEBUG] Loading skills from: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/henry/.claude/skills, project=[]
+2026-01-11T04:32:59.143Z [DEBUG] Loaded 1 installed plugins from /Users/henry/.claude/plugins/installed_plugins.json
+2026-01-11T04:32:59.147Z [DEBUG] Writing to temp file: /Users/henry/.claude/todos/1cfeafe6-0711-420d-b43e-f2da431023c4-agent-1cfeafe6-0711-420d-b43e-f2da431023c4.json.tmp.76866.1768105979147
+2026-01-11T04:32:59.148Z [DEBUG] Temp file written successfully, size: 2 bytes
+2026-01-11T04:32:59.148Z [DEBUG] Renaming /Users/henry/.claude/todos/1cfeafe6-0711-420d-b43e-f2da431023c4-agent-1cfeafe6-0711-420d-b43e-f2da431023c4.json.tmp.76866.1768105979147 to /Users/henry/.claude/todos/1cfeafe6-0711-420d-b43e-f2da431023c4-agent-1cfeafe6-0711-420d-b43e-f2da431023c4.json
+2026-01-11T04:32:59.148Z [DEBUG] File /Users/henry/.claude/todos/1cfeafe6-0711-420d-b43e-f2da431023c4-agent-1cfeafe6-0711-420d-b43e-f2da431023c4.json written atomically
+2026-01-11T04:32:59.151Z [DEBUG] getPluginSkills: Processing 1 enabled plugins
+2026-01-11T04:32:59.151Z [DEBUG] Checking plugin document-skills: skillsPath=exists, skillsPaths=4 paths
+2026-01-11T04:32:59.151Z [DEBUG] Attempting to load skills from plugin document-skills default skillsPath: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills
+2026-01-11T04:32:59.154Z [DEBUG] Total plugin commands loaded: 0
+2026-01-11T04:32:59.154Z [DEBUG] Registered 0 hooks from 1 plugins
+2026-01-11T04:32:59.155Z [DEBUG] [STARTUP] setup() completed in 70ms
+2026-01-11T04:32:59.155Z [DEBUG] [STARTUP] Loading commands and agents...
+2026-01-11T04:32:59.155Z [DEBUG] Loaded 16 skills from plugin document-skills default directory
+2026-01-11T04:32:59.155Z [DEBUG] Attempting to load skills from plugin document-skills skillsPaths: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/xlsx, /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/docx, /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pptx, /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pdf
+2026-01-11T04:32:59.155Z [DEBUG] Loading from skillPath: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/xlsx for plugin document-skills
+2026-01-11T04:32:59.155Z [DEBUG] Loaded 0 skills from plugin document-skills custom path: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/xlsx
+2026-01-11T04:32:59.155Z [DEBUG] Loading from skillPath: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/docx for plugin document-skills
+2026-01-11T04:32:59.156Z [DEBUG] Loaded 0 skills from plugin document-skills custom path: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/docx
+2026-01-11T04:32:59.156Z [DEBUG] Loading from skillPath: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pptx for plugin document-skills
+2026-01-11T04:32:59.156Z [DEBUG] Loaded 0 skills from plugin document-skills custom path: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pptx
+2026-01-11T04:32:59.156Z [DEBUG] Loading from skillPath: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pdf for plugin document-skills
+2026-01-11T04:32:59.156Z [DEBUG] Loaded 0 skills from plugin document-skills custom path: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pdf
+2026-01-11T04:32:59.156Z [DEBUG] Total plugin skills loaded: 16
+2026-01-11T04:32:59.157Z [DEBUG] Total LSP servers loaded: 0
+2026-01-11T04:32:59.158Z [DEBUG] [LSP SERVER MANAGER] getAllLspServers returned 0 server(s)
+2026-01-11T04:32:59.158Z [DEBUG] LSP manager initialized with 0 servers
+2026-01-11T04:32:59.158Z [DEBUG] LSP server manager initialized successfully
+2026-01-11T04:32:59.158Z [DEBUG] LSP notification handlers registered successfully for all 0 server(s)
+2026-01-11T04:32:59.162Z [DEBUG] Creating shell snapshot for zsh (/bin/zsh)
+2026-01-11T04:32:59.162Z [DEBUG] Looking for shell config file: /Users/henry/.zshrc
+2026-01-11T04:32:59.162Z [DEBUG] Snapshots directory: /Users/henry/.claude/shell-snapshots
+2026-01-11T04:32:59.162Z [DEBUG] Creating snapshot at: /Users/henry/.claude/shell-snapshots/snapshot-zsh-1768105979162-5udvm4.sh
+2026-01-11T04:32:59.162Z [DEBUG] Shell binary exists: true
+2026-01-11T04:32:59.162Z [DEBUG] Execution timeout: 10000ms
+2026-01-11T04:32:59.175Z [DEBUG] Loaded 18 unique skills (managed: 0, user: 7, project: 0, legacy commands: 11)
+2026-01-11T04:32:59.175Z [DEBUG] getSkills returning: 18 skill dir commands, 16 plugin skills
+2026-01-11T04:32:59.178Z [DEBUG] Total plugin agents loaded: 0
+2026-01-11T04:32:59.178Z [DEBUG] [STARTUP] Commands and agents loaded in 23ms
+2026-01-11T04:32:59.184Z [DEBUG] MCP server "Playwright": Starting connection with timeout of 60000ms
+2026-01-11T04:32:59.185Z [DEBUG] MCP server "xiaohongshu": Initializing HTTP transport to http://localhost:18060/mcp
+2026-01-11T04:32:59.185Z [DEBUG] MCP server "xiaohongshu": Node version: v24.3.0, Platform: darwin
+2026-01-11T04:32:59.186Z [DEBUG] MCP server "xiaohongshu": Environment: {"NODE_OPTIONS":"not set","UV_THREADPOOL_SIZE":"default","HTTP_PROXY":"not set","HTTPS_PROXY":"not set","NO_PROXY":"not set"}
+2026-01-11T04:32:59.186Z [DEBUG] MCP server "happy": Initializing HTTP transport to http://127.0.0.1:57389/
+2026-01-11T04:32:59.186Z [DEBUG] MCP server "happy": Node version: v24.3.0, Platform: darwin
+2026-01-11T04:32:59.186Z [DEBUG] MCP server "happy": Environment: {"NODE_OPTIONS":"not set","UV_THREADPOOL_SIZE":"default","HTTP_PROXY":"not set","HTTPS_PROXY":"not set","NO_PROXY":"not set"}
+2026-01-11T04:32:59.190Z [DEBUG] MCP server "xiaohongshu": Proxy options: default
+2026-01-11T04:32:59.190Z [DEBUG] MCP server "xiaohongshu": HTTP transport options: {"url":"http://localhost:18060/mcp","headers":{"User-Agent":"claude-code/2.1.1"},"hasAuthProvider":true,"timeoutMs":60000}
+2026-01-11T04:32:59.190Z [DEBUG] MCP server "xiaohongshu": HTTP transport created successfully
+2026-01-11T04:32:59.191Z [DEBUG] MCP server "xiaohongshu": Client created, setting up request handler
+2026-01-11T04:32:59.191Z [DEBUG] MCP server "xiaohongshu": Starting connection with timeout of 60000ms
+2026-01-11T04:32:59.191Z [DEBUG] MCP server "xiaohongshu": Testing basic HTTP connectivity to http://localhost:18060/mcp
+2026-01-11T04:32:59.191Z [DEBUG] MCP server "xiaohongshu": Parsed URL: host=localhost, port=18060, protocol=http:
+2026-01-11T04:32:59.191Z [DEBUG] MCP server "xiaohongshu": Using loopback address: localhost
+2026-01-11T04:32:59.191Z [DEBUG] MCP server "happy": Proxy options: default
+2026-01-11T04:32:59.191Z [DEBUG] MCP server "happy": HTTP transport options: {"url":"http://127.0.0.1:57389/","headers":{"User-Agent":"claude-code/2.1.1"},"hasAuthProvider":true,"timeoutMs":60000}
+2026-01-11T04:32:59.191Z [DEBUG] MCP server "happy": HTTP transport created successfully
+2026-01-11T04:32:59.191Z [DEBUG] MCP server "happy": Client created, setting up request handler
+2026-01-11T04:32:59.191Z [DEBUG] MCP server "happy": Starting connection with timeout of 60000ms
+2026-01-11T04:32:59.191Z [DEBUG] MCP server "happy": Testing basic HTTP connectivity to http://127.0.0.1:57389/
+2026-01-11T04:32:59.191Z [DEBUG] MCP server "happy": Parsed URL: host=127.0.0.1, port=57389, protocol=http:
+2026-01-11T04:32:59.191Z [DEBUG] MCP server "happy": Using loopback address: 127.0.0.1
+2026-01-11T04:32:59.192Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-11T04:32:59.192Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T04:32:59.192Z [DEBUG] Shell snapshot created successfully (758 bytes)
+2026-01-11T04:32:59.194Z [DEBUG] Getting matching hook commands for SubagentStart with query: Explore
+2026-01-11T04:32:59.194Z [DEBUG] Found 0 hook matchers in settings
+2026-01-11T04:32:59.194Z [DEBUG] Matched 0 unique hooks for query "Explore" (0 before deduplication)
+2026-01-11T04:32:59.199Z [DEBUG] Getting matching hook commands for SubagentStart with query: Plan
+2026-01-11T04:32:59.199Z [DEBUG] Found 0 hook matchers in settings
+2026-01-11T04:32:59.199Z [DEBUG] Matched 0 unique hooks for query "Plan" (0 before deduplication)
+2026-01-11T04:32:59.204Z [DEBUG] Getting matching hook commands for SubagentStart with query: Bash
+2026-01-11T04:32:59.204Z [DEBUG] Found 0 hook matchers in settings
+2026-01-11T04:32:59.204Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2026-01-11T04:32:59.219Z [DEBUG] MCP server "xiaohongshu": HTTP Connection failed after 34ms: Unable to connect. Is the computer able to access the url? (code: ConnectionRefused, errno: none)
+2026-01-11T04:32:59.221Z [ERROR] MCP server "xiaohongshu" Error: Unable to connect. Is the computer able to access the url?
+2026-01-11T04:32:59.221Z [DEBUG] MCP server "xiaohongshu": Connection failed after 36ms: Unable to connect. Is the computer able to access the url?
+2026-01-11T04:32:59.221Z [ERROR] MCP server "xiaohongshu" Connection failed: Unable to connect. Is the computer able to access the url?
+2026-01-11T04:32:59.226Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T04:32:59.240Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-11T04:32:59.240Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-11T04:32:59.245Z [DEBUG] Skill prompt: showing "document-skills:theme-factory" (userFacingName="theme-factory")
+2026-01-11T04:32:59.245Z [DEBUG] Skill prompt: showing "document-skills:doc-coauthoring" (userFacingName="doc-coauthoring")
+2026-01-11T04:32:59.245Z [DEBUG] Skill prompt: showing "document-skills:xlsx" (userFacingName="xlsx")
+2026-01-11T04:32:59.245Z [DEBUG] Skill prompt: showing "document-skills:pdf" (userFacingName="pdf")
+2026-01-11T04:32:59.245Z [DEBUG] Skill prompt: showing "document-skills:algorithmic-art" (userFacingName="algorithmic-art")
+2026-01-11T04:32:59.245Z [DEBUG] Skill prompt: showing "document-skills:internal-comms" (userFacingName="internal-comms")
+2026-01-11T04:32:59.245Z [DEBUG] Skill prompt: showing "document-skills:skill-creator" (userFacingName="skill-creator")
+2026-01-11T04:32:59.245Z [DEBUG] Skill prompt: showing "document-skills:canvas-design" (userFacingName="canvas-design")
+2026-01-11T04:32:59.245Z [DEBUG] Skill prompt: showing "document-skills:pptx" (userFacingName="pptx")
+2026-01-11T04:32:59.245Z [DEBUG] Skill prompt: showing "document-skills:slack-gif-creator" (userFacingName="slack-gif-creator")
+2026-01-11T04:32:59.245Z [DEBUG] Skill prompt: showing "document-skills:webapp-testing" (userFacingName="webapp-testing")
+2026-01-11T04:32:59.245Z [DEBUG] Skill prompt: showing "document-skills:frontend-design" (userFacingName="frontend-design")
+2026-01-11T04:32:59.245Z [DEBUG] Skill prompt: showing "document-skills:mcp-builder" (userFacingName="mcp-builder")
+2026-01-11T04:32:59.245Z [DEBUG] Skill prompt: showing "document-skills:brand-guidelines" (userFacingName="brand-guidelines")
+2026-01-11T04:32:59.245Z [DEBUG] Skill prompt: showing "document-skills:docx" (userFacingName="docx")
+2026-01-11T04:32:59.245Z [DEBUG] Skill prompt: showing "document-skills:web-artifacts-builder" (userFacingName="web-artifacts-builder")
+2026-01-11T04:32:59.245Z [DEBUG] Skills and commands included in Skill tool: apiyi-image-generator, finance-infographic, miaodong-finance-writer, playwright-skill, notebooklm, report-hunter, zcf:git-worktree, zcf:bmad-init, zcf:workflow, zcf:feat, zcf:init-project, zcf:git-commit, zcf:git-cleanBranches, zcf:git-rollback, oncall-triage, commit-push-pr, dedupe, theme-factory, doc-coauthoring, xlsx, pdf, algorithmic-art, internal-comms, skill-creator, canvas-design, pptx, slack-gif-creator, webapp-testing, frontend-design, mcp-builder, brand-guidelines, docx, web-artifacts-builder
+2026-01-11T04:32:59.245Z [DEBUG] Skill prompt: showing "document-skills:theme-factory" (userFacingName="theme-factory")
+2026-01-11T04:32:59.245Z [DEBUG] Skill prompt: showing "document-skills:doc-coauthoring" (userFacingName="doc-coauthoring")
+2026-01-11T04:32:59.245Z [DEBUG] Skill prompt: showing "document-skills:xlsx" (userFacingName="xlsx")
+2026-01-11T04:32:59.245Z [DEBUG] Skill prompt: showing "document-skills:pdf" (userFacingName="pdf")
+2026-01-11T04:32:59.245Z [DEBUG] Skill prompt: showing "document-skills:algorithmic-art" (userFacingName="algorithmic-art")
+2026-01-11T04:32:59.245Z [DEBUG] Skill prompt: showing "document-skills:internal-comms" (userFacingName="internal-comms")
+2026-01-11T04:32:59.245Z [DEBUG] Skill prompt: showing "document-skills:skill-creator" (userFacingName="skill-creator")
+2026-01-11T04:32:59.245Z [DEBUG] Skill prompt: showing "document-skills:canvas-design" (userFacingName="canvas-design")
+2026-01-11T04:32:59.245Z [DEBUG] Skill prompt: showing "document-skills:pptx" (userFacingName="pptx")
+2026-01-11T04:32:59.245Z [DEBUG] Skill prompt: showing "document-skills:slack-gif-creator" (userFacingName="slack-gif-creator")
+2026-01-11T04:32:59.245Z [DEBUG] Skill prompt: showing "document-skills:webapp-testing" (userFacingName="webapp-testing")
+2026-01-11T04:32:59.245Z [DEBUG] Skill prompt: showing "document-skills:frontend-design" (userFacingName="frontend-design")
+2026-01-11T04:32:59.245Z [DEBUG] Skill prompt: showing "document-skills:mcp-builder" (userFacingName="mcp-builder")
+2026-01-11T04:32:59.245Z [DEBUG] Skill prompt: showing "document-skills:brand-guidelines" (userFacingName="brand-guidelines")
+2026-01-11T04:32:59.245Z [DEBUG] Skill prompt: showing "document-skills:docx" (userFacingName="docx")
+2026-01-11T04:32:59.245Z [DEBUG] Skill prompt: showing "document-skills:web-artifacts-builder" (userFacingName="web-artifacts-builder")
+2026-01-11T04:32:59.246Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-11T04:32:59.246Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-11T04:32:59.246Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-11T04:32:59.246Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-11T04:32:59.246Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-11T04:32:59.246Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-11T04:32:59.249Z [ERROR] Error streaming, falling back to non-streaming mode: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-01-11T04:32:59.249Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-11T04:32:59.249Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-11T04:32:59.249Z [ERROR] Error streaming, falling back to non-streaming mode: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-01-11T04:32:59.249Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-11T04:32:59.249Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-11T04:32:59.249Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-11T04:32:59.249Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-11T04:32:59.250Z [ERROR] Error in non-streaming fallback: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-01-11T04:32:59.250Z [ERROR] Error in non-streaming fallback: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-01-11T04:32:59.253Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T04:32:59.253Z [DEBUG] MCP server "happy": Successfully connected to http server in 67ms
+2026-01-11T04:32:59.253Z [DEBUG] MCP server "happy": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"Happy MCP","version":"1.0.0"}}
+2026-01-11T04:32:59.253Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T04:32:59.258Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-11T04:32:59.258Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-11T04:32:59.258Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-11T04:32:59.258Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-11T04:32:59.259Z [ERROR] Error streaming, falling back to non-streaming mode: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-01-11T04:32:59.259Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-11T04:32:59.259Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-11T04:32:59.259Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-11T04:32:59.260Z [ERROR] Error in non-streaming fallback: Could not resolve authentication method. Expected either apiKey or authToken to be set. Or for one of the "X-Api-Key" or "Authorization" headers to be explicitly omitted
+2026-01-11T04:32:59.274Z [DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+2026-01-11T04:32:59.274Z [DEBUG] Found 0 hook matchers in settings
+2026-01-11T04:32:59.274Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-01-11T04:32:59.276Z [DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+2026-01-11T04:32:59.276Z [DEBUG] Found 0 hook matchers in settings
+2026-01-11T04:32:59.276Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-01-11T04:32:59.276Z [DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+2026-01-11T04:32:59.276Z [DEBUG] Found 0 hook matchers in settings
+2026-01-11T04:32:59.276Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-01-11T04:32:59.680Z [DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/opt/homebrew/Caskroom/claude-code/2.1.1/claude)
+2026-01-11T04:33:00.723Z [DEBUG] MCP server "Playwright": Successfully connected to stdio server in 1542ms
+2026-01-11T04:33:00.723Z [DEBUG] MCP server "Playwright": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"Playwright","version":"0.0.55"}}
+2026-01-11T04:33:00.728Z [DEBUG] All plugins already exist, skipping migration
+2026-01-11T04:33:00.728Z [DEBUG] Initialized versioned plugins system with 1 plugins
+2026-01-11T04:33:00.731Z [DEBUG] Getting matching hook commands for SessionStart with query: startup
+2026-01-11T04:33:00.731Z [DEBUG] Found 1 hook matchers in settings
+2026-01-11T04:33:00.731Z [DEBUG] Matched 1 unique hooks for query "startup" (1 before deduplication)
+2026-01-11T04:33:00.764Z [DEBUG] Hook output does not start with {, treating as plain text
+2026-01-11T04:33:00.769Z [DEBUG] Total plugin output styles loaded: 0
+2026-01-11T04:33:00.770Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-11T04:33:00.770Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-11T04:33:00.770Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-11T04:33:00.770Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-11T04:33:00.771Z [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+2026-01-11T04:33:00.771Z [DEBUG] Found 0 hook matchers in settings
+2026-01-11T04:33:00.771Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-01-11T04:33:00.771Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-11T04:33:00.773Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-11T04:33:00.773Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-11T04:33:00.773Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-11T04:33:01.371Z [DEBUG] Stream started - received first chunk
+2026-01-11T04:33:03.660Z [DEBUG] executePreToolHooks called for tool: mcp__happy__change_title
+2026-01-11T04:33:03.660Z [DEBUG] Getting matching hook commands for PreToolUse with query: mcp__happy__change_title
+2026-01-11T04:33:03.660Z [DEBUG] Found 0 hook matchers in settings
+2026-01-11T04:33:03.660Z [DEBUG] Matched 0 unique hooks for query "mcp__happy__change_title" (0 before deduplication)
+2026-01-11T04:33:03.660Z [DEBUG] MCP server "happy": Calling MCP tool: change_title
+2026-01-11T04:33:03.660Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T04:33:03.666Z [DEBUG] MCP server "happy": Tool 'change_title' completed successfully in 6ms
+2026-01-11T04:33:03.667Z [DEBUG] Getting matching hook commands for PostToolUse with query: mcp__happy__change_title
+2026-01-11T04:33:03.667Z [DEBUG] Found 0 hook matchers in settings
+2026-01-11T04:33:03.667Z [DEBUG] Matched 0 unique hooks for query "mcp__happy__change_title" (0 before deduplication)
+2026-01-11T04:33:03.675Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-11T04:33:03.675Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-11T04:33:03.675Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-11T04:33:03.675Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-11T04:33:03.675Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-11T04:33:03.676Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-11T04:33:03.676Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-11T04:33:03.676Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-11T04:33:03.943Z [DEBUG] Stream started - received first chunk
+2026-01-11T04:33:04.658Z [DEBUG] Getting matching hook commands for Stop with query: undefined
+2026-01-11T04:33:04.658Z [DEBUG] Found 0 hook matchers in settings
+2026-01-11T04:33:04.658Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-01-11T04:49:05.837Z [DEBUG] Metrics opt-out check failed: No API key available
+2026-01-11T04:49:05.837Z [DEBUG] Metrics check failed, defaulting to disabled
+2026-01-11T04:49:05.837Z [DEBUG] Metrics export disabled by organization setting
+2026-01-11T05:05:49.416Z [DEBUG] MCP server "happy": HTTP connection dropped after 1970s uptime
+2026-01-11T05:05:49.417Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T05:05:50.419Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T05:06:11.952Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/xhs-topic-analyzer/.gitignore
+2026-01-11T05:10:50.424Z [DEBUG] MCP server "happy": HTTP connection dropped after 2271s uptime
+2026-01-11T05:10:50.424Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T05:10:51.427Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T05:15:51.427Z [DEBUG] MCP server "happy": HTTP connection dropped after 2572s uptime
+2026-01-11T05:15:51.428Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T05:15:52.430Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T05:20:52.431Z [DEBUG] MCP server "happy": HTTP connection dropped after 2873s uptime
+2026-01-11T05:20:52.431Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T05:20:53.433Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T05:25:53.432Z [DEBUG] MCP server "happy": HTTP connection dropped after 3174s uptime
+2026-01-11T05:25:53.432Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T05:25:54.436Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T05:30:54.436Z [DEBUG] MCP server "happy": HTTP connection dropped after 3475s uptime
+2026-01-11T05:30:54.436Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T05:30:55.440Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T05:35:55.443Z [DEBUG] MCP server "happy": HTTP connection dropped after 3776s uptime
+2026-01-11T05:35:55.444Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T05:35:56.444Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T05:40:56.451Z [DEBUG] MCP server "happy": HTTP connection dropped after 4077s uptime
+2026-01-11T05:40:56.451Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T05:40:57.454Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T05:45:57.461Z [DEBUG] MCP server "happy": HTTP connection dropped after 4378s uptime
+2026-01-11T05:45:57.461Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T05:45:58.465Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T05:50:58.472Z [DEBUG] MCP server "happy": HTTP connection dropped after 4679s uptime
+2026-01-11T05:50:58.472Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T05:50:59.476Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T05:55:59.482Z [DEBUG] MCP server "happy": HTTP connection dropped after 4980s uptime
+2026-01-11T05:55:59.482Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T05:56:00.486Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T06:01:00.486Z [DEBUG] MCP server "happy": HTTP connection dropped after 5281s uptime
+2026-01-11T06:01:00.486Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T06:01:01.490Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T06:06:01.496Z [DEBUG] MCP server "happy": HTTP connection dropped after 5582s uptime
+2026-01-11T06:06:01.496Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T06:06:02.501Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T06:11:02.506Z [DEBUG] MCP server "happy": HTTP connection dropped after 5883s uptime
+2026-01-11T06:11:02.506Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T06:11:03.510Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T06:16:03.546Z [DEBUG] MCP server "happy": HTTP connection dropped after 6184s uptime
+2026-01-11T06:16:03.546Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T06:16:04.550Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T06:21:04.562Z [DEBUG] MCP server "happy": HTTP connection dropped after 6485s uptime
+2026-01-11T06:21:04.562Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T06:21:05.566Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T06:26:05.574Z [DEBUG] MCP server "happy": HTTP connection dropped after 6786s uptime
+2026-01-11T06:26:05.574Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T06:26:06.578Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T06:31:06.583Z [DEBUG] MCP server "happy": HTTP connection dropped after 7087s uptime
+2026-01-11T06:31:06.583Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T06:31:07.587Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T06:36:07.595Z [DEBUG] MCP server "happy": HTTP connection dropped after 7388s uptime
+2026-01-11T06:36:07.595Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T06:36:08.600Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T06:41:08.602Z [DEBUG] MCP server "happy": HTTP connection dropped after 7689s uptime
+2026-01-11T06:41:08.602Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T06:41:09.605Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T06:46:09.612Z [DEBUG] MCP server "happy": HTTP connection dropped after 7990s uptime
+2026-01-11T06:46:09.612Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T06:46:10.616Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T06:51:10.617Z [DEBUG] MCP server "happy": HTTP connection dropped after 8291s uptime
+2026-01-11T06:51:10.617Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T06:51:11.621Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T06:56:11.624Z [DEBUG] MCP server "happy": HTTP connection dropped after 8592s uptime
+2026-01-11T06:56:11.624Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T06:56:12.628Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T07:01:12.635Z [DEBUG] MCP server "happy": HTTP connection dropped after 8893s uptime
+2026-01-11T07:01:12.635Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T07:01:13.637Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T07:06:13.646Z [DEBUG] MCP server "happy": HTTP connection dropped after 9194s uptime
+2026-01-11T07:06:13.646Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T07:06:14.650Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T07:11:14.657Z [DEBUG] MCP server "happy": HTTP connection dropped after 9495s uptime
+2026-01-11T07:11:14.657Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T07:11:15.660Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T07:16:15.689Z [DEBUG] MCP server "happy": HTTP connection dropped after 9796s uptime
+2026-01-11T07:16:15.689Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T07:16:16.692Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T07:21:16.709Z [DEBUG] MCP server "happy": HTTP connection dropped after 10097s uptime
+2026-01-11T07:21:16.709Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T07:21:17.713Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T07:26:17.719Z [DEBUG] MCP server "happy": HTTP connection dropped after 10398s uptime
+2026-01-11T07:26:17.719Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T07:26:18.724Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T07:31:18.727Z [DEBUG] MCP server "happy": HTTP connection dropped after 10699s uptime
+2026-01-11T07:31:18.727Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T07:31:19.730Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T07:36:19.737Z [DEBUG] MCP server "happy": HTTP connection dropped after 11000s uptime
+2026-01-11T07:36:19.737Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T07:36:20.740Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T07:41:20.748Z [DEBUG] MCP server "happy": HTTP connection dropped after 11301s uptime
+2026-01-11T07:41:20.748Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T07:41:21.751Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T07:46:21.763Z [DEBUG] MCP server "happy": HTTP connection dropped after 11602s uptime
+2026-01-11T07:46:21.764Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T07:46:22.767Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T07:51:22.778Z [DEBUG] MCP server "happy": HTTP connection dropped after 11903s uptime
+2026-01-11T07:51:22.778Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T07:51:23.782Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T07:56:23.792Z [DEBUG] MCP server "happy": HTTP connection dropped after 12204s uptime
+2026-01-11T07:56:23.792Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T07:56:24.795Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T08:01:24.805Z [DEBUG] MCP server "happy": HTTP connection dropped after 12505s uptime
+2026-01-11T08:01:24.805Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T08:01:25.808Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T08:06:25.819Z [DEBUG] MCP server "happy": HTTP connection dropped after 12806s uptime
+2026-01-11T08:06:25.819Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T08:06:26.823Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T08:11:26.830Z [DEBUG] MCP server "happy": HTTP connection dropped after 13107s uptime
+2026-01-11T08:11:26.830Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T08:11:27.833Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T08:16:27.839Z [DEBUG] MCP server "happy": HTTP connection dropped after 13408s uptime
+2026-01-11T08:16:27.839Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T08:16:28.843Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T08:21:28.844Z [DEBUG] MCP server "happy": HTTP connection dropped after 13709s uptime
+2026-01-11T08:21:28.844Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T08:21:29.847Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T08:26:29.874Z [DEBUG] MCP server "happy": HTTP connection dropped after 14010s uptime
+2026-01-11T08:26:29.874Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T08:26:30.879Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T08:31:30.908Z [DEBUG] MCP server "happy": HTTP connection dropped after 14311s uptime
+2026-01-11T08:31:30.908Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T08:31:31.912Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T08:36:31.925Z [DEBUG] MCP server "happy": HTTP connection dropped after 14612s uptime
+2026-01-11T08:36:31.925Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T08:36:32.929Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T08:41:32.935Z [DEBUG] MCP server "happy": HTTP connection dropped after 14913s uptime
+2026-01-11T08:41:32.935Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T08:41:33.939Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T08:46:33.951Z [DEBUG] MCP server "happy": HTTP connection dropped after 15214s uptime
+2026-01-11T08:46:33.951Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T08:46:34.952Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T08:51:34.965Z [DEBUG] MCP server "happy": HTTP connection dropped after 15515s uptime
+2026-01-11T08:51:34.966Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T08:51:35.969Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T08:56:35.974Z [DEBUG] MCP server "happy": HTTP connection dropped after 15816s uptime
+2026-01-11T08:56:35.974Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T08:56:36.977Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T09:01:36.982Z [DEBUG] MCP server "happy": HTTP connection dropped after 16117s uptime
+2026-01-11T09:01:36.982Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T09:01:37.986Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T09:06:37.994Z [DEBUG] MCP server "happy": HTTP connection dropped after 16418s uptime
+2026-01-11T09:06:37.994Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T09:06:38.998Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T09:11:39.038Z [DEBUG] MCP server "happy": HTTP connection dropped after 16719s uptime
+2026-01-11T09:11:39.038Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T09:11:40.042Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T09:16:40.049Z [DEBUG] MCP server "happy": HTTP connection dropped after 17020s uptime
+2026-01-11T09:16:40.049Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T09:16:41.053Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T09:21:41.067Z [DEBUG] MCP server "happy": HTTP connection dropped after 17321s uptime
+2026-01-11T09:21:41.068Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T09:21:42.071Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T09:26:42.083Z [DEBUG] MCP server "happy": HTTP connection dropped after 17622s uptime
+2026-01-11T09:26:42.083Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T09:26:43.087Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T09:31:43.092Z [DEBUG] MCP server "happy": HTTP connection dropped after 17923s uptime
+2026-01-11T09:31:43.092Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T09:31:44.096Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T09:36:44.112Z [DEBUG] MCP server "happy": HTTP connection dropped after 18224s uptime
+2026-01-11T09:36:44.113Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T09:36:45.119Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T09:41:45.130Z [DEBUG] MCP server "happy": HTTP connection dropped after 18525s uptime
+2026-01-11T09:41:45.132Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T09:41:46.134Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T09:46:46.145Z [DEBUG] MCP server "happy": HTTP connection dropped after 18826s uptime
+2026-01-11T09:46:46.146Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T09:46:47.148Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T09:51:47.161Z [DEBUG] MCP server "happy": HTTP connection dropped after 19127s uptime
+2026-01-11T09:51:47.162Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T09:51:48.164Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T09:56:48.172Z [DEBUG] MCP server "happy": HTTP connection dropped after 19428s uptime
+2026-01-11T09:56:48.173Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T09:56:49.176Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T10:01:49.185Z [DEBUG] MCP server "happy": HTTP connection dropped after 19729s uptime
+2026-01-11T10:01:49.185Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T10:01:50.187Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T10:06:50.196Z [DEBUG] MCP server "happy": HTTP connection dropped after 20030s uptime
+2026-01-11T10:06:50.196Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T10:06:51.202Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T10:11:51.144Z [DEBUG] MCP server "happy": HTTP connection dropped after 20331s uptime
+2026-01-11T10:11:51.144Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T10:11:52.149Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T10:16:52.150Z [DEBUG] MCP server "happy": HTTP connection dropped after 20632s uptime
+2026-01-11T10:16:52.150Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T10:16:53.155Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T10:21:53.164Z [DEBUG] MCP server "happy": HTTP connection dropped after 20933s uptime
+2026-01-11T10:21:53.164Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T10:21:54.166Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T10:26:54.177Z [DEBUG] MCP server "happy": HTTP connection dropped after 21234s uptime
+2026-01-11T10:26:54.177Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T10:26:55.180Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T10:31:55.185Z [DEBUG] MCP server "happy": HTTP connection dropped after 21535s uptime
+2026-01-11T10:31:55.185Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T10:31:56.188Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T10:36:56.198Z [DEBUG] MCP server "happy": HTTP connection dropped after 21836s uptime
+2026-01-11T10:36:56.198Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T10:36:57.200Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T10:41:57.203Z [DEBUG] MCP server "happy": HTTP connection dropped after 22137s uptime
+2026-01-11T10:41:57.203Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T10:41:58.206Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T10:46:58.208Z [DEBUG] MCP server "happy": HTTP connection dropped after 22438s uptime
+2026-01-11T10:46:58.208Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T10:46:59.212Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T10:51:59.220Z [DEBUG] MCP server "happy": HTTP connection dropped after 22739s uptime
+2026-01-11T10:51:59.220Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T10:52:00.224Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T10:57:00.233Z [DEBUG] MCP server "happy": HTTP connection dropped after 23040s uptime
+2026-01-11T10:57:00.233Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T10:57:01.235Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T11:02:01.245Z [DEBUG] MCP server "happy": HTTP connection dropped after 23341s uptime
+2026-01-11T11:02:01.245Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T11:02:02.249Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T11:07:02.249Z [DEBUG] MCP server "happy": HTTP connection dropped after 23642s uptime
+2026-01-11T11:07:02.250Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T11:07:03.254Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T11:12:03.321Z [DEBUG] MCP server "happy": HTTP connection dropped after 23944s uptime
+2026-01-11T11:12:03.321Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T11:12:04.325Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T11:17:04.332Z [DEBUG] MCP server "happy": HTTP connection dropped after 24245s uptime
+2026-01-11T11:17:04.332Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T11:17:05.335Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T11:22:05.346Z [DEBUG] MCP server "happy": HTTP connection dropped after 24546s uptime
+2026-01-11T11:22:05.346Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T11:22:06.351Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T11:44:34.641Z [DEBUG] MCP server "happy": HTTP connection dropped after 25895s uptime
+2026-01-11T11:44:34.641Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T11:44:35.644Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T12:21:12.345Z [DEBUG] MCP server "happy": HTTP connection dropped after 28093s uptime
+2026-01-11T12:21:12.345Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T12:21:13.349Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T12:42:51.421Z [DEBUG] MCP server "happy": HTTP connection dropped after 29392s uptime
+2026-01-11T12:42:51.421Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T12:42:52.424Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T13:19:47.415Z [DEBUG] MCP server "happy": HTTP connection dropped after 31608s uptime
+2026-01-11T13:19:47.415Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T13:19:48.417Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T13:44:26.939Z [DEBUG] MCP server "happy": HTTP connection dropped after 33087s uptime
+2026-01-11T13:44:26.939Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T13:44:27.945Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T14:21:47.236Z [DEBUG] MCP server "happy": HTTP connection dropped after 35327s uptime
+2026-01-11T14:21:47.236Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T14:21:48.240Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T14:31:45.166Z [DEBUG] MCP server "happy": HTTP connection dropped after 35925s uptime
+2026-01-11T14:31:45.166Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T14:31:46.169Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T14:36:46.177Z [DEBUG] MCP server "happy": HTTP connection dropped after 36226s uptime
+2026-01-11T14:36:46.177Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T14:36:47.180Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T14:41:47.192Z [DEBUG] MCP server "happy": HTTP connection dropped after 36527s uptime
+2026-01-11T14:41:47.193Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T14:41:48.196Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T15:01:47.978Z [DEBUG] MCP server "happy": HTTP connection dropped after 37728s uptime
+2026-01-11T15:01:47.978Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T15:01:48.981Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T15:29:16.470Z [DEBUG] MCP server "happy": HTTP connection dropped after 39377s uptime
+2026-01-11T15:29:16.470Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T15:29:17.474Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T16:22:53.667Z [DEBUG] MCP server "happy": HTTP connection dropped after 42594s uptime
+2026-01-11T16:22:53.667Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T16:22:54.670Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T16:48:51.540Z [DEBUG] MCP server "happy": HTTP connection dropped after 44152s uptime
+2026-01-11T16:48:51.540Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T16:48:52.543Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T17:30:52.965Z [DEBUG] MCP server "happy": HTTP connection dropped after 46673s uptime
+2026-01-11T17:30:52.965Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T17:30:53.967Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T18:08:55.761Z [DEBUG] MCP server "happy": HTTP connection dropped after 48956s uptime
+2026-01-11T18:08:55.761Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T18:08:56.765Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T18:44:45.941Z [DEBUG] MCP server "happy": HTTP connection dropped after 51106s uptime
+2026-01-11T18:44:45.941Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T18:44:46.944Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T19:21:52.186Z [DEBUG] MCP server "happy": HTTP connection dropped after 53332s uptime
+2026-01-11T19:21:52.186Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T19:21:53.189Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T19:57:40.228Z [DEBUG] MCP server "happy": HTTP connection dropped after 55480s uptime
+2026-01-11T19:57:40.228Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T19:57:41.231Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T20:34:22.776Z [DEBUG] MCP server "happy": HTTP connection dropped after 57683s uptime
+2026-01-11T20:34:22.776Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T20:34:23.779Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T21:11:32.310Z [DEBUG] MCP server "happy": HTTP connection dropped after 59913s uptime
+2026-01-11T21:11:32.310Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T21:11:33.314Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T21:48:54.231Z [DEBUG] MCP server "happy": HTTP connection dropped after 62154s uptime
+2026-01-11T21:48:54.231Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T21:48:55.234Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T22:20:31.990Z [DEBUG] MCP server "happy": HTTP connection dropped after 64052s uptime
+2026-01-11T22:20:31.990Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T22:20:32.994Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T23:13:59.106Z [DEBUG] MCP server "happy": HTTP connection dropped after 67259s uptime
+2026-01-11T23:13:59.106Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T23:14:00.108Z [DEBUG] MCP server "happy": No token data found
+2026-01-11T23:50:44.564Z [DEBUG] MCP server "happy": HTTP connection dropped after 69465s uptime
+2026-01-11T23:50:44.564Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-11T23:50:45.567Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T00:02:33.827Z [DEBUG] MCP server "happy": HTTP connection dropped after 70174s uptime
+2026-01-12T00:02:33.827Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T00:02:34.829Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T00:35:55.563Z [DEBUG] MCP server "happy": HTTP connection dropped after 72176s uptime
+2026-01-12T00:35:55.563Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T00:35:56.567Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T00:56:24.531Z [DEBUG] MCP server "happy": HTTP connection dropped after 73405s uptime
+2026-01-12T00:56:24.531Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T00:56:25.535Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T01:23:54.727Z [DEBUG] MCP server "happy": HTTP connection dropped after 75055s uptime
+2026-01-12T01:23:54.727Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T01:23:55.731Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T01:45:17.033Z [DEBUG] MCP server "happy": HTTP connection dropped after 76337s uptime
+2026-01-12T01:45:17.033Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T01:45:18.037Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T02:21:51.559Z [DEBUG] MCP server "happy": HTTP connection dropped after 78532s uptime
+2026-01-12T02:21:51.559Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T02:21:52.563Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T03:00:01.921Z [DEBUG] MCP server "happy": HTTP connection dropped after 80822s uptime
+2026-01-12T03:00:01.921Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T03:00:02.925Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T03:37:37.712Z [DEBUG] MCP server "happy": HTTP connection dropped after 83078s uptime
+2026-01-12T03:37:37.712Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T03:37:38.715Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T04:05:53.727Z [DEBUG] MCP server "happy": HTTP connection dropped after 84774s uptime
+2026-01-12T04:05:53.727Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T04:05:54.731Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T04:43:16.651Z [DEBUG] MCP server "happy": HTTP connection dropped after 87017s uptime
+2026-01-12T04:43:16.651Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T04:43:17.655Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T05:06:39.662Z [DEBUG] MCP server "happy": HTTP connection dropped after 88420s uptime
+2026-01-12T05:06:39.662Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T05:06:40.666Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T05:45:26.879Z [DEBUG] MCP server "happy": HTTP connection dropped after 90747s uptime
+2026-01-12T05:45:26.879Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T05:45:27.883Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T06:07:34.835Z [DEBUG] MCP server "happy": HTTP connection dropped after 92075s uptime
+2026-01-12T06:07:34.835Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T06:07:35.839Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T06:45:08.861Z [DEBUG] MCP server "happy": HTTP connection dropped after 94329s uptime
+2026-01-12T06:45:08.861Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T06:45:09.865Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T07:08:35.375Z [DEBUG] MCP server "happy": HTTP connection dropped after 95736s uptime
+2026-01-12T07:08:35.375Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T07:08:36.379Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T07:29:30.652Z [DEBUG] MCP server "happy": HTTP connection dropped after 96991s uptime
+2026-01-12T07:29:30.653Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T07:29:31.655Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T08:07:07.154Z [DEBUG] MCP server "happy": HTTP connection dropped after 99247s uptime
+2026-01-12T08:07:07.155Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T08:07:08.159Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T08:43:42.567Z [DEBUG] MCP server "happy": HTTP connection dropped after 101443s uptime
+2026-01-12T08:43:42.567Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T08:43:43.570Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T09:09:20.753Z [DEBUG] MCP server "happy": HTTP connection dropped after 102981s uptime
+2026-01-12T09:09:20.753Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T09:09:21.755Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T09:45:37.475Z [DEBUG] MCP server "happy": HTTP connection dropped after 105158s uptime
+2026-01-12T09:45:37.475Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T09:45:38.479Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T10:11:38.802Z [DEBUG] MCP server "happy": HTTP connection dropped after 106719s uptime
+2026-01-12T10:11:38.802Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T10:11:39.805Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T10:49:22.793Z [DEBUG] MCP server "happy": HTTP connection dropped after 108983s uptime
+2026-01-12T10:49:22.793Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T10:49:23.796Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T11:12:45.823Z [DEBUG] MCP server "happy": HTTP connection dropped after 110386s uptime
+2026-01-12T11:12:45.823Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T11:12:46.826Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T11:45:13.921Z [DEBUG] MCP server "happy": HTTP connection dropped after 112334s uptime
+2026-01-12T11:45:13.921Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T11:45:14.924Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T12:26:49.561Z [DEBUG] MCP server "happy": HTTP connection dropped after 114830s uptime
+2026-01-12T12:26:49.561Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T12:26:50.564Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T12:38:02.486Z [DEBUG] Detected change to /Users/henry/.claude/settings.json
+2026-01-12T12:38:37.683Z [DEBUG] MCP server "happy": HTTP connection dropped after 115538s uptime
+2026-01-12T12:38:37.683Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T12:38:38.686Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T12:39:16.052Z [DEBUG] Detected change to /Users/henry/.claude/settings.json
+2026-01-12T12:43:38.687Z [DEBUG] MCP server "happy": HTTP connection dropped after 115839s uptime
+2026-01-12T12:43:38.687Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T12:43:39.690Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T12:45:21.811Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/content/A股17连阳_是什么.md
+2026-01-12T12:45:21.811Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/content/A股17连阳_最新消息.md
+2026-01-12T12:45:21.912Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/content/A股17连阳_为什么.md
+2026-01-12T12:45:21.963Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/content/A股17连阳_怎么办.md
+2026-01-12T12:46:50.759Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/content/A股17连阳_最新消息.md
+2026-01-12T12:48:08.305Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/content/A股17连阳_是什么.md
+2026-01-12T12:48:39.695Z [DEBUG] MCP server "happy": HTTP connection dropped after 116140s uptime
+2026-01-12T12:48:39.696Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T12:48:40.699Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T12:51:38.075Z [DEBUG] Detected change to /Users/henry/.claude/settings.json
+2026-01-12T12:53:40.704Z [DEBUG] MCP server "happy": HTTP connection dropped after 116441s uptime
+2026-01-12T12:53:40.704Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T12:53:41.707Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T12:54:43.109Z [DEBUG] Detected change to /Users/henry/.claude/settings.json
+2026-01-12T12:56:21.623Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/content/A股17连阳_为什么.md
+2026-01-12T12:57:29.064Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/content/A股17连阳_怎么办.md
+2026-01-12T12:58:41.709Z [DEBUG] MCP server "happy": HTTP connection dropped after 116742s uptime
+2026-01-12T12:58:41.709Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T12:58:42.715Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T13:01:47.585Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/content/A股17连阳_最新消息.md
+2026-01-12T13:02:48.013Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/content/A股17连阳_最新消息.md
+2026-01-12T13:02:54.135Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/content/A股17连阳_为什么.md
+2026-01-12T13:03:42.698Z [DEBUG] MCP server "happy": HTTP connection dropped after 117043s uptime
+2026-01-12T13:03:42.698Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T13:03:43.701Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T13:03:53.971Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/content/A股17连阳_为什么.md
+2026-01-12T13:04:00.435Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/content/A股17连阳_怎么办.md
+2026-01-12T13:05:05.008Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/content/A股17连阳_怎么办.md
+2026-01-12T13:08:43.708Z [DEBUG] MCP server "happy": HTTP connection dropped after 117344s uptime
+2026-01-12T13:08:43.709Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T13:08:44.714Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T13:13:43.257Z [DEBUG] MCP server "happy": HTTP connection dropped after 117644s uptime
+2026-01-12T13:13:43.257Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T13:13:44.262Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T13:18:44.263Z [DEBUG] MCP server "happy": HTTP connection dropped after 117945s uptime
+2026-01-12T13:18:44.263Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T13:18:45.272Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T13:55:03.780Z [DEBUG] MCP server "happy": HTTP connection dropped after 120124s uptime
+2026-01-12T13:55:03.781Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T13:55:04.785Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T14:30:54.729Z [DEBUG] MCP server "happy": HTTP connection dropped after 122275s uptime
+2026-01-12T14:30:54.729Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T14:30:55.732Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T14:51:15.245Z [DEBUG] MCP server "happy": HTTP connection dropped after 123495s uptime
+2026-01-12T14:51:15.245Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T14:51:16.249Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T15:11:41.196Z [DEBUG] MCP server "happy": HTTP connection dropped after 124721s uptime
+2026-01-12T15:11:41.196Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T15:11:42.200Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T15:16:42.197Z [DEBUG] MCP server "happy": HTTP connection dropped after 125022s uptime
+2026-01-12T15:16:42.197Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T15:16:43.200Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T15:21:43.203Z [DEBUG] MCP server "happy": HTTP connection dropped after 125323s uptime
+2026-01-12T15:21:43.203Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T15:21:44.206Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T15:42:15.477Z [DEBUG] MCP server "happy": HTTP connection dropped after 126556s uptime
+2026-01-12T15:42:15.478Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T15:42:16.482Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T16:21:55.013Z [DEBUG] MCP server "happy": HTTP connection dropped after 128935s uptime
+2026-01-12T16:21:55.014Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T16:21:56.018Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T16:57:45.970Z [DEBUG] MCP server "happy": HTTP connection dropped after 131086s uptime
+2026-01-12T16:57:45.970Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T16:57:46.974Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T17:23:59.036Z [DEBUG] MCP server "happy": HTTP connection dropped after 132659s uptime
+2026-01-12T17:23:59.036Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T17:24:00.040Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T17:59:55.144Z [DEBUG] MCP server "happy": HTTP connection dropped after 134815s uptime
+2026-01-12T17:59:55.144Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T17:59:56.147Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T18:35:46.115Z [DEBUG] MCP server "happy": HTTP connection dropped after 136966s uptime
+2026-01-12T18:35:46.115Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T18:35:47.119Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T18:55:58.352Z [DEBUG] MCP server "happy": HTTP connection dropped after 138179s uptime
+2026-01-12T18:55:58.352Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T18:55:59.356Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T20:02:20.635Z [DEBUG] MCP server "happy": HTTP connection dropped after 142161s uptime
+2026-01-12T20:02:20.635Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T20:02:21.638Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T20:37:45.491Z [DEBUG] MCP server "happy": HTTP connection dropped after 144286s uptime
+2026-01-12T20:37:45.491Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T20:37:46.495Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T21:13:36.428Z [DEBUG] MCP server "happy": HTTP connection dropped after 146437s uptime
+2026-01-12T21:13:36.428Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T21:13:37.431Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T21:46:42.425Z [DEBUG] MCP server "happy": HTTP connection dropped after 148423s uptime
+2026-01-12T21:46:42.425Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T21:46:43.430Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T22:41:16.377Z [DEBUG] MCP server "happy": HTTP connection dropped after 151697s uptime
+2026-01-12T22:41:16.377Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T22:41:17.380Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T22:46:17.377Z [DEBUG] MCP server "happy": HTTP connection dropped after 151998s uptime
+2026-01-12T22:46:17.378Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T22:46:18.380Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T22:50:28.734Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/content/A股17连阳_最新消息.md
+2026-01-12T22:50:28.783Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/content/A股17连阳_怎么办.md
+2026-01-12T22:51:18.381Z [DEBUG] MCP server "happy": HTTP connection dropped after 152299s uptime
+2026-01-12T22:51:18.382Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T22:51:19.388Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T22:51:29.260Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/content/A股17连阳_最新消息.md
+2026-01-12T22:52:29.226Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/content/A股17连阳_怎么办.md
+2026-01-12T22:55:00.557Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/content/A股17连阳_最新消息.md
+2026-01-12T22:56:17.450Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/content/A股17连阳_最新消息.md
+2026-01-12T22:56:19.385Z [DEBUG] MCP server "happy": HTTP connection dropped after 152600s uptime
+2026-01-12T22:56:19.385Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T22:56:20.389Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T22:56:47.486Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/references/PROMPT.md
+2026-01-12T22:56:57.509Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/references/PROMPT.md
+2026-01-12T23:01:20.390Z [DEBUG] MCP server "happy": HTTP connection dropped after 152901s uptime
+2026-01-12T23:01:20.390Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T23:01:21.396Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T23:06:21.401Z [DEBUG] MCP server "happy": HTTP connection dropped after 153202s uptime
+2026-01-12T23:06:21.401Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T23:06:22.406Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T23:11:22.411Z [DEBUG] MCP server "happy": HTTP connection dropped after 153503s uptime
+2026-01-12T23:11:22.411Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T23:11:23.415Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T23:16:23.419Z [DEBUG] MCP server "happy": HTTP connection dropped after 153804s uptime
+2026-01-12T23:16:23.419Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T23:16:24.423Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T23:21:24.419Z [DEBUG] MCP server "happy": HTTP connection dropped after 154105s uptime
+2026-01-12T23:21:24.420Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T23:21:25.424Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T23:26:25.422Z [DEBUG] MCP server "happy": HTTP connection dropped after 154406s uptime
+2026-01-12T23:26:25.422Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T23:26:26.427Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T23:31:26.426Z [DEBUG] MCP server "happy": HTTP connection dropped after 154707s uptime
+2026-01-12T23:31:26.426Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T23:31:27.432Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T23:36:27.431Z [DEBUG] MCP server "happy": HTTP connection dropped after 155008s uptime
+2026-01-12T23:36:27.431Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T23:36:28.436Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T23:41:28.468Z [DEBUG] MCP server "happy": HTTP connection dropped after 155309s uptime
+2026-01-12T23:41:28.468Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T23:41:29.473Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T23:43:27.026Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/scripts/extract_visual_specs.py
+2026-01-12T23:45:39.593Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/scripts/extract_visual_specs.py
+2026-01-12T23:46:04.705Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/scripts/generate_one_by_one.py
+2026-01-12T23:46:16.655Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/references/PROMPT.md
+2026-01-12T23:46:29.476Z [DEBUG] MCP server "happy": HTTP connection dropped after 155610s uptime
+2026-01-12T23:46:29.476Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T23:46:30.480Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T23:46:42.914Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/SKILL.md
+2026-01-12T23:51:30.483Z [DEBUG] MCP server "happy": HTTP connection dropped after 155911s uptime
+2026-01-12T23:51:30.483Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T23:51:31.487Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T23:56:31.490Z [DEBUG] MCP server "happy": HTTP connection dropped after 156212s uptime
+2026-01-12T23:56:31.490Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-12T23:56:32.496Z [DEBUG] MCP server "happy": No token data found
+2026-01-12T23:59:16.129Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/content/A股17连阳_最新消息.md
+2026-01-12T23:59:16.180Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/content/A股17连阳_是什么.md
+2026-01-12T23:59:16.279Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/content/A股17连阳_为什么.md
+2026-01-12T23:59:16.409Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/content/A股17连阳_怎么办.md
+2026-01-13T00:00:13.229Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/content/A股17连阳_最新消息.md
+2026-01-13T00:01:08.720Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/content/A股17连阳_是什么.md
+2026-01-13T00:01:32.496Z [DEBUG] MCP server "happy": HTTP connection dropped after 156513s uptime
+2026-01-13T00:01:32.496Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T00:01:33.499Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T00:01:43.135Z [DEBUG] Detected change to /Users/henry/.claude/settings.json
+2026-01-13T00:02:02.557Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/content/A股17连阳_为什么.md
+2026-01-13T00:03:16.721Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/content/A股17连阳_怎么办.md
+2026-01-13T00:06:33.501Z [DEBUG] MCP server "happy": HTTP connection dropped after 156814s uptime
+2026-01-13T00:06:33.502Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T00:06:34.508Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T00:07:35.388Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/scripts/generate_one_by_one.py
+2026-01-13T00:08:01.502Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/scripts/generate_one_by_one.py
+2026-01-13T00:08:01.531Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/references/PROMPT.md
+2026-01-13T00:08:12.585Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/content/A股17连阳_最新消息.md
+2026-01-13T00:08:12.636Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/content/A股17连阳_为什么.md
+2026-01-13T00:08:12.753Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/content/A股17连阳_怎么办.md
+2026-01-13T00:09:15.287Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/content/A股17连阳_最新消息.md
+2026-01-13T00:10:19.947Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/content/A股17连阳_为什么.md
+2026-01-13T00:11:23.227Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/content/A股17连阳_怎么办.md
+2026-01-13T00:11:34.508Z [DEBUG] MCP server "happy": HTTP connection dropped after 157115s uptime
+2026-01-13T00:11:34.508Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T00:11:35.512Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T00:11:51.566Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/finance-infographic/SKILL.md
+2026-01-13T00:15:25.612Z [DEBUG] Detected change to /Users/henry/.claude/settings.json
+2026-01-13T00:16:35.514Z [DEBUG] MCP server "happy": HTTP connection dropped after 157416s uptime
+2026-01-13T00:16:35.514Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T00:16:36.517Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T04:14:27.458Z [DEBUG] MCP server "happy": HTTP connection dropped after 171688s uptime
+2026-01-13T04:14:27.458Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T04:14:28.462Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T06:27:01.063Z [DEBUG] MCP server "happy": HTTP connection dropped after 179641s uptime
+2026-01-13T06:27:01.064Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T06:27:02.072Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T06:31:23.896Z [DEBUG] Detected change to /Users/henry/.claude/settings.json
+2026-01-13T06:32:02.073Z [DEBUG] MCP server "happy": HTTP connection dropped after 179942s uptime
+2026-01-13T06:32:02.073Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T06:32:03.077Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T06:37:03.075Z [DEBUG] MCP server "happy": HTTP connection dropped after 180243s uptime
+2026-01-13T06:37:03.076Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T06:37:04.079Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T06:42:04.075Z [DEBUG] MCP server "happy": HTTP connection dropped after 180544s uptime
+2026-01-13T06:42:04.075Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T06:42:05.078Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T06:47:05.071Z [DEBUG] MCP server "happy": HTTP connection dropped after 180845s uptime
+2026-01-13T06:47:05.072Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T06:47:06.076Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T06:52:06.071Z [DEBUG] MCP server "happy": HTTP connection dropped after 181146s uptime
+2026-01-13T06:52:06.071Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T06:52:07.075Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T06:57:07.069Z [DEBUG] MCP server "happy": HTTP connection dropped after 181447s uptime
+2026-01-13T06:57:07.069Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T06:57:08.074Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T07:02:08.074Z [DEBUG] MCP server "happy": HTTP connection dropped after 181748s uptime
+2026-01-13T07:02:08.074Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T07:02:09.078Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T07:07:09.069Z [DEBUG] MCP server "happy": HTTP connection dropped after 182049s uptime
+2026-01-13T07:07:09.069Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T07:07:10.073Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T07:12:10.070Z [DEBUG] MCP server "happy": HTTP connection dropped after 182350s uptime
+2026-01-13T07:12:10.070Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T07:12:11.073Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T07:17:11.070Z [DEBUG] MCP server "happy": HTTP connection dropped after 182651s uptime
+2026-01-13T07:17:11.070Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T07:17:12.073Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T07:22:12.252Z [DEBUG] MCP server "happy": HTTP connection dropped after 182952s uptime
+2026-01-13T07:22:12.252Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T07:22:13.256Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T07:27:13.267Z [DEBUG] MCP server "happy": HTTP connection dropped after 183254s uptime
+2026-01-13T07:27:13.267Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T07:27:14.270Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T07:32:14.282Z [DEBUG] MCP server "happy": HTTP connection dropped after 183555s uptime
+2026-01-13T07:32:14.282Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T07:32:15.285Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T07:37:15.295Z [DEBUG] MCP server "happy": HTTP connection dropped after 183856s uptime
+2026-01-13T07:37:15.295Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T07:37:16.298Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T07:42:16.310Z [DEBUG] MCP server "happy": HTTP connection dropped after 184157s uptime
+2026-01-13T07:42:16.310Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T07:42:17.313Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T07:47:17.317Z [DEBUG] MCP server "happy": HTTP connection dropped after 184458s uptime
+2026-01-13T07:47:17.317Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T07:47:18.320Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T07:52:18.324Z [DEBUG] MCP server "happy": HTTP connection dropped after 184759s uptime
+2026-01-13T07:52:18.324Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T07:52:19.327Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T07:57:19.340Z [DEBUG] MCP server "happy": HTTP connection dropped after 185060s uptime
+2026-01-13T07:57:19.340Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T07:57:20.343Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T08:02:20.356Z [DEBUG] MCP server "happy": HTTP connection dropped after 185361s uptime
+2026-01-13T08:02:20.356Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T08:02:21.361Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T08:07:21.372Z [DEBUG] MCP server "happy": HTTP connection dropped after 185662s uptime
+2026-01-13T08:07:21.372Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T08:07:22.376Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T08:12:22.391Z [DEBUG] MCP server "happy": HTTP connection dropped after 185963s uptime
+2026-01-13T08:12:22.391Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T08:12:23.395Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T08:17:23.411Z [DEBUG] MCP server "happy": HTTP connection dropped after 186264s uptime
+2026-01-13T08:17:23.411Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T08:17:24.416Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T08:22:24.422Z [DEBUG] MCP server "happy": HTTP connection dropped after 186565s uptime
+2026-01-13T08:22:24.422Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T08:22:25.425Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T08:27:25.438Z [DEBUG] MCP server "happy": HTTP connection dropped after 186866s uptime
+2026-01-13T08:27:25.438Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T08:27:26.442Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T08:32:26.456Z [DEBUG] MCP server "happy": HTTP connection dropped after 187167s uptime
+2026-01-13T08:32:26.457Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T08:32:27.460Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T08:37:27.467Z [DEBUG] MCP server "happy": HTTP connection dropped after 187468s uptime
+2026-01-13T08:37:27.467Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T08:37:28.470Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T08:42:28.482Z [DEBUG] MCP server "happy": HTTP connection dropped after 187769s uptime
+2026-01-13T08:42:28.482Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T08:42:29.486Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T08:47:29.498Z [DEBUG] MCP server "happy": HTTP connection dropped after 188070s uptime
+2026-01-13T08:47:29.499Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T08:47:30.503Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T08:52:30.511Z [DEBUG] MCP server "happy": HTTP connection dropped after 188371s uptime
+2026-01-13T08:52:30.511Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T08:52:31.515Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T08:57:31.523Z [DEBUG] MCP server "happy": HTTP connection dropped after 188672s uptime
+2026-01-13T08:57:31.523Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T08:57:32.527Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T09:02:32.535Z [DEBUG] MCP server "happy": HTTP connection dropped after 188973s uptime
+2026-01-13T09:02:32.535Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T09:02:33.540Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T09:07:33.551Z [DEBUG] MCP server "happy": HTTP connection dropped after 189274s uptime
+2026-01-13T09:07:33.551Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T09:07:34.554Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T09:12:34.561Z [DEBUG] MCP server "happy": HTTP connection dropped after 189575s uptime
+2026-01-13T09:12:34.561Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T09:12:35.565Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T09:17:35.574Z [DEBUG] MCP server "happy": HTTP connection dropped after 189876s uptime
+2026-01-13T09:17:35.574Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T09:17:36.578Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T09:22:36.588Z [DEBUG] MCP server "happy": HTTP connection dropped after 190177s uptime
+2026-01-13T09:22:36.588Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T09:22:37.591Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T09:27:37.595Z [DEBUG] MCP server "happy": HTTP connection dropped after 190478s uptime
+2026-01-13T09:27:37.595Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T09:27:38.600Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T09:32:38.610Z [DEBUG] MCP server "happy": HTTP connection dropped after 190779s uptime
+2026-01-13T09:32:38.611Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T09:32:39.619Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T09:37:39.549Z [DEBUG] MCP server "happy": HTTP connection dropped after 191080s uptime
+2026-01-13T09:37:39.550Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T09:37:40.553Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T09:42:40.564Z [DEBUG] MCP server "happy": HTTP connection dropped after 191381s uptime
+2026-01-13T09:42:40.565Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T09:42:41.573Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T09:47:41.586Z [DEBUG] MCP server "happy": HTTP connection dropped after 191682s uptime
+2026-01-13T09:47:41.587Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T09:47:42.594Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T09:51:34.601Z [DEBUG] Detected change to /Users/henry/.claude/settings.json
+2026-01-13T09:52:30.946Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/.DS_Store
+2026-01-13T09:52:38.357Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/.DS_Store
+2026-01-13T09:52:42.604Z [DEBUG] MCP server "happy": HTTP connection dropped after 191983s uptime
+2026-01-13T09:52:42.604Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T09:52:43.461Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/.DS_Store
+2026-01-13T09:52:43.609Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T09:55:29.416Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/.DS_Store
+2026-01-13T09:57:43.612Z [DEBUG] MCP server "happy": HTTP connection dropped after 192284s uptime
+2026-01-13T09:57:43.612Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T09:57:44.617Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T10:02:44.623Z [DEBUG] MCP server "happy": HTTP connection dropped after 192585s uptime
+2026-01-13T10:02:44.623Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T10:02:45.627Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T10:07:45.636Z [DEBUG] MCP server "happy": HTTP connection dropped after 192886s uptime
+2026-01-13T10:07:45.636Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T10:07:46.641Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T10:12:46.646Z [DEBUG] MCP server "happy": HTTP connection dropped after 193187s uptime
+2026-01-13T10:12:46.646Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T10:12:47.649Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T10:17:47.659Z [DEBUG] MCP server "happy": HTTP connection dropped after 193488s uptime
+2026-01-13T10:17:47.659Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T10:17:48.664Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T10:22:48.670Z [DEBUG] MCP server "happy": HTTP connection dropped after 193789s uptime
+2026-01-13T10:22:48.671Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T10:22:49.674Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T10:27:49.678Z [DEBUG] MCP server "happy": HTTP connection dropped after 194090s uptime
+2026-01-13T10:27:49.678Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T10:27:50.683Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T10:32:50.694Z [DEBUG] MCP server "happy": HTTP connection dropped after 194391s uptime
+2026-01-13T10:32:50.695Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T10:32:51.702Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T10:37:51.735Z [DEBUG] MCP server "happy": HTTP connection dropped after 194692s uptime
+2026-01-13T10:37:51.738Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T10:37:52.762Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T10:42:52.785Z [DEBUG] MCP server "happy": HTTP connection dropped after 194993s uptime
+2026-01-13T10:42:52.786Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T10:42:53.793Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T10:47:53.826Z [DEBUG] MCP server "happy": HTTP connection dropped after 195294s uptime
+2026-01-13T10:47:53.828Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T10:47:54.837Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T10:51:31.084Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/.DS_Store
+2026-01-13T10:51:45.102Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/.DS_Store
+2026-01-13T10:51:50.105Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/.DS_Store
+2026-01-13T10:51:57.431Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/.DS_Store
+2026-01-13T10:52:02.434Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/.DS_Store
+2026-01-13T10:52:16.344Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/.DS_Store
+2026-01-13T10:52:50.950Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/.DS_Store
+2026-01-13T10:52:54.850Z [DEBUG] MCP server "happy": HTTP connection dropped after 195595s uptime
+2026-01-13T10:52:54.850Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T10:52:55.853Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T10:52:55.971Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/.DS_Store
+2026-01-13T10:54:16.451Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/xiaohongshu-viral-finder/SKILL.md
+2026-01-13T10:54:16.451Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/xiaohongshu-viral-finder/keywords.md
+2026-01-13T10:54:16.454Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/xiaohongshu-viral-finder/examples/sample-output.md
+2026-01-13T10:57:55.858Z [DEBUG] MCP server "happy": HTTP connection dropped after 195896s uptime
+2026-01-13T10:57:55.859Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T10:57:56.865Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T11:02:56.869Z [DEBUG] MCP server "happy": HTTP connection dropped after 196197s uptime
+2026-01-13T11:02:56.869Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T11:02:57.873Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T11:03:49.944Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/xiaohongshu-viral-finder/SKILL.md
+2026-01-13T11:07:57.876Z [DEBUG] MCP server "happy": HTTP connection dropped after 196498s uptime
+2026-01-13T11:07:57.877Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T11:07:58.880Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T11:12:58.885Z [DEBUG] MCP server "happy": HTTP connection dropped after 196799s uptime
+2026-01-13T11:12:58.885Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T11:12:59.889Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T11:18:00.189Z [DEBUG] MCP server "happy": HTTP connection dropped after 197100s uptime
+2026-01-13T11:18:00.190Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T11:18:01.210Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T11:21:35.218Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/xiaohongshu-viral-finder/SKILL.md
+2026-01-13T11:23:01.213Z [DEBUG] MCP server "happy": HTTP connection dropped after 197401s uptime
+2026-01-13T11:23:01.213Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T11:23:02.220Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T11:28:02.222Z [DEBUG] MCP server "happy": HTTP connection dropped after 197702s uptime
+2026-01-13T11:28:02.222Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T11:28:03.225Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T11:33:03.227Z [DEBUG] MCP server "happy": HTTP connection dropped after 198003s uptime
+2026-01-13T11:33:03.228Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T11:33:04.231Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T11:38:04.239Z [DEBUG] MCP server "happy": HTTP connection dropped after 198304s uptime
+2026-01-13T11:38:04.240Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T11:38:05.244Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T11:43:05.249Z [DEBUG] MCP server "happy": HTTP connection dropped after 198605s uptime
+2026-01-13T11:43:05.250Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T11:43:06.253Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T11:46:32.594Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/xhs-topic-analyzer/scripts/search_via_playwright.py
+2026-01-13T11:48:04.252Z [DEBUG] Detected skill change: /Users/henry/.claude/skills/xhs-topic-analyzer/data.json
+2026-01-13T11:48:06.261Z [DEBUG] MCP server "happy": HTTP connection dropped after 198907s uptime
+2026-01-13T11:48:06.261Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T11:48:07.266Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T11:53:07.277Z [DEBUG] MCP server "happy": HTTP connection dropped after 199208s uptime
+2026-01-13T11:53:07.277Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T11:53:08.281Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T11:58:08.289Z [DEBUG] MCP server "happy": HTTP connection dropped after 199509s uptime
+2026-01-13T11:58:08.289Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T11:58:09.293Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T12:03:09.300Z [DEBUG] MCP server "happy": HTTP connection dropped after 199810s uptime
+2026-01-13T12:03:09.300Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T12:03:10.303Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T12:08:10.306Z [DEBUG] MCP server "happy": HTTP connection dropped after 200111s uptime
+2026-01-13T12:08:10.306Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T12:08:11.310Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T12:13:11.315Z [DEBUG] MCP server "happy": HTTP connection dropped after 200412s uptime
+2026-01-13T12:13:11.316Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T12:13:12.323Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T12:18:12.328Z [DEBUG] MCP server "happy": HTTP connection dropped after 200713s uptime
+2026-01-13T12:18:12.329Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T12:18:13.332Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T12:23:13.333Z [DEBUG] MCP server "happy": HTTP connection dropped after 201014s uptime
+2026-01-13T12:23:13.333Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T12:23:14.337Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T12:28:14.340Z [DEBUG] MCP server "happy": HTTP connection dropped after 201315s uptime
+2026-01-13T12:28:14.340Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T12:28:15.343Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T12:33:15.349Z [DEBUG] MCP server "happy": HTTP connection dropped after 201616s uptime
+2026-01-13T12:33:15.349Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T12:33:16.353Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T12:38:16.354Z [DEBUG] MCP server "happy": HTTP connection dropped after 201917s uptime
+2026-01-13T12:38:16.354Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T12:38:17.357Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T12:43:17.359Z [DEBUG] MCP server "happy": HTTP connection dropped after 202218s uptime
+2026-01-13T12:43:17.359Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T12:43:18.364Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T12:48:18.369Z [DEBUG] MCP server "happy": HTTP connection dropped after 202519s uptime
+2026-01-13T12:48:18.369Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T12:48:19.374Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T12:53:19.380Z [DEBUG] MCP server "happy": HTTP connection dropped after 202820s uptime
+2026-01-13T12:53:19.380Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T12:53:20.384Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T12:58:20.392Z [DEBUG] MCP server "happy": HTTP connection dropped after 203121s uptime
+2026-01-13T12:58:20.393Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T12:58:21.397Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T13:03:21.441Z [DEBUG] MCP server "happy": HTTP connection dropped after 203422s uptime
+2026-01-13T13:03:21.445Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T13:03:22.452Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T13:08:22.462Z [DEBUG] MCP server "happy": HTTP connection dropped after 203723s uptime
+2026-01-13T13:08:22.463Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T13:08:23.467Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T13:13:23.467Z [DEBUG] MCP server "happy": HTTP connection dropped after 204024s uptime
+2026-01-13T13:13:23.468Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T13:13:24.472Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T13:18:24.477Z [DEBUG] MCP server "happy": HTTP connection dropped after 204325s uptime
+2026-01-13T13:18:24.477Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T13:18:25.481Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T13:23:25.486Z [DEBUG] MCP server "happy": HTTP connection dropped after 204626s uptime
+2026-01-13T13:23:25.486Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T13:23:26.489Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T13:28:26.495Z [DEBUG] MCP server "happy": HTTP connection dropped after 204927s uptime
+2026-01-13T13:28:26.495Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T13:28:27.499Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T13:33:27.500Z [DEBUG] MCP server "happy": HTTP connection dropped after 205228s uptime
+2026-01-13T13:33:27.500Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T13:33:28.503Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T13:38:28.507Z [DEBUG] MCP server "happy": HTTP connection dropped after 205529s uptime
+2026-01-13T13:38:28.507Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T13:38:29.510Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T13:43:29.517Z [DEBUG] MCP server "happy": HTTP connection dropped after 205830s uptime
+2026-01-13T13:43:29.517Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T13:43:30.522Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T13:48:30.532Z [DEBUG] MCP server "happy": HTTP connection dropped after 206131s uptime
+2026-01-13T13:48:30.532Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T13:48:31.536Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T13:53:31.537Z [DEBUG] MCP server "happy": HTTP connection dropped after 206432s uptime
+2026-01-13T13:53:31.537Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T13:53:32.545Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T13:58:32.550Z [DEBUG] MCP server "happy": HTTP connection dropped after 206733s uptime
+2026-01-13T13:58:32.550Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T13:58:33.554Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T14:03:33.563Z [DEBUG] MCP server "happy": HTTP connection dropped after 207034s uptime
+2026-01-13T14:03:33.564Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T14:03:34.568Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T14:08:34.578Z [DEBUG] MCP server "happy": HTTP connection dropped after 207335s uptime
+2026-01-13T14:08:34.579Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T14:08:35.582Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T14:13:35.584Z [DEBUG] MCP server "happy": HTTP connection dropped after 207636s uptime
+2026-01-13T14:13:35.584Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T14:13:36.587Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T14:18:36.598Z [DEBUG] MCP server "happy": HTTP connection dropped after 207937s uptime
+2026-01-13T14:18:36.598Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T14:18:37.602Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T14:23:37.610Z [DEBUG] MCP server "happy": HTTP connection dropped after 208238s uptime
+2026-01-13T14:23:37.610Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T14:23:38.614Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T14:28:38.621Z [DEBUG] MCP server "happy": HTTP connection dropped after 208539s uptime
+2026-01-13T14:28:38.621Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T14:28:39.623Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T14:33:39.628Z [DEBUG] MCP server "happy": HTTP connection dropped after 208840s uptime
+2026-01-13T14:33:39.628Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T14:33:40.632Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T14:38:40.640Z [DEBUG] MCP server "happy": HTTP connection dropped after 209141s uptime
+2026-01-13T14:38:40.640Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T14:38:41.643Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T14:43:41.648Z [DEBUG] MCP server "happy": HTTP connection dropped after 209442s uptime
+2026-01-13T14:43:41.648Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T14:43:42.652Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T14:48:42.654Z [DEBUG] MCP server "happy": HTTP connection dropped after 209743s uptime
+2026-01-13T14:48:42.654Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T14:48:43.658Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T14:53:43.662Z [DEBUG] MCP server "happy": HTTP connection dropped after 210044s uptime
+2026-01-13T14:53:43.662Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T14:53:44.666Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T14:58:44.668Z [DEBUG] MCP server "happy": HTTP connection dropped after 210345s uptime
+2026-01-13T14:58:44.668Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T14:58:45.672Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T15:03:45.678Z [DEBUG] MCP server "happy": HTTP connection dropped after 210646s uptime
+2026-01-13T15:03:45.678Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T15:03:46.681Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T15:08:46.681Z [DEBUG] MCP server "happy": HTTP connection dropped after 210947s uptime
+2026-01-13T15:08:46.681Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T15:08:47.685Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T15:13:47.693Z [DEBUG] MCP server "happy": HTTP connection dropped after 211248s uptime
+2026-01-13T15:13:47.694Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T15:13:48.702Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T15:18:48.710Z [DEBUG] MCP server "happy": HTTP connection dropped after 211549s uptime
+2026-01-13T15:18:48.711Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T15:18:49.715Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T15:23:49.725Z [DEBUG] MCP server "happy": HTTP connection dropped after 211850s uptime
+2026-01-13T15:23:49.725Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T15:23:50.730Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T15:28:50.734Z [DEBUG] MCP server "happy": HTTP connection dropped after 212151s uptime
+2026-01-13T15:28:50.734Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T15:28:51.737Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T15:33:51.738Z [DEBUG] MCP server "happy": HTTP connection dropped after 212452s uptime
+2026-01-13T15:33:51.739Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T15:33:52.743Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T15:38:52.760Z [DEBUG] MCP server "happy": HTTP connection dropped after 212753s uptime
+2026-01-13T15:38:52.761Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T15:38:53.770Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T15:43:53.784Z [DEBUG] MCP server "happy": HTTP connection dropped after 213054s uptime
+2026-01-13T15:43:53.785Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T15:43:54.789Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T15:48:54.797Z [DEBUG] MCP server "happy": HTTP connection dropped after 213355s uptime
+2026-01-13T15:48:54.797Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T15:48:55.801Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T15:53:55.810Z [DEBUG] MCP server "happy": HTTP connection dropped after 213656s uptime
+2026-01-13T15:53:55.810Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T15:53:56.814Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T15:58:56.814Z [DEBUG] MCP server "happy": HTTP connection dropped after 213957s uptime
+2026-01-13T15:58:56.814Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T15:58:57.820Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T16:03:57.826Z [DEBUG] MCP server "happy": HTTP connection dropped after 214258s uptime
+2026-01-13T16:03:57.826Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T16:03:58.829Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T16:08:58.838Z [DEBUG] MCP server "happy": HTTP connection dropped after 214559s uptime
+2026-01-13T16:08:58.838Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T16:08:59.842Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T16:13:59.858Z [DEBUG] MCP server "happy": HTTP connection dropped after 214860s uptime
+2026-01-13T16:13:59.858Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T16:14:00.866Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T16:19:00.880Z [DEBUG] MCP server "happy": HTTP connection dropped after 215161s uptime
+2026-01-13T16:19:00.880Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T16:19:01.885Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T16:24:01.894Z [DEBUG] MCP server "happy": HTTP connection dropped after 215462s uptime
+2026-01-13T16:24:01.894Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T16:24:02.899Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T16:29:02.905Z [DEBUG] MCP server "happy": HTTP connection dropped after 215763s uptime
+2026-01-13T16:29:02.905Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T16:29:03.909Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T16:34:03.911Z [DEBUG] MCP server "happy": HTTP connection dropped after 216064s uptime
+2026-01-13T16:34:03.911Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T16:34:04.915Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T16:39:04.924Z [DEBUG] MCP server "happy": HTTP connection dropped after 216365s uptime
+2026-01-13T16:39:04.924Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T16:39:05.927Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T16:44:05.935Z [DEBUG] MCP server "happy": HTTP connection dropped after 216666s uptime
+2026-01-13T16:44:05.935Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T16:44:06.940Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T16:49:06.950Z [DEBUG] MCP server "happy": HTTP connection dropped after 216967s uptime
+2026-01-13T16:49:06.950Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T16:49:07.954Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T16:54:07.964Z [DEBUG] MCP server "happy": HTTP connection dropped after 217268s uptime
+2026-01-13T16:54:07.964Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T16:54:08.969Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T16:59:08.969Z [DEBUG] MCP server "happy": HTTP connection dropped after 217569s uptime
+2026-01-13T16:59:08.969Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T16:59:09.973Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T17:04:09.978Z [DEBUG] MCP server "happy": HTTP connection dropped after 217870s uptime
+2026-01-13T17:04:09.979Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T17:04:10.982Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T17:09:10.988Z [DEBUG] MCP server "happy": HTTP connection dropped after 218171s uptime
+2026-01-13T17:09:10.988Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T17:09:11.992Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T17:14:12.005Z [DEBUG] MCP server "happy": HTTP connection dropped after 218472s uptime
+2026-01-13T17:14:12.005Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T17:14:13.009Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T17:19:13.019Z [DEBUG] MCP server "happy": HTTP connection dropped after 218773s uptime
+2026-01-13T17:19:13.019Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T17:19:14.022Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T17:24:14.031Z [DEBUG] MCP server "happy": HTTP connection dropped after 219074s uptime
+2026-01-13T17:24:14.031Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T17:24:15.035Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T17:29:15.044Z [DEBUG] MCP server "happy": HTTP connection dropped after 219375s uptime
+2026-01-13T17:29:15.045Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T17:29:16.049Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T17:34:16.059Z [DEBUG] MCP server "happy": HTTP connection dropped after 219676s uptime
+2026-01-13T17:34:16.060Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T17:34:17.064Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T17:39:17.065Z [DEBUG] MCP server "happy": HTTP connection dropped after 219977s uptime
+2026-01-13T17:39:17.065Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T17:39:18.068Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T17:44:18.075Z [DEBUG] MCP server "happy": HTTP connection dropped after 220278s uptime
+2026-01-13T17:44:18.075Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T17:44:19.078Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T17:49:19.086Z [DEBUG] MCP server "happy": HTTP connection dropped after 220579s uptime
+2026-01-13T17:49:19.086Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T17:49:20.089Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T17:54:20.096Z [DEBUG] MCP server "happy": HTTP connection dropped after 220880s uptime
+2026-01-13T17:54:20.096Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T17:54:21.099Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T17:59:21.107Z [DEBUG] MCP server "happy": HTTP connection dropped after 221181s uptime
+2026-01-13T17:59:21.107Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T17:59:22.112Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T18:04:22.114Z [DEBUG] MCP server "happy": HTTP connection dropped after 221482s uptime
+2026-01-13T18:04:22.114Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T18:04:23.117Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T18:09:23.127Z [DEBUG] MCP server "happy": HTTP connection dropped after 221783s uptime
+2026-01-13T18:09:23.127Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T18:09:24.131Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T18:14:24.139Z [DEBUG] MCP server "happy": HTTP connection dropped after 222084s uptime
+2026-01-13T18:14:24.139Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T18:14:25.143Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T18:19:25.149Z [DEBUG] MCP server "happy": HTTP connection dropped after 222385s uptime
+2026-01-13T18:19:25.149Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T18:19:26.152Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T18:24:26.157Z [DEBUG] MCP server "happy": HTTP connection dropped after 222686s uptime
+2026-01-13T18:24:26.157Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T18:24:27.160Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T18:29:27.163Z [DEBUG] MCP server "happy": HTTP connection dropped after 222987s uptime
+2026-01-13T18:29:27.164Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T18:29:28.168Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T18:34:28.176Z [DEBUG] MCP server "happy": HTTP connection dropped after 223288s uptime
+2026-01-13T18:34:28.177Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T18:34:29.179Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T18:39:29.190Z [DEBUG] MCP server "happy": HTTP connection dropped after 223589s uptime
+2026-01-13T18:39:29.191Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T18:39:30.199Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T18:44:30.205Z [DEBUG] MCP server "happy": HTTP connection dropped after 223890s uptime
+2026-01-13T18:44:30.205Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T18:44:31.208Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T18:49:31.216Z [DEBUG] MCP server "happy": HTTP connection dropped after 224191s uptime
+2026-01-13T18:49:31.216Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T18:49:32.220Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T18:54:32.229Z [DEBUG] MCP server "happy": HTTP connection dropped after 224492s uptime
+2026-01-13T18:54:32.229Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T18:54:33.232Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T18:59:33.238Z [DEBUG] MCP server "happy": HTTP connection dropped after 224793s uptime
+2026-01-13T18:59:33.238Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T18:59:34.242Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T19:04:34.248Z [DEBUG] MCP server "happy": HTTP connection dropped after 225094s uptime
+2026-01-13T19:04:34.248Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T19:04:35.252Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T19:09:35.259Z [DEBUG] MCP server "happy": HTTP connection dropped after 225396s uptime
+2026-01-13T19:09:35.260Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T19:09:36.264Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T19:14:36.271Z [DEBUG] MCP server "happy": HTTP connection dropped after 225697s uptime
+2026-01-13T19:14:36.271Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T19:14:37.276Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T19:19:37.283Z [DEBUG] MCP server "happy": HTTP connection dropped after 225998s uptime
+2026-01-13T19:19:37.284Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T19:19:38.287Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T19:24:38.290Z [DEBUG] MCP server "happy": HTTP connection dropped after 226299s uptime
+2026-01-13T19:24:38.290Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T19:24:39.294Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T19:29:39.300Z [DEBUG] MCP server "happy": HTTP connection dropped after 226600s uptime
+2026-01-13T19:29:39.300Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T19:29:40.304Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T19:34:40.313Z [DEBUG] MCP server "happy": HTTP connection dropped after 226901s uptime
+2026-01-13T19:34:40.313Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T19:34:41.316Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T19:39:41.323Z [DEBUG] MCP server "happy": HTTP connection dropped after 227202s uptime
+2026-01-13T19:39:41.323Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T19:39:42.328Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T19:44:42.338Z [DEBUG] MCP server "happy": HTTP connection dropped after 227503s uptime
+2026-01-13T19:44:42.339Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T19:44:43.343Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T19:49:43.455Z [DEBUG] MCP server "happy": HTTP connection dropped after 227804s uptime
+2026-01-13T19:49:43.473Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T19:49:44.477Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T19:54:44.499Z [DEBUG] MCP server "happy": HTTP connection dropped after 228105s uptime
+2026-01-13T19:54:44.501Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T19:54:45.508Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T19:59:45.511Z [DEBUG] MCP server "happy": HTTP connection dropped after 228406s uptime
+2026-01-13T19:59:45.512Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T19:59:46.516Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T20:04:46.521Z [DEBUG] MCP server "happy": HTTP connection dropped after 228707s uptime
+2026-01-13T20:04:46.521Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T20:04:47.524Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T20:09:47.524Z [DEBUG] MCP server "happy": HTTP connection dropped after 229008s uptime
+2026-01-13T20:09:47.524Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T20:09:48.526Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T20:14:48.526Z [DEBUG] MCP server "happy": HTTP connection dropped after 229309s uptime
+2026-01-13T20:14:48.526Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T20:14:49.530Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T20:19:49.529Z [DEBUG] MCP server "happy": HTTP connection dropped after 229610s uptime
+2026-01-13T20:19:49.529Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T20:19:50.532Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T20:24:50.538Z [DEBUG] MCP server "happy": HTTP connection dropped after 229911s uptime
+2026-01-13T20:24:50.538Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T20:24:51.540Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T20:29:51.548Z [DEBUG] MCP server "happy": HTTP connection dropped after 230212s uptime
+2026-01-13T20:29:51.548Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T20:29:52.551Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T20:34:52.560Z [DEBUG] MCP server "happy": HTTP connection dropped after 230513s uptime
+2026-01-13T20:34:52.560Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T20:34:53.564Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T20:39:53.563Z [DEBUG] MCP server "happy": HTTP connection dropped after 230814s uptime
+2026-01-13T20:39:53.563Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T20:39:54.565Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T20:44:54.570Z [DEBUG] MCP server "happy": HTTP connection dropped after 231115s uptime
+2026-01-13T20:44:54.570Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T20:44:55.573Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T20:49:55.576Z [DEBUG] MCP server "happy": HTTP connection dropped after 231416s uptime
+2026-01-13T20:49:55.576Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T20:49:56.578Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T20:54:56.582Z [DEBUG] MCP server "happy": HTTP connection dropped after 231717s uptime
+2026-01-13T20:54:56.582Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T20:54:57.585Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T20:59:57.592Z [DEBUG] MCP server "happy": HTTP connection dropped after 232018s uptime
+2026-01-13T20:59:57.592Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T20:59:58.596Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T21:04:58.601Z [DEBUG] MCP server "happy": HTTP connection dropped after 232319s uptime
+2026-01-13T21:04:58.601Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T21:04:59.605Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T21:09:59.610Z [DEBUG] MCP server "happy": HTTP connection dropped after 232620s uptime
+2026-01-13T21:09:59.610Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T21:10:00.614Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T21:15:00.619Z [DEBUG] MCP server "happy": HTTP connection dropped after 232921s uptime
+2026-01-13T21:15:00.619Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T21:15:01.625Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T21:20:01.632Z [DEBUG] MCP server "happy": HTTP connection dropped after 233222s uptime
+2026-01-13T21:20:01.632Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T21:20:02.636Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T21:25:02.644Z [DEBUG] MCP server "happy": HTTP connection dropped after 233523s uptime
+2026-01-13T21:25:02.644Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T21:25:03.650Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T21:30:03.657Z [DEBUG] MCP server "happy": HTTP connection dropped after 233824s uptime
+2026-01-13T21:30:03.657Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T21:30:04.661Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T21:35:04.662Z [DEBUG] MCP server "happy": HTTP connection dropped after 234125s uptime
+2026-01-13T21:35:04.662Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T21:35:05.666Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T21:40:05.672Z [DEBUG] MCP server "happy": HTTP connection dropped after 234426s uptime
+2026-01-13T21:40:05.672Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T21:40:06.676Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T21:45:06.689Z [DEBUG] MCP server "happy": HTTP connection dropped after 234727s uptime
+2026-01-13T21:45:06.690Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T21:45:07.697Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T21:50:07.711Z [DEBUG] MCP server "happy": HTTP connection dropped after 235028s uptime
+2026-01-13T21:50:07.711Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T21:50:08.715Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T21:55:08.719Z [DEBUG] MCP server "happy": HTTP connection dropped after 235329s uptime
+2026-01-13T21:55:08.719Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T21:55:09.724Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T22:00:09.730Z [DEBUG] MCP server "happy": HTTP connection dropped after 235630s uptime
+2026-01-13T22:00:09.730Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T22:00:10.734Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T22:05:10.734Z [DEBUG] MCP server "happy": HTTP connection dropped after 235931s uptime
+2026-01-13T22:05:10.734Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T22:05:11.737Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T22:10:11.745Z [DEBUG] MCP server "happy": HTTP connection dropped after 236232s uptime
+2026-01-13T22:10:11.745Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T22:10:12.747Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T22:15:12.756Z [DEBUG] MCP server "happy": HTTP connection dropped after 236533s uptime
+2026-01-13T22:15:12.756Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T22:15:13.761Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T22:20:13.770Z [DEBUG] MCP server "happy": HTTP connection dropped after 236834s uptime
+2026-01-13T22:20:13.770Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T22:20:14.775Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T22:25:14.783Z [DEBUG] MCP server "happy": HTTP connection dropped after 237135s uptime
+2026-01-13T22:25:14.783Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T22:25:15.788Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T22:30:15.796Z [DEBUG] MCP server "happy": HTTP connection dropped after 237436s uptime
+2026-01-13T22:30:15.796Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T22:30:16.800Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T22:35:16.806Z [DEBUG] MCP server "happy": HTTP connection dropped after 237737s uptime
+2026-01-13T22:35:16.807Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T22:35:17.810Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T22:40:17.812Z [DEBUG] MCP server "happy": HTTP connection dropped after 238038s uptime
+2026-01-13T22:40:17.812Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T22:40:18.816Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T22:59:30.327Z [DEBUG] MCP server "happy": HTTP connection dropped after 239190s uptime
+2026-01-13T22:59:30.389Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T22:59:31.606Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T23:04:31.832Z [DEBUG] MCP server "happy": HTTP connection dropped after 239492s uptime
+2026-01-13T23:04:31.833Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T23:04:32.841Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T23:09:32.853Z [DEBUG] MCP server "happy": HTTP connection dropped after 239793s uptime
+2026-01-13T23:09:32.854Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T23:09:33.859Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T23:14:33.866Z [DEBUG] MCP server "happy": HTTP connection dropped after 240094s uptime
+2026-01-13T23:14:33.866Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T23:14:34.871Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T23:19:34.870Z [DEBUG] MCP server "happy": HTTP connection dropped after 240395s uptime
+2026-01-13T23:19:34.870Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T23:19:35.874Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T23:24:35.877Z [DEBUG] MCP server "happy": HTTP connection dropped after 240696s uptime
+2026-01-13T23:24:35.877Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T23:24:36.881Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T23:29:36.888Z [DEBUG] MCP server "happy": HTTP connection dropped after 240997s uptime
+2026-01-13T23:29:36.889Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T23:29:37.898Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T23:34:37.909Z [DEBUG] MCP server "happy": HTTP connection dropped after 241298s uptime
+2026-01-13T23:34:37.909Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T23:34:38.913Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T23:39:38.919Z [DEBUG] MCP server "happy": HTTP connection dropped after 241599s uptime
+2026-01-13T23:39:38.919Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T23:39:39.923Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T23:44:39.931Z [DEBUG] MCP server "happy": HTTP connection dropped after 241900s uptime
+2026-01-13T23:44:39.931Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T23:44:40.935Z [DEBUG] MCP server "happy": No token data found
+2026-01-13T23:49:40.940Z [DEBUG] MCP server "happy": HTTP connection dropped after 242201s uptime
+2026-01-13T23:49:40.940Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-13T23:49:41.943Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T00:26:54.657Z [DEBUG] MCP server "happy": HTTP connection dropped after 244435s uptime
+2026-01-14T00:26:54.658Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T00:26:55.663Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T01:03:30.361Z [DEBUG] MCP server "happy": HTTP connection dropped after 246631s uptime
+2026-01-14T01:03:30.362Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T01:03:31.373Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T01:39:44.403Z [DEBUG] MCP server "happy": HTTP connection dropped after 248805s uptime
+2026-01-14T01:39:44.403Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T01:39:45.407Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T02:12:07.087Z [DEBUG] MCP server "happy": HTTP connection dropped after 250747s uptime
+2026-01-14T02:12:07.087Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T02:12:08.091Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T02:55:05.481Z [DEBUG] MCP server "happy": HTTP connection dropped after 253326s uptime
+2026-01-14T02:55:05.481Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T02:55:06.485Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T03:34:43.651Z [DEBUG] MCP server "happy": HTTP connection dropped after 255704s uptime
+2026-01-14T03:34:43.651Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T03:34:44.654Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T04:14:05.940Z [DEBUG] MCP server "happy": HTTP connection dropped after 258066s uptime
+2026-01-14T04:14:05.940Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T04:14:06.944Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T04:57:45.056Z [DEBUG] MCP server "happy": HTTP connection dropped after 260685s uptime
+2026-01-14T04:57:45.056Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T04:57:46.060Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T05:20:08.564Z [DEBUG] MCP server "happy": HTTP connection dropped after 262029s uptime
+2026-01-14T05:20:08.564Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T05:20:09.568Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T05:58:07.831Z [DEBUG] MCP server "happy": HTTP connection dropped after 264308s uptime
+2026-01-14T05:58:07.831Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T05:58:08.834Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T06:35:34.295Z [DEBUG] MCP server "happy": HTTP connection dropped after 266555s uptime
+2026-01-14T06:35:34.296Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T06:35:35.309Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T07:00:18.387Z [DEBUG] MCP server "happy": HTTP connection dropped after 268039s uptime
+2026-01-14T07:00:18.387Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T07:00:19.392Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T07:37:03.171Z [DEBUG] MCP server "happy": HTTP connection dropped after 270243s uptime
+2026-01-14T07:37:03.172Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T07:37:04.176Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T08:15:09.611Z [DEBUG] MCP server "happy": HTTP connection dropped after 272530s uptime
+2026-01-14T08:15:09.611Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T08:15:10.615Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T09:00:26.882Z [DEBUG] MCP server "happy": HTTP connection dropped after 275247s uptime
+2026-01-14T09:00:26.882Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T09:00:27.887Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T09:20:56.441Z [DEBUG] MCP server "happy": HTTP connection dropped after 276477s uptime
+2026-01-14T09:20:56.441Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T09:20:57.446Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T10:01:32.426Z [DEBUG] MCP server "happy": HTTP connection dropped after 278913s uptime
+2026-01-14T10:01:32.427Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T10:01:33.441Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T10:24:04.741Z [DEBUG] MCP server "happy": HTTP connection dropped after 280265s uptime
+2026-01-14T10:24:04.742Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T10:24:05.746Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T11:01:25.526Z [DEBUG] MCP server "happy": HTTP connection dropped after 282506s uptime
+2026-01-14T11:01:25.526Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T11:01:26.532Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T11:38:52.455Z [DEBUG] MCP server "happy": HTTP connection dropped after 284753s uptime
+2026-01-14T11:38:52.455Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T11:38:53.467Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T12:02:39.139Z [DEBUG] MCP server "happy": HTTP connection dropped after 286179s uptime
+2026-01-14T12:02:39.140Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T12:02:40.145Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T12:09:22.743Z [DEBUG] MCP server "happy": HTTP connection dropped after 286583s uptime
+2026-01-14T12:09:22.744Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T12:09:23.752Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T12:14:23.771Z [DEBUG] MCP server "happy": HTTP connection dropped after 286884s uptime
+2026-01-14T12:14:23.772Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T12:14:24.777Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T12:19:24.786Z [DEBUG] MCP server "happy": HTTP connection dropped after 287185s uptime
+2026-01-14T12:19:24.786Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T12:19:25.794Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T12:19:37.554Z [DEBUG] Detected change to /Users/henry/.claude/settings.json
+2026-01-14T12:23:43.778Z [DEBUG] Detected change to /Users/henry/.claude/settings.json
+2026-01-14T12:24:25.804Z [DEBUG] MCP server "happy": HTTP connection dropped after 287486s uptime
+2026-01-14T12:24:25.804Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T12:24:26.810Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T12:29:26.815Z [DEBUG] MCP server "happy": HTTP connection dropped after 287787s uptime
+2026-01-14T12:29:26.815Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T12:29:27.819Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T12:34:27.823Z [DEBUG] MCP server "happy": HTTP connection dropped after 288088s uptime
+2026-01-14T12:34:27.824Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T12:34:28.827Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T12:39:28.841Z [DEBUG] MCP server "happy": HTTP connection dropped after 288389s uptime
+2026-01-14T12:39:28.842Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T12:39:29.850Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T12:44:29.857Z [DEBUG] MCP server "happy": HTTP connection dropped after 288690s uptime
+2026-01-14T12:44:29.857Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T12:44:30.863Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T12:49:30.876Z [DEBUG] MCP server "happy": HTTP connection dropped after 288991s uptime
+2026-01-14T12:49:30.878Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T12:49:31.897Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T12:54:31.916Z [DEBUG] MCP server "happy": HTTP connection dropped after 289292s uptime
+2026-01-14T12:54:31.917Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T12:54:32.922Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T12:59:32.930Z [DEBUG] MCP server "happy": HTTP connection dropped after 289593s uptime
+2026-01-14T12:59:32.930Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T12:59:33.933Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T13:04:33.951Z [DEBUG] MCP server "happy": HTTP connection dropped after 289894s uptime
+2026-01-14T13:04:33.952Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T13:04:34.962Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T13:25:03.151Z [DEBUG] MCP server "happy": HTTP connection dropped after 291123s uptime
+2026-01-14T13:25:03.151Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T13:25:04.159Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T13:45:24.918Z [DEBUG] MCP server "happy": HTTP connection dropped after 292345s uptime
+2026-01-14T13:45:24.919Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T13:45:25.923Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T14:39:30.860Z [DEBUG] MCP server "happy": HTTP connection dropped after 295591s uptime
+2026-01-14T14:39:30.861Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T14:39:31.863Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T15:10:14.328Z [DEBUG] MCP server "happy": HTTP connection dropped after 297435s uptime
+2026-01-14T15:10:14.329Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T15:10:15.356Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T15:31:35.899Z [DEBUG] MCP server "happy": HTTP connection dropped after 298716s uptime
+2026-01-14T15:31:35.901Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T15:31:36.906Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T16:12:24.388Z [DEBUG] MCP server "happy": HTTP connection dropped after 301165s uptime
+2026-01-14T16:12:24.389Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T16:12:25.395Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T16:49:43.276Z [DEBUG] MCP server "happy": HTTP connection dropped after 303404s uptime
+2026-01-14T16:49:43.276Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T16:49:44.279Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T17:11:05.484Z [DEBUG] MCP server "happy": HTTP connection dropped after 304686s uptime
+2026-01-14T17:11:05.484Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T17:11:06.489Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T17:48:03.714Z [DEBUG] MCP server "happy": HTTP connection dropped after 306904s uptime
+2026-01-14T17:48:03.714Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T17:48:04.716Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T18:23:20.390Z [DEBUG] MCP server "happy": HTTP connection dropped after 309021s uptime
+2026-01-14T18:23:20.390Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T18:23:21.396Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T19:00:22.567Z [DEBUG] MCP server "happy": HTTP connection dropped after 311243s uptime
+2026-01-14T19:00:22.568Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T19:00:23.572Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T19:20:35.363Z [DEBUG] MCP server "happy": HTTP connection dropped after 312456s uptime
+2026-01-14T19:20:35.364Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T19:20:36.369Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T19:25:36.377Z [DEBUG] MCP server "happy": HTTP connection dropped after 312757s uptime
+2026-01-14T19:25:36.378Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T19:25:37.381Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T19:30:37.391Z [DEBUG] MCP server "happy": HTTP connection dropped after 313058s uptime
+2026-01-14T19:30:37.391Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T19:30:38.395Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T19:35:38.405Z [DEBUG] MCP server "happy": HTTP connection dropped after 313359s uptime
+2026-01-14T19:35:38.405Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T19:35:39.409Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T19:55:40.262Z [DEBUG] MCP server "happy": HTTP connection dropped after 314561s uptime
+2026-01-14T19:55:40.262Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T19:55:41.267Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T20:17:02.849Z [DEBUG] MCP server "happy": HTTP connection dropped after 315843s uptime
+2026-01-14T20:17:02.850Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T20:17:03.853Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T21:11:58.933Z [DEBUG] MCP server "happy": HTTP connection dropped after 319139s uptime
+2026-01-14T21:11:58.933Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T21:11:59.936Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T21:37:50.816Z [DEBUG] MCP server "happy": HTTP connection dropped after 320691s uptime
+2026-01-14T21:37:50.817Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T21:37:51.837Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T22:20:59.157Z [DEBUG] MCP server "happy": HTTP connection dropped after 323279s uptime
+2026-01-14T22:20:59.157Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T22:21:00.161Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T22:57:15.119Z [DEBUG] MCP server "happy": HTTP connection dropped after 325455s uptime
+2026-01-14T22:57:15.120Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T22:57:16.130Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T23:34:07.604Z [DEBUG] MCP server "happy": HTTP connection dropped after 327668s uptime
+2026-01-14T23:34:07.604Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T23:34:08.609Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T23:39:08.619Z [DEBUG] MCP server "happy": HTTP connection dropped after 327969s uptime
+2026-01-14T23:39:08.619Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T23:39:09.627Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T23:44:09.637Z [DEBUG] MCP server "happy": HTTP connection dropped after 328270s uptime
+2026-01-14T23:44:09.637Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T23:44:10.641Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T23:49:10.648Z [DEBUG] MCP server "happy": HTTP connection dropped after 328571s uptime
+2026-01-14T23:49:10.649Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T23:49:11.658Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T23:54:11.664Z [DEBUG] MCP server "happy": HTTP connection dropped after 328872s uptime
+2026-01-14T23:54:11.664Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T23:54:12.668Z [DEBUG] MCP server "happy": No token data found
+2026-01-14T23:59:12.673Z [DEBUG] MCP server "happy": HTTP connection dropped after 329173s uptime
+2026-01-14T23:59:12.674Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T23:59:13.677Z [DEBUG] MCP server "happy": No token data found
+2026-01-15T00:04:13.681Z [DEBUG] MCP server "happy": HTTP connection dropped after 329474s uptime
+2026-01-15T00:04:13.681Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-15T00:04:14.684Z [DEBUG] MCP server "happy": No token data found
+2026-01-15T00:09:14.689Z [DEBUG] MCP server "happy": HTTP connection dropped after 329775s uptime
+2026-01-15T00:09:14.689Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-15T00:09:15.693Z [DEBUG] MCP server "happy": No token data found
+2026-01-15T00:14:15.706Z [DEBUG] MCP server "happy": HTTP connection dropped after 330076s uptime
+2026-01-15T00:14:15.707Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-15T00:14:16.715Z [DEBUG] MCP server "happy": No token data found
+2026-01-15T00:19:16.735Z [DEBUG] MCP server "happy": HTTP connection dropped after 330377s uptime
+2026-01-15T00:19:16.736Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-15T00:19:17.744Z [DEBUG] MCP server "happy": No token data found
+2026-01-15T00:24:17.754Z [DEBUG] MCP server "happy": HTTP connection dropped after 330678s uptime
+2026-01-15T00:24:17.755Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-15T00:24:18.758Z [DEBUG] MCP server "happy": No token data found
+2026-01-15T00:47:04.027Z [DEBUG] MCP server "happy": HTTP connection dropped after 332044s uptime
+2026-01-15T00:47:04.027Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-15T00:47:05.039Z [DEBUG] MCP server "happy": No token data found
+2026-01-15T01:40:56.527Z [DEBUG] MCP server "happy": HTTP connection dropped after 335277s uptime
+2026-01-15T01:40:56.528Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-15T01:40:57.538Z [DEBUG] MCP server "happy": No token data found
+2026-01-15T02:01:21.839Z [DEBUG] MCP server "happy": HTTP connection dropped after 336502s uptime
+2026-01-15T02:01:21.840Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-15T02:01:22.844Z [DEBUG] MCP server "happy": No token data found
+2026-01-15T02:47:47.188Z [DEBUG] MCP server "happy": HTTP connection dropped after 339287s uptime
+2026-01-15T02:47:47.188Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-15T02:47:48.192Z [DEBUG] MCP server "happy": No token data found
+2026-01-15T03:25:20.820Z [DEBUG] MCP server "happy": HTTP connection dropped after 341541s uptime
+2026-01-15T03:25:20.820Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-15T03:25:21.822Z [DEBUG] MCP server "happy": No token data found
+2026-01-15T04:06:02.863Z [DEBUG] MCP server "happy": HTTP connection dropped after 343983s uptime
+2026-01-15T04:06:02.863Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-15T04:06:03.868Z [DEBUG] MCP server "happy": No token data found
+2026-01-15T04:26:31.579Z [DEBUG] MCP server "happy": HTTP connection dropped after 345212s uptime
+2026-01-15T04:26:31.580Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-15T04:26:32.583Z [DEBUG] MCP server "happy": No token data found
+2026-01-15T05:09:17.120Z [DEBUG] MCP server "happy": HTTP connection dropped after 347777s uptime
+2026-01-15T05:09:17.121Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-15T05:09:18.130Z [DEBUG] MCP server "happy": No token data found
+2026-01-15T05:34:22.770Z [DEBUG] MCP server "happy": HTTP connection dropped after 349283s uptime
+2026-01-15T05:34:22.770Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-15T05:34:23.776Z [DEBUG] MCP server "happy": No token data found
+2026-01-15T06:30:28.930Z [DEBUG] MCP server "happy": HTTP connection dropped after 352649s uptime
+2026-01-15T06:30:28.931Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-15T06:30:29.933Z [DEBUG] MCP server "happy": No token data found
+2026-01-15T07:09:30.482Z [DEBUG] MCP server "happy": HTTP connection dropped after 354991s uptime
+2026-01-15T07:09:30.483Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-15T07:09:31.494Z [DEBUG] MCP server "happy": No token data found
+2026-01-15T07:30:32.954Z [DEBUG] MCP server "happy": HTTP connection dropped after 356253s uptime
+2026-01-15T07:30:32.954Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-15T07:30:33.963Z [DEBUG] MCP server "happy": No token data found
+2026-01-15T07:54:44.016Z [DEBUG] MCP server "happy": HTTP connection dropped after 357704s uptime
+2026-01-15T07:54:44.016Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-15T07:54:45.021Z [DEBUG] MCP server "happy": No token data found
+2026-01-15T08:30:23.288Z [DEBUG] MCP server "happy": HTTP connection dropped after 359844s uptime
+2026-01-15T08:30:23.288Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-15T08:30:24.293Z [DEBUG] MCP server "happy": No token data found
+2026-01-15T08:38:42.786Z [DEBUG] MCP server "happy": HTTP connection dropped after 360343s uptime
+2026-01-15T08:38:42.786Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-15T08:38:43.790Z [DEBUG] MCP server "happy": No token data found
+2026-01-15T09:02:09.633Z [DEBUG] MCP server "happy": HTTP connection dropped after 361750s uptime
+2026-01-15T09:02:09.633Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-15T09:02:10.638Z [DEBUG] MCP server "happy": No token data found
+2026-01-15T09:38:59.070Z [DEBUG] MCP server "happy": HTTP connection dropped after 363959s uptime
+2026-01-15T09:38:59.071Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-15T09:39:00.080Z [DEBUG] MCP server "happy": No token data found
+2026-01-15T10:38:08.965Z [DEBUG] MCP server "happy": HTTP connection dropped after 367509s uptime
+2026-01-15T10:38:08.965Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-15T10:38:09.970Z [DEBUG] MCP server "happy": No token data found
+2026-01-15T10:59:59.485Z [DEBUG] MCP server "happy": HTTP connection dropped after 368820s uptime
+2026-01-15T10:59:59.485Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-15T11:00:00.488Z [DEBUG] MCP server "happy": No token data found
+2026-01-15T11:06:56.879Z [DEBUG] MCP server "happy": HTTP connection dropped after 369237s uptime
+2026-01-15T11:06:56.879Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-15T11:06:57.883Z [DEBUG] MCP server "happy": No token data found
+2026-01-15T11:21:17.289Z [DEBUG] MCP server "happy": HTTP connection dropped after 370098s uptime
+2026-01-15T11:21:17.290Z [DEBUG] MCP server "happy": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-15T11:21:18.297Z [DEBUG] MCP server "happy": No token data found
+2026-01-15T11:23:49.404Z [DEBUG] MCP server "Playwright": STDIO connection closed after 370248s (cleanly)
+2026-01-15T11:23:49.407Z [DEBUG] MCP server "Playwright": Cleared connection cache for reconnection
+2026-01-15T11:24:08.790Z [DEBUG] Getting matching hook commands for SessionEnd with query: other
+2026-01-15T11:24:08.790Z [DEBUG] Found 0 hook matchers in settings
+2026-01-15T11:24:08.791Z [DEBUG] Matched 0 unique hooks for query "other" (0 before deduplication)

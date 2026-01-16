@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+.header {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 70pt;
+  background: #1C2833;
+  padding: 20pt 40pt;
+  box-sizing: border-box;
+}
+.header h1 {
+  font-size: 28pt;
+  color: #F4F6F6;
+  margin: 0;
+}
+.content {
+  margin: 90pt 40pt 30pt 40pt;
+}
+h2 {
+  font-size: 24pt;
+  color: #D4AF37;
+  margin: 0 0 20pt 0;
+  font-weight: bold;
+}
+.strategy-box {
+  background: #ffffff;
+  border-left: 8pt solid #D4AF37;
+  padding: 20pt;
+  margin-bottom: 20pt;
+  border-radius: 4pt;
+}
+.strategy-box h3 {
+  font-size: 18pt;
+  color: #1C2833;
+  margin: 0 0 8pt 0;
+  font-weight: bold;
+}
+.strategy-box p {
+  font-size: 15pt;
+  color: #2E4053;
+  margin: 0;
+  line-height: 1.5;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>总结：稳中求进，步步为营</h1>
+</div>
+<div class="content">
+  <h2>三种投资策略建议</h2>
+
+  <div class="strategy-box">
+    <h3>激进型</h3>
+    <p>侧重 AI 科技与成长股</p>
+  </div>
+
+  <div class="strategy-box">
+    <h3>稳健型</h3>
+    <p>均衡配置 黄金 + 红利 + 科技</p>
+  </div>
+
+  <div class="strategy-box">
+    <h3>保守型</h3>
+    <p>高配红利资产与债券</p>
+  </div>
+</div>
+</body>
+</html>

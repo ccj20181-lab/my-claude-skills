@@ -1,0 +1,13 @@
+# Tavily MCP环境变量配置
+# 复制此文件为 .env 并填入你的API密钥
+
+# Tavily API密钥 (必需)
+# 从 https://tavily.com 获取你的API密钥
+TAVILY_API_KEY=your_api_key_here
+
+# 可选配置
+# 最大搜索结果数量 (默认: 10)
+MAX_RESULTS=10
+
+# 搜索深度: basic 或 advanced (默认: basic)
+SEARCH_DEPTH=basic

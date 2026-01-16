@@ -1,0 +1,22 @@
+[
+  {
+    "content": "搜索9个财经关键词（近7天数据）",
+    "status": "completed",
+    "activeForm": "搜索9个财经关键词（近7天数据）"
+  },
+  {
+    "content": "获取笔记详情和作者粉丝数",
+    "status": "in_progress",
+    "activeForm": "获取笔记详情和作者粉丝数"
+  },
+  {
+    "content": "筛选低粉爆文并计算爆款指数",
+    "status": "pending",
+    "activeForm": "筛选低粉爆文并计算爆款指数"
+  },
+  {
+    "content": "生成Excel分析报告",
+    "status": "pending",
+    "activeForm": "生成Excel分析报告"
+  }
+]

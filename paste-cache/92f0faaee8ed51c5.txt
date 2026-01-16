@@ -1,0 +1,58 @@
+Error: 获取Feed详情失败: feed 695fcc2c000000002202f219 not found in noteDetailMap
+
+⏺ xiaohongshu - User Profile (MCP)(user_id: "68fd845f0000000037000b32", xsec_token:
+                                  "AB0caGP_o9qUghjznNu0XAtGvSbWxXuoQc8dpQE5-GqFs=")
+  ⎿  {                                                                         
+       "userBasicInfo": {
+         "gender": 2,
+     … +846 lines (ctrl+o to expand)
+
+⏺ xiaohongshu - Get Feed Detail (MCP)(feed_id: "69606de6000000002103162f", xsec_token:
+
+                                     "ABJklOZ6M09rO0Ssddgv6kCO9l4hyBFjMTMMmWK5AFP2I=")
+  ⎿  {                                                                         
+       "feed_id": "69606de6000000002103162f",
+       "data": {
+     … +298 lines (ctrl+o to expand)
+
+⏺ xiaohongshu - User Profile (MCP)(user_id: "64b898310000000014037b21", xsec_token:
+                                  "ABJklOZ6M09rO0Ssddgv6kCO9l4hyBFjMTMMmWK5AFP2I=")
+  ⎿  ⚠ Large MCP response (~13.2k tokens), this can fill up context quickly
+  ⎿  {
+       "userBasicInfo": {
+         "gender": 2,
+     … +1611 lines (ctrl+o to expand)
+
+⏺ xiaohongshu - Get Feed Detail (MCP)(feed_id: "695d3233000000001a01e4ca", xsec_token:
+
+                                     "ABHU5HpVuWglkxORB7sI9hm6lMicWfLqTjy_my8y36ta8=")
+  ⎿  {                                                                         
+       "feed_id": "695d3233000000001a01e4ca",
+       "data": {
+     … +369 lines (ctrl+o to expand)
+
+⏺ xiaohongshu - User Profile (MCP)(user_id: "6071b0fa0000000001004cfa", xsec_token:
+                                  "ABHU5HpVuWglkxORB7sI9hm6lMicWfLqTjy_my8y36ta8=")
+  ⎿  ⚠ Large MCP response (~13.5k tokens), this can fill up context quickly
+  ⎿  {
+       "userBasicInfo": {
+         "gender": 1,
+     … +1663 lines (ctrl+o to expand)
+
+⏺ xiaohongshu - Get Feed Detail (MCP)(feed_id: "6964cb00000000001a01c405", xsec_token:
+
+                                     "ABysggMGUL2j6gQ7VYf3UUM2N9eJCT4UTxvnmDT2PXTog=")
+  ⎿  {                                                                         
+       "feed_id": "6964cb00000000001a01c405",
+       "data": {
+     … +293 lines (ctrl+o to expand)
+
+⏺ xiaohongshu - User Profile (MCP)(user_id: "65f9aa92000000000b00e30a", xsec_token:
+                                  "ABysggMGUL2j6gQ7VYf3UUM2N9eJCT4UTxvnmDT2PXTog=")
+  ⎿  ⚠ Large MCP response (~13.3k tokens), this can fill up context quickly
+  ⎿  {
+       "userBasicInfo": {
+         "gender": 2,
+     … +1662 lines (ctrl+o to expand)
+  ⎿  API Error: The model has reached its context window limit.
+

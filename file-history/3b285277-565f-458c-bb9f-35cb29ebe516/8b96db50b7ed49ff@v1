@@ -1,0 +1,7 @@
+{
+  "name": "tavily",
+  "description": "Tavily AI 搜索引擎 MCP 服务器。提供强大的网络搜索和网页爬取功能，专为 AI 应用优化。",
+  "author": {
+    "name": "Tavily"
+  }
+}

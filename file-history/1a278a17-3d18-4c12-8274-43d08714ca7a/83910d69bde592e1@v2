@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+.header {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 70pt;
+  background: #1C2833;
+  padding: 20pt 40pt;
+  box-sizing: border-box;
+}
+.header h1 {
+  font-size: 28pt;
+  color: #F4F6F6;
+  margin: 0;
+}
+.content {
+  margin: 90pt 40pt 60pt 40pt;
+}
+.section {
+  margin-bottom: 20pt;
+}
+h2 {
+  font-size: 18pt;
+  color: #D4AF37;
+  margin: 0 0 8pt 0;
+  font-weight: bold;
+}
+ul {
+  margin: 0;
+  padding-left: 30pt;
+  font-size: 15pt;
+  color: #2E4053;
+  line-height: 1.5;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>宏观环境：复苏与分化并存</h1>
+</div>
+<div class="content">
+  <div class="section">
+    <h2>全球视角</h2>
+    <ul>
+      <li>降息周期开启</li>
+      <li>新兴市场流动性回升</li>
+    </ul>
+  </div>
+  <div class="section">
+    <h2>国内视角</h2>
+    <ul>
+      <li>政策组合拳发力</li>
+      <li>内需逐步修复</li>
+    </ul>
+  </div>
+  <div class="section">
+    <h2>关键指标</h2>
+    <ul>
+      <li>GDP 稳健增长</li>
+      <li>CPI 温和回升</li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "xiaohongshu": {
+    "type": "http",
+    "url": "http://localhost:18060/mcp"
+  }
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "content": "使用多种关键词组合进行深度搜索",
+    "status": "in_progress",
+    "activeForm": "正在使用多种关键词深度搜索"
+  },
+  {
+    "content": "尝试学术数据库、职业社交平台等不同渠道",
+    "status": "pending",
+    "activeForm": "正在尝试不同数据库和平台"
+  },
+  {
+    "content": "整理分析收集到的资料",
+    "status": "pending",
+    "activeForm": "正在整理分析资料"
+  },
+  {
+    "content": "撰写5000字深度研究报告",
+    "status": "pending",
+    "activeForm": "正在撰写5000字深度研究报告"
+  },
+  {
+    "content": "生成Word格式报告并保存到桌面",
+    "status": "pending",
+    "activeForm": "正在生成Word格式报告"
+  }
+]

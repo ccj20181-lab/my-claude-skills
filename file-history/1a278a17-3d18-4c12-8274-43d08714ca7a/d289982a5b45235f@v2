@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  height: 60pt;
+  background: #1C2833;
+  padding: 15pt 35pt;
+  flex-shrink: 0;
+}
+.header h1 {
+  font-size: 24pt;
+  color: #F4F6F6;
+  margin: 0;
+}
+.content {
+  padding: 15pt 35pt 45pt 35pt;
+  flex: 1;
+}
+.strategy-title {
+  font-size: 12pt;
+  color: #1C2833;
+  margin: 0 0 12pt 0;
+  font-weight: bold;
+  text-align: center;
+}
+.layout {
+  display: flex;
+  gap: 18pt;
+  height: 185pt;
+}
+.column {
+  flex: 1;
+}
+.chart-box {
+  background: #ffffff;
+  border-radius: 6pt;
+  padding: 10pt;
+  box-shadow: 0 2pt 5pt rgba(0,0,0,0.1);
+  height: 100%;
+}
+.chart-box h2 {
+  font-size: 13pt;
+  color: #D4AF37;
+  margin: 0 0 6pt 0;
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>核心策略：哑铃型配置，攻守兼备</h1>
+</div>
+<div class="content">
+  <p class="strategy-title">一手抓硬科技成长，一手抓高红利防守</p>
+  <div class="layout">
+    <div class="column">
+      <div class="chart-box placeholder" id="chart1" style="width: 100%; height: 100%;"></div>
+    </div>
+    <div class="column">
+      <div class="chart-box placeholder" id="chart2" style="width: 100%; height: 100%;"></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

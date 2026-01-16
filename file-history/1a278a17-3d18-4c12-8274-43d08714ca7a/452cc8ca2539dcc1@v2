@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+.header {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 70pt;
+  background: #1C2833;
+  padding: 20pt 40pt;
+  box-sizing: border-box;
+}
+.header h1 {
+  font-size: 28pt;
+  color: #F4F6F6;
+  margin: 0;
+}
+.content {
+  position: absolute;
+  top: 70pt; left: 0; right: 0; bottom: 0;
+  padding: 25pt 40pt 50pt 40pt;
+  box-sizing: border-box;
+}
+.summary {
+  background: #ffffff;
+  border-radius: 10pt;
+  padding: 15pt 20pt;
+  margin-bottom: 15pt;
+  box-shadow: 0 2pt 8pt rgba(0,0,0,0.1);
+}
+.summary h2 {
+  font-size: 16pt;
+  color: #D4AF37;
+  margin: 0 0 10pt 0;
+  font-weight: bold;
+}
+.summary p {
+  font-size: 13pt;
+  color: #2E4053;
+  margin: 0;
+  line-height: 1.5;
+}
+.strategies {
+  display: flex;
+  gap: 18pt;
+}
+.strategy-card {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 10pt;
+  padding: 18pt 15pt;
+  box-shadow: 0 2pt 8pt rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+}
+.strategy-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5pt;
+}
+.aggressive::before {
+  background: linear-gradient(90deg, #4472C4 0%, #365A8F 100%);
+}
+.balanced::before {
+  background: linear-gradient(90deg, #D4AF37 0%, #C9A227 100%);
+}
+.conservative::before {
+  background: linear-gradient(90deg, #70AD47 0%, #5A8F37 100%);
+}
+.strategy-card h3 {
+  font-size: 16pt;
+  color: #1C2833;
+  margin: 0 0 10pt 0;
+  font-weight: bold;
+  text-align: center;
+}
+.strategy-card .icon {
+  font-size: 32pt;
+  text-align: center;
+  margin: 10pt 0;
+}
+.strategy-card .allocation {
+  font-size: 11pt;
+  color: #2E4053;
+  margin: 10pt 0;
+  line-height: 1.5;
+}
+.strategy-card .return {
+  font-size: 12pt;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10pt;
+  padding-top: 10pt;
+}
+.aggressive .return { color: #4472C4; }
+.balanced .return { color: #D4AF37; }
+.conservative .return { color: #70AD47; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>总结：稳中求进，步步为营</h1>
+</div>
+<div class="content">
+  <div class="summary">
+    <h2>💡 2025年投资建议</h2>
+    <p>在复杂多变的宏观环境下，采用<b>哑铃型配置策略</b>：一手抓高成长科技（AI、光通信），一手抓高红利防守（黄金、银行、能源）。根据个人风险偏好，灵活调整配置比例，在控制风险的前提下追求稳健收益。</p>
+  </div>
+  <div class="strategies">
+    <div class="strategy-card aggressive">
+      <h3>激进型</h3>
+      <p class="icon">🚀</p>
+      <p class="allocation"><b>配置建议：</b><br>• AI科技：50%<br>• 成长股：30%<br>• 黄金：10%<br>• 现金：10%</p>
+      <p class="return">预期收益：15-25% | 风险：高</p>
+    </div>
+    <div class="strategy-card balanced">
+      <h3>稳健型</h3>
+      <p class="icon">⚖️</p>
+      <p class="allocation"><b>配置建议：</b><br>• 黄金：30%<br>• 红利资产：30%<br>• AI科技：25%<br>• 债券：15%</p>
+      <p class="return">预期收益：8-15% | 风险：中</p>
+    </div>
+    <div class="strategy-card conservative">
+      <h3>保守型</h3>
+      <p class="icon">🛡️</p>
+      <p class="allocation"><b>配置建议：</b><br>• 红利资产：50%<br>• 债券：30%<br>• 黄金：15%<br>• 现金：5%</p>
+      <p class="return">预期收益：5-10% | 风险：低</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,177 @@
+2026-01-09T10:14:53.086Z [DEBUG] Watching for changes in setting files /Users/henry/.claude, /Users/henry/.claude, /Users/henry/.claude...
+2026-01-09T10:14:53.087Z [DEBUG] [init] configureGlobalMTLS starting
+2026-01-09T10:14:53.087Z [DEBUG] [init] configureGlobalMTLS complete
+2026-01-09T10:14:53.087Z [DEBUG] [init] configureGlobalAgents starting
+2026-01-09T10:14:53.087Z [DEBUG] [init] configureGlobalAgents complete
+2026-01-09T10:14:53.094Z [DEBUG] [LSP MANAGER] initializeLspServerManager() called
+2026-01-09T10:14:53.094Z [DEBUG] [LSP MANAGER] Created manager instance, state=pending
+2026-01-09T10:14:53.095Z [DEBUG] [LSP MANAGER] Starting async initialization (generation 1)
+2026-01-09T10:14:53.097Z [DEBUG] Applying permission update: Adding 24 allow rule(s) to destination 'userSettings': ["Bash","BashOutput","Edit","Glob","Grep","KillShell","NotebookEdit","Read","SlashCommand","Task","TodoWrite","WebFetch","WebSearch","Write","mcp__ide","mcp__exa","mcp__context7","mcp__mcp-deepwiki","mcp__Playwright","mcp__spec-workflow","mcp__open-websearch","mcp__serena","mcp__tavily","mcp__xiaohongshu"]
+2026-01-09T10:14:53.097Z [DEBUG] Applying permission update: Adding 24 allow rule(s) to destination 'projectSettings': ["Bash","BashOutput","Edit","Glob","Grep","KillShell","NotebookEdit","Read","SlashCommand","Task","TodoWrite","WebFetch","WebSearch","Write","mcp__ide","mcp__exa","mcp__context7","mcp__mcp-deepwiki","mcp__Playwright","mcp__spec-workflow","mcp__open-websearch","mcp__serena","mcp__tavily","mcp__xiaohongshu"]
+2026-01-09T10:14:53.097Z [DEBUG] Applying permission update: Adding 20 allow rule(s) to destination 'localSettings': ["mcp__tavily__tavily-search","mcp__tavily__tavily-crawl","mcp__chrome-devtools__list_pages","mcp__chrome-devtools__new_page","mcp__chrome-devtools__select_page","mcp__chrome-devtools__navigate_page","mcp__chrome-devtools__take_screenshot","mcp__chrome-devtools__take_snapshot","mcp__chrome-devtools__click","mcp__chrome-devtools__fill_form","Skill(document-skills:skill-creator)","mcp__chrome-devtools__list_network_requests","mcp__chrome-devtools__list_console_messages","mcp__chrome-devtools__evaluate_script","mcp__chrome-devtools__resize_page","mcp__chrome-devtools__emulate","Skill(miaodong-finance-writer)","Skill(finance-infographic)","mcp__chrome-devtools__fill","Skill(document-skills:theme-factory)"]
+2026-01-09T10:14:53.097Z [DEBUG] [STARTUP] Loading MCP configs...
+2026-01-09T10:14:53.099Z [DEBUG] Loading plugin document-skills from source: "./"
+2026-01-09T10:14:53.102Z [DEBUG] Watching for changes in skill directories: /Users/henry/.claude/skills, /Users/henry/.claude/skills...
+2026-01-09T10:14:53.144Z [DEBUG] Git remote URL: null
+2026-01-09T10:14:53.144Z [DEBUG] No git remote URL found
+2026-01-09T10:14:53.144Z [DEBUG] Not in a GitHub repository, skipping path mapping update
+2026-01-09T10:14:53.144Z [DEBUG] Using git SHA for document-skills@anthropic-agent-skills: 69c0b1a06741
+2026-01-09T10:14:53.145Z [DEBUG] Plugin document-skills@anthropic-agent-skills version 69c0b1a06741 already cached at /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741
+2026-01-09T10:14:53.145Z [DEBUG] Copied local plugin document-skills to versioned cache: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741
+2026-01-09T10:14:53.145Z [DEBUG] Processing 4 skill paths for plugin document-skills
+2026-01-09T10:14:53.145Z [DEBUG] Checking skill path: ./skills/xlsx -> /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/xlsx (exists: true)
+2026-01-09T10:14:53.145Z [DEBUG] Checking skill path: ./skills/docx -> /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/docx (exists: true)
+2026-01-09T10:14:53.145Z [DEBUG] Checking skill path: ./skills/pptx -> /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pptx (exists: true)
+2026-01-09T10:14:53.145Z [DEBUG] Checking skill path: ./skills/pdf -> /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pdf (exists: true)
+2026-01-09T10:14:53.145Z [DEBUG] Found 4 valid skill paths for plugin document-skills, setting skillsPaths
+2026-01-09T10:14:53.145Z [DEBUG] Found 1 plugins (1 enabled, 0 disabled)
+2026-01-09T10:14:53.145Z [DEBUG] [STARTUP] MCP configs loaded in 48ms
+2026-01-09T10:14:53.146Z [DEBUG] [STARTUP] Running setup()...
+2026-01-09T10:14:53.149Z [DEBUG] Stats cache is up to date
+2026-01-09T10:14:53.150Z [DEBUG] Plugin autoupdate: skipped (auto-updater disabled)
+2026-01-09T10:14:53.151Z [DEBUG] Loading skills from: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/henry/.claude/skills, project=[]
+2026-01-09T10:14:53.214Z [DEBUG] Loaded 1 installed plugins from /Users/henry/.claude/plugins/installed_plugins.json
+2026-01-09T10:14:53.217Z [DEBUG] Writing to temp file: /Users/henry/.claude/todos/579619dc-2a43-4154-bce2-e78a9d27d7f3-agent-579619dc-2a43-4154-bce2-e78a9d27d7f3.json.tmp.45738.1767953693217
+2026-01-09T10:14:53.217Z [DEBUG] Temp file written successfully, size: 2 bytes
+2026-01-09T10:14:53.217Z [DEBUG] Renaming /Users/henry/.claude/todos/579619dc-2a43-4154-bce2-e78a9d27d7f3-agent-579619dc-2a43-4154-bce2-e78a9d27d7f3.json.tmp.45738.1767953693217 to /Users/henry/.claude/todos/579619dc-2a43-4154-bce2-e78a9d27d7f3-agent-579619dc-2a43-4154-bce2-e78a9d27d7f3.json
+2026-01-09T10:14:53.217Z [DEBUG] File /Users/henry/.claude/todos/579619dc-2a43-4154-bce2-e78a9d27d7f3-agent-579619dc-2a43-4154-bce2-e78a9d27d7f3.json written atomically
+2026-01-09T10:14:53.218Z [DEBUG] getPluginSkills: Processing 1 enabled plugins
+2026-01-09T10:14:53.218Z [DEBUG] Checking plugin document-skills: skillsPath=exists, skillsPaths=4 paths
+2026-01-09T10:14:53.218Z [DEBUG] Attempting to load skills from plugin document-skills default skillsPath: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills
+2026-01-09T10:14:53.224Z [DEBUG] Total plugin commands loaded: 0
+2026-01-09T10:14:53.224Z [DEBUG] Registered 0 hooks from 1 plugins
+2026-01-09T10:14:53.225Z [DEBUG] [STARTUP] setup() completed in 79ms
+2026-01-09T10:14:53.225Z [DEBUG] [STARTUP] Loading commands and agents...
+2026-01-09T10:14:53.225Z [DEBUG] Loaded 16 skills from plugin document-skills default directory
+2026-01-09T10:14:53.225Z [DEBUG] Attempting to load skills from plugin document-skills skillsPaths: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/xlsx, /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/docx, /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pptx, /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pdf
+2026-01-09T10:14:53.225Z [DEBUG] Loading from skillPath: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/xlsx for plugin document-skills
+2026-01-09T10:14:53.225Z [DEBUG] Loaded 0 skills from plugin document-skills custom path: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/xlsx
+2026-01-09T10:14:53.225Z [DEBUG] Loading from skillPath: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/docx for plugin document-skills
+2026-01-09T10:14:53.225Z [DEBUG] Loaded 0 skills from plugin document-skills custom path: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/docx
+2026-01-09T10:14:53.225Z [DEBUG] Loading from skillPath: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pptx for plugin document-skills
+2026-01-09T10:14:53.225Z [DEBUG] Loaded 0 skills from plugin document-skills custom path: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pptx
+2026-01-09T10:14:53.225Z [DEBUG] Loading from skillPath: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pdf for plugin document-skills
+2026-01-09T10:14:53.225Z [DEBUG] Loaded 0 skills from plugin document-skills custom path: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pdf
+2026-01-09T10:14:53.225Z [DEBUG] Total plugin skills loaded: 16
+2026-01-09T10:14:53.225Z [DEBUG] Total LSP servers loaded: 0
+2026-01-09T10:14:53.225Z [DEBUG] [LSP SERVER MANAGER] getAllLspServers returned 0 server(s)
+2026-01-09T10:14:53.225Z [DEBUG] LSP manager initialized with 0 servers
+2026-01-09T10:14:53.225Z [DEBUG] LSP server manager initialized successfully
+2026-01-09T10:14:53.226Z [DEBUG] LSP notification handlers registered successfully for all 0 server(s)
+2026-01-09T10:14:53.247Z [DEBUG] Creating shell snapshot for zsh (/bin/zsh)
+2026-01-09T10:14:53.247Z [DEBUG] Looking for shell config file: /Users/henry/.zshrc
+2026-01-09T10:14:53.247Z [DEBUG] Snapshots directory: /Users/henry/.claude/shell-snapshots
+2026-01-09T10:14:53.249Z [DEBUG] Creating snapshot at: /Users/henry/.claude/shell-snapshots/snapshot-zsh-1767953693247-3bne1i.sh
+2026-01-09T10:14:53.249Z [DEBUG] Shell binary exists: true
+2026-01-09T10:14:53.249Z [DEBUG] Execution timeout: 10000ms
+2026-01-09T10:14:53.259Z [DEBUG] Loaded 14 unique skills (managed: 0, user: 3, project: 0, legacy commands: 11)
+2026-01-09T10:14:53.259Z [DEBUG] getSkills returning: 14 skill dir commands, 16 plugin skills
+2026-01-09T10:14:53.260Z [DEBUG] Total plugin agents loaded: 0
+2026-01-09T10:14:53.260Z [DEBUG] [STARTUP] Commands and agents loaded in 35ms
+2026-01-09T10:14:53.260Z [DEBUG] [STARTUP] Running showSetupScreens()...
+2026-01-09T10:14:53.260Z [DEBUG] [render] initYoga starting
+2026-01-09T10:14:53.268Z [DEBUG] Shell snapshot created successfully (733 bytes)
+2026-01-09T10:14:53.272Z [DEBUG] [render] initYoga complete
+2026-01-09T10:14:54.492Z [DEBUG] [STARTUP] showSetupScreens() completed in 1232ms
+2026-01-09T10:14:54.511Z [DEBUG] MCP server "chrome-devtools": Starting connection with timeout of 60000ms
+2026-01-09T10:14:54.515Z [DEBUG] MCP server "tavily": Starting connection with timeout of 60000ms
+2026-01-09T10:14:54.516Z [DEBUG] All plugins already exist, skipping migration
+2026-01-09T10:14:54.521Z [DEBUG] Initialized versioned plugins system with 1 plugins
+2026-01-09T10:14:54.523Z [DEBUG] Writing to temp file: /Users/henry/.claude.json.tmp.45738.1767953694523
+2026-01-09T10:14:54.523Z [DEBUG] Preserving file permissions: 100644
+2026-01-09T10:14:54.523Z [DEBUG] Temp file written successfully, size: 4873 bytes
+2026-01-09T10:14:54.523Z [DEBUG] Applied original permissions to temp file
+2026-01-09T10:14:54.523Z [DEBUG] Renaming /Users/henry/.claude.json.tmp.45738.1767953694523 to /Users/henry/.claude.json
+2026-01-09T10:14:54.523Z [DEBUG] File /Users/henry/.claude.json written atomically
+2026-01-09T10:14:54.972Z [DEBUG] Skipping SessionStart:startup hook execution - workspace trust not accepted
+2026-01-09T10:14:54.972Z [DEBUG] [render] initYoga starting
+2026-01-09T10:14:54.972Z [DEBUG] [render] initYoga complete
+2026-01-09T10:14:54.974Z [DEBUG] Summarizing all 4 messages (~0 tokens)
+2026-01-09T10:14:54.975Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T10:14:54.977Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T10:14:54.977Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T10:14:54.977Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T10:14:54.982Z [DEBUG] Skipping SubagentStart:Explore hook execution - workspace trust not accepted
+2026-01-09T10:14:54.985Z [DEBUG] Skipping SubagentStart:Plan hook execution - workspace trust not accepted
+2026-01-09T10:14:54.986Z [DEBUG] Skipping SubagentStart:Bash hook execution - workspace trust not accepted
+2026-01-09T10:14:55.121Z [DEBUG] Writing to temp file: /Users/henry/.claude.json.tmp.45738.1767953695121
+2026-01-09T10:14:55.121Z [DEBUG] Preserving file permissions: 100644
+2026-01-09T10:14:55.121Z [DEBUG] Temp file written successfully, size: 4765 bytes
+2026-01-09T10:14:55.122Z [DEBUG] Applied original permissions to temp file
+2026-01-09T10:14:55.122Z [DEBUG] Renaming /Users/henry/.claude.json.tmp.45738.1767953695121 to /Users/henry/.claude.json
+2026-01-09T10:14:55.122Z [DEBUG] File /Users/henry/.claude.json written atomically
+2026-01-09T10:14:55.123Z [DEBUG] Detected Homebrew cask installation: /opt/homebrew/Caskroom/claude-code/2.1.1/claude
+2026-01-09T10:14:55.124Z [DEBUG] [REPL:mount] REPL mounted, disabled=false
+2026-01-09T10:14:55.124Z [DEBUG] Detected Homebrew cask installation: /opt/homebrew/Caskroom/claude-code/2.1.1/claude
+2026-01-09T10:14:55.124Z [DEBUG] Official marketplace auto-install skipped: already_attempted
+2026-01-09T10:14:55.124Z [DEBUG] performStartupChecks called
+2026-01-09T10:14:55.125Z [DEBUG] Trust not accepted for current directory - skipping plugin installations
+2026-01-09T10:14:55.130Z [DEBUG] Writing to temp file: /Users/henry/.claude.json.tmp.45738.1767953695130
+2026-01-09T10:14:55.130Z [DEBUG] Preserving file permissions: 100644
+2026-01-09T10:14:55.130Z [DEBUG] Temp file written successfully, size: 4873 bytes
+2026-01-09T10:14:55.130Z [DEBUG] Applied original permissions to temp file
+2026-01-09T10:14:55.130Z [DEBUG] Renaming /Users/henry/.claude.json.tmp.45738.1767953695130 to /Users/henry/.claude.json
+2026-01-09T10:14:55.130Z [DEBUG] File /Users/henry/.claude.json written atomically
+2026-01-09T10:14:55.130Z [DEBUG] AutoUpdaterWrapper: Installation type: package-manager
+2026-01-09T10:14:55.131Z [DEBUG] Loaded plugins - Enabled: 1, Disabled: 0, Commands: 0, Agents: 0, Errors: 0
+2026-01-09T10:14:55.141Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T10:14:55.141Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-09T10:14:55.141Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-09T10:14:55.143Z [DEBUG] Skill prompt: showing "document-skills:theme-factory" (userFacingName="theme-factory")
+2026-01-09T10:14:55.143Z [DEBUG] Skill prompt: showing "document-skills:doc-coauthoring" (userFacingName="doc-coauthoring")
+2026-01-09T10:14:55.143Z [DEBUG] Skill prompt: showing "document-skills:xlsx" (userFacingName="xlsx")
+2026-01-09T10:14:55.143Z [DEBUG] Skill prompt: showing "document-skills:pdf" (userFacingName="pdf")
+2026-01-09T10:14:55.143Z [DEBUG] Skill prompt: showing "document-skills:algorithmic-art" (userFacingName="algorithmic-art")
+2026-01-09T10:14:55.143Z [DEBUG] Skill prompt: showing "document-skills:internal-comms" (userFacingName="internal-comms")
+2026-01-09T10:14:55.143Z [DEBUG] Skill prompt: showing "document-skills:skill-creator" (userFacingName="skill-creator")
+2026-01-09T10:14:55.143Z [DEBUG] Skill prompt: showing "document-skills:canvas-design" (userFacingName="canvas-design")
+2026-01-09T10:14:55.143Z [DEBUG] Skill prompt: showing "document-skills:pptx" (userFacingName="pptx")
+2026-01-09T10:14:55.143Z [DEBUG] Skill prompt: showing "document-skills:slack-gif-creator" (userFacingName="slack-gif-creator")
+2026-01-09T10:14:55.143Z [DEBUG] Skill prompt: showing "document-skills:webapp-testing" (userFacingName="webapp-testing")
+2026-01-09T10:14:55.143Z [DEBUG] Skill prompt: showing "document-skills:frontend-design" (userFacingName="frontend-design")
+2026-01-09T10:14:55.143Z [DEBUG] Skill prompt: showing "document-skills:mcp-builder" (userFacingName="mcp-builder")
+2026-01-09T10:14:55.143Z [DEBUG] Skill prompt: showing "document-skills:brand-guidelines" (userFacingName="brand-guidelines")
+2026-01-09T10:14:55.143Z [DEBUG] Skill prompt: showing "document-skills:docx" (userFacingName="docx")
+2026-01-09T10:14:55.143Z [DEBUG] Skill prompt: showing "document-skills:web-artifacts-builder" (userFacingName="web-artifacts-builder")
+2026-01-09T10:14:55.143Z [DEBUG] Skills and commands included in Skill tool: finance-infographic, miaodong-finance-writer, zcf:git-worktree, zcf:bmad-init, zcf:workflow, zcf:feat, zcf:init-project, zcf:git-commit, zcf:git-cleanBranches, zcf:git-rollback, oncall-triage, commit-push-pr, dedupe, theme-factory, doc-coauthoring, xlsx, pdf, algorithmic-art, internal-comms, skill-creator, canvas-design, pptx, slack-gif-creator, webapp-testing, frontend-design, mcp-builder, brand-guidelines, docx, web-artifacts-builder
+2026-01-09T10:14:55.144Z [DEBUG] Skill prompt: showing "document-skills:theme-factory" (userFacingName="theme-factory")
+2026-01-09T10:14:55.144Z [DEBUG] Skill prompt: showing "document-skills:doc-coauthoring" (userFacingName="doc-coauthoring")
+2026-01-09T10:14:55.144Z [DEBUG] Skill prompt: showing "document-skills:xlsx" (userFacingName="xlsx")
+2026-01-09T10:14:55.144Z [DEBUG] Skill prompt: showing "document-skills:pdf" (userFacingName="pdf")
+2026-01-09T10:14:55.144Z [DEBUG] Skill prompt: showing "document-skills:algorithmic-art" (userFacingName="algorithmic-art")
+2026-01-09T10:14:55.144Z [DEBUG] Skill prompt: showing "document-skills:internal-comms" (userFacingName="internal-comms")
+2026-01-09T10:14:55.144Z [DEBUG] Skill prompt: showing "document-skills:skill-creator" (userFacingName="skill-creator")
+2026-01-09T10:14:55.144Z [DEBUG] Skill prompt: showing "document-skills:canvas-design" (userFacingName="canvas-design")
+2026-01-09T10:14:55.144Z [DEBUG] Skill prompt: showing "document-skills:pptx" (userFacingName="pptx")
+2026-01-09T10:14:55.144Z [DEBUG] Skill prompt: showing "document-skills:slack-gif-creator" (userFacingName="slack-gif-creator")
+2026-01-09T10:14:55.144Z [DEBUG] Skill prompt: showing "document-skills:webapp-testing" (userFacingName="webapp-testing")
+2026-01-09T10:14:55.144Z [DEBUG] Skill prompt: showing "document-skills:frontend-design" (userFacingName="frontend-design")
+2026-01-09T10:14:55.144Z [DEBUG] Skill prompt: showing "document-skills:mcp-builder" (userFacingName="mcp-builder")
+2026-01-09T10:14:55.144Z [DEBUG] Skill prompt: showing "document-skills:brand-guidelines" (userFacingName="brand-guidelines")
+2026-01-09T10:14:55.144Z [DEBUG] Skill prompt: showing "document-skills:docx" (userFacingName="docx")
+2026-01-09T10:14:55.144Z [DEBUG] Skill prompt: showing "document-skills:web-artifacts-builder" (userFacingName="web-artifacts-builder")
+2026-01-09T10:14:55.144Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T10:14:55.144Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T10:14:55.144Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T10:14:55.144Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T10:14:55.144Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T10:14:55.144Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-09T10:14:55.144Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-09T10:14:55.145Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T10:14:55.145Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-09T10:14:55.148Z [DEBUG] Detected Homebrew cask installation: /opt/homebrew/Caskroom/claude-code/2.1.1/claude
+2026-01-09T10:14:55.156Z [DEBUG] Writing to temp file: /Users/henry/.claude.json.tmp.45738.1767953695156
+2026-01-09T10:14:55.156Z [DEBUG] Preserving file permissions: 100644
+2026-01-09T10:14:55.157Z [DEBUG] Temp file written successfully, size: 4873 bytes
+2026-01-09T10:14:55.157Z [DEBUG] Applied original permissions to temp file
+2026-01-09T10:14:55.157Z [DEBUG] Renaming /Users/henry/.claude.json.tmp.45738.1767953695156 to /Users/henry/.claude.json
+2026-01-09T10:14:55.157Z [DEBUG] File /Users/henry/.claude.json written atomically
+2026-01-09T10:14:56.192Z [ERROR] MCP server "chrome-devtools" Server stderr: chrome-devtools-mcp exposes content of the browser instance to the MCP clients allowing them to inspect,
+debug, and modify any data in the browser or DevTools.
+Avoid sharing sensitive or personal information that you do not want to share with MCP clients.
+2026-01-09T10:14:56.196Z [DEBUG] MCP server "chrome-devtools": Successfully connected to stdio server in 1688ms
+2026-01-09T10:14:56.196Z [DEBUG] MCP server "chrome-devtools": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"chrome_devtools","title":"Chrome DevTools MCP server","version":"0.12.1"}}
+2026-01-09T10:14:56.196Z [ERROR] MCP server "tavily" Server stderr: Tavily MCP server running on stdio
+2026-01-09T10:14:56.199Z [DEBUG] MCP server "tavily": Successfully connected to stdio server in 1685ms
+2026-01-09T10:14:56.199Z [DEBUG] MCP server "tavily": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"tavily-mcp","version":"0.2.10"}}
+2026-01-09T10:14:57.828Z [DEBUG] Skipping SessionEnd:prompt_input_exit hook execution - workspace trust not accepted

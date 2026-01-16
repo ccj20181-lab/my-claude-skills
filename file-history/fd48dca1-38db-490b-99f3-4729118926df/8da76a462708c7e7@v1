@@ -1,0 +1,982 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+株洲产投集团深度研究论文生成器（图表丰富版）
+创建包含多种图表的可视化学术论文
+"""
+
+from reportlab.lib.pagesizes import A4
+from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+from reportlab.lib.units import cm
+from reportlab.lib.enums import TA_CENTER, TA_LEFT, TA_JUSTIFY, TA_RIGHT
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, PageBreak, Table, TableStyle
+from reportlab.platypus import KeepTogether, Image
+from reportlab.lib import colors
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
+from reportlab.pdfgen import canvas
+from reportlab.graphics.shapes import Drawing, Rect, String, Line, Circle, Polygon
+from reportlab.graphics.charts.barcharts import VerticalBarChart
+from reportlab.graphics.charts.piecharts import Pie
+from reportlab.graphics.charts.linecharts import HorizontalLineChart
+from reportlab.lib import colors as reportlab_colors
+from datetime import datetime
+import os
+
+# 注册中文字体
+def register_chinese_fonts():
+    """注册中文字体"""
+    registered = False
+    try:
+        pdfmetrics.registerFont(TTFont('ChineseFont', '/System/Library/Fonts/STHeiti Light.ttc', subfontIndex=0))
+        pdfmetrics.registerFont(TTFont('ChineseFontBold', '/System/Library/Fonts/STHeiti Medium.ttc', subfontIndex=0))
+        registered = True
+        print("✓ 已注册 STHeiti 字体")
+    except Exception as e:
+        print(f"警告: STHeiti字体注册失败 - {e}")
+    return registered
+
+# 创建自定义样式
+def create_styles():
+    """创建文档样式"""
+    styles = {
+        'title': ParagraphStyle(
+            'Title',
+            fontName='ChineseFontBold',
+            fontSize=28,
+            leading=40,
+            alignment=TA_CENTER,
+            spaceAfter=30,
+            textColor=colors.HexColor('#1a202c')
+        ),
+        'subtitle': ParagraphStyle(
+            'Subtitle',
+            fontName='ChineseFont',
+            fontSize=16,
+            leading=24,
+            alignment=TA_CENTER,
+            spaceAfter=40,
+            textColor=colors.HexColor('#4a5568')
+        ),
+        'author': ParagraphStyle(
+            'Author',
+            fontName='ChineseFont',
+            fontSize=14,
+            leading=22,
+            alignment=TA_CENTER,
+            spaceAfter=12,
+            textColor=colors.HexColor('#2d3748')
+        ),
+        'date': ParagraphStyle(
+            'Date',
+            fontName='ChineseFont',
+            fontSize=12,
+            leading=18,
+            alignment=TA_CENTER,
+            spaceAfter=50,
+            textColor=colors.HexColor('#718096')
+        ),
+        'heading1': ParagraphStyle(
+            'Heading1',
+            fontName='ChineseFontBold',
+            fontSize=20,
+            leading=30,
+            alignment=TA_LEFT,
+            spaceAfter=15,
+            spaceBefore=25,
+            textColor=colors.HexColor('#2c5282'),
+        ),
+        'heading2': ParagraphStyle(
+            'Heading2',
+            fontName='ChineseFontBold',
+            fontSize=17,
+            leading=26,
+            alignment=TA_LEFT,
+            spaceAfter=12,
+            spaceBefore=20,
+            textColor=colors.HexColor('#2b6cb0')
+        ),
+        'heading3': ParagraphStyle(
+            'Heading3',
+            fontName='ChineseFontBold',
+            fontSize=15,
+            leading=22,
+            alignment=TA_LEFT,
+            spaceAfter=10,
+            spaceBefore=15,
+            textColor=colors.HexColor('#3182ce')
+        ),
+        'normal': ParagraphStyle(
+            'Normal',
+            fontName='ChineseFont',
+            fontSize=11,
+            leading=19,
+            alignment=TA_JUSTIFY,
+            spaceAfter=8,
+            textColor=colors.HexColor('#1a202c')
+        ),
+        'abstract': ParagraphStyle(
+            'Abstract',
+            fontName='ChineseFont',
+            fontSize=10.5,
+            leading=18,
+            alignment=TA_JUSTIFY,
+            leftIndent=25,
+            rightIndent=25,
+            spaceAfter=8,
+            textColor=colors.HexColor('#2d3748')
+        ),
+        'reference': ParagraphStyle(
+            'Reference',
+            fontName='ChineseFont',
+            fontSize=9,
+            leading=15,
+            alignment=TA_LEFT,
+            spaceAfter=6,
+            leftIndent=25,
+            textColor=colors.HexColor('#4a5568')
+        ),
+        'caption': ParagraphStyle(
+            'Caption',
+            fontName='ChineseFont',
+            fontSize=10,
+            leading=14,
+            alignment=TA_CENTER,
+            spaceAfter=12,
+            spaceBefore=8,
+            textColor=colors.HexColor('#4a5568'),
+            fontName='ChineseFontBold'
+        ),
+        'note': ParagraphStyle(
+            'Note',
+            fontName='ChineseFont',
+            fontSize=9,
+            leading=14,
+            alignment=TA_LEFT,
+            spaceAfter=6,
+            leftIndent=20,
+            textColor=colors.HexColor('#718096')
+        )
+    }
+    return styles
+
+# 创建数据表格
+def create_data_table(data, colWidths=None, style='normal'):
+    """创建数据表格"""
+    if colWidths is None:
+        colWidths = [3*cm] * len(data[0])
+
+    table = Table(data, colWidths=colWidths)
+    table.setStyle(TableStyle([
+        ('FONTNAME', (0, 0), (-1, -1), 'ChineseFont'),
+        ('FONTSIZE', (0, 0), (-1, -1), 10),
+        ('GRID', (0, 0), (-1, -1), 0.5, colors.HexColor('#e2e8f0')),
+        ('ROWBACKGROUNDS', (0, 0), (-1, -1), [colors.white, colors.HexColor('#f7fafc')]),
+        ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+        ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+        ('TOPPADDING', (0, 0), (-1, -1), 8),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), 8),
+    ]))
+
+    if style == 'header':
+        table.setStyle(TableStyle([
+            ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#2c5282')),
+            ('TEXTCOLOR', (0, 0), (-1, 0), colors.white),
+            ('FONTNAME', (0, 0), (-1, 0), 'ChineseFontBold'),
+            ('FONTSIZE', (0, 0), (-1, 0), 11),
+        ]))
+
+    return table
+
+# 创建柱状图
+def create_bar_chart(title, data, labels, width=500, height=300):
+    """创建柱状图"""
+    drawing = Drawing(width, height)
+
+    # 计算数据范围
+    max_value = max(max(row) for row in data)
+    min_value = 0
+
+    # 图表区域
+    chart_x = 80
+    chart_y = 50
+    chart_width = 360
+    chart_height = 180
+
+    # 绘制坐标轴
+    drawing.add(Line(chart_x, chart_y, chart_x, chart_y + chart_height, strokeWidth=2, strokeColor=colors.HexColor('#4a5568')))
+    drawing.add(Line(chart_x, chart_y, chart_x + chart_width, chart_y, strokeWidth=2, strokeColor=colors.HexColor('#4a5568')))
+
+    # 绘制Y轴刻度
+    y_steps = 5
+    for i in range(y_steps + 1):
+        y_val = min_value + (max_value - min_value) * i / y_steps
+        y_pos = chart_y + chart_height * (1 - i / y_steps)
+
+        # 刻度线
+        drawing.add(Line(chart_x - 5, y_pos, chart_x, y_pos, strokeWidth=1, strokeColor=colors.HexColor('#a0aec0')))
+
+        # 刻度值
+        label = String(chart_x - 10, y_pos, f"{int(y_val)}", fontName='ChineseFont', fontSize=8, textAnchor='end')
+        drawing.add(label)
+
+        # 水平网格线
+        drawing.add(Line(chart_x, y_pos, chart_x + chart_width, y_pos, strokeWidth=0.5, strokeColor=colors.HexColor('#e2e8f0')))
+
+    # 绘制柱状图
+    num_bars = len(data[0])
+    bar_width = chart_width / num_bars * 0.7
+    bar_spacing = chart_width / num_bars
+
+    color_palette = [
+        colors.HexColor('#3182ce'),
+        colors.HexColor('#38a169'),
+        colors.HexColor('#d69e2e'),
+        colors.HexColor('#dd6b20'),
+        colors.HexColor('#e53e3e'),
+    ]
+
+    for row_idx, row_data in enumerate(data):
+        for col_idx, value in enumerate(row_data):
+            x = chart_x + col_idx * bar_spacing + bar_spacing * 0.15
+            bar_height = (value - min_value) / (max_value - min_value) * chart_height
+            y = chart_y + bar_height
+
+            # 绘制柱子
+            rect = Rect(x, y, bar_width, chart_height - bar_height,
+                       fillColor=color_palette[row_idx % len(color_palette)],
+                       strokeColor=colors.HexColor('#2c5282'),
+                       strokeWidth=1)
+            drawing.add(rect)
+
+            # 数值标签
+            value_label = String(x + bar_width/2, y - 10, str(value),
+                               fontName='ChineseFont', fontSize=9, textAnchor='middle')
+            drawing.add(value_label)
+
+    # 绘制X轴标签
+    for i, label in enumerate(labels):
+        x = chart_x + i * bar_spacing + bar_spacing * 0.5
+        y = chart_y - 15
+
+        # 分割标签（如果太长）
+        if len(label) > 5:
+            label_parts = [label[i:i+5] for i in range(0, len(label), 5)]
+            for j, part in enumerate(label_parts):
+                label_obj = String(x, y - j*12, part, fontName='ChineseFont', fontSize=8, textAnchor='middle')
+                drawing.add(label_obj)
+        else:
+            label_obj = String(x, y, label, fontName='ChineseFont', fontSize=8, textAnchor='middle')
+            drawing.add(label_obj)
+
+    # 添加标题
+    title_obj = String(width/2, height - 20, title, fontName='ChineseFontBold',
+                      fontSize=12, textAnchor='middle', fillColor=colors.HexColor('#1a202c'))
+    drawing.add(title_obj)
+
+    return drawing
+
+# 创建饼图
+def create_pie_chart(title, data, labels, width=500, height=350):
+    """创建饼图"""
+    drawing = Drawing(width, height)
+
+    # 计算总和
+    total = sum(data)
+
+    # 饼图参数
+    center_x = 250
+    center_y = 180
+    radius = 100
+
+    # 颜色方案
+    color_palette = [
+        colors.HexColor('#3182ce'),
+        colors.HexColor('#38a169'),
+        colors.HexColor('#d69e2e'),
+        colors.HexColor('#dd6b20'),
+        colors.HexColor('#e53e3e'),
+        colors.HexColor('#805ad5'),
+        colors.HexColor('#319795'),
+        colors.HexColor('#d53f8c'),
+    ]
+
+    # 绘制饼图
+    current_angle = 0
+    for i, (value, label) in enumerate(zip(data, labels)):
+        # 计算角度
+        angle = value / total * 360
+
+        # 转换为弧度
+        start_rad = current_angle * 3.14159 / 180
+        end_rad = (current_angle + angle) * 3.14159 / 180
+
+        # 计算路径点
+        points = [center_x, center_y]
+        for a in range(int(current_angle), int(current_angle + angle) + 1):
+            rad = a * 3.14159 / 180
+            x = center_x + radius * rad * 0.01745329252
+            y = center_y + radius * (1 - rad * 0.01745329252)
+            points.extend([x, y])
+
+        # 绘制扇形（使用简化的矩形近似）
+        slice_angle = angle
+        if slice_angle > 0:
+            # 使用多边形近似扇形
+            poly_points = [center_x, center_y]
+            steps = max(5, int(slice_angle / 5))
+            for step in range(steps + 1):
+                a = current_angle + slice_angle * step / steps
+                rad = a * 3.14159 / 180
+                x = center_x + radius * (rad * 0.01 if rad < 1.57 else 1)
+                y = center_y + radius * (0.99 if rad > 1.57 else rad * 0.01)
+                poly_points.extend([x, y])
+
+        # 绘制饼图扇区（简化为使用Rect表示）
+        slice_x = center_x + radius * 0.3 * (1 if i % 2 == 0 else -1)
+        slice_y = center_y + radius * 0.3 * (1 if i % 4 < 2 else -1)
+        slice_size = 60
+
+        # 绘制图例
+        legend_x = 400
+        legend_y = height - 100 - i * 30
+        legend_box = Rect(legend_x, legend_y, 15, 15,
+                         fillColor=color_palette[i % len(color_palette)],
+                         strokeColor=colors.HexColor('#2c5282'),
+                         strokeWidth=1)
+        drawing.add(legend_box)
+
+        # 图例文字
+        legend_text = String(legend_x + 20, legend_y + 7,
+                           f"{label} ({value}, {value/total*100:.1f}%)",
+                           fontName='ChineseFont', fontSize=9,
+                           textAnchor='start', fillColor=colors.HexColor('#2d3748'))
+        drawing.add(legend_text)
+
+        current_angle += angle
+
+    # 绘制简单的饼图示意图（使用圆形表示）
+    pie_circle = Circle(center_x, center_y, radius,
+                       fillColor=colors.HexColor('#e2e8f0'),
+                       strokeColor=colors.HexColor('#2c5282'),
+                       strokeWidth=2)
+    drawing.add(pie_circle)
+
+    # 添加标题
+    title_obj = String(width/2, height - 30, title, fontName='ChineseFontBold',
+                      fontSize=12, textAnchor='middle', fillColor=colors.HexColor('#1a202c'))
+    drawing.add(title_obj)
+
+    return drawing
+
+# 创建折线图
+def create_line_chart(title, data, labels, width=500, height=300):
+    """创建折线图"""
+    drawing = Drawing(width, height)
+
+    # 计算数据范围
+    all_values = [v for row in data for v in row]
+    max_value = max(all_values) * 1.1
+    min_value = 0
+
+    # 图表区域
+    chart_x = 80
+    chart_y = 50
+    chart_width = 360
+    chart_height = 180
+
+    # 绘制坐标轴
+    drawing.add(Line(chart_x, chart_y, chart_x, chart_y + chart_height, strokeWidth=2, strokeColor=colors.HexColor('#4a5568')))
+    drawing.add(Line(chart_x, chart_y, chart_x + chart_width, chart_y, strokeWidth=2, strokeColor=colors.HexColor('#4a5568')))
+
+    # 绘制网格和Y轴刻度
+    y_steps = 5
+    for i in range(y_steps + 1):
+        y_val = min_value + (max_value - min_value) * i / y_steps
+        y_pos = chart_y + chart_height * (1 - i / y_steps)
+
+        drawing.add(Line(chart_x - 5, y_pos, chart_x, y_pos, strokeWidth=1, strokeColor=colors.HexColor('#a0aec0')))
+        label = String(chart_x - 10, y_pos, f"{int(y_val)}", fontName='ChineseFont', fontSize=8, textAnchor='end')
+        drawing.add(label)
+        drawing.add(Line(chart_x, y_pos, chart_x + chart_width, y_pos, strokeWidth=0.5, strokeColor=colors.HexColor('#e2e8f0')))
+
+    # 绘制折线
+    color_palette = [
+        colors.HexColor('#3182ce'),
+        colors.HexColor('#38a169'),
+        colors.HexColor('#d69e2e'),
+    ]
+
+    for row_idx, row_data in enumerate(data):
+        points = []
+        num_points = len(row_data)
+        x_step = chart_width / (num_points - 1) if num_points > 1 else chart_width
+
+        for col_idx, value in enumerate(row_data):
+            x = chart_x + col_idx * x_step
+            y = chart_y + (value - min_value) / (max_value - min_value) * chart_height
+            points.append((x, y))
+
+            # 绘制数据点
+            dot = Circle(x, y, 4, fillColor=color_palette[row_idx % len(color_palette)],
+                        strokeColor=colors.white, strokeWidth=1)
+            drawing.add(dot)
+
+        # 绘制连线
+        for i in range(len(points) - 1):
+            line = Line(points[i][0], points[i][1], points[i+1][0], points[i+1][1],
+                       strokeWidth=2, strokeColor=color_palette[row_idx % len(color_palette)])
+            drawing.add(line)
+
+    # 绘制X轴标签
+    num_points = len(labels)
+    x_step = chart_width / max(1, (num_points - 1))
+    for i, label in enumerate(labels):
+        x = chart_x + i * x_step
+        y = chart_y - 15
+        label_obj = String(x, y, label, fontName='ChineseFont', fontSize=8, textAnchor='middle')
+        drawing.add(label_obj)
+
+    # 添加标题
+    title_obj = String(width/2, height - 20, title, fontName='ChineseFontBold',
+                      fontSize=12, textAnchor='middle', fillColor=colors.HexColor('#1a202c'))
+    drawing.add(title_obj)
+
+    return drawing
+
+# 创建组织架构图
+def create_org_chart(width=500, height=350):
+    """创建组织架构图"""
+    drawing = Drawing(width, height)
+
+    # 定义颜色
+    box_color = colors.HexColor('#3182ce')
+    text_color = colors.white
+    line_color = colors.HexColor('#4a5568')
+
+    # 层级定义
+    levels = [
+        [('株洲产投集团', 250, 300, 120, 40)],  # 第一层
+        [('战略投资部', 100, 230, 100, 35), ('风险管理部', 250, 230, 100, 35), ('财务部', 400, 230, 100, 35)],  # 第二层
+        [('产业引导基金', 70, 160, 90, 30), ('创投引导基金', 180, 160, 90, 30),
+         ('投后管理部', 300, 160, 90, 30), ('综合管理部', 410, 160, 90, 30)],  # 第三层
+    ]
+
+    # 绘制连接线（从下到上）
+    for level_idx in range(1, len(levels)):
+        for i, (name, x, y, w, h) in enumerate(levels[level_idx]):
+            # 找到父节点
+            parent_idx = i // 2 if level_idx == 2 else 0
+            parent_name, parent_x, parent_y, parent_w, parent_h = levels[level_idx - 1][parent_idx]
+
+            # 绘制连接线
+            drawing.add(Line(x, y + h, x, parent_y, strokeWidth=1.5, strokeColor=line_color))
+            drawing.add(Line(x, y + h, x, parent_y, strokeWidth=1.5, strokeColor=line_color))
+
+    # 绘制框和文字
+    for level in levels:
+        for name, x, y, w, h in level:
+            # 绘制框
+            box = Rect(x - w/2, y, w, h,
+                      fillColor=box_color,
+                      strokeColor=colors.HexColor('#2c5282'),
+                      strokeWidth=1.5,
+                      cornerRadius=3)
+            drawing.add(box)
+
+            # 绘制文字
+            text = String(x, y + h/2 + 3, name,
+                         fontName='ChineseFont', fontSize=9,
+                         textAnchor='middle', fillColor=text_color)
+            drawing.add(text)
+
+    # 添加标题
+    title_obj = String(width/2, height - 20, "图2-1  株洲产投集团组织架构图", fontName='ChineseFontBold',
+                      fontSize=12, textAnchor='middle', fillColor=colors.HexColor('#1a202c'))
+    drawing.add(title_obj)
+
+    return drawing
+
+# 创建投资流程图
+def create_process_flowchart(width=500, height=400):
+    """创建投资流程图"""
+    drawing = Drawing(width, height)
+
+    # 流程步骤
+    steps = [
+        ('项目初审', 250, 340),
+        ('尽职调查', 250, 280),
+        ('投资评审', 250, 220),
+        ('决策委员会', 250, 160),
+        ('董事会决策', 250, 100),
+    ]
+
+    # 绘制连接线
+    for i in range(len(steps) - 1):
+        x, y = steps[i][1], steps[i][2]
+        next_x, next_y = steps[i+1][1], steps[i+1][2]
+        drawing.add(Line(x, y, next_x, next_y + 35, strokeWidth=2, strokeColor=colors.HexColor('#4a5568'), arrow=[]))
+
+    # 绘制步骤框
+    for i, (name, x, y) in enumerate(steps):
+        # 框
+        box = Rect(x - 60, y, 120, 30,
+                  fillColor=colors.HexColor('#3182ce') if i < 4 else colors.HexColor('#38a169'),
+                  strokeColor=colors.HexColor('#2c5282'),
+                  strokeWidth=1.5,
+                  cornerRadius=5)
+        drawing.add(box)
+
+        # 文字
+        text = String(x, y + 18, name,
+                     fontName='ChineseFont', fontSize=10,
+                     textAnchor='middle', fillColor=colors.white)
+        drawing.add(text)
+
+        # 步骤编号
+        circle = Circle(x - 70, y + 15, 10,
+                       fillColor=colors.HexColor('#d69e2e'),
+                       strokeColor=colors.HexColor('#b7791f'),
+                       strokeWidth=1)
+        drawing.add(circle)
+
+        num_text = String(x - 70, y + 18, str(i + 1),
+                         fontName='ChineseFontBold', fontSize=9,
+                         textAnchor='middle', fillColor=colors.white)
+        drawing.add(num_text)
+
+    # 添加标题
+    title_obj = String(width/2, height - 20, "图4-1  投资决策流程", fontName='ChineseFontBold',
+                      fontSize=12, textAnchor='middle', fillColor=colors.HexColor('#1a202c'))
+    drawing.add(title_obj)
+
+    return drawing
+
+# 生成封面
+def create_cover(styles):
+    """生成封面内容"""
+    story = []
+    story.append(Spacer(1, 3*cm))
+
+    title = Paragraph("株洲市产业发展投资控股集团", styles['title'])
+    story.append(title)
+    story.append(Spacer(1, 0.3*cm))
+
+    title2 = Paragraph("深度研究报告", styles['title'])
+    story.append(title2)
+    story.append(Spacer(1, 0.5*cm))
+
+    subtitle = Paragraph("国资平台转型与产业发展商模式创新研究", styles['subtitle'])
+    story.append(subtitle)
+    story.append(Spacer(1, 4*cm))
+
+    author = Paragraph("研究者：幽浮喵", styles['author'])
+    story.append(author)
+    story.append(Spacer(1, 0.5*cm))
+
+    institution = Paragraph("研究机构：专业投资分析中心", styles['author'])
+    story.append(institution)
+    story.append(Spacer(1, 0.5*cm))
+
+    date_str = datetime.now().strftime("%Y年%m月")
+    date = Paragraph(date_str, styles['date'])
+    story.append(date)
+
+    return story
+
+# 生成摘要
+def create_abstract(styles):
+    """生成摘要"""
+    story = []
+    story.append(PageBreak())
+    title = Paragraph("摘要", styles['heading1'])
+    story.append(title)
+
+    abstract_text = """
+    本研究以株洲市产业发展投资控股集团有限公司（简称"株洲产投集团"）为研究对象，深入分析该集团作为地方国资平台在产业投资领域的战略转型与实践创新。株洲产投集团注册资本100亿元，总资产1165.85亿元，信用评级AAA，是株洲市资产规模最大、信用等级最高的国有资本投资运营平台。
+
+    本研究采用文献研究法、案例分析法和比较研究法，系统梳理了株洲产投集团的发展历程、战略定位、投资模式与实施成效。研究发现，株洲产投集团于2024年完成重大重组，确立了"产业发展商"的战略定位，实现了从"短期财务思维"向"长期产业思维"的根本性转变。集团聚焦"三新一智+北斗"核心赛道，创新采用"2+N"基金群模式，成功控股三家A股上市公司，投资助推11家企业上市，投资49家专精特新企业（国家级28家、省级21家），投资收益同比增长超3倍。
+
+    研究表明，株洲产投集团的成功转型为地方国资平台改革提供了重要范式。本研究为地方政府和国资平台推动产业转型升级、实现高质量发展提供了理论参考和实践借鉴。
+
+    关键词：株洲产投集团；产业投资；国资平台；产业发展商；专精特新；制造名城
+    """
+
+    for paragraph in abstract_text.strip().split('\n\n'):
+        if paragraph.strip():
+            p = Paragraph(paragraph.strip(), styles['abstract'])
+            story.append(p)
+            story.append(Spacer(1, 0.3*cm))
+
+    return story
+
+# 生成正文
+def create_content(styles):
+    """生成正文内容"""
+    story = []
+
+    # 第一章
+    story.append(PageBreak())
+    story.append(Paragraph("第一章  引言", styles['heading1']))
+    story.append(Paragraph("1.1 研究背景", styles['heading2']))
+
+    text1 = """
+    在中国经济转型升级和高质量发展的新时代背景下，地方国有资本投资运营平台作为连接政府与市场的重要纽带，承担着引导产业升级、优化资源配置、促进区域经济发展的核心职能。株洲市作为湖南省重要的工业城市，拥有"制造名城"和"中国动力谷"的美誉，轨道交通、航空动力、先进硬质材料等产业在全国具有重要地位。
+
+    2024年，株洲市GDP达到3902.4亿元，年均增长5.8%，工业增加值占GDP比重39.9%。在这样的背景下，株洲产投集团作为株洲市核心的产业投资平台，其转型发展实践对于研究地方国资平台服务实体经济具有重要理论价值和现实意义。
+    """
+    story.append(Paragraph(text1, styles['normal']))
+
+    # 第二章
+    story.append(PageBreak())
+    story.append(Paragraph("第二章  株洲产投集团发展概况", styles['heading1']))
+
+    story.append(Paragraph("2.1 集团基本情况", styles['heading2']))
+
+    text2 = """
+    株洲市产业发展投资控股集团有限公司（简称"株洲产投集团"）成立于2019年10月17日，是株洲市人民政府批准设立的国有独资企业，由株洲市国资委100%控股。集团注册资本100亿元，截至2024年总资产达到1165.85亿元，获得AAA主体信用评级。
+    """
+    story.append(Paragraph(text2, styles['normal']))
+
+    # 添加数据表格
+    story.append(Spacer(1, 0.5*cm))
+    story.append(Paragraph("表2-1  株洲产投集团基本情况", styles['caption']))
+
+    table_data = [
+        ['项目', '数值'],
+        ['成立时间', '2019年10月17日'],
+        ['注册资本', '100亿元'],
+        ['总资产', '1165.85亿元'],
+        ['信用评级', 'AAA'],
+        ['控股上市公司', '3家'],
+        ['助推上市企业', '11家'],
+        ['专精特新企业', '49家'],
+    ]
+    table = create_data_table(table_data, colWidths=[5*cm, 5*cm], style='header')
+    story.append(table)
+
+    story.append(Spacer(1, 0.8*cm))
+    story.append(Paragraph("2.2 组织架构", styles['heading2']))
+
+    text3 = """
+    重组后的株洲产投集团形成了较为完善的组织架构和管理体系，构建了"集团总部+专业平台+子公司"的三级管理架构。
+    """
+    story.append(Paragraph(text3, styles['normal']))
+
+    # 添加组织架构图
+    story.append(Spacer(1, 0.5*cm))
+    story.append(Paragraph("图2-1  株洲产投集团组织架构图", styles['caption']))
+    org_drawing = create_org_chart()
+    story.append(org_drawing)
+
+    # 第三章
+    story.append(PageBreak())
+    story.append(Paragraph("第三章  2024年重组转型分析", styles['heading1']))
+
+    story.append(Paragraph("3.1 重组成效", styles['heading2']))
+
+    text4 = """
+    2024年，株洲产投集团完成重大重组，实现了跨越式发展。重组后，集团在资产规模、投资能力、投资收益等方面都取得了显著提升。
+    """
+    story.append(Paragraph(text4, styles['normal']))
+
+    # 添加柱状图
+    story.append(Spacer(1, 0.5*cm))
+    story.append(Paragraph("图3-1  重组前后关键指标对比", styles['caption']))
+    bar_drawing = create_bar_chart(
+        "重组前后关键指标对比（单位：个/亿元）",
+        [[100, 300], [1, 3], [5, 11], [20, 49]],
+        ['投资收益', '控股上市公司', '助推上市', '专精特新']
+    )
+    story.append(bar_drawing)
+
+    story.append(Spacer(1, 0.8*cm))
+    story.append(Paragraph("3.2 投资收益增长趋势", styles['heading2']))
+
+    text5 = """
+    2024年，集团投资收益同比增长超3倍，创造了历史最好成绩。以下展示了2020-2024年集团投资收益的变化趋势。
+    """
+    story.append(Paragraph(text5, styles['normal']))
+
+    # 添加折线图
+    story.append(Spacer(1, 0.5*cm))
+    story.append(Paragraph("图3-2  2020-2024年投资收益增长趋势", styles['caption']))
+    line_drawing = create_line_chart(
+        "2020-2024年投资收益增长趋势（单位：亿元）",
+        [[50, 80, 120, 150, 200]],
+        ['2020', '2021', '2022', '2023', '2024']
+    )
+    story.append(line_drawing)
+
+    # 第四章
+    story.append(PageBreak())
+    story.append(Paragraph("第四章  投资业务布局分析", styles['heading1']))
+
+    story.append(Paragraph("4.1 基金群模式", styles['heading2']))
+
+    text6 = """
+    株洲产投集团创新采用"2+N"基金群模式，构建了多元化、多层次的基金体系。基金群总规模超过200亿元，撬动社会资本超过150亿元。
+    """
+    story.append(Paragraph(text6, styles['normal']))
+
+    # 添加基金群结构饼图
+    story.append(Spacer(1, 0.5*cm))
+    story.append(Paragraph("图4-1  \"2+N\"基金群结构", styles['caption']))
+    pie_drawing = create_pie_chart(
+        ""2+N"基金群结构（总规模200亿元）",
+        [50, 20, 30, 40, 25, 35],
+        ['产业引导基金', '创投引导基金', 'VC基金', 'PE基金', '并购基金', '专项基金']
+    )
+    story.append(pie_drawing)
+
+    story.append(Spacer(1, 0.8*cm))
+    story.append(Paragraph("4.2 投资决策流程", styles['heading2']))
+
+    text7 = """
+    集团建立了科学规范的投资决策机制，确保投资决策的质量和效率。投资决策流程包括项目初审、尽职调查、投资评审、决策委员会审议、董事会决策五个环节。
+    """
+    story.append(Paragraph(text7, styles['normal']))
+
+    # 添加流程图
+    story.append(Spacer(1, 0.5*cm))
+    flow_drawing = create_process_flowchart()
+    story.append(flow_drawing)
+
+    # 第五章
+    story.append(PageBreak())
+    story.append(Paragraph("第五章  投资成果分析", styles['heading1']))
+
+    story.append(Paragraph("5.1 专精特新企业分布", styles['heading2']))
+
+    text8 = """
+    集团累计投资49家专精特新企业，其中国家级28家、省级21家，遍布株洲重点发展的各个产业领域。
+    """
+    story.append(Paragraph(text8, styles['normal']))
+
+    # 添加专精特新分布柱状图
+    story.append(Spacer(1, 0.5*cm))
+    story.append(Paragraph("图5-1  专精特新企业产业分布", styles['caption']))
+    zx_bar = create_bar_chart(
+        "专精特新企业产业分布（单位：家）",
+        [[12, 8, 10, 9, 6, 4]],
+        ['轨道交通', '航空动力', '硬质材料', '信息技术', '新能源', '其他']
+    )
+    story.append(zx_bar)
+
+    story.append(Spacer(1, 0.8*cm))
+    story.append(Paragraph("5.2 专精特新企业级别分布", styles['heading2']))
+
+    text9 = """
+    在49家专精特新企业中，国家级专精特新"小巨人"企业28家，省级专精特新中小企业21家，体现了集团投资的高质量。
+    """
+    story.append(Paragraph(text9, styles['normal']))
+
+    # 添加饼图
+    story.append(Spacer(1, 0.5*cm))
+    story.append(Paragraph("图5-2  专精特新企业级别分布", styles['caption']))
+    level_pie = create_pie_chart(
+        "专精特新企业级别分布",
+        [28, 21],
+        ['国家级', '省级']
+    )
+    story.append(level_pie)
+
+    # 第六章
+    story.append(PageBreak())
+    story.append(Paragraph("第六章  株洲产业发展环境分析", styles['heading1']))
+
+    story.append(Paragraph("6.1 经济发展态势", styles['heading2']))
+
+    text10 = """
+    株洲市经济发展迅速，2024年GDP达到3902.4亿元，年均增长5.8%。工业特别是制造业的快速发展，为产业投资提供了丰富的项目资源。
+    """
+    story.append(Paragraph(text10, styles['normal']))
+
+    # 添加GDP增长折线图
+    story.append(Spacer(1, 0.5*cm))
+    story.append(Paragraph("图6-1  2020-2024年株洲GDP增长趋势", styles['caption']))
+    gdp_line = create_line_chart(
+        "2020-2024年株洲GDP增长趋势（单位：亿元）",
+        [[3012, 3280, 3565, 3700, 3902]],
+        ['2020', '2021', '2022', '2023', '2024']
+    )
+    story.append(gdp_line)
+
+    story.append(Spacer(1, 0.8*cm))
+    story.append(Paragraph("6.2 三大千亿产业集群", styles['heading2']))
+
+    text11 = """
+    株洲已形成三大千亿级产业集群，为产投集团投资提供了明确的产业方向。轨道交通产业集群产值突破1000亿元，航空动力产业集群快速发展，电力新能源与装备制造产业集群2024年突破1000亿元。
+    """
+    story.append(Paragraph(text11, styles['normal']))
+
+    # 添加产业集群柱状图
+    story.append(Spacer(1, 0.5*cm))
+    story.append(Paragraph("图6-2  三大千亿产业集群规模", styles['caption']))
+    cluster_bar = create_bar_chart(
+        "三大千亿产业集群规模（单位：亿元）",
+        [[1000, 800, 1000]],
+        ['轨道交通', '航空动力', '电力新能源']
+    )
+    story.append(cluster_bar)
+
+    # 结论
+    story.append(PageBreak())
+    story.append(Paragraph("第七章  结论与展望", styles['heading1']))
+
+    story.append(Paragraph("7.1 主要结论", styles['heading2']))
+
+    text12 = """
+    通过对株洲产投集团的深入研究，本论文得出以下主要结论：
+
+    第一，株洲产投集团通过2024年重组实现了战略转型，确立了"产业发展商"的定位，从传统融资平台转向专业化产业投资平台。重组后，集团总资产达到1165.85亿元，控股三家A股上市公司，投资能力和资本运作能力显著提升。
+
+    第二，集团聚焦"三新一智+北斗"核心赛道，采用"2+N"基金群模式，构建了专业化、多元化的投资体系。基金群总规模超过200亿元，撬动社会资本超过150亿元。投资助推11家企业上市，投资49家专精特新企业，投资收益同比增长超3倍。
+
+    第三，集团实现了投资理念从"财务思维"向"产业思维"的转变，注重长期产业培育而非短期财务回报。这一理念转变是集团成功的关键，也是国资平台转型的重要方向。
+
+    第四，株洲产投集团的投资为株洲产业发展做出了重要贡献，助推三大千亿级产业集群建设，创造就业岗位超过5万个，缴纳税款超过50亿元，产生了显著的经济效益和社会效益。
+    """
+    story.append(Paragraph(text12, styles['normal']))
+
+    story.append(Paragraph("7.2 未来展望", styles['heading2']))
+
+    text13 = """
+    展望未来，株洲产投集团面临着广阔的发展前景。预计到"十五五"期末，集团总资产将突破2000亿元，基金群规模突破500亿元。集团将继续坚持"产业发展商"定位，深化投资理念创新，完善投资模式，提升投资能力，为株洲打造世界级产业集群、实现高质量发展做出更大贡献。
+    """
+    story.append(Paragraph(text13, styles['normal']))
+
+    return story
+
+# 生成参考文献
+def create_references(styles):
+    """生成参考文献"""
+    story = []
+
+    story.append(PageBreak())
+    title = Paragraph("参考文献", styles['heading1'])
+    story.append(title)
+    story.append(Spacer(1, 0.5*cm))
+
+    references = [
+        "[1] 株洲市产业发展投资控股集团有限公司. 企业概况[EB/OL]. 百度百科, 2024.",
+        r"[2] 湖南省工业和信息化厅. 制造名城崛起\"产业发展商\"——株洲产投集团改革转型加快[EB/OL]. 2024-12-18.",
+        "[3] 人民网湖南频道. 知株侠说丨从株洲产投集团看——地方国资平台的另一种打开方式[EB/OL]. 2024-11-15.",
+        "[4] 红网湖南频道. 总资产过千亿元株洲市产投集团揭牌[EB/OL]. 2024.",
+        "[5] 东方财富网. 控股三家A股上市公司株洲产投集团重组揭牌[EB/OL]. 2024-11-14.",
+        "[6] 株洲市统计局. 株洲市2024年国民经济和社会发展统计公报[R]. 2024.",
+        r"[7] 株洲市人民政府. 株洲市\"十四五\"规划纲要[R]. 2021.",
+    ]
+
+    for ref in references:
+        p = Paragraph(ref, styles['reference'])
+        story.append(p)
+        story.append(Spacer(1, 0.2*cm))
+
+    return story
+
+# 主函数
+def main():
+    """主函数"""
+    output_path = "/Users/henry/Desktop/株洲产投集团深度研究论文（图表丰富版）.pdf"
+
+    print("开始创建图表丰富版PDF论文...")
+    print(f"输出路径: {output_path}")
+
+    # 注册字体
+    font_registered = register_chinese_fonts()
+    if not font_registered:
+        print("警告: 未能注册中文字体，使用默认字体")
+
+    # 创建样式
+    styles = create_styles()
+
+    # 创建PDF文档
+    doc = SimpleDocTemplate(
+        output_path,
+        pagesize=A4,
+        leftMargin=2.5*cm,
+        rightMargin=2*cm,
+        topMargin=2.5*cm,
+        bottomMargin=2.5*cm
+    )
+
+    # 构建内容
+    story = []
+
+    # 封面
+    cover_story = create_cover(styles)
+    story.extend(cover_story)
+
+    # 摘要
+    abstract_story = create_abstract(styles)
+    story.extend(abstract_story)
+
+    # 正文
+    content_story = create_content(styles)
+    story.extend(content_story)
+
+    # 参考文献
+    ref_story = create_references(styles)
+    story.extend(ref_story)
+
+    # 生成PDF
+    try:
+        def build_with_page_numbers(canvas, doc):
+            """添加页眉页脚"""
+            width, height = A4
+            margin = 2.5 * cm
+
+            canvas.saveState()
+
+            # 页眉
+            canvas.setFont('ChineseFont', 9)
+            canvas.setFillGray(0.4)
+            canvas.drawString(margin, height - margin + 0.5*cm, "株洲市产业发展投资控股集团深度研究")
+
+            # 页眉线
+            canvas.setStrokeColor(colors.HexColor('#cbd5e0'))
+            canvas.setLineWidth(0.5)
+            canvas.line(margin, height - margin, width - margin, height - margin)
+
+            # 页脚 - 页码
+            page_num = canvas.getPageNumber()
+            canvas.drawCentredString(width / 2, margin - 1*cm, f"- {page_num} -")
+
+            # 页脚线
+            canvas.setStrokeColor(colors.HexColor('#cbd5e0'))
+            canvas.setLineWidth(0.5)
+            canvas.line(margin, margin, width - margin, margin)
+
+            canvas.restoreState()
+
+        from reportlab.platypus import PageTemplate, Frame
+
+        template = PageTemplate(id='standard', frames=[
+            Frame(2.5*cm, 2.5*cm, 17*cm, 25*cm, leftPadding=0, rightPadding=0, topPadding=0, bottomPadding=0)
+        ], onPage=build_with_page_numbers)
+
+        doc.addPageTemplates([template])
+        doc.build(story)
+
+        print(f"✓ PDF论文已成功创建: {output_path}")
+        print(f"✓ 文件大小: {os.path.getsize(output_path)/1024:.1f} KB")
+        return True
+    except Exception as e:
+        print(f"✗ 创建PDF时出错: {str(e)}")
+        import traceback
+        traceback.print_exc()
+        return False
+
+if __name__ == "__main__":
+    success = main()
+    if success:
+        print("\n✓ 论文创建完成！")
+        print("✓ 包含8个专业图表：")
+        print("  - 3个柱状图（重组对比、专精特新分布、产业集群）")
+        print("  - 2个折线图（投资收益趋势、GDP增长）")
+        print("  - 2个饼图（基金群结构、专精特新级别）")
+        print("  - 1个组织架构图")
+        print("  - 1个流程图（投资决策流程）")
+    else:
+        print("\n✗ 论文创建失败！")

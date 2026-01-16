@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+.header {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 70pt;
+  background: #1C2833;
+  padding: 20pt 40pt;
+  box-sizing: border-box;
+}
+.header h1 {
+  font-size: 30pt;
+  color: #F4F6F6;
+  margin: 0;
+}
+.content {
+  position: absolute;
+  top: 70pt; left: 0; right: 0; bottom: 0;
+  padding: 20pt 40pt 40pt 40pt;
+  box-sizing: border-box;
+}
+.strategy-title {
+  font-size: 20pt;
+  color: #1C2833;
+  margin: 0 0 20pt 0;
+  font-weight: bold;
+  text-align: center;
+}
+.layout {
+  display: flex;
+  gap: 25pt;
+  height: 250pt;
+}
+.column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.chart-area {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 10pt;
+  padding: 15pt;
+  box-shadow: 0 2pt 8pt rgba(0,0,0,0.1);
+}
+.chart-area h2 {
+  font-size: 16pt;
+  color: #D4AF37;
+  margin: 0 0 10pt 0;
+  font-weight: bold;
+}
+.bullets {
+  margin-top: 15pt;
+}
+.bullets ul {
+  margin: 0;
+  padding-left: 20pt;
+  font-size: 13pt;
+  color: #2E4053;
+  line-height: 1.6;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>核心策略：哑铃型配置，攻守兼备</h1>
+</div>
+<div class="content">
+  <p class="strategy-title">2025年投资主线：一手抓硬科技成长，一手抓高红利防守</p>
+  <div class="layout">
+    <div class="column">
+      <div class="chart-area" id="chart1" class="placeholder" style="width: 100%; height: 100%;"></div>
+    </div>
+    <div class="column">
+      <div class="chart-area" id="chart2" class="placeholder" style="width: 100%; height: 100%;"></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

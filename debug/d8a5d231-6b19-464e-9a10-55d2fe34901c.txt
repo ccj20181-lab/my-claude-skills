@@ -1,0 +1,150 @@
+2026-01-08T03:30:33.463Z [DEBUG] Watching for changes in setting files /Users/henry/.claude, /Users/henry/.claude, /Users/henry/.claude...
+2026-01-08T03:30:33.464Z [DEBUG] [init] configureGlobalMTLS starting
+2026-01-08T03:30:33.464Z [DEBUG] [init] configureGlobalMTLS complete
+2026-01-08T03:30:33.464Z [DEBUG] [init] configureGlobalAgents starting
+2026-01-08T03:30:33.464Z [DEBUG] [init] configureGlobalAgents complete
+2026-01-08T03:30:33.468Z [DEBUG] [LSP MANAGER] initializeLspServerManager() called
+2026-01-08T03:30:33.468Z [DEBUG] [LSP MANAGER] Created manager instance, state=pending
+2026-01-08T03:30:33.468Z [DEBUG] [LSP MANAGER] Starting async initialization (generation 1)
+2026-01-08T03:30:33.469Z [DEBUG] Applying permission update: Adding 23 allow rule(s) to destination 'userSettings': ["Bash","BashOutput","Edit","Glob","Grep","KillShell","NotebookEdit","Read","SlashCommand","Task","TodoWrite","WebFetch","WebSearch","Write","mcp__ide","mcp__exa","mcp__context7","mcp__mcp-deepwiki","mcp__Playwright","mcp__spec-workflow","mcp__open-websearch","mcp__serena","mcp__tavily"]
+2026-01-08T03:30:33.469Z [DEBUG] Applying permission update: Adding 23 allow rule(s) to destination 'projectSettings': ["Bash","BashOutput","Edit","Glob","Grep","KillShell","NotebookEdit","Read","SlashCommand","Task","TodoWrite","WebFetch","WebSearch","Write","mcp__ide","mcp__exa","mcp__context7","mcp__mcp-deepwiki","mcp__Playwright","mcp__spec-workflow","mcp__open-websearch","mcp__serena","mcp__tavily"]
+2026-01-08T03:30:33.469Z [DEBUG] Applying permission update: Adding 2 allow rule(s) to destination 'localSettings': ["mcp__tavily__tavily-search","mcp__tavily__tavily-crawl"]
+2026-01-08T03:30:33.469Z [DEBUG] [STARTUP] Loading MCP configs...
+2026-01-08T03:30:33.469Z [DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+2026-01-08T03:30:33.469Z [DEBUG] Total LSP servers loaded: 0
+2026-01-08T03:30:33.469Z [DEBUG] [LSP SERVER MANAGER] getAllLspServers returned 0 server(s)
+2026-01-08T03:30:33.469Z [DEBUG] LSP manager initialized with 0 servers
+2026-01-08T03:30:33.469Z [DEBUG] [STARTUP] MCP configs loaded in 0ms
+2026-01-08T03:30:33.469Z [DEBUG] LSP server manager initialized successfully
+2026-01-08T03:30:33.469Z [DEBUG] LSP notification handlers registered successfully for all 0 server(s)
+2026-01-08T03:30:33.470Z [DEBUG] [STARTUP] Running setup()...
+2026-01-08T03:30:33.470Z [DEBUG] Stats cache does not exist, returning empty cache
+2026-01-08T03:30:33.471Z [DEBUG] Stats cache empty, processing all historical data in background
+2026-01-08T03:30:33.471Z [DEBUG] Plugin autoupdate: skipped (auto-updater disabled)
+2026-01-08T03:30:33.473Z [DEBUG] Loading skills from: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/henry/.claude/skills, project=[]
+2026-01-08T03:30:33.517Z [DEBUG] installed_plugins.json doesn't exist, returning empty V2 object
+2026-01-08T03:30:33.520Z [DEBUG] Writing to temp file: /Users/henry/.claude/todos/d8a5d231-6b19-464e-9a10-55d2fe34901c-agent-d8a5d231-6b19-464e-9a10-55d2fe34901c.json.tmp.9211.1767843033520
+2026-01-08T03:30:33.521Z [DEBUG] Temp file written successfully, size: 2 bytes
+2026-01-08T03:30:33.521Z [DEBUG] Renaming /Users/henry/.claude/todos/d8a5d231-6b19-464e-9a10-55d2fe34901c-agent-d8a5d231-6b19-464e-9a10-55d2fe34901c.json.tmp.9211.1767843033520 to /Users/henry/.claude/todos/d8a5d231-6b19-464e-9a10-55d2fe34901c-agent-d8a5d231-6b19-464e-9a10-55d2fe34901c.json
+2026-01-08T03:30:33.521Z [DEBUG] File /Users/henry/.claude/todos/d8a5d231-6b19-464e-9a10-55d2fe34901c-agent-d8a5d231-6b19-464e-9a10-55d2fe34901c.json written atomically
+2026-01-08T03:30:33.521Z [DEBUG] getPluginSkills: Processing 0 enabled plugins
+2026-01-08T03:30:33.521Z [DEBUG] Total plugin skills loaded: 0
+2026-01-08T03:30:33.521Z [DEBUG] Total plugin commands loaded: 0
+2026-01-08T03:30:33.522Z [DEBUG] Registered 0 hooks from 0 plugins
+2026-01-08T03:30:33.522Z [DEBUG] [STARTUP] setup() completed in 52ms
+2026-01-08T03:30:33.522Z [DEBUG] [STARTUP] Loading commands and agents...
+2026-01-08T03:30:33.526Z [DEBUG] Watching for changes in skill directories: /Users/henry/.claude/skills, /Users/henry/.claude/skills...
+2026-01-08T03:30:33.536Z [DEBUG] Loaded 11 unique skills (managed: 0, user: 0, project: 0, legacy commands: 11)
+2026-01-08T03:30:33.536Z [DEBUG] getSkills returning: 11 skill dir commands, 0 plugin skills
+2026-01-08T03:30:33.543Z [DEBUG] Total plugin agents loaded: 0
+2026-01-08T03:30:33.543Z [DEBUG] [STARTUP] Commands and agents loaded in 21ms
+2026-01-08T03:30:33.543Z [DEBUG] [STARTUP] Running showSetupScreens()...
+2026-01-08T03:30:33.543Z [DEBUG] [render] initYoga starting
+2026-01-08T03:30:33.551Z [DEBUG] [render] initYoga complete
+2026-01-08T03:30:33.584Z [DEBUG] Git remote URL: null
+2026-01-08T03:30:33.584Z [DEBUG] No git remote URL found
+2026-01-08T03:30:33.584Z [DEBUG] Not in a GitHub repository, skipping path mapping update
+2026-01-08T03:30:33.585Z [DEBUG] Creating shell snapshot for zsh (/bin/zsh)
+2026-01-08T03:30:33.585Z [DEBUG] Looking for shell config file: /Users/henry/.zshrc
+2026-01-08T03:30:33.585Z [DEBUG] Shell config file not found: /Users/henry/.zshrc, creating snapshot with Claude Code defaults only
+2026-01-08T03:30:33.585Z [DEBUG] Snapshots directory: /Users/henry/.claude/shell-snapshots
+2026-01-08T03:30:33.585Z [DEBUG] Creating snapshot at: /Users/henry/.claude/shell-snapshots/snapshot-zsh-1767843033585-dikyix.sh
+2026-01-08T03:30:33.585Z [DEBUG] Shell binary exists: true
+2026-01-08T03:30:33.585Z [DEBUG] Execution timeout: 10000ms
+2026-01-08T03:30:33.590Z [DEBUG] Shell snapshot created successfully (582 bytes)
+2026-01-08T03:30:34.578Z [DEBUG] [render] initYoga starting
+2026-01-08T03:30:34.579Z [DEBUG] [render] initYoga complete
+2026-01-08T03:30:38.801Z [DEBUG] Writing to temp file: /Users/henry/.claude.json.tmp.9211.1767843038801
+2026-01-08T03:30:38.801Z [DEBUG] Preserving file permissions: 100644
+2026-01-08T03:30:38.802Z [DEBUG] Temp file written successfully, size: 3341 bytes
+2026-01-08T03:30:38.802Z [DEBUG] Applied original permissions to temp file
+2026-01-08T03:30:38.802Z [DEBUG] Renaming /Users/henry/.claude.json.tmp.9211.1767843038801 to /Users/henry/.claude.json
+2026-01-08T03:30:38.802Z [DEBUG] File /Users/henry/.claude.json written atomically
+2026-01-08T03:30:38.806Z [DEBUG] [STARTUP] showSetupScreens() completed in 5263ms
+2026-01-08T03:30:38.815Z [DEBUG] MCP server "Playwright": Starting connection with timeout of 60000ms
+2026-01-08T03:30:38.823Z [DEBUG] Initialized versioned plugins system with 0 plugins
+2026-01-08T03:30:38.825Z [DEBUG] Writing to temp file: /Users/henry/.claude.json.tmp.9211.1767843038825
+2026-01-08T03:30:38.825Z [DEBUG] Preserving file permissions: 100644
+2026-01-08T03:30:38.825Z [DEBUG] Temp file written successfully, size: 3341 bytes
+2026-01-08T03:30:38.825Z [DEBUG] Applied original permissions to temp file
+2026-01-08T03:30:38.825Z [DEBUG] Renaming /Users/henry/.claude.json.tmp.9211.1767843038825 to /Users/henry/.claude.json
+2026-01-08T03:30:38.825Z [DEBUG] File /Users/henry/.claude.json written atomically
+2026-01-08T03:30:39.291Z [DEBUG] Skipping SessionStart:startup hook execution - workspace trust not accepted
+2026-01-08T03:30:39.291Z [DEBUG] [render] initYoga starting
+2026-01-08T03:30:39.291Z [DEBUG] [render] initYoga complete
+2026-01-08T03:30:39.295Z [DEBUG] Skipping SubagentStart:Explore hook execution - workspace trust not accepted
+2026-01-08T03:30:39.298Z [DEBUG] Skipping SubagentStart:Plan hook execution - workspace trust not accepted
+2026-01-08T03:30:39.300Z [DEBUG] Skipping SubagentStart:Bash hook execution - workspace trust not accepted
+2026-01-08T03:30:39.408Z [DEBUG] Writing to temp file: /Users/henry/.claude.json.tmp.9211.1767843039408
+2026-01-08T03:30:39.408Z [DEBUG] Preserving file permissions: 100644
+2026-01-08T03:30:39.408Z [DEBUG] Temp file written successfully, size: 3233 bytes
+2026-01-08T03:30:39.408Z [DEBUG] Applied original permissions to temp file
+2026-01-08T03:30:39.408Z [DEBUG] Renaming /Users/henry/.claude.json.tmp.9211.1767843039408 to /Users/henry/.claude.json
+2026-01-08T03:30:39.408Z [DEBUG] File /Users/henry/.claude.json written atomically
+2026-01-08T03:30:39.409Z [DEBUG] Detected Homebrew cask installation: /opt/homebrew/Caskroom/claude-code/2.1.1/claude
+2026-01-08T03:30:39.410Z [DEBUG] [REPL:mount] REPL mounted, disabled=false
+2026-01-08T03:30:39.410Z [DEBUG] Detected Homebrew cask installation: /opt/homebrew/Caskroom/claude-code/2.1.1/claude
+2026-01-08T03:30:39.410Z [DEBUG] Official marketplace auto-install skipped: unknown
+2026-01-08T03:30:39.410Z [DEBUG] performStartupChecks called
+2026-01-08T03:30:39.410Z [DEBUG] Trust not accepted for current directory - skipping plugin installations
+2026-01-08T03:30:39.414Z [DEBUG] Writing to temp file: /Users/henry/.claude.json.tmp.9211.1767843039414
+2026-01-08T03:30:39.414Z [DEBUG] Preserving file permissions: 100644
+2026-01-08T03:30:39.414Z [DEBUG] Temp file written successfully, size: 3341 bytes
+2026-01-08T03:30:39.414Z [DEBUG] Applied original permissions to temp file
+2026-01-08T03:30:39.414Z [DEBUG] Renaming /Users/henry/.claude.json.tmp.9211.1767843039414 to /Users/henry/.claude.json
+2026-01-08T03:30:39.414Z [DEBUG] File /Users/henry/.claude.json written atomically
+2026-01-08T03:30:39.414Z [DEBUG] AutoUpdaterWrapper: Installation type: package-manager
+2026-01-08T03:30:39.414Z [DEBUG] Showing marketplace installation failure notification
+2026-01-08T03:30:39.415Z [DEBUG] Loaded plugins - Enabled: 0, Disabled: 0, Commands: 0, Agents: 0, Errors: 0
+2026-01-08T03:30:39.422Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-08T03:30:39.422Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T03:30:39.422Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T03:30:39.424Z [DEBUG] Skills and commands included in Skill tool: zcf:git-worktree, zcf:bmad-init, zcf:workflow, zcf:feat, zcf:init-project, zcf:git-commit, zcf:git-cleanBranches, zcf:git-rollback, oncall-triage, commit-push-pr, dedupe
+2026-01-08T03:30:39.425Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T03:30:39.425Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T03:30:39.425Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T03:30:39.426Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T03:30:39.426Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T03:30:39.426Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T03:30:39.426Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T03:30:39.426Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T03:30:39.426Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T03:30:39.430Z [DEBUG] Detected Homebrew cask installation: /opt/homebrew/Caskroom/claude-code/2.1.1/claude
+2026-01-08T03:30:39.434Z [DEBUG] Writing to temp file: /Users/henry/.claude.json.tmp.9211.1767843039434
+2026-01-08T03:30:39.434Z [DEBUG] Preserving file permissions: 100644
+2026-01-08T03:30:39.434Z [DEBUG] Temp file written successfully, size: 3341 bytes
+2026-01-08T03:30:39.434Z [DEBUG] Applied original permissions to temp file
+2026-01-08T03:30:39.434Z [DEBUG] Renaming /Users/henry/.claude.json.tmp.9211.1767843039434 to /Users/henry/.claude.json
+2026-01-08T03:30:39.434Z [DEBUG] File /Users/henry/.claude.json written atomically
+2026-01-08T03:30:40.070Z [DEBUG] MCP server "Playwright": Successfully connected to stdio server in 1258ms
+2026-01-08T03:30:40.070Z [DEBUG] MCP server "Playwright": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"Playwright","version":"0.0.54"}}
+2026-01-08T03:30:42.610Z [ERROR] Error streaming, falling back to non-streaming mode: 429 {"error":{"message":"All 1 attempts failed. Last error: HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"Resource has been exhausted (e.g. check quota).\",\n    \"status\": \"RESOURCE_EXHAUSTED\"\n  }\n}\n","type":"overloaded_error"},"type":"error"}
+2026-01-08T03:30:42.611Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T03:30:42.611Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T03:30:42.611Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T03:30:42.612Z [ERROR] Error streaming, falling back to non-streaming mode: 429 {"error":{"message":"All 1 attempts failed. Last error: HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"Resource has been exhausted (e.g. check quota).\",\n    \"status\": \"RESOURCE_EXHAUSTED\"\n  }\n}\n","type":"overloaded_error"},"type":"error"}
+2026-01-08T03:30:42.612Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T03:30:42.612Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T03:30:42.613Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T03:30:43.759Z [DEBUG] Stream started - received first chunk
+2026-01-08T03:30:43.800Z [DEBUG] Skipping SubagentStop hook execution - workspace trust not accepted
+2026-01-08T03:30:46.017Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-08T03:30:46.017Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-08T03:30:46.018Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-08T03:30:46.018Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-08T03:30:46.027Z [DEBUG] Skipping UserPromptSubmit hook execution - workspace trust not accepted
+2026-01-08T03:30:46.031Z [DEBUG] FileHistory: Added snapshot for b56af9a0-cbb6-4ee4-95a3-676bd5b5f211, tracking 0 files
+2026-01-08T03:30:46.041Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-08T03:30:46.041Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T03:30:46.041Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T03:30:46.042Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T03:30:46.048Z [DEBUG] Total plugin output styles loaded: 0
+2026-01-08T03:30:46.049Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-08T03:30:46.053Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T03:30:46.053Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T03:30:46.053Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-08T03:30:47.714Z [DEBUG] Stream started - received first chunk
+2026-01-08T03:30:47.933Z [ERROR] Error streaming, falling back to non-streaming mode: 429 {"error":{"message":"All 1 attempts failed. Last error: HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"Resource has been exhausted (e.g. check quota).\",\n    \"status\": \"RESOURCE_EXHAUSTED\"\n  }\n}\n","type":"overloaded_error"},"type":"error"}
+2026-01-08T03:30:47.933Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-08T03:30:47.933Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-08T03:30:47.933Z [DEBUG] [API:auth] OAuth token check complete

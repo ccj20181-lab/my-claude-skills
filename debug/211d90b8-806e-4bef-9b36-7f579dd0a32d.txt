@@ -1,0 +1,30 @@
+2026-01-09T07:16:49.535Z [DEBUG] Watching for changes in setting files /Users/henry/.claude, /Users/henry/.claude, /Users/henry/.claude...
+2026-01-09T07:16:49.536Z [DEBUG] [init] configureGlobalMTLS starting
+2026-01-09T07:16:49.536Z [DEBUG] [init] configureGlobalMTLS complete
+2026-01-09T07:16:49.536Z [DEBUG] [init] configureGlobalAgents starting
+2026-01-09T07:16:49.536Z [DEBUG] [init] configureGlobalAgents complete
+2026-01-09T07:16:49.544Z [DEBUG] Loading plugin document-skills from source: "./"
+2026-01-09T07:16:49.564Z [DEBUG] Watching for changes in skill directories: /Users/henry/.claude/skills, /Users/henry/.claude/skills...
+2026-01-09T07:16:49.572Z [DEBUG] Git remote URL: null
+2026-01-09T07:16:49.572Z [DEBUG] No git remote URL found
+2026-01-09T07:16:49.572Z [DEBUG] Not in a GitHub repository, skipping path mapping update
+2026-01-09T07:16:49.572Z [DEBUG] Using git SHA for document-skills@anthropic-agent-skills: 69c0b1a06741
+2026-01-09T07:16:49.574Z [DEBUG] Plugin document-skills@anthropic-agent-skills version 69c0b1a06741 already cached at /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741
+2026-01-09T07:16:49.574Z [DEBUG] Copied local plugin document-skills to versioned cache: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741
+2026-01-09T07:16:49.574Z [DEBUG] Processing 4 skill paths for plugin document-skills
+2026-01-09T07:16:49.574Z [DEBUG] Checking skill path: ./skills/xlsx -> /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/xlsx (exists: true)
+2026-01-09T07:16:49.574Z [DEBUG] Checking skill path: ./skills/docx -> /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/docx (exists: true)
+2026-01-09T07:16:49.574Z [DEBUG] Checking skill path: ./skills/pptx -> /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pptx (exists: true)
+2026-01-09T07:16:49.574Z [DEBUG] Checking skill path: ./skills/pdf -> /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pdf (exists: true)
+2026-01-09T07:16:49.574Z [DEBUG] Found 4 valid skill paths for plugin document-skills, setting skillsPaths
+2026-01-09T07:16:49.574Z [DEBUG] Found 1 plugins (1 enabled, 0 disabled)
+2026-01-09T07:16:49.576Z [DEBUG] MCP server "Playwright": Starting connection with timeout of 60000ms
+2026-01-09T07:16:49.579Z [DEBUG] MCP server "chrome-devtools": Starting connection with timeout of 60000ms
+2026-01-09T07:16:49.580Z [DEBUG] MCP server "tavily": Starting connection with timeout of 60000ms
+2026-01-09T07:16:51.122Z [ERROR] MCP server "chrome-devtools" Server stderr: chrome-devtools-mcp exposes content of the browser instance to the MCP clients allowing them to inspect,
+debug, and modify any data in the browser or DevTools.
+Avoid sharing sensitive or personal information that you do not want to share with MCP clients.
+2026-01-09T07:16:51.126Z [DEBUG] MCP server "chrome-devtools": Successfully connected to stdio server in 1548ms
+2026-01-09T07:16:51.126Z [DEBUG] MCP server "chrome-devtools": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"chrome_devtools","title":"Chrome DevTools MCP server","version":"0.12.1"}}
+2026-01-09T07:16:51.169Z [DEBUG] MCP server "Playwright": Successfully connected to stdio server in 1594ms
+2026-01-09T07:16:51.170Z [DEBUG] MCP server "Playwright": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"Playwright","version":"0.0.54"}}

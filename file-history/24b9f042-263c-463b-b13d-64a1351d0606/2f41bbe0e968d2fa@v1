@@ -1,0 +1,134 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+视觉规范提取工具
+
+使用 Gemini 2.5 Flash 分析参考图，提取具体的视觉参数
+"""
+import os
+import sys
+import base64
+import requests
+from pathlib import Path
+from dotenv import load_dotenv
+from typing import Dict, Any
+
+def load_env_config():
+    script_dir = Path(__file__).parent.parent
+    env_file = script_dir / ".env"
+    if env_file.exists():
+        load_dotenv(env_file)
+
+def get_reference_image_b64() -> str:
+    """获取第一张参考图的 base64 编码"""
+    ref_dir = Path(__file__).parent.parent / "references"
+    images = list(ref_dir.glob("*.png"))
+    if not images:
+        raise ValueError("未找到参考图")
+
+    with open(images[0], "rb") as f:
+        return base64.b64encode(f.read()).decode("utf-8")
+
+def extract_visual_specs() -> Dict[str, Any]:
+    """使用 AI 提取参考图的视觉规范"""
+    load_dotenv()
+
+    # 使用 Google Gemini 2.5 Flash（更便宜、更快）
+    api_key = os.environ.get("GOOGLE_API_KEY", "").strip()
+    if not api_key:
+        raise ValueError("未配置 GOOGLE_API_KEY")
+
+    api_url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview:generateContent"
+
+    ref_image_b64 = get_reference_image_b64()
+
+    prompt = """请仔细分析这张财经信息图参考图，提取出以下具体参数，以JSON格式输出：
+
+{
+  "logo": {
+    "position": "右上角",
+    "content": "秒懂金融",
+    "background_color": "背景色代码（如#FF6B00）",
+    "text_color": "文字颜色代码",
+    "size_estimate": "大致尺寸（如80x40px）",
+    "border_radius": "圆角大小（如8px）"
+  },
+  "main_title": {
+    "font_size": "64px（固定）",
+    "color": "颜色代码",
+    "background_shape": "背景形状描述（如有）",
+    "font_weight": "字体粗细"
+  },
+  "border": {
+    "border_radius": "圆角大小",
+    "border_width": "边框粗细",
+    "border_color": "边框颜色代码",
+    "shadow_offset": "阴影偏移",
+    "shadow_blur": "阴影模糊度",
+    "shadow_color": "阴影颜色代码"
+  },
+  "colors": {
+    "background": "背景颜色代码",
+    "primary": "主色调代码",
+    "secondary": "辅助色代码",
+    "text_primary": "主要文字颜色",
+    "text_secondary": "次要文字颜色",
+    "accent": "强调色代码"
+  },
+  "layout": {
+    "padding": "内边距估算",
+    "content_spacing": "内容间距估算",
+    "card_background": "卡片背景色"
+  }
+}
+
+请尽可能提供具体的颜色代码（如#FF6B00而不是"橙色"），如果无法确定，请给出最接近的估算值。"""
+
+    payload = {
+        "contents": [{
+            "parts": [
+                {"inlineData": {"mimeType": "image/png", "data": ref_image_b64}},
+                {"text": prompt}
+            ]
+        }],
+        "generationConfig": {
+            "responseMimeType": "application/json",
+            "temperature": 0.1  # 低温度，确保准确
+        }
+    }
+
+    response = requests.post(
+        f"{api_url}?key={api_key}",
+        headers={"Content-Type": "application/json"},
+        json=payload,
+        timeout=60
+    )
+
+    response.raise_for_status()
+    data = response.json()
+
+    try:
+        specs = data["candidates"][0]["content"]["parts"][0]["text"]
+        import json
+        return json.loads(specs)
+    except Exception as e:
+        print(f"解析失败: {e}")
+        print(f"原始响应: {data}")
+        raise
+
+if __name__ == "__main__":
+    try:
+        print("正在提取视觉规范...")
+        specs = extract_visual_specs()
+
+        import json
+        output_file = Path(__file__).parent.parent / "references" / "visual_specs.json"
+        with open(output_file, "w", encoding="utf-8") as f:
+            json.dump(specs, f, ensure_ascii=False, indent=2)
+
+        print(f"\n✅ 视觉规范已保存到: {output_file}")
+        print("\n提取的参数：")
+        print(json.dumps(specs, ensure_ascii=False, indent=2))
+    except Exception as e:
+        print(f"❌ 提取失败: {e}")
+        sys.exit(1)

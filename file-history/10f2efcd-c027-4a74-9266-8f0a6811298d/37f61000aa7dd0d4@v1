@@ -1,0 +1,95 @@
+{
+  "numStartups": 2,
+  "installMethod": "homebrew",
+  "hasSeenTasksHint": true,
+  "tipsHistory": {
+    "new-user-warmup": 1,
+    "plan-mode-for-complex-tasks": 1,
+    "terminal-setup": 1,
+    "shift-enter-setup": 1,
+    "memory-command": 1,
+    "theme-command": 1,
+    "colorterm-truecolor": 1,
+    "status-line": 1,
+    "stickers-command": 2,
+    "prompt-queue": 2,
+    "enter-to-steer-in-relatime": 2,
+    "todo-list": 2,
+    "install-github-app": 2,
+    "install-slack-app": 2,
+    "drag-and-drop-images": 2,
+    "paste-images-mac": 2,
+    "double-esc-code-restore": 2,
+    "continue": 2,
+    "shift-tab": 2,
+    "image-paste": 2,
+    "ultrathink-keyword": 2
+  },
+  "promptQueueUseCount": 1,
+  "cachedStatsigGates": {
+    "tengu_prompt_suggestion": false,
+    "tengu_streaming_tool_execution2": false
+  },
+  "cachedDynamicConfigs": {
+    "tengu-top-of-feed-tip": {
+      "tip": "",
+      "color": "dim"
+    }
+  },
+  "mcpServers": {
+    "Playwright": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp@latest"
+      ],
+      "env": {}
+    },
+    "tavily": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "tavily-mcp@latest"
+      ],
+      "env": {
+        "TAVILY_API_KEY": "sk-cp-uxAeNf7LKSJquUk36JR0HGJpguzFNguG-8FUTndKIS_p30BGjbhV6PCuFjT7_UhCsm7-kxNjtGEpfmHZ52cyu3Cv8itS69sEW9od-o63teNqcYIqo8c3-1E"
+      }
+    }
+  },
+  "hasCompletedOnboarding": true,
+  "firstStartTime": "2026-01-08T01:54:42.334Z",
+  "sonnet45MigrationComplete": true,
+  "opus45MigrationComplete": true,
+  "thinkingMigrationComplete": true,
+  "userID": "56d6cfba5de702a38f4ecac9188be230f33620db55cedcdfc73e010ab761e8ac",
+  "lastReleaseNotesSeen": "2.1.1",
+  "projects": {
+    "/Users/henry": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": false,
+      "projectOnboardingSeenCount": 1,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [],
+      "reactVulnerabilityCache": {
+        "detected": false,
+        "package": null,
+        "packageName": null,
+        "version": null,
+        "packageManager": null
+      }
+    }
+  },
+  "officialMarketplaceAutoInstallAttempted": true,
+  "officialMarketplaceAutoInstalled": false,
+  "officialMarketplaceAutoInstallFailReason": "unknown",
+  "officialMarketplaceAutoInstallRetryCount": 1,
+  "officialMarketplaceAutoInstallLastAttemptTime": 1767837326950,
+  "officialMarketplaceAutoInstallNextRetryTime": 1767844526950
+}

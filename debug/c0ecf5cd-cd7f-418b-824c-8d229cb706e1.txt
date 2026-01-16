@@ -1,0 +1,1082 @@
+2026-01-14T12:23:50.752Z [DEBUG] Watching for changes in setting files /Users/henry/.claude, /Users/henry/.claude, /Users/henry/.claude...
+2026-01-14T12:23:50.754Z [DEBUG] [init] configureGlobalMTLS starting
+2026-01-14T12:23:50.754Z [DEBUG] [init] configureGlobalMTLS complete
+2026-01-14T12:23:50.754Z [DEBUG] [init] configureGlobalAgents starting
+2026-01-14T12:23:50.754Z [DEBUG] [init] configureGlobalAgents complete
+2026-01-14T12:23:50.760Z [DEBUG] [LSP MANAGER] initializeLspServerManager() called
+2026-01-14T12:23:50.760Z [DEBUG] [LSP MANAGER] Created manager instance, state=pending
+2026-01-14T12:23:50.760Z [DEBUG] [LSP MANAGER] Starting async initialization (generation 1)
+2026-01-14T12:23:50.762Z [DEBUG] Applying permission update: Adding 25 allow rule(s) to destination 'userSettings': ["Bash","BashOutput","Edit","Glob","Grep","KillShell","NotebookEdit","Read","SlashCommand","Task","TodoWrite","WebFetch","WebSearch","Write","mcp__ide","mcp__exa","mcp__context7","mcp__mcp-deepwiki","mcp__Playwright","mcp__spec-workflow","mcp__open-websearch","mcp__serena","mcp__tavily","mcp__xiaohongshu","mcp__rednote"]
+2026-01-14T12:23:50.762Z [DEBUG] Applying permission update: Adding 25 allow rule(s) to destination 'projectSettings': ["Bash","BashOutput","Edit","Glob","Grep","KillShell","NotebookEdit","Read","SlashCommand","Task","TodoWrite","WebFetch","WebSearch","Write","mcp__ide","mcp__exa","mcp__context7","mcp__mcp-deepwiki","mcp__Playwright","mcp__spec-workflow","mcp__open-websearch","mcp__serena","mcp__tavily","mcp__xiaohongshu","mcp__rednote"]
+2026-01-14T12:23:50.762Z [DEBUG] Applying permission update: Adding 22 allow rule(s) to destination 'localSettings': ["mcp__tavily__tavily-search","mcp__tavily__tavily-crawl","mcp__chrome-devtools__list_pages","mcp__chrome-devtools__new_page","mcp__chrome-devtools__select_page","mcp__chrome-devtools__navigate_page","mcp__chrome-devtools__take_screenshot","mcp__chrome-devtools__take_snapshot","mcp__chrome-devtools__click","mcp__chrome-devtools__fill_form","Skill(document-skills:skill-creator)","mcp__chrome-devtools__list_network_requests","mcp__chrome-devtools__list_console_messages","mcp__chrome-devtools__evaluate_script","mcp__chrome-devtools__resize_page","mcp__chrome-devtools__emulate","Skill(miaodong-finance-writer)","Skill(finance-infographic)","mcp__chrome-devtools__fill","Skill(document-skills:theme-factory)","Skill(skill-creator)","Skill(xiaohongshu-viral-finder)"]
+2026-01-14T12:23:50.762Z [DEBUG] [STARTUP] Loading MCP configs...
+2026-01-14T12:23:50.765Z [DEBUG] Loading plugin document-skills from source: "./"
+2026-01-14T12:23:50.788Z [DEBUG] Watching for changes in skill directories: /Users/henry/.claude/skills, /Users/henry/.claude/skills...
+2026-01-14T12:23:50.834Z [DEBUG] Git remote URL: null
+2026-01-14T12:23:50.834Z [DEBUG] No git remote URL found
+2026-01-14T12:23:50.834Z [DEBUG] Not in a GitHub repository, skipping path mapping update
+2026-01-14T12:23:50.834Z [DEBUG] Using git SHA for document-skills@anthropic-agent-skills: 69c0b1a06741
+2026-01-14T12:23:50.834Z [DEBUG] Plugin document-skills@anthropic-agent-skills version 69c0b1a06741 already cached at /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741
+2026-01-14T12:23:50.834Z [DEBUG] Copied local plugin document-skills to versioned cache: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741
+2026-01-14T12:23:50.835Z [DEBUG] Processing 4 skill paths for plugin document-skills
+2026-01-14T12:23:50.835Z [DEBUG] Checking skill path: ./skills/xlsx -> /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/xlsx (exists: true)
+2026-01-14T12:23:50.835Z [DEBUG] Checking skill path: ./skills/docx -> /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/docx (exists: true)
+2026-01-14T12:23:50.835Z [DEBUG] Checking skill path: ./skills/pptx -> /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pptx (exists: true)
+2026-01-14T12:23:50.835Z [DEBUG] Checking skill path: ./skills/pdf -> /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pdf (exists: true)
+2026-01-14T12:23:50.835Z [DEBUG] Found 4 valid skill paths for plugin document-skills, setting skillsPaths
+2026-01-14T12:23:50.835Z [DEBUG] Found 1 plugins (1 enabled, 0 disabled)
+2026-01-14T12:23:50.835Z [DEBUG] [STARTUP] MCP configs loaded in 73ms
+2026-01-14T12:23:50.835Z [DEBUG] [STARTUP] Running setup()...
+2026-01-14T12:23:50.841Z [DEBUG] Stats cache is up to date
+2026-01-14T12:23:50.841Z [DEBUG] Plugin autoupdate: skipped (auto-updater disabled)
+2026-01-14T12:23:50.844Z [DEBUG] Loading skills from: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/henry/.claude/skills, project=[]
+2026-01-14T12:23:50.908Z [DEBUG] Loaded 1 installed plugins from /Users/henry/.claude/plugins/installed_plugins.json
+2026-01-14T12:23:50.913Z [DEBUG] Writing to temp file: /Users/henry/.claude/todos/c0ecf5cd-cd7f-418b-824c-8d229cb706e1-agent-c0ecf5cd-cd7f-418b-824c-8d229cb706e1.json.tmp.19895.1768393430913
+2026-01-14T12:23:50.914Z [DEBUG] Temp file written successfully, size: 2 bytes
+2026-01-14T12:23:50.914Z [DEBUG] Renaming /Users/henry/.claude/todos/c0ecf5cd-cd7f-418b-824c-8d229cb706e1-agent-c0ecf5cd-cd7f-418b-824c-8d229cb706e1.json.tmp.19895.1768393430913 to /Users/henry/.claude/todos/c0ecf5cd-cd7f-418b-824c-8d229cb706e1-agent-c0ecf5cd-cd7f-418b-824c-8d229cb706e1.json
+2026-01-14T12:23:50.914Z [DEBUG] File /Users/henry/.claude/todos/c0ecf5cd-cd7f-418b-824c-8d229cb706e1-agent-c0ecf5cd-cd7f-418b-824c-8d229cb706e1.json written atomically
+2026-01-14T12:23:50.915Z [DEBUG] getPluginSkills: Processing 1 enabled plugins
+2026-01-14T12:23:50.915Z [DEBUG] Checking plugin document-skills: skillsPath=exists, skillsPaths=4 paths
+2026-01-14T12:23:50.915Z [DEBUG] Attempting to load skills from plugin document-skills default skillsPath: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills
+2026-01-14T12:23:50.923Z [DEBUG] Total plugin commands loaded: 0
+2026-01-14T12:23:50.924Z [DEBUG] Registered 0 hooks from 1 plugins
+2026-01-14T12:23:50.924Z [DEBUG] [STARTUP] setup() completed in 89ms
+2026-01-14T12:23:50.924Z [DEBUG] [STARTUP] Loading commands and agents...
+2026-01-14T12:23:50.925Z [DEBUG] Loaded 16 skills from plugin document-skills default directory
+2026-01-14T12:23:50.925Z [DEBUG] Attempting to load skills from plugin document-skills skillsPaths: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/xlsx, /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/docx, /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pptx, /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pdf
+2026-01-14T12:23:50.925Z [DEBUG] Loading from skillPath: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/xlsx for plugin document-skills
+2026-01-14T12:23:50.925Z [DEBUG] Loaded 0 skills from plugin document-skills custom path: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/xlsx
+2026-01-14T12:23:50.925Z [DEBUG] Loading from skillPath: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/docx for plugin document-skills
+2026-01-14T12:23:50.925Z [DEBUG] Loaded 0 skills from plugin document-skills custom path: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/docx
+2026-01-14T12:23:50.925Z [DEBUG] Loading from skillPath: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pptx for plugin document-skills
+2026-01-14T12:23:50.925Z [DEBUG] Loaded 0 skills from plugin document-skills custom path: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pptx
+2026-01-14T12:23:50.925Z [DEBUG] Loading from skillPath: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pdf for plugin document-skills
+2026-01-14T12:23:50.925Z [DEBUG] Loaded 0 skills from plugin document-skills custom path: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pdf
+2026-01-14T12:23:50.925Z [DEBUG] Total plugin skills loaded: 16
+2026-01-14T12:23:50.926Z [DEBUG] Total LSP servers loaded: 0
+2026-01-14T12:23:50.926Z [DEBUG] [LSP SERVER MANAGER] getAllLspServers returned 0 server(s)
+2026-01-14T12:23:50.926Z [DEBUG] LSP manager initialized with 0 servers
+2026-01-14T12:23:50.926Z [DEBUG] LSP server manager initialized successfully
+2026-01-14T12:23:50.927Z [DEBUG] LSP notification handlers registered successfully for all 0 server(s)
+2026-01-14T12:23:50.939Z [DEBUG] Creating shell snapshot for zsh (/bin/zsh)
+2026-01-14T12:23:50.939Z [DEBUG] Looking for shell config file: /Users/henry/.zshrc
+2026-01-14T12:23:50.939Z [DEBUG] Snapshots directory: /Users/henry/.claude/shell-snapshots
+2026-01-14T12:23:50.940Z [DEBUG] Creating snapshot at: /Users/henry/.claude/shell-snapshots/snapshot-zsh-1768393430939-pf7nwv.sh
+2026-01-14T12:23:50.940Z [DEBUG] Shell binary exists: true
+2026-01-14T12:23:50.940Z [DEBUG] Execution timeout: 10000ms
+2026-01-14T12:23:50.951Z [DEBUG] Loaded 19 unique skills (managed: 0, user: 8, project: 0, legacy commands: 11)
+2026-01-14T12:23:50.951Z [DEBUG] getSkills returning: 19 skill dir commands, 16 plugin skills
+2026-01-14T12:23:50.953Z [DEBUG] Total plugin agents loaded: 0
+2026-01-14T12:23:50.954Z [DEBUG] [STARTUP] Commands and agents loaded in 30ms
+2026-01-14T12:23:50.954Z [DEBUG] [STARTUP] Running showSetupScreens()...
+2026-01-14T12:23:50.955Z [DEBUG] [render] initYoga starting
+2026-01-14T12:23:50.965Z [DEBUG] [render] initYoga complete
+2026-01-14T12:23:50.988Z [DEBUG] Shell snapshot created successfully (758 bytes)
+2026-01-14T12:23:52.815Z [DEBUG] Writing to temp file: /Users/henry/.claude/settings.local.json.tmp.19895.1768393432815
+2026-01-14T12:23:52.815Z [DEBUG] Preserving file permissions: 100644
+2026-01-14T12:23:52.816Z [DEBUG] Temp file written successfully, size: 1058 bytes
+2026-01-14T12:23:52.816Z [DEBUG] Applied original permissions to temp file
+2026-01-14T12:23:52.816Z [DEBUG] Renaming /Users/henry/.claude/settings.local.json.tmp.19895.1768393432815 to /Users/henry/.claude/settings.local.json
+2026-01-14T12:23:52.816Z [DEBUG] File /Users/henry/.claude/settings.local.json written atomically
+2026-01-14T12:23:52.827Z [DEBUG] [STARTUP] showSetupScreens() completed in 1873ms
+2026-01-14T12:23:52.845Z [DEBUG] MCP server "Playwright": Starting connection with timeout of 60000ms
+2026-01-14T12:23:52.848Z [DEBUG] MCP server "chrome-devtools": Starting connection with timeout of 60000ms
+2026-01-14T12:23:52.850Z [DEBUG] MCP server "tavily": Starting connection with timeout of 60000ms
+2026-01-14T12:23:52.851Z [DEBUG] MCP server "xiaohongshu": Initializing HTTP transport to http://localhost:18060/mcp
+2026-01-14T12:23:52.851Z [DEBUG] MCP server "xiaohongshu": Node version: v24.3.0, Platform: darwin
+2026-01-14T12:23:52.851Z [DEBUG] MCP server "xiaohongshu": Environment: {"NODE_OPTIONS":"not set","UV_THREADPOOL_SIZE":"default","HTTP_PROXY":"not set","HTTPS_PROXY":"not set","NO_PROXY":"not set"}
+2026-01-14T12:23:52.854Z [DEBUG] All plugins already exist, skipping migration
+2026-01-14T12:23:52.858Z [DEBUG] Initialized versioned plugins system with 1 plugins
+2026-01-14T12:23:52.858Z [DEBUG] MCP server "xiaohongshu": Proxy options: default
+2026-01-14T12:23:52.858Z [DEBUG] MCP server "xiaohongshu": HTTP transport options: {"url":"http://localhost:18060/mcp","headers":{"User-Agent":"claude-code/2.1.1"},"hasAuthProvider":true,"timeoutMs":60000}
+2026-01-14T12:23:52.858Z [DEBUG] MCP server "xiaohongshu": HTTP transport created successfully
+2026-01-14T12:23:52.859Z [DEBUG] MCP server "xiaohongshu": Client created, setting up request handler
+2026-01-14T12:23:52.859Z [DEBUG] MCP server "xiaohongshu": Starting connection with timeout of 60000ms
+2026-01-14T12:23:52.859Z [DEBUG] MCP server "xiaohongshu": Testing basic HTTP connectivity to http://localhost:18060/mcp
+2026-01-14T12:23:52.859Z [DEBUG] MCP server "xiaohongshu": Parsed URL: host=localhost, port=18060, protocol=http:
+2026-01-14T12:23:52.859Z [DEBUG] MCP server "xiaohongshu": Using loopback address: localhost
+2026-01-14T12:23:52.860Z [DEBUG] Writing to temp file: /Users/henry/.claude.json.tmp.19895.1768393432860
+2026-01-14T12:23:52.860Z [DEBUG] Preserving file permissions: 100644
+2026-01-14T12:23:52.860Z [DEBUG] Temp file written successfully, size: 7004 bytes
+2026-01-14T12:23:52.860Z [DEBUG] Applied original permissions to temp file
+2026-01-14T12:23:52.860Z [DEBUG] Renaming /Users/henry/.claude.json.tmp.19895.1768393432860 to /Users/henry/.claude.json
+2026-01-14T12:23:52.860Z [DEBUG] File /Users/henry/.claude.json written atomically
+2026-01-14T12:23:53.165Z [DEBUG] Skipping SessionStart:startup hook execution - workspace trust not accepted
+2026-01-14T12:23:53.165Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:23:53.166Z [DEBUG] [render] initYoga starting
+2026-01-14T12:23:53.166Z [DEBUG] [render] initYoga complete
+2026-01-14T12:23:53.168Z [DEBUG] Summarizing all 3 messages (~0 tokens)
+2026-01-14T12:23:53.170Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-14T12:23:53.172Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:23:53.172Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:23:53.172Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:23:53.180Z [DEBUG] Skipping SubagentStart:Plan hook execution - workspace trust not accepted
+2026-01-14T12:23:53.183Z [DEBUG] Skipping SubagentStart:Explore hook execution - workspace trust not accepted
+2026-01-14T12:23:53.186Z [DEBUG] Skipping SubagentStart:Bash hook execution - workspace trust not accepted
+2026-01-14T12:23:53.366Z [DEBUG] Writing to temp file: /Users/henry/.claude.json.tmp.19895.1768393433366
+2026-01-14T12:23:53.366Z [DEBUG] Preserving file permissions: 100644
+2026-01-14T12:23:53.366Z [DEBUG] Temp file written successfully, size: 6896 bytes
+2026-01-14T12:23:53.366Z [DEBUG] Applied original permissions to temp file
+2026-01-14T12:23:53.366Z [DEBUG] Renaming /Users/henry/.claude.json.tmp.19895.1768393433366 to /Users/henry/.claude.json
+2026-01-14T12:23:53.366Z [DEBUG] File /Users/henry/.claude.json written atomically
+2026-01-14T12:23:53.370Z [DEBUG] Detected Homebrew cask installation: /opt/homebrew/Caskroom/claude-code/2.1.1/claude
+2026-01-14T12:23:53.371Z [DEBUG] [REPL:mount] REPL mounted, disabled=false
+2026-01-14T12:23:53.371Z [DEBUG] Detected Homebrew cask installation: /opt/homebrew/Caskroom/claude-code/2.1.1/claude
+2026-01-14T12:23:53.371Z [DEBUG] Official marketplace auto-install skipped: already_attempted
+2026-01-14T12:23:53.371Z [DEBUG] performStartupChecks called
+2026-01-14T12:23:53.371Z [DEBUG] Trust not accepted for current directory - skipping plugin installations
+2026-01-14T12:23:53.390Z [DEBUG] Writing to temp file: /Users/henry/.claude.json.tmp.19895.1768393433390
+2026-01-14T12:23:53.390Z [DEBUG] Preserving file permissions: 100644
+2026-01-14T12:23:53.390Z [DEBUG] Temp file written successfully, size: 7004 bytes
+2026-01-14T12:23:53.390Z [DEBUG] Applied original permissions to temp file
+2026-01-14T12:23:53.390Z [DEBUG] Renaming /Users/henry/.claude.json.tmp.19895.1768393433390 to /Users/henry/.claude.json
+2026-01-14T12:23:53.390Z [DEBUG] File /Users/henry/.claude.json written atomically
+2026-01-14T12:23:53.390Z [DEBUG] AutoUpdaterWrapper: Installation type: package-manager
+2026-01-14T12:23:53.391Z [DEBUG] Loaded plugins - Enabled: 1, Disabled: 0, Commands: 0, Agents: 0, Errors: 0
+2026-01-14T12:23:53.404Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-14T12:23:53.404Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-14T12:23:53.404Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-14T12:23:53.408Z [DEBUG] Skill prompt: showing "document-skills:theme-factory" (userFacingName="theme-factory")
+2026-01-14T12:23:53.408Z [DEBUG] Skill prompt: showing "document-skills:doc-coauthoring" (userFacingName="doc-coauthoring")
+2026-01-14T12:23:53.408Z [DEBUG] Skill prompt: showing "document-skills:xlsx" (userFacingName="xlsx")
+2026-01-14T12:23:53.408Z [DEBUG] Skill prompt: showing "document-skills:pdf" (userFacingName="pdf")
+2026-01-14T12:23:53.408Z [DEBUG] Skill prompt: showing "document-skills:algorithmic-art" (userFacingName="algorithmic-art")
+2026-01-14T12:23:53.408Z [DEBUG] Skill prompt: showing "document-skills:internal-comms" (userFacingName="internal-comms")
+2026-01-14T12:23:53.408Z [DEBUG] Skill prompt: showing "document-skills:skill-creator" (userFacingName="skill-creator")
+2026-01-14T12:23:53.408Z [DEBUG] Skill prompt: showing "document-skills:canvas-design" (userFacingName="canvas-design")
+2026-01-14T12:23:53.408Z [DEBUG] Skill prompt: showing "document-skills:pptx" (userFacingName="pptx")
+2026-01-14T12:23:53.408Z [DEBUG] Skill prompt: showing "document-skills:slack-gif-creator" (userFacingName="slack-gif-creator")
+2026-01-14T12:23:53.408Z [DEBUG] Skill prompt: showing "document-skills:webapp-testing" (userFacingName="webapp-testing")
+2026-01-14T12:23:53.408Z [DEBUG] Skill prompt: showing "document-skills:frontend-design" (userFacingName="frontend-design")
+2026-01-14T12:23:53.408Z [DEBUG] Skill prompt: showing "document-skills:mcp-builder" (userFacingName="mcp-builder")
+2026-01-14T12:23:53.408Z [DEBUG] Skill prompt: showing "document-skills:brand-guidelines" (userFacingName="brand-guidelines")
+2026-01-14T12:23:53.408Z [DEBUG] Skill prompt: showing "document-skills:docx" (userFacingName="docx")
+2026-01-14T12:23:53.408Z [DEBUG] Skill prompt: showing "document-skills:web-artifacts-builder" (userFacingName="web-artifacts-builder")
+2026-01-14T12:23:53.408Z [DEBUG] Skills and commands included in Skill tool: apiyi-image-generator, finance-infographic, miaodong-finance-writer, playwright-skill, notebooklm, xiaohongshu-viral-finder, report-hunter, zcf:git-worktree, zcf:bmad-init, zcf:workflow, zcf:feat, zcf:init-project, zcf:git-commit, zcf:git-cleanBranches, zcf:git-rollback, oncall-triage, commit-push-pr, dedupe, theme-factory, doc-coauthoring, xlsx, pdf, algorithmic-art, internal-comms, skill-creator, canvas-design, pptx, slack-gif-creator, webapp-testing, frontend-design, mcp-builder, brand-guidelines, docx, web-artifacts-builder
+2026-01-14T12:23:53.408Z [DEBUG] Skill prompt: showing "document-skills:theme-factory" (userFacingName="theme-factory")
+2026-01-14T12:23:53.408Z [DEBUG] Skill prompt: showing "document-skills:doc-coauthoring" (userFacingName="doc-coauthoring")
+2026-01-14T12:23:53.408Z [DEBUG] Skill prompt: showing "document-skills:xlsx" (userFacingName="xlsx")
+2026-01-14T12:23:53.408Z [DEBUG] Skill prompt: showing "document-skills:pdf" (userFacingName="pdf")
+2026-01-14T12:23:53.408Z [DEBUG] Skill prompt: showing "document-skills:algorithmic-art" (userFacingName="algorithmic-art")
+2026-01-14T12:23:53.408Z [DEBUG] Skill prompt: showing "document-skills:internal-comms" (userFacingName="internal-comms")
+2026-01-14T12:23:53.408Z [DEBUG] Skill prompt: showing "document-skills:skill-creator" (userFacingName="skill-creator")
+2026-01-14T12:23:53.408Z [DEBUG] Skill prompt: showing "document-skills:canvas-design" (userFacingName="canvas-design")
+2026-01-14T12:23:53.408Z [DEBUG] Skill prompt: showing "document-skills:pptx" (userFacingName="pptx")
+2026-01-14T12:23:53.408Z [DEBUG] Skill prompt: showing "document-skills:slack-gif-creator" (userFacingName="slack-gif-creator")
+2026-01-14T12:23:53.408Z [DEBUG] Skill prompt: showing "document-skills:webapp-testing" (userFacingName="webapp-testing")
+2026-01-14T12:23:53.408Z [DEBUG] Skill prompt: showing "document-skills:frontend-design" (userFacingName="frontend-design")
+2026-01-14T12:23:53.408Z [DEBUG] Skill prompt: showing "document-skills:mcp-builder" (userFacingName="mcp-builder")
+2026-01-14T12:23:53.408Z [DEBUG] Skill prompt: showing "document-skills:brand-guidelines" (userFacingName="brand-guidelines")
+2026-01-14T12:23:53.408Z [DEBUG] Skill prompt: showing "document-skills:docx" (userFacingName="docx")
+2026-01-14T12:23:53.408Z [DEBUG] Skill prompt: showing "document-skills:web-artifacts-builder" (userFacingName="web-artifacts-builder")
+2026-01-14T12:23:53.409Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:23:53.409Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:23:53.413Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:23:53.414Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:23:53.414Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:23:53.414Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:23:53.414Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:23:53.415Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:23:53.415Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:23:53.418Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:23:53.421Z [DEBUG] Detected Homebrew cask installation: /opt/homebrew/Caskroom/claude-code/2.1.1/claude
+2026-01-14T12:23:53.427Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:23:53.427Z [DEBUG] MCP server "xiaohongshu": Successfully connected to http server in 576ms
+2026-01-14T12:23:53.427Z [DEBUG] MCP server "xiaohongshu": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"xiaohongshu-mcp","version":"2.0.0"}}
+2026-01-14T12:23:53.428Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:23:53.429Z [DEBUG] Writing to temp file: /Users/henry/.claude.json.tmp.19895.1768393433429
+2026-01-14T12:23:53.429Z [DEBUG] Preserving file permissions: 100644
+2026-01-14T12:23:53.429Z [DEBUG] Temp file written successfully, size: 7004 bytes
+2026-01-14T12:23:53.429Z [DEBUG] Applied original permissions to temp file
+2026-01-14T12:23:53.429Z [DEBUG] Renaming /Users/henry/.claude.json.tmp.19895.1768393433429 to /Users/henry/.claude.json
+2026-01-14T12:23:53.429Z [DEBUG] File /Users/henry/.claude.json written atomically
+2026-01-14T12:23:54.388Z [ERROR] MCP server "tavily" Server stderr: Tavily MCP server running on stdio
+2026-01-14T12:23:54.393Z [DEBUG] MCP server "tavily": Successfully connected to stdio server in 1543ms
+2026-01-14T12:23:54.393Z [DEBUG] MCP server "tavily": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"tavily-mcp","version":"0.2.10"}}
+2026-01-14T12:23:54.449Z [ERROR] MCP server "chrome-devtools" Server stderr: chrome-devtools-mcp exposes content of the browser instance to the MCP clients allowing them to inspect,
+debug, and modify any data in the browser or DevTools.
+Avoid sharing sensitive or personal information that you do not want to share with MCP clients.
+2026-01-14T12:23:54.452Z [DEBUG] MCP server "chrome-devtools": Successfully connected to stdio server in 1604ms
+2026-01-14T12:23:54.452Z [DEBUG] MCP server "chrome-devtools": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"chrome_devtools","title":"Chrome DevTools MCP server","version":"0.12.1"}}
+2026-01-14T12:23:54.490Z [DEBUG] MCP server "Playwright": Successfully connected to stdio server in 1647ms
+2026-01-14T12:23:54.490Z [DEBUG] MCP server "Playwright": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"Playwright","version":"0.0.55"}}
+2026-01-14T12:23:55.735Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:23:55.737Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:23:55.865Z [DEBUG] Summarizing all 7 messages (~4041 tokens)
+2026-01-14T12:23:55.866Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-14T12:23:55.866Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:23:55.866Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:23:55.866Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:23:55.869Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:23:55.952Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:23:57.690Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:23:57.938Z [DEBUG] Summarizing all 8 messages (~4041 tokens)
+2026-01-14T12:23:57.938Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-14T12:23:57.938Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:23:57.938Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:23:57.938Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:23:58.137Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-14T12:23:58.137Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-14T12:23:58.154Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-14T12:23:58.155Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:23:58.155Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:23:58.155Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:23:59.015Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:23:59.030Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:23:59.096Z [DEBUG] Summarizing all 13 messages (~4303 tokens)
+2026-01-14T12:23:59.096Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-14T12:23:59.096Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:23:59.096Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:23:59.097Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:23:59.183Z [DEBUG] Skipping SubagentStop hook execution - workspace trust not accepted
+2026-01-14T12:24:00.744Z [DEBUG] Skipping SubagentStop hook execution - workspace trust not accepted
+2026-01-14T12:24:00.870Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:24:01.097Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-14T12:24:01.097Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-14T12:24:01.113Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-14T12:24:01.114Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:24:01.114Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:24:01.114Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:24:01.145Z [DEBUG] Summarizing all 11 messages (~4041 tokens)
+2026-01-14T12:24:01.145Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-14T12:24:01.145Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:24:01.145Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:24:01.145Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:24:02.282Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:24:09.031Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:24:09.177Z [DEBUG] Summarizing all 9 messages (~4041 tokens)
+2026-01-14T12:24:09.177Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-14T12:24:09.178Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:24:09.178Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:24:09.178Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:24:09.337Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-14T12:24:09.337Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-14T12:24:09.354Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-14T12:24:09.354Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:24:09.354Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:24:09.354Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:24:10.386Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:24:10.386Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:24:10.416Z [DEBUG] Summarizing all 10 messages (~4041 tokens)
+2026-01-14T12:24:10.417Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-14T12:24:10.417Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:24:10.417Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:24:10.417Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:24:12.321Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:24:12.398Z [DEBUG] Summarizing all 16 messages (~4041 tokens)
+2026-01-14T12:24:12.399Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-14T12:24:12.399Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:24:12.399Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:24:12.399Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:24:12.652Z [DEBUG] executePreToolHooks called for tool: Read
+2026-01-14T12:24:12.652Z [DEBUG] Skipping PreToolUse:Read hook execution - workspace trust not accepted
+2026-01-14T12:24:12.661Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-14T12:24:12.662Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:24:12.662Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:24:12.662Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:24:13.444Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:24:13.448Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:24:15.287Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-14T12:24:15.287Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-14T12:24:15.287Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-14T12:24:15.287Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-14T12:24:15.297Z [DEBUG] Skipping UserPromptSubmit hook execution - workspace trust not accepted
+2026-01-14T12:24:15.298Z [DEBUG] FileHistory: Added snapshot for 74fcf5f5-b687-4ae0-a8eb-6bd027878a7d, tracking 0 files
+2026-01-14T12:24:15.307Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-14T12:24:15.307Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:24:15.307Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:24:15.307Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:24:15.318Z [DEBUG] Total plugin output styles loaded: 0
+2026-01-14T12:24:15.319Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-14T12:24:15.324Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:24:15.324Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:24:15.324Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:24:15.778Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-14T12:24:15.778Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-14T12:24:15.790Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-14T12:24:15.791Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:24:15.791Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:24:15.791Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:24:16.208Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:24:16.491Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:24:16.862Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:24:18.985Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-14T12:24:18.985Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-14T12:24:19.001Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-14T12:24:19.002Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:24:19.002Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:24:19.002Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:24:19.798Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:24:20.611Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-14T12:24:20.611Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-14T12:24:20.623Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-14T12:24:20.624Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:24:20.624Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:24:20.624Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:24:21.431Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:24:21.479Z [DEBUG] executePreToolHooks called for tool: Read
+2026-01-14T12:24:21.479Z [DEBUG] Skipping PreToolUse:Read hook execution - workspace trust not accepted
+2026-01-14T12:24:21.512Z [DEBUG] Skipping PostToolUse:Read hook execution - workspace trust not accepted
+2026-01-14T12:24:21.518Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-14T12:24:21.518Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-14T12:24:21.518Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-14T12:24:21.518Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-14T12:24:21.535Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-14T12:24:21.536Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:24:21.536Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:24:21.536Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:24:22.459Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:24:22.474Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-14T12:24:22.474Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-14T12:24:22.485Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-14T12:24:22.486Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:24:22.486Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:24:22.486Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:24:23.218Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:24:24.082Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-14T12:24:24.082Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-14T12:24:24.096Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-14T12:24:24.096Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:24:24.096Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:24:24.096Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:24:24.860Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:24:25.343Z [DEBUG] executePreToolHooks called for tool: ListMcpResourcesTool
+2026-01-14T12:24:25.343Z [DEBUG] Skipping PreToolUse:ListMcpResourcesTool hook execution - workspace trust not accepted
+2026-01-14T12:24:25.356Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-14T12:24:25.357Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:24:25.357Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:24:25.357Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:24:26.066Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:24:37.585Z [DEBUG] Skipping SubagentStop hook execution - workspace trust not accepted
+2026-01-14T12:24:39.789Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__check_login_status
+2026-01-14T12:24:39.789Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__check_login_status hook execution - workspace trust not accepted
+2026-01-14T12:24:39.793Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: check_login_status
+2026-01-14T12:24:39.793Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:24:46.381Z [DEBUG] MCP server "xiaohongshu": Tool 'check_login_status' completed successfully in 6s
+2026-01-14T12:24:46.383Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__check_login_status hook execution - workspace trust not accepted
+2026-01-14T12:24:46.392Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-14T12:24:46.392Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-14T12:24:46.392Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-14T12:24:46.392Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-14T12:24:46.412Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-14T12:24:46.416Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:24:46.416Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:24:46.416Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:24:47.749Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:24:49.886Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__get_login_qrcode
+2026-01-14T12:24:49.887Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__get_login_qrcode hook execution - workspace trust not accepted
+2026-01-14T12:24:49.893Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: get_login_qrcode
+2026-01-14T12:24:49.893Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:24:55.462Z [DEBUG] MCP server "xiaohongshu": Tool 'get_login_qrcode' completed successfully in 5s
+2026-01-14T12:24:55.719Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__get_login_qrcode hook execution - workspace trust not accepted
+2026-01-14T12:24:55.728Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-14T12:24:55.728Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-14T12:24:55.728Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-14T12:24:55.728Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-14T12:24:55.739Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-14T12:24:55.740Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:24:55.740Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:24:55.740Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:24:56.535Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:25:08.044Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-14T12:25:08.044Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-14T12:25:08.045Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-14T12:25:08.045Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-14T12:25:08.054Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-14T12:25:08.061Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:25:08.061Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:25:08.061Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:25:08.990Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:25:21.450Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-14T12:25:21.451Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-14T12:25:21.499Z [DEBUG] tree-sitter: loaded from embedded
+2026-01-14T12:25:21.518Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-14T12:25:21.518Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-14T12:25:21.518Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-14T12:25:21.518Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:25:21.518Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:25:21.518Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:25:21.518Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:25:21.518Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:25:21.518Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:25:21.518Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:25:21.518Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:25:21.518Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:25:22.368Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:25:22.383Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:25:22.567Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:25:22.579Z [DEBUG] No session environment scripts found
+2026-01-14T12:25:24.581Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-14T12:25:24.581Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:25:24.581Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:25:24.581Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:25:24.586Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-14T12:25:24.596Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-14T12:25:24.596Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-14T12:25:24.596Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-14T12:25:24.596Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-14T12:25:24.613Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-14T12:25:24.615Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:25:24.615Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:25:24.615Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:25:25.273Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:25:25.961Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:25:30.479Z [DEBUG] Skipping Stop hook execution - workspace trust not accepted
+2026-01-14T12:25:30.501Z [DEBUG] Writing to temp file: /Users/henry/.claude.json.tmp.19895.1768393530501
+2026-01-14T12:25:30.501Z [DEBUG] Preserving file permissions: 100644
+2026-01-14T12:25:30.501Z [DEBUG] Temp file written successfully, size: 7005 bytes
+2026-01-14T12:25:30.501Z [DEBUG] Applied original permissions to temp file
+2026-01-14T12:25:30.501Z [DEBUG] Renaming /Users/henry/.claude.json.tmp.19895.1768393530501 to /Users/henry/.claude.json
+2026-01-14T12:25:30.501Z [DEBUG] File /Users/henry/.claude.json written atomically
+2026-01-14T12:25:30.503Z [DEBUG] Writing to temp file: /Users/henry/.claude.json.tmp.19895.1768393530503
+2026-01-14T12:25:30.503Z [DEBUG] Preserving file permissions: 100644
+2026-01-14T12:25:30.503Z [DEBUG] Temp file written successfully, size: 7006 bytes
+2026-01-14T12:25:30.503Z [DEBUG] Applied original permissions to temp file
+2026-01-14T12:25:30.503Z [DEBUG] Renaming /Users/henry/.claude.json.tmp.19895.1768393530503 to /Users/henry/.claude.json
+2026-01-14T12:25:30.503Z [DEBUG] File /Users/henry/.claude.json written atomically
+2026-01-14T12:25:55.121Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-14T12:25:55.121Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-14T12:25:55.121Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-14T12:25:55.121Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-14T12:25:55.126Z [DEBUG] Skipping UserPromptSubmit hook execution - workspace trust not accepted
+2026-01-14T12:25:55.134Z [DEBUG] FileHistory: Making snapshot for message 0b68e917-e455-4c1e-afeb-24b6cdb64ba0
+2026-01-14T12:25:55.135Z [DEBUG] FileHistory: Added snapshot for 0b68e917-e455-4c1e-afeb-24b6cdb64ba0, tracking 0 files
+2026-01-14T12:25:55.145Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-14T12:25:55.146Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:25:55.146Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:25:55.146Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:25:55.155Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-14T12:25:55.159Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:25:55.159Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:25:55.159Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:25:56.153Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:25:56.178Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:25:57.385Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__check_login_status
+2026-01-14T12:25:57.385Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__check_login_status hook execution - workspace trust not accepted
+2026-01-14T12:25:57.393Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: check_login_status
+2026-01-14T12:25:57.394Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:26:04.935Z [DEBUG] MCP server "xiaohongshu": Tool 'check_login_status' completed successfully in 7s
+2026-01-14T12:26:04.938Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__check_login_status hook execution - workspace trust not accepted
+2026-01-14T12:26:04.945Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-14T12:26:04.945Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-14T12:26:04.945Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-14T12:26:04.945Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-14T12:26:04.958Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-14T12:26:04.961Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:26:04.961Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:26:04.961Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:26:05.880Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:26:42.776Z [DEBUG] executePreToolHooks called for tool: TodoWrite
+2026-01-14T12:26:42.777Z [DEBUG] Skipping PreToolUse:TodoWrite hook execution - workspace trust not accepted
+2026-01-14T12:26:42.797Z [DEBUG] Writing to temp file: /Users/henry/.claude/todos/c0ecf5cd-cd7f-418b-824c-8d229cb706e1-agent-c0ecf5cd-cd7f-418b-824c-8d229cb706e1.json.tmp.19895.1768393602797
+2026-01-14T12:26:42.797Z [DEBUG] Preserving file permissions: 100644
+2026-01-14T12:26:42.798Z [DEBUG] Temp file written successfully, size: 492 bytes
+2026-01-14T12:26:42.798Z [DEBUG] Applied original permissions to temp file
+2026-01-14T12:26:42.798Z [DEBUG] Renaming /Users/henry/.claude/todos/c0ecf5cd-cd7f-418b-824c-8d229cb706e1-agent-c0ecf5cd-cd7f-418b-824c-8d229cb706e1.json.tmp.19895.1768393602797 to /Users/henry/.claude/todos/c0ecf5cd-cd7f-418b-824c-8d229cb706e1-agent-c0ecf5cd-cd7f-418b-824c-8d229cb706e1.json
+2026-01-14T12:26:42.798Z [DEBUG] File /Users/henry/.claude/todos/c0ecf5cd-cd7f-418b-824c-8d229cb706e1-agent-c0ecf5cd-cd7f-418b-824c-8d229cb706e1.json written atomically
+2026-01-14T12:26:42.803Z [DEBUG] Skipping PostToolUse:TodoWrite hook execution - workspace trust not accepted
+2026-01-14T12:26:42.812Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__search_feeds
+2026-01-14T12:26:42.812Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__search_feeds hook execution - workspace trust not accepted
+2026-01-14T12:26:42.812Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__search_feeds
+2026-01-14T12:26:42.812Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__search_feeds hook execution - workspace trust not accepted
+2026-01-14T12:26:42.812Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__search_feeds
+2026-01-14T12:26:42.812Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__search_feeds hook execution - workspace trust not accepted
+2026-01-14T12:26:42.812Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__search_feeds
+2026-01-14T12:26:42.812Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__search_feeds hook execution - workspace trust not accepted
+2026-01-14T12:26:42.812Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__search_feeds
+2026-01-14T12:26:42.812Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__search_feeds hook execution - workspace trust not accepted
+2026-01-14T12:26:42.823Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: search_feeds
+2026-01-14T12:26:42.824Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:26:42.824Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: search_feeds
+2026-01-14T12:26:42.824Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:26:42.824Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: search_feeds
+2026-01-14T12:26:42.824Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:26:42.824Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: search_feeds
+2026-01-14T12:26:42.824Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:26:42.824Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: search_feeds
+2026-01-14T12:26:42.824Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:26:56.696Z [DEBUG] MCP server "xiaohongshu": Tool 'search_feeds' completed successfully in 13s
+2026-01-14T12:26:56.713Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__search_feeds hook execution - workspace trust not accepted
+2026-01-14T12:26:58.556Z [DEBUG] MCP server "xiaohongshu": Tool 'search_feeds' completed successfully in 15s
+2026-01-14T12:26:58.557Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__search_feeds hook execution - workspace trust not accepted
+2026-01-14T12:27:00.330Z [DEBUG] MCP server "xiaohongshu": Tool 'search_feeds' completed successfully in 17s
+2026-01-14T12:27:00.331Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__search_feeds hook execution - workspace trust not accepted
+2026-01-14T12:27:04.179Z [DEBUG] MCP server "xiaohongshu": Tool 'search_feeds' completed successfully in 21s
+2026-01-14T12:27:04.180Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__search_feeds hook execution - workspace trust not accepted
+2026-01-14T12:27:10.997Z [DEBUG] MCP server "xiaohongshu": Tool 'search_feeds' completed successfully in 28s
+2026-01-14T12:27:10.998Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__search_feeds hook execution - workspace trust not accepted
+2026-01-14T12:27:11.029Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-14T12:27:11.029Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-14T12:27:11.029Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-14T12:27:11.029Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-14T12:27:11.051Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-14T12:27:11.055Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:27:11.055Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:27:11.055Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:27:12.151Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:27:40.294Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__search_feeds
+2026-01-14T12:27:40.295Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__search_feeds hook execution - workspace trust not accepted
+2026-01-14T12:27:40.295Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__search_feeds
+2026-01-14T12:27:40.295Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__search_feeds hook execution - workspace trust not accepted
+2026-01-14T12:27:40.295Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__search_feeds
+2026-01-14T12:27:40.295Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__search_feeds hook execution - workspace trust not accepted
+2026-01-14T12:27:40.295Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__search_feeds
+2026-01-14T12:27:40.295Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__search_feeds hook execution - workspace trust not accepted
+2026-01-14T12:27:40.311Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: search_feeds
+2026-01-14T12:27:40.311Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:27:40.311Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: search_feeds
+2026-01-14T12:27:40.311Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:27:40.311Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: search_feeds
+2026-01-14T12:27:40.311Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:27:40.311Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: search_feeds
+2026-01-14T12:27:40.311Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:27:51.145Z [DEBUG] MCP server "xiaohongshu": Tool 'search_feeds' completed successfully in 10s
+2026-01-14T12:27:51.154Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__search_feeds hook execution - workspace trust not accepted
+2026-01-14T12:27:51.435Z [DEBUG] MCP server "xiaohongshu": Tool 'search_feeds' completed successfully in 11s
+2026-01-14T12:27:51.436Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__search_feeds hook execution - workspace trust not accepted
+2026-01-14T12:27:52.524Z [DEBUG] MCP server "xiaohongshu": Tool 'search_feeds' completed successfully in 12s
+2026-01-14T12:27:52.525Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__search_feeds hook execution - workspace trust not accepted
+2026-01-14T12:27:53.497Z [DEBUG] MCP server "xiaohongshu": Tool 'search_feeds' completed successfully in 13s
+2026-01-14T12:27:53.498Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__search_feeds hook execution - workspace trust not accepted
+2026-01-14T12:27:53.528Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-14T12:27:53.528Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-14T12:27:53.528Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-14T12:27:53.528Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-14T12:27:53.545Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-14T12:27:53.549Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:27:53.549Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:27:53.549Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:27:54.623Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:28:52.838Z [DEBUG] BigQuery metrics export: trust not established, skipping
+2026-01-14T12:28:53.195Z [DEBUG] MCP server "xiaohongshu": HTTP connection dropped after 299s uptime
+2026-01-14T12:28:53.195Z [DEBUG] MCP server "xiaohongshu": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T12:28:54.197Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:31:44.145Z [WARN] Streaming stall detected: 208.5s gap between events (stall #1)
+2026-01-14T12:31:44.174Z [WARN] Streaming completed with 1 stall(s), total stall time: 208.5s
+2026-01-14T12:31:44.198Z [DEBUG] executePreToolHooks called for tool: TodoWrite
+2026-01-14T12:31:44.199Z [DEBUG] Skipping PreToolUse:TodoWrite hook execution - workspace trust not accepted
+2026-01-14T12:31:44.227Z [DEBUG] Writing to temp file: /Users/henry/.claude/todos/c0ecf5cd-cd7f-418b-824c-8d229cb706e1-agent-c0ecf5cd-cd7f-418b-824c-8d229cb706e1.json.tmp.19895.1768393904227
+2026-01-14T12:31:44.227Z [DEBUG] Preserving file permissions: 100644
+2026-01-14T12:31:44.228Z [DEBUG] Temp file written successfully, size: 494 bytes
+2026-01-14T12:31:44.228Z [DEBUG] Applied original permissions to temp file
+2026-01-14T12:31:44.228Z [DEBUG] Renaming /Users/henry/.claude/todos/c0ecf5cd-cd7f-418b-824c-8d229cb706e1-agent-c0ecf5cd-cd7f-418b-824c-8d229cb706e1.json.tmp.19895.1768393904227 to /Users/henry/.claude/todos/c0ecf5cd-cd7f-418b-824c-8d229cb706e1-agent-c0ecf5cd-cd7f-418b-824c-8d229cb706e1.json
+2026-01-14T12:31:44.229Z [DEBUG] File /Users/henry/.claude/todos/c0ecf5cd-cd7f-418b-824c-8d229cb706e1-agent-c0ecf5cd-cd7f-418b-824c-8d229cb706e1.json written atomically
+2026-01-14T12:31:44.232Z [DEBUG] Skipping PostToolUse:TodoWrite hook execution - workspace trust not accepted
+2026-01-14T12:31:44.260Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-14T12:31:44.261Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-14T12:31:44.261Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-14T12:31:44.261Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-14T12:31:44.280Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-14T12:31:44.282Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:31:44.282Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:31:44.282Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:31:45.087Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:33:34.892Z [WARN] Streaming stall detected: 96.7s gap between events (stall #1)
+2026-01-14T12:33:40.250Z [WARN] Streaming completed with 1 stall(s), total stall time: 96.7s
+2026-01-14T12:33:40.266Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-14T12:33:40.267Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-14T12:33:40.336Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-14T12:33:40.337Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:33:40.337Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:33:40.337Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:33:40.342Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-14T12:33:40.347Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-14T12:33:40.348Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-14T12:33:40.461Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-14T12:33:40.462Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:33:40.462Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:33:40.462Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:33:40.466Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-14T12:33:40.478Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-14T12:33:40.478Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-14T12:33:40.478Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-14T12:33:40.478Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-14T12:33:40.494Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-14T12:33:40.496Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:33:40.496Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:33:40.496Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:33:41.363Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:33:42.838Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:33:44.263Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:33:52.831Z [DEBUG] BigQuery metrics export: trust not established, skipping
+2026-01-14T12:33:53.193Z [DEBUG] MCP server "xiaohongshu": HTTP connection dropped after 599s uptime
+2026-01-14T12:33:53.193Z [DEBUG] MCP server "xiaohongshu": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T12:33:54.195Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:34:43.806Z [WARN] Streaming stall detected: 54.3s gap between events (stall #1)
+2026-01-14T12:34:47.882Z [WARN] Streaming completed with 1 stall(s), total stall time: 54.3s
+2026-01-14T12:34:47.907Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-14T12:34:47.908Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-14T12:34:47.961Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-14T12:34:47.961Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:34:47.961Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:34:47.961Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:34:47.967Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-14T12:34:47.972Z [DEBUG] executePreToolHooks called for tool: TodoWrite
+2026-01-14T12:34:47.972Z [DEBUG] Skipping PreToolUse:TodoWrite hook execution - workspace trust not accepted
+2026-01-14T12:34:47.991Z [DEBUG] Writing to temp file: /Users/henry/.claude/todos/c0ecf5cd-cd7f-418b-824c-8d229cb706e1-agent-c0ecf5cd-cd7f-418b-824c-8d229cb706e1.json.tmp.19895.1768394087991
+2026-01-14T12:34:47.991Z [DEBUG] Preserving file permissions: 100644
+2026-01-14T12:34:47.992Z [DEBUG] Temp file written successfully, size: 496 bytes
+2026-01-14T12:34:47.992Z [DEBUG] Applied original permissions to temp file
+2026-01-14T12:34:47.992Z [DEBUG] Renaming /Users/henry/.claude/todos/c0ecf5cd-cd7f-418b-824c-8d229cb706e1-agent-c0ecf5cd-cd7f-418b-824c-8d229cb706e1.json.tmp.19895.1768394087991 to /Users/henry/.claude/todos/c0ecf5cd-cd7f-418b-824c-8d229cb706e1-agent-c0ecf5cd-cd7f-418b-824c-8d229cb706e1.json
+2026-01-14T12:34:47.993Z [DEBUG] File /Users/henry/.claude/todos/c0ecf5cd-cd7f-418b-824c-8d229cb706e1-agent-c0ecf5cd-cd7f-418b-824c-8d229cb706e1.json written atomically
+2026-01-14T12:34:47.996Z [DEBUG] Skipping PostToolUse:TodoWrite hook execution - workspace trust not accepted
+2026-01-14T12:34:48.011Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-14T12:34:48.011Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-14T12:34:48.039Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-14T12:34:48.039Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:34:48.039Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:34:48.039Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:34:48.846Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:34:48.984Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:35:08.079Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-14T12:35:08.080Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:35:08.080Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:35:08.080Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:35:08.093Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-14T12:35:08.109Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-14T12:35:08.109Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-14T12:35:08.109Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-14T12:35:08.109Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-14T12:35:08.128Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-14T12:35:08.131Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:35:08.131Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:35:08.131Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:35:09.119Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:35:09.354Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:35:41.760Z [DEBUG] executePreToolHooks called for tool: Task
+2026-01-14T12:35:41.761Z [DEBUG] Skipping PreToolUse:Task hook execution - workspace trust not accepted
+2026-01-14T12:35:41.818Z [DEBUG] Skipping SubagentStart:general-purpose hook execution - workspace trust not accepted
+2026-01-14T12:35:41.835Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-14T12:35:41.836Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:35:41.836Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:35:41.837Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:35:43.495Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:35:46.207Z [DEBUG] executePreToolHooks called for tool: Read
+2026-01-14T12:35:46.207Z [DEBUG] Skipping PreToolUse:Read hook execution - workspace trust not accepted
+2026-01-14T12:35:46.240Z [DEBUG] Skipping PostToolUse:Read hook execution - workspace trust not accepted
+2026-01-14T12:35:46.267Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-14T12:35:46.268Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:35:46.268Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:35:46.268Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:35:47.317Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:35:58.633Z [DEBUG] executePreToolHooks called for tool: Write
+2026-01-14T12:35:58.634Z [DEBUG] Skipping PreToolUse:Write hook execution - workspace trust not accepted
+2026-01-14T12:35:59.661Z [DEBUG] rg error (signal=undefined, code=ABORT_ERR, stderr: ), 0 results
+2026-01-14T12:35:59.661Z [DEBUG] Writing to temp file: /tmp/get_followers.py.tmp.19895.1768394159661
+2026-01-14T12:35:59.662Z [DEBUG] Temp file written successfully, size: 728 bytes
+2026-01-14T12:35:59.662Z [DEBUG] Renaming /tmp/get_followers.py.tmp.19895.1768394159661 to /tmp/get_followers.py
+2026-01-14T12:35:59.662Z [DEBUG] File /tmp/get_followers.py written atomically
+2026-01-14T12:35:59.667Z [DEBUG] Skipping PostToolUse:Write hook execution - workspace trust not accepted
+2026-01-14T12:35:59.721Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-14T12:35:59.722Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:35:59.722Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:35:59.722Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:36:00.225Z [DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/opt/homebrew/Caskroom/claude-code/2.1.1/claude)
+2026-01-14T12:36:00.588Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:36:01.915Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-14T12:36:01.915Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-14T12:36:01.936Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-14T12:36:01.936Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:36:01.936Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:36:01.936Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:36:03.004Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:36:03.096Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-14T12:36:03.096Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:36:03.096Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:36:03.096Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:36:03.097Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-14T12:36:03.143Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-14T12:36:03.144Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:36:03.144Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:36:03.144Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:36:04.086Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:36:04.368Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:36:08.129Z [DEBUG] executePreToolHooks called for tool: Read
+2026-01-14T12:36:08.129Z [DEBUG] Skipping PreToolUse:Read hook execution - workspace trust not accepted
+2026-01-14T12:36:08.156Z [DEBUG] Skipping PostToolUse:Read hook execution - workspace trust not accepted
+2026-01-14T12:36:08.186Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-14T12:36:08.188Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:36:08.188Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:36:08.188Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:36:09.046Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:36:18.642Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__user_profile
+2026-01-14T12:36:18.643Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:36:18.643Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__user_profile
+2026-01-14T12:36:18.643Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:36:18.643Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__user_profile
+2026-01-14T12:36:18.643Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:36:18.643Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__user_profile
+2026-01-14T12:36:18.643Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:36:18.643Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__user_profile
+2026-01-14T12:36:18.643Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:36:18.651Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: user_profile
+2026-01-14T12:36:18.651Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:36:18.651Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: user_profile
+2026-01-14T12:36:18.652Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:36:18.652Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: user_profile
+2026-01-14T12:36:18.652Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:36:18.652Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: user_profile
+2026-01-14T12:36:18.652Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:36:18.652Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: user_profile
+2026-01-14T12:36:18.652Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:36:29.417Z [DEBUG] MCP server "xiaohongshu": Tool 'user_profile' completed successfully in 10s
+2026-01-14T12:36:29.440Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:36:29.440Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:36:29.440Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:36:29.746Z [DEBUG] MCP server "xiaohongshu": Tool 'user_profile' completed successfully in 11s
+2026-01-14T12:36:29.766Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:36:30.730Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:36:32.107Z [DEBUG] MCP server "xiaohongshu": Tool 'user_profile' completed successfully in 13s
+2026-01-14T12:36:32.108Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:36:32.108Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:36:32.108Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:36:33.078Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:36:33.417Z [DEBUG] MCP server "xiaohongshu": Tool 'user_profile' completed successfully in 14s
+2026-01-14T12:36:33.417Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:36:33.417Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:36:33.417Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:36:34.515Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:36:48.653Z [DEBUG] MCP server "xiaohongshu": Tool 'user_profile' still running (30s elapsed)
+2026-01-14T12:37:18.653Z [DEBUG] MCP server "xiaohongshu": Tool 'user_profile' still running (60s elapsed)
+2026-01-14T12:37:18.657Z [DEBUG] MCP server "xiaohongshu": HTTP connection dropped after 805s uptime
+2026-01-14T12:37:18.657Z [DEBUG] MCP server "xiaohongshu": Connection error: The operation was aborted.
+2026-01-14T12:37:18.663Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:37:18.724Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-14T12:37:18.728Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:37:18.728Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:37:18.728Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:37:19.949Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:37:46.666Z [DEBUG] executePreToolHooks called for tool: Write
+2026-01-14T12:37:46.667Z [DEBUG] Skipping PreToolUse:Write hook execution - workspace trust not accepted
+2026-01-14T12:37:46.689Z [DEBUG] Writing to temp file: /tmp/batch_get_followers.py.tmp.19895.1768394266689
+2026-01-14T12:37:46.690Z [DEBUG] Temp file written successfully, size: 1505 bytes
+2026-01-14T12:37:46.690Z [DEBUG] Renaming /tmp/batch_get_followers.py.tmp.19895.1768394266689 to /tmp/batch_get_followers.py
+2026-01-14T12:37:46.690Z [DEBUG] File /tmp/batch_get_followers.py written atomically
+2026-01-14T12:37:46.701Z [DEBUG] Skipping PostToolUse:Write hook execution - workspace trust not accepted
+2026-01-14T12:37:46.727Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-14T12:37:46.728Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:37:46.728Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:37:46.728Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:37:47.709Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:38:07.069Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__user_profile
+2026-01-14T12:38:07.069Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:38:07.069Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__user_profile
+2026-01-14T12:38:07.069Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:38:07.069Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__user_profile
+2026-01-14T12:38:07.069Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:38:07.069Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__user_profile
+2026-01-14T12:38:07.070Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:38:07.070Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__user_profile
+2026-01-14T12:38:07.070Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:38:07.084Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: user_profile
+2026-01-14T12:38:07.085Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:38:07.085Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: user_profile
+2026-01-14T12:38:07.085Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:38:07.085Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: user_profile
+2026-01-14T12:38:07.085Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:38:07.085Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: user_profile
+2026-01-14T12:38:07.085Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:38:07.085Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: user_profile
+2026-01-14T12:38:07.085Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:38:13.687Z [DEBUG] MCP server "xiaohongshu": Tool 'user_profile' completed successfully in 6s
+2026-01-14T12:38:13.698Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:38:14.012Z [DEBUG] MCP server "xiaohongshu": Tool 'user_profile' completed successfully in 6s
+2026-01-14T12:38:14.012Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:38:14.012Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:38:14.012Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:38:14.848Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:38:15.165Z [DEBUG] MCP server "xiaohongshu": Tool 'user_profile' completed successfully in 8s
+2026-01-14T12:38:15.166Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:38:18.676Z [DEBUG] MCP server "xiaohongshu": Tool 'user_profile' completed successfully in 11s
+2026-01-14T12:38:18.678Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:38:37.085Z [DEBUG] MCP server "xiaohongshu": Tool 'user_profile' still running (30s elapsed)
+2026-01-14T12:38:52.830Z [DEBUG] BigQuery metrics export: trust not established, skipping
+2026-01-14T12:38:53.195Z [DEBUG] MCP server "xiaohongshu": HTTP connection dropped after 899s uptime
+2026-01-14T12:38:53.195Z [DEBUG] MCP server "xiaohongshu": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T12:38:54.206Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:39:07.092Z [DEBUG] MCP server "xiaohongshu": Tool 'user_profile' still running (60s elapsed)
+2026-01-14T12:39:07.106Z [DEBUG] MCP server "xiaohongshu": HTTP connection dropped after 913s uptime
+2026-01-14T12:39:07.106Z [DEBUG] MCP server "xiaohongshu": Connection error: The operation was aborted.
+2026-01-14T12:39:07.164Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:39:07.291Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-14T12:39:07.296Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:39:07.296Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:39:07.297Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:39:08.405Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:40:02.142Z [WARN] Streaming stall detected: 34.7s gap between events (stall #1)
+2026-01-14T12:40:02.205Z [WARN] Streaming completed with 1 stall(s), total stall time: 34.7s
+2026-01-14T12:40:02.234Z [DEBUG] executePreToolHooks called for tool: Write
+2026-01-14T12:40:02.235Z [DEBUG] Skipping PreToolUse:Write hook execution - workspace trust not accepted
+2026-01-14T12:40:02.266Z [DEBUG] Writing to temp file: /tmp/collect_all_followers.py.tmp.19895.1768394402266
+2026-01-14T12:40:02.267Z [DEBUG] Temp file written successfully, size: 1445 bytes
+2026-01-14T12:40:02.267Z [DEBUG] Renaming /tmp/collect_all_followers.py.tmp.19895.1768394402266 to /tmp/collect_all_followers.py
+2026-01-14T12:40:02.268Z [DEBUG] File /tmp/collect_all_followers.py written atomically
+2026-01-14T12:40:02.281Z [DEBUG] Skipping PostToolUse:Write hook execution - workspace trust not accepted
+2026-01-14T12:40:02.358Z [DEBUG] Skipping PreCompact:auto hook execution - workspace trust not accepted
+2026-01-14T12:40:02.359Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-14T12:40:02.361Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:40:02.361Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:40:02.361Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:40:26.926Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:41:31.880Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:41:31.880Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:41:31.881Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:41:32.678Z [DEBUG] Skipping SessionStart:compact hook execution - workspace trust not accepted
+2026-01-14T12:41:32.734Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-14T12:41:32.737Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:41:32.737Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:41:32.737Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:41:33.701Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:41:52.974Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__user_profile
+2026-01-14T12:41:52.974Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:41:52.974Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__user_profile
+2026-01-14T12:41:52.974Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:41:52.974Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__user_profile
+2026-01-14T12:41:52.974Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:41:52.974Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__user_profile
+2026-01-14T12:41:52.974Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:41:52.974Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__user_profile
+2026-01-14T12:41:52.975Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:41:52.975Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__user_profile
+2026-01-14T12:41:52.975Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:41:52.975Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__user_profile
+2026-01-14T12:41:52.975Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:41:52.975Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__user_profile
+2026-01-14T12:41:52.975Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:41:52.975Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__user_profile
+2026-01-14T12:41:52.975Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:41:52.975Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__user_profile
+2026-01-14T12:41:52.975Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:41:52.998Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: user_profile
+2026-01-14T12:41:52.998Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:41:52.998Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: user_profile
+2026-01-14T12:41:52.998Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:41:52.998Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: user_profile
+2026-01-14T12:41:52.998Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:41:52.998Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: user_profile
+2026-01-14T12:41:52.998Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:41:52.998Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: user_profile
+2026-01-14T12:41:52.998Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:41:52.998Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: user_profile
+2026-01-14T12:41:52.998Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:41:52.998Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: user_profile
+2026-01-14T12:41:52.998Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:41:52.998Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: user_profile
+2026-01-14T12:41:52.998Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:41:52.998Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: user_profile
+2026-01-14T12:41:52.998Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:41:52.998Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: user_profile
+2026-01-14T12:41:52.998Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:42:04.852Z [DEBUG] MCP server "xiaohongshu": Tool 'user_profile' completed successfully in 11s
+2026-01-14T12:42:04.859Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:42:04.859Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:42:04.859Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:42:04.971Z [DEBUG] MCP server "xiaohongshu": Tool 'user_profile' completed successfully in 11s
+2026-01-14T12:42:04.972Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:42:04.972Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:42:04.972Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:42:05.991Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:42:08.077Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:42:18.038Z [DEBUG] MCP server "xiaohongshu": Tool 'user_profile' completed successfully in 25s
+2026-01-14T12:42:18.055Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:42:18.078Z [DEBUG] MCP server "xiaohongshu": Tool 'user_profile' completed successfully in 25s
+2026-01-14T12:42:18.078Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:42:18.078Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:42:18.078Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:42:18.776Z [DEBUG] MCP server "xiaohongshu": Tool 'user_profile' completed successfully in 25s
+2026-01-14T12:42:18.776Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:42:18.776Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:42:18.776Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:42:19.181Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:42:19.910Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:42:21.070Z [DEBUG] MCP server "xiaohongshu": Tool 'user_profile' completed successfully in 28s
+2026-01-14T12:42:21.071Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:42:21.071Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:42:21.071Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:42:22.138Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:42:23.001Z [DEBUG] MCP server "xiaohongshu": Tool 'user_profile' still running (30s elapsed)
+2026-01-14T12:42:23.001Z [DEBUG] MCP server "xiaohongshu": Tool 'user_profile' still running (30s elapsed)
+2026-01-14T12:42:23.001Z [DEBUG] MCP server "xiaohongshu": Tool 'user_profile' still running (30s elapsed)
+2026-01-14T12:42:23.001Z [DEBUG] MCP server "xiaohongshu": Tool 'user_profile' still running (30s elapsed)
+2026-01-14T12:42:24.605Z [DEBUG] MCP server "xiaohongshu": Tool 'user_profile' completed successfully in 31s
+2026-01-14T12:42:24.610Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:42:25.192Z [DEBUG] MCP server "xiaohongshu": Tool 'user_profile' completed successfully in 32s
+2026-01-14T12:42:25.193Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:42:25.348Z [DEBUG] MCP server "xiaohongshu": Tool 'user_profile' completed successfully in 32s
+2026-01-14T12:42:25.348Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:42:53.005Z [DEBUG] MCP server "xiaohongshu": Tool 'user_profile' still running (60s elapsed)
+2026-01-14T12:42:53.014Z [DEBUG] MCP server "xiaohongshu": HTTP connection dropped after 1139s uptime
+2026-01-14T12:42:53.014Z [DEBUG] MCP server "xiaohongshu": Connection error: The operation was aborted.
+2026-01-14T12:42:53.018Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:42:53.101Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-14T12:42:53.109Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:42:53.109Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:42:53.109Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:42:54.600Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:43:36.435Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__user_profile
+2026-01-14T12:43:36.436Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:43:36.436Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__user_profile
+2026-01-14T12:43:36.436Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:43:36.436Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__user_profile
+2026-01-14T12:43:36.436Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:43:36.436Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__user_profile
+2026-01-14T12:43:36.436Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:43:36.436Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__user_profile
+2026-01-14T12:43:36.436Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:43:36.436Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__user_profile
+2026-01-14T12:43:36.436Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:43:36.436Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__user_profile
+2026-01-14T12:43:36.436Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:43:36.436Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__user_profile
+2026-01-14T12:43:36.436Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:43:36.447Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: user_profile
+2026-01-14T12:43:36.448Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:43:36.448Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: user_profile
+2026-01-14T12:43:36.448Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:43:36.448Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: user_profile
+2026-01-14T12:43:36.448Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:43:36.448Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: user_profile
+2026-01-14T12:43:36.448Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:43:36.448Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: user_profile
+2026-01-14T12:43:36.448Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:43:36.448Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: user_profile
+2026-01-14T12:43:36.448Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:43:36.448Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: user_profile
+2026-01-14T12:43:36.448Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:43:36.448Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: user_profile
+2026-01-14T12:43:36.448Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:43:45.259Z [DEBUG] MCP server "xiaohongshu": Tool 'user_profile' completed successfully in 8s
+2026-01-14T12:43:45.265Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:43:45.265Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:43:45.265Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:43:46.529Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:43:48.833Z [DEBUG] MCP server "xiaohongshu": Tool 'user_profile' completed successfully in 12s
+2026-01-14T12:43:48.834Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:43:48.834Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:43:48.834Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:43:50.025Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:43:52.110Z [DEBUG] MCP server "xiaohongshu": Tool 'user_profile' completed successfully in 15s
+2026-01-14T12:43:52.116Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:43:52.849Z [DEBUG] BigQuery metrics export: trust not established, skipping
+2026-01-14T12:43:53.195Z [DEBUG] MCP server "xiaohongshu": HTTP connection dropped after 1199s uptime
+2026-01-14T12:43:53.195Z [DEBUG] MCP server "xiaohongshu": Connection error: SSE stream disconnected: TimeoutError: The operation timed out.
+2026-01-14T12:43:54.203Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:43:56.946Z [DEBUG] MCP server "xiaohongshu": Tool 'user_profile' completed successfully in 20s
+2026-01-14T12:43:56.947Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:43:56.947Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:43:56.947Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:43:57.837Z [DEBUG] MCP server "xiaohongshu": Tool 'user_profile' completed successfully in 21s
+2026-01-14T12:43:57.838Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:43:57.838Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:43:57.838Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:43:58.084Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:43:58.997Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:44:00.524Z [DEBUG] MCP server "xiaohongshu": Tool 'user_profile' completed successfully in 24s
+2026-01-14T12:44:00.527Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:44:03.281Z [DEBUG] MCP server "xiaohongshu": Tool 'user_profile' completed successfully in 26s
+2026-01-14T12:44:03.281Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:44:03.281Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:44:03.281Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:44:04.478Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:44:06.449Z [DEBUG] MCP server "xiaohongshu": Tool 'user_profile' still running (30s elapsed)
+2026-01-14T12:44:36.450Z [DEBUG] MCP server "xiaohongshu": Tool 'user_profile' still running (60s elapsed)
+2026-01-14T12:44:36.451Z [DEBUG] MCP server "xiaohongshu": HTTP connection dropped after 1243s uptime
+2026-01-14T12:44:36.451Z [DEBUG] MCP server "xiaohongshu": Connection error: The operation was aborted.
+2026-01-14T12:44:36.456Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:44:36.527Z [DEBUG] Skipping PreCompact:auto hook execution - workspace trust not accepted
+2026-01-14T12:44:36.528Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-14T12:44:36.530Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:44:36.530Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:44:36.530Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:44:38.425Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:44:38.434Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-14T12:44:38.436Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:44:38.436Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:44:38.436Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:44:39.677Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:44:40.267Z [DEBUG] Skipping SubagentStop hook execution - workspace trust not accepted
+2026-01-14T12:44:40.278Z [DEBUG] Skipping PostToolUse:Task hook execution - workspace trust not accepted
+2026-01-14T12:44:40.300Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-14T12:44:40.300Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-14T12:44:40.301Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-14T12:44:40.301Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-14T12:44:40.322Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-14T12:44:40.326Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:44:40.326Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:44:40.326Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:44:41.308Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:45:20.586Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-14T12:45:20.587Z [DEBUG] Skipping PreToolUse:Bash hook execution - workspace trust not accepted
+2026-01-14T12:45:20.727Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-14T12:45:20.728Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:45:20.728Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:45:20.728Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:45:20.734Z [DEBUG] Skipping PostToolUse:Bash hook execution - workspace trust not accepted
+2026-01-14T12:45:20.760Z [DEBUG] executePreToolHooks called for tool: Read
+2026-01-14T12:45:20.761Z [DEBUG] Skipping PreToolUse:Read hook execution - workspace trust not accepted
+2026-01-14T12:45:20.792Z [DEBUG] Skipping PostToolUse:Read hook execution - workspace trust not accepted
+2026-01-14T12:45:20.803Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-14T12:45:20.803Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-14T12:45:20.803Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-14T12:45:20.803Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-14T12:45:20.825Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-14T12:45:20.829Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:45:20.829Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:45:20.829Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:45:21.982Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:45:22.410Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:45:41.288Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__user_profile
+2026-01-14T12:45:41.288Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:45:41.289Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__user_profile
+2026-01-14T12:45:41.289Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:45:41.289Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__user_profile
+2026-01-14T12:45:41.289Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:45:41.289Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__user_profile
+2026-01-14T12:45:41.289Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:45:41.289Z [DEBUG] executePreToolHooks called for tool: mcp__xiaohongshu__user_profile
+2026-01-14T12:45:41.289Z [DEBUG] Skipping PreToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:45:41.308Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: user_profile
+2026-01-14T12:45:41.308Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:45:41.308Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: user_profile
+2026-01-14T12:45:41.308Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:45:41.308Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: user_profile
+2026-01-14T12:45:41.308Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:45:41.308Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: user_profile
+2026-01-14T12:45:41.308Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:45:41.308Z [DEBUG] MCP server "xiaohongshu": Calling MCP tool: user_profile
+2026-01-14T12:45:41.308Z [DEBUG] MCP server "xiaohongshu": No token data found
+2026-01-14T12:45:49.593Z [DEBUG] MCP server "xiaohongshu": Tool 'user_profile' completed successfully in 8s
+2026-01-14T12:45:49.604Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:45:49.604Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:45:49.604Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:45:50.584Z [DEBUG] MCP server "xiaohongshu": Tool 'user_profile' completed successfully in 9s
+2026-01-14T12:45:50.584Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:45:50.584Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:45:50.584Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:45:50.801Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:45:51.540Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:45:52.134Z [DEBUG] MCP server "xiaohongshu": Tool 'user_profile' completed successfully in 10s
+2026-01-14T12:45:52.134Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:45:52.134Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:45:52.134Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:45:53.164Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:45:54.243Z [DEBUG] MCP server "xiaohongshu": Tool 'user_profile' completed successfully in 12s
+2026-01-14T12:45:54.243Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:45:54.243Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:45:54.243Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:45:55.147Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:46:11.315Z [DEBUG] MCP server "xiaohongshu": Tool 'user_profile' still running (30s elapsed)
+2026-01-14T12:46:41.312Z [DEBUG] MCP server "xiaohongshu": HTTP connection dropped after 1367s uptime
+2026-01-14T12:46:41.312Z [DEBUG] MCP server "xiaohongshu": Connection error: The operation was aborted.
+2026-01-14T12:46:41.318Z [DEBUG] Skipping PostToolUse:mcp__xiaohongshu__user_profile hook execution - workspace trust not accepted
+2026-01-14T12:46:41.382Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-14T12:46:41.382Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-14T12:46:41.382Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-14T12:46:41.382Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-14T12:46:41.422Z [DEBUG] Tool search disabled: MCPSearchTool is not available (may have been disallowed via disallowedTools).
+2026-01-14T12:46:41.448Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-14T12:46:41.448Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-14T12:46:41.448Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-14T12:46:43.145Z [DEBUG] Stream started - received first chunk
+2026-01-14T12:46:43.562Z [DEBUG] Skipping Stop hook execution - workspace trust not accepted
+2026-01-14T12:47:27.515Z [DEBUG] Skipping SessionEnd:prompt_input_exit hook execution - workspace trust not accepted

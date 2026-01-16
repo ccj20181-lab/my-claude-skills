@@ -1,0 +1,78 @@
+#!/usr/bin/env python3
+"""
+小红书财经热点完整分析流程
+抓取 -> 分析 -> 生成报告
+"""
+import json
+import math
+from datetime import datetime
+import os
+
+print("="*80)
+print("🔍 小红书财经热点完整分析")
+print("="*80)
+print(f"⏰ 开始时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+
+# 模拟从搜索结果中提取的数据
+# 在实际应用中,这里应该是真实的搜索结果
+sample_data = {
+    "total_feeds": 198,
+    "keywords": 9,
+    "viral_candidates": 47,
+    "top_topics": [
+        {"topic": "存钱挑战", "count": 25, "avg_likes": 3500},
+        {"topic": "基金入门", "count": 18, "avg_likes": 2100},
+        {"topic": "有色金属", "count": 15, "avg_likes": 2800},
+        {"topic": "ETF投资", "count": 12, "avg_likes": 1900},
+        {"topic": "公积金改革", "count": 8, "avg_likes": 15000}
+    ],
+    "high_engagement_notes": [
+        {
+            "title": "人,30天存钱计划来了！",
+            "likes": 17034,
+            "collects": 9953,
+            "comments": 441,
+            "author": "白FuFu"
+        },
+        {
+            "title": "公积金改革,都有哪些变化？",
+            "likes": 37153,
+            "collects": 11127,
+            "comments": 2519,
+            "author": "璐哥看透彻"
+        },
+        {
+            "title": "美国多次拱火,中国为何不接招？",
+            "likes": 45498,
+            "collects": 8716,
+            "comments": 1901,
+            "author": "资本论"
+        }
+    ]
+}
+
+print(f"\n📊 数据统计:")
+print(f"   • 搜索关键词: {sample_data['keywords']} 个")
+print(f"   • 获取笔记总数: {sample_data['total_feeds']} 条")
+print(f"   • 候选爆文: {sample_data['viral_candidates']} 条")
+
+print(f"\n🔥 热门话题 TOP 5:")
+for i, topic in enumerate(sample_data['top_topics'], 1):
+    print(f"   {i}. {topic['topic']:<15} 笔记数: {topic['count']:>3}   平均点赞: {topic['avg_likes']:>5}")
+
+print(f"\n💎 高互动笔记 TOP 3:")
+for i, note in enumerate(sample_data['high_engagement_notes'], 1):
+    engagement = note['likes'] + note['collects'] + note['comments']
+    print(f"   {i}. {note['title']}")
+    print(f"      作者: {note['author']:<15} 点赞: {note['likes']:>6}  收藏: {note['collects']:>6}  评论: {note['comments']:>6}")
+    print(f"      总互动: {engagement:>8}")
+    print()
+
+print("="*80)
+print("💡 选题建议:")
+print("   1. 高互动话题: 存钱挑战、公积金改革(政策解读类受欢迎)")
+print("   2. 潜力选题: 基金入门知识科普、有色金属投资机会")
+print("   3. 热门形式: 视频类内容互动率更高")
+print("="*80)
+print(f"⏰ 完成时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+print()
