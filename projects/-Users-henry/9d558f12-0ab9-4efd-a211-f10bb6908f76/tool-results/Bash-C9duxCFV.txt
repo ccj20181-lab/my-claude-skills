@@ -1,0 +1,1933 @@
+{
+  "task_id": "20e78458-5f63-4310-954b-5f79be8aaac6",
+  "status": "completed",
+  "query": "2025 Global and China Macroeconomic Trends and Financial Outlook",
+  "sources": [
+    {
+      "url": "",
+      "title": "2025 Global and China Macroeconomic Trends and Financial Outlook"
+    },
+    {
+      "url": "https://www.imf.org/-/media/files/publications/weo/2025/update/january/english/text.pdf",
+      "title": "WORLD ECONOMIC OUTLOOK UPDATE - International Monetary Fund"
+    },
+    {
+      "url": "https://www.imf.org/en/news/articles/2025/12/10/sp121025-md-remarks-2025-china-article-iv-consultation-press-conference",
+      "title": "Opening Remarks: 2025 China Article IV Consultation Press Conference"
+    },
+    {
+      "url": "https://rhg.com/wp-content/uploads/2025/12/Chinas-Economy-Rightsizing-2025-Looking-Ahead-to-2026.pdf",
+      "title": "China's Economy: Rightsizing 2025, Looking Ahead to 2026 - Rhodium Group"
+    },
+    {
+      "url": "https://www.china-briefing.com/news/chinas-economy-in-november-2025-year-end-review-and-2026-outlook/",
+      "title": "China's Economy November 2025: Year-End Review and 2026 ..."
+    },
+    {
+      "url": "https://www.oecd.org/en/publications/oecd-economic-outlook-interim-report-september-2025_67b10c01-en.html",
+      "title": "OECD Economic Outlook, Interim Report September 2025"
+    },
+    {
+      "url": "https://www.worldbank.org/en/news/press-release/2026/01/13/global-economic-prospects-january-2026-press-release",
+      "title": "Global Economy Shows Resilience Amid Historic Trade, Policy Uncertainty - World Bank"
+    },
+    {
+      "url": "https://www.cspi-ratings.com/publications/publicationsDetail/Chinas-Public-Finance-Credit-Outlook-for-2026.html",
+      "title": "China's Public Finance Credit Outlook for 2026 - CSPI Ratings"
+    },
+    {
+      "url": "https://am.jpmorgan.com/gb/en/asset-management/per/insights/market-insights/market-updates/monthly-market-review/",
+      "title": "Review of Markets over 2025 | J.P. Morgan Asset Management"
+    },
+    {
+      "url": "https://www.stlouisfed.org/on-the-economy/2026/jan/tracking-ai-contribution-gdp-growth",
+      "title": "Tracking AI's Contribution to GDP Growth - Federal Reserve Bank of St. Louis"
+    },
+    {
+      "url": "https://ca.rbcwealthmanagement.com/Alka-Shah/blog/4716788-Setting-the-stage-for-a-sustainable-Chinese-equity-rally",
+      "title": "Setting the stage for a sustainable Chinese equity rally - RBC Wealth Management"
+    },
+    {
+      "url": "https://www.ecb.europa.eu/press/economic-bulletin/html/eb202508.en.html",
+      "title": "Economic Bulletin Issue 8, 2025 - European Central Bank"
+    },
+    {
+      "url": "https://tradingeconomics.com/united-states/interest-rate",
+      "title": "United States Fed Funds Interest Rate - Trading Economics"
+    },
+    {
+      "url": "https://www.nuveen.com/en-us/insights/investment-outlook/fed-update",
+      "title": "The Fed - FOMC meeting commentary December 2025 - Nuveen"
+    },
+    {
+      "url": "https://www.fidelity.com/learning-center/trading-investing/markets-sectors/stock-market-report",
+      "title": "2025 stock market report - Fidelity Investments"
+    },
+    {
+      "url": "https://www.commbank.com.au/articles/newsroom/2026/01/2026-china-economy-outlook.html",
+      "title": "How China's two-speed economy will weather the storm in 2026 - CommBank"
+    },
+    {
+      "url": "https://www.visualcapitalist.com/cp/charted-the-2026-growth-outlook-for-g20-nations/",
+      "title": "Charted: The 2026 Growth Outlook for G20 Nations - Visual Capitalist"
+    },
+    {
+      "url": "https://www.stats.gov.cn/english/PressRelease/202510/t20251020_1961608.html",
+      "title": "National Economy Witnessed Steady Progress with Positive Results Achieved in High-Quality Development in the First Three Quarters"
+    },
+    {
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2209412",
+      "title": "2025: A Defining Year for India's Growth - PIB"
+    },
+    {
+      "url": "https://www.gam.com/en/our-thinking/investment-opinions/china-housing-market-downturn-and-its-impact",
+      "title": "China housing market downturn and its impact | 13 January 2026 | en - GAM.com"
+    },
+    {
+      "url": "https://www.spglobal.com/ratings/en/regulatory/article/china-property-watch-the-chilling-effects-of-polarization-s101647911",
+      "title": "China Property Watch: The Chilling Effects Of Pol | S&P Global Ratings"
+    },
+    {
+      "url": "https://www.deloitte.com/us/en/insights/topics/economy/global-economic-outlook-2026.html",
+      "title": "Global economic outlook 2026 | Deloitte Insights"
+    },
+    {
+      "url": "https://www.pwccn.com/en/research-and-insights/china-economic-quarterly-q1-q2-2025.pdf",
+      "title": "China Economic Quarterly Q1\u2013Q2 2025"
+    },
+    {
+      "url": "https://www.thinkchina.sg/economy/big-read-chinas-10-trillion-rmb-debt-clean-falls-short",
+      "title": "[Big read] China's 10 trillion RMB debt clean-up falls short - ThinkChina.sg"
+    },
+    {
+      "url": "https://www.santander.com/content/dam/santander-com/es/contenido-paginas/sala-de-comunicacion/the-year-ahead-2025/how-will-ai-impact-the-global.pdf",
+      "title": "how-will-ai-impact-the-global.pdf"
+    },
+    {
+      "url": "http://www.ibrc.indiana.edu/ibr/pre/outlook/international.html",
+      "title": "International outlook for 2026 - Indiana Business Research Center"
+    },
+    {
+      "url": "https://rhg.com/research/chinas-new-strategic-industries-will-not-produce-5-gdp-growth/",
+      "title": "China's \u201cNew\u201d Strategic Industries Will Not Produce 5% GDP Growth - Rhodium Group"
+    },
+    {
+      "url": "https://economics.td.com/gbl-chinas-outlook-2025",
+      "title": "How Far Will They Go? China's Outlook for 2025 - TD Economics"
+    },
+    {
+      "url": "https://www.imf.org/en/publications/weo/issues/2025/01/17/world-economic-outlook-update-january-2025",
+      "title": "World Economic Outlook Update, January 2025: Global Growth: Divergent and Uncertain"
+    },
+    {
+      "url": "https://www.imf.org/en/publications/weo/issues/2025/10/14/world-economic-outlook-october-2025",
+      "title": "World Economic Outlook, October 2025: Global Economy in Flux ..."
+    },
+    {
+      "url": "https://www.imf.org/en/publications/weo",
+      "title": "World Economic Outlook - All Issues - International Monetary Fund"
+    },
+    {
+      "url": "https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.mp251218~58b0e415a6.en.html",
+      "title": "Monetary policy decisions - European Central Bank"
+    },
+    {
+      "url": "https://investinglive.com/news/world-bank-lifts-global-growth-outlook-but-warns-of-weakest-decade-since-1960s-20260114/",
+      "title": "World Bank lifts global growth outlook but warns of weakest decade since 1960s"
+    },
+    {
+      "url": "https://www.oecd.org/en/publications/oecd-economic-outlook-interim-report-september-2025_67b10c01-en/full-report.html",
+      "title": "Full Report: OECD Economic Outlook, Interim Report September ..."
+    },
+    {
+      "url": "https://www.morningstar.com/indexes/xshg/000300/performance",
+      "title": "CSI 300 Index PR CNY (000300) Performance - Morningstar"
+    },
+    {
+      "url": "https://www.visualcapitalist.com/sp/ter01-stock-markets-in-2025-ups-downs-returns-globally/",
+      "title": "Stock Markets in 2025: Ups, Downs, and Returns Globally - Visual Capitalist"
+    },
+    {
+      "url": "https://www.cnbil.com/Blog/Posts/191/Blog/2026/1/Annual-Market-Review-2025/blog-post/",
+      "title": "Annual Market Review 2025 | CNB Wealth Management Group"
+    },
+    {
+      "url": "https://www.imf.org/en/publications/weo/issues/2026/01/19/world-economic-outlook-update-january-2026",
+      "title": "Coming Soon: World Economic Outlook Update, January 2026 - International Monetary Fund"
+    },
+    {
+      "url": "https://unctad.org/news/10-trends-shaping-global-trade-2026",
+      "title": "10 trends shaping global trade in 2026"
+    },
+    {
+      "url": "https://tradingeconomics.com/euro-area/interest-rate",
+      "title": "Euro Area Interest Rate - Trading Economics"
+    },
+    {
+      "url": "https://news.metal.com/newscontent/103576008/National-Bureau-of-Statistics-(NBS):-GDP-Up-52-YoY-in-First-Three-Quarters,-Industrial-Value-Added-Above-Designated-Size-Grew-65-YoY-in-September",
+      "title": "National Bureau of Statistics (NBS): GDP Up 5.2% YoY in First Three Quarters, Industrial Value-Added Above Designated Size Grew 6.5% YoY in September - Metal News"
+    },
+    {
+      "url": "https://www.imf.org/-/media/files/publications/wp/2025/english/wpiea2025076-print-pdf.pdf",
+      "title": "The Global Impact of AI: Mind the Gap, WP/25/76, April 2025"
+    },
+    {
+      "url": "https://www.pwc.com/gx/en/news-room/press-releases/2025/ai-adoption-could-boost-global-gdp-by-an-additional-15-percentage.html",
+      "title": "AI adoption could boost global GDP by an additional 15 percentage points by 2035 | PwC"
+    },
+    {
+      "url": "https://mitsloan.mit.edu/ideas-made-to-matter/a-new-look-economics-ai",
+      "title": "A new look at the economics of AI | MIT Sloan"
+    },
+    {
+      "url": "https://www.chase.com/personal/investments/learning-and-insights/article/fed-meeting-december-2025",
+      "title": "December 2025 Fed Meeting Recap: Interest Rates Cut Once More, but Risk Remains on the Path to Future Policy | Chase"
+    },
+    {
+      "url": "https://www.citizensbank.com/learning/fed-interest-rate-cut-impacts.aspx",
+      "title": "The Fed's December Decision to Cut Interest Rates by 0.25% - Citizens Bank"
+    },
+    {
+      "url": "https://www.federalreserve.gov/econres/notes/feds-notes/the-central-bank-balance-sheet-trilemma-20260114.html",
+      "title": "The Fed - The Central Bank Balance-Sheet Trilemma"
+    },
+    {
+      "url": "https://www.bcb.gov.br/content/ri/inflationreport/202509/rpm202509i.pdf",
+      "title": "Monetary Policy Report \u2013 September 2025 - Banco Central"
+    },
+    {
+      "url": "https://thedocs.worldbank.org/en/doc/c50bc3c87bc2666b9e5fa6699b0b2849-0050012025/related/GEP-Jan-2025-Analysis-LAC.pdf",
+      "title": "Recent developments - Global Economic Prospects, January 2025"
+    },
+    {
+      "url": "https://www.icis.com/chemicals-and-the-economy/2025/12/stabilizing-chinas-property-crisis-tops-beijings-priority-list-for-2026-but-will-not-be-easy/",
+      "title": "Stabilizing China's property crisis tops Beijing's priority list for 2026 \u2013 but will not be easy"
+    },
+    {
+      "url": "https://www.imf.org/en/publications/fandd/issues/2024/12/chinas-real-estate-challenge-kenneth-rogoff",
+      "title": "China's Real Estate Challenge - International Monetary Fund"
+    },
+    {
+      "url": "https://thedocs.worldbank.org/en/doc/8ae5ce818673952a85fee1ee57c3e933-0070012025/original/CEU-June-2025-EN.pdf",
+      "title": "China Economic Update (June 2025) - The World Bank"
+    },
+    {
+      "url": "https://www.fidelity.co.uk/markets-insights/markets/global/markets-in-2025-the-colour-coded-table-that-explains-all/",
+      "title": "Markets in 2025: the colour-coded table that explains all - Fidelity International"
+    },
+    {
+      "url": "https://russellinvestments.com/content/ri/us/en/insights/global-market-outlook.html",
+      "title": "Global Market Outlook - Russell Investments"
+    },
+    {
+      "url": "https://www.ofx.com/en-us/forex-news/historical-exchange-rates/usd/cny/",
+      "title": "USD to CNY historical exchange rate - OFX (US)"
+    },
+    {
+      "url": "https://www.macrotrends.net/2575/us-dollar-yuan-exchange-rate-historical-chart",
+      "title": "Dollar Yuan Exchange Rate (1981-2026) - Macrotrends"
+    },
+    {
+      "url": "https://fred.stlouisfed.org/series/AEXCHUS",
+      "title": "Chinese Yuan Renminbi to U.S. Dollar Spot Exchange Rate (AEXCHUS) | FRED | St. Louis Fed"
+    },
+    {
+      "url": "https://www.deloitte.com/cn/en/our-thinking/research/issue101.html",
+      "title": "Outlook of macro economy and industries in 2026 | Deloitte China Monthly Report Issue 101"
+    },
+    {
+      "url": "https://www.worldbank.org/en/news/video/2025/01/24/january-2025-global-economic-prospects",
+      "title": "Ayhan Kose Explains the January 2025 Global Economic Prospects - World Bank"
+    },
+    {
+      "url": "https://www.worldbank.org/en/publication/global-economic-prospects",
+      "title": "Global Economic Prospects - World Bank"
+    },
+    {
+      "url": "https://www.oecd.org/en/publications/oecd-economic-outlook-volume-2025-issue-2_9f653ca1-en/full-report/united-states_3d9917c1.html",
+      "title": "United States: OECD Economic Outlook, Volume 2025 Issue 2"
+    },
+    {
+      "url": "https://www.oecd.org/en/publications/oecd-economic-outlook-volume-2025-issue-2_9f653ca1-en/full-report/general-assessment-of-the-macroeconomic-situation_981ac2bf.html",
+      "title": "General assessment of the macroeconomic situation: OECD Economic Outlook, Volume 2025 Issue 2"
+    },
+    {
+      "url": "https://research.hktdc.com/en/article/MzIwNjcyMDYx",
+      "title": "Economic and Trade Information: China | HKTDC Research"
+    },
+    {
+      "url": "https://www.icmarkets.com/blog/ic-markets-global-europe-fundamental-forecast-16-january-2026/",
+      "title": "IC Markets Global \u2013 Europe Fundamental Forecast | 16 January 2026"
+    },
+    {
+      "url": "https://capital.com/en-int/analysis/projected-ecb-rate-rise-in-5-years",
+      "title": "ECB interest-rate forecasts \u2013 Projections for the next five years - Capital.com"
+    },
+    {
+      "url": "https://fred.stlouisfed.org/series/EXCHUS",
+      "title": "Chinese Yuan Renminbi to U.S. Dollar Spot Exchange Rate (EXCHUS) - FRED"
+    },
+    {
+      "url": "https://www.ceicdata.com/en/indicator/china/exchange-rate-against-usd",
+      "title": "China Exchange Rate against USD, 1957 \u2013 2025 | CEIC Data"
+    },
+    {
+      "url": "https://www.uschina.org/articles/understanding-chinas-housing-downturn-and-the-path-ahead/",
+      "title": "Understanding China's Housing Downturn and the Path Ahead"
+    },
+    {
+      "url": "https://carnegieendowment.org/posts/2025/08/using-chinas-central-government-balance-sheet-to-clean-up-local-government-debt-is-a-bad-idea?lang=en",
+      "title": "Using China's Central Government Balance Sheet to \u201cClean up\u201d Local Government Debt Is a Bad Idea | Carnegie Endowment for International Peace"
+    },
+    {
+      "url": "https://www.shs-conferences.org/articles/shsconf/pdf/2025/16/shsconf_icfmde2025_02011.pdf",
+      "title": "The return rate prediction of China's CSI 300 index based on the ARIMA model - SHS Web of Conferences"
+    },
+    {
+      "url": "https://curvo.eu/backtest/en/market-index/csi-300",
+      "title": "CSI 300: historical performance from 2012 to 2025 - Curvo"
+    },
+    {
+      "url": "https://www.investing.com/indices/csi300-historical-data",
+      "title": "Shanghai Shenzhen CSI 300 Historical Data - Investing.com"
+    },
+    {
+      "url": "https://www.blackrock.com/hk/en/products/251754/ishares-csi-300-a-share-index-etf",
+      "title": "iShares Core CSI 300 ETF | 2846 - BlackRock"
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20251210.htm",
+      "title": "FOMC Minutes, December 9-10, 2025"
+    },
+    {
+      "url": "https://www.investing.com/indices/nikkei-225-total-return-historical-data",
+      "title": "Nikkei 225 Total Return Historical Data (N225TR) - Investing.com"
+    },
+    {
+      "url": "https://curvo.eu/backtest/en/market-index/euro-stoxx-50",
+      "title": "EURO STOXX 50: historical performance from 1986 to 2025 - Curvo"
+    },
+    {
+      "url": "https://www.imf.org/en/news/articles/2025/12/12/tr-12-11-25-press-briefing-on-china-article-iv-consultation-transcript",
+      "title": "Press Briefing Transcript: China Article IV Consultation - International Monetary Fund"
+    }
+  ],
+  "summary": ""
+}
+{
+  "notebook_id": "f844df9d-d960-45c6-9257-b717c78f6de7",
+  "notebook_title": "\u79d2\u61c2\u91d1\u878d\uff1a2025\u5b8f\u89c2\u7ecf\u6d4e\u5c55\u671b",
+  "sources": [
+    {
+      "index": 1,
+      "id": "6b65202b-846a-4ced-aefb-fb8d3bd1abd6",
+      "title": "10 trends shaping global trade in 2026",
+      "type": "url",
+      "url": "https://unctad.org/news/10-trends-shaping-global-trade-2026",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 2,
+      "id": "a0b175c7-8ae1-42f5-9b0a-2a9aade3a67f",
+      "title": "2025 stock market report - Fidelity Investments",
+      "type": "url",
+      "url": "https://www.fidelity.com/learning-center/trading-investing/markets-sectors/stock-market-report",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 3,
+      "id": "f02c8147-8019-4417-92c5-f9650e889794",
+      "title": "2025 stock market report - Fidelity Investments",
+      "type": "url",
+      "url": "https://www.fidelity.com/learning-center/trading-investing/markets-sectors/stock-market-report",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 4,
+      "id": "90b74988-2e31-48d0-9716-dd807211f488",
+      "title": "2025: A Defining Year for India's Growth - PIB",
+      "type": "url",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2209412",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 5,
+      "id": "fd2302d0-d603-4fce-9150-a6676978032b",
+      "title": "2025: A Defining Year for India's Growth - PIB",
+      "type": "url",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2209412",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 6,
+      "id": "e5867313-0640-4c07-a466-e5dab3102988",
+      "title": "2025\u5e74\u5b8f\u89c2\u7ecf\u6d4e\u56de\u987e\u4e0e2026\u5e74\u5b8f\u89c2\u653f\u7b56\u5c55\u671b-\u4e2d\u56fd\u793e\u4f1a\u79d1\u5b66\u9662\u5de5\u4e1a\u7ecf\u6d4e\u7814\u7a76\u6240",
+      "type": "url",
+      "url": "http://gjs.cssn.cn/xwzx/202601/t20260106_5968129.shtml",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:48:34"
+    },
+    {
+      "index": 7,
+      "id": "ea03a037-78fa-49c1-afa5-a3ef1a86e6ec",
+      "title": "A new look at the economics of AI | MIT Sloan",
+      "type": "url",
+      "url": "https://mitsloan.mit.edu/ideas-made-to-matter/a-new-look-economics-ai",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 8,
+      "id": "60192618-8d8c-43f5-8247-719702b4668f",
+      "title": "AI adoption could boost global GDP by an additional 15 percentage points by 2035 | PwC",
+      "type": "url",
+      "url": "https://www.pwc.com/gx/en/news-room/press-releases/2025/ai-adoption-could-boost-global-gdp-by-an-additional-15-percentage.html",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 9,
+      "id": "84a05c75-23fa-4669-897e-49f0a9d79153",
+      "title": "Annual Market Review 2025 | CNB Wealth Management Group",
+      "type": "url",
+      "url": "https://www.cnbil.com/Blog/Posts/191/Blog/2026/1/Annual-Market-Review-2025/blog-post/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 10,
+      "id": "d29e1a5d-c9b2-4be8-846a-393cc97a26b9",
+      "title": "Charted: The 2026 Growth Outlook for G20 Nations - Visual Capitalist",
+      "type": "url",
+      "url": "https://www.visualcapitalist.com/cp/charted-the-2026-growth-outlook-for-g20-nations/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 11,
+      "id": "d57be6e6-883a-4f61-9f56-ed85af8530ce",
+      "title": "Charted: The 2026 Growth Outlook for G20 Nations - Visual Capitalist",
+      "type": "url",
+      "url": "https://www.visualcapitalist.com/cp/charted-the-2026-growth-outlook-for-g20-nations/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 12,
+      "id": "e1df0988-8caa-46e6-b9d4-93f27a6ebdb5",
+      "title": "China Economic Quarterly Q1\u2013Q2 2025",
+      "type": "url",
+      "url": "https://www.pwccn.com/en/research-and-insights/china-economic-quarterly-q1-q2-2025.pdf",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 13,
+      "id": "fffab442-e634-42cd-89e2-ba71567c1d4e",
+      "title": "China Economic Quarterly Q1\u2013Q2 2025",
+      "type": "url",
+      "url": "https://www.pwccn.com/en/research-and-insights/china-economic-quarterly-q1-q2-2025.pdf",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 14,
+      "id": "b5d48414-bb2c-4f40-801a-c7bae5d2c58b",
+      "title": "China Economic Update (June 2025) - The World Bank",
+      "type": "url",
+      "url": "https://thedocs.worldbank.org/en/doc/8ae5ce818673952a85fee1ee57c3e933-0070012025/original/CEU-June-2025-EN.pdf",
+      "status": "processing",
+      "status_id": 1,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 15,
+      "id": "0b61d179-c6cb-4d42-9540-c310e8cb817c",
+      "title": "China Property Watch: The Chilling Effects Of Pol | S&P Global Ratings",
+      "type": "url",
+      "url": "https://www.spglobal.com/ratings/en/regulatory/article/china-property-watch-the-chilling-effects-of-polarization-s101647911",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 16,
+      "id": "24824fcf-8a15-4186-bff3-129f160cc848",
+      "title": "China Property Watch: The Chilling Effects Of Pol | S&P Global Ratings",
+      "type": "url",
+      "url": "https://www.spglobal.com/ratings/en/regulatory/article/china-property-watch-the-chilling-effects-of-polarization-s101647911",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 17,
+      "id": "4ac0d4d4-2924-4f16-9ba0-904e5720fe23",
+      "title": "China housing market downturn and its impact | 13 January 2026 | en - GAM.com",
+      "type": "url",
+      "url": "https://www.gam.com/en/our-thinking/investment-opinions/china-housing-market-downturn-and-its-impact",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 18,
+      "id": "a147bfdb-76f2-4a5f-a558-dd1b865e8379",
+      "title": "China housing market downturn and its impact | 13 January 2026 | en - GAM.com",
+      "type": "url",
+      "url": "https://www.gam.com/en/our-thinking/investment-opinions/china-housing-market-downturn-and-its-impact",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 19,
+      "id": "025fabfe-1176-460e-9647-b85275b37ad8",
+      "title": "China's Economy November 2025: Year-End Review and 2026 ...",
+      "type": "url",
+      "url": "https://www.china-briefing.com/news/chinas-economy-in-november-2025-year-end-review-and-2026-outlook/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 20,
+      "id": "4fdc402b-4f08-4ec8-b887-090410374d5d",
+      "title": "China's Economy November 2025: Year-End Review and 2026 ...",
+      "type": "url",
+      "url": "https://www.china-briefing.com/news/chinas-economy-in-november-2025-year-end-review-and-2026-outlook/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 21,
+      "id": "72ec9d1e-08ae-4d19-b3e0-968b1839803e",
+      "title": "China's Economy: Rightsizing 2025, Looking Ahead to 2026 - Rhodium Group",
+      "type": "url",
+      "url": "https://rhg.com/wp-content/uploads/2025/12/Chinas-Economy-Rightsizing-2025-Looking-Ahead-to-2026.pdf",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 22,
+      "id": "7bf755bd-9d54-45e6-ae22-81c9b77b59be",
+      "title": "China's Economy: Rightsizing 2025, Looking Ahead to 2026 - Rhodium Group",
+      "type": "url",
+      "url": "https://rhg.com/wp-content/uploads/2025/12/Chinas-Economy-Rightsizing-2025-Looking-Ahead-to-2026.pdf",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 23,
+      "id": "68ebb7e5-9231-4427-a81a-97c9bc976bc5",
+      "title": "China's Public Finance Credit Outlook for 2026 - CSPI Ratings",
+      "type": "url",
+      "url": "https://www.cspi-ratings.com/publications/publicationsDetail/Chinas-Public-Finance-Credit-Outlook-for-2026.html",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 24,
+      "id": "95b88543-f36a-4955-9834-838f7bb327d0",
+      "title": "China's Public Finance Credit Outlook for 2026 - CSPI Ratings",
+      "type": "url",
+      "url": "https://www.cspi-ratings.com/publications/publicationsDetail/Chinas-Public-Finance-Credit-Outlook-for-2026.html",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 25,
+      "id": "668ffc17-5b26-41fa-a08c-b388169805bf",
+      "title": "China's Real Estate Challenge - International Monetary Fund",
+      "type": "url",
+      "url": "https://www.imf.org/en/publications/fandd/issues/2024/12/chinas-real-estate-challenge-kenneth-rogoff",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 26,
+      "id": "1656458d-f067-4434-b17e-04ad8303e86e",
+      "title": "China's \u201cNew\u201d Strategic Industries Will Not Produce 5% GDP Growth - Rhodium Group",
+      "type": "url",
+      "url": "https://rhg.com/research/chinas-new-strategic-industries-will-not-produce-5-gdp-growth/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 27,
+      "id": "ba74c36d-ac6a-4882-a50e-7e9b10d00ad6",
+      "title": "China's \u201cNew\u201d Strategic Industries Will Not Produce 5% GDP Growth - Rhodium Group",
+      "type": "url",
+      "url": "https://rhg.com/research/chinas-new-strategic-industries-will-not-produce-5-gdp-growth/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 28,
+      "id": "774dd6f9-a2e1-47b8-90ab-0d5b63f68ec7",
+      "title": "Chinese Yuan Renminbi to U.S. Dollar Spot Exchange Rate (AEXCHUS) | FRED | St. Louis Fed",
+      "type": "url",
+      "url": "https://fred.stlouisfed.org/series/AEXCHUS",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 29,
+      "id": "25bc25e5-46cf-48cb-ba61-43e2295a062a",
+      "title": "Coming Soon: World Economic Outlook Update, January 2026 - International Monetary Fund",
+      "type": "url",
+      "url": "https://www.imf.org/en/publications/weo/issues/2026/01/19/world-economic-outlook-update-january-2026",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 30,
+      "id": "01b46108-2c6b-43b3-8be8-248ec8d5f514",
+      "title": "December 2025 Fed Meeting Recap: Interest Rates Cut Once More, but Risk Remains on the Path to Future Policy | Chase",
+      "type": "url",
+      "url": "https://www.chase.com/personal/investments/learning-and-insights/article/fed-meeting-december-2025",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 31,
+      "id": "3e248003-1bb5-49d1-ae28-162ae0de6f4e",
+      "title": "Dollar Yuan Exchange Rate (1981-2026) - Macrotrends",
+      "type": "url",
+      "url": "https://www.macrotrends.net/2575/us-dollar-yuan-exchange-rate-historical-chart",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 32,
+      "id": "2dab53f6-5af2-43bd-a079-731663f085ea",
+      "title": "Economic Bulletin Issue 8, 2025 - European Central Bank",
+      "type": "url",
+      "url": "https://www.ecb.europa.eu/press/economic-bulletin/html/eb202508.en.html",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 33,
+      "id": "34378442-8826-4437-9f9f-7ee21b79ba04",
+      "title": "Economic Bulletin Issue 8, 2025 - European Central Bank",
+      "type": "url",
+      "url": "https://www.ecb.europa.eu/press/economic-bulletin/html/eb202508.en.html",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 34,
+      "id": "ca8b0d98-73de-416a-8617-b8e84f11ddee",
+      "title": "Euro Area Interest Rate - Trading Economics",
+      "type": "url",
+      "url": "https://tradingeconomics.com/euro-area/interest-rate",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 35,
+      "id": "7b15670c-c062-46d5-a842-ec8f595b6b5a",
+      "title": "Full Report: OECD Economic Outlook, Interim Report September ...",
+      "type": "url",
+      "url": "https://www.oecd.org/en/publications/oecd-economic-outlook-interim-report-september-2025_67b10c01-en/full-report.html",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 36,
+      "id": "32c766cb-c53f-430f-bf7c-7bc354638689",
+      "title": "Global Economy Shows Resilience Amid Historic Trade, Policy Uncertainty - World Bank",
+      "type": "url",
+      "url": "https://www.worldbank.org/en/news/press-release/2026/01/13/global-economic-prospects-january-2026-press-release",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 37,
+      "id": "fc6b0f31-9f46-4b3a-864b-3bd55ecc2452",
+      "title": "Global Economy Shows Resilience Amid Historic Trade, Policy Uncertainty - World Bank",
+      "type": "url",
+      "url": "https://www.worldbank.org/en/news/press-release/2026/01/13/global-economic-prospects-january-2026-press-release",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 38,
+      "id": "9876c9e7-0ea6-4734-9b98-7011d5adfe0d",
+      "title": "Global Market Outlook - Russell Investments",
+      "type": "url",
+      "url": "https://russellinvestments.com/content/ri/us/en/insights/global-market-outlook.html",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 39,
+      "id": "73bfc7a9-d2b5-4989-b34b-218bd8aee050",
+      "title": "Global economic outlook 2026 | Deloitte Insights",
+      "type": "url",
+      "url": "https://www.deloitte.com/us/en/insights/topics/economy/global-economic-outlook-2026.html",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 40,
+      "id": "812a2143-316e-4aec-a232-1387731fb7c4",
+      "title": "Global economic outlook 2026 | Deloitte Insights",
+      "type": "url",
+      "url": "https://www.deloitte.com/us/en/insights/topics/economy/global-economic-outlook-2026.html",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 41,
+      "id": "868236ed-6f29-4f97-9e66-a5692862caee",
+      "title": "How China's two-speed economy will weather the storm in 2026 - CommBank",
+      "type": "url",
+      "url": "https://www.commbank.com.au/articles/newsroom/2026/01/2026-china-economy-outlook.html",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 42,
+      "id": "e00933aa-1339-4b17-9826-dd8048d6dd20",
+      "title": "How China's two-speed economy will weather the storm in 2026 - CommBank",
+      "type": "url",
+      "url": "https://www.commbank.com.au/articles/newsroom/2026/01/2026-china-economy-outlook.html",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 43,
+      "id": "4f8dec65-447b-4646-8020-07dfedf01707",
+      "title": "How Far Will They Go? China's Outlook for 2025 - TD Economics",
+      "type": "url",
+      "url": "https://economics.td.com/gbl-chinas-outlook-2025",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 44,
+      "id": "6a851480-f53e-4c19-997b-0e2e9dd65efd",
+      "title": "International outlook for 2026 - Indiana Business Research Center",
+      "type": "url",
+      "url": "http://www.ibrc.indiana.edu/ibr/pre/outlook/international.html",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 45,
+      "id": "b4533ba3-86bb-46cd-bd2b-a9e84694ee68",
+      "title": "International outlook for 2026 - Indiana Business Research Center",
+      "type": "url",
+      "url": "http://www.ibrc.indiana.edu/ibr/pre/outlook/international.html",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 46,
+      "id": "08557462-e876-4a88-a2d4-50b2da0e204a",
+      "title": "Markets in 2025: the colour-coded table that explains all - Fidelity International",
+      "type": "url",
+      "url": "https://www.fidelity.co.uk/markets-insights/markets/global/markets-in-2025-the-colour-coded-table-that-explains-all/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 47,
+      "id": "03a04ef8-7ad9-4dab-bebe-86194636834e",
+      "title": "Monetary policy decisions - European Central Bank",
+      "type": "url",
+      "url": "https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.mp251218~58b0e415a6.en.html",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 48,
+      "id": "ebb12f62-87bd-47ad-a779-6a5fe1ae0f11",
+      "title": "National Bureau of Statistics (NBS): GDP Up 5.2% YoY in First Three Quarters, Industrial Value-Added Above Designated Size Grew 6.5% YoY in September - Metal News",
+      "type": "url",
+      "url": "https://news.metal.com/newscontent/103576008/National-Bureau-of-Statistics-(NBS):-GDP-Up-52-YoY-in-First-Three-Quarters,-Industrial-Value-Added-Above-Designated-Size-Grew-65-YoY-in-September",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 49,
+      "id": "bf778389-9a83-44cc-bac8-fceec4733d5d",
+      "title": "OECD Economic Outlook, Interim Report September 2025",
+      "type": "url",
+      "url": "https://www.oecd.org/en/publications/oecd-economic-outlook-interim-report-september-2025_67b10c01-en.html",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 50,
+      "id": "fce6733d-e9dd-46a7-84cf-1c0c5c7defeb",
+      "title": "OECD Economic Outlook, Interim Report September 2025",
+      "type": "url",
+      "url": "https://www.oecd.org/en/publications/oecd-economic-outlook-interim-report-september-2025_67b10c01-en.html",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 51,
+      "id": "27465012-3dd7-45de-80bd-954e8a578d5a",
+      "title": "Opening Remarks: 2025 China Article IV Consultation Press Conference",
+      "type": "url",
+      "url": "https://www.imf.org/en/news/articles/2025/12/10/sp121025-md-remarks-2025-china-article-iv-consultation-press-conference",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 52,
+      "id": "931f0985-7246-4b96-84f2-150e53bce4b8",
+      "title": "Opening Remarks: 2025 China Article IV Consultation Press Conference",
+      "type": "url",
+      "url": "https://www.imf.org/en/news/articles/2025/12/10/sp121025-md-remarks-2025-china-article-iv-consultation-press-conference",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 53,
+      "id": "33712389-3240-4f53-863c-77f9756b5812",
+      "title": "Recent developments - Global Economic Prospects, January 2025",
+      "type": "url",
+      "url": "https://thedocs.worldbank.org/en/doc/c50bc3c87bc2666b9e5fa6699b0b2849-0050012025/related/GEP-Jan-2025-Analysis-LAC.pdf",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 54,
+      "id": "2253f740-b2fc-4020-84f6-834c92f82228",
+      "title": "Review of Markets over 2025 | J.P. Morgan Asset Management",
+      "type": "url",
+      "url": "https://am.jpmorgan.com/gb/en/asset-management/per/insights/market-insights/market-updates/monthly-market-review/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 55,
+      "id": "6759dd8b-935e-4356-b560-7641f6a25583",
+      "title": "Review of Markets over 2025 | J.P. Morgan Asset Management",
+      "type": "url",
+      "url": "https://am.jpmorgan.com/gb/en/asset-management/per/insights/market-insights/market-updates/monthly-market-review/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 56,
+      "id": "83897745-0fee-4562-b435-ca2bad84c04a",
+      "title": "Setting the stage for a sustainable Chinese equity rally - RBC Wealth Management",
+      "type": "url",
+      "url": "https://ca.rbcwealthmanagement.com/Alka-Shah/blog/4716788-Setting-the-stage-for-a-sustainable-Chinese-equity-rally",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 57,
+      "id": "a6add494-03cc-4021-a7dd-c8b833d9215a",
+      "title": "Setting the stage for a sustainable Chinese equity rally - RBC Wealth Management",
+      "type": "url",
+      "url": "https://ca.rbcwealthmanagement.com/Alka-Shah/blog/4716788-Setting-the-stage-for-a-sustainable-Chinese-equity-rally",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 58,
+      "id": "8b43164c-edfa-40fc-b3e8-5bf66284ea68",
+      "title": "Stabilizing China's property crisis tops Beijing's priority list for 2026 \u2013 but will not be easy",
+      "type": "url",
+      "url": "https://www.icis.com/chemicals-and-the-economy/2025/12/stabilizing-chinas-property-crisis-tops-beijings-priority-list-for-2026-but-will-not-be-easy/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 59,
+      "id": "f9269d60-f445-4b3f-9277-4f68669848de",
+      "title": "Stock Markets in 2025: Ups, Downs, and Returns Globally - Visual Capitalist",
+      "type": "url",
+      "url": "https://www.visualcapitalist.com/sp/ter01-stock-markets-in-2025-ups-downs-returns-globally/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 60,
+      "id": "80376b84-cba2-4a0c-9dc3-ac8a44f54a53",
+      "title": "The Fed - FOMC meeting commentary December 2025 - Nuveen",
+      "type": "url",
+      "url": "https://www.nuveen.com/en-us/insights/investment-outlook/fed-update",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 61,
+      "id": "ba32ce23-992e-4443-96e4-2fa4089896b7",
+      "title": "The Fed - FOMC meeting commentary December 2025 - Nuveen",
+      "type": "url",
+      "url": "https://www.nuveen.com/en-us/insights/investment-outlook/fed-update",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 62,
+      "id": "e939ac83-ca61-4494-abee-ea21523fd7f0",
+      "title": "The Fed - The Central Bank Balance-Sheet Trilemma",
+      "type": "url",
+      "url": "https://www.federalreserve.gov/econres/notes/feds-notes/the-central-bank-balance-sheet-trilemma-20260114.html",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 63,
+      "id": "c6c24a82-1901-4619-a6cc-db6e17102183",
+      "title": "The Global Impact of AI: Mind the Gap, WP/25/76, April 2025",
+      "type": "url",
+      "url": "https://www.imf.org/-/media/files/publications/wp/2025/english/wpiea2025076-print-pdf.pdf",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 64,
+      "id": "6faf0cb1-9f72-4b41-a973-5ac435483d60",
+      "title": "Tracking AI's Contribution to GDP Growth - Federal Reserve Bank of St. Louis",
+      "type": "url",
+      "url": "https://www.stlouisfed.org/on-the-economy/2026/jan/tracking-ai-contribution-gdp-growth",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 65,
+      "id": "956311b5-30c9-4a73-9c90-bf6fb0e48857",
+      "title": "Tracking AI's Contribution to GDP Growth - Federal Reserve Bank of St. Louis",
+      "type": "url",
+      "url": "https://www.stlouisfed.org/on-the-economy/2026/jan/tracking-ai-contribution-gdp-growth",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 66,
+      "id": "23136902-30b1-4be4-9bae-0e481fb03866",
+      "title": "USD to CNY historical exchange rate - OFX (US)",
+      "type": "url",
+      "url": "https://www.ofx.com/en-us/forex-news/historical-exchange-rates/usd/cny/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 67,
+      "id": "48d07e05-8ca9-4041-89c2-0b1cf6f8cca0",
+      "title": "United States Fed Funds Interest Rate - Trading Economics",
+      "type": "url",
+      "url": "https://tradingeconomics.com/united-states/interest-rate",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 68,
+      "id": "4f75d99a-bbbb-47ad-b0c2-29a229432d2f",
+      "title": "United States Fed Funds Interest Rate - Trading Economics",
+      "type": "url",
+      "url": "https://tradingeconomics.com/united-states/interest-rate",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 69,
+      "id": "4928690c-b530-40cf-96e3-4528835e0c96",
+      "title": "WORLD ECONOMIC OUTLOOK UPDATE - International Monetary Fund",
+      "type": "url",
+      "url": "https://www.imf.org/-/media/files/publications/weo/2025/update/january/english/text.pdf",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 70,
+      "id": "f9d9a759-9acd-405c-bec9-6af2a5d15836",
+      "title": "WORLD ECONOMIC OUTLOOK UPDATE - International Monetary Fund",
+      "type": "url",
+      "url": "https://www.imf.org/-/media/files/publications/weo/2025/update/january/english/text.pdf",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 71,
+      "id": "d2fe5629-ed98-47a4-a877-fd599ba3932b",
+      "title": "World Bank lifts global growth outlook but warns of weakest decade since 1960s",
+      "type": "url",
+      "url": "https://investinglive.com/news/world-bank-lifts-global-growth-outlook-but-warns-of-weakest-decade-since-1960s-20260114/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 72,
+      "id": "2e5c0c47-d832-4b64-af51-a01e48f3b52c",
+      "title": "World Economic Outlook - All Issues - International Monetary Fund",
+      "type": "url",
+      "url": "https://www.imf.org/en/publications/weo",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 73,
+      "id": "98b9aecd-38e8-48db-a16a-42ddea936f5a",
+      "title": "World Economic Outlook Update, January 2025: Global Growth: Divergent and Uncertain",
+      "type": "url",
+      "url": "https://www.imf.org/en/publications/weo/issues/2025/01/17/world-economic-outlook-update-january-2025",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 74,
+      "id": "b04477b0-f356-4bcf-803f-e36baac388d6",
+      "title": "World Economic Outlook, October 2025: Global Economy in Flux ...",
+      "type": "url",
+      "url": "https://www.imf.org/en/publications/weo/issues/2025/10/14/world-economic-outlook-october-2025",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 75,
+      "id": "eb5ea32a-2b9a-4151-bfc8-975823dee554",
+      "title": "https://assets.kpmg.com/content/dam/kpmg/cn/pdf/zh/2024/12/2025-outlook-for-top-10-macroeconomic-trends.pdf",
+      "type": "url",
+      "url": "https://assets.kpmg.com/content/dam/kpmg/cn/pdf/zh/2024/12/2025-outlook-for-top-10-macroeconomic-trends.pdf",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:48:00"
+    },
+    {
+      "index": 76,
+      "id": "6251c120-6761-471d-a731-877a4d96dc80",
+      "title": "https://capital.com/en-int/analysis/projected-ecb-rate-rise-in-5-years",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 77,
+      "id": "d6acc71b-107c-4053-9b8f-43eef9c4a76e",
+      "title": "https://capital.com/en-int/analysis/projected-ecb-rate-rise-in-5-years",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 78,
+      "id": "049a3b8b-d7e4-4fad-ab74-8fc3bfc389ce",
+      "title": "https://carnegieendowment.org/posts/2025/08/using-chinas-central-government-balance-sheet-to-clean-up-local-government-debt-is-a-bad-idea?lang=en",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 79,
+      "id": "1b0a95b6-1593-47a9-9044-9764da705c96",
+      "title": "https://carnegieendowment.org/posts/2025/08/using-chinas-central-government-balance-sheet-to-clean-up-local-government-debt-is-a-bad-idea?lang=en",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 80,
+      "id": "a85550ca-c9b6-43cd-8327-26b71085578a",
+      "title": "https://curvo.eu/backtest/en/market-index/csi-300",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 81,
+      "id": "d3f087b6-c180-49f5-8b5a-f6492d96e45c",
+      "title": "https://curvo.eu/backtest/en/market-index/csi-300",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 82,
+      "id": "2689a28e-5ef7-4062-8d5e-e8b0e1c14262",
+      "title": "https://curvo.eu/backtest/en/market-index/euro-stoxx-50",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 83,
+      "id": "419196c9-0c53-4d59-a59e-cf4f413275f2",
+      "title": "https://curvo.eu/backtest/en/market-index/euro-stoxx-50",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 84,
+      "id": "a751c8cc-8c7b-4e1e-93dd-f19e4b090cb9",
+      "title": "https://economics.td.com/gbl-chinas-outlook-2025",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 85,
+      "id": "f9222a47-654a-45a3-acd1-ca4bcb7e0cd4",
+      "title": "https://fred.stlouisfed.org/series/AEXCHUS",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 86,
+      "id": "32da4a6f-df67-4c14-a886-d098adb7a54a",
+      "title": "https://fred.stlouisfed.org/series/EXCHUS",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 87,
+      "id": "956bbd79-c20f-4728-af5d-dccef9263a8c",
+      "title": "https://fred.stlouisfed.org/series/EXCHUS",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 88,
+      "id": "b6d36f7e-f553-4602-90a4-c2db68e34991",
+      "title": "https://investinglive.com/news/world-bank-lifts-global-growth-outlook-but-warns-of-weakest-decade-since-1960s-20260114/",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 89,
+      "id": "afcc8401-c7d4-4976-b3d8-bb5fa20700f8",
+      "title": "https://mitsloan.mit.edu/ideas-made-to-matter/a-new-look-economics-ai",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 90,
+      "id": "150a7620-9815-4f3e-b7f0-9a8cc6278a12",
+      "title": "https://news.metal.com/newscontent/103576008/National-Bureau-of-Statistics-(NBS):-GDP-Up-52-YoY-in-First-Three-Quarters,-Industrial-Value-Added-Above-Designated-Size-Grew-65-YoY-in-September",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 91,
+      "id": "29ba97f8-b96f-4869-9b5c-8c575b92bbdc",
+      "title": "https://research.hktdc.com/en/article/MzIwNjcyMDYx",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 92,
+      "id": "3e998d09-79ad-47c3-8e63-d92fd2977be6",
+      "title": "https://research.hktdc.com/en/article/MzIwNjcyMDYx",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 93,
+      "id": "fc61b85f-9cc3-402f-b82b-8cffacd506d7",
+      "title": "https://russellinvestments.com/content/ri/us/en/insights/global-market-outlook.html",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 94,
+      "id": "204a2a3c-1fd1-4fb0-8aba-b6e879075544",
+      "title": "https://thedocs.worldbank.org/en/doc/8ae5ce818673952a85fee1ee57c3e933-0070012025/original/CEU-June-2025-EN.pdf",
+      "type": "pdf",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 95,
+      "id": "26fd7363-00f4-48a7-bc35-72e69cb0fdba",
+      "title": "https://thedocs.worldbank.org/en/doc/c50bc3c87bc2666b9e5fa6699b0b2849-0050012025/related/GEP-Jan-2025-Analysis-LAC.pdf",
+      "type": "pdf",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 96,
+      "id": "375c5388-f9f1-46a4-b2a0-bc6a02557f87",
+      "title": "https://tradingeconomics.com/euro-area/interest-rate",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 97,
+      "id": "c19e4b91-b320-4e35-a2ab-2ecf1987d251",
+      "title": "https://unctad.org/news/10-trends-shaping-global-trade-2026",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 98,
+      "id": "384256fd-4dce-4242-990a-c138226ddfab",
+      "title": "https://www.bcb.gov.br/content/ri/inflationreport/202509/rpm202509i.pdf",
+      "type": "pdf",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 99,
+      "id": "d46e73a0-b78f-4a1f-9463-dce2e2078bc9",
+      "title": "https://www.bcb.gov.br/content/ri/inflationreport/202509/rpm202509i.pdf",
+      "type": "pdf",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 100,
+      "id": "5010ad34-0bb0-4145-b02b-17ba5f60e020",
+      "title": "https://www.blackrock.com/hk/en/products/251754/ishares-csi-300-a-share-index-etf",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 101,
+      "id": "86e02de3-4d04-4bd7-bc50-b0d1b64af484",
+      "title": "https://www.blackrock.com/hk/en/products/251754/ishares-csi-300-a-share-index-etf",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 102,
+      "id": "121bf722-44b1-4aeb-aaff-4c05d742bd24",
+      "title": "https://www.ceicdata.com/en/indicator/china/exchange-rate-against-usd",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 103,
+      "id": "cbaf4578-0b52-405d-b4d4-1775105391a1",
+      "title": "https://www.ceicdata.com/en/indicator/china/exchange-rate-against-usd",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 104,
+      "id": "a67589c2-1782-4576-b7c5-662488961fd3",
+      "title": "https://www.chase.com/personal/investments/learning-and-insights/article/fed-meeting-december-2025",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 105,
+      "id": "86bfedf6-839d-45bd-bdc9-2cb7004d6a2a",
+      "title": "https://www.citizensbank.com/learning/fed-interest-rate-cut-impacts.aspx",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 106,
+      "id": "b714442e-9dd9-41e0-a169-4505ace574c8",
+      "title": "https://www.citizensbank.com/learning/fed-interest-rate-cut-impacts.aspx",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 107,
+      "id": "6351f2f3-6b2b-472f-8912-7a7b9f56ed13",
+      "title": "https://www.cnbil.com/Blog/Posts/191/Blog/2026/1/Annual-Market-Review-2025/blog-post/",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 108,
+      "id": "6819c7cb-1023-4100-bb61-0075992d52b2",
+      "title": "https://www.deloitte.com/cn/en/our-thinking/research/issue101.html",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 109,
+      "id": "c77b2cda-d027-4ccd-8fbd-aaf59153c3fe",
+      "title": "https://www.deloitte.com/cn/en/our-thinking/research/issue101.html",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 110,
+      "id": "b36684e8-f7f8-4c36-aead-0d780e32877c",
+      "title": "https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.mp251218~58b0e415a6.en.html",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 111,
+      "id": "3c028df9-9f11-4a75-966f-30ebd49e96f7",
+      "title": "https://www.federalreserve.gov/econres/notes/feds-notes/the-central-bank-balance-sheet-trilemma-20260114.html",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 112,
+      "id": "e3a9a047-61b4-484a-ae06-4d15db8d8f62",
+      "title": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20251210.htm",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 113,
+      "id": "e7c0832e-68cf-4dea-aeba-583841d8caf9",
+      "title": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20251210.htm",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 114,
+      "id": "7694c6a9-9622-4fc2-b157-97adeb0f6133",
+      "title": "https://www.fidelity.co.uk/markets-insights/markets/global/markets-in-2025-the-colour-coded-table-that-explains-all/",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 115,
+      "id": "1bdaa956-cea9-4966-b681-6dfeee84d2b3",
+      "title": "https://www.icis.com/chemicals-and-the-economy/2025/12/stabilizing-chinas-property-crisis-tops-beijings-priority-list-for-2026-but-will-not-be-easy/",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 116,
+      "id": "6e6e4d31-0f0a-4fa5-8e81-451874f56065",
+      "title": "https://www.icmarkets.com/blog/ic-markets-global-europe-fundamental-forecast-16-january-2026/",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 117,
+      "id": "bf39d88e-3dbc-4c2e-b093-4fbf6afcfbbc",
+      "title": "https://www.icmarkets.com/blog/ic-markets-global-europe-fundamental-forecast-16-january-2026/",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 118,
+      "id": "29066e64-ac3f-45d3-9175-f0ff01c30ab5",
+      "title": "https://www.imf.org/-/media/files/publications/wp/2025/english/wpiea2025076-print-pdf.pdf",
+      "type": "pdf",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 119,
+      "id": "8086019b-7eff-4289-8cca-9e096d08295d",
+      "title": "https://www.imf.org/en/news/articles/2025/12/12/tr-12-11-25-press-briefing-on-china-article-iv-consultation-transcript",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 120,
+      "id": "d14e3aa5-cae9-42af-adc7-89711d6b108b",
+      "title": "https://www.imf.org/en/news/articles/2025/12/12/tr-12-11-25-press-briefing-on-china-article-iv-consultation-transcript",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 121,
+      "id": "6c4f6404-d5f2-47c3-a24d-4bee30a01825",
+      "title": "https://www.imf.org/en/publications/fandd/issues/2024/12/chinas-real-estate-challenge-kenneth-rogoff",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 122,
+      "id": "ce709a0a-6364-4eac-8b0e-09112c5d9209",
+      "title": "https://www.imf.org/en/publications/weo",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 123,
+      "id": "8c5aa07c-f261-4205-a19f-7b4ea78511ff",
+      "title": "https://www.imf.org/en/publications/weo/issues/2025/01/17/world-economic-outlook-update-january-2025",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 124,
+      "id": "7eb384e6-e6f5-406b-a53c-0a1fd58aff9d",
+      "title": "https://www.imf.org/en/publications/weo/issues/2025/10/14/world-economic-outlook-october-2025",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 125,
+      "id": "7e2c39bf-da81-4d03-97b4-85055b280dd8",
+      "title": "https://www.imf.org/en/publications/weo/issues/2026/01/19/world-economic-outlook-update-january-2026",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 126,
+      "id": "1c2a1553-b189-4ffc-a519-564814324c6f",
+      "title": "https://www.investing.com/indices/csi300-historical-data",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 127,
+      "id": "a310e9b8-9201-4872-866a-0000150f4f10",
+      "title": "https://www.investing.com/indices/csi300-historical-data",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 128,
+      "id": "0e3afb53-01eb-42ea-87a9-c3c479918b92",
+      "title": "https://www.investing.com/indices/nikkei-225-total-return-historical-data",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 129,
+      "id": "e8e38808-b559-49d1-831f-75612a5f9e0c",
+      "title": "https://www.investing.com/indices/nikkei-225-total-return-historical-data",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 130,
+      "id": "ae5d9733-1ba5-476d-86d3-682966592b29",
+      "title": "https://www.macrotrends.net/2575/us-dollar-yuan-exchange-rate-historical-chart",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 131,
+      "id": "06905106-06e7-4d4d-b40d-5cbc86e5a1eb",
+      "title": "https://www.morningstar.com/indexes/xshg/000300/performance",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 132,
+      "id": "9ec390b2-20be-45b7-ade4-6b4d61005593",
+      "title": "https://www.morningstar.com/indexes/xshg/000300/performance",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 133,
+      "id": "00a5445b-8445-41a2-9b4b-ea33d2f4bf78",
+      "title": "https://www.oecd.org/en/publications/oecd-economic-outlook-interim-report-september-2025_67b10c01-en/full-report.html",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 134,
+      "id": "8c5d3ffb-0f3f-4bc6-b01a-d5e8de08c6fb",
+      "title": "https://www.oecd.org/en/publications/oecd-economic-outlook-volume-2025-issue-2_9f653ca1-en/full-report/general-assessment-of-the-macroeconomic-situation_981ac2bf.html",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 135,
+      "id": "f1a3a046-dbce-4432-9498-6918f9364f43",
+      "title": "https://www.oecd.org/en/publications/oecd-economic-outlook-volume-2025-issue-2_9f653ca1-en/full-report/general-assessment-of-the-macroeconomic-situation_981ac2bf.html",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 136,
+      "id": "002471c9-2a15-43e0-b184-af625e5f6481",
+      "title": "https://www.oecd.org/en/publications/oecd-economic-outlook-volume-2025-issue-2_9f653ca1-en/full-report/united-states_3d9917c1.html",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 137,
+      "id": "2afd7033-b498-4f33-b0f6-ba34b37c50ec",
+      "title": "https://www.oecd.org/en/publications/oecd-economic-outlook-volume-2025-issue-2_9f653ca1-en/full-report/united-states_3d9917c1.html",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 138,
+      "id": "30920344-b473-4877-9b81-0efe299406df",
+      "title": "https://www.ofx.com/en-us/forex-news/historical-exchange-rates/usd/cny/",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 139,
+      "id": "1d8ea864-2836-46fa-bab7-3b72f06b2f8f",
+      "title": "https://www.pwc.com/gx/en/news-room/press-releases/2025/ai-adoption-could-boost-global-gdp-by-an-additional-15-percentage.html",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 140,
+      "id": "1ba383da-5944-4d53-9424-7b5c00b20af2",
+      "title": "https://www.santander.com/content/dam/santander-com/es/contenido-paginas/sala-de-comunicacion/the-year-ahead-2025/how-will-ai-impact-the-global.pdf",
+      "type": "pdf",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 141,
+      "id": "80d70d86-0112-4b1d-8970-86ff8dac0ee7",
+      "title": "https://www.santander.com/content/dam/santander-com/es/contenido-paginas/sala-de-comunicacion/the-year-ahead-2025/how-will-ai-impact-the-global.pdf",
+      "type": "pdf",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 142,
+      "id": "949fe3d8-cd50-4095-982b-88efea558acf",
+      "title": "https://www.shs-conferences.org/articles/shsconf/pdf/2025/16/shsconf_icfmde2025_02011.pdf",
+      "type": "pdf",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 143,
+      "id": "e8dafb92-dc6b-4b0d-9f4b-ebebfea83897",
+      "title": "https://www.shs-conferences.org/articles/shsconf/pdf/2025/16/shsconf_icfmde2025_02011.pdf",
+      "type": "pdf",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 144,
+      "id": "0bbef397-705a-4ab7-8063-22e02034fbc6",
+      "title": "https://www.stats.gov.cn/english/PressRelease/202510/t20251020_1961608.html",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 145,
+      "id": "1f3f5e04-6f02-445c-89b2-800425d6b360",
+      "title": "https://www.stats.gov.cn/english/PressRelease/202510/t20251020_1961608.html",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 146,
+      "id": "acd4d652-8020-4012-9741-f8cd0ebaf465",
+      "title": "https://www.thinkchina.sg/economy/big-read-chinas-10-trillion-rmb-debt-clean-falls-short",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 147,
+      "id": "f1058532-75a2-461d-af6c-ae8ffb431e48",
+      "title": "https://www.thinkchina.sg/economy/big-read-chinas-10-trillion-rmb-debt-clean-falls-short",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 148,
+      "id": "3bbbbb98-f884-49de-a7ec-d1fa59ff0176",
+      "title": "https://www.uschina.org/articles/understanding-chinas-housing-downturn-and-the-path-ahead/",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 149,
+      "id": "9fc2d751-10fa-4324-b0b1-db846dabf709",
+      "title": "https://www.uschina.org/articles/understanding-chinas-housing-downturn-and-the-path-ahead/",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 150,
+      "id": "d70d2c05-03f8-4c06-8ebe-e590489cff19",
+      "title": "https://www.visualcapitalist.com/sp/ter01-stock-markets-in-2025-ups-downs-returns-globally/",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 151,
+      "id": "883c01b2-b2a4-4780-8f6f-3258de2d44a4",
+      "title": "https://www.worldbank.org/en/news/video/2025/01/24/january-2025-global-economic-prospects",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 152,
+      "id": "c2447acd-ecb3-4447-bda0-8bb374d2f5bf",
+      "title": "https://www.worldbank.org/en/news/video/2025/01/24/january-2025-global-economic-prospects",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 153,
+      "id": "614d6518-5e34-4fac-a786-9ea7a61d96fd",
+      "title": "https://www.worldbank.org/en/publication/global-economic-prospects",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:32"
+    },
+    {
+      "index": 154,
+      "id": "6c802c74-6205-4b01-8753-c229925f0399",
+      "title": "https://www.worldbank.org/en/publication/global-economic-prospects",
+      "type": "text",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:53:15"
+    },
+    {
+      "index": 155,
+      "id": "3eeb519e-f07d-4daa-a948-534399b0ff61",
+      "title": "\u5b8c\u7f8e\u653b\u514b\u5b8f\u89c2\u7ecf\u6d4e\u5b66\u5fc5\u61c2\u8bdd\u9898 - \u56fd\u5185\u751f\u4ea7\u603b\u503c GDP (Macroeconomic)",
+      "type": "text",
+      "url": null,
+      "status": "error",
+      "status_id": 3,
+      "created_at": "2026-01-17T06:48:43"
+    },
+    {
+      "index": 156,
+      "id": "6a0847ca-c89f-4113-9503-0fcd41bc2ed8",
+      "title": "\u5b8c\u7f8e\u653b\u514b\u5b8f\u89c2\u7ecf\u6d4e\u5b66\u5fc5\u61c2\u8bdd\u9898 - \u56fd\u5185\u751f\u4ea7\u603b\u503c GDP (Macroeconomic)",
+      "type": "text",
+      "url": null,
+      "status": "error",
+      "status_id": 3,
+      "created_at": "2026-01-17T06:49:50"
+    },
+    {
+      "index": 157,
+      "id": "bee68754-a498-486d-ac44-6d97e89858d8",
+      "title": "\u5b8c\u7f8e\u653b\u514b\u5b8f\u89c2\u7ecf\u6d4e\u5b66\u5fc5\u61c2\u8bdd\u9898 - \u56fd\u5185\u751f\u4ea7\u603b\u503c GDP (Macroeconomic)",
+      "type": "text",
+      "url": null,
+      "status": "error",
+      "status_id": 3,
+      "created_at": "2026-01-17T06:50:16"
+    },
+    {
+      "index": 158,
+      "id": "defce785-ea19-46d3-b797-dfda52cdb19d",
+      "title": "\u5b8c\u7f8e\u653b\u514b\u5b8f\u89c2\u7ecf\u6d4e\u5b66\u5fc5\u61c2\u8bdd\u9898 - \u56fd\u5185\u751f\u4ea7\u603b\u503c GDP (Macroeconomic)",
+      "type": "text",
+      "url": null,
+      "status": "error",
+      "status_id": 3,
+      "created_at": "2026-01-17T06:49:08"
+    },
+    {
+      "index": 159,
+      "id": "57dc1a1f-e6a1-4123-8c52-c95a7d86c03f",
+      "title": "\u60f3\u770b\u61c2\u91d1\u878d\u95ee\u9898\uff0c\u5c31\u8981\u548c\u5b8f\u89c2\u7ecf\u6d4e\u5b66\u7ed3\u5408\u8d77\u6765\uff5c\u5434\u6653\u6c42",
+      "type": "text",
+      "url": null,
+      "status": "error",
+      "status_id": 3,
+      "created_at": "2026-01-17T06:50:19"
+    },
+    {
+      "index": 160,
+      "id": "a51580ca-ebc7-4dab-b3a8-ff9c6c57ffc8",
+      "title": "\u60f3\u770b\u61c2\u91d1\u878d\u95ee\u9898\uff0c\u5c31\u8981\u548c\u5b8f\u89c2\u7ecf\u6d4e\u5b66\u7ed3\u5408\u8d77\u6765\uff5c\u5434\u6653\u6c42",
+      "type": "text",
+      "url": null,
+      "status": "error",
+      "status_id": 3,
+      "created_at": "2026-01-17T06:49:11"
+    },
+    {
+      "index": 161,
+      "id": "6e8bd26d-e1fe-47cc-a8a6-c85394330b74",
+      "title": "\u9ad8\u76db\uff1a2025\u5e74\u5168\u7403\u5b8f\u89c2\u7ecf\u6d4e\u53ca\u5e02\u573a\u5c55\u671b\u62a5\u544a\uff08\u6df1\u5ea6\u89e3\u6790\uff09|\u9ad8\u76db_\u65b0\u6d6a\u8d22\u7ecf_\u65b0\u6d6a\u7f51",
+      "type": "url",
+      "url": "https://finance.sina.com.cn/stock/stockzmt/2024-12-13/doc-inczfsee9433435.shtml",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-01-17T06:48:16"
+    }
+  ],
+  "count": 161
+}

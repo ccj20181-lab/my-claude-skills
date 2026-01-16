@@ -1190,13 +1190,37 @@
       "isSidechain": false
     },
     {
+      "sessionId": "66d5265a-9ba1-4494-809c-1a9c77275a68",
+      "fullPath": "/Users/henry/.claude/projects/-Users-henry/66d5265a-9ba1-4494-809c-1a9c77275a68.jsonl",
+      "fileMtime": 1768606802436,
+      "firstPrompt": "打开claude.md全局记忆文件我看看",
+      "messageCount": 41,
+      "created": "2026-01-16T22:42:18.577Z",
+      "modified": "2026-01-16T23:40:02.407Z",
+      "gitBranch": "",
+      "projectPath": "/Users/henry",
+      "isSidechain": false
+    },
+    {
       "sessionId": "9d558f12-0ab9-4efd-a211-f10bb6908f76",
       "fullPath": "/Users/henry/.claude/projects/-Users-henry/9d558f12-0ab9-4efd-a211-f10bb6908f76.jsonl",
-      "fileMtime": 1768603322515,
+      "fileMtime": 1768606741237,
       "firstPrompt": "从现在开始，每次浮浮酱执行以下操作时，都会自动同步到 GitHub：   - ✅ 安装新 skill   - ✅ 更新现有 skill   - ✅ 卸载/删除 skill",
-      "messageCount": 3,
+      "messageCount": 10,
       "created": "2026-01-16T22:40:29.002Z",
-      "modified": "2026-01-16T22:42:02.479Z",
+      "modified": "2026-01-16T23:39:01.223Z",
+      "gitBranch": "",
+      "projectPath": "/Users/henry",
+      "isSidechain": false
+    },
+    {
+      "sessionId": "c32398ec-e70a-4446-8ab0-82d187295c8b",
+      "fullPath": "/Users/henry/.claude/projects/-Users-henry/c32398ec-e70a-4446-8ab0-82d187295c8b.jsonl",
+      "fileMtime": 1768607020961,
+      "firstPrompt": "notebooklm-py测试一下这个skill,研究自动化：批量导入来源（URL、PDF、YTB、Google          Drive），运行网络研究查询，并以编程方式提取见解。构建可重复的研究流程。                 • 内容生成：生成音频播客、视频、测验、抽认卡和学习指南。只需一个命令，就能将你的来源    转化为精美的内容。以秒懂金融为主题",
+      "messageCount": 1,
+      "created": "2026-01-16T23:42:42.803Z",
+      "modified": "2026-01-16T23:43:40.936Z",
       "gitBranch": "",
       "projectPath": "/Users/henry",
       "isSidechain": false
