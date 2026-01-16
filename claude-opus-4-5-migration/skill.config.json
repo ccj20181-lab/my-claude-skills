@@ -1,0 +1,10 @@
+{
+  "name": "claude-opus-4-5-migration",
+  "description": "Migrate your code and prompts from Sonnet 4.x and Opus 4.1 to Opus 4.5.",
+  "category": "development",
+  "author": "William Hu",
+  "enabled": true,
+  "auto_activate": false,
+  "hooks": [],
+  "commands": []
+}
