@@ -1,0 +1,11 @@
+{
+  "name": "hookify",
+  "description": "Claude官方Skill - hookify",
+  "category": "official",
+  "author": "Anthropic",
+  "enabled": true,
+  "auto_activate": false,
+  "installed_at": "2026-01-08T02:59:31Z",
+  "source": "GitHub Repository",
+  "github_url": "https://github.com/anthropics/claude-code/tree/main/plugins/hookify"
+}
