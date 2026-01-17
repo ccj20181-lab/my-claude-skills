@@ -13,11 +13,6 @@
       "installed": true
     },
     {
-      "name": "notebooklm",
-      "enabled": true,
-      "installed": true
-    },
-    {
       "name": "playwright-skill",
       "enabled": true,
       "installed": true
