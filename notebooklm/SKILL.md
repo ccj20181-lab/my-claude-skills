@@ -2,6 +2,8 @@
 name: notebooklm
 description: Automate Google NotebookLM - create notebooks, add sources, generate podcasts/videos/quizzes, download artifacts. Activates on explicit /notebooklm or intent like "create a podcast about X"
 ---
+<!-- notebooklm-py v0.2.1 -->
+
 
 # NotebookLM Automation
 
