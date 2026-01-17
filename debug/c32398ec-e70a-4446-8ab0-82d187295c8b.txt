@@ -752,3 +752,7 @@ Avoid sharing sensitive or personal information that you do not want to share wi
 2026-01-16T23:49:20.587Z [DEBUG] Stream started - received first chunk
 2026-01-16T23:49:23.899Z [DEBUG] Stopped caffeinate, allowing sleep
 2026-01-16T23:49:23.902Z [ERROR] Error in non-streaming fallback: Request was aborted.
+2026-01-16T23:52:41.374Z [DEBUG] Metrics export disabled by organization setting
+2026-01-17T00:02:49.673Z [DEBUG] Getting matching hook commands for SessionEnd with query: prompt_input_exit
+2026-01-17T00:02:49.673Z [DEBUG] Found 0 hook matchers in settings
+2026-01-17T00:02:49.673Z [DEBUG] Matched 0 unique hooks for query "prompt_input_exit" (0 before deduplication)

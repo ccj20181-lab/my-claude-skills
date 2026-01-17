@@ -22,7 +22,8 @@
       "mcp__chrome-devtools__fill",
       "Skill(document-skills:theme-factory)",
       "Skill(skill-creator)",
-      "Skill(xiaohongshu-viral-finder)"
+      "Skill(xiaohongshu-viral-finder)",
+      "Skill(skillslm-manager)"
     ]
   },
   "enableAllProjectMcpServers": true,
