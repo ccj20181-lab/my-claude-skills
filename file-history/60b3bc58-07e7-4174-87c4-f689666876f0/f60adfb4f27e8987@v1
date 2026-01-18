@@ -1,0 +1,58 @@
+#!/bin/bash
+# 移动飞书到外置硬盘脚本
+# 浮浮酱制作 ฅ'ω'ฅ
+
+echo "======================================"
+echo "   移动飞书到外置硬盘工具"
+echo "   浮浮酱制作 ฅ'ω'ฅ"
+echo "======================================"
+echo ""
+
+# 检查是否已复制
+if [ ! -d "/Volumes/Data/Applications/Lark.app" ]; then
+    echo "❌ 错误：飞书尚未复制到 Data 分区"
+    echo "请先运行复制命令"
+    exit 1
+fi
+
+echo "✅ 检测到飞书已复制到 Data 分区"
+echo ""
+echo "准备执行以下操作："
+echo "1. 删除 /Applications/Lark.app（需要管理员权限）"
+echo "2. 创建符号链接指向外置硬盘"
+echo ""
+
+# 询问用户确认
+read -p "是否继续？(y/n): " confirm
+if [ "$confirm" != "y" ] && [ "$confirm" != "Y" ]; then
+    echo "已取消操作"
+    exit 0
+fi
+
+echo ""
+echo "正在移动飞书..."
+echo ""
+
+# 删除原文件（需要 sudo）
+echo "🔑 需要输入管理员密码（Mac 登录密码）"
+sudo rm -rf "/Applications/Lark.app"
+
+# 创建符号链接
+sudo ln -s "/Volumes/Data/Applications/Lark.app" "/Applications/Lark.app"
+
+# 检查是否成功
+if [ -L "/Applications/Lark.app" ]; then
+    echo ""
+    echo "======================================"
+    echo "✅ 飞书移动成功！"
+    echo "======================================"
+    echo ""
+    echo "飞书现在位于：/Volumes/Data/Applications/Lark.app"
+    echo "符号链接：/Applications/Lark.app → /Volumes/Data/Applications/Lark.app"
+    echo ""
+    echo "可以正常使用啦～ ฅ'ω'ฅ"
+else
+    echo ""
+    echo "❌ 移动失败，请检查错误信息"
+    exit 1
+fi

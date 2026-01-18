@@ -1,0 +1,358 @@
+build	Set up job	﻿2026-01-18T07:46:16.5188642Z Current runner version: '2.331.0'
+build	Set up job	2026-01-18T07:46:16.5212203Z ##[group]Runner Image Provisioner
+build	Set up job	2026-01-18T07:46:16.5212988Z Hosted Compute Agent
+build	Set up job	2026-01-18T07:46:16.5213561Z Version: 20251211.462
+build	Set up job	2026-01-18T07:46:16.5214238Z Commit: 6cbad8c2bb55d58165063d031ccabf57e2d2db61
+build	Set up job	2026-01-18T07:46:16.5215202Z Build Date: 2025-12-11T16:28:49Z
+build	Set up job	2026-01-18T07:46:16.5215944Z Worker ID: {b1538ef2-8ed5-43af-959c-60cb4b937b7a}
+build	Set up job	2026-01-18T07:46:16.5216638Z ##[endgroup]
+build	Set up job	2026-01-18T07:46:16.5217199Z ##[group]Operating System
+build	Set up job	2026-01-18T07:46:16.5217776Z Ubuntu
+build	Set up job	2026-01-18T07:46:16.5218239Z 24.04.3
+build	Set up job	2026-01-18T07:46:16.5218711Z LTS
+build	Set up job	2026-01-18T07:46:16.5219142Z ##[endgroup]
+build	Set up job	2026-01-18T07:46:16.5219690Z ##[group]Runner Image
+build	Set up job	2026-01-18T07:46:16.5220248Z Image: ubuntu-24.04
+build	Set up job	2026-01-18T07:46:16.5220721Z Version: 20260111.209.1
+build	Set up job	2026-01-18T07:46:16.5221751Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260111.209/images/ubuntu/Ubuntu2404-Readme.md
+build	Set up job	2026-01-18T07:46:16.5223115Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260111.209
+build	Set up job	2026-01-18T07:46:16.5224335Z ##[endgroup]
+build	Set up job	2026-01-18T07:46:16.5225577Z ##[group]GITHUB_TOKEN Permissions
+build	Set up job	2026-01-18T07:46:16.5227466Z Contents: write
+build	Set up job	2026-01-18T07:46:16.5228042Z Metadata: read
+build	Set up job	2026-01-18T07:46:16.5228587Z ##[endgroup]
+build	Set up job	2026-01-18T07:46:16.5230644Z Secret source: Actions
+build	Set up job	2026-01-18T07:46:16.5231354Z Prepare workflow directory
+build	Set up job	2026-01-18T07:46:16.5681090Z Prepare all required actions
+build	Set up job	2026-01-18T07:46:16.5735593Z Getting action download info
+build	Set up job	2026-01-18T07:46:16.8780013Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+build	Set up job	2026-01-18T07:46:16.9677436Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+build	Set up job	2026-01-18T07:46:17.2562554Z Complete job name: build
+build	检出代码	﻿2026-01-18T07:46:17.3265527Z ##[group]Run actions/checkout@v4
+build	检出代码	2026-01-18T07:46:17.3266416Z with:
+build	检出代码	2026-01-18T07:46:17.3266994Z   token: ***
+build	检出代码	2026-01-18T07:46:17.3267433Z   repository: ccj20181-lab/daily-tech-digest
+build	检出代码	2026-01-18T07:46:17.3267996Z   ssh-strict: true
+build	检出代码	2026-01-18T07:46:17.3268400Z   ssh-user: git
+build	检出代码	2026-01-18T07:46:17.3268804Z   persist-credentials: true
+build	检出代码	2026-01-18T07:46:17.3269259Z   clean: true
+build	检出代码	2026-01-18T07:46:17.3269673Z   sparse-checkout-cone-mode: true
+build	检出代码	2026-01-18T07:46:17.3270164Z   fetch-depth: 1
+build	检出代码	2026-01-18T07:46:17.3270560Z   fetch-tags: false
+build	检出代码	2026-01-18T07:46:17.3270968Z   show-progress: true
+build	检出代码	2026-01-18T07:46:17.3271373Z   lfs: false
+build	检出代码	2026-01-18T07:46:17.3271739Z   submodules: false
+build	检出代码	2026-01-18T07:46:17.3272146Z   set-safe-directory: true
+build	检出代码	2026-01-18T07:46:17.3272802Z ##[endgroup]
+build	检出代码	2026-01-18T07:46:17.4322058Z Syncing repository: ccj20181-lab/daily-tech-digest
+build	检出代码	2026-01-18T07:46:17.4323819Z ##[group]Getting Git version info
+build	检出代码	2026-01-18T07:46:17.4324617Z Working directory is '/home/runner/work/daily-tech-digest/daily-tech-digest'
+build	检出代码	2026-01-18T07:46:17.4326117Z [command]/usr/bin/git version
+build	检出代码	2026-01-18T07:46:17.4418528Z git version 2.52.0
+build	检出代码	2026-01-18T07:46:17.4444030Z ##[endgroup]
+build	检出代码	2026-01-18T07:46:17.4463469Z Temporarily overriding HOME='/home/runner/work/_temp/af064b0a-85d7-490a-8584-c2ac7c77911b' before making global git config changes
+build	检出代码	2026-01-18T07:46:17.4465092Z Adding repository directory to the temporary git global config as a safe directory
+build	检出代码	2026-01-18T07:46:17.4468794Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/daily-tech-digest/daily-tech-digest
+build	检出代码	2026-01-18T07:46:17.4504732Z Deleting the contents of '/home/runner/work/daily-tech-digest/daily-tech-digest'
+build	检出代码	2026-01-18T07:46:17.4508310Z ##[group]Initializing the repository
+build	检出代码	2026-01-18T07:46:17.4512166Z [command]/usr/bin/git init /home/runner/work/daily-tech-digest/daily-tech-digest
+build	检出代码	2026-01-18T07:46:17.4649310Z hint: Using 'master' as the name for the initial branch. This default branch name
+build	检出代码	2026-01-18T07:46:17.4650455Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+build	检出代码	2026-01-18T07:46:17.4651384Z hint: to use in all of your new repositories, which will suppress this warning,
+build	检出代码	2026-01-18T07:46:17.4652319Z hint: call:
+build	检出代码	2026-01-18T07:46:17.4652819Z hint:
+build	检出代码	2026-01-18T07:46:17.4653348Z hint: 	git config --global init.defaultBranch <name>
+build	检出代码	2026-01-18T07:46:17.4653933Z hint:
+build	检出代码	2026-01-18T07:46:17.4654473Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+build	检出代码	2026-01-18T07:46:17.4655837Z hint: 'development'. The just-created branch can be renamed via this command:
+build	检出代码	2026-01-18T07:46:17.4656545Z hint:
+build	检出代码	2026-01-18T07:46:17.4657020Z hint: 	git branch -m <name>
+build	检出代码	2026-01-18T07:46:17.4657835Z hint:
+build	检出代码	2026-01-18T07:46:17.4658855Z hint: Disable this message with "git config set advice.defaultBranchName false"
+build	检出代码	2026-01-18T07:46:17.4660802Z Initialized empty Git repository in /home/runner/work/daily-tech-digest/daily-tech-digest/.git/
+build	检出代码	2026-01-18T07:46:17.4671056Z [command]/usr/bin/git remote add origin https://github.com/ccj20181-lab/daily-tech-digest
+build	检出代码	2026-01-18T07:46:17.4704591Z ##[endgroup]
+build	检出代码	2026-01-18T07:46:17.4706043Z ##[group]Disabling automatic garbage collection
+build	检出代码	2026-01-18T07:46:17.4709718Z [command]/usr/bin/git config --local gc.auto 0
+build	检出代码	2026-01-18T07:46:17.4737765Z ##[endgroup]
+build	检出代码	2026-01-18T07:46:17.4739004Z ##[group]Setting up auth
+build	检出代码	2026-01-18T07:46:17.4745316Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build	检出代码	2026-01-18T07:46:17.4775345Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build	检出代码	2026-01-18T07:46:17.5118975Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build	检出代码	2026-01-18T07:46:17.5151872Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build	检出代码	2026-01-18T07:46:17.5396331Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+build	检出代码	2026-01-18T07:46:17.5432442Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+build	检出代码	2026-01-18T07:46:17.5675895Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+build	检出代码	2026-01-18T07:46:17.5714743Z ##[endgroup]
+build	检出代码	2026-01-18T07:46:17.5716269Z ##[group]Fetching the repository
+build	检出代码	2026-01-18T07:46:17.5724558Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +ea5b9310c69b280bb751b85c790e32a83029669f:refs/remotes/origin/main
+build	检出代码	2026-01-18T07:46:17.7920239Z From https://github.com/ccj20181-lab/daily-tech-digest
+build	检出代码	2026-01-18T07:46:17.7921434Z  * [new ref]         ea5b9310c69b280bb751b85c790e32a83029669f -> origin/main
+build	检出代码	2026-01-18T07:46:17.7951827Z ##[endgroup]
+build	检出代码	2026-01-18T07:46:17.7953008Z ##[group]Determining the checkout info
+build	检出代码	2026-01-18T07:46:17.7954411Z ##[endgroup]
+build	检出代码	2026-01-18T07:46:17.7959251Z [command]/usr/bin/git sparse-checkout disable
+build	检出代码	2026-01-18T07:46:17.8005040Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+build	检出代码	2026-01-18T07:46:17.8030445Z ##[group]Checking out the ref
+build	检出代码	2026-01-18T07:46:17.8035097Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+build	检出代码	2026-01-18T07:46:17.8101241Z Switched to a new branch 'main'
+build	检出代码	2026-01-18T07:46:17.8104047Z branch 'main' set up to track 'origin/main'.
+build	检出代码	2026-01-18T07:46:17.8110644Z ##[endgroup]
+build	检出代码	2026-01-18T07:46:17.8143388Z [command]/usr/bin/git log -1 --format=%H
+build	检出代码	2026-01-18T07:46:17.8164160Z ea5b9310c69b280bb751b85c790e32a83029669f
+build	设置 Python 环境	﻿2026-01-18T07:46:17.8385670Z ##[group]Run actions/setup-python@v5
+build	设置 Python 环境	2026-01-18T07:46:17.8386223Z with:
+build	设置 Python 环境	2026-01-18T07:46:17.8386592Z   python-version: 3.9
+build	设置 Python 环境	2026-01-18T07:46:17.8387024Z   cache: pip
+build	设置 Python 环境	2026-01-18T07:46:17.8387401Z   check-latest: false
+build	设置 Python 环境	2026-01-18T07:46:17.8387942Z   token: ***
+build	设置 Python 环境	2026-01-18T07:46:17.8388326Z   update-environment: true
+build	设置 Python 环境	2026-01-18T07:46:17.8388778Z   allow-prereleases: false
+build	设置 Python 环境	2026-01-18T07:46:17.8389203Z   freethreaded: false
+build	设置 Python 环境	2026-01-18T07:46:17.8389591Z ##[endgroup]
+build	设置 Python 环境	2026-01-18T07:46:18.0022448Z ##[group]Installed versions
+build	设置 Python 环境	2026-01-18T07:46:18.0129700Z Version 3.9 was not found in the local cache
+build	设置 Python 环境	2026-01-18T07:46:18.4788140Z Version 3.9 is available for downloading
+build	设置 Python 环境	2026-01-18T07:46:18.4790434Z Download from "https://github.com/actions/python-versions/releases/download/3.9.25-19039189640/python-3.9.25-linux-24.04-x64.tar.gz"
+build	设置 Python 环境	2026-01-18T07:46:19.0175972Z Extract downloaded archive
+build	设置 Python 环境	2026-01-18T07:46:19.0310891Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/9bc5102d-3a3d-434d-9f05-526f78ebf8a6 -f /home/runner/work/_temp/feb52129-acc8-484f-a726-451bb3b14050
+build	设置 Python 环境	2026-01-18T07:46:20.4000952Z Execute installation script
+build	设置 Python 环境	2026-01-18T07:46:20.4094712Z Check if Python hostedtoolcache folder exist...
+build	设置 Python 环境	2026-01-18T07:46:20.4096268Z Create Python 3.9.25 folder
+build	设置 Python 环境	2026-01-18T07:46:20.4117313Z Copy Python binaries to hostedtoolcache folder
+build	设置 Python 环境	2026-01-18T07:46:20.9087546Z Create additional symlinks (Required for the UsePythonVersion Azure Pipelines task and the setup-python GitHub Action)
+build	设置 Python 环境	2026-01-18T07:46:20.9128418Z Upgrading pip...
+build	设置 Python 环境	2026-01-18T07:46:23.4284232Z Looking in links: /tmp/tmpa03yh59i
+build	设置 Python 环境	2026-01-18T07:46:23.4288561Z Requirement already satisfied: setuptools in /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages (79.0.1)
+build	设置 Python 环境	2026-01-18T07:46:23.4292888Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages (23.0.1)
+build	设置 Python 环境	2026-01-18T07:46:25.0721622Z Collecting pip
+build	设置 Python 环境	2026-01-18T07:46:25.1067014Z Downloading pip-25.3-py3-none-any.whl (1.8 MB)
+build	设置 Python 环境	2026-01-18T07:46:25.1473107Z ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 47.0 MB/s eta 0:00:00
+build	设置 Python 环境	2026-01-18T07:46:25.1475002Z 
+build	设置 Python 环境	2026-01-18T07:46:25.2060634Z Installing collected packages: pip
+build	设置 Python 环境	2026-01-18T07:46:25.2062734Z Attempting uninstall: pip
+build	设置 Python 环境	2026-01-18T07:46:25.2069752Z Found existing installation: pip 23.0.1
+build	设置 Python 环境	2026-01-18T07:46:25.3828933Z Uninstalling pip-23.0.1:
+build	设置 Python 环境	2026-01-18T07:46:25.3900326Z Successfully uninstalled pip-23.0.1
+build	设置 Python 环境	2026-01-18T07:46:26.1851145Z Successfully installed pip-25.3
+build	设置 Python 环境	2026-01-18T07:46:26.2357432Z Create complete file
+build	设置 Python 环境	2026-01-18T07:46:26.2399413Z Successfully set up CPython (3.9.25)
+build	设置 Python 环境	2026-01-18T07:46:26.2400346Z ##[endgroup]
+build	设置 Python 环境	2026-01-18T07:46:26.2876900Z [command]/opt/hostedtoolcache/Python/3.9.25/x64/bin/pip cache dir
+build	设置 Python 环境	2026-01-18T07:46:26.4465908Z /home/runner/.cache/pip
+build	设置 Python 环境	2026-01-18T07:46:26.5767031Z pip cache is not found
+build	安装依赖	﻿2026-01-18T07:46:26.5903705Z ##[group]Run python -m pip install --upgrade pip
+build	安装依赖	2026-01-18T07:46:26.5904184Z [36;1mpython -m pip install --upgrade pip[0m
+build	安装依赖	2026-01-18T07:46:26.5904522Z [36;1mpip install -r requirements.txt[0m
+build	安装依赖	2026-01-18T07:46:26.5942935Z shell: /usr/bin/bash -e {0}
+build	安装依赖	2026-01-18T07:46:26.5943199Z env:
+build	安装依赖	2026-01-18T07:46:26.5943450Z   pythonLocation: /opt/hostedtoolcache/Python/3.9.25/x64
+build	安装依赖	2026-01-18T07:46:26.5943856Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib/pkgconfig
+build	安装依赖	2026-01-18T07:46:26.5944269Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+build	安装依赖	2026-01-18T07:46:26.5944650Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+build	安装依赖	2026-01-18T07:46:26.5945351Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+build	安装依赖	2026-01-18T07:46:26.5945727Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib
+build	安装依赖	2026-01-18T07:46:26.5946031Z ##[endgroup]
+build	安装依赖	2026-01-18T07:46:27.1392143Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages (25.3)
+build	安装依赖	2026-01-18T07:46:27.7433347Z Collecting anthropic>=0.40.0 (from -r requirements.txt (line 1))
+build	安装依赖	2026-01-18T07:46:27.7755670Z   Downloading anthropic-0.76.0-py3-none-any.whl.metadata (28 kB)
+build	安装依赖	2026-01-18T07:46:27.8205841Z Collecting requests>=2.31.0 (from -r requirements.txt (line 2))
+build	安装依赖	2026-01-18T07:46:27.8243689Z   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+build	安装依赖	2026-01-18T07:46:27.8404375Z Collecting feedparser>=6.0.10 (from -r requirements.txt (line 3))
+build	安装依赖	2026-01-18T07:46:27.8445261Z   Downloading feedparser-6.0.12-py3-none-any.whl.metadata (2.7 kB)
+build	安装依赖	2026-01-18T07:46:27.8653257Z Collecting beautifulsoup4>=4.12.0 (from -r requirements.txt (line 4))
+build	安装依赖	2026-01-18T07:46:27.8693923Z   Downloading beautifulsoup4-4.14.3-py3-none-any.whl.metadata (3.8 kB)
+build	安装依赖	2026-01-18T07:46:27.9123944Z Collecting pytz>=2024.1 (from -r requirements.txt (line 5))
+build	安装依赖	2026-01-18T07:46:27.9169141Z   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+build	安装依赖	2026-01-18T07:46:27.9368875Z Collecting markdown>=3.8 (from -r requirements.txt (line 6))
+build	安装依赖	2026-01-18T07:46:27.9413742Z   Downloading markdown-3.9-py3-none-any.whl.metadata (5.1 kB)
+build	安装依赖	2026-01-18T07:46:27.9675386Z Collecting anyio<5,>=3.5.0 (from anthropic>=0.40.0->-r requirements.txt (line 1))
+build	安装依赖	2026-01-18T07:46:27.9715186Z   Downloading anyio-4.12.1-py3-none-any.whl.metadata (4.3 kB)
+build	安装依赖	2026-01-18T07:46:27.9865179Z Collecting distro<2,>=1.7.0 (from anthropic>=0.40.0->-r requirements.txt (line 1))
+build	安装依赖	2026-01-18T07:46:27.9905404Z   Downloading distro-1.9.0-py3-none-any.whl.metadata (6.8 kB)
+build	安装依赖	2026-01-18T07:46:28.0037652Z Collecting docstring-parser<1,>=0.15 (from anthropic>=0.40.0->-r requirements.txt (line 1))
+build	安装依赖	2026-01-18T07:46:28.0079751Z   Downloading docstring_parser-0.17.0-py3-none-any.whl.metadata (3.5 kB)
+build	安装依赖	2026-01-18T07:46:28.0326034Z Collecting httpx<1,>=0.25.0 (from anthropic>=0.40.0->-r requirements.txt (line 1))
+build	安装依赖	2026-01-18T07:46:28.0377278Z   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+build	安装依赖	2026-01-18T07:46:28.1348383Z Collecting jiter<1,>=0.4.0 (from anthropic>=0.40.0->-r requirements.txt (line 1))
+build	安装依赖	2026-01-18T07:46:28.1407636Z   Downloading jiter-0.12.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.2 kB)
+build	安装依赖	2026-01-18T07:46:28.2973971Z Collecting pydantic<3,>=1.9.0 (from anthropic>=0.40.0->-r requirements.txt (line 1))
+build	安装依赖	2026-01-18T07:46:28.3026057Z   Downloading pydantic-2.12.5-py3-none-any.whl.metadata (90 kB)
+build	安装依赖	2026-01-18T07:46:28.3174467Z Collecting sniffio (from anthropic>=0.40.0->-r requirements.txt (line 1))
+build	安装依赖	2026-01-18T07:46:28.3212762Z   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+build	安装依赖	2026-01-18T07:46:28.3417748Z Collecting typing-extensions<5,>=4.10 (from anthropic>=0.40.0->-r requirements.txt (line 1))
+build	安装依赖	2026-01-18T07:46:28.3458931Z   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+build	安装依赖	2026-01-18T07:46:28.3671021Z Collecting exceptiongroup>=1.0.2 (from anyio<5,>=3.5.0->anthropic>=0.40.0->-r requirements.txt (line 1))
+build	安装依赖	2026-01-18T07:46:28.3710581Z   Downloading exceptiongroup-1.3.1-py3-none-any.whl.metadata (6.7 kB)
+build	安装依赖	2026-01-18T07:46:28.3896902Z Collecting idna>=2.8 (from anyio<5,>=3.5.0->anthropic>=0.40.0->-r requirements.txt (line 1))
+build	安装依赖	2026-01-18T07:46:28.3936662Z   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+build	安装依赖	2026-01-18T07:46:28.4241452Z Collecting certifi (from httpx<1,>=0.25.0->anthropic>=0.40.0->-r requirements.txt (line 1))
+build	安装依赖	2026-01-18T07:46:28.4280056Z   Downloading certifi-2026.1.4-py3-none-any.whl.metadata (2.5 kB)
+build	安装依赖	2026-01-18T07:46:28.4508290Z Collecting httpcore==1.* (from httpx<1,>=0.25.0->anthropic>=0.40.0->-r requirements.txt (line 1))
+build	安装依赖	2026-01-18T07:46:28.4545955Z   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+build	安装依赖	2026-01-18T07:46:28.4687497Z Collecting h11>=0.16 (from httpcore==1.*->httpx<1,>=0.25.0->anthropic>=0.40.0->-r requirements.txt (line 1))
+build	安装依赖	2026-01-18T07:46:28.4724589Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+build	安装依赖	2026-01-18T07:46:28.4856942Z Collecting annotated-types>=0.6.0 (from pydantic<3,>=1.9.0->anthropic>=0.40.0->-r requirements.txt (line 1))
+build	安装依赖	2026-01-18T07:46:28.4895286Z   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+build	安装依赖	2026-01-18T07:46:29.3474623Z Collecting pydantic-core==2.41.5 (from pydantic<3,>=1.9.0->anthropic>=0.40.0->-r requirements.txt (line 1))
+build	安装依赖	2026-01-18T07:46:29.3520762Z   Downloading pydantic_core-2.41.5-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.3 kB)
+build	安装依赖	2026-01-18T07:46:29.3696555Z Collecting typing-inspection>=0.4.2 (from pydantic<3,>=1.9.0->anthropic>=0.40.0->-r requirements.txt (line 1))
+build	安装依赖	2026-01-18T07:46:29.3740546Z   Downloading typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+build	安装依赖	2026-01-18T07:46:29.4769080Z Collecting charset_normalizer<4,>=2 (from requests>=2.31.0->-r requirements.txt (line 2))
+build	安装依赖	2026-01-18T07:46:29.4813491Z   Downloading charset_normalizer-3.4.4-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+build	安装依赖	2026-01-18T07:46:29.5216799Z Collecting urllib3<3,>=1.21.1 (from requests>=2.31.0->-r requirements.txt (line 2))
+build	安装依赖	2026-01-18T07:46:29.5255159Z   Downloading urllib3-2.6.3-py3-none-any.whl.metadata (6.9 kB)
+build	安装依赖	2026-01-18T07:46:29.5495411Z Collecting sgmllib3k (from feedparser>=6.0.10->-r requirements.txt (line 3))
+build	安装依赖	2026-01-18T07:46:29.5537002Z   Downloading sgmllib3k-1.0.0.tar.gz (5.8 kB)
+build	安装依赖	2026-01-18T07:46:29.5620634Z   Installing build dependencies: started
+build	安装依赖	2026-01-18T07:46:30.3776225Z   Installing build dependencies: finished with status 'done'
+build	安装依赖	2026-01-18T07:46:30.3786006Z   Getting requirements to build wheel: started
+build	安装依赖	2026-01-18T07:46:30.7038574Z   Getting requirements to build wheel: finished with status 'done'
+build	安装依赖	2026-01-18T07:46:30.7050932Z   Preparing metadata (pyproject.toml): started
+build	安装依赖	2026-01-18T07:46:30.8745795Z   Preparing metadata (pyproject.toml): finished with status 'done'
+build	安装依赖	2026-01-18T07:46:30.8974641Z Collecting soupsieve>=1.6.1 (from beautifulsoup4>=4.12.0->-r requirements.txt (line 4))
+build	安装依赖	2026-01-18T07:46:30.9017358Z   Downloading soupsieve-2.8.1-py3-none-any.whl.metadata (4.6 kB)
+build	安装依赖	2026-01-18T07:46:30.9465131Z Collecting importlib-metadata>=4.4 (from markdown>=3.8->-r requirements.txt (line 6))
+build	安装依赖	2026-01-18T07:46:30.9503209Z   Downloading importlib_metadata-8.7.1-py3-none-any.whl.metadata (4.7 kB)
+build	安装依赖	2026-01-18T07:46:30.9858490Z Collecting zipp>=3.20 (from importlib-metadata>=4.4->markdown>=3.8->-r requirements.txt (line 6))
+build	安装依赖	2026-01-18T07:46:30.9897111Z   Downloading zipp-3.23.0-py3-none-any.whl.metadata (3.6 kB)
+build	安装依赖	2026-01-18T07:46:31.0108410Z Downloading anthropic-0.76.0-py3-none-any.whl (390 kB)
+build	安装依赖	2026-01-18T07:46:31.0211453Z Downloading anyio-4.12.1-py3-none-any.whl (113 kB)
+build	安装依赖	2026-01-18T07:46:31.0277092Z Downloading distro-1.9.0-py3-none-any.whl (20 kB)
+build	安装依赖	2026-01-18T07:46:31.0335522Z Downloading docstring_parser-0.17.0-py3-none-any.whl (36 kB)
+build	安装依赖	2026-01-18T07:46:31.0400401Z Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+build	安装依赖	2026-01-18T07:46:31.0463678Z Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+build	安装依赖	2026-01-18T07:46:31.0547165Z Downloading jiter-0.12.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (366 kB)
+build	安装依赖	2026-01-18T07:46:31.0627083Z Downloading pydantic-2.12.5-py3-none-any.whl (463 kB)
+build	安装依赖	2026-01-18T07:46:31.0743720Z Downloading pydantic_core-2.41.5-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+build	安装依赖	2026-01-18T07:46:31.0894146Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 159.5 MB/s  0:00:00
+build	安装依赖	2026-01-18T07:46:31.0932391Z Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+build	安装依赖	2026-01-18T07:46:31.1002550Z Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+build	安装依赖	2026-01-18T07:46:31.1071084Z Downloading charset_normalizer-3.4.4-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (153 kB)
+build	安装依赖	2026-01-18T07:46:31.1143340Z Downloading idna-3.11-py3-none-any.whl (71 kB)
+build	安装依赖	2026-01-18T07:46:31.1204374Z Downloading urllib3-2.6.3-py3-none-any.whl (131 kB)
+build	安装依赖	2026-01-18T07:46:31.1276791Z Downloading feedparser-6.0.12-py3-none-any.whl (81 kB)
+build	安装依赖	2026-01-18T07:46:31.1340801Z Downloading beautifulsoup4-4.14.3-py3-none-any.whl (107 kB)
+build	安装依赖	2026-01-18T07:46:31.1401588Z Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+build	安装依赖	2026-01-18T07:46:31.1483031Z Downloading markdown-3.9-py3-none-any.whl (107 kB)
+build	安装依赖	2026-01-18T07:46:31.1543303Z Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+build	安装依赖	2026-01-18T07:46:31.1610155Z Downloading certifi-2026.1.4-py3-none-any.whl (152 kB)
+build	安装依赖	2026-01-18T07:46:31.1682726Z Downloading exceptiongroup-1.3.1-py3-none-any.whl (16 kB)
+build	安装依赖	2026-01-18T07:46:31.1754279Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+build	安装依赖	2026-01-18T07:46:31.1814425Z Downloading importlib_metadata-8.7.1-py3-none-any.whl (27 kB)
+build	安装依赖	2026-01-18T07:46:31.1875148Z Downloading soupsieve-2.8.1-py3-none-any.whl (36 kB)
+build	安装依赖	2026-01-18T07:46:31.1934725Z Downloading typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+build	安装依赖	2026-01-18T07:46:31.1992138Z Downloading zipp-3.23.0-py3-none-any.whl (10 kB)
+build	安装依赖	2026-01-18T07:46:31.2050049Z Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+build	安装依赖	2026-01-18T07:46:31.2367923Z Building wheels for collected packages: sgmllib3k
+build	安装依赖	2026-01-18T07:46:31.2376905Z   Building wheel for sgmllib3k (pyproject.toml): started
+build	安装依赖	2026-01-18T07:46:31.4392123Z   Building wheel for sgmllib3k (pyproject.toml): finished with status 'done'
+build	安装依赖	2026-01-18T07:46:31.4399005Z   Created wheel for sgmllib3k: filename=sgmllib3k-1.0.0-py3-none-any.whl size=6089 sha256=4e54cb0ee3bd9e52fb9091c9357ac4d54f85e5805e4293db86564890566b53cd
+build	安装依赖	2026-01-18T07:46:31.4400543Z   Stored in directory: /home/runner/.cache/pip/wheels/65/7a/a7/78c287f64e401255dff4c13fdbc672fed5efbfd21c530114e1
+build	安装依赖	2026-01-18T07:46:31.4419693Z Successfully built sgmllib3k
+build	安装依赖	2026-01-18T07:46:31.5104019Z Installing collected packages: sgmllib3k, pytz, zipp, urllib3, typing-extensions, soupsieve, sniffio, jiter, idna, h11, feedparser, docstring-parser, distro, charset_normalizer, certifi, annotated-types, typing-inspection, requests, pydantic-core, importlib-metadata, httpcore, exceptiongroup, beautifulsoup4, pydantic, markdown, anyio, httpx, anthropic
+build	安装依赖	2026-01-18T07:46:32.9962196Z 
+build	安装依赖	2026-01-18T07:46:33.0019358Z Successfully installed annotated-types-0.7.0 anthropic-0.76.0 anyio-4.12.1 beautifulsoup4-4.14.3 certifi-2026.1.4 charset_normalizer-3.4.4 distro-1.9.0 docstring-parser-0.17.0 exceptiongroup-1.3.1 feedparser-6.0.12 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 idna-3.11 importlib-metadata-8.7.1 jiter-0.12.0 markdown-3.9 pydantic-2.12.5 pydantic-core-2.41.5 pytz-2025.2 requests-2.32.5 sgmllib3k-1.0.0 sniffio-1.3.1 soupsieve-2.8.1 typing-extensions-4.15.0 typing-inspection-0.4.2 urllib3-2.6.3 zipp-3.23.0
+build	运行科技简报生成脚本	﻿2026-01-18T07:46:33.1893753Z ##[group]Run python scripts/tech_digest.py
+build	运行科技简报生成脚本	2026-01-18T07:46:33.1894097Z [36;1mpython scripts/tech_digest.py[0m
+build	运行科技简报生成脚本	2026-01-18T07:46:33.1927882Z shell: /usr/bin/bash -e {0}
+build	运行科技简报生成脚本	2026-01-18T07:46:33.1928120Z env:
+build	运行科技简报生成脚本	2026-01-18T07:46:33.1928370Z   pythonLocation: /opt/hostedtoolcache/Python/3.9.25/x64
+build	运行科技简报生成脚本	2026-01-18T07:46:33.1928803Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib/pkgconfig
+build	运行科技简报生成脚本	2026-01-18T07:46:33.1929209Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+build	运行科技简报生成脚本	2026-01-18T07:46:33.1929563Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+build	运行科技简报生成脚本	2026-01-18T07:46:33.1929927Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+build	运行科技简报生成脚本	2026-01-18T07:46:33.1930288Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib
+build	运行科技简报生成脚本	2026-01-18T07:46:33.1930920Z   ANTHROPIC_API_KEY: ***
+build	运行科技简报生成脚本	2026-01-18T07:46:33.1931219Z   ANTHROPIC_BASE_URL: https://open.bigmodel.cn/api/anthropic
+build	运行科技简报生成脚本	2026-01-18T07:46:33.1931532Z ##[endgroup]
+build	运行科技简报生成脚本	2026-01-18T07:46:53.7571836Z ==================================================
+build	运行科技简报生成脚本	2026-01-18T07:46:53.7572753Z 每日科技简报生成器
+build	运行科技简报生成脚本	2026-01-18T07:46:53.7573114Z ==================================================
+build	运行科技简报生成脚本	2026-01-18T07:46:53.7573446Z 
+build	运行科技简报生成脚本	2026-01-18T07:46:53.7573652Z 日期: 2026-01-18
+build	运行科技简报生成脚本	2026-01-18T07:46:53.7573864Z 
+build	运行科技简报生成脚本	2026-01-18T07:46:53.7574138Z [1/4] 正在抓取 V2EX 热门...
+build	运行科技简报生成脚本	2026-01-18T07:46:53.7574476Z       获取 10 条
+build	运行科技简报生成脚本	2026-01-18T07:46:53.7575105Z [2/4] 正在抓取 Hacker News...
+build	运行科技简报生成脚本	2026-01-18T07:46:53.7575614Z       获取 20 条
+build	运行科技简报生成脚本	2026-01-18T07:46:53.7576029Z [3/4] 正在抓取 RSS 源...
+build	运行科技简报生成脚本	2026-01-18T07:46:53.7576418Z       获取 60 条
+build	运行科技简报生成脚本	2026-01-18T07:46:53.7576820Z [4/4] 正在使用 Claude 生成简报...
+build	运行科技简报生成脚本	2026-01-18T07:46:53.7577682Z [完成] 已保存: /home/runner/work/daily-tech-digest/daily-tech-digest/digests/2026-01-18.md
+build	运行科技简报生成脚本	2026-01-18T07:46:53.7578870Z [完成] 已更新: /home/runner/work/daily-tech-digest/daily-tech-digest/digests/latest.md
+build	运行科技简报生成脚本	2026-01-18T07:46:53.7579346Z 
+build	运行科技简报生成脚本	2026-01-18T07:46:53.7579481Z ==================================================
+build	运行科技简报生成脚本	2026-01-18T07:46:53.7579942Z 生成完成!
+build	运行科技简报生成脚本	2026-01-18T07:46:53.7580222Z ==================================================
+build	生成 HTML 索引	﻿2026-01-18T07:46:53.8112029Z ##[group]Run python scripts/generate_html.py
+build	生成 HTML 索引	2026-01-18T07:46:53.8112387Z [36;1mpython scripts/generate_html.py[0m
+build	生成 HTML 索引	2026-01-18T07:46:53.8144497Z shell: /usr/bin/bash -e {0}
+build	生成 HTML 索引	2026-01-18T07:46:53.8144726Z env:
+build	生成 HTML 索引	2026-01-18T07:46:53.8145260Z   pythonLocation: /opt/hostedtoolcache/Python/3.9.25/x64
+build	生成 HTML 索引	2026-01-18T07:46:53.8145679Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib/pkgconfig
+build	生成 HTML 索引	2026-01-18T07:46:53.8146087Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+build	生成 HTML 索引	2026-01-18T07:46:53.8146434Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+build	生成 HTML 索引	2026-01-18T07:46:53.8146802Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+build	生成 HTML 索引	2026-01-18T07:46:53.8147160Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib
+build	生成 HTML 索引	2026-01-18T07:46:53.8147451Z ##[endgroup]
+build	生成 HTML 索引	2026-01-18T07:46:53.8576173Z ==================================================
+build	生成 HTML 索引	2026-01-18T07:46:53.8577001Z HTML 索引页生成器
+build	生成 HTML 索引	2026-01-18T07:46:53.8577377Z ==================================================
+build	生成 HTML 索引	2026-01-18T07:46:53.8577780Z 
+build	生成 HTML 索引	2026-01-18T07:46:53.8578155Z 扫描目录: /home/runner/work/daily-tech-digest/daily-tech-digest/digests
+build	生成 HTML 索引	2026-01-18T07:46:53.8578615Z 找到 2 份简报
+build	生成 HTML 索引	2026-01-18T07:46:53.8579072Z [完成] 已生成: /home/runner/work/daily-tech-digest/daily-tech-digest/digests/index.html
+build	生成 HTML 索引	2026-01-18T07:46:53.8579486Z 
+build	生成 HTML 索引	2026-01-18T07:46:53.8579611Z ==================================================
+build	生成 HTML 索引	2026-01-18T07:46:53.8579922Z 生成完成!
+build	生成 HTML 索引	2026-01-18T07:46:53.8580132Z ==================================================
+build	提交变更	﻿2026-01-18T07:46:53.8631674Z ##[group]Run git config --local user.email "github-actions[bot]@users.noreply.github.com"
+build	提交变更	2026-01-18T07:46:53.8632286Z [36;1mgit config --local user.email "github-actions[bot]@users.noreply.github.com"[0m
+build	提交变更	2026-01-18T07:46:53.8632752Z [36;1mgit config --local user.name "github-actions[bot]"[0m
+build	提交变更	2026-01-18T07:46:53.8633066Z [36;1mgit add digests/[0m
+build	提交变更	2026-01-18T07:46:53.8633276Z [36;1mgit add index.html[0m
+build	提交变更	2026-01-18T07:46:53.8633638Z [36;1mgit diff --staged --quiet || git commit -m "🤖 自动生成每日科技简报 $(date +'%Y-%m-%d')"[0m
+build	提交变更	2026-01-18T07:46:53.8662465Z shell: /usr/bin/bash -e {0}
+build	提交变更	2026-01-18T07:46:53.8662697Z env:
+build	提交变更	2026-01-18T07:46:53.8662936Z   pythonLocation: /opt/hostedtoolcache/Python/3.9.25/x64
+build	提交变更	2026-01-18T07:46:53.8663354Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib/pkgconfig
+build	提交变更	2026-01-18T07:46:53.8663787Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+build	提交变更	2026-01-18T07:46:53.8664135Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+build	提交变更	2026-01-18T07:46:53.8664485Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+build	提交变更	2026-01-18T07:46:53.8665074Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib
+build	提交变更	2026-01-18T07:46:53.8665378Z ##[endgroup]
+build	提交变更	2026-01-18T07:46:53.8865478Z [main d391561] 🤖 自动生成每日科技简报 2026-01-18
+build	提交变更	2026-01-18T07:46:53.8866005Z  3 files changed, 88 insertions(+), 97 deletions(-)
+build	推送到远程仓库	﻿2026-01-18T07:46:53.8890144Z ##[group]Run git push
+build	推送到远程仓库	2026-01-18T07:46:53.8890370Z [36;1mgit push[0m
+build	推送到远程仓库	2026-01-18T07:46:53.8918669Z shell: /usr/bin/bash -e {0}
+build	推送到远程仓库	2026-01-18T07:46:53.8918890Z env:
+build	推送到远程仓库	2026-01-18T07:46:53.8919129Z   pythonLocation: /opt/hostedtoolcache/Python/3.9.25/x64
+build	推送到远程仓库	2026-01-18T07:46:53.8919541Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib/pkgconfig
+build	推送到远程仓库	2026-01-18T07:46:53.8919943Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+build	推送到远程仓库	2026-01-18T07:46:53.8920325Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+build	推送到远程仓库	2026-01-18T07:46:53.8920677Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+build	推送到远程仓库	2026-01-18T07:46:53.8921036Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib
+build	推送到远程仓库	2026-01-18T07:46:53.8921327Z ##[endgroup]
+build	推送到远程仓库	2026-01-18T07:46:54.3251628Z To https://github.com/ccj20181-lab/daily-tech-digest
+build	推送到远程仓库	2026-01-18T07:46:54.3252180Z    ea5b931..d391561  main -> main
+build	Post 设置 Python 环境	﻿2026-01-18T07:46:54.3349610Z Post job cleanup.
+build	Post 设置 Python 环境	2026-01-18T07:46:54.5016363Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/daily-tech-digest/daily-tech-digest --files-from manifest.txt --use-compress-program zstdmt
+build	Post 设置 Python 环境	2026-01-18T07:46:55.1317662Z Sent 10399298 of 10399298 (100.0%), 26.2 MBs/sec
+build	Post 设置 Python 环境	2026-01-18T07:46:55.2499839Z Cache saved with the key: setup-python-Linux-x64-24.04-Ubuntu-python-3.9.25-pip-d97433985b2aea106e943730d0e092480249bd0d1139977cb647a74b7dac9af9
+build	Post 检出代码	﻿2026-01-18T07:46:55.2635629Z Post job cleanup.
+build	Post 检出代码	2026-01-18T07:46:55.3560771Z [command]/usr/bin/git version
+build	Post 检出代码	2026-01-18T07:46:55.3596304Z git version 2.52.0
+build	Post 检出代码	2026-01-18T07:46:55.3640308Z Temporarily overriding HOME='/home/runner/work/_temp/04e9af4d-da48-4ce7-8368-83d82de2ab0d' before making global git config changes
+build	Post 检出代码	2026-01-18T07:46:55.3641710Z Adding repository directory to the temporary git global config as a safe directory
+build	Post 检出代码	2026-01-18T07:46:55.3653433Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/daily-tech-digest/daily-tech-digest
+build	Post 检出代码	2026-01-18T07:46:55.3690143Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build	Post 检出代码	2026-01-18T07:46:55.3722738Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build	Post 检出代码	2026-01-18T07:46:55.3948457Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build	Post 检出代码	2026-01-18T07:46:55.3969150Z http.https://github.com/.extraheader
+build	Post 检出代码	2026-01-18T07:46:55.3981875Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+build	Post 检出代码	2026-01-18T07:46:55.4011209Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build	Post 检出代码	2026-01-18T07:46:55.4229720Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+build	Post 检出代码	2026-01-18T07:46:55.4259274Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+build	Complete job	﻿2026-01-18T07:46:55.4586242Z Cleaning up orphan processes

@@ -1,0 +1,22 @@
+{
+  "primaryApiKey": "zcf",
+  "mcpServers": {
+    "macos_automator": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@steipete/macos-automator-mcp@latest"
+      ],
+      "env": {
+        "LOG_LEVEL": "DEBUG",
+        "KB_PARSING": "eager"
+      }
+    },
+    "rednote": {
+      "command": "rednote-mcp",
+      "args": [
+        "--stdio"
+      ]
+    }
+  }
+}

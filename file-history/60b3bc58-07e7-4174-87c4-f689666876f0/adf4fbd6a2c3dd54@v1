@@ -1,0 +1,81 @@
+# 隐藏桌面磁盘图标的方法
+
+如果你觉得桌面上的磁盘图标太多，可以选择隐藏它们。
+
+## 方法 1：通过 Finder 设置（推荐）⭐
+
+### 步骤：
+1. 打开 **Finder**
+2. 点击菜单栏的 **"Finder"** → **"设置"**（或"偏好设置"）
+3. 点击 **"通用"** 标签
+4. 找到 **"在桌面上显示这些项目"**
+5. **取消勾选** **"硬盘"**、**"外部磁盘"**、**"CD、DVD 和 iPod"**
+6. 桌面图标立即消失
+
+### 效果：
+- ❌ 桌面不再显示磁盘图标（Data、Time Machine 等）
+- ✅ 仍然可以通过 Finder 边栏访问
+- ✅ 功能完全不受影响
+
+---
+
+## 方法 2：只保留部分图标
+
+如果你只想保留某些图标：
+
+### 选项：
+- ✅ **硬盘** - 显示内置硬盘（Macintosh HD）
+- ✅ **外部磁盘** - 显示外接硬盘（Data、Time Machine）
+- ✅ **CD、DVD 和 iPod** - 显示光盘和 iOS 设备
+- ✅ **已连接的服务器** - 显示网络服务器
+
+### 建议：
+- 取消勾选"外部磁盘" - 桌面不再显示 Data 和 Time Machine
+- 保留勾选"硬盘" - 桌面只显示内置硬盘（如果有需要）
+
+---
+
+## 方法 3：使用终端命令（高级用户）
+
+如果想要更精细的控制：
+
+### 完全隐藏所有磁盘：
+```bash
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -false
+defaults write com.apple.finder ShowHardDrivesOnDesktop -false
+killall Finder
+```
+
+### 恢复显示：
+```bash
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -true
+defaults write com.apple.finder ShowHardDrivesOnDesktop -true
+killall Finder
+```
+
+---
+
+## 💡 浮浮酱的建议
+
+### 推荐配置：
+1. **在桌面上隐藏外部磁盘**（保持桌面整洁）
+2. **在 Finder 边栏保留**（方便访问）
+3. **使用浮浮酱创建的快速操作**（更高效）
+
+### 访问 Data 分区的方法：
+- ✅ Finder 边栏（左侧）
+- ✅ 桌面快速操作图标（"跳转到Data文档.app"）
+- ✅ 符号链接（`~/External_Documents`）
+
+---
+
+## 🎯 总结
+
+桌面上的磁盘图标是 macOS 默认显示的，不是问题或错误。
+
+**如果不喜欢，可以轻松隐藏：**
+1. Finder → 设置 → 通用
+2. 取消勾选"外部磁盘"
+3. 完成！桌面变整洁
+
+**功能完全不受影响，只是视觉上的偏好～** (´｡• ᵕ •｡`) ♡

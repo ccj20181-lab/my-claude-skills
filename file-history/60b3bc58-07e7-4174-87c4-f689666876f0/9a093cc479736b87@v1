@@ -1,0 +1,178 @@
+# Mac mini M4 + 移速扩展坞 配置完成总结 🎉
+
+配置日期：2026-01-17
+配置完成：浮浮酱 (´｡• ᵕ •｡`) ♡
+
+---
+
+## 📊 硬盘分区方案
+
+| 分区名称 | 容量 | 格式 | 用途 | 挂载点 |
+|---------|------|------|------|--------|
+| **Time Machine** | 200GB | APFS | 系统备份 | `/Volumes/Time Machine` |
+| **Data** | 767GB | APFS | 数据存储 | `/Volumes/Data` |
+
+**总容量：** 1TB (953GB 可用)
+
+---
+
+## 📁 Data 分区文件夹结构
+
+```
+/Volumes/Data/
+├── 📁 Applications       - 外部软件（Adobe、开发工具等）
+├── 📁 Backup            - 备份文件
+├── 📁 Development       - 开发项目
+├── 📁 Documents         - 文档
+├── 📁 Downloads         - 下载文件（浏览器默认）
+├── 📁 Games             - 游戏
+├── 📁 Music             - 音乐
+├── 📁 Photos            - 照片
+├── 📁 Projects          - 项目文件
+├── 📁 Videos            - 视频
+└── 📁 VirtualMachines   - 虚拟机
+```
+
+---
+
+## 🔗 符号链接快捷方式
+
+在主目录（`~`）创建了以下快捷方式：
+
+```bash
+~/External_Documents  → /Volumes/Data/Documents
+~/External_Downloads  → /Volumes/Data/Downloads
+~/External_Projects   → /Volumes/Data/Projects
+~/External_Photos     → /Volumes/Data/Photos
+```
+
+**使用方式：**
+- 在终端输入：`cd ~/External_Documents`
+- 在 Finder 中也能看到（带箭头的文件夹图标）
+
+---
+
+## 🌐 浏览器下载位置
+
+已设置为外部硬盘 Data 分区：
+
+- ✅ Safari → `/Volumes/Data/Downloads`
+- ✅ Chrome → `/Volumes/Data/Downloads`
+
+**以后浏览器下载的文件都会自动保存到外部硬盘喵～**
+
+---
+
+## 💾 Time Machine 备份
+
+**备份目标：** `/Volumes/Time Machine` (200GB)
+
+**注意事项：**
+- ⚠️ 系统建议容量 490GB，但 200GB 对大多数用户足够
+- ✅ Time Machine 会自动管理空间（删除旧版本）
+- ✅ 第一次备份可能需要几小时（建议连着电源 overnight）
+- ⚠️ 备份进行时不要拔掉硬盘
+
+**检查备份状态：**
+- 系统设置 → 通用 → Time Machine
+- 或点击菜单栏的 Time Machine 图标
+
+---
+
+## 📦 如何安装软件到外部硬盘
+
+**推荐软件（大件）：**
+- Adobe 全家桶（PS, AI, PR, AE 等）
+- Final Cut Pro, Logic Pro, DaVinci Resolve
+- Xcode, Docker Desktop, Android Studio
+- Steam 游戏库、大型游戏
+- 虚拟机（Parallels, VMware, VirtualBox）
+
+**安装方法（方法1：制作替身）**
+1. 把 `.app` 文件拖到 `/Volumes/Data/Applications`
+2. 右键点击软件 → 制作替身
+3. 把替身拖到 `/Applications` 或桌面/Dock
+4. 完成！Launchpad 和 Spotlight 都能搜到
+
+**安装方法（方法2：符号链接）**
+```bash
+sudo ln -s "/Volumes/Data/Applications/你的软件.app" "/Applications/你的软件.app"
+```
+
+详细说明：`/Volumes/Data/Applications/使用说明.md`
+
+---
+
+## ⚙️ 系统优化设置
+
+### ✅ Spotlight 索引：保持开启
+- 可以快速搜索外部硬盘文件（`Command + 空格`）
+- 方便查找，提升效率
+
+### ✅ 文件系统：APFS
+- macOS 原生格式，最稳定
+- 支持快照、加密、克隆等高级功能
+- 性能更好，不容易掉盘
+
+---
+
+## 💡 使用建议
+
+### 日常使用习惯
+1. **保存文件时**：优先选择 `/Volumes/Data` 对应的文件夹
+2. **安装大型软件**：先移到 `/Volumes/Data/Applications`，再制作替身
+3. **下载文件**：浏览器已自动设置到 `/Volumes/Data/Downloads`
+4. **Time Machine**：系统会自动备份，无需手动操作
+
+### 性能优化建议
+- ✅ 保持扩展坞散热良好（不要遮挡通风口）
+- ✅ 定期检查硬盘健康状况（磁盘工具 → 急救）
+- ✅ 高负载时监控温度（如果超过 60-70°C，考虑散热）
+- ⚠️ 避免频繁热插拔（APFS 建议始终连接）
+
+### 稳定性保障
+- ✅ Time Machine 每天自动备份（保护数据安全）
+- ✅ APFS 格式提供最佳稳定性
+- ✅ 系统盘（内置 SSD）+ 数据盘（外部）分工明确
+- ⚠️ 重要数据建议三份：内置 + 外部 + 云盘
+
+---
+
+## 🚀 快速访问
+
+**在 Finder 中添加到边栏：**
+1. 打开 Finder
+2. 按 `Command + Shift + C`（查看计算机）
+3. 找到 `Data` 和 `Time Machine`
+4. 拖拽到 Finder 边栏
+
+**在 Dock 添加快捷方式：**
+1. 打开 `/Volumes/Data`
+2. 将常用文件夹拖到 Dock 右侧（文件堆叠区）
+
+---
+
+## 🎯 配置原则
+
+这套配置遵循了以下原则：
+
+- **KISS（简单至上）**：清晰的分区结构，易于管理
+- **YAGNI（精益求精）**：只创建必要的文件夹，不预留无用功能
+- **DRY（杜绝重复）**：统一的符号链接机制，避免重复路径
+- **SOLID**：系统盘和数据盘职责分离，符合单一职责原则
+
+---
+
+## 📞 需要帮助？
+
+如果遇到问题：
+1. **硬盘没显示**：检查连接线，重新插拔
+2. **备份失败**：系统设置 → Time Machine 查看错误信息
+3. **软件打不开**：确认替身/链接正确，硬盘已连接
+4. **性能问题**：用「活动监视器」查看磁盘占用，检查是否有异常进程
+
+---
+
+**享受你的 Mac mini M4 高效体验吧！** ✨
+
+配置完成，一切就绪喵～ ฅ'ω'ฅ

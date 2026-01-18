@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastComputedDate": "2026-01-16",
+  "lastComputedDate": "2026-01-17",
   "dailyActivity": [
     {
       "date": "2026-01-08",
@@ -55,6 +55,12 @@
       "messageCount": 2017,
       "sessionCount": 10,
       "toolCallCount": 595
+    },
+    {
+      "date": "2026-01-17",
+      "messageCount": 1659,
+      "sessionCount": 6,
+      "toolCallCount": 331
     }
   ],
   "dailyModelTokens": [
@@ -123,28 +129,36 @@
         "glm-4.7": 2121508,
         "claude-opus-4-5-thinking": 898206
       }
+    },
+    {
+      "date": "2026-01-17",
+      "tokensByModel": {
+        "claude-sonnet-4-5-thinking": 76056,
+        "glm-4.7": 2467,
+        "gemini-3-pro-high": 484014
+      }
     }
   ],
   "modelUsage": {
     "glm-4.7": {
-      "inputTokens": 10264735,
-      "outputTokens": 558899,
-      "cacheReadInputTokens": 115206462,
+      "inputTokens": 10267076,
+      "outputTokens": 559025,
+      "cacheReadInputTokens": 115376958,
       "cacheCreationInputTokens": 0,
       "webSearchRequests": 0,
       "costUSD": 0,
       "contextWindow": 0,
-      "maxOutputTokens": null
+      "maxOutputTokens": 0
     },
     "gemini-3-pro-high": {
-      "inputTokens": 30315658,
-      "outputTokens": 245407,
+      "inputTokens": 30799139,
+      "outputTokens": 245940,
       "cacheReadInputTokens": 22885450,
       "cacheCreationInputTokens": 0,
       "webSearchRequests": 0,
       "costUSD": 0,
       "contextWindow": 0,
-      "maxOutputTokens": null
+      "maxOutputTokens": 0
     },
     "MiniMax-M2": {
       "inputTokens": 701609,
@@ -173,32 +187,42 @@
       "costUSD": 0,
       "contextWindow": 0,
       "maxOutputTokens": null
+    },
+    "claude-sonnet-4-5-thinking": {
+      "inputTokens": 76052,
+      "outputTokens": 4,
+      "cacheReadInputTokens": 74168,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0,
+      "contextWindow": 0,
+      "maxOutputTokens": 0
     }
   },
-  "totalSessions": 111,
-  "totalMessages": 10783,
+  "totalSessions": 117,
+  "totalMessages": 12442,
   "longestSession": {
-    "sessionId": "24b9f042-263c-463b-b13d-64a1351d0606",
-    "duration": 41866445,
-    "messageCount": 488,
-    "timestamp": "2026-01-12T12:39:04.279Z"
+    "sessionId": "1ee69d0c-91d7-438a-a790-3c3dade81f5e",
+    "duration": 69281890,
+    "messageCount": 988,
+    "timestamp": "2026-01-17T11:53:47.645Z"
   },
   "firstSessionDate": "2026-01-08T01:55:01.972Z",
   "hourCounts": {
     "6": 4,
     "7": 5,
-    "8": 5,
+    "8": 6,
     "9": 6,
     "10": 15,
     "11": 12,
-    "12": 4,
+    "12": 5,
     "13": 3,
-    "14": 7,
+    "14": 8,
     "15": 9,
     "17": 2,
-    "18": 9,
-    "19": 16,
-    "20": 13,
+    "18": 10,
+    "19": 17,
+    "20": 14,
     "21": 1
   }
 }

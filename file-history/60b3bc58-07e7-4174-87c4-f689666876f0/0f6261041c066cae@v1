@@ -1,0 +1,13 @@
+-- 快速跳转到 Data 分区的 Projects 文件夹
+-- 浮浮酱制作 ฅ'ω'ฅ
+
+tell application "Finder"
+	if exists (disk "Data") then
+		set targetFolder to "Data:Projects" as alias
+		open targetFolder
+		activate
+		display notification "已跳转到 Data 分区的 Projects 文件夹" with title "快速操作" sound name "default"
+	else
+		display dialog "Data 分区未连接！请检查移速扩展坞是否已连接。" buttons {"确定"} default button "确定" with icon caution with title "错误"
+	end if
+end tell

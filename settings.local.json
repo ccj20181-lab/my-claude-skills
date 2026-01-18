@@ -23,7 +23,8 @@
       "Skill(document-skills:theme-factory)",
       "Skill(skill-creator)",
       "Skill(xiaohongshu-viral-finder)",
-      "Skill(skillslm-manager)"
+      "Skill(skillslm-manager)",
+      "mcp__chrome-devtools__press_key"
     ]
   },
   "enableAllProjectMcpServers": true,

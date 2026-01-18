@@ -1,0 +1,103 @@
+2026-01-18T09:21:37.759Z [DEBUG] Detected Homebrew cask installation: /opt/homebrew/Caskroom/claude-code/2.1.9/claude
+2026-01-18T09:21:37.761Z [DEBUG] AutoUpdaterWrapper: Installation type: package-manager
+2026-01-18T09:21:37.762Z [DEBUG] Getting matching hook commands for SessionEnd with query: clear
+2026-01-18T09:21:37.762Z [DEBUG] Found 0 hook matchers in settings
+2026-01-18T09:21:37.762Z [DEBUG] Matched 0 unique hooks for query "clear" (0 before deduplication)
+2026-01-18T09:21:37.762Z [DEBUG] Cleared all session hooks for session 9bbe5ad7-b3d4-41ae-8a2e-55ec5d64094c
+2026-01-18T09:21:37.762Z [DEBUG] Getting matching hook commands for SessionStart with query: clear
+2026-01-18T09:21:37.762Z [DEBUG] Found 0 hook matchers in settings
+2026-01-18T09:21:37.762Z [DEBUG] Matched 0 unique hooks for query "clear" (0 before deduplication)
+2026-01-18T09:21:37.766Z [DEBUG] Applying permission update: Setting mode to 'acceptEdits'
+2026-01-18T09:21:37.767Z [DEBUG] FileHistory: Added snapshot for 9af74b2e-c423-4df9-89c3-0f20dedfae3e, tracking 0 files
+2026-01-18T09:21:37.846Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-18T09:21:37.846Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-18T09:21:37.846Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-18T09:21:37.846Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-18T09:21:37.926Z [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+2026-01-18T09:21:37.926Z [DEBUG] Found 0 hook matchers in settings
+2026-01-18T09:21:37.926Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-01-18T09:21:37.930Z [DEBUG] Started caffeinate to prevent sleep
+2026-01-18T09:21:37.930Z [DEBUG] FileHistory: Making snapshot for message 243d1086-51bb-4561-879b-ec14316f7aaf
+2026-01-18T09:21:37.930Z [DEBUG] FileHistory: Added snapshot for 243d1086-51bb-4561-879b-ec14316f7aaf, tracking 0 files
+2026-01-18T09:21:37.964Z [DEBUG] Loading skills from: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/henry/.claude/skills, project=[]
+2026-01-18T09:21:37.966Z [DEBUG] getPluginSkills: Processing 1 enabled plugins
+2026-01-18T09:21:37.966Z [DEBUG] Checking plugin document-skills: skillsPath=exists, skillsPaths=4 paths
+2026-01-18T09:21:37.966Z [DEBUG] Attempting to load skills from plugin document-skills default skillsPath: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills
+2026-01-18T09:21:37.970Z [DEBUG] Total plugin commands loaded: 0
+2026-01-18T09:21:37.970Z [DEBUG] Loaded 16 skills from plugin document-skills default directory
+2026-01-18T09:21:37.970Z [DEBUG] Attempting to load skills from plugin document-skills skillsPaths: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/xlsx, /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/docx, /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pptx, /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pdf
+2026-01-18T09:21:37.970Z [DEBUG] Loading from skillPath: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/xlsx for plugin document-skills
+2026-01-18T09:21:37.970Z [DEBUG] Loaded 0 skills from plugin document-skills custom path: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/xlsx
+2026-01-18T09:21:37.970Z [DEBUG] Loading from skillPath: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/docx for plugin document-skills
+2026-01-18T09:21:37.971Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-18T09:21:37.971Z [DEBUG] Loaded 0 skills from plugin document-skills custom path: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/docx
+2026-01-18T09:21:37.971Z [DEBUG] Loading from skillPath: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pptx for plugin document-skills
+2026-01-18T09:21:37.971Z [DEBUG] Loaded 0 skills from plugin document-skills custom path: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pptx
+2026-01-18T09:21:37.971Z [DEBUG] Loading from skillPath: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pdf for plugin document-skills
+2026-01-18T09:21:37.971Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-18T09:21:37.971Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-18T09:21:37.971Z [DEBUG] Loaded 0 skills from plugin document-skills custom path: /Users/henry/.claude/plugins/cache/anthropic-agent-skills/document-skills/69c0b1a06741/skills/pdf
+2026-01-18T09:21:37.971Z [DEBUG] Total plugin skills loaded: 16
+2026-01-18T09:21:37.971Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-18T09:21:37.977Z [DEBUG] Loaded 28 unique skills (managed: 0, user: 17, project: 0, legacy commands: 11)
+2026-01-18T09:21:37.977Z [DEBUG] getSkills returning: 28 skill dir commands, 16 plugin skills, 0 bundled skills
+2026-01-18T09:21:37.978Z [DEBUG] Auto tool search disabled: 4138 chars (threshold: 50000, 10% of context)
+2026-01-18T09:21:37.979Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-18T09:21:37.979Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-18T09:21:37.979Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-18T09:21:40.197Z [DEBUG] Stream started - received first chunk
+2026-01-18T09:21:41.222Z [DEBUG] Stream started - received first chunk
+2026-01-18T09:21:50.407Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-01-18T09:21:50.410Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2026-01-18T09:21:50.410Z [DEBUG] Found 0 hook matchers in settings
+2026-01-18T09:21:50.410Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2026-01-18T09:21:50.433Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-18T09:21:50.433Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-18T09:21:50.433Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-18T09:21:50.433Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-18T09:21:50.437Z [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+2026-01-18T09:21:50.437Z [DEBUG] Found 0 hook matchers in settings
+2026-01-18T09:21:50.437Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2026-01-18T09:21:50.441Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-18T09:21:50.441Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-18T09:21:50.441Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-18T09:21:50.441Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-18T09:21:50.446Z [DEBUG] Auto tool search disabled: 4138 chars (threshold: 50000, 10% of context)
+2026-01-18T09:21:50.448Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-18T09:21:50.448Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-18T09:21:50.448Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-18T09:21:51.707Z [ERROR] Error in non-streaming fallback: 400 {"error":{"code":400,"message":"{\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"messages.1.content.0: Invalid `signature` in `thinking` block\"},\"request_id\":\"req_vrtx_011CXEbejCugWZbXCSWrnN43\"}","status":"INVALID_ARGUMENT"}}
+2026-01-18T09:21:51.716Z [DEBUG] Getting matching hook commands for Stop with query: undefined
+2026-01-18T09:21:51.716Z [DEBUG] Found 0 hook matchers in settings
+2026-01-18T09:21:51.716Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-01-18T09:21:51.725Z [DEBUG] Stopped caffeinate, allowing sleep
+2026-01-18T09:21:53.410Z [DEBUG] Stream started - received first chunk
+2026-01-18T09:22:04.678Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-01-18T09:22:04.678Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-01-18T09:22:04.678Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-01-18T09:22:04.678Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-01-18T09:22:04.684Z [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+2026-01-18T09:22:04.684Z [DEBUG] Found 0 hook matchers in settings
+2026-01-18T09:22:04.684Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-01-18T09:22:04.685Z [DEBUG] Started caffeinate to prevent sleep
+2026-01-18T09:22:04.685Z [DEBUG] FileHistory: Making snapshot for message dd41269f-9323-4a8d-90c6-b671b2ab61ef
+2026-01-18T09:22:04.685Z [DEBUG] FileHistory: Added snapshot for dd41269f-9323-4a8d-90c6-b671b2ab61ef, tracking 0 files
+2026-01-18T09:22:04.690Z [DEBUG] Loading skills from: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/henry/.claude/skills, project=[]
+2026-01-18T09:22:04.694Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-01-18T09:22:04.694Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-18T09:22:04.694Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-18T09:22:04.694Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-18T09:22:04.702Z [DEBUG] Loaded 28 unique skills (managed: 0, user: 17, project: 0, legacy commands: 11)
+2026-01-18T09:22:04.702Z [DEBUG] getSkills returning: 28 skill dir commands, 16 plugin skills, 0 bundled skills
+2026-01-18T09:22:04.702Z [DEBUG] Auto tool search disabled: 4138 chars (threshold: 50000, 10% of context)
+2026-01-18T09:22:04.705Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-01-18T09:22:04.705Z [DEBUG] [API:auth] OAuth token check starting
+2026-01-18T09:22:04.705Z [DEBUG] [API:auth] OAuth token check complete
+2026-01-18T09:22:07.534Z [DEBUG] Failed to check metrics opt-out status: Request failed with status code 401
+2026-01-18T09:22:07.534Z [DEBUG] Metrics export disabled by organization setting
+2026-01-18T09:22:07.695Z [DEBUG] Stream started - received first chunk
+2026-01-18T09:22:08.447Z [DEBUG] Stopped caffeinate, allowing sleep
+2026-01-18T09:22:08.450Z [ERROR] Error in non-streaming fallback: Request was aborted.
+2026-01-18T09:22:40.143Z [DEBUG] Getting matching hook commands for SessionEnd with query: prompt_input_exit
+2026-01-18T09:22:40.143Z [DEBUG] Found 0 hook matchers in settings
+2026-01-18T09:22:40.143Z [DEBUG] Matched 0 unique hooks for query "prompt_input_exit" (0 before deduplication)

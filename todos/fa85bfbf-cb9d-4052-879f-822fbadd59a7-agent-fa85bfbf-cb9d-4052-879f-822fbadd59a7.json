@@ -1,0 +1,32 @@
+[
+  {
+    "content": "步骤1：分析智谱 AI API 集成方式",
+    "status": "completed",
+    "activeForm": "正在分析智谱 AI API 的使用方式"
+  },
+  {
+    "content": "步骤2：更新 Agent Runner 使用智谱 API",
+    "status": "completed",
+    "activeForm": "正在更新 agent_runner.py"
+  },
+  {
+    "content": "步骤3：更新依赖包",
+    "status": "completed",
+    "activeForm": "正在更新 requirements.txt"
+  },
+  {
+    "content": "步骤4：更新 Workflow 环境变量",
+    "status": "in_progress",
+    "activeForm": "正在更新 GitHub Actions workflow"
+  },
+  {
+    "content": "步骤5：更新 DEPLOYMENT.md 文档",
+    "status": "pending",
+    "activeForm": "正在更新部署文档"
+  },
+  {
+    "content": "步骤6：提交所有更新",
+    "status": "pending",
+    "activeForm": "正在提交更新到 GitHub"
+  }
+]

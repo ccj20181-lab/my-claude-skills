@@ -1,0 +1,22 @@
+[
+  {
+    "content": "阶段1：数据采集 - 搜索关键词并提取数据",
+    "status": "completed",
+    "activeForm": "正在执行阶段1：数据采集"
+  },
+  {
+    "content": "阶段2：配置校验 - 验证 config.json",
+    "status": "completed",
+    "activeForm": "正在执行阶段2：配置校验"
+  },
+  {
+    "content": "阶段2：数据校验 - 验证 data.json 完整性",
+    "status": "in_progress",
+    "activeForm": "正在执行阶段2：数据校验"
+  },
+  {
+    "content": "阶段2：推送报告 - 发送到微信",
+    "status": "pending",
+    "activeForm": "正在执行阶段2：推送报告"
+  }
+]

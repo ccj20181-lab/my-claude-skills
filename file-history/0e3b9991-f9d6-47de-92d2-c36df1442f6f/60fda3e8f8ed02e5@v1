@@ -1,0 +1,55 @@
+{
+  "rss_feeds": {
+    "wallstreetcn": {
+      "url": "https://wallstreetcn.com/rss/news.xml",
+      "name": "华尔街见闻",
+      "category": "市场动态"
+    },
+    "caixin": {
+      "url": "https://www.caixin.com/rss/rss_finance.xml",
+      "name": "财新网",
+      "category": "深度分析"
+    },
+    "yicai": {
+      "url": "https://www.yicai.com/rss/yicai.xml",
+      "name": "第一财经",
+      "category": "综合财经"
+    },
+    "ftchinese": {
+      "url": "https://www.ftchinese.com/rss/feed",
+      "name": "FT中文网",
+      "category": "市场分析"
+    },
+    "pbc": {
+      "url": "http://www.pbc.gov.cn/rss/rss_gdxw.xml",
+      "name": "央行政策",
+      "category": "政策公告"
+    },
+    "bloomberg": {
+      "url": "https://www.bloomberg.com/feed/economy.rss",
+      "name": "Bloomberg",
+      "category": "国际财经"
+    },
+    "reuters": {
+      "url": "https://www.reuters.com/finance/breakingnews",
+      "name": "路透社",
+      "category": "国际新闻"
+    },
+    "cnbc": {
+      "url": "https://www.cnbc.com/id/100003114/device/rss/rss.html",
+      "name": "CNBC",
+      "category": "美股聚焦"
+    }
+  },
+  "claude": {
+    "model": "glm-4-plus",
+    "max_tokens": 8192,
+    "temperature": 0.3,
+    "base_url": "https://open.bigmodel.cn/api/anthropic"
+  },
+  "output": {
+    "digests_dir": "digests",
+    "date_format": "%Y-%m-%d",
+    "enable_risk_warning": true
+  }
+}

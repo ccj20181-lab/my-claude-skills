@@ -1,0 +1,17 @@
+-- 快速跳转到 Data 分区的 Documents 文件夹
+-- 浮浮酱制作 ฅ'ω'ฅ
+
+tell application "Finder"
+	-- 检查 Data 分区是否已挂载
+	if exists (disk "Data") then
+		-- 跳转到 Data 分区的 Documents 文件夹
+		set targetFolder to "Data:Documents" as alias
+		open targetFolder
+		-- 激活 Finder 窗口
+		activate
+		display notification "已跳转到 Data 分区的 Documents 文件夹" with title "快速操作" sound name "default"
+	else
+		-- 如果 Data 分区未挂载，显示错误提示
+		display dialog "Data 分区未连接！请检查移速扩展坞是否已连接。" buttons {"确定"} default button "确定" with icon caution with title "错误"
+	end if
+end tell

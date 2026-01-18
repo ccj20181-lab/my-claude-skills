@@ -1,0 +1,291 @@
+# 小红书 MCP Server 发布时间功能增强计划
+
+## 📋 问题分析
+
+### 当前状态
+- ✅ rednote-mcp 已全局安装（版本 0.2.3）
+- ✅ 登录状态已验证（cookies 有效）
+- ✅ MCP Server 正常运行
+- ❌ **核心问题**：MCP API 返回的数据缺少 `publishTime`（发布时间）字段
+
+### 根本原因
+在 `/Users/henry/.npm-global/lib/node_modules/rednote-mcp/dist/tools/rednoteTools.js` 的 `searchNotes` 方法中（第117-146行），代码只提取了：
+- title, content, url, author
+- likes, collects, comments
+
+**缺少发布时间提取逻辑！**
+
+---
+
+## 🎯 解决方案
+
+### 方案概述
+修改 rednote-mcp 源代码，添加发布时间提取功能，然后重新构建和安装。
+
+---
+
+## 📝 实施步骤
+
+### 阶段 1：准备开发环境
+
+**1.1 克隆源代码仓库**
+```bash
+cd /tmp
+git clone https://github.com/ifuryst/rednote-mcp.git
+cd rednote-mcp
+```
+
+**1.2 安装依赖**
+```bash
+npm install
+```
+
+**关键文件位置：**
+- `src/tools/rednoteTools.ts` - 搜索笔记工具（需要修改）
+- `src/tools/noteDetail.ts` - 笔记详情工具（需要修改）
+
+---
+
+### 阶段 2：修改源代码
+
+**2.1 修改 `src/tools/rednoteTools.ts`**
+
+在 `searchNotes` 方法的数据提取部分（约第117-146行），添加发布时间提取：
+
+```typescript
+// 在现有的 page.evaluate 回调中添加发布时间提取逻辑
+
+// 原代码（第138-146行）：
+return {
+    title,
+    content,
+    url: window.location.href,
+    author,
+    likes,
+    collects,
+    comments
+};
+
+// 修改为：
+// 首先尝试从页面提取发布时间
+const publishTimeElement = document.querySelector('.publish-date > span');
+let publishTime = '';
+if (publishTimeElement) {
+    const timeText = publishTimeElement.textContent?.trim() || '';
+    // 处理相对时间格式，例如 "3天前"、"1周前"
+    // 转换为 ISO 8601 格式
+    publishTime = timeText;
+}
+
+return {
+    title,
+    content,
+    url: window.location.href,
+    author,
+    likes,
+    collects,
+    comments,
+    publishTime  // 新增字段
+};
+```
+
+**2.2 修改 `src/tools/noteDetail.ts`**
+
+在 `GetNoteDetail` 函数中（第52-62行），添加发布时间提取：
+
+```typescript
+// 原代码：
+return {
+    title,
+    content,
+    tags,
+    author,
+    imgs,
+    videos,
+    url: '',
+    likes: ChineseUnitStrToNumber(likesNumber),
+    comments: ChineseUnitStrToNumber(commentsNumber)
+};
+
+// 修改为：
+// 提取发布时间
+const publishTimeElement = document.querySelector('.publish-date > span');
+const publishTime = publishTimeElement?.textContent?.trim() || '';
+
+return {
+    title,
+    content,
+    tags,
+    author,
+    imgs,
+    videos,
+    url: '',
+    likes: ChineseUnitStrToNumber(likesNumber),
+    comments: ChineseUnitStrToNumber(commentsNumber),
+    publishTime  // 新增字段
+};
+```
+
+**2.3 添加时间解析工具函数（可选）**
+
+如果需要将相对时间（如"3天前"）转换为绝对时间，可以添加工具函数：
+
+```typescript
+function parseRelativeTime(timeStr: string): string {
+    const now = new Date();
+    const match = timeStr.match(/(\d+)(天|周|月|年|小时|分钟)前/);
+
+    if (!match) return timeStr;
+
+    const value = parseInt(match[1]);
+    const unit = match[2];
+
+    switch (unit) {
+        case '分钟':
+            return new Date(now.getTime() - value * 60 * 1000).toISOString();
+        case '小时':
+            return new Date(now.getTime() - value * 60 * 60 * 1000).toISOString();
+        case '天':
+            return new Date(now.getTime() - value * 24 * 60 * 60 * 1000).toISOString();
+        case '周':
+            return new Date(now.getTime() - value * 7 * 24 * 60 * 60 * 1000).toISOString();
+        case '月':
+            return new Date(now.setMonth(now.getMonth() - value)).toISOString();
+        case '年':
+            return new Date(now.setFullYear(now.getFullYear() - value)).toISOString();
+        default:
+            return timeStr;
+    }
+}
+```
+
+---
+
+### 阶段 3：构建和测试
+
+**3.1 构建项目**
+```bash
+npm run build
+```
+
+**3.2 本地测试**
+```bash
+# 使用开发模式测试
+npm run dev -- init  # 测试登录功能
+```
+
+**3.3 全局重新安装**
+```bash
+npm uninstall -g rednote-mcp
+npm install -g .
+```
+
+---
+
+### 阶段 4：验证功能
+
+**4.1 重启 Claude Code**
+需要重启 Claude Code 以加载新的 MCP Server
+
+**4.2 测试搜索功能**
+在 Claude Code 中调用：
+```
+mcp__rednote__search_notes(keywords="股票", limit=5)
+```
+
+**4.3 验证返回数据**
+检查返回的笔记是否包含 `publishTime` 字段
+
+**4.4 测试时间筛选**
+使用修改后的 xhs-topic-analyzer skill，验证能否按发布时间筛选
+
+---
+
+## 🔧 关键文件路径
+
+### 需要修改的文件
+1. `/tmp/rednote-mcp/src/tools/rednoteTools.ts` - 搜索功能源码
+2. `/tmp/rednote-mcp/src/tools/noteDetail.ts` - 详情功能源码
+
+### 当前安装位置（只读）
+- `/Users/henry/.npm-global/lib/node_modules/rednote-mcp/` - 已安装的包
+
+### 配置文件
+- `/Users/henry/.claude/config.json` - Claude MCP 配置
+- `/Users/henry/.mcp/rednote/cookies.json` - 登录 cookies
+
+---
+
+## ⚠️ 注意事项
+
+1. **TypeScript 编译**：修改的是 `.ts` 源文件，需要运行 `npm run build` 编译成 `.js`
+2. **浏览器选择器**：发布时间的 CSS 选择器需要通过实际页面检查确认
+3. **时间格式处理**：小红书使用相对时间（如"3天前"），需要转换为标准格式
+4. **版本管理**：修改后版本号可以更新为 `0.2.4` 或 `0.3.0`
+5. **Cookie 保留**：重新安装不会影响已保存的 cookies
+
+---
+
+## 🚀 执行命令清单
+
+```bash
+# 1. 准备环境
+cd /tmp
+git clone https://github.com/ifuryst/rednote-mcp.git
+cd rednote-mcp
+npm install
+
+# 2. 修改源代码（手动编辑）
+# - 编辑 src/tools/rednoteTools.ts
+# - 编辑 src/tools/noteDetail.ts
+
+# 3. 构建和安装
+npm run build
+npm uninstall -g rednote-mcp
+npm install -g .
+
+# 4. 验证
+rednote-mcp --version  # 应该显示新版本号
+
+# 5. 重启 Claude Code 并测试
+```
+
+---
+
+## 📊 验证标准
+
+### 成功标准
+1. ✅ `search_notes` 返回的每个笔记包含 `publishTime` 字段
+2. ✅ `get_note_content` 返回的笔记包含 `publishTime` 字段
+3. ✅ `publishTime` 格式为 ISO 8601 或可解析的时间字符串
+4. ✅ xhs-topic-analyzer 能够按发布时间筛选笔记
+
+### 测试用例
+```javascript
+// 期望的返回格式示例
+{
+  "title": "股票入门指南",
+  "content": "...",
+  "author": "财经博主",
+  "likes": 2500,
+  "comments": 120,
+  "publishTime": "2026-01-15T10:30:00Z",  // 新增字段
+  "url": "https://..."
+}
+```
+
+---
+
+## 🔄 后续优化（可选）
+
+1. **添加时间筛选参数**：在 `search_notes` API 中添加 `timeRange` 参数
+2. **支持多种时间格式**：同时支持相对时间和绝对时间
+3. **添加时间排序**：支持按发布时间排序结果
+4. **Fork 并维护**：创建自己的 fork 仓库，方便后续维护和更新
+
+---
+
+## 📝 版本历史
+
+- **0.2.3**（当前）：不支持发布时间
+- **0.2.4**（计划）：添加发布时间字段
