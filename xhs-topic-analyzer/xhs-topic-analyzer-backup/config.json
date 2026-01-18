@@ -1,0 +1,22 @@
+{
+    "wechat_push_token": "a6443f3a5d0f4b11a42c281f831b5c15",
+    "output_base_path": "/Users/henry/小红书选题抓取",
+    "lite_mode": {
+        "keywords": ["理财", "基金", "股票", "黄金", "存钱"],
+        "time_range": "2d",
+        "min_likes": 500,
+        "max_fans": 20000
+    },
+    "finance_pro_mode": {
+        "keywords": ["理财", "基金", "股票", "副业", "搞钱", "存钱", "宏观经济", "黄金", "A股", "保险"],
+        "time_range": "7d",
+        "min_likes": 1000,
+        "max_fans": 20000
+    },
+    "exclude_keywords": [
+        "自媒体", "涨粉", "运营", "剪辑", "文案", "ip", "博主",
+        "美妆", "穿搭", "情感", "恋爱", "读书", "书单", "阅读",
+        "认知", "思维", "自律", "成长", "励志", "人生", "感悟",
+        "减肥", "健身", "食谱", "好物", "vlog", "OOTD"
+    ]
+}

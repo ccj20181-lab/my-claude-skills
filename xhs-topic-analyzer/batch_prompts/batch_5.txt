@@ -1,0 +1,32 @@
+# 粉丝数据获取任务
+
+请为以下小红书用户获取粉丝数据：
+
+## 用户列表
+```json
+[
+  {
+    "userId": "5fe291bc0000000001001470",
+    "xsec_token": "ABn2Z5Y4D7koMMohim4fxAl594tVRqBi4k6owDrDn-grg=",
+    "nickname": "曹小景(备婚中)"
+  },
+  {
+    "userId": "61b2d7ff00000000020182e7",
+    "xsec_token": "ABKWMlJgRPt_5ijvcgFTqbgGHRsEtI6h12cRtfdVvQIoo=",
+    "nickname": "小枫不酷了"
+  }
+]
+```
+
+## 执行要求
+
+1. 对每个用户调用 `mcp__xiaohongshu-mcp__user_profile`
+2. 只提取 `fansCount` 字段
+3. 不要保存完整响应，不要返回笔记列表
+
+## 输出格式
+
+直接返回以下 JSON（不要有其他文字）：
+```json
+{"userId1": 粉丝数1, "userId2": 粉丝数2}
+```

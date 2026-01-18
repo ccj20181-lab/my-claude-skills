@@ -1,0 +1,10 @@
+{
+  "name": "feature-dev",
+  "description": "Comprehensive feature development workflow with specialized agents for codebase exploration, architecture design, and quality review",
+  "category": "development",
+  "author": "Siddharth Bidasaria",
+  "enabled": true,
+  "auto_activate": false,
+  "hooks": [],
+  "commands": []
+}

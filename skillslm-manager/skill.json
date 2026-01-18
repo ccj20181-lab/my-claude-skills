@@ -1,0 +1,7 @@
+{
+  "name": "skillslm-manager",
+  "version": "1.0.0",
+  "description": "Manage Claude Code Skills using skillslm package manager",
+  "enabled": true,
+  "installed": true
+}

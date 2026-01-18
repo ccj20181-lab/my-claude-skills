@@ -1,0 +1,47 @@
+# 粉丝数据获取任务
+
+请为以下小红书用户获取粉丝数据：
+
+## 用户列表
+```json
+[
+  {
+    "userId": "660ee4ee000000000d0264d6",
+    "xsec_token": "ABU1BHhdnkQPZBoV2fmsVTRGckftdOuV_439T1x_zzFrw=",
+    "nickname": "渔山学财经"
+  },
+  {
+    "userId": "5ff5214800000000010039cf",
+    "xsec_token": "ABU1BHhdnkQPZBoV2fmsVTRK35kv_Fn8fRLKdj_CTOkk0=",
+    "nickname": "招财小猫咪"
+  },
+  {
+    "userId": "6194ae1a000000002102497a",
+    "xsec_token": "ABn2Z5Y4D7koMMohim4fxAl_y3xTK9hUS68d-gl2E4jB0=",
+    "nickname": "奶爸财经"
+  },
+  {
+    "userId": "68e4ce0a0000000037000157",
+    "xsec_token": "AB2XrCgthEqasbeLiEoXb62yVwurOGlWR8vu06a6KMTXo=",
+    "nickname": "爱学习的叮当猫"
+  },
+  {
+    "userId": "6268dcb40000000021020748",
+    "xsec_token": "ABn2Z5Y4D7koMMohim4fxAlzymy9IDMUNr_tqS1RbDg_o=",
+    "nickname": "程娘子浅谈攒钱"
+  }
+]
+```
+
+## 执行要求
+
+1. 对每个用户调用 `mcp__xiaohongshu-mcp__user_profile`
+2. 只提取 `fansCount` 字段
+3. 不要保存完整响应，不要返回笔记列表
+
+## 输出格式
+
+直接返回以下 JSON（不要有其他文字）：
+```json
+{"userId1": 粉丝数1, "userId2": 粉丝数2}
+```
