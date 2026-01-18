@@ -1,15 +1,21 @@
 ---
 name: xhs-topic-analyzer
-description: 小红书爆款选题分析工具。使用此 Skill 当用户需要：(1) 搜索小红书近期爆款笔记 (2) 筛选3天内发布且点赞≥2000的笔记 (3) 生成选题报告并推送到微信。专注金融财经领域，自动化采集爆款内容。
+description: 小红书爆款选题分析工具 V8.0。专注财经赛道：(1) 搜索小红书近期爆款笔记 (2) 筛选3天内发布且点赞≥2000的笔记 (3) 生成选题报告并推送到微信。已移除粉丝数据依赖，自动清理临时文件。
 ---
 
-# 小红书爆款选题分析器 (V7.0 - 简化版)
+# 小红书爆款选题分析器 (V8.0 - 深度重构)
 
 专业的小红书爆款笔记挖掘工具，自动搜索近期高赞内容并生成分析报告。
 
 ## 🎯 核心功能
 
 搜索小红书金融财经领域的近期爆款笔记（3天内发布，点赞≥2000），自动生成选题报告并推送到微信。
+
+**V8.0 重大更新**：
+- ✅ 完全移除粉丝数据获取和依赖
+- ✅ 简化数据结构，只保留必需字段
+- ✅ 执行完成后自动清理临时数据文件
+- ✅ 专注于点赞数筛选（≥2000）
 
 ## 📋 执行流程
 
@@ -59,7 +65,7 @@ Task(subagent_type="general-purpose",
 ## 步骤 5：保存数据
 保存到 /Users/henry/.claude/skills/xhs-topic-analyzer/data.json
 
-格式：
+格式（V8.0 - 移除粉丝字段）：
 ```json
 {
   "feeds": [{
@@ -77,6 +83,8 @@ Task(subagent_type="general-purpose",
   "keywords_executed": [...]
 }
 ```
+
+**注意**：不再需要 fans 字段，专注于点赞数筛选（≥2000）
 
 ## 步骤 6：返回摘要
 返回搜索结果统计和筛选后的笔记数量
@@ -97,8 +105,10 @@ python3 /Users/henry/.claude/skills/xhs-topic-analyzer/scripts/validate_data.py
 
 **步骤 2.3：推送报告**
 ```bash
-python3 /Users/henry/.claude/skills/xhs-topic-analyzer/scripts/push_report.py
+python3 /Users/henry/.claude/skills/xhs-topic-analyzer/scripts/push_report.py --file /Users/henry/.claude/skills/xhs-topic-analyzer/data.json
 ```
+
+**重要**：推送成功后会自动清理临时文件（data.json 和 fans.json），确保下次运行使用最新数据。
 
 ## ⚙️ 配置说明
 
@@ -139,7 +149,7 @@ python3 /Users/henry/.claude/skills/xhs-topic-analyzer/scripts/push_report.py
 
 ## 📊 数据格式规范
 
-使用简化格式（展平嵌套结构）：
+使用简化格式（展平嵌套结构，V8.0 - 移除粉丝字段）：
 
 ```json
 {
@@ -152,6 +162,15 @@ python3 /Users/henry/.claude/skills/xhs-topic-analyzer/scripts/push_report.py
   "publishTime": "发布时间"
 }
 ```
+
+**必需字段**：
+- `id` - 笔记唯一标识
+- `title` - 笔记标题
+- `nickname` - 博主昵称
+- `likedCount` - 点赞数（筛选标准：≥2000）
+
+**已移除字段**：
+- ~~`fans`~~ - 不再需要粉丝数据
 
 ## 🔧 故障排查
 
@@ -167,7 +186,25 @@ python3 /Users/henry/.claude/skills/xhs-topic-analyzer/scripts/push_report.py
 **检查**：data.json 是否使用简化格式
 **解决**：参考"数据格式规范"部分修正
 
+## 🔄 数据清理机制
+
+**重要：每次执行完成后自动清除临时数据，避免使用过期数据**
+
+执行完成后会自动清除以下文件：
+- `data.json` - 临时搜索结果数据
+- `fans.json` - 粉丝数据（已废弃，不再使用）
+
+这确保每次运行都使用最新搜索的数据，绝不复用旧数据。
+
 ## 📝 版本历史
+
+### V8.0 (2026-01-18) - 深度重构
+- ✅ 完全移除粉丝数据获取和相关逻辑
+- ✅ 移除粉丝字段的所有依赖
+- ✅ 简化数据结构：只保留必需字段（id, title, nickname, likedCount, collectedCount, commentCount, publishTime）
+- ✅ 添加数据清理机制：执行完成后自动清除临时 JSON 文件
+- ✅ 更新筛选逻辑：只关注 3天内 + 2000赞以上
+- ✅ 使用 xiaohongshu-mcp 服务
 
 ### V7.0 (2026-01-18) - 重大重构
 - ✅ 移除粉丝数据获取（不再需要）

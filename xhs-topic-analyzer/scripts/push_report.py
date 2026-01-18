@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-推送小红书热点选题报告到微信
-支持图片查看 + 表格内容
+推送小红书热点选题报告到微信 (V8.0 - 移除粉丝数据依赖)
+专注财经赛道：3天内 + 2000赞以上
 """
 import requests
 import argparse
@@ -20,37 +20,6 @@ def load_config():
                 return json.load(f)
         except Exception as e:
             print(f"[Warning] Config load failed: {e}")
-    return {}
-
-
-def load_fans_data():
-    """
-    加载粉丝数据（仅作为备用，优先使用 data.json 自带的粉丝数）
-
-    注意：小红书搜索 API 返回的数据已包含 fans 字段，
-    fans.json 仅在需要补充或覆盖时使用
-    """
-    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    fans_path = os.path.join(base_dir, 'fans.json')
-    if os.path.exists(fans_path):
-        try:
-            with open(fans_path, 'r', encoding='utf-8') as f:
-                data = json.load(f)
-                # fans.json 格式是 {userId: fans} 或 {"users": {userId: {fans: xxx}}}
-                if isinstance(data, dict):
-                    # 检查是否是 {"users": {...}} 格式
-                    if 'users' in data:
-                        users = data['users']
-                        result = {uid: info.get('fans', 0) for uid, info in users.items()}
-                        print(f"[Info] fans.json (users格式) 加载了 {len(result)} 条记录")
-                        return result
-                    # 否则是 {userId: fans} 格式
-                    print(f"[Info] fans.json (简单格式) 加载了 {len(data)} 条记录")
-                    return data
-        except Exception as e:
-            print(f"[Warning] fans.json 读取失败: {e}")
-    else:
-        print(f"[Info] fans.json 不存在，将使用 data.json 自带的粉丝数据")
     return {}
 
 
@@ -81,8 +50,6 @@ def load_data(data_file):
                 "id": item.get('id', ''),
                 "title": card.get("displayTitle", "") or "无标题",
                 "author": card.get("user", {}).get("nickname", ""),
-                "author_id": card.get("user", {}).get("userId", ""),
-                "fans": card.get("user", {}).get("fans", 0),
                 "likes": card.get("interactInfo", {}).get("likedCount", 0),
                 "url": f"https://www.xiaohongshu.com/explore/{item.get('id', '')}"
             }
@@ -93,8 +60,6 @@ def load_data(data_file):
                 "id": item.get('id', ''),
                 "title": item.get('title', '无标题'),
                 "author": item.get('nickname') or item.get('author', ''),
-                "author_id": item.get('userId', ''),
-                "fans": item.get('fans', 0),
                 "likes": item.get('likedCount', 0) or item.get('likes', 0),
                 "url": f"https://www.xiaohongshu.com/explore/{item.get('id', '')}"
             }
@@ -103,46 +68,18 @@ def load_data(data_file):
     return flat_data
 
 
-def generate_content(data_file, mode='finance-pro'):
-    """生成推送内容"""
+def generate_content(data_file):
+    """生成推送内容（移除粉丝数据依赖）"""
     raw_data = load_data(data_file)
 
-    # 加载fans.json中的粉丝数据（仅作为备用）
-    fans_data = load_fans_data()
-
-    # 根据 mode 选择筛选配置
-    if mode == 'lite':
-        mode_config = {'min_likes': 500, 'max_fans': 20000}
-    else:
-        mode_config = {'min_likes': 1000, 'max_fans': 20000}
+    # 财经赛道爆款标准：2000赞以上
+    min_likes = 2000
     hits = []
-    fans_source_stats = {'from_data': 0, 'from_fans_json': 0, 'missing': 0}
 
     for note in raw_data:
         likes = int(note.get('likes', 0))
-        user_id = note.get('author_id', '')
-
-        # 粉丝数据来源优先级：
-        # 1. data.json 自带的 fans 字段（搜索 API 返回）
-        # 2. fans.json 补充数据
-        # 3. 默认 0
-        fans = int(note.get('fans', 0))
-
-        if fans > 0:
-            fans_source_stats['from_data'] += 1
-        elif user_id and user_id in fans_data:
-            fans = fans_data[user_id]
-            fans_source_stats['from_fans_json'] += 1
-        else:
-            fans_source_stats['missing'] += 1
-
-        if likes >= mode_config['min_likes'] and fans < mode_config['max_fans']:
-            note_copy = {'likes': likes, 'fans': fans, **note}
-            hits.append(note_copy)
-
-    # 打印粉丝数据来源统计
-    print(f"[Info] 粉丝数据来源: data.json={fans_source_stats['from_data']}, "
-          f"fans.json={fans_source_stats['from_fans_json']}, 缺失={fans_source_stats['missing']}")
+        if likes >= min_likes:
+            hits.append(note)
 
     # 按点赞排序
     hits = sorted(hits, key=lambda x: x['likes'], reverse=True)
@@ -150,9 +87,9 @@ def generate_content(data_file, mode='finance-pro'):
 
     today = datetime.now().strftime("%Y-%m-%d")
 
-    content = f"""## 💰 小红书热点选题日报
+    content = f"""## 💰 小红书财经爆款选题日报
 
-**📅 {today}** | 筛选：点赞>1000 | 粉丝<2.0万
+**📅 {today}** | 筛选：点赞≥2000 | 时间：3天内
 
 ─────────────────────────────────────────
 
@@ -164,50 +101,73 @@ def generate_content(data_file, mode='finance-pro'):
         title = note['title']
         likes = format_number(note['likes'])
         author = note['author']
-        fans = format_number(note['fans'])
         url = note['url']
 
         content += f"**【第{i}名】** {title}\n"
-        content += f"❤️ {likes}  |  @{author}  |  粉丝 {fans}\n"
+        content += f"❤️ {likes}  |  @{author}\n"
         content += f"🔗 {url}\n\n"
 
-    content += """
+    content += f"""
 ─────────────────────────────────────────
 
-### 📈 热点选题分析
+### 📈 选题分析
 
-本期TOP 5选题呈现三大核心特征：**时效型选题**（2026年规划）借助时间节点引发情感共鸣；**教程型选题**（股票界面、A股扫盲）以"1分钟"等数字+教程形式降低认知门槛；**情绪型选题**（戒掉手机、卖房观点）通过颠覆性观点制造讨论点。流量密码在于：标题用具体数字+强动作词+目标人群标签（如"女生""新手"），内容兼顾实用价值与情绪触动。
+本期财经赛道TOP 5选题呈现三大特征：
+
+1. **时效型选题** - 抓住时间节点和热点事件
+2. **教程型选题** - 用具体数字+教程形式降低理解门槛
+3. **情绪型选题** - 通过观点制造讨论点
+
+**流量密码**：标题用具体数字 + 强动作词 + 目标人群标签
 
 ─────────────────────────────────────────
 
-### 💡 选题决策建议
+### 💡 选题建议
 
-| 系列 | 参考选题 | 建议 |
-|:---|:---|:---|
-| 🎯 秒懂金融小知识 | A股代码扫盲、1分钟看懂股票界面 | 选择与普通人生活相关的金融基础知识，用"X分钟看懂"框架 |
-| 🎯 每天秒懂一个财经热点 | 2026长期主义计划 | 抓住时间节点和热点，输出时效性观点分析 |
-| 🎯 秒懂理财小技巧 | 女生戒掉手机去做这6件事 | 输出可执行的理财行动清单，绑定特定人群标签 |
+| 系列 | 建议方向 |
+|:---|:---|
+| 🎯 秒懂金融小知识 | 基础概念+具体案例，"X分钟看懂"框架 |
+| 🎯 每天秒懂财经热点 | 时效性观点分析，结合热点事件 |
+| 🎯 秒懂理财小技巧 | 可执行的行动清单，绑定特定人群 |
 
 ⚠️ **风险提示**
 • 数据有时效性，过期内容参考价值降低
-• 低粉爆文有偶然性，建议结合博主历史数据判断
 • 选题前请核实内容合规性
 
 ─────────────────────────────────────────
-📁 图片报告: F:/选题抓取/{date}_FinancePro/daily_report.png
-""".format(date=datetime.now().strftime("%Y%m%d"))
+
+📊 本次共筛选出 {len(hits)} 条爆款笔记
+"""
 
     return content
 
 
-def push_to_wechat(token, content, mode='finance-pro'):
+def cleanup_temp_files():
+    """清理临时数据文件"""
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    files_to_clean = ['data.json', 'fans.json']
+
+    cleaned = []
+    for filename in files_to_clean:
+        filepath = os.path.join(base_dir, filename)
+        if os.path.exists(filepath):
+            try:
+                os.remove(filepath)
+                cleaned.append(filename)
+                print(f"[Cleanup] 已删除临时文件: {filename}")
+            except Exception as e:
+                print(f"[Warning] 删除 {filename} 失败: {e}")
+
+    if cleaned:
+        print(f"[Cleanup] 清理完成，共删除 {len(cleaned)} 个文件")
+    else:
+        print("[Cleanup] 没有需要清理的临时文件")
+
+
+def push_to_wechat(token, content):
     """推送内容到微信"""
     today = datetime.now().strftime("%m-%d")
-
-    if mode == 'lite':
-        title = f"🔥 小红书每日热点 {today}"
-    else:
-        title = f"💰 小红书财经猎手 {today}"
+    title = f"💰 小红书财经猎手 {today}"
 
     url = 'http://www.pushplus.plus/send'
     data = {
@@ -235,7 +195,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--token', help='PushPlus Token')
     parser.add_argument('--file', required=True, help='Data JSON file')
-    parser.add_argument('--mode', default='finance-pro', choices=['lite', 'finance-pro'])
+    parser.add_argument('--no-cleanup', action='store_true', help='不清理临时文件（调试用）')
     args = parser.parse_args()
 
     token = args.token
@@ -247,6 +207,11 @@ if __name__ == "__main__":
         print("Error: No token provided")
         sys.exit(1)
 
-    content = generate_content(args.file, args.mode)
-    success = push_to_wechat(token, content, args.mode)
+    content = generate_content(args.file)
+    success = push_to_wechat(token, content)
+
+    # 推送成功后清理临时文件（除非指定 --no-cleanup）
+    if success and not args.no_cleanup:
+        cleanup_temp_files()
+
     sys.exit(0 if success else 1)
