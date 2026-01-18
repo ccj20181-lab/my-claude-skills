@@ -27,9 +27,10 @@ Task(subagent_type="general-purpose",
 搜索小红书关键词，提取近期爆款笔记
 
 ## ⚠️ 关键要求
-- 必须调用 mcp__rednote__search_notes API
+- 必须调用 mcp__xiaohongshu__search_feeds API
 - 禁止跳过搜索步骤或复用旧数据
 - 强制覆盖保存新数据
+- 需要先登录小红书账号（使用 mcp__xiaohongshu__get_login_qrcode）
 
 ## 步骤 1：读取配置
 读取 /Users/henry/.claude/skills/xhs-topic-analyzer/config.json，获取：
@@ -38,7 +39,12 @@ Task(subagent_type="general-purpose",
 - filters.min_likes: 2000
 
 ## 步骤 2：搜索每个关键词
-对每个关键词分别调用 mcp__rednote__search_notes(keywords="<关键词>", limit=50)
+对每个关键词分别调用 mcp__xiaohongshu__search_feeds(keyword="<关键词>", filters={...})
+参数：
+- keyword: 搜索关键词
+- filters.sort_by: "最多点赞"（按点赞数排序）
+- filters.publish_time: "一周内"（获取最新数据）
+- filters.note_type: "不限"
 
 报告每个关键词的搜索结果数量
 
@@ -126,9 +132,10 @@ python3 /Users/henry/.claude/skills/xhs-topic-analyzer/scripts/push_report.py
 
 ## ⚠️ 重要限制
 
-1. **禁止在主上下文直接调用 MCP 工具** - 使用 Task 工具调用 Subagent
-2. **强制覆盖旧数据** - 每次运行必须获取最新数据
-3. **严格筛选条件** - 3天内 + 2000赞以上
+1. **使用 xiaohongshu-mcp 服务** - 必须使用 mcp__xiaohongshu__search_feeds
+2. **禁止在主上下文直接调用 MCP 工具** - 使用 Task 工具调用 Subagent
+3. **强制覆盖旧数据** - 每次运行必须获取最新数据
+4. **严格筛选条件** - 3天内 + 2000赞以上
 
 ## 📊 数据格式规范
 
