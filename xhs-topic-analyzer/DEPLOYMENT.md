@@ -12,22 +12,21 @@
 
 在 GitHub 仓库中配置以下敏感信息：
 
-#### 1.1 ANTHROPIC_API_KEY
+#### 1.1 ZHIPU_API_KEY
 
-**用途**: Claude API 调用凭证
+**用途**: 智谱 AI (GLM-4) 调用凭证
 
 **获取方式**:
-1. 访问 [Anthropic Console](https://console.anthropic.com/)
+1. 访问 [智谱 AI 开放平台](https://open.bigmodel.cn/)
 2. 注册/登录账号
 3. 进入 "API Keys" 页面
-4. 点击 "Create Key" 创建新的 API Key
-5. 复制生成的 key（格式：`sk-ant-api03-...`）
+4. 复制生成的 key
 
 **配置步骤**:
 1. 进入 GitHub 仓库页面
 2. 点击 Settings → Secrets and variables → Actions
 3. 点击 "New repository secret"
-4. Name: `ANTHROPIC_API_KEY`
+4. Name: `ZHIPU_API_KEY`
 5. Secret: 粘贴您的 API Key
 6. 点击 "Add secret"
 

@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Claude Agent Runner for GitHub Actions
-使用 Claude Agent SDK 调用小红书 MCP 工具搜索爆款笔记
+Claude Agent Runner for GitHub Actions (智谱 AI 版本)
+使用智谱 AI GLM-4 Plus 调用小红书 MCP 工具搜索爆款笔记
 """
 
 import os
 import sys
 import json
 from datetime import datetime
-from anthropic import Anthropic
+from zhipuai import ZhipuAI
 
 
 def load_config():
@@ -97,19 +97,19 @@ def build_task_prompt(config):
 
 
 def run_agent():
-    """运行 Claude Agent"""
+    """运行智谱 AI Agent"""
     print("=" * 60)
-    print("Claude Agent Runner - xhs-topic-analyzer")
+    print("智谱 AI Agent Runner - xhs-topic-analyzer")
     print("=" * 60)
 
     # 1. 检查环境变量
-    api_key = os.environ.get("ANTHROPIC_API_KEY")
+    api_key = os.environ.get("ZHIPU_API_KEY")
     if not api_key:
-        print("[Error] 缺少 ANTHROPIC_API_KEY 环境变量")
+        print("[Error] 缺少 ZHIPU_API_KEY 环境变量")
         sys.exit(1)
 
-    print("[Step 1] 初始化 Anthropic 客户端...")
-    client = Anthropic(api_key=api_key)
+    print("[Step 1] 初始化智谱 AI 客户端...")
+    client = ZhipuAI(api_key=api_key)
 
     # 2. 加载配置
     print("[Step 2] 加载配置文件...")
@@ -121,29 +121,34 @@ def run_agent():
     print("[Step 3] 构建任务提示词...")
     task_prompt = build_task_prompt(config)
 
-    # 4. 调用 Claude API
-    print("[Step 4] 调用 Claude API...")
-    print("  - Model: claude-3-5-sonnet-20241022")
+    # 4. 调用智谱 AI API
+    print("[Step 4] 调用智谱 AI API...")
+    print("  - Model: glm-4-plus")
     print("  - Max tokens: 8192")
     print("  - Tools: mcp__xiaohongshu__search_feeds")
 
     try:
-        response = client.messages.create(
-            model="claude-3-5-sonnet-20241022",
-            max_tokens=8192,
+        # 智谱 AI API 调用
+        # 注意：智谱 AI 的 API 格式与 Anthropic 不同
+        response = client.chat.completions.create(
+            model="glm-4-plus",
             messages=[{
                 "role": "user",
                 "content": task_prompt
-            }]
+            }],
+            max_tokens=8192,
+            temperature=0.7
         )
 
         print(f"  ✓ API 调用成功")
-        print(f"  - Stop reason: {response.stop_reason}")
-        print(f"  - Input tokens: {response.usage.input_tokens}")
-        print(f"  - Output tokens: {response.usage.output_tokens}")
+        print(f"  - Finish reason: {response.choices[0].finish_reason}")
+        print(f"  - Usage: {response.usage.total_tokens} tokens")
+
+        # 提取响应内容
+        assistant_message = response.choices[0].message.content
 
     except Exception as e:
-        print(f"[Error] Claude API 调用失败: {e}")
+        print(f"[Error] 智谱 AI API 调用失败: {e}")
         sys.exit(1)
 
     # 5. 检查是否生成了 data.json
@@ -153,9 +158,7 @@ def run_agent():
     if not os.path.exists(data_file):
         print(f"[Error] 未找到 {data_file}")
         print("[Info] Agent 响应内容:")
-        for block in response.content:
-            if hasattr(block, 'text'):
-                print(block.text)
+        print(assistant_message)
         sys.exit(1)
 
     # 6. 验证数据文件

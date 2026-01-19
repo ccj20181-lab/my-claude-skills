@@ -33,3 +33,37 @@ yarn-error.log*
 tmp/
 temp/
 coverage/
+
+# Skills directory specific - 只同步 skills 和 skills.json
+# 保留的配置文件
+config.json
+settings.json
+settings.local.json
+SKILL_INDEX.md
+README.md
+CLAUDE.md
+
+# 系统目录（不同步）
+agents/
+ccline/
+debug/
+file-history/
+paste-cache/
+plans/
+plugins/
+shell-snapshots/
+todos/
+
+# 运行时缓存
+*.txt
+*.html
+
+# Python 相关
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+

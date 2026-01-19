@@ -3,16 +3,6 @@
   "skills_directory": "~/.claude/skills",
   "installed_skills": [
     {
-      "name": "commit-commands",
-      "enabled": true,
-      "installed": true
-    },
-    {
-      "name": "hookify",
-      "enabled": true,
-      "installed": true
-    },
-    {
       "name": "playwright-skill",
       "enabled": true,
       "installed": true
@@ -74,6 +64,31 @@
     },
     {
       "name": "daily-tech-digest",
+      "enabled": true,
+      "installed": true
+    },
+    {
+      "name": "teacher-interview-digest",
+      "enabled": true,
+      "installed": true
+    },
+    {
+      "name": "pdf",
+      "enabled": true,
+      "installed": true
+    },
+    {
+      "name": "docx",
+      "enabled": true,
+      "installed": true
+    },
+    {
+      "name": "pptx",
+      "enabled": true,
+      "installed": true
+    },
+    {
+      "name": "xlsx",
       "enabled": true,
       "installed": true
     }
