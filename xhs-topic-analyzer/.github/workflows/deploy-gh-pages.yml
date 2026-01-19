@@ -1,0 +1,92 @@
+name: Deploy to GitHub Pages
+
+on:
+  # 主workflow完成后触发
+  workflow_run:
+    workflows: ["小红书低粉爆文日报"]
+    types:
+      - completed
+  # 手动触发
+  workflow_dispatch:
+
+  # 允许从其他workflow调用
+  workflow_call:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: |
+      github.event.workflow_run.conclusion == 'success' ||
+      github.event_name == 'workflow_dispatch' ||
+      github.event_name == 'workflow_call'
+
+    steps:
+      - name: Checkout 代码
+        uses: actions/checkout@v4
+
+      - name: 下载最新的JSON数据
+        uses: actions/download-artifact@v4
+        with:
+          pattern: viral-report-*
+          path: /tmp/viral-data
+          merge-multiple: true
+
+      - name: 查找JSON文件
+        id: find-json
+        run: |
+          # 查找下载的JSON文件
+          JSON_FILE=$(find /tmp/viral-data -name "*.json" -type f | head -n 1)
+
+          if [ -z "$JSON_FILE" ]; then
+            echo "[WARN] 未找到JSON数据文件"
+            echo "json_found=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          echo "找到JSON文件: $JSON_FILE"
+          echo "json_path=$JSON_FILE" >> $GITHUB_OUTPUT
+          echo "json_found=true" >> $GITHUB_OUTPUT
+
+      - name: 设置 Python 环境
+        if: steps.find-json.outputs.json_found == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: 安装依赖
+        if: steps.find-json.outputs.json_found == 'true'
+        run: |
+          pip install --upgrade pip
+
+      - name: 生成网站数据
+        if: steps.find-json.outputs.json_found == 'true'
+        run: |
+          python scripts/generate_html.py --input "${{ steps.find-json.outputs.json_path }}" --output docs/data
+
+      - name: 设置 Pages
+        uses: actions/configure-pages@v4
+
+      - name: 上传 artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./docs
+
+      - name: 部署到 GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: 获取部署URL
+        if: steps.deployment.outputs.status == 'success'
+        run: |
+          echo "🚀 部署成功!"
+          echo "📍 GitHub Pages URL: ${{ steps.deployment.outputs.page_url }}"

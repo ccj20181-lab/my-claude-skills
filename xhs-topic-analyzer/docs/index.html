@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小红书财经爆文分析</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="icon">📊</span>
+                <h1>小红书财经爆文分析</h1>
+            </div>
+            <div class="nav-info">
+                <span class="update-time" id="updateTime">加载中...</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主内容区 -->
+    <main class="container">
+        <!-- 统计卡片区域 -->
+        <section class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-card stat-primary">
+                    <div class="stat-icon">🔥</div>
+                    <div class="stat-content">
+                        <div class="stat-label">发现爆文</div>
+                        <div class="stat-value" id="totalNotes">-</div>
+                    </div>
+                </div>
+                <div class="stat-card stat-secondary">
+                    <div class="stat-icon">❤️</div>
+                    <div class="stat-content">
+                        <div class="stat-label">平均点赞</div>
+                        <div class="stat-value" id="avgLikes">-</div>
+                    </div>
+                </div>
+                <div class="stat-card stat-tertiary">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-content">
+                        <div class="stat-label">平均粉丝</div>
+                        <div class="stat-value" id="avgFollowers">-</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 搜索和筛选区域 -->
+        <section class="search-section">
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="搜索笔记标题..."
+                    class="search-input"
+                >
+                <button class="search-button" id="searchButton">🔍 搜索</button>
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-button active" data-filter="all">全部</button>
+                <button class="filter-button" data-filter="high">高赞(>5000)</button>
+                <button class="filter-button" data-filter="low">低粉(<5000)</button>
+                <button class="filter-button" data-filter="viral">高爆款指数</button>
+            </div>
+        </section>
+
+        <!-- 选题洞察区域 -->
+        <section class="insights-section">
+            <h2 class="section-title">💡 选题洞察</h2>
+            <div class="insights-grid">
+                <div class="insight-card insight-top">
+                    <div class="insight-header">
+                        <span class="insight-icon">🏆</span>
+                        <span class="insight-title">最高爆款指数</span>
+                    </div>
+                    <div class="insight-content" id="topNote">加载中...</div>
+                </div>
+                <div class="insight-card insight-low">
+                    <div class="insight-header">
+                        <span class="insight-icon">⭐</span>
+                        <span class="insight-title">低粉高赞案例</span>
+                    </div>
+                    <div class="insight-content" id="lowFollowerNote">加载中...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 笔记列表区域 -->
+        <section class="notes-section">
+            <h2 class="section-title">🔥 爆款笔记列表</h2>
+            <div class="notes-grid" id="notesGrid">
+                <!-- 笔记卡片将通过JavaScript动态生成 -->
+                <div class="loading">加载中...</div>
+            </div>
+        </section>
+
+        <!-- 导出区域 -->
+        <section class="export-section">
+            <h2 class="section-title">📥 数据导出</h2>
+            <div class="export-buttons">
+                <button class="export-button" id="exportJson">
+                    <span class="icon">📄</span>
+                    <span>导出 JSON</span>
+                </button>
+                <button class="export-button" id="copyData">
+                    <span class="icon">📋</span>
+                    <span>复制数据</span>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>🔔 每日自动更新 | 扫描关键词: 金融、财经、理财</p>
+            <p class="footer-note">数据来源于小红书公开内容 · 仅供学习参考</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
