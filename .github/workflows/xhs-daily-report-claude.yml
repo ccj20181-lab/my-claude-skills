@@ -59,7 +59,7 @@ jobs:
 
       - name: 上传报告数据
         if: success()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: daily-report-${{ github.run_number }}
           path: |
