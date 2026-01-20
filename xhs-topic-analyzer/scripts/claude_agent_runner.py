@@ -36,12 +36,14 @@ def start_mcp_server(cookies_path):
     """启动小红书 MCP HTTP Server"""
     print("启动小红书 MCP Server...")
 
-    # 检查 xiaohongshu-mcp 是否安装
+    # 检查 xiaohongshu-mcp 是否存在（GitHub Actions 环境中已预安装）
     try:
-        subprocess.run(["xiaohongshu-mcp", "--version"], capture_output=True, check=True)
+        subprocess.run(["which", "xiaohongshu-mcp"], capture_output=True, check=True)
+        print("✓ xiaohongshu-mcp 已就绪")
     except (subprocess.CalledProcessError, FileNotFoundError):
-        print("安装 xiaohongshu-mcp...")
-        subprocess.check_call([sys.executable, "-m", "pip", "install", "xiaohongshu-mcp"])
+        print("[Error] xiaohongshu-mcp 未找到")
+        print("请确保在 GitHub Actions 中已正确安装 xiaohongshu-mcp")
+        sys.exit(1)
 
     # 启动 MCP Server
     cmd = [
