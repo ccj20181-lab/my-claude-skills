@@ -1,7 +1,7 @@
 # Python 依赖包
-# xhs-topic-analyzer GitHub Actions 版本（Claude Agent + MCP）
+# xhs-topic-analyzer GitHub Actions 版本（Anthropic SDK + 智谱 AI 兼容端点）
 
-# Anthropic SDK (Claude API)
+# Anthropic SDK (使用智谱 AI 兼容端点)
 anthropic>=0.40.0
 
 # HTTP 请求库（微信推送）
