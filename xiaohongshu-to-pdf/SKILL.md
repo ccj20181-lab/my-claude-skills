@@ -115,15 +115,66 @@ python3 /Users/henry/.claude/skills/xiaohongshu-to-pdf/scripts/xhs_to_pdf.py \
 - 标题会清理特殊字符，限制长度为50字符
 
 ### 中文字体
-- 自动检测系统字体（macOS/Linux/Windows）
-- macOS: PingFang.ttc
-- Linux: DroidSansFallbackFull.ttf
-- Windows: msyh.ttc
+- 自动检测系统字体（按优先级）：
+  - **macOS**: PingFangSC-Regular.ttf (~/Library/Fonts/)，STHeiti Medium.ttc (/System/Library/Fonts/)
+  - **Linux**: DroidSansFallbackFull.ttf, wqy-microhei.ttc
+  - **Windows**: msyh.ttc, simsun.ttc
+- 支持TTF和TTC格式（TTC会自动使用第一个子字体）
+- 如果字体缺失，使用默认字体（中文可能显示异常）
 
 ### 错误处理
 - 下载图片失败: 跳过该图片，继续处理
 - 字体缺失: 使用默认字体（中文可能显示异常）
 - MCP调用失败: 提示用户检查登录状态
+
+## 故障排查
+
+### PDF中文显示乱码
+
+**症状**: PDF中的中文显示为方框或乱码
+
+**解决方案**:
+
+1. **检查字体是否已注册**
+   - 运行脚本时应看到：`✓ 已注册中文字体: /path/to/font.ttf`
+   - 如果看到：`⚠ 警告: 未找到可用的中文字体`，则需要进行第2步
+
+2. **macOS用户**:
+   - 优先安装PingFang SC字体到用户目录：`~/Library/Fonts/PingFangSC-Regular.ttf`
+   - 或使用系统自带字体：`/System/Library/Fonts/STHeiti Medium.ttc`
+
+3. **Linux用户**:
+   ```bash
+   sudo apt-get install fonts-wqy-microhei
+   # 或
+   sudo apt-get install fonts-wqy-zenhei
+   ```
+
+4. **Windows用户**:
+   - 确保系统安装了Microsoft YaHei字体（通常默认已安装）
+   - 检查 `C:/Windows/Fonts/msyh.ttc` 是否存在
+
+5. **使用字体验证工具**:
+   ```bash
+   python3 /Users/henry/.claude/skills/xiaohongshu-to-pdf/scripts/check_fonts.py
+   ```
+
+### 图片下载失败
+
+**症状**: PDF中缺少部分图片
+
+**解决方案**:
+- 检查网络连接
+- 某些图片可能需要登录才能访问（确保小红书MCP已登录）
+- 图片URL可能已过期
+
+### MCP调用失败
+
+**症状**: 脚本提示需要使用MCP工具获取数据
+
+**解决方案**:
+- 确保小红书MCP已登录：`mcp__xiaohongshu__get_login_qrcode`
+- 检查xsec_token是否正确（从feed列表获取）
 
 ## 注意事项
 

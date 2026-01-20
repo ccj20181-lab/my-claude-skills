@@ -7,6 +7,7 @@
 import argparse
 import json
 import os
+import re
 import sys
 import tempfile
 from datetime import datetime
@@ -44,25 +45,58 @@ class XiaohongshuToPDF:
 
     def _register_fonts(self):
         """注册中文字体"""
+        print("🔍 正在检测中文字体...")
+
+        # 扩展字体路径列表（按优先级排序）
         font_paths = [
-            "/System/Library/Fonts/PingFang.ttc",  # macOS
-            "/usr/share/fonts/truetype/droid/DroidSansFallbackFull.ttf",  # Linux
-            "C:/Windows/Fonts/msyh.ttc",  # Windows
+            # macOS - 用户字体目录（优先，避免权限问题）
+            os.path.expanduser("~/Library/Fonts/PingFangSC-Regular.ttf"),
+            os.path.expanduser("~/Library/Fonts/PingFang-SC-Regular.ttf"),
+            os.path.expanduser("~/Library/Fonts/PingFangSC-Medium.ttf"),
+            os.path.expanduser("~/Library/Fonts/PingFang-SC-Medium.ttf"),
+            os.path.expanduser("~/Library/Fonts/Microsoft Yahei.ttf"),
+            # macOS - 系统字体目录
+            "/System/Library/Fonts/STHeiti Medium.ttc",
+            "/System/Library/Fonts/STHeiti Light.ttc",
+            "/System/Library/Fonts/PingFang.ttc",
+            # Linux
+            "/usr/share/fonts/truetype/droid/DroidSansFallbackFull.ttf",
+            "/usr/share/fonts/truetype/wqy/wqy-microhei.ttc",
+            "/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc",
+            # Windows
+            "C:/Windows/Fonts/msyh.ttc",
+            "C:/Windows/Fonts/msyhbd.ttc",
+            "C:/Windows/Fonts/simsun.ttc",
+            "C:/Windows/Fonts/simhei.ttf",
         ]
 
         self.font_registered = False
+
         for font_path in font_paths:
             if os.path.exists(font_path):
                 try:
+                    # 优先尝试直接注册TTF
                     pdfmetrics.registerFont(TTFont("ChineseFont", font_path))
                     self.font_registered = True
                     print(f"✓ 已注册中文字体: {font_path}")
                     break
                 except Exception as e:
-                    continue
+                    # 如果失败，尝试注册TTC的第一个子字体
+                    try:
+                        pdfmetrics.registerFont(TTFont("ChineseFont", font_path, subfontIndex=0))
+                        self.font_registered = True
+                        print(f"✓ 已注册中文字体(TTC子字体): {font_path}")
+                        break
+                    except Exception as e2:
+                        continue
 
         if not self.font_registered:
-            print("⚠ 警告: 未找到中文字体,PDF可能无法正确显示中文")
+            print("⚠ 警告: 未找到可用的中文字体")
+            print("   PDF将使用默认字体，中文可能显示异常")
+            print("   建议安装中文字体:")
+            print("   - macOS: PingFang SC, STHeiti")
+            print("   - Linux: fonts-wqy-microhei (sudo apt install fonts-wqy-microhei)")
+            print("   - Windows: Microsoft YaHei")
 
     def download_image(self, url, index):
         """下载图片到临时目录"""
@@ -117,27 +151,43 @@ class XiaohongshuToPDF:
         # 样式
         styles = getSampleStyleSheet()
         if self.font_registered:
+            # 标题样式 - 更大更醒目
             styles.add(ParagraphStyle(
                 name="ChineseTitle",
                 parent=styles["Heading1"],
                 fontName="ChineseFont",
-                fontSize=18,
-                textColor="#333333",
+                fontSize=20,
+                textColor="#2c3e50",
                 spaceAfter=12,
+                leading=24,
             ))
+            # 正文样式 - 改进行距和间距
             styles.add(ParagraphStyle(
                 name="ChineseNormal",
                 parent=styles["Normal"],
                 fontName="ChineseFont",
                 fontSize=11,
-                leading=16,
-                spaceAfter=8,
+                leading=18,
+                spaceAfter=10,
+                textColor="#34495e",
+            ))
+            # 副标题样式（作者、标签等）
+            styles.add(ParagraphStyle(
+                name="ChineseSubTitle",
+                parent=styles["Normal"],
+                fontName="ChineseFont",
+                fontSize=10,
+                leading=14,
+                spaceAfter=6,
+                textColor="#7f8c8d",
             ))
             title_style = styles["ChineseTitle"]
             content_style = styles["ChineseNormal"]
+            subtitle_style = styles["ChineseSubTitle"]
         else:
             title_style = styles["Heading1"]
             content_style = styles["Normal"]
+            subtitle_style = styles["Normal"]
 
         # 构建内容
         story = []
@@ -150,19 +200,25 @@ class XiaohongshuToPDF:
         # 作者信息
         author = feed_data.get("author", {})
         author_name = author.get("nickname", "未知作者")
-        story.append(Paragraph(f"<b>作者:</b> {author_name}", content_style))
+        story.append(Paragraph(f"<b>作者:</b> {author_name}", subtitle_style))
         story.append(Spacer(1, 0.3 * cm))
 
-        # 正文内容
+        # 正文内容（改进格式化）
         desc = feed_data.get("desc", "")
         if desc:
-            story.append(Paragraph("<b>内容:</b>", content_style))
-            story.append(Spacer(1, 0.2 * cm))
-            paragraphs = desc.split("\n")
-            for para in paragraphs:
-                if para.strip():
-                    story.append(Paragraph(para, content_style))
-            story.append(Spacer(1, 0.5 * cm))
+            # 移除话题标签 (#xxx) 和多余的空行
+            desc = re.sub(r'#[^\s#]+', '', desc)  # 移除话题标签
+            desc = re.sub(r'\n{3,}', '\n\n', desc)  # 合并多余空行
+            desc = desc.strip()
+
+            if desc:
+                story.append(Paragraph("<b>正文内容</b>", title_style))
+                story.append(Spacer(1, 0.2 * cm))
+                paragraphs = desc.split("\n")
+                for para in paragraphs:
+                    if para.strip():
+                        story.append(Paragraph(para, content_style))
+                story.append(Spacer(1, 0.5 * cm))
 
         # 图片
         images = feed_data.get("images", [])
