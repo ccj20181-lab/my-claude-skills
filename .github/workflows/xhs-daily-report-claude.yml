@@ -1,0 +1,89 @@
+name: 小红书财经爆款日报 (Claude Agent)
+
+on:
+  # 定时触发：每天北京时间 06:30 (UTC 22:30)
+  schedule:
+    - cron: '30 22 * * *'
+
+  # 手动触发
+  workflow_dispatch:
+
+env:
+  ANTHROPIC_AUTH_TOKEN: ${{ secrets.ANTHROPIC_AUTH_TOKEN }}
+  ANTHROPIC_BASE_URL: ${{ secrets.ANTHROPIC_BASE_URL }}
+  XHS_COOKIES: ${{ secrets.XHS_COOKIES }}
+
+jobs:
+  generate-report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout 代码
+        uses: actions/checkout@v4
+
+      - name: 设置 Python 环境
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: 安装依赖
+        run: |
+          pip install --upgrade pip
+          pip install anthropic xiaohongshu-mcp requests
+          pip install openpyxl
+
+      - name: 准备小红书 Cookies
+        run: |
+          echo '${{ secrets.XHS_COOKIES }}' > /tmp/xhs_cookies.json
+          echo "✓ Cookies 文件已创建"
+
+      - name: 运行 Claude Agent 搜索数据
+        run: |
+          cd xhs-topic-analyzer/scripts && python claude_agent_runner.py
+        env:
+          ANTHROPIC_AUTH_TOKEN: ${{ secrets.ANTHROPIC_AUTH_TOKEN }}
+          ANTHROPIC_BASE_URL: ${{ secrets.ANTHROPIC_BASE_URL }}
+          XHS_COOKIES: ${{ secrets.XHS_COOKIES }}
+
+      - name: 数据分析并生成报告
+        run: |
+          cd xhs-topic-analyzer && python analyze_data.py
+
+      - name: 推送报告到微信
+        run: |
+          cd xhs-topic-analyzer && python scripts/push_report.py --file report.md
+        env:
+          WECHAT_PUSH_TOKEN: ${{ secrets.WECHAT_PUSH_TOKEN }}
+
+      - name: 上传报告数据
+        if: success()
+        uses: actions/upload-artifact@v3
+        with:
+          name: daily-report-${{ github.run_number }}
+          path: |
+            xhs-topic-analyzer/report.md
+            xhs-topic-analyzer/report.json
+          retention-days: 30
+
+      - name: 清理
+        if: always()
+        run: |
+          # 删除敏感文件
+          rm -f /tmp/xhs_cookies.json
+          cd xhs-topic-analyzer && rm -f data.json
+
+          echo "✓ 清理完成"
+
+      - name: 失败通知
+        if: failure()
+        run: |
+          curl -X POST https://www.pushplus.plus/send \
+            -H "Content-Type: application/json" \
+            -d '{
+              "token": "${{ secrets.WECHAT_PUSH_TOKEN }}",
+              "title": "⚠️ 小红书财经爆款日报执行失败",
+              "content": "GitHub Actions 执行失败，请查看日志: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}",
+              "template": "markdown"
+            }' || true
