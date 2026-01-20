@@ -19,7 +19,7 @@ jobs:
     timeout-minutes: 30
     defaults:
       run:
-        working-directory: ./skills/xhs-topic-analyzer
+        working-directory: ./xhs-topic-analyzer
 
     steps:
       - name: Checkout 代码
@@ -98,7 +98,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: daily-report-${{ github.run_number }}
-          path: skills/xhs-topic-analyzer/data.json
+          path: xhs-topic-analyzer/data.json
           retention-days: 7
 
       - name: 清理
