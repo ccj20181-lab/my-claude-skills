@@ -40,8 +40,8 @@ jobs:
           curl -L -o xiaohongshu-mcp.tar.gz \
             https://github.com/xpzouying/xiaohongshu-mcp/releases/latest/download/xiaohongshu-mcp-linux-amd64.tar.gz
           tar -xzf xiaohongshu-mcp.tar.gz
-          chmod +x xiaohongshu-mcp
-          sudo mv xiaohongshu-mcp /usr/local/bin/
+          chmod +x xiaohongshu-mcp-linux-amd64
+          sudo mv xiaohongshu-mcp-linux-amd64 /usr/local/bin/xiaohongshu-mcp
           rm xiaohongshu-mcp.tar.gz
           xiaohongshu-mcp --version
 
