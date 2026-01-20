@@ -43,7 +43,7 @@ jobs:
           chmod +x xiaohongshu-mcp-linux-amd64
           sudo mv xiaohongshu-mcp-linux-amd64 /usr/local/bin/xiaohongshu-mcp
           rm xiaohongshu-mcp.tar.gz
-          xiaohongshu-mcp --version
+          which xiaohongshu-mcp && echo "✓ xiaohongshu-mcp 安装成功"
 
       - name: 准备小红书 Cookies
         run: |
