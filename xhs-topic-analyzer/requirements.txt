@@ -1,16 +1,17 @@
 # Python 依赖包
-# xhs-topic-analyzer GitHub Actions 版本（智谱 AI）
+# xhs-topic-analyzer GitHub Actions 版本（Claude Agent + MCP）
 
-# 智谱 AI SDK
-zhipuai>=2.0.0
+# Anthropic SDK (Claude API)
+anthropic>=0.40.0
 
 # HTTP 请求库（微信推送）
 requests>=2.31.0
 
-# 小红书 MCP Server
-# 注意：需要确认实际的包名和版本
-# 如果是私有包，需要配置 GitHub Actions 访问权限
-xiaohongshu-mcp>=1.0.0
+# 小红书 MCP Server (注意：这不是 Python 包，需要单独安装二进制文件)
+# GitHub: https://github.com/xpzouying/xiaohongshu-mcp/releases
 
 # Excel生成（低粉爆文功能）
 openpyxl>=3.1.0
+
+# 数据处理
+pandas>=2.0.0

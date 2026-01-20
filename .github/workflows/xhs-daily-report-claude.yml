@@ -31,8 +31,19 @@ jobs:
       - name: 安装依赖
         run: |
           pip install --upgrade pip
-          pip install anthropic xiaohongshu-mcp requests
+          pip install anthropic requests
           pip install openpyxl
+
+      - name: 安装小红书 MCP Server
+        run: |
+          echo "下载 xiaohongshu-mcp Linux 二进制文件..."
+          curl -L -o xiaohongshu-mcp.tar.gz \
+            https://github.com/xpzouying/xiaohongshu-mcp/releases/latest/download/xiaohongshu-mcp-linux-amd64.tar.gz
+          tar -xzf xiaohongshu-mcp.tar.gz
+          chmod +x xiaohongshu-mcp
+          sudo mv xiaohongshu-mcp /usr/local/bin/
+          rm xiaohongshu-mcp.tar.gz
+          xiaohongshu-mcp --version
 
       - name: 准备小红书 Cookies
         run: |
