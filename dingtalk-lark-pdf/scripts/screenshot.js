@@ -35,6 +35,55 @@ async function extractIframeUrl(page) {
 }
 
 /**
+ * 查找飞书文档的实际内容容器
+ * @param {Page} page - Playwright Page 对象
+ * @returns {object|null} 容器信息
+ */
+async function findLarkContainer(page) {
+  try {
+    const container = await page.evaluate(() => {
+      // 查找包含主要内容的大型 div
+      const divs = Array.from(document.querySelectorAll('div'));
+      const largeDivs = divs.filter(div => {
+        const rect = div.getBoundingClientRect();
+        const scrollHeight = div.scrollHeight;
+        return scrollHeight > 2000 && rect.height > 500;
+      });
+
+      // 找到 scrollHeight 最大的
+      largeDivs.sort((a, b) => b.scrollHeight - a.scrollHeight);
+
+      if (largeDivs.length > 0) {
+        const container = largeDivs[0];
+        const rect = container.getBoundingClientRect();
+        return {
+          className: container.className,
+          scrollHeight: container.scrollHeight,
+          clientHeight: container.clientHeight,
+          offsetHeight: container.offsetHeight,
+          rect: {
+            height: rect.height,
+            width: rect.width,
+            top: rect.top,
+          }
+        };
+      }
+
+      return null;
+    });
+
+    if (container) {
+      console.log(`✓ 找到飞书内容容器: scrollHeight=${container.scrollHeight}px`);
+    }
+
+    return container;
+  } catch (err) {
+    console.warn('⚠️  查找容器失败:', err.message);
+    return null;
+  }
+}
+
+/**
  * 分屏滚动截图
  * @param {string} url - 文档 URL（或 iframe URL）
  * @param {object} options - 配置选项
@@ -47,10 +96,12 @@ async function captureScreenshots(url, options = {}) {
     initialWait = 15000,
     viewportWidth = 1920,
     viewportHeight = 1080,
+    platform = 'dingtalk',
     tempDir = '/tmp',
   } = options;
 
   console.log(`\n📸 开始分屏截图 (${screenshotCount} 屏)`);
+  console.log(`   平台: ${platform}`);
   console.log(`   视口: ${viewportWidth}x${viewportHeight}`);
   console.log(`   滚动等待: ${scrollWait}ms`);
   console.log(`   初始等待: ${initialWait}ms\n`);
@@ -65,6 +116,7 @@ async function captureScreenshots(url, options = {}) {
 
   const page = await context.newPage();
   const screenshotFiles = [];
+  let larkContainer = null;
 
   try {
     // 访问页面
@@ -75,6 +127,17 @@ async function captureScreenshots(url, options = {}) {
     console.log(`⏳ 等待页面加载 (${initialWait}ms)`);
     await page.waitForTimeout(initialWait);
 
+    // 飞书文档需要特殊处理
+    if (platform === 'lark') {
+      larkContainer = await findLarkContainer(page);
+      if (larkContainer) {
+        console.log(`📦 容器高度: ${larkContainer.scrollHeight}px`);
+        // 根据实际高度计算需要截取的屏数
+        const estimatedScreens = Math.ceil(larkContainer.scrollHeight / viewportHeight);
+        console.log(`📊 估计需要屏数: ${estimatedScreens}`);
+      }
+    }
+
     // 分屏截图
     for (let i = 0; i < screenshotCount; i++) {
       const scrollY = viewportHeight * i;
@@ -82,7 +145,19 @@ async function captureScreenshots(url, options = {}) {
       console.log(`📷 截图 ${i + 1}/${screenshotCount} (scrollY: ${scrollY}px)`);
 
       // 滚动到指定位置
-      await page.evaluate((y) => window.scrollTo(0, y), scrollY);
+      if (platform === 'lark' && larkContainer) {
+        // 飞书文档：滚动容器
+        await page.evaluate((y) => {
+          // 查找并滚动容器
+          const container = document.querySelector('.page-main.docx-width-mode-standard');
+          if (container) {
+            container.scrollTop = y;
+          }
+        }, scrollY);
+      } else {
+        // 钉钉文档：滚动 window
+        await page.evaluate((y) => window.scrollTo(0, y), scrollY);
+      }
 
       // 等待渲染
       await page.waitForTimeout(scrollWait);

@@ -66,12 +66,12 @@ function getPlatformConfig(platform) {
     },
     lark: {
       name: '飞书文档',
-      defaultScreenshots: 15,
-      defaultScrollWait: 2000,
-      defaultInitialWait: 10000,
+      defaultScreenshots: 30,
+      defaultScrollWait: 3000,
+      defaultInitialWait: 15000,
       hasIframe: false,
       viewportWidth: 1920,
-      viewportHeight: 1080,
+      viewportHeight: 720,
     },
   };
 

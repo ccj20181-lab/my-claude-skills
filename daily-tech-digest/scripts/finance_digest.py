@@ -88,12 +88,19 @@ def prepare_content_for_claude(rss: list) -> str:
     return "\n\n".join(sections)
 
 
+def get_api_key() -> str:
+    """获取API Key,兼容多种环境变量名称"""
+    # 优先使用新的 AUTH_TOKEN,其次使用旧的 API_KEY
+    api_key = os.environ.get("ANTHROPIC_AUTH_TOKEN") or os.environ.get("ANTHROPIC_API_KEY")
+    if not api_key:
+        raise ValueError("请设置 ANTHROPIC_AUTH_TOKEN 或 ANTHROPIC_API_KEY 环境变量")
+    return api_key
+
+
 def generate_digest_with_claude(content: str, config: dict, today: str) -> str:
     """使用 Claude/GLM 生成财经简报"""
     # API 配置
-    api_key = os.environ.get("ANTHROPIC_API_KEY")
-    if not api_key:
-        raise ValueError("请设置 ANTHROPIC_API_KEY 环境变量")
+    api_key = get_api_key()
 
     base_url = os.environ.get("ANTHROPIC_BASE_URL")
 
@@ -128,25 +135,40 @@ def generate_digest_with_claude(content: str, config: dict, today: str) -> str:
 - 看点控制在50字内
 
 **📈 市场动态（3-5条）**
-- A股、港股、美股当日表现
-- 重要指数、热门板块、大宗商品
-- 每条包含: 数据 + **点评**
+- **必须包含A股**（放在首位），其次是港股、美股
+- A股部分: 上证指数、深证成指、创业板指、热门板块
+- 热门板块建议: 新能源、半导体、消费、医药、金融地产
+- 大宗商品: 黄金、原油、铜、锂电池相关
+- **每条必须包含**: [标题](链接) + **数据 + 变化幅度 + 点评**
+- 点评要说明对普通投资者的意义
+- 每条至少150字
 
 **💰 宏观与政策（3条）**
 - 央行政策、财政政策、金融监管
-- 每条包含: 政策内容 + **影响**
+- **每条必须包含**: [标题](链接) + **政策内容 + 背景 + 影响分析**
+- 说明政策对普通人钱包的影响
+- 每条至少150字
 
 **🏢 行业观察（3条）**
 - 特定行业动态、龙头企业、行业数据
+- **每条必须包含**: [标题](链接) + **行业动态 + 数据支撑 + 影响分析**
+- 说明对投资者和消费者的意义
+- 每条至少150字
 
 **🌍 国际视野（2-3条）**
 - 美联储、欧央行政策
 - 国际大宗商品价格
 - 全球经济数据
+- **每条必须包含**: [标题](链接) + **事件描述 + 影响分析**
+- 说明对国内市场和普通人的影响
+- 每条至少150字
 
 **💡 投资洞察（2条）**
 - 知名机构或投资者观点
 - 券商研报核心观点
+- **每条必须包含**: [标题](链接) + **观点内容 + 出处 + 投资建议**
+- 说明为什么值得参考
+- 每条至少150字
 
 **🎯 选题灵感（3-5条）**
 为财经博主推荐选题方向:
@@ -167,15 +189,17 @@ def generate_digest_with_claude(content: str, config: dict, today: str) -> str:
 
 ### 4. 语言风格
 - 专业性与可读性平衡
-- 简洁有力，每条控制在100字内
-- 数据导向
-- 中立客观
+- **每条内容控制在150-200字**
+- 数据导向，多用具体数字和案例
+- 中立客观，但要有明确观点
+- 深入分析，避免泛泛而谈
 
 ### 5. 格式要求
 - 使用Markdown格式
-- 导语50字以内
-- 保留所有原始链接
-- 总长度控制在2000字以内
+- 导语100字以内，概括当日核心主题
+- **所有内容板块（除选题灵感外）必须附上原始链接**
+- 总长度控制在3000-4000字
+- 使用加粗、列表等方式提升可读性
 
 直接输出简报内容，不需要额外说明。"""
 

@@ -12,6 +12,7 @@ import subprocess
 import time
 import requests
 from datetime import datetime
+from pathlib import Path
 
 try:
     from anthropic import Anthropic
@@ -19,6 +20,33 @@ except ImportError:
     print("正在安装 anthropic 包...")
     subprocess.check_call([sys.executable, "-m", "pip", "install", "anthropic"])
     from anthropic import Anthropic
+
+
+# 统一 cookies 管理路径
+UNIFIED_COOKIES = Path.home() / ".xiaohongshu-mcp" / "cookies.json"
+MANAGER_SCRIPT = Path.home() / ".xiaohongshu-mcp" / "cookies-manager.sh"
+
+
+def ensure_cookies():
+    """确保 cookies 存在且有效"""
+    if not UNIFIED_COOKIES.exists():
+        print("[Info] 未找到统一 cookies 文件")
+        print(f"[Info] 请运行: {MANAGER_SCRIPT} login")
+        sys.exit(1)
+
+    # 检查 cookies 状态
+    if MANAGER_SCRIPT.exists():
+        result = subprocess.run(
+            [str(MANAGER_SCRIPT), "status"],
+            capture_output=True,
+            text=True
+        )
+        if result.returncode != 0:
+            print("[Warn] Cookies 已过期或无效")
+            print(f"[Info] 请运行: {MANAGER_SCRIPT} login")
+            sys.exit(1)
+
+    return str(UNIFIED_COOKIES)
 
 
 def load_config():
@@ -209,21 +237,14 @@ def main():
     # 1. 检查环境变量
     api_key = os.environ.get("ANTHROPIC_AUTH_TOKEN")
     base_url = os.environ.get("ANTHROPIC_BASE_URL", "https://api.anthropic.com")
-    cookies_json = os.environ.get("XHS_COOKIES")
 
     if not api_key:
         print("[Error] 缺少 ANTHROPIC_AUTH_TOKEN 环境变量")
         sys.exit(1)
 
-    if not cookies_json:
-        print("[Error] 缺少 XHS_COOKIES 环境变量")
-        sys.exit(1)
-
-    # 2. 保存 cookies 到临时文件
-    cookies_file = "/tmp/xhs_cookies.json"
-    with open(cookies_file, 'w', encoding='utf-8') as f:
-        f.write(cookies_json)
-    print(f"✓ Cookies 文件已创建: {cookies_file}")
+    # 2. 确保 cookies 存在且有效
+    cookies_file = ensure_cookies()
+    print(f"✓ 使用统一 cookies 文件: {cookies_file}")
 
     # 3. 启动 MCP Server
     mcp_process = start_mcp_server(cookies_file)
@@ -263,11 +284,6 @@ def main():
         print("\n[Step 5] 清理资源...")
         mcp_process.terminate()
         mcp_process.wait()
-
-        # 删除 cookies 文件
-        if os.path.exists(cookies_file):
-            os.remove(cookies_file)
-            print(f"✓ 已删除 {cookies_file}")
 
         print("✓ 清理完成")
 

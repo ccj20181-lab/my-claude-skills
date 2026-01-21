@@ -106,6 +106,7 @@ async function main() {
 
   try {
     await screenshotToPdf(targetUrl, outputPath, {
+      platform,
       screenshotCount,
       scrollWait,
       initialWait,
