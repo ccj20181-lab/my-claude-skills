@@ -30,6 +30,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Download JSON Data
+        if: github.event_name == 'workflow_run'
         uses: actions/download-artifact@v4
         with:
           pattern: viral-report-*
@@ -42,15 +43,22 @@ jobs:
       - name: Find JSON File
         id: find-json
         run: |
-          JSON_FILE=$(find /tmp/viral-data -name "*.json" -type f | head -n 1)
+          # Try artifact location first
+          JSON_FILE=""
+          if [ -d "/tmp/viral-data" ]; then
+            JSON_FILE=$(find /tmp/viral-data -name "*.json" -type f | head -n 1)
+          fi
+
+          # Fallback to repo location (latest file by name, usually date)
+          if [ -z "$JSON_FILE" ]; then
+             echo "Checking repo for JSON..."
+             # Sort reverse to get latest date
+             JSON_FILE=$(find xhs-topic-analyzer/docs/data/reports -name "*.json" -type f | sort -r | head -n 1)
+          fi
 
           if [ -z "$JSON_FILE" ]; then
             echo "[WARN] No JSON data found"
             echo "json_found=false" >> $GITHUB_OUTPUT
-            # We don't exit error here to allow manual runs to potentially just redeploy existing assets if needed,
-            # but logic below depends on json.
-            # actually if no json, we might just want to deploy existing docs?
-            # But the goal is to update with new data.
             exit 0
           fi
 
