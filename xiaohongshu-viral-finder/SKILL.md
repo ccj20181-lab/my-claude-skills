@@ -29,7 +29,18 @@ You MUST follow these rules strictly throughout the ENTIRE execution:
 
 ## Overview
 
-这是一个为"秒懂金融"账号设计的小红书选题挖掘工具。通过 xiaohongshu-mcp 自动搜索热门财经关键词，智能筛选"低粉爆文"（粉丝少但点赞高的隐形爆款），生成 Excel 分析报告并推送到微信。
+这是一个为"秒懂金融"账号设计的小红书选题挖掘工具。通过 xiaohongshu-mcp 自动搜索热门财经关键词，智能筛选"低粉爆文"（粉丝少但点赞高的隐形爆款），生成：
+- 📊 **Excel 分析报告**（本地文件）
+- 🌐 **GitHub Pages 仪表盘**（在线可视化，带历史记录）
+- 📱 **微信推送简报**（PushPlus）
+
+### 🎯 核心功能
+
+1. **自动数据采集**：搜索小红书财经关键词，获取笔记数据
+2. **智能筛选**：粉丝 < 20,000 且 点赞 > 1,000 的低粉爆文
+3. **爆款指数计算**：互动率 × log(点赞数)，量化爆文潜力
+4. **仪表盘系统**：自动部署到 GitHub Pages，支持历史报告查看
+5. **多端通知**：Excel + 微信推送 + 在线仪表盘
 
 ### 两种工作模式
 
@@ -61,7 +72,8 @@ You MUST follow these rules strictly throughout the ENTIRE execution:
 |------|---------|
 | 未指定关键词 | 使用上述默认列表 |
 | 未指定模式 | 使用"财经猎手Pro"模式 |
-| 未配置 PushPlus Token | 跳过微信推送，仅生成 Excel |
+| 未配置 PushPlus Token | 跳过微信推送，仅生成 Excel 和仪表盘 |
+| 未配置 GitHub Pages 仓库 | 跳过仪表盘部署，仅生成 Excel |
 | 搜索无结果 | 静默跳过，继续下一个关键词 |
 
 ---
@@ -248,7 +260,8 @@ viral_notes.sort(key=lambda x: x["likes"] / max(x["followers"], 1), reverse=True
 6. [主Agent] 读取 /tmp/xhs_followers.json（精简数据）
 7. [主Agent] 合并、筛选、排序
 8. [主Agent] 生成 Excel 报告
-9. [主Agent] 推送微信（可选）
+9. [主Agent] 生成并部署 GitHub Pages 仪表盘（可选）
+10. [主Agent] 推送微信（可选）
 ```
 
 ---
@@ -295,6 +308,41 @@ viral_score = interaction_rate * math.log10(likes)
 | 爆款指数 | 计算值 |
 
 文件命名格式：`小红书爆文分析_YYYYMMDD_HHMMSS.xlsx`
+
+### Step 4.5: GitHub Pages 仪表盘部署（可选）
+
+如果配置了 `GITHUB_PAGES_REPO` 环境变量，自动生成并部署完整仪表盘系统：
+
+**仪表盘特性**：
+- 侧边栏历史报告列表（可查看所有历史分析）
+- Tailwind CSS 现代化设计
+- 响应式布局（支持移动端）
+- iframe 加载报告内容
+- 实时统计数据展示
+
+**部署步骤**：
+```bash
+# 设置环境变量
+export GITHUB_PAGES_REPO="username/repo-name"
+
+# 调用部署脚本（自动包含在主流程中）
+python3 xhs_analyze_dashboard.py
+```
+
+**输出结构**：
+```
+gh-pages-deploy/
+├── index.html              # 仪表盘主页
+├── assets/
+│   ├── css/style.css       # 自定义样式
+│   └── js/app.js          # 仪表盘逻辑
+├── reports/
+│   └── report-YYYY-MM-DD-HHMMSS.html  # 报告内容
+└── data/
+    └── metadata.json       # 历史报告元数据
+```
+
+**访问地址**：`https://username.github.io/repo-name/`
 
 ### Step 5: PushPlus 微信推送（可选）
 
@@ -372,8 +420,11 @@ def push_to_wechat(token, title, content):
 
 **输出文件**:
 - Excel: `/path/to/小红书爆文分析_20260113_183000.xlsx`
+- 🌐 仪表盘: `https://username.github.io/repo-name/` (如已配置)
 
-**微信推送**: ✅ 已推送 / ⚠️ 未配置 Token，已跳过
+**部署状态**:
+- GitHub Pages: ✅ 已更新仪表盘 / ⚠️ 未配置仓库，已跳过
+- 微信推送: ✅ 已推送 / ⚠️ 未配置 Token，已跳过
 
 **TOP 3 爆文预览**:
 | 标题 | 点赞 | 粉丝 | 爆款指数 |
@@ -399,10 +450,12 @@ def push_to_wechat(token, title, content):
 ...
 [筛选] 符合低粉爆文条件: 47 条
 [生成] Excel 文件已保存
+[部署] GitHub Pages 仪表盘已更新
 [推送] 已发送至微信
 
 ## ✅ 执行完成
 - Excel: ~/Documents/小红书爆文分析_20260113.xlsx
+- 🌐 仪表盘: https://username.github.io/xhs-viral-report/
 - 微信推送: ✅ 已发送
 ```
 
@@ -436,7 +489,27 @@ def push_to_wechat(token, title, content):
 | 变量名 | 说明 | 默认值 |
 |--------|------|--------|
 | `PUSHPLUS_TOKEN` | PushPlus 推送 Token | 无（跳过推送） |
+| `GITHUB_PAGES_REPO` | GitHub Pages 仓库（格式: username/repo-name） | 无（跳过仪表盘部署） |
 | `XHS_OUTPUT_DIR` | Excel 输出目录 | 当前工作目录 |
+
+### GitHub Pages 设置
+
+要启用自动仪表盘部署功能：
+
+1. **创建 GitHub 仓库**（如果还没有）
+   ```bash
+   gh repo create xhs-viral-report --public
+   ```
+
+2. **设置环境变量**
+   ```bash
+   export GITHUB_PAGES_REPO="your-username/xhs-viral-report"
+   ```
+
+3. **首次自动部署**
+   - 首次运行会自动创建 gh-pages 分支
+   - 自动生成仪表盘框架和静态资源
+   - 后续运行会自动更新历史记录
 
 ### 自定义阈值
 
