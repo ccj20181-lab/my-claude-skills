@@ -1,0 +1,35 @@
+[
+  {
+    "title": "如何通过AI实现财富自由？",
+    "author": "AI探索家",
+    "url": "https://www.xiaohongshu.com/explore/123456",
+    "likes": 5000,
+    "favs": 2000,
+    "comments": 300,
+    "fans": 10000,
+    "topic": "AI变现",
+    "viral_score": 95.5
+  },
+  {
+    "title": "2026年最新理财趋势分析",
+    "author": "财经喵",
+    "url": "https://www.xiaohongshu.com/explore/654321",
+    "likes": 3000,
+    "favs": 1500,
+    "comments": 200,
+    "fans": 5000,
+    "topic": "理财",
+    "viral_score": 88.0
+  },
+  {
+    "title": "猫娘工程师的日常",
+    "author": "幽浮喵",
+    "url": "https://www.xiaohongshu.com/explore/999999",
+    "likes": 9999,
+    "favs": 8888,
+    "comments": 7777,
+    "fans": 99999,
+    "topic": "技术生活",
+    "viral_score": 99.9
+  }
+]
