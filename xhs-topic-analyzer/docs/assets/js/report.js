@@ -29,7 +29,11 @@ class ReportViewer {
     async init() {
         console.log('[ReportViewer] 🚀 初始化中...');
         this.setupEventListeners();
+        await this.loadData();
+    }
 
+    async loadData() {
+        this.showLoading();
         try {
             await this.loadMetadata();
             this.renderHistoryList();
@@ -56,7 +60,7 @@ class ReportViewer {
             }
         } catch (error) {
             console.error('[ReportViewer] ❌ 初始化失败:', error);
-            this.showError('无法加载数据，请检查网络连接');
+            this.showError('无法加载数据，请检查网络连接或稍后重试');
         }
     }
 
@@ -190,10 +194,17 @@ class ReportViewer {
             <div class="text-center text-red-500 p-4">
                 <div class="text-4xl mb-2">⚠️</div>
                 <p>${msg}</p>
-                <button onclick="location.reload()" class="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">刷新重试</button>
+                <button id="retryBtn" class="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">
+                    重试
+                </button>
             </div>
         `;
         this.loadingState.classList.remove('hidden');
+
+        // 绑定重试事件
+        document.getElementById('retryBtn').addEventListener('click', () => {
+            this.loadData();
+        });
     }
 
     toggleSidebar() {

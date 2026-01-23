@@ -59,40 +59,8 @@ def copy_data_file(data_file: str, date: str, docs_dir: Path):
     return f'data/reports/{date}.json'
 
 
-def generate_report_html(data: Dict[str, Any], date: str, docs_dir: Path) -> str:
+def generate_report_html(notes: List[Dict[str, Any]], date: str, docs_dir: Path) -> str:
     """生成每日报告 HTML"""
-
-    # 提取数据 - 兼容两种数据结构
-    raw_notes = data.get('notes', [])
-    if not raw_notes and 'top_feeds' in data:
-        raw_notes = data.get('top_feeds', [])
-
-    # 标准化数据格式
-    notes = []
-    for n in raw_notes:
-        # 基础字段映射
-        note = {
-            'title': n.get('title', '无标题'),
-            'author': n.get('author') or n.get('user', '未知作者'),
-            'url': n.get('url') or (f"https://www.xiaohongshu.com/explore/{n.get('id')}" if n.get('id') else '#'),
-            'likes': n.get('likes') or n.get('liked_count', 0),
-            'favs': n.get('favs') or n.get('collected_count', 0),
-            'comments': n.get('comments') or n.get('comment_count', 0),
-            'topic': n.get('topic') or n.get('keyword', '未分类'),
-        }
-
-        # 计算或获取额外指标
-        # 如果没有粉丝数，用收藏数代替展示（或隐藏）
-        note['fans'] = n.get('fans') or n.get('collected_count', 0)
-
-        # 计算爆款指数 (简单算法: 点赞 + 收藏*2 + 评论*3) / 1000
-        if 'viral_score' in n:
-            note['viral_score'] = n['viral_score']
-        else:
-            score = (note['likes'] + note['favs'] * 2 + note['comments'] * 3) / 1000
-            note['viral_score'] = round(score, 1)
-
-        notes.append(note)
 
     total_notes = len(notes)
 
@@ -503,19 +471,67 @@ def generate_daily_report(data_file: str) -> str:
 
     # 加载数据
     data = load_data(data_file)
-    # 兼容两种数据结构
-    notes = data.get('notes', [])
-    if not notes and 'top_feeds' in data:
-        # 转换 top_feeds 格式以匹配 notes 的基本字段用于统计
-        raw_feeds = data.get('top_feeds', [])
-        for feed in raw_feeds:
-            notes.append({
-                'title': feed.get('title', ''),
-                'likes': feed.get('liked_count', 0),
-                'fans': feed.get('collected_count', 0), # 暂用收藏数代替
-                'topic': feed.get('keyword', '未分类'),
-                'viral_score': 0 # 暂无
-            })
+
+    notes = []
+    raw_list = []
+
+    # 1. 处理数据结构差异 (Dict vs List)
+    if isinstance(data, list):
+        raw_list = data
+    elif isinstance(data, dict):
+        if 'notes' in data:
+            raw_list = data['notes']
+        elif 'top_feeds' in data:
+            raw_list = data['top_feeds']
+
+    # 2. 标准化字段映射 (处理中文键名和不同格式)
+    for item in raw_list:
+        note = {}
+
+        # 标题
+        note['title'] = item.get('title') or item.get('笔记标题') or '无标题'
+
+        # 作者
+        note['author'] = item.get('author') or item.get('user') or item.get('博主昵称') or '未知作者'
+
+        # URL
+        if item.get('url'):
+            note['url'] = item.get('url')
+        elif item.get('笔记链接'):
+            note['url'] = item.get('笔记链接')
+        elif item.get('id'):
+            note['url'] = f"https://www.xiaohongshu.com/explore/{item.get('id')}"
+        elif item.get('笔记ID'):
+             note['url'] = f"https://www.xiaohongshu.com/explore/{item.get('笔记ID')}"
+        else:
+            note['url'] = '#'
+
+        # 数据指标
+        note['likes'] = item.get('likes') or item.get('liked_count') or item.get('点赞数') or 0
+        note['favs'] = item.get('favs') or item.get('collected_count') or item.get('收藏数') or 0
+        note['comments'] = item.get('comments') or item.get('comment_count') or item.get('评论数') or 0
+
+        # 话题/关键词
+        note['topic'] = item.get('topic') or item.get('keyword') or item.get('关键词') or '未分类'
+
+        # 粉丝数 (可选)
+        note['fans'] = item.get('fans') or item.get('collected_count') or item.get('博主粉丝数') or 0
+
+        # 爆款指数
+        if 'viral_score' in item:
+            note['viral_score'] = item['viral_score']
+        elif '爆款指数' in item:
+            note['viral_score'] = item['爆款指数']
+        else:
+            # 简单计算
+            score = (note['likes'] + note['favs'] * 2 + note['comments'] * 3) / 1000
+            note['viral_score'] = round(score, 1)
+
+        notes.append(note)
+
+    if not notes:
+        print("[Warning] 没有找到笔记数据")
+        return None
 
     if not notes:
         print("[Warning] 没有找到笔记数据")
@@ -530,7 +546,7 @@ def generate_daily_report(data_file: str) -> str:
     docs_dir.mkdir(parents=True, exist_ok=True)
 
     # 生成每日报告 HTML
-    report_path = generate_report_html(data, date, docs_dir)
+    report_path = generate_report_html(notes, date, docs_dir)
 
     # 复制数据文件
     data_rel_path = copy_data_file(data_file, date, docs_dir)
