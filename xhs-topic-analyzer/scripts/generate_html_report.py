@@ -53,8 +53,14 @@ def copy_data_file(data_file: str, date: str, docs_dir: Path):
 
     dest_file = reports_dir / f'{date}.json'
 
-    shutil.copy(data_file, dest_file)
-    print(f"[Data] 数据文件已复制: {dest_file}")
+    try:
+        if os.path.abspath(data_file) != os.path.abspath(dest_file):
+            shutil.copy(data_file, dest_file)
+            print(f"[Data] 数据文件已复制: {dest_file}")
+        else:
+            print(f"[Data] 源文件与目标文件相同，跳过复制: {dest_file}")
+    except shutil.SameFileError:
+        print(f"[Data] 源文件与目标文件相同，跳过复制: {dest_file}")
 
     return f'data/reports/{date}.json'
 
