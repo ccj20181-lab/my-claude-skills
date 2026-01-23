@@ -51,9 +51,9 @@ jobs:
         run: |
           python analyze_data.py
 
-      - name: 推送报告到微信
+      - name: 推送报告到微信并生成 HTML
         run: |
-          python scripts/push_report.py --file report.md
+          python scripts/push_report.py --file report.json
         env:
           WECHAT_PUSH_TOKEN: ${{ secrets.WECHAT_PUSH_TOKEN }}
 
@@ -61,9 +61,8 @@ jobs:
         if: success()
         uses: actions/upload-artifact@v3
         with:
-          name: daily-report-${{ github.run_number }}
+          name: viral-report-${{ github.run_number }}
           path: |
-            report.md
             report.json
           retention-days: 30
 

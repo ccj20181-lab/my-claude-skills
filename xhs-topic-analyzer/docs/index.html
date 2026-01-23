@@ -3,125 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>小红书财经爆文分析</title>
+    <title>小红书财经爆款选题分析 - 仪表盘</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        /* 隐藏滚动条但允许滚动 */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
 </head>
-<body>
-    <!-- 导航栏 -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <span class="icon">📊</span>
-                <h1>小红书财经爆文分析</h1>
-            </div>
-            <div class="nav-info">
-                <span class="update-time" id="updateTime">加载中...</span>
+<body class="bg-slate-50 h-screen overflow-hidden flex text-slate-800">
+
+    <!-- 移动端侧边栏遮罩 -->
+    <div id="sidebarOverlay" class="fixed inset-0 bg-black/50 z-20 hidden lg:hidden glass-effect"></div>
+
+    <!-- 侧边栏 -->
+    <aside id="sidebar" class="fixed inset-y-0 left-0 w-64 bg-white border-r border-slate-200 z-30 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 flex flex-col">
+        <div class="p-4 border-b border-slate-100 flex items-center gap-3">
+            <span class="text-2xl">📊</span>
+            <div>
+                <h1 class="font-bold text-slate-800 leading-tight">爆款选题分析</h1>
+                <p class="text-xs text-slate-500">财经/理财赛道</p>
             </div>
         </div>
-    </nav>
+
+        <div class="flex-1 overflow-y-auto p-4 no-scrollbar">
+            <div class="mb-4">
+                <h3 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">历史报告</h3>
+                <ul class="history-list space-y-1">
+                    <!-- 历史记录将由 JS 动态加载 -->
+                    <div class="animate-pulse space-y-3">
+                        <div class="h-16 bg-slate-100 rounded-lg"></div>
+                        <div class="h-16 bg-slate-100 rounded-lg"></div>
+                        <div class="h-16 bg-slate-100 rounded-lg"></div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+
+        <div class="p-4 border-t border-slate-100">
+            <div class="text-xs text-center text-slate-400">
+                <p>共 1 期报告</p>
+                <p class="mt-1">By 幽浮喵 ฅ'ω'ฅ</p>
+            </div>
+        </div>
+    </aside>
 
     <!-- 主内容区 -->
-    <main class="container">
-        <!-- 统计卡片区域 -->
-        <section class="stats-section">
-            <div class="stats-grid">
-                <div class="stat-card stat-primary">
-                    <div class="stat-icon">🔥</div>
-                    <div class="stat-content">
-                        <div class="stat-label">发现爆文</div>
-                        <div class="stat-value" id="totalNotes">-</div>
-                    </div>
-                </div>
-                <div class="stat-card stat-secondary">
-                    <div class="stat-icon">❤️</div>
-                    <div class="stat-content">
-                        <div class="stat-label">平均点赞</div>
-                        <div class="stat-value" id="avgLikes">-</div>
-                    </div>
-                </div>
-                <div class="stat-card stat-tertiary">
-                    <div class="stat-icon">👥</div>
-                    <div class="stat-content">
-                        <div class="stat-label">平均粉丝</div>
-                        <div class="stat-value" id="avgFollowers">-</div>
-                    </div>
+    <div class="flex-1 flex flex-col h-full lg:ml-64 transition-all duration-300">
+
+        <!-- 顶部导航条 (移动端显示) -->
+        <header class="bg-white border-b border-slate-200 h-16 flex items-center px-4 justify-between lg:hidden flex-shrink-0">
+            <button id="sidebarToggle" class="p-2 text-slate-600 hover:bg-slate-100 rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            <span class="font-bold text-slate-800">仪表盘</span>
+            <div class="w-10"></div> <!-- 占位保持居中 -->
+        </header>
+
+        <!-- iframe 容器 -->
+        <main class="flex-1 relative bg-slate-50 overflow-hidden">
+            <div id="loadingState" class="absolute inset-0 flex items-center justify-center bg-white z-10">
+                <div class="text-center">
+                    <div class="inline-block w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mb-4"></div>
+                    <p class="text-slate-500 text-sm">正在加载报告...</p>
                 </div>
             </div>
-        </section>
 
-        <!-- 搜索和筛选区域 -->
-        <section class="search-section">
-            <div class="search-box">
-                <input
-                    type="text"
-                    id="searchInput"
-                    placeholder="搜索笔记标题..."
-                    class="search-input"
-                >
-                <button class="search-button" id="searchButton">🔍 搜索</button>
-            </div>
-            <div class="filter-buttons">
-                <button class="filter-button active" data-filter="all">全部</button>
-                <button class="filter-button" data-filter="high">高赞(>5000)</button>
-                <button class="filter-button" data-filter="low">低粉(<5000)</button>
-                <button class="filter-button" data-filter="viral">高爆款指数</button>
-            </div>
-        </section>
+            <iframe id="reportFrame" name="contentFrame" class="w-full h-full border-none" src=""></iframe>
 
-        <!-- 选题洞察区域 -->
-        <section class="insights-section">
-            <h2 class="section-title">💡 选题洞察</h2>
-            <div class="insights-grid">
-                <div class="insight-card insight-top">
-                    <div class="insight-header">
-                        <span class="insight-icon">🏆</span>
-                        <span class="insight-title">最高爆款指数</span>
+            <!-- 欢迎页/空状态 (当没有选中报告时显示) -->
+            <div id="welcomeState" class="absolute inset-0 flex items-center justify-center bg-slate-50 hidden">
+                <div class="text-center p-8 max-w-md">
+                    <div class="text-6xl mb-6">👋</div>
+                    <h2 class="text-2xl font-bold text-slate-800 mb-2">欢迎回来</h2>
+                    <p class="text-slate-500 mb-8">请从左侧列表选择一期报告查看详细数据分析。</p>
+
+                    <div class="grid grid-cols-2 gap-4 text-left">
+                        <div class="bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
+                            <div class="text-xs text-slate-400 uppercase mb-1">最新报告</div>
+                            <div class="font-medium text-slate-800">2026-01-23</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
+                            <div class="text-xs text-slate-400 uppercase mb-1">累计分析</div>
+                            <div class="font-medium text-slate-800">1 期</div>
+                        </div>
                     </div>
-                    <div class="insight-content" id="topNote">加载中...</div>
-                </div>
-                <div class="insight-card insight-low">
-                    <div class="insight-header">
-                        <span class="insight-icon">⭐</span>
-                        <span class="insight-title">低粉高赞案例</span>
-                    </div>
-                    <div class="insight-content" id="lowFollowerNote">加载中...</div>
                 </div>
             </div>
-        </section>
+        </main>
+    </div>
 
-        <!-- 笔记列表区域 -->
-        <section class="notes-section">
-            <h2 class="section-title">🔥 爆款笔记列表</h2>
-            <div class="notes-grid" id="notesGrid">
-                <!-- 笔记卡片将通过JavaScript动态生成 -->
-                <div class="loading">加载中...</div>
-            </div>
-        </section>
-
-        <!-- 导出区域 -->
-        <section class="export-section">
-            <h2 class="section-title">📥 数据导出</h2>
-            <div class="export-buttons">
-                <button class="export-button" id="exportJson">
-                    <span class="icon">📄</span>
-                    <span>导出 JSON</span>
-                </button>
-                <button class="export-button" id="copyData">
-                    <span class="icon">📋</span>
-                    <span>复制数据</span>
-                </button>
-            </div>
-        </section>
-    </main>
-
-    <!-- 页脚 -->
-    <footer class="footer">
-        <div class="container">
-            <p>🔔 每日自动更新 | 扫描关键词: 金融、财经、理财</p>
-            <p class="footer-note">数据来源于小红书公开内容 · 仅供学习参考</p>
-        </div>
-    </footer>
-
-    <script src="assets/js/app.js"></script>
+    <script src="assets/js/report.js"></script>
 </body>
 </html>

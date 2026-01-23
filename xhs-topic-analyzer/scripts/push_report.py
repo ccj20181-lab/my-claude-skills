@@ -392,7 +392,7 @@ if __name__ == "__main__":
     token = args.token
     if not token:
         config = load_config()
-        token = config.get('wechat_push_token')
+        token = config.get('pushplus_token')
 
     if not token:
         print("Error: No token provided")
@@ -400,6 +400,16 @@ if __name__ == "__main__":
 
     content = generate_content(args.file)
     success = push_to_wechat(token, content)
+
+    # 推送成功后生成 HTML 报告
+    if success:
+        try:
+            from generate_html_report import generate_daily_report
+
+            html_path = generate_daily_report(args.file)
+            print(f"[Success] HTML 报告已生成: {html_path}")
+        except Exception as e:
+            print(f"[Warning] HTML 生成失败: {e}")
 
     # 推送成功后清理临时文件（除非指定 --no-cleanup）
     if success and not args.no_cleanup:

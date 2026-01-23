@@ -71,7 +71,7 @@ jobs:
       - name: 生成网站数据
         if: steps.find-json.outputs.json_found == 'true'
         run: |
-          python scripts/generate_html.py --input "${{ steps.find-json.outputs.json_path }}" --output docs/data
+          python scripts/generate_html_report.py --input "${{ steps.find-json.outputs.json_path }}"
 
       - name: 设置 Pages
         uses: actions/configure-pages@v4
