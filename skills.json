@@ -91,6 +91,11 @@
       "name": "xlsx",
       "enabled": true,
       "installed": true
+    },
+    {
+      "name": "yt-dlp",
+      "enabled": true,
+      "installed": true
     }
   ],
   "settings": {

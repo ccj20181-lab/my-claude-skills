@@ -23,9 +23,13 @@ try:
     from reportlab.pdfbase.ttfonts import TTFont
     from reportlab.lib.enums import TA_LEFT
     import requests
+    try:
+        from PIL import Image as PILImage
+    except ImportError:
+        PILImage = None
 except ImportError as e:
     print(f"错误: 缺少必要的依赖库")
-    print(f"请安装: pip3 install reportlab requests")
+    print(f"请安装: pip3 install reportlab requests pillow")
     sys.exit(1)
 
 
@@ -101,18 +105,48 @@ class XiaohongshuToPDF:
     def download_image(self, url, index):
         """下载图片到临时目录"""
         try:
-            response = requests.get(url, timeout=30)
+            # 不再截断 URL，保持完整以通过签名验证
+            # clean_url = url.split('!')[0] if '!' in url else url
+            clean_url = url
+
+            headers = {
+                "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+                "Referer": "https://www.xiaohongshu.com/",
+                "Origin": "https://www.xiaohongshu.com",
+                "Accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+            }
+
+            response = requests.get(clean_url, headers=headers, timeout=30)
             response.raise_for_status()
 
+            # 检测内容类型
+            content_type = response.headers.get('Content-Type', '').lower()
             ext = ".jpg"
-            if "png" in url.lower():
+            if "png" in content_type or "png" in url.lower():
                 ext = ".png"
+            elif "webp" in content_type or "webp" in url.lower():
+                ext = ".webp"
 
             filename = f"image_{index}{ext}"
             filepath = os.path.join(self.temp_dir, filename)
 
             with open(filepath, "wb") as f:
                 f.write(response.content)
+
+            # 如果是 WebP，尝试转换为 PNG
+            if ext == ".webp":
+                if PILImage:
+                    try:
+                        png_filepath = os.path.join(self.temp_dir, f"image_{index}.png")
+                        img = PILImage.open(filepath)
+                        img.save(png_filepath, "PNG")
+                        return png_filepath
+                    except Exception as e:
+                        print(f"⚠ 转换 WebP 图片失败: {e}")
+                        return filepath
+                else:
+                    print("⚠ 缺少 PIL 库，无法转换 WebP 图片，PDF 生成可能会失败")
+                    return filepath
 
             return filepath
         except Exception as e:
@@ -226,8 +260,10 @@ class XiaohongshuToPDF:
             story.append(Paragraph("<b>配图:</b>", content_style))
             story.append(Spacer(1, 0.3 * cm))
 
-            max_width = 14 * cm
-            max_height = 10 * cm
+            # A4 宽度约 21cm, 减去边距 4cm = 17cm
+            # A4 高度约 29.7cm, 减去边距 4cm = 25.7cm
+            max_width = 17 * cm
+            max_height = 20 * cm  # 限制最大高度，避免图片过大无法放置
 
             for idx, img_url in enumerate(images):
                 img_path = self.download_image(img_url, idx)
@@ -236,8 +272,15 @@ class XiaohongshuToPDF:
                         img = Image(img_path)
                         img_width, img_height = img.drawWidth, img.drawHeight
 
-                        # 缩放图片
-                        ratio = min(max_width / img_width, max_height / img_height, 1)
+                        # 缩放图片: 保持宽度适应页面，同时限制高度
+                        ratio_width = max_width / img_width
+                        ratio_height = max_height / img_height
+                        ratio = min(ratio_width, ratio_height)
+
+                        # 如果图片本身就很小，就不放大
+                        if ratio > 1:
+                            ratio = 1
+
                         img.drawWidth = img_width * ratio
                         img.drawHeight = img_height * ratio
 

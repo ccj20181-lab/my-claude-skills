@@ -240,3 +240,22 @@ python scripts/batch_generate.py "md1.md" "md2.md" "md3.md" -r 4K --interactive
 |------|------|
 | `batch_generate.py` | 批量生成多张信息图（支持主标题定制） |
 | `generate_one_by_one.py` | 逐张生成，可选 |
+
+
+## User-Learned Best Practices & Constraints
+
+> **Auto-Generated Section**: This section is maintained by `skill-evolution-manager`. Do not edit manually.
+
+### User Preferences
+- macOS 用户需要使用 -o 参数指定输出目录，避免使用默认的 F:/ Windows 路径
+- 生成后应主动打开输出文件夹让用户预览
+- 单张图片需要重新生成时，只需传入对应的单个 md 文件
+
+### Known Fixes & Workarounds
+- 默认输出路径 F:/finance-infographics 是 Windows 格式，在 macOS 上会被当作相对路径创建
+- 参考图内容可能残留到生成图中，需要在 prompt 中更强调只使用用户提供的文案内容
+- 中文内容可能出现乱码，可能与字体渲染或 API 参数有关，重新生成通常可解决
+
+### Custom Instruction Injection
+
+在 macOS 上使用时，建议添加 -o ~/Desktop/infographics 或其他有效路径参数

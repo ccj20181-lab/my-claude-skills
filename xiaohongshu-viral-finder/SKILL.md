@@ -1,16 +1,16 @@
 ---
 name: xiaohongshu-viral-finder
 description: >
-  小红书低粉爆文抓取与选题分析工具。当用户需要：
+  小红书热门爆文抓取与选题分析工具。当用户需要：
   (1) 搜索小红书财经/理财热门内容
-  (2) 寻找低粉高赞的爆款笔记（粉丝少但点赞高）
+  (2) 寻找高互动的爆款笔记
   (3) 生成选题分析报告或 Excel 表格
   (4) 挖掘财经博主的选题灵感
-  触发关键词："小红书选题"、"爆文分析"、"财经爆款"、"低粉爆文"、"选题挖掘"
+  触发关键词："小红书选题"、"爆文分析"、"财经爆款"、"热门爆文"、"选题挖掘"
 license: MIT
 ---
 
-# 小红书低粉爆文抓取工具
+# 小红书热门爆文抓取与选题分析工具
 
 ## ⚡️ CRITICAL: Autonomous Execution Protocol
 
@@ -29,7 +29,7 @@ You MUST follow these rules strictly throughout the ENTIRE execution:
 
 ## Overview
 
-这是一个为"秒懂金融"账号设计的小红书选题挖掘工具。通过 xiaohongshu-mcp 自动搜索热门财经关键词，智能筛选"低粉爆文"（粉丝少但点赞高的隐形爆款），生成：
+这是一个为"秒懂金融"账号设计的小红书选题挖掘工具。通过 xiaohongshu-mcp 自动搜索热门财经关键词，智能筛选高互动爆款笔记，并深度分析选题规律，生成：
 - 📊 **Excel 分析报告**（本地文件）
 - 🌐 **GitHub Pages 仪表盘**（在线可视化，带历史记录）
 - 📱 **微信推送简报**（PushPlus）
@@ -37,10 +37,15 @@ You MUST follow these rules strictly throughout the ENTIRE execution:
 ### 🎯 核心功能
 
 1. **自动数据采集**：搜索小红书财经关键词，获取笔记数据
-2. **智能筛选**：粉丝 < 20,000 且 点赞 > 1,000 的低粉爆文
+2. **智能筛选**：点赞 > 1,000 的高互动爆文
 3. **爆款指数计算**：互动率 × log(点赞数)，量化爆文潜力
-4. **仪表盘系统**：自动部署到 GitHub Pages，支持历史报告查看
-5. **多端通知**：Excel + 微信推送 + 在线仪表盘
+4. **选题深度分析**：
+   - 7大财经类型自动分类
+   - 5种标题策略识别
+   - 高频关键词提取
+   - 9个模板化选题建议
+5. **仪表盘系统**：自动部署到 GitHub Pages，支持历史报告查看
+6. **多端通知**：Excel + 微信推送 + 在线仪表盘
 
 ### 两种工作模式
 
@@ -63,7 +68,6 @@ You MUST follow these rules strictly throughout the ENTIRE execution:
 
 | 条件 | 阈值 |
 |------|------|
-| 博主粉丝数 | < 20,000 |
 | 笔记点赞数 | > 1,000 |
 
 ### 默认行为
@@ -91,243 +95,135 @@ You MUST follow these rules strictly throughout the ENTIRE execution:
 
 ### Step 2: 遍历关键词搜索
 
-对于每个关键词，使用 xiaohongshu-mcp 工具执行搜索。
-
----
-
-## ⚠️ CRITICAL: Subagent Architecture for Data Fetching
-
-### 问题根源
-
-MCP 返回的用户主页数据极大（每个 ~13k tokens），直接在主 Agent 上下文中调用会导致：
-- 4 个用户 = 52k tokens → 上下文爆满
-- 19 个用户 = 247k tokens → 完全不可行
-
-### 🏗️ 解决方案：Subagent 隔离架构
-
-**核心思想**：将 MCP 数据抓取任务交给独立的 Subagent 或 Python 脚本执行，只返回精简后的结果到主 Agent。
-
-```
-┌─────────────────────────────────────────────────────────┐
-│                     主 Agent                             │
-│  - 解析用户指令                                          │
-│  - 协调工作流                                            │
-│  - 接收精简数据（每用户仅 ~50 tokens）                   │
-│  - 生成报告                                              │
-└────────────────────────┬────────────────────────────────┘
-                         │ 调用
-                         ▼
-┌─────────────────────────────────────────────────────────┐
-│              Subagent / Python 脚本                      │
-│  - 独立上下文执行 MCP 调用                               │
-│  - 提取必要字段：粉丝数、昵称                           │
-│  - 丢弃完整响应                                          │
-│  - 返回精简 JSON                                         │
-└─────────────────────────────────────────────────────────┘
-```
-
----
-
-## 🔧 实现方式：Python 脚本封装 MCP 调用
-
-### Step 2.1: 搜索阶段（主 Agent 执行）
-
-使用 MCP 搜索笔记，收集候选列表：
+对于每个关键词，使用 xiaohongshu-mcp 工具执行搜索：
 
 ```python
-# 主 Agent 执行：搜索并收集候选
-candidates = []
-for keyword in keywords:
-    results = mcp_search_feeds(keyword, filters={"publish_time": "一周内"})
-    for note in results["feeds"]:
-        if note["likes"] > 1000:  # 点赞初筛
-            candidates.append({
-                "note_id": note["id"],
-                "title": note["title"],
-                "likes": note["likes"],
-                "user_id": note["user"]["user_id"],
-                "xsec_token": note["xsec_token"]
-            })
+import sys
+sys.path.insert(0, 'scripts')
 
-# 保存到临时文件
-save_to_json("/tmp/xhs_candidates.json", candidates)
-```
-
-### Step 2.2: 粉丝数抓取（Python 脚本独立执行）
-
-**创建并执行以下 Python 脚本**，该脚本通过 HTTP 直接调用 MCP 服务：
-
-```python
-#!/usr/bin/env python3
-"""
-独立脚本：批量获取用户粉丝数
-运行方式：python3 fetch_followers.py
-"""
-import json
-import requests
-
-MCP_URL = "http://localhost:18060/mcp"
-
-def get_user_followers(user_id, xsec_token):
-    """调用 MCP 获取用户粉丝数，只返回需要的字段"""
-    payload = {
-        "jsonrpc": "2.0",
-        "id": 1,
-        "method": "tools/call",
-        "params": {
-            "name": "user_profile",
-            "arguments": {
-                "user_id": user_id,
-                "xsec_token": xsec_token
-            }
-        }
+# 使用 MCP 搜索
+results = mcp__xiaohongshu__search_feeds(
+    keyword="理财",
+    filters={
+        "publish_time": "一周内",
+        "sort_by": "最多点赞"
     }
-    try:
-        resp = requests.post(MCP_URL, json=payload, timeout=30)
-        data = resp.json()
-        # 只提取需要的字段！
-        user_info = data.get("result", {}).get("userBasicInfo", {})
-        return {
-            "user_id": user_id,
-            "followers": user_info.get("fans", 0),
-            "nickname": user_info.get("nickname", "")
-        }
-    except Exception as e:
-        return {"user_id": user_id, "followers": -1, "error": str(e)}
+)
 
-def main():
-    # 读取候选数据
-    with open("/tmp/xhs_candidates.json", "r") as f:
-        candidates = json.load(f)
-    
-    # 去重用户 ID
-    unique_users = {}
-    for c in candidates:
-        uid = c["user_id"]
-        if uid not in unique_users:
-            unique_users[uid] = c["xsec_token"]
-    
-    # 批量获取粉丝数
-    followers_map = {}
-    for uid, token in unique_users.items():
-        result = get_user_followers(uid, token)
-        followers_map[uid] = result["followers"]
-        print(f"[OK] {result.get('nickname', uid)}: {result['followers']} 粉丝")
-    
-    # 保存结果（精简数据！）
-    with open("/tmp/xhs_followers.json", "w") as f:
-        json.dump(followers_map, f, ensure_ascii=False)
-    
-    print(f"\n✅ 完成！获取了 {len(followers_map)} 个用户的粉丝数")
-
-if __name__ == "__main__":
-    main()
+# 提取笔记数据
+candidates = []
+for note in results["feeds"]:
+    likes = note.get("likes", 0)
+    if likes > 1000:  # 筛选高互动笔记
+        candidates.append({
+            "id": note["id"],
+            "title": note["title"],
+            "likes": likes,
+            "collects": note.get("collects", 0),
+            "comments": note.get("comments", 0),
+            "xsec_token": note.get("xsec_token", "")
+        })
 ```
-
-### Step 2.3: 合并数据并筛选（主 Agent 执行）
-
-```python
-# 读取粉丝数据（精简！每用户仅一个数字）
-with open("/tmp/xhs_followers.json", "r") as f:
-    followers_map = json.load(f)
-
-# 读取候选笔记
-with open("/tmp/xhs_candidates.json", "r") as f:
-    candidates = json.load(f)
-
-# 筛选低粉爆文
-viral_notes = []
-for note in candidates:
-    followers = followers_map.get(note["user_id"], 999999)
-    if followers < 20000 and note["likes"] > 1000:
-        note["followers"] = followers
-        viral_notes.append(note)
-
-# 按爆款指数排序
-viral_notes.sort(key=lambda x: x["likes"] / max(x["followers"], 1), reverse=True)
-```
-
----
-
-## 📋 完整执行流程
-
-```
-1. [主Agent] 解析指令，确定关键词和模式
-2. [主Agent] 调用 MCP 搜索，收集候选笔记
-3. [主Agent] 保存候选到 /tmp/xhs_candidates.json
-4. [主Agent] 创建 fetch_followers.py 脚本
-5. [Bash]    执行 python3 fetch_followers.py
-6. [主Agent] 读取 /tmp/xhs_followers.json（精简数据）
-7. [主Agent] 合并、筛选、排序
-8. [主Agent] 生成 Excel 报告
-9. [主Agent] 生成并部署 GitHub Pages 仪表盘（可选）
-10. [主Agent] 推送微信（可选）
-```
-
----
-
-## 🚫 Anti-Pattern: 绝对禁止
-
-```python
-# ❌ 禁止：在主 Agent 上下文中直接调用 MCP 获取用户信息
-for user_id in user_ids:
-    profile = mcp__xiaohongshu__user_profile(user_id, token)  # 13k tokens!
-    # 这会快速耗尽上下文
-```
-
-```python
-# ✅ 正确：通过 Python 脚本独立执行
-# 1. 创建脚本 fetch_followers.py
-# 2. 执行：python3 fetch_followers.py
-# 3. 读取精简结果
-```
-
----
 
 ### Step 3: 计算爆款指数
 
 ```python
-# 互动率 = (点赞 + 收藏 + 评论) / 粉丝数 × 100%
-interaction_rate = (likes + favorites + comments) / followers * 100
+import math
+
+# 互动率 = (点赞 + 收藏 + 评论) / 1000
+interaction_rate = (likes + collects + comments) / 1000
 
 # 爆款指数 = 互动率 × log10(点赞数)
 viral_score = interaction_rate * math.log10(likes)
 ```
 
-### Step 4: 生成 Excel 报告
+### Step 4: 选题分析增强
 
-使用 Python openpyxl 或 xlsxwriter 生成 Excel 文件：
+使用 `topic_analyzer.py` 对筛选后的爆文进行深度选题分析：
 
-| 列名 | 数据来源 |
-|------|---------|
-| 笔记标题 | note.title |
-| 笔记点赞 | note.likes |
-| 博主粉丝数 | author.followers |
-| 笔记链接 | note.url |
-| 互动率 | 计算值 |
-| 爆款指数 | 计算值 |
+```python
+from scripts.topic_analyzer import analyze_feeds_topic
+
+# 对爆文进行选题分析
+analysis_result = analyze_feeds_topic(viral_notes)
+
+# 返回结果包含：
+# - topic_distribution: 选题类型分布（7大财经类别）
+# - top_keywords: 高频关键词 TOP 30
+# - strategy_stats: 标题策略统计
+# - avg_title_length: 平均标题长度
+# - suggestions: 9个模板化选题建议
+# - enhanced_feeds: 增强后的笔记数据（含选题分类、标题策略等）
+```
+
+**增强的数据字段**：
+```python
+{
+    # 原有字段...
+    "title": "女生理财必做的8件事",
+    "likes": 3500,
+    "collects": 1200,
+    "comments": 150,
+    "viral_score": 87.5,
+
+    # 新增字段
+    "topic": "理财技巧",              # 选题分类（7大财经类型）
+    "title_strategy": "清单型+圈层型", # 标题策略
+    "pattern_type": "清单型",         # 主导模式
+    "title_length": 17,               # 标题长度
+    "collect_to_like_ratio": 0.34     # 收藏/点赞比
+}
+```
+
+### Step 5: 生成 Excel 报告（增强版）
+
+使用 `generate_excel.py` 生成多工作表分析报告：
+
+```python
+from scripts.generate_excel import generate_excel_report
+
+output_path = "~/Documents/小红书爆文分析_20260123_183000.xlsx"
+generate_excel_report(enhanced_feeds, analysis_result, output_path)
+```
+
+**工作表结构**：
+
+| 工作表 | 内容 | 列名示例 |
+|--------|------|---------|
+| 完整数据 | 所有爆文的详细数据 | 标题、选题分类、标题策略、点赞、收藏、评论、爆款指数、链接 |
+| 选题分布 | 7大财经选题类型统计 | 选题类型、笔记数量、占比 |
+| 标题策略 | 5种标题模式统计 | 策略类型、笔记数量、占比 |
+| 选题建议 | 9个可直接使用的选题建议 | 建议标题、选题类型、目标人群、核心价值、内容要点、参考标题 |
 
 文件命名格式：`小红书爆文分析_YYYYMMDD_HHMMSS.xlsx`
 
-### Step 4.5: GitHub Pages 仪表盘部署（可选）
+### Step 6: GitHub Pages 仪表盘部署（推荐）⭐
 
-如果配置了 `GITHUB_PAGES_REPO` 环境变量，自动生成并部署完整仪表盘系统：
+抓取完成后，自动生成 HTML 报告并部署到 GitHub Pages：
 
-**仪表盘特性**：
-- 侧边栏历史报告列表（可查看所有历史分析）
-- Tailwind CSS 现代化设计
-- 响应式布局（支持移动端）
-- iframe 加载报告内容
-- 实时统计数据展示
+```python
+from scripts.deploy_to_ghpages import deploy_dashboard
 
-**部署步骤**：
-```bash
-# 设置环境变量
-export GITHUB_PAGES_REPO="username/repo-name"
+# 部署到 GitHub Pages
+success, report_filename = deploy_dashboard(
+    feeds=enhanced_feeds,           # 增强后的笔记数据
+    analysis=analysis_result,       # 选题分析结果
+    deploy_dir="/Users/henry/gh-pages-deploy",
+    branch="gh-pages"
+)
 
-# 调用部署脚本（自动包含在主流程中）
-python3 xhs_analyze_dashboard.py
+if success:
+    print(f"✅ GitHub Pages 已更新: {report_filename}")
+    print(f"🌐 访问: https://ccj20181-lab.github.io/xhs-viral-report/")
+else:
+    print(f"⚠️ 部署失败: {report_filename}")
 ```
+
+**自动化流程**：
+1. 生成 HTML 报告（100% 复用现有模板样式）
+2. 更新 `metadata.json`（追加历史记录）
+3. 执行 `git add/commit/push`
+4. GitHub Pages 网站自动刷新
 
 **输出结构**：
 ```
@@ -337,58 +233,111 @@ gh-pages-deploy/
 │   ├── css/style.css       # 自定义样式
 │   └── js/app.js          # 仪表盘逻辑
 ├── reports/
-│   └── report-YYYY-MM-DD-HHMMSS.html  # 报告内容
+│   └── report-YYYYMMDD-HHMMSS.html  # 报告内容
 └── data/
     └── metadata.json       # 历史报告元数据
 ```
 
-**访问地址**：`https://username.github.io/repo-name/`
+**访问地址**：`https://ccj20181-lab.github.io/xhs-viral-report/`
 
-### Step 5: PushPlus 微信推送（可选）
+### Step 7: PushPlus 微信推送（可选）
 
-如果配置了 PushPlus Token，生成简报并推送：
+使用 `push_wechat.py` 生成增强推送内容：
 
 ```python
-import requests
+from scripts.push_wechat import push_to_wechat, generate_push_content
 
-def push_to_wechat(token, title, content):
-    url = "http://www.pushplus.plus/send"
-    data = {
-        "token": token,
-        "title": title,
-        "content": content,
-        "template": "markdown"
-    }
-    try:
-        response = requests.post(url, json=data)
-        return response.json()
-    except Exception as e:
-        log_error(f"推送失败: {e}")
-        return None  # 静默失败，不中断流程
+# 生成推送内容
+content = generate_push_content(enhanced_feeds, analysis_result)
+
+# 推送到微信
+result = push_to_wechat(
+    token=PUSHPLUS_TOKEN,
+    title="📊 小红书财经爆文分析报告",
+    content=content
+)
 ```
 
-#### 推送内容模板
+#### 推送内容模板（增强版）
 
 ```markdown
-# 📊 小红书财经爆文日报
+# 📊 小红书财经爆文分析报告
 
 **生成时间**: {timestamp}
-**扫描关键词**: {keywords_count} 个
 **发现爆文**: {total_notes} 条
 
 ## 🔥 TOP 5 爆款笔记
 
-{top_5_notes_table}
+1. **笔记标题**（选题类型）
+   - 互动数据: 👍{likes}  ⭐{collects}  💬{comments}
+   - 笔记链接: [查看详情](url)
 
-## 💡 选题建议
+...
 
-1. 高互动话题: {topic_1}
-2. 潜力选题: {topic_2}
-3. 热门形式: {topic_3}
+## 📈 选题分布统计
+
+- **理财技巧**: 15 篇 (25.0%)
+- **基金投资**: 12 篇 (20.0%)
+- **存钱省钱**: 10 篇 (16.7%)
+...
+
+## 📝 标题策略分析
+
+- **清单型**: 25 篇
+- **教程型**: 18 篇
+- **时效型**: 12 篇
+...
+
+## 💡 精选选题建议
+
+### 1. 🎯 基金止盈实操：3种方法让你不踏空不被套
+
+- **选题类型**: 基金投资
+- **目标人群**: 基金投资者
+- **核心价值**: 解决基金止盈难题
+
+**内容要点**:
+- 分批止盈法（20%规则）
+- 目标收益率法
+- 估值止盈法
+- 实战案例分析
+
+**参考标题**:
+- 基金止盈技巧：每赚20%就卖掉四分之一
+- 基金公司不会说的加仓法，难怪我总当韭菜！
+- 小白买基金必看，打工人闲钱买基，躺赢法
+
+...
+
+## 🔑 高频关键词 TOP 15
+
+理财  基金  投资  存钱  股票  小白  打工人  教程  必看  ...
 
 ---
-完整数据已保存至 Excel 文件
+*完整数据已保存至 Excel 文件，请查看附件*
 ```
+
+---
+
+## 📋 完整执行流程
+
+```
+1.  [主Agent] 解析指令，确定关键词和模式
+2.  [主Agent] 调用 MCP 搜索，收集候选笔记
+3.  [主Agent] 筛选点赞 > 1000 的笔记
+4.  [主Agent] 计算爆款指数并排序
+5.  [主Agent] 导入 topic_analyzer.py，进行选题分析
+6.  [主Agent] 生成增强版 Excel 报告（多工作表）
+7.  [主Agent] 自动部署到 GitHub Pages（推荐）⭐
+8.  [主Agent] 生成增强版微信推送内容并推送（可选）
+```
+
+**脚本说明**：
+- `scripts/topic_analyzer.py`: 选题分析引擎，提供分类、策略分析、建议生成
+- `scripts/generate_excel.py`: 多工作表 Excel 报告生成器
+- `scripts/html_template.py`: HTML 报告模板生成器（复用现有样式）
+- `scripts/deploy_to_ghpages.py`: GitHub Pages 自动部署脚本
+- `scripts/push_wechat.py`: 增强微信推送，包含选题分布和建议
 
 ---
 
@@ -427,7 +376,7 @@ def push_to_wechat(token, title, content):
 - 微信推送: ✅ 已推送 / ⚠️ 未配置 Token，已跳过
 
 **TOP 3 爆文预览**:
-| 标题 | 点赞 | 粉丝 | 爆款指数 |
+| 标题 | 点赞 | 收藏 | 爆款指数 |
 |------|------|------|---------|
 | ... | ... | ... | ... |
 ```
@@ -448,7 +397,8 @@ def push_to_wechat(token, title, content):
 [搜索] 金融知识... 找到 22 条笔记
 [搜索] 财经... 找到 15 条笔记
 ...
-[筛选] 符合低粉爆文条件: 47 条
+[筛选] 符合高互动条件: 47 条
+[分析] 选题分析完成
 [生成] Excel 文件已保存
 [部署] GitHub Pages 仪表盘已更新
 [推送] 已发送至微信
@@ -516,7 +466,7 @@ def push_to_wechat(token, title, content):
 用户可以在指令中指定自定义阈值：
 
 ```
-搜索小红书爆文，粉丝上限5000，点赞下限500
+搜索小红书爆文，点赞下限500
 ```
 
 解析后覆盖默认值。
@@ -529,7 +479,7 @@ def push_to_wechat(token, title, content):
 
 - "帮我分析小红书财经爆文"
 - "小红书选题挖掘"
-- "找一些理财领域的低粉爆文"
+- "找一些理财领域的热门爆文"
 - "每日热点模式扫描小红书"
 - "财经猎手Pro模式深度挖掘"
 

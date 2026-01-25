@@ -182,3 +182,27 @@ python3 /Users/henry/.claude/skills/xiaohongshu-to-pdf/scripts/xhs_to_pdf.py \
 2. **xsec_token**: 从feed列表或笔记详情中获取
 3. **依赖库**: 需要安装 `reportlab` 和 `requests`
 4. **临时文件**: 使用后自动清理临时目录
+
+## User-Learned Best Practices & Constraints
+
+> **Auto-Generated Section**: This section is maintained by `skill-evolution-manager`. Do not edit manually.
+
+### User Preferences
+- Prefer urlDefault over urlPre for images.
+- 批量转换时需要实时进度反馈
+- 遇到错误时希望看到详细的失败原因
+- 希望能够跳过无法访问的笔记而不是中断整个流程
+- 批量处理应该先验证笔记可访问性再开始转换
+
+### Known Fixes & Workarounds
+- Fixed 403 Forbidden error when downloading images by adding Referer header.
+- Added PIL support for WebP to PNG conversion.
+- Preserve full image URLs for signature verification.
+- 批量转换脚本必须先通过MCP获取笔记数据，不能直接调用xhs_to_pdf.py
+- 图片大小限制需要同时控制宽度和高度：使用min(ratio_width, ratio_height)
+- 添加max_height = 20 * cm限制，防止图片过大导致PDF生成失败
+- 转换流程应该是：MCP获取数据 → 保存为JSON → 调用转换器 → 生成PDF
+
+### Custom Instruction Injection
+
+当用户要求批量转换小红书笔记时：1) 先使用webReader获取网页内容提取笔记列表 2) 使用mcp__xiaohongshu__search_feeds搜索笔记获取feed_id 3) 逐篇使用mcp__xiaohongshu__get_feed_detail获取详细数据 4) 保存为JSON文件 5) 调用convert_single_note.py转换 6) 提供详细的进度反馈和错误说明

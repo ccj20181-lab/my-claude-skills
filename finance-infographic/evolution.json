@@ -1,0 +1,14 @@
+{
+  "last_updated": "2026-01-24T12:29:46.506404",
+  "preferences": [
+    "macOS 用户需要使用 -o 参数指定输出目录，避免使用默认的 F:/ Windows 路径",
+    "生成后应主动打开输出文件夹让用户预览",
+    "单张图片需要重新生成时，只需传入对应的单个 md 文件"
+  ],
+  "fixes": [
+    "默认输出路径 F:/finance-infographics 是 Windows 格式，在 macOS 上会被当作相对路径创建",
+    "参考图内容可能残留到生成图中，需要在 prompt 中更强调只使用用户提供的文案内容",
+    "中文内容可能出现乱码，可能与字体渲染或 API 参数有关，重新生成通常可解决"
+  ],
+  "custom_prompts": "在 macOS 上使用时，建议添加 -o ~/Desktop/infographics 或其他有效路径参数"
+}
