@@ -1,4 +1,3 @@
-const { chromium } = require('playwright');
 const path = require('path');
 const fs = require('fs');
 const https = require('https');
@@ -12,7 +11,7 @@ const USER_AGENTS = [
 ];
 
 // 高防下载函数 (支持 HTTP 和 HTTPS)
-async function downloadFile(url, destPath, referer = '') {
+async function downloadFile(url, destPath, referer = '', retries = 3) {
   return new Promise((resolve, reject) => {
     const file = fs.createWriteStream(destPath);
     // 根据协议选择模块
@@ -22,21 +21,25 @@ async function downloadFile(url, destPath, referer = '') {
       headers: {
         'User-Agent': USER_AGENTS[Math.floor(Math.random() * USER_AGENTS.length)],
         'Referer': referer,
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/pdf',
         'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8'
       },
       timeout: 30000
     }, (response) => {
       // 处理重定向
-      if (response.statusCode === 301 || response.statusCode === 302) {
+      if (response.statusCode === 301 || response.statusCode === 302 || response.statusCode === 307 || response.statusCode === 308) {
         if (response.headers.location) {
-            console.log(`↪️ 正在重定向到: ${response.headers.location}`);
-            downloadFile(response.headers.location, destPath, referer).then(resolve).catch(reject);
-            return;
+          console.log(`↪️ 正在重定向到: ${response.headers.location}`);
+          file.close();
+          fs.unlinkSync(destPath);
+          downloadFile(response.headers.location, destPath, referer, retries).then(resolve).catch(reject);
+          return;
         }
       }
 
       if (response.statusCode !== 200) {
+        file.close();
+        fs.unlink(destPath, () => {});
         reject(new Error(`HTTP Status Code: ${response.statusCode}`));
         return;
       }
@@ -46,8 +49,33 @@ async function downloadFile(url, destPath, referer = '') {
         file.close(resolve);
       });
     }).on('error', (err) => {
-        fs.unlink(destPath, () => {});
+      file.close();
+      fs.unlink(destPath, () => {});
+
+      // 重试逻辑
+      if (retries > 0) {
+        console.log(`⚠️ 下载失败，剩余重试次数: ${retries - 1}`);
+        setTimeout(() => {
+          downloadFile(url, destPath, referer, retries - 1).then(resolve).catch(reject);
+        }, 1000);
+      } else {
         reject(err);
+      }
+    });
+
+    request.on('timeout', () => {
+      request.destroy();
+      file.close();
+      fs.unlink(destPath, () => {});
+
+      if (retries > 0) {
+        console.log(`⚠️ 下载超时，剩余重试次数: ${retries - 1}`);
+        setTimeout(() => {
+          downloadFile(url, destPath, referer, retries - 1).then(resolve).catch(reject);
+        }, 1000);
+      } else {
+        reject(new Error('Download timeout'));
+      }
     });
   });
 }
@@ -59,30 +87,21 @@ async function downloadFile(url, destPath, referer = '') {
   const targets = process.argv[2] ? JSON.parse(process.argv[2]) : [];
   const topic = process.argv[3] || '未分类报告';
 
-  // 基础下载路径 F:\研究报告下载
-  const baseDir = 'F:\\研究报告下载';
+  // 基础下载路径 - 跨平台兼容
+  const homeDir = require('os').homedir();
+  const baseDir = process.platform === 'win32'
+    ? 'F:\\研究报告下载'
+    : path.join(homeDir, 'Downloads', '研究报告下载');
   const downloadDir = path.join(baseDir, topic);
 
   // 确保目录存在
   if (!fs.existsSync(downloadDir)){
-      fs.mkdirSync(downloadDir, { recursive: true });
+    fs.mkdirSync(downloadDir, { recursive: true });
   }
 
-  console.log(`🚀 启动 Report Hunter 引擎...`);
+  console.log(`🚀 启动 Report Hunter 引擎 (HTTP Mode)...`);
   console.log(`📂 目标目录: ${downloadDir}`);
   console.log(`🎯 任务数量: ${targets.length}`);
-
-  const browser = await chromium.launch({
-      headless: false,
-      args: ['--disable-blink-features=AutomationControlled']
-  });
-
-  const context = await browser.newContext({
-      userAgent: USER_AGENTS[0],
-      viewport: { width: 1366, height: 768 },
-      acceptDownloads: true,
-      ignoreHTTPSErrors: true
-  });
 
   let successCount = 0;
   let failCount = 0;
@@ -95,40 +114,35 @@ async function downloadFile(url, destPath, referer = '') {
     const safeName = `[研报]_${item.title.replace(/[\\/:*?"<>|]/g, '_')}.pdf`;
     const savePath = path.join(downloadDir, safeName);
 
+    // 跳过已存在的文件
+    if (fs.existsSync(savePath)) {
+      const stats = fs.statSync(savePath);
+      if (stats.size > 2048) {
+        console.log(`⏭️ 文件已存在，跳过: ${safeName}`);
+        successCount++;
+        continue;
+      }
+    }
+
     try {
-        // 策略1: 浏览器原生下载
-        console.log(`trying 浏览器原生下载...`);
-        const page = await context.newPage();
+      // 直接使用 HTTP 下载
+      console.log(`📥 HTTP 强力下载中...`);
+      await downloadFile(item.url, savePath, item.url);
 
-        try {
-            const downloadPromise = page.waitForEvent('download', { timeout: 10000 });
-            await page.goto(item.url, { timeout: 25000, waitUntil: 'domcontentloaded' });
-            const download = await downloadPromise;
-            await download.saveAs(savePath);
-            console.log(`✅ [Browser] 下载成功: ${safeName}`);
-            successCount++;
-        } catch (browserError) {
-            console.log(`⚠️ 浏览器自动下载失败 (${browserError.message.split('\n')[0]}), 切换至 HTTP 强力模式...`);
+      const stats = fs.statSync(savePath);
+      if (stats.size < 2048) {
+        throw new Error("文件过小，可能下载失败");
+      }
 
-            // 策略2: Node.js 模拟请求下载
-            await downloadFile(item.url, savePath, item.url);
-
-            const stats = fs.statSync(savePath);
-            if (stats.size < 2048) throw new Error("文件过小");
-
-            console.log(`✅ [HTTP] 下载成功: ${safeName} (${(stats.size/1024).toFixed(2)} KB)`);
-            successCount++;
-        } finally {
-            await page.close();
-        }
+      console.log(`✅ 下载成功: ${safeName} (${(stats.size/1024).toFixed(2)} KB)`);
+      successCount++;
 
     } catch (e) {
-        console.error(`❌ 下载彻底失败: ${e.message}`);
-        failCount++;
-        if (fs.existsSync(savePath)) fs.unlinkSync(savePath);
+      console.error(`❌ 下载失败: ${e.message}`);
+      failCount++;
+      if (fs.existsSync(savePath)) fs.unlinkSync(savePath);
     }
   }
 
-  await browser.close();
   console.log(`\n🎉 任务汇总: 成功 ${successCount} / 失败 ${failCount}`);
 })();

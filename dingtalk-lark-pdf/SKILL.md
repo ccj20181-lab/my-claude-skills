@@ -2,7 +2,7 @@
 
 ## 功能概述
 
-这是一个专门用于将钉钉和飞书在线文档转换为 PDF 格式的工具。通过 Playwright 自动化浏览器操作，采用分屏截图+拼接方案，完美处理懒加载内容。
+这是一个专门用于将钉钉和飞书在线文档转换为 PDF 格式的工具。通过 **agent-browser** CLI 自动化浏览器操作，采用分屏截图+拼接方案，完美处理懒加载内容。
 
 ### 支持的平台
 
@@ -17,6 +17,7 @@
 - Python PIL 拼接长图
 - 高质量 PDF 输出
 - 支持自定义参数（屏数、滚动等待时间等）
+- **无需安装 Playwright/Chromium**（使用 agent-browser CLI）
 
 ## 技术方案
 
@@ -47,6 +48,7 @@
 
 - Node.js >= 18
 - Python 3.x (带 PIL/Pillow 库)
+- **agent-browser CLI**（已安装并可用）
 - macOS 或 Linux 系统
 
 ### 安装依赖
@@ -55,6 +57,9 @@
 cd ~/.claude/skills/dingtalk-lark-pdf
 npm install
 pip3 install Pillow
+
+# 确认 agent-browser 已安装
+which agent-browser
 ```
 
 ## 使用方法
@@ -127,7 +132,7 @@ node scripts/convert.js \
    └─> 访问主页获取 iframe src
 
 3. 初始化浏览器
-   └─> Playwright 启动 Chromium
+   └─> agent-browser 启动浏览器
    └─> 设置视口 1920x1080
 
 4. 分屏截图
@@ -143,6 +148,18 @@ node scripts/convert.js \
 ```
 
 ## 故障排查
+
+### 问题：agent-browser 未找到
+
+**症状**：报错 "agent-browser: command not found"
+
+**解决方案**：
+```bash
+# 确认 agent-browser 已安装
+which agent-browser
+
+# 如果未安装，请先安装 agent-browser skill
+```
 
 ### 问题：截图数量不足
 
@@ -196,13 +213,13 @@ node scripts/convert.js --url "..." --scroll-wait 5000 --initial-wait 20000
 ### 核心算法
 
 ```javascript
-// 固定滚动距离，不依赖高度检测
+// 使用 agent-browser CLI 进行滚动截图
 const viewportHeight = 1080;
 for (let i = 0; i < screenshotCount; i++) {
   const scrollY = viewportHeight * i;
-  await page.evaluate((y) => window.scrollTo(0, y), scrollY);
-  await page.waitForTimeout(scrollWait);
-  await page.screenshot({ path: `screenshot_${i}.png` });
+  runAgentBrowser(`eval "window.scrollTo(0, ${scrollY})"`);
+  runAgentBrowser(`wait ${scrollWait}`);
+  runAgentBrowser(`screenshot "${screenshotPath}"`);
 }
 ```
 
@@ -232,8 +249,11 @@ dingtalk-lark-pdf/
 
 ### Node.js 依赖
 
-- `playwright` (^1.57.0) - 浏览器自动化
 - `commander` (^11.0.0) - 命令行参数解析
+
+### 外部工具依赖
+
+- **agent-browser** - 浏览器自动化 CLI 工具
 
 ### Python 依赖
 
@@ -255,6 +275,18 @@ dingtalk-lark-pdf/
 - "alidocs.dingtalk.com"
 - "feishu.cn"
 
+## 版本历史
+
+### v2.0.0 (2025-01)
+
+- 🚀 迁移至 agent-browser CLI，移除 Playwright 依赖
+- 📦 大幅减少 node_modules 体积（约 100MB+）
+- 🔧 简化安装流程
+
+### v1.0.0
+
+- ✅ 初始版本，使用 Playwright
+
 ## 开发计划
 
 ### 已完成
@@ -265,6 +297,7 @@ dingtalk-lark-pdf/
 - ✅ PIL 拼接长图
 - ✅ PDF 转换
 - ✅ 平台自动检测
+- ✅ 迁移至 agent-browser
 
 ### 待验证
 

@@ -2,27 +2,59 @@
 
 /**
  * 截图拼接模块
- * 处理分屏滚动截图和拼接
+ * 使用 agent-browser CLI 进行分屏滚动截图和拼接
  */
 
-const { chromium } = require('playwright');
-const { execSync } = require('child_process');
+const { execSync, spawnSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
 /**
+ * 执行 agent-browser 命令
+ * @param {string} cmd - agent-browser 命令参数
+ * @param {object} options - 执行选项
+ * @returns {string} 命令输出
+ */
+function runAgentBrowser(cmd, options = {}) {
+  const { timeout = 60000, silent = false } = options;
+  try {
+    const result = execSync(`agent-browser ${cmd}`, {
+      encoding: 'utf-8',
+      timeout,
+      stdio: silent ? 'pipe' : 'inherit'
+    });
+    return result || '';
+  } catch (err) {
+    if (!silent) {
+      console.error(`⚠️ agent-browser 命令失败: ${cmd}`);
+      console.error(`   错误: ${err.message}`);
+    }
+    throw err;
+  }
+}
+
+/**
  * 提取 iframe URL（钉钉专用）
- * @param {Page} page - Playwright Page 对象
+ * @param {string} url - 页面 URL
  * @returns {string|null} iframe URL
  */
-async function extractIframeUrl(page) {
+async function extractIframeUrl(url) {
   try {
-    const iframeUrl = await page.evaluate(() => {
-      const iframe = document.querySelector('iframe');
-      return iframe ? iframe.src : null;
-    });
+    console.log('🔍 提取 iframe URL...');
 
-    if (!iframeUrl) {
+    // 打开页面
+    runAgentBrowser(`open "${url}"`, { silent: true });
+    runAgentBrowser('wait 5000', { silent: true });
+
+    // 执行 JS 获取 iframe src
+    const result = runAgentBrowser(
+      'eval "(() => { const iframe = document.querySelector(\'iframe\'); return iframe ? iframe.src : null; })()"',
+      { silent: true }
+    );
+
+    const iframeUrl = result.trim();
+
+    if (!iframeUrl || iframeUrl === 'null') {
       throw new Error('No iframe found in page');
     }
 
@@ -35,50 +67,41 @@ async function extractIframeUrl(page) {
 }
 
 /**
- * 查找飞书文档的实际内容容器
- * @param {Page} page - Playwright Page 对象
+ * 查找飞书文档的实际内容容器高度
  * @returns {object|null} 容器信息
  */
-async function findLarkContainer(page) {
+async function findLarkContainer() {
   try {
-    const container = await page.evaluate(() => {
-      // 查找包含主要内容的大型 div
-      const divs = Array.from(document.querySelectorAll('div'));
-      const largeDivs = divs.filter(div => {
-        const rect = div.getBoundingClientRect();
-        const scrollHeight = div.scrollHeight;
-        return scrollHeight > 2000 && rect.height > 500;
-      });
+    const result = runAgentBrowser(
+      `eval "(() => {
+        const divs = Array.from(document.querySelectorAll('div'));
+        const largeDivs = divs.filter(div => {
+          const rect = div.getBoundingClientRect();
+          const scrollHeight = div.scrollHeight;
+          return scrollHeight > 2000 && rect.height > 500;
+        });
+        largeDivs.sort((a, b) => b.scrollHeight - a.scrollHeight);
+        if (largeDivs.length > 0) {
+          const container = largeDivs[0];
+          return JSON.stringify({
+            scrollHeight: container.scrollHeight,
+            clientHeight: container.clientHeight
+          });
+        }
+        return null;
+      })()"`,
+      { silent: true }
+    );
 
-      // 找到 scrollHeight 最大的
-      largeDivs.sort((a, b) => b.scrollHeight - a.scrollHeight);
-
-      if (largeDivs.length > 0) {
-        const container = largeDivs[0];
-        const rect = container.getBoundingClientRect();
-        return {
-          className: container.className,
-          scrollHeight: container.scrollHeight,
-          clientHeight: container.clientHeight,
-          offsetHeight: container.offsetHeight,
-          rect: {
-            height: rect.height,
-            width: rect.width,
-            top: rect.top,
-          }
-        };
-      }
-
-      return null;
-    });
-
-    if (container) {
+    if (result && result.trim() !== 'null') {
+      const container = JSON.parse(result.trim());
       console.log(`✓ 找到飞书内容容器: scrollHeight=${container.scrollHeight}px`);
+      return container;
     }
 
-    return container;
+    return null;
   } catch (err) {
-    console.warn('⚠️  查找容器失败:', err.message);
+    console.warn('⚠️ 查找容器失败:', err.message);
     return null;
   }
 }
@@ -106,33 +129,26 @@ async function captureScreenshots(url, options = {}) {
   console.log(`   滚动等待: ${scrollWait}ms`);
   console.log(`   初始等待: ${initialWait}ms\n`);
 
-  const browser = await chromium.launch({
-    headless: true,
-  });
-
-  const context = await browser.newContext({
-    viewport: { width: viewportWidth, height: viewportHeight },
-  });
-
-  const page = await context.newPage();
   const screenshotFiles = [];
   let larkContainer = null;
 
   try {
+    // 设置视口
+    runAgentBrowser(`set viewport ${viewportWidth} ${viewportHeight}`, { silent: true });
+
     // 访问页面
     console.log(`🌐 访问页面: ${url}`);
-    await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
+    runAgentBrowser(`open "${url}"`, { timeout: 120000 });
 
     // 等待初始加载
     console.log(`⏳ 等待页面加载 (${initialWait}ms)`);
-    await page.waitForTimeout(initialWait);
+    runAgentBrowser(`wait ${initialWait}`, { silent: true });
 
     // 飞书文档需要特殊处理
     if (platform === 'lark') {
-      larkContainer = await findLarkContainer(page);
+      larkContainer = await findLarkContainer();
       if (larkContainer) {
         console.log(`📦 容器高度: ${larkContainer.scrollHeight}px`);
-        // 根据实际高度计算需要截取的屏数
         const estimatedScreens = Math.ceil(larkContainer.scrollHeight / viewportHeight);
         console.log(`📊 估计需要屏数: ${estimatedScreens}`);
       }
@@ -147,27 +163,24 @@ async function captureScreenshots(url, options = {}) {
       // 滚动到指定位置
       if (platform === 'lark' && larkContainer) {
         // 飞书文档：滚动容器
-        await page.evaluate((y) => {
-          // 查找并滚动容器
-          const container = document.querySelector('.page-main.docx-width-mode-standard');
-          if (container) {
-            container.scrollTop = y;
-          }
-        }, scrollY);
+        runAgentBrowser(
+          `eval "(() => {
+            const container = document.querySelector('.page-main.docx-width-mode-standard');
+            if (container) container.scrollTop = ${scrollY};
+          })()"`,
+          { silent: true }
+        );
       } else {
         // 钉钉文档：滚动 window
-        await page.evaluate((y) => window.scrollTo(0, y), scrollY);
+        runAgentBrowser(`eval "window.scrollTo(0, ${scrollY})"`, { silent: true });
       }
 
       // 等待渲染
-      await page.waitForTimeout(scrollWait);
+      runAgentBrowser(`wait ${scrollWait}`, { silent: true });
 
       // 截图
       const screenshotPath = path.join(tempDir, `screenshot_${i}.png`);
-      await page.screenshot({
-        path: screenshotPath,
-        fullPage: false,
-      });
+      runAgentBrowser(`screenshot "${screenshotPath}"`, { silent: true });
 
       screenshotFiles.push(screenshotPath);
     }
@@ -178,7 +191,12 @@ async function captureScreenshots(url, options = {}) {
     console.error('✗ 截图失败:', err.message);
     throw err;
   } finally {
-    await browser.close();
+    // 关闭浏览器
+    try {
+      runAgentBrowser('close', { silent: true });
+    } catch (e) {
+      // 忽略关闭错误
+    }
   }
 }
 

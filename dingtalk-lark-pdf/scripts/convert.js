@@ -2,21 +2,23 @@
 
 /**
  * 钉钉/飞书文档转 PDF 主脚本
+ * 使用 agent-browser CLI 进行浏览器自动化
  */
 
 const { program } = require('commander');
+const { execSync } = require('child_process');
 const path = require('path');
 const fs = require('fs');
 
 const { detectPlatform, getPlatformConfig, isValidUrl } = require('./detect-platform');
 const { extractTitleFromUrl, generateOutputPath, ensureDir, formatFileSize } = require('./utils');
-const { screenshotToPdf, extractIframeUrl, chromium } = require('./screenshot');
+const { screenshotToPdf, extractIframeUrl } = require('./screenshot');
 
 // 配置命令行参数
 program
   .name('dingtalk-lark-pdf')
-  .description('钉钉/飞书文档转 PDF 工具')
-  .version('1.0.0')
+  .description('钉钉/飞书文档转 PDF 工具 (使用 agent-browser)')
+  .version('2.0.0')
   .requiredOption('-u, --url <url>', '文档 URL')
   .requiredOption('-o, --output <dir>', '输出目录')
   .option('-p, --platform <type>', '平台类型 (dingtalk/lark/auto)', 'auto')
@@ -29,10 +31,79 @@ program
 const options = program.opts();
 
 /**
+ * 执行 agent-browser 命令
+ * @param {string} cmd - agent-browser 命令参数
+ * @param {object} opts - 执行选项
+ * @returns {string} 命令输出
+ */
+function runAgentBrowser(cmd, opts = {}) {
+  const { timeout = 60000, silent = false } = opts;
+  try {
+    const result = execSync(`agent-browser ${cmd}`, {
+      encoding: 'utf-8',
+      timeout,
+      stdio: silent ? 'pipe' : 'inherit'
+    });
+    return result || '';
+  } catch (err) {
+    if (!silent) {
+      console.error(`⚠️ agent-browser 命令失败: ${cmd}`);
+    }
+    throw err;
+  }
+}
+
+/**
+ * 使用 agent-browser 提取 iframe URL
+ * @param {string} url - 页面 URL
+ * @returns {string|null} iframe URL
+ */
+async function extractIframeWithAgentBrowser(url) {
+  try {
+    console.log('🔍 检测钉钉文档 iframe 结构...');
+
+    // 打开页面
+    runAgentBrowser(`open "${url}"`, { silent: true, timeout: 120000 });
+    runAgentBrowser('wait 5000', { silent: true });
+
+    // 执行 JS 获取 iframe src
+    const result = runAgentBrowser(
+      'eval "(() => { const iframe = document.querySelector(\'iframe\'); return iframe ? iframe.src : null; })()"',
+      { silent: true }
+    );
+
+    // 关闭浏览器
+    try {
+      runAgentBrowser('close', { silent: true });
+    } catch (e) {
+      // 忽略关闭错误
+    }
+
+    const iframeUrl = result.trim();
+
+    if (iframeUrl && iframeUrl !== 'null') {
+      console.log(`✓ 提取到 iframe URL: ${iframeUrl}\n`);
+      return iframeUrl;
+    }
+
+    return null;
+  } catch (err) {
+    console.warn(`⚠️ 提取 iframe 失败: ${err.message}\n`);
+    // 确保浏览器关闭
+    try {
+      runAgentBrowser('close', { silent: true });
+    } catch (e) {
+      // 忽略
+    }
+    return null;
+  }
+}
+
+/**
  * 主函数
  */
 async function main() {
-  console.log('\n🚀 钉钉/飞书文档转 PDF 工具');
+  console.log('\n🚀 钉钉/飞书文档转 PDF 工具 (agent-browser 版)');
   console.log('================================\n');
 
   // 1. 验证 URL
@@ -77,25 +148,10 @@ async function main() {
   // 6. 处理钉钉 iframe
   let targetUrl = options.url;
   if (platform === 'dingtalk' && config.hasIframe) {
-    console.log('🔍 检测钉钉文档 iframe 结构...');
-
-    const browser = await chromium.launch({ headless: true });
-    const page = await browser.newPage();
-
-    try {
-      await page.goto(options.url, { waitUntil: 'domcontentloaded', timeout: 60000 });
-      await page.waitForTimeout(5000);
-
-      const iframeUrl = await extractIframeUrl(page);
-      if (iframeUrl) {
-        targetUrl = iframeUrl;
-        console.log(`✓ 使用 iframe URL\n`);
-      }
-
-      await browser.close();
-    } catch (err) {
-      console.warn(`⚠️  提取 iframe 失败，使用原 URL: ${err.message}\n`);
-      await browser.close();
+    const iframeUrl = await extractIframeWithAgentBrowser(options.url);
+    if (iframeUrl) {
+      targetUrl = iframeUrl;
+      console.log(`✓ 使用 iframe URL\n`);
     }
   }
 
@@ -131,10 +187,11 @@ async function main() {
   } catch (err) {
     console.error('\n❌ 转换失败:', err.message);
     console.error('\n💡 故障排查:');
-    console.error('   1. 检查网络连接');
-    console.error('   2. 确认文档访问权限');
-    console.error('   3. 尝试增加 --screenshots 数量');
-    console.error('   4. 尝试增加 --scroll-wait 和 --initial-wait 时间');
+    console.error('   1. 确认 agent-browser 已安装: which agent-browser');
+    console.error('   2. 检查网络连接');
+    console.error('   3. 确认文档访问权限');
+    console.error('   4. 尝试增加 --screenshots 数量');
+    console.error('   5. 尝试增加 --scroll-wait 和 --initial-wait 时间');
     console.error('');
     process.exit(1);
   }

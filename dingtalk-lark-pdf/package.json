@@ -1,8 +1,11 @@
 {
   "name": "dingtalk-lark-pdf",
-  "version": "1.0.0",
-  "description": "钉钉/飞书文档转 PDF 工具 - 支持自动分屏截图和拼接",
+  "version": "2.0.0",
+  "description": "钉钉/飞书文档转 PDF 工具 - 使用 agent-browser CLI 进行分屏截图和拼接",
   "main": "scripts/convert.js",
+  "bin": {
+    "dingtalk-lark-pdf": "scripts/convert.js"
+  },
   "scripts": {
     "convert": "node scripts/convert.js",
     "test": "node scripts/convert.js --help"
@@ -14,15 +17,17 @@
     "pdf",
     "converter",
     "screenshot",
-    "playwright"
+    "agent-browser"
   ],
   "author": "Henry",
   "license": "MIT",
   "dependencies": {
-    "playwright": "^1.57.0",
     "commander": "^11.0.0"
   },
   "engines": {
     "node": ">=18.0.0"
+  },
+  "peerDependencies": {
+    "agent-browser": "*"
   }
 }
