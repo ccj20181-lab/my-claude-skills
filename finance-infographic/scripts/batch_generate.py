@@ -1,102 +1,89 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-import sys, io, os, base64, time
+"""
+⚠️ 已废弃：此脚本已废弃，请使用 main.py
+
+批量生成财经信息图 - 旧版兼容脚本
+此脚本保留仅用于向后兼容，新功能请使用 scripts/main.py
+
+推荐用法：
+    python scripts/main.py "content/主题.md" --topic "主题名"
+"""
+import sys
+import warnings
 from pathlib import Path
-import requests
-from dotenv import load_dotenv
 
-if sys.platform == 'win32':
-    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
-    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
+# Show deprecation warning
+warnings.warn(
+    "\n" + "="*60 + "\n"
+    "⚠️  batch_generate.py 已废弃！\n"
+    "请使用 main.py 作为主入口脚本。\n"
+    "\n"
+    "新用法：\n"
+    "  python scripts/main.py \"file.md\" --topic \"主题\"\n"
+    "="*60,
+    DeprecationWarning,
+    stacklevel=2
+)
 
-OUTPUT_DIR = 'F:/finance-infographics'
+# Add project root to path
+current_file = Path(__file__).resolve()
+project_root = current_file.parent.parent
+sys.path.insert(0, str(project_root))
 
-def get_api_config(api_choice='nanobanana'):
-    load_dotenv(Path(__file__).parent.parent / '.env')
-    if api_choice == 'google':
-        api_key = os.environ.get('GOOGLE_API_KEY', '').strip()
-        api_url = os.environ.get('GOOGLE_API_URL', '').strip()
-    else:
-        api_key = os.environ.get('NANO_BANANA_API_KEY', '').strip()
-        api_url = os.environ.get('NANO_BANANA_API_URL', '').strip()
-    if api_key and api_url:
-        return api_url, api_key
-    raise ValueError('API not configured')
-
-def get_reference_images():
-    ref_dir = Path(__file__).parent.parent / 'references'
-    images = []
-    for img_path in ref_dir.glob('*.png'):
-        with open(img_path, 'rb') as f:
-            b64 = base64.b64encode(f.read()).decode('utf-8')
-            images.append({'mimeType': 'image/png', 'data': b64})
-    return images
-
-def generate(content, api_url, api_key, main_title):
-    # 极简提示词：只告诉AI任务类型和内容
-    prompt = '[IMAGE GENERATION TASK] Create a new infographic with this content. Match the style of the reference image exactly.'
-    if main_title:
-        prompt = '[IMAGE GENERATION TASK] Title: ' + main_title + '. Create new infographic with content below. Match reference style exactly.'
-    prompt = prompt + chr(10) + chr(10) + content
-    
-    parts = []
-    for img in get_reference_images():
-        parts.append({'inlineData': img})
-    parts.append({'text': prompt})
-    
-    payload = {'contents': [{'parts': parts}], 'generationConfig': {'responseModalities': ['IMAGE'], 'imageConfig': {'aspectRatio': '3:4', 'imageSize': '4K'}}}
-    
-    try:
-        r = requests.post(api_url, headers={'Content-Type': 'application/json', 'Authorization': 'Bearer ' + api_key}, json=payload, timeout=180)
-        r.raise_for_status()
-        data = r.json()
-        if 'candidates' in data:
-            for p in data['candidates'][0].get('content', {}).get('parts', []):
-                if 'inlineData' in p:
-                    return base64.b64decode(p['inlineData'].get('data', ''))
-    except Exception as e:
-        print('  [ERROR] ' + str(e))
-    return None
+from src.config import Config
+from src.session import Session
+from src.workflow import Workflow
+from src.utils import logger
 
 def main():
     import argparse
-    parser = argparse.ArgumentParser(description='批量生成财经信息图')
+
+    parser = argparse.ArgumentParser(
+        description='[已废弃] 批量生成财经信息图 - 请使用 main.py',
+        epilog='⚠️ 此脚本已废弃，建议使用: python scripts/main.py'
+    )
     parser.add_argument('md_files', nargs='+', help='md 文件路径列表')
-    parser.add_argument('-r', '--resolution', default='2K', choices=['1K', '2K', '4K'], help='分辨率')
-    parser.add_argument('--api', default='nanobanana', choices=['google', 'nanobanana'], help='API 选择')
-    parser.add_argument('--topic', default='default', help='主题名称（创建文件夹）')
+    parser.add_argument('-r', '--resolution', default='4K', choices=['1K', '2K', '4K'], help='分辨率')
+    parser.add_argument('--api', '--provider', dest='provider', default=None,
+                        choices=['google', 'nanobanana'], help='API 选择')
+    parser.add_argument('--topic', '-t', default='default', help='主题名称（创建文件夹）')
     parser.add_argument('--titles', nargs='+', help='主标题列表（与md文件对应）')
-    parser.add_argument('-o', '--output', default=OUTPUT_DIR, help='输出目录')
-    parser.add_argument('--interactive', action='store_true', help='交互式模式')
+    parser.add_argument('-o', '--output', default=None, help='输出目录')
+    parser.add_argument('--interactive', '-i', action='store_true', help='交互式模式')
+    parser.add_argument('--debug', action='store_true', help='开启调试日志')
+
     args = parser.parse_args()
 
-    api_url, api_key = get_api_config(args.api)
-    md_files = args.md_files
-    topic = args.topic
-    titles = args.titles if args.titles else [Path(f).stem for f in md_files]
+    if args.debug:
+        logger.setLevel('DEBUG')
 
-    # 确保 titles 和 md_files 数量一致
-    if len(titles) < len(md_files):
-        titles = titles + [Path(f).stem for f in md_files[len(titles):]]
+    try:
+        # Load config
+        config = Config.load()
 
-    output_dir = Path(args.output) / topic
-    output_dir.mkdir(parents=True, exist_ok=True)
-    ts = time.strftime('%Y%m%d_%H%M%S')
+        # Override with CLI args
+        if args.provider:
+            config.api.provider = args.provider
+        if args.output:
+            config.output.base_dir = args.output
+        if args.resolution:
+            config.output.resolution = args.resolution
 
-    print('Generate ' + str(len(md_files)) + ' images...')
-    for i, md_file in enumerate(md_files):
-        title = titles[i] if i < len(titles) else Path(md_file).stem
-        print('[ ' + str(i+1) + '/' + str(len(md_files)) + ' ] ' + title)
-        content = Path(md_file).read_text(encoding='utf-8')
-        data = generate(content, api_url, api_key, title)
-        if data:
-            path = output_dir / ('infographic_' + ts + '_' + format(i, '03d') + '.png')
-            path.write_bytes(data)
-            print('  [OK] ' + str(path))
-        else:
-            print('  [FAIL]')
-        time.sleep(0.5)
-    print('Done!')
+        # Initialize session and workflow
+        session = Session(args.topic, config)
+        workflow = Workflow(config, session)
+
+        # Run
+        md_paths = [Path(f).resolve() for f in args.md_files]
+        workflow.run(md_paths, args.titles, args.interactive)
+
+    except Exception as e:
+        logger.error(f"Fatal error: {e}")
+        if args.debug:
+            import traceback
+            traceback.print_exc()
+        sys.exit(1)
 
 if __name__ == '__main__':
     main()
