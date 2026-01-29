@@ -1,7 +1,0 @@
-{
-  "xiaohongshu": {
-    "type": "stdio",
-    "command": "xiaohongshu-mcp",
-    "args": []
-  }
-}

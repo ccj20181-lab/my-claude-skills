@@ -97,6 +97,11 @@
       "enabled": true,
       "installed": true
     }
+    {
+      "name": "whiteboard-video-gen",
+      "enabled": true,
+      "installed": true
+    }
   ],
   "settings": {
     "auto_activate": false,

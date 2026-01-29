@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "id": "test-video",
+    "title": "测试视频",
+    "duration": 10,
+    "author": "浮浮酱",
+    "createdAt": "2026-01-26"
+  },
+  "scenes": [
+    {
+      "index": 1,
+      "type": "hook",
+      "title": "开场钩子",
+      "duration": 5,
+      "narration": "你好，这是一个测试视频。",
+      "visual": "小明向大家挥手，背景是简单的几何图形。",
+      "assets": [
+        {
+          "name": "xiaoming_waving",
+          "description": "小明挥手，开心",
+          "exists": false
+        },
+        {
+          "name": "bg_geometry",
+          "description": "几何图形背景",
+          "exists": false
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "type": "concept",
+      "title": "概念解释",
+      "duration": 5,
+      "narration": "我们正在测试自动化生成流程。",
+      "visual": "一个机器人正在画画。",
+      "assets": [
+        {
+          "name": "robot_painting",
+          "description": "机器人拿着画笔",
+          "exists": true
+        }
+      ]
+    }
+  ],
+  "rawContent": "---\nid: test-video\ntitle: 测试视频\nduration: 10\nauthor: 浮浮酱\n---\n\n## 开场钩子\n时长：5秒\n文案：\"你好，这是一个测试视频。\"\n画面：小明向大家挥手，背景是简单的几何图形。\n素材：\n- xiaoming_waving (小明挥手，开心)\n- bg_geometry (几何图形背景)\n\n## 概念解释\n时长：5秒\n文案：\"我们正在测试自动化生成流程。\"\n画面：一个机器人正在画画。\n素材：\n- robot_painting (机器人拿着画笔) [已存在]\n"
+}

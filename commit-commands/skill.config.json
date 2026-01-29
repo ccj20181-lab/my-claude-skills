@@ -1,0 +1,11 @@
+{
+  "name": "commit-commands",
+  "description": "Claude官方Skill - commit-commands",
+  "category": "official",
+  "author": "Anthropic",
+  "enabled": true,
+  "auto_activate": false,
+  "installed_at": "2026-01-08T02:59:15Z",
+  "source": "GitHub Repository",
+  "github_url": "https://github.com/anthropics/claude-code/tree/main/plugins/commit-commands"
+}

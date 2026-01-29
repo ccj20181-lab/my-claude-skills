@@ -1,0 +1,9 @@
+{
+  "name": "whiteboard-hand",
+  "description": "Hand-drawn whiteboard animation style with pop-up effects. Perfect for educational and explainer videos.",
+  "width": 1080,
+  "height": 1440,
+  "fps": 30,
+  "defaultDuration": 30,
+  "tags": ["education", "explainer", "whiteboard", "vertical"]
+}

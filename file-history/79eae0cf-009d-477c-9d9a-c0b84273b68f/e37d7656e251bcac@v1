@@ -1,8 +1,0 @@
-{
-  "name": "xiaohongshu",
-  "description": "小红书 MCP 集成 - 提供搜索、用户信息、笔记详情等功能",
-  "author": {
-    "name": "xpzouying",
-    "url": "https://github.com/xpzouying/xiaohongshu-mcp"
-  }
-}

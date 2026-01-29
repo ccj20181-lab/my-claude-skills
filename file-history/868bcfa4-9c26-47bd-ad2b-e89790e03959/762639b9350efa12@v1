@@ -1,8 +1,0 @@
-{
-  "name": "chrome-devtools",
-  "displayName": "Chrome DevTools",
-  "description": "Chrome DevTools MCP server for browser inspection and debugging",
-  "version": "1.0.0",
-  "author": "Custom Plugin",
-  "type": "mcp"
-}

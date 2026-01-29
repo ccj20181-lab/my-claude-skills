@@ -1,7 +1,0 @@
-{
-  "name": "macos-cleaner",
-  "version": "1.0.0",
-  "description": "Analyze and reclaim macOS disk space through intelligent cleanup recommendations",
-  "enabled": true,
-  "installed": true
-}

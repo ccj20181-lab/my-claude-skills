@@ -1,0 +1,41 @@
+{
+  "videoId": "test-video",
+  "generatedAt": "2026-01-26T02:37:24.291Z",
+  "totalCount": 3,
+  "existsCount": 3,
+  "missingCount": 0,
+  "assets": [
+    {
+      "id": "xiaoming_waving",
+      "category": "icon",
+      "name": "xiaoming_waving",
+      "description": "小明挥手，开心",
+      "status": "exists",
+      "existingPath": "/Users/henry/.claude/skills/whiteboard-video-gen/test-video-project/public/assets/generated/test-video/xiaoming_waving.png",
+      "usedInScenes": [
+        "scene-1"
+      ]
+    },
+    {
+      "id": "bg_geometry",
+      "category": "background",
+      "name": "bg_geometry",
+      "description": "几何图形背景",
+      "status": "exists",
+      "existingPath": "/Users/henry/.claude/skills/whiteboard-video-gen/test-video-project/public/assets/generated/test-video/bg_geometry.png",
+      "usedInScenes": [
+        "scene-1"
+      ]
+    },
+    {
+      "id": "robot_painting",
+      "category": "icon",
+      "name": "robot_painting",
+      "description": "机器人拿着画笔",
+      "status": "exists",
+      "usedInScenes": [
+        "scene-2"
+      ]
+    }
+  ]
+}

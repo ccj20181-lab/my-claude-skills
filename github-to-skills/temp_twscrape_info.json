@@ -1,0 +1,7 @@
+{
+  "name": "twscrape",
+  "url": "https://github.com/vladkens/twscrape",
+  "latest_hash": "341c2f4701d552b491e6820d6ddec8a21139a98c",
+  "readme": "Twitter GraphQL API implementation with SNScrape data models. Support both Search & GraphQL Twitter API. Async/Await functions. Login flow. Saving/restoring account sessions. Automatic account switching.",
+  "description": "Twitter/X scraper using GraphQL API with account management"
+}

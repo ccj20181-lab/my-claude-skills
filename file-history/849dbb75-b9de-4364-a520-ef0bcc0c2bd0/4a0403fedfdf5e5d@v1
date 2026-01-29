@@ -1,7 +1,0 @@
-{
-  "mcpServers": {
-    "xiaohongshu": {
-      "url": "http://localhost:18060/mcp"
-    }
-  }
-}

@@ -1,0 +1,22 @@
+{
+  "name": "whiteboard-video-gen",
+  "version": "1.0.0",
+  "description": "Turn Markdown scripts into hand-drawn whiteboard videos with Remotion and Gemini",
+  "main": "index.ts",
+  "bin": {
+    "whiteboard-video-gen": "./index.ts"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.0.0",
+    "dotenv": "^16.4.5",
+    "fs-extra": "^11.2.0",
+    "ora": "^8.0.1",
+    "tsx": "^4.7.1",
+    "zod": "^3.22.4"
+  }
+}

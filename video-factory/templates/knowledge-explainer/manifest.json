@@ -1,0 +1,11 @@
+{
+  "name": "knowledge-explainer",
+  "description": "Financial concept explainer with 3:4 aspect ratio (Miaodong style)",
+  "version": "1.0.0",
+  "meta": {
+    "width": 1080,
+    "height": 1440,
+    "fps": 30,
+    "default_duration": 45
+  }
+}
