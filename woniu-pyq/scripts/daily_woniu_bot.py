@@ -113,28 +113,37 @@ def generate_copy(client, copy_type, style_guide, random_elements):
         print(f"[错误] 生成 {copy_type} 失败: {e}")
         return f"生成失败: {e}"
 
-def send_pushplus(token, title, content):
-    """发送 PushPlus 通知"""
-    url = "http://www.pushplus.plus/send"
-
-    # 简单的 HTML 格式化
-    html_content = content.replace("\n", "<br>")
-
-    payload = {
-        "token": token,
-        "title": title,
-        "content": html_content,
-        "template": "html"
-    }
-
-    try:
-        resp = requests.post(url, json=payload, timeout=10)
-        resp.raise_for_status()
-        print(f"[推送] {resp.json()}")
-        return True
-    except Exception as e:
-        print(f"[错误] 推送失败: {e}")
-        return False
+def format_as_card(title, content):
+    """
+    将内容格式化为精美的卡片样式 (HTML)
+    使用 white-space: pre-wrap 保留换行，方便复制
+    """
+    return f"""
+    <div style="
+        background-color: #f8f9fa;
+        border: 1px solid #e9ecef;
+        border-radius: 8px;
+        padding: 15px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    ">
+        <h3 style="
+            color: #495057;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 16px;
+            border-bottom: 2px solid #6c757d;
+            padding-bottom: 5px;
+        ">{title}</h3>
+        <div style="
+            color: #212529;
+            font-size: 14px;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        ">{content}</div>
+    </div>
+    """
 
 def main():
     print("启动蜗牛朋友圈文案生成器...")
@@ -154,27 +163,60 @@ def main():
 
     # 生成三篇文案
     today = datetime.now(pytz.timezone('Asia/Shanghai')).strftime('%Y-%m-%d')
-    results = []
+
+    # 开始构建 HTML 邮件体
+    full_html = f"""
+    <div style="padding: 10px; max-width: 600px; margin: 0 auto;">
+        <h2 style="text-align: center; color: #333;">📅 {today} 蜗牛文案备选</h2>
+        <p style="text-align: center; color: #666; font-size: 12px;">长按卡片内容即可复制</p>
+    """
 
     types = ["反馈篇", "上岸篇", "报名篇"]
-    full_text = f"📅 {today} 蜗牛朋友圈文案备选\n\n"
 
     for t in types:
         print(f"正在生成 {t}...")
         copy = generate_copy(client, t, style_guide, random_elements)
-        results.append({"type": t, "content": copy})
 
-        full_text += f"➖➖➖➖ {t} ➖➖➖➖\n"
-        full_text += copy + "\n\n"
+        # 将每一篇生成的内容包装成卡片
+        full_html += format_as_card(f"🐌 {t}", copy)
         print(f"✅ {t} 生成完毕")
 
-    # 输出到控制台
-    print("\n" + "="*20 + "\n" + full_text + "\n" + "="*20)
+    full_html += """
+        <div style="text-align: center; margin-top: 30px; font-size: 12px; color: #aaa;">
+            - End of Daily Digest -
+        </div>
+    </div>
+    """
+
+    # 输出到控制台 (为了调试，这里打印纯文本摘要)
+    print("\n" + "="*20 + "\nHTML Content Generated (" + str(len(full_html)) + " chars)\n" + "="*20)
 
     # 推送
     if pushplus_token:
         title = f"🐌 蜗牛文案 {today} (3条)"
-        send_pushplus(pushplus_token, title, full_text)
+        # 直接发送构建好的 HTML，不需要再做 replace("\n", "<br>")
+        send_pushplus(pushplus_token, title, full_html)
+
+def send_pushplus(token, title, content):
+    """发送 PushPlus 通知 (HTML模式)"""
+    url = "http://www.pushplus.plus/send"
+
+    # content 已经是完整的 HTML 字符串了，不需要再处理
+    payload = {
+        "token": token,
+        "title": title,
+        "content": content,
+        "template": "html"
+    }
+
+    try:
+        resp = requests.post(url, json=payload, timeout=10)
+        resp.raise_for_status()
+        print(f"[推送] {resp.json()}")
+        return True
+    except Exception as e:
+        print(f"[错误] 推送失败: {e}")
+        return False
 
 if __name__ == "__main__":
     main()
