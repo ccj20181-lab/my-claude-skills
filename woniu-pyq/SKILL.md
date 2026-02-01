@@ -568,3 +568,20 @@ description: 蜗牛朋友圈文案生成器。专门生成蜗牛老师风格的�
 ---
 
 **更新说明**：此功能于2026年1月添加，用于增强自由发挥模式的真实性和完整性。
+
+## 🤖 每日自动推送功能 (Daily Auto-Push)
+
+本技能现已支持 GitHub Actions 每日自动运行，每天早上 06:00 自动生成 3 条朋友圈文案（上岸篇、反馈篇、报名篇各一条）并推送到您的微信。
+
+### 配置步骤
+
+1. **获取 PushPlus Token**:
+   - 访问 [PushPlus](http://www.pushplus.plus/) 注册并获取 Token。
+
+2. **配置 GitHub Secrets**:
+   在您的 GitHub 仓库设置中添加以下 Secrets：
+   - `ANTHROPIC_AUTH_TOKEN`: 您的智谱/Claude API Key (Base URL 默认为 https://open.bigmodel.cn/api/anthropic)
+   - `PUSHPLUS_TOKEN`: 您的 PushPlus Token
+
+3. **启用 Workflow**:
+   推送到 GitHub 后，Actions 会自动按照计划运行。您也可以在 "Actions" 标签页手动触发 `Woniu Daily Moments Push`。
