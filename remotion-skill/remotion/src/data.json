@@ -1,0 +1,464 @@
+{
+  "meta": {
+    "topic": "ETF基金",
+    "title": "ETF到底是个啥？一个视频让你秒懂！",
+    "fps": 30,
+    "width": 1080,
+    "height": 1440
+  },
+  "scenes": [
+    {
+      "id": "scene_01",
+      "type": "hook",
+      "text": "你知道吗？有一种投资工具，买一份就等于买了一篮子股票，还能像炒股一样随时交易！",
+      "duration": 6.336,
+      "character": {
+        "type": "surprised",
+        "path": null
+      },
+      "icon": {
+        "name": "stock",
+        "path": "assets/icons/股票投资_白板手绘.png"
+      },
+      "extra_icons": [
+        {
+          "name": "stock_up",
+          "path": "assets/icons/上升趋势箭头_白板手绘.png"
+        },
+        {
+          "name": "money",
+          "path": "assets/icons/金币堆_白板手绘.png"
+        },
+        {
+          "name": "chart",
+          "path": "assets/icons/K线图_白板手绘.png"
+        },
+        {
+          "name": "company",
+          "path": "assets/icons/办公楼_白板手绘.png"
+        }
+      ],
+      "audio": {
+        "path": "audio/scene_01.mp3",
+        "duration_ms": 6336,
+        "word_timestamps": null
+      }
+    },
+    {
+      "id": "scene_02",
+      "type": "title",
+      "text": "今天咱们就来聊聊这个神奇的东西——ETF基金！",
+      "duration": 3.216,
+      "character": {
+        "type": "waving",
+        "path": null
+      },
+      "icon": {
+        "name": "chart",
+        "path": "assets/icons/K线图_白板手绘.png"
+      },
+      "extra_icons": [
+        {
+          "name": "trend",
+          "path": "assets/icons/股票投资_白板手绘.png"
+        },
+        {
+          "name": "stock",
+          "path": "assets/icons/股票投资_白板手绘.png"
+        }
+      ],
+      "audio": {
+        "path": "audio/scene_02.mp3",
+        "duration_ms": 3216,
+        "word_timestamps": null
+      }
+    },
+    {
+      "id": "scene_03",
+      "type": "question",
+      "text": "ETF到底是什么呢？全称叫交易型开放式指数基金。听起来很复杂对吧？别急，咱们慢慢拆解。",
+      "duration": 7.728,
+      "character": {
+        "type": "thinking",
+        "path": null
+      },
+      "icon": {
+        "name": "money",
+        "path": "assets/icons/金币堆_白板手绘.png"
+      },
+      "extra_icons": [
+        {
+          "name": "risk",
+          "path": "assets/icons/风险管理_白板手绘.png"
+        },
+        {
+          "name": "company",
+          "path": "assets/icons/办公楼_白板手绘.png"
+        },
+        {
+          "name": "chart",
+          "path": "assets/icons/K线图_白板手绘.png"
+        }
+      ],
+      "audio": {
+        "path": "audio/scene_03.mp3",
+        "duration_ms": 7728,
+        "word_timestamps": null
+      }
+    },
+    {
+      "id": "scene_04",
+      "type": "analogy",
+      "text": "你可以把ETF想象成一个超市购物车。基金经理帮你把各种优质股票都装进这个购物车里，比如沪深300ETF就装了300家最优秀的公司。",
+      "duration": 10.344,
+      "character": {
+        "type": "pointing",
+        "path": null
+      },
+      "icon": {
+        "name": "company",
+        "path": "assets/icons/办公楼_白板手绘.png"
+      },
+      "extra_icons": [
+        {
+          "name": "wallet",
+          "path": "assets/icons/钱包_白板手绘.png"
+        },
+        {
+          "name": "coin",
+          "path": "assets/icons/金币堆_白板手绘.png"
+        }
+      ],
+      "audio": {
+        "path": "audio/scene_04.mp3",
+        "duration_ms": 10344,
+        "word_timestamps": null
+      }
+    },
+    {
+      "id": "scene_05",
+      "type": "explain",
+      "text": "ETF最大的特点就是追踪指数。比如你买了一份芯片ETF，它就会按照芯片指数的成分股，帮你同比例买入所有芯片龙头股。",
+      "duration": 9.528,
+      "character": {
+        "type": "pointing",
+        "path": null
+      },
+      "icon": {
+        "name": "stock_up",
+        "path": "assets/icons/上升趋势箭头_白板手绘.png"
+      },
+      "extra_icons": [
+        {
+          "name": "report",
+          "path": "assets/icons/财务报表_白板手绘.png"
+        },
+        {
+          "name": "money",
+          "path": "assets/icons/金币堆_白板手绘.png"
+        },
+        {
+          "name": "growth",
+          "path": "assets/icons/火箭上升_白板手绘.png"
+        }
+      ],
+      "audio": {
+        "path": "audio/scene_05.mp3",
+        "duration_ms": 9528,
+        "word_timestamps": null
+      }
+    },
+    {
+      "id": "scene_06",
+      "type": "example",
+      "text": "举个例子，假设芯片指数里包含中芯国际占30%、韦尔股份占20%等等，你买一万块的芯片ETF，就相当于自动帮你分配好了这些股票。",
+      "duration": 10.8,
+      "character": {
+        "type": "neutral",
+        "path": null
+      },
+      "icon": {
+        "name": "chart",
+        "path": "assets/icons/K线图_白板手绘.png"
+      },
+      "extra_icons": [
+        {
+          "name": "yuan",
+          "path": "assets/icons/人民币符号_白板手绘.png"
+        },
+        {
+          "name": "dollar",
+          "path": "assets/icons/美元符号_白板手绘.png"
+        },
+        {
+          "name": "report",
+          "path": "assets/icons/财务报表_白板手绘.png"
+        }
+      ],
+      "audio": {
+        "path": "audio/scene_06.mp3",
+        "duration_ms": 10800,
+        "word_timestamps": null
+      }
+    },
+    {
+      "id": "scene_07",
+      "type": "comparison",
+      "text": "那ETF和普通基金有啥区别呢？最大的不同是交易方式！ETF可以像股票一样，在股市开盘时间随时买卖，价格实时变动。",
+      "duration": 9.912,
+      "character": {
+        "type": "pointing",
+        "path": null
+      },
+      "icon": {
+        "name": "trade",
+        "path": "assets/icons/套利_白板手绘.png"
+      },
+      "extra_icons": [
+        {
+          "name": "risk",
+          "path": "assets/icons/风险管理_白板手绘.png"
+        },
+        {
+          "name": "growth",
+          "path": "assets/icons/火箭上升_白板手绘.png"
+        },
+        {
+          "name": "trend",
+          "path": "assets/icons/股票投资_白板手绘.png"
+        }
+      ],
+      "audio": {
+        "path": "audio/scene_07.mp3",
+        "duration_ms": 9912,
+        "word_timestamps": null
+      }
+    },
+    {
+      "id": "scene_08",
+      "type": "comparison",
+      "text": "而普通基金呢，每天只能按照收盘后的净值申购赎回，要等一两天才能到账。ETF就方便多了，买卖都是秒级成交！",
+      "duration": 9.24,
+      "character": {
+        "type": "happy",
+        "path": null
+      },
+      "icon": {
+        "name": "exchange",
+        "path": "assets/icons/纽交所_白板手绘.png"
+      },
+      "extra_icons": [
+        {
+          "name": "risk",
+          "path": "assets/icons/风险管理_白板手绘.png"
+        },
+        {
+          "name": "growth",
+          "path": "assets/icons/火箭上升_白板手绘.png"
+        },
+        {
+          "name": "trend",
+          "path": "assets/icons/股票投资_白板手绘.png"
+        }
+      ],
+      "audio": {
+        "path": "audio/scene_08.mp3",
+        "duration_ms": 9240,
+        "word_timestamps": null
+      }
+    },
+    {
+      "id": "scene_09",
+      "type": "explain",
+      "text": "而且ETF的费用也更低。管理费通常只有百分之零点五左右，买卖只需要付股票佣金，没有申购赎回费，长期投资能省不少钱！",
+      "duration": 9.312,
+      "character": {
+        "type": "happy",
+        "path": null
+      },
+      "icon": {
+        "name": "yuan",
+        "path": "assets/icons/人民币符号_白板手绘.png"
+      },
+      "extra_icons": [
+        {
+          "name": "report",
+          "path": "assets/icons/财务报表_白板手绘.png"
+        },
+        {
+          "name": "money",
+          "path": "assets/icons/金币堆_白板手绘.png"
+        },
+        {
+          "name": "growth",
+          "path": "assets/icons/火箭上升_白板手绘.png"
+        }
+      ],
+      "audio": {
+        "path": "audio/scene_09.mp3",
+        "duration_ms": 9312,
+        "word_timestamps": null
+      }
+    },
+    {
+      "id": "scene_10",
+      "type": "example",
+      "text": "现在市场上的ETF种类可丰富了！有跟踪大盘的，像沪深300、中证500；有行业主题的，像新能源、医药、白酒；还有跨境的，像纳斯达克、恒生科技。",
+      "duration": 12.672,
+      "character": {
+        "type": "pointing",
+        "path": null
+      },
+      "icon": {
+        "name": "stock",
+        "path": "assets/icons/股票投资_白板手绘.png"
+      },
+      "extra_icons": [
+        {
+          "name": "yuan",
+          "path": "assets/icons/人民币符号_白板手绘.png"
+        },
+        {
+          "name": "dollar",
+          "path": "assets/icons/美元符号_白板手绘.png"
+        },
+        {
+          "name": "report",
+          "path": "assets/icons/财务报表_白板手绘.png"
+        }
+      ],
+      "audio": {
+        "path": "audio/scene_10.mp3",
+        "duration_ms": 12672,
+        "word_timestamps": null
+      }
+    },
+    {
+      "id": "scene_11",
+      "type": "summary",
+      "text": "总结一下，ETF就是一种可以像股票一样交易的指数基金，帮你一键分散投资，费用低，交易灵活，特别适合普通投资者！",
+      "duration": 9.312,
+      "character": {
+        "type": "happy",
+        "path": null
+      },
+      "icon": {
+        "name": "growth",
+        "path": "assets/icons/火箭上升_白板手绘.png"
+      },
+      "extra_icons": [
+        {
+          "name": "exchange",
+          "path": "assets/icons/纽交所_白板手绘.png"
+        },
+        {
+          "name": "trend",
+          "path": "assets/icons/股票投资_白板手绘.png"
+        },
+        {
+          "name": "money",
+          "path": "assets/icons/金币堆_白板手绘.png"
+        }
+      ],
+      "audio": {
+        "path": "audio/scene_11.mp3",
+        "duration_ms": 9312,
+        "word_timestamps": null
+      }
+    },
+    {
+      "id": "scene_12",
+      "type": "cta",
+      "text": "如果你也想了解更多投资知识，记得关注秒懂金融，咱们下期见！",
+      "duration": 4.824,
+      "character": {
+        "type": "waving",
+        "path": null
+      },
+      "icon": {
+        "name": "trend",
+        "path": "assets/icons/股票投资_白板手绘.png"
+      },
+      "extra_icons": [
+        {
+          "name": "stock",
+          "path": "assets/icons/股票投资_白板手绘.png"
+        },
+        {
+          "name": "money",
+          "path": "assets/icons/金币堆_白板手绘.png"
+        }
+      ],
+      "audio": {
+        "path": "audio/scene_12.mp3",
+        "duration_ms": 4824,
+        "word_timestamps": null
+      }
+    }
+  ],
+  "audio": {
+    "files": {
+      "scene_01": {
+        "path": "audio/scene_01.mp3",
+        "duration_ms": 6336,
+        "word_timestamps": null
+      },
+      "scene_02": {
+        "path": "audio/scene_02.mp3",
+        "duration_ms": 3216,
+        "word_timestamps": null
+      },
+      "scene_03": {
+        "path": "audio/scene_03.mp3",
+        "duration_ms": 7728,
+        "word_timestamps": null
+      },
+      "scene_04": {
+        "path": "audio/scene_04.mp3",
+        "duration_ms": 10344,
+        "word_timestamps": null
+      },
+      "scene_05": {
+        "path": "audio/scene_05.mp3",
+        "duration_ms": 9528,
+        "word_timestamps": null
+      },
+      "scene_06": {
+        "path": "audio/scene_06.mp3",
+        "duration_ms": 10800,
+        "word_timestamps": null
+      },
+      "scene_07": {
+        "path": "audio/scene_07.mp3",
+        "duration_ms": 9912,
+        "word_timestamps": null
+      },
+      "scene_08": {
+        "path": "audio/scene_08.mp3",
+        "duration_ms": 9240,
+        "word_timestamps": null
+      },
+      "scene_09": {
+        "path": "audio/scene_09.mp3",
+        "duration_ms": 9312,
+        "word_timestamps": null
+      },
+      "scene_10": {
+        "path": "audio/scene_10.mp3",
+        "duration_ms": 12672,
+        "word_timestamps": null
+      },
+      "scene_11": {
+        "path": "audio/scene_11.mp3",
+        "duration_ms": 9312,
+        "word_timestamps": null
+      },
+      "scene_12": {
+        "path": "audio/scene_12.mp3",
+        "duration_ms": 4824,
+        "word_timestamps": null
+      }
+    },
+    "total_duration_ms": 103224
+  }
+}

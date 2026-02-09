@@ -1,0 +1,19 @@
+# Output files
+output/
+
+# Large assets
+素材.zip
+
+# Dependencies
+node_modules/
+remotion/node_modules/
+
+# System files
+.DS_Store
+
+# Environment (keep .env for defaults, ignore local overrides)
+.env.local
+
+# Temporary files
+*.log
+*.tmp
