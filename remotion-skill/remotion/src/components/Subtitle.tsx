@@ -189,6 +189,11 @@ export const Subtitle: React.FC<{
 
   const rise = interpolate(local, [0, enter], [18, 0], { extrapolateRight: "clamp" });
 
+  // Bounce micro-effect on entrance: scale 0.97 → 1.02 → 1
+  const bounceScale = interpolate(local, [0, 6, 12, 18], [0.97, 1.03, 0.99, 1], {
+    extrapolateRight: "clamp",
+  });
+
   const fontSize = style === "compact" ? 34 : 38;
   const revealFrames = Math.min(Math.max(14, Math.round(page.replace(/\s/g, "").length * 1.05)), Math.round(pageDur * 0.45));
   const visibleChars = Math.floor(interpolate(local, [0, revealFrames], [0, page.length], { extrapolateRight: "clamp" }));
@@ -200,8 +205,8 @@ export const Subtitle: React.FC<{
         position: "absolute",
         left: layout.padding.horizontal,
         right: layout.padding.horizontal,
-        bottom: layout.watermark.bottom + layout.watermark.fontSize + 26,
-        transform: `translateY(${rise}px)`,
+        bottom: 100,
+        transform: `translateY(${rise}px) scale(${bounceScale})`,
         opacity,
         pointerEvents: "none",
       }}

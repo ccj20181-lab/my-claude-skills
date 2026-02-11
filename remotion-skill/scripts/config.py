@@ -6,6 +6,7 @@ Configuration management for Miaodong Finance Video Generator
 import os
 from pathlib import Path
 from dataclasses import dataclass, field
+from datetime import datetime
 from typing import List, Optional
 
 # Base paths
@@ -13,6 +14,13 @@ SKILL_ROOT = Path(__file__).parent.parent
 ASSETS_DIR = SKILL_ROOT / "assets"
 REMOTION_DIR = SKILL_ROOT / "remotion"
 OUTPUT_DIR = SKILL_ROOT / "output"
+OUTPUT_BASE = Path.home() / "Desktop" / "秒懂金融学院" / "视频输出"
+
+
+def get_output_dir(topic: str, base: Optional[Path] = None) -> Path:
+    """生成路径: ~/Desktop/秒懂金融学院/视频输出/{主题名}/"""
+    safe_topic = "".join(c for c in topic if c not in r'\/:*?"<>|')
+    return (base or OUTPUT_BASE) / safe_topic.strip()
 REFERENCES_DIR = SKILL_ROOT / "references"
 
 
@@ -49,6 +57,61 @@ CHARACTERS_DIR = ASSETS_DIR / "characters"
 ICONS_DIR = ASSETS_DIR / "icons"
 BACKGROUNDS_DIR = ASSETS_DIR / "backgrounds"
 LOGO_PATH = ASSETS_DIR / "logo.png"
+
+
+def build_icon_index() -> dict:
+    """Scan assets/icons/ directory and build stem → filename mapping."""
+    index = {}
+    if ICONS_DIR.exists():
+        for f in ICONS_DIR.iterdir():
+            if f.is_file() and f.suffix.lower() in (".png", ".jpg", ".jpeg", ".svg", ".webp"):
+                # Use stem without extension as key
+                stem = f.stem
+                # Remove trailing " 1" duplicates (prefer the one without suffix)
+                if stem.endswith(" 1") and (ICONS_DIR / f"{stem[:-2]}{f.suffix}").exists():
+                    continue
+                index[stem] = f.name
+    return index
+
+
+ICON_INDEX = build_icon_index()
+
+# Semantic keyword → icon name mapping for richer asset matching
+ICON_KEYWORDS = {
+    "期货": ["期货合约", "套利", "风险管理", "K线图", "合同文件"],
+    "股票": ["股票投资", "K线图", "上升趋势箭头", "股票证书", "图表分析"],
+    "基金": ["基金定投", "公募基金", "私募基金", "投资", "分红派息"],
+    "债券": ["债券", "债券证书", "合同文件", "银行建筑", "国债"],
+    "利率": ["银行建筑", "人民币符号", "上升趋势箭头", "加息降息", "央行logo"],
+    "杠杆": ["火箭上升", "风险管理", "K线图", "止损", "天平秤"],
+    "合约": ["合同文件", "期货合约", "签名笔", "印章"],
+    "风险": ["风险管理", "盾牌保护", "止损", "天平秤", "保险保障"],
+    "投资": ["投资", "股票投资", "资产配置", "投资回报率", "财富图标"],
+    "银行": ["银行建筑", "人民币纸币", "信用卡", "ATM机", "银行卡"],
+    "通胀": ["通货膨胀", "人民币符号", "购买力", "CPI指数"],
+    "央行": ["央行logo", "货币政策", "加息降息", "银行建筑"],
+    "IPO": ["IPO上市", "股票证书", "华尔街标志", "上升趋势箭头"],
+    "房产": ["房产投资", "房价", "房子建筑", "贷款"],
+    "黄金": ["黄金金条", "白银", "钻石宝石", "保险箱"],
+    "外汇": ["汇率", "外汇储备", "美元符号", "英镑符号", "日元符号"],
+    "区块链": ["区块链", "比特币符号", "以太坊符号", "数字货币"],
+    "退休": ["退休规划", "储蓄", "时间价值", "复利"],
+    "税务": ["税务", "财务报表", "计算器", "关税"],
+    "保险": ["保险保障", "盾牌保护", "保险箱", "合同文件"],
+    "理财": ["资产配置", "财商教育", "预算管理", "收入来源"],
+    "农民": ["购物车", "钱包", "供需关系"],
+    "工厂": ["工厂", "齿轮机械", "供需关系"],
+    "科技": ["笔记本电脑", "服务器", "数据库", "网络连接"],
+    "贸易": ["关税", "世界地图", "握手合作", "包裹快递"],
+    "消费": ["购物车", "信用卡", "消费升级", "手机支付"],
+    "储蓄": ["储蓄", "钱包", "保险箱", "金币堆"],
+    "债务": ["债务", "贷款", "破产", "赤字"],
+    "收益": ["盈余", "上升趋势箭头", "投资回报率", "分红派息"],
+    "亏损": ["赤字", "下降趋势箭头", "破产", "熊市"],
+    "牛市": ["上升趋势箭头", "火箭上升", "股票投资"],
+    "熊市": ["熊市", "下降趋势箭头", "止损"],
+    "周期": ["周期波浪图", "周期理论", "时钟", "沙漏"],
+}
 
 
 @dataclass
@@ -239,10 +302,27 @@ def get_character_path(character_type: str) -> Path:
 
 
 def get_icon_path(icon_name: str) -> Optional[Path]:
-    """Get the full path for an icon image"""
+    """Get the full path for an icon image, with ICON_INDEX fallback."""
+    # 1. Try legacy ICONS dict first
     filename = ICONS.get(icon_name)
     if filename:
-        return ICONS_DIR / filename
+        p = ICONS_DIR / filename
+        if p.exists():
+            return p
+
+    # 2. Try ICON_INDEX (stem-based lookup)
+    # Direct stem match
+    for stem, fname in ICON_INDEX.items():
+        if stem == icon_name or icon_name in stem:
+            p = ICONS_DIR / fname
+            if p.exists():
+                return p
+
+    # 3. Try partial match with _白板手绘 suffix
+    candidate = f"{icon_name}_白板手绘"
+    if candidate in ICON_INDEX:
+        return ICONS_DIR / ICON_INDEX[candidate]
+
     return None
 
 

@@ -293,6 +293,7 @@ class MiniMaxTTS:
         with open(meta_path, "w", encoding="utf-8") as f:
             json.dump({
                 "text": text,
+                "text_hash": hashlib.md5(text.encode()).hexdigest(),  # 文本哈希用于验证
                 "duration_ms": duration_ms,
                 "word_timestamps": word_timestamps,
                 "voice_id": self.config.voice_id

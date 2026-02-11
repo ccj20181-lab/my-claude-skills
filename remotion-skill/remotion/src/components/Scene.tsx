@@ -21,7 +21,7 @@ import { TitleText } from "./TextBubble";
 import { Transition } from "./Transitions";
 import { Subtitle } from "./Subtitle";
 import { IconCloud } from "./IconCloud";
-import { HostAvatar } from "./HostAvatar";
+import { Character } from "./Character";
 import { HandDraw } from "./HandDraw";
 import type { SceneMeta } from "../types/scene";
 
@@ -45,6 +45,7 @@ export const Scene: React.FC<SceneProps> = ({
 
   const sceneStyle = SCENE_STYLES[data.type];
   const { layout } = whiteboardTheme;
+  const zones = (layout as any).zones;
 
   const renderBackdropIcon = () => {
     const iconPath = data.icon?.path;
@@ -93,8 +94,9 @@ export const Scene: React.FC<SceneProps> = ({
     const float = Math.sin(frame / 18) * 6;
     const breathe = 1 + Math.sin(frame / 80) * 0.01;
 
-    // Title scenes get a centered icon; others get a larger hero.
+    // Title scenes get a centered icon; others use zones.hero.centerY.
     const isTitle = data.type === "title";
+    const heroTop = zones?.hero?.centerY ?? 480;
     const style: React.CSSProperties = isTitle
       ? {
           left: "50%",
@@ -105,9 +107,9 @@ export const Scene: React.FC<SceneProps> = ({
         }
       : {
           left: "50%",
-          top: data.type === "hook" ? 330 : 320,
+          top: heroTop - 150,
           transform: `translateX(-50%) translateY(${float}px) rotate(${(1 - scale) * -7}deg) scale(${(0.9 + scale * 0.14) * breathe})`,
-          width: data.type === "hook" || data.type === "cta" ? 700 : 640,
+          width: Math.min(data.type === "hook" || data.type === "cta" ? 700 : 640, layout.width - layout.padding.horizontal * 2),
         };
 
     return (
@@ -171,9 +173,14 @@ export const Scene: React.FC<SceneProps> = ({
 
   const transitionType =
     data.type === "hook" ? "zoom" :
+    data.type === "title" ? "scaleFromCenter" :
     data.type === "question" ? "slideUp" :
+    data.type === "explain" ? "slideLeft" :
+    data.type === "analogy" ? "slideRight" :
+    data.type === "example" ? "flipY" :
     data.type === "comparison" ? "wipe" :
-    data.type === "cta" ? "slideLeft" :
+    data.type === "summary" ? "slideDown" :
+    data.type === "cta" ? "scaleFromCenter" :
     "fade";
 
   const extraIcons = (data.extra_icons || []).filter((i) => i?.path);
@@ -184,14 +191,14 @@ export const Scene: React.FC<SceneProps> = ({
   const driftY = Math.cos(frame / 160) * 5;
 
   return (
-    <Transition type={transitionType as any} duration={12}>
+    <Transition type={transitionType as any} duration={12} durationInFrames={durationInFrames}>
       <AbsoluteFill
         style={{
           backgroundColor: sceneStyle.backgroundColor,
         }}
       >
-        {/* Background pattern for whiteboard effect */}
-        <div
+        {/* Background pattern for whiteboard effect - REMOVED for clean white look */}
+        {/* <div
           style={{
             position: "absolute",
             inset: 0,
@@ -204,16 +211,12 @@ export const Scene: React.FC<SceneProps> = ({
               Math.cos(frame / 140) * 10
             )}px`,
           }}
-        />
+        /> */}
 
         {/* Branding (logo + watermark) */}
         <Branding />
 
-        {/* Large low-opacity icon backdrop to increase material presence */}
-        {renderBackdropIcon()}
-
-        {/* Icon cloud (aux visuals) */}
-        <IconCloud sceneType={data.type} icons={extraIcons} />
+        {/* Backdrop and IconCloud removed for clean visual design */}
 
         {/* Hero icons */}
         <div
@@ -226,29 +229,47 @@ export const Scene: React.FC<SceneProps> = ({
           {data.type === "comparison" ? renderComparisonIcons() : renderPrimaryIcon()}
         </div>
 
-        {/* Hand-drawn emphasis for key scenes */}
-        {data.type === "hook" || data.type === "summary" ? (
-          <div style={{ position: "absolute", left: "50%", top: 330, transform: "translateX(-50%)" }}>
-            <HandDraw type="circle" color={sceneStyle.accentColor} strokeWidth={6} duration={22} />
-          </div>
-        ) : null}
+        {/* Hand-drawn emphasis — prefer LLM-specified visual_action, fallback to type map */}
+        {(() => {
+          const handDrawMap: Record<string, "circle" | "underline" | "arrow" | "checkmark" | "cross" | "bracket"> = {
+            hook: "circle",
+            question: "underline",
+            analogy: "arrow",
+            example: "checkmark",
+            comparison: "cross",
+            summary: "circle",
+            cta: "underline",
+            explain: "arrow",
+          };
+          const drawType = data.visual_action && data.visual_action !== "none"
+            ? data.visual_action
+            : handDrawMap[data.type];
+          if (!drawType) return null;
+          const heroY = zones?.hero?.centerY ?? 480;
+          return (
+            <div style={{ position: "absolute", left: "50%", top: heroY - 60, transform: "translateX(-50%)" }}>
+              <HandDraw type={drawType as any} color={sceneStyle.accentColor} strokeWidth={6} duration={22} />
+            </div>
+          );
+        })()}
 
-        {/* Host avatar */}
-        <HostAvatar
-          emotion={data.character?.type}
+        {/* Host avatar / Character */}
+        <Character
+          type={data.character?.type}
           position={data.type === "cta" ? "bottom-right" : "bottom-left"}
-          size={260}
+          size={350}
+          durationInFrames={durationInFrames}
         />
 
-        {/* Title scene text */}
-        {showTitleLayout ? (
+        {/* Title scene text - REMOVED per user request for ONLY subtitles */}
+        {/* {showTitleLayout ? (
           <div style={{ position: "absolute", left: 0, right: 0, top: 180 }}>
             <TitleText title={meta.title} subtitle={data.text} />
           </div>
-        ) : null}
+        ) : null} */}
 
         {/* Subtitle (single source of text to avoid duplicates) */}
-        {!showTitleLayout && showSubtitle ? (
+        {showSubtitle ? (
           <Subtitle
             text={data.text}
             durationInFrames={durationInFrames}

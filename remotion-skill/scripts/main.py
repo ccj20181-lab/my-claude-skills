@@ -24,13 +24,46 @@ sys.path.insert(0, str(Path(__file__).parent))
 
 from config import (
     GenerationConfig, VideoConfig, TTSConfig,
-    SKILL_ROOT, REMOTION_DIR, OUTPUT_DIR,
+    SKILL_ROOT, REMOTION_DIR, OUTPUT_DIR, OUTPUT_BASE,
     validate_config,
-    get_icon_path
+    get_icon_path,
+    get_output_dir,
 )
 from content_generator import generate_script, save_script, load_script, VideoScript
 from tts_minimax import MiniMaxTTS
 from asset_matcher import match_all_scenes, check_assets_availability
+
+
+def save_script_document(script: VideoScript, output_dir: Path):
+    """生成口播文案文档"""
+    doc_path = output_dir / f"{script.topic}_口播文案.md"
+    lines = [
+        f"# {script.title}",
+        f"",
+        f"**主题**: {script.topic}  ",
+        f"**总时长**: 约{script.total_duration}秒  ",
+        f"**场景数**: {len(script.scenes)}  ",
+        f"",
+        f"---",
+        f"",
+    ]
+    for i, scene in enumerate(script.scenes, 1):
+        scene_type_names = {
+            "hook": "开场钩子", "title": "标题引入", "question": "核心问题",
+            "explain": "概念解释", "analogy": "生活类比", "example": "案例说明",
+            "comparison": "对比分析", "summary": "要点总结", "cta": "结尾引导",
+        }
+        type_name = scene_type_names.get(scene.type, scene.type)
+        lines.append(f"## 场景 {i}: {type_name}")
+        lines.append(f"")
+        lines.append(f"> {scene.text}")
+        lines.append(f"")
+        lines.append(f"*时长: ~{scene.duration}秒 | 表情: {scene.character}*")
+        lines.append(f"")
+
+    with open(doc_path, "w", encoding="utf-8") as f:
+        f.write("\n".join(lines))
+    print(f"  ✓ 口播文案已保存: {doc_path}")
 
 
 def parse_args():
@@ -132,6 +165,61 @@ def _is_probably_mp3(path: Path) -> bool:
     return len(head) >= 2 and head[0] == 0xFF and (head[1] & 0xE0) == 0xE0
 
 
+def sync_script_to_audio(script: VideoScript, audio_dir: Path) -> VideoScript:
+    """
+    如果音频已存在，用音频元数据中的文本覆盖脚本文本，
+    确保字幕和口播完全一致。
+
+    这解决了 TTS 缓存导致的问题：
+    - 第一次运行：生成脚本 A → TTS 合成音频 A
+    - 第二次运行：生成脚本 B → TTS 因缓存复用音频 A
+    - 如果不同步，字幕会显示 B 的文本，但口播是 A 的内容
+
+    Args:
+        script: 当前生成的脚本
+        audio_dir: 音频文件目录
+
+    Returns:
+        同步后的脚本（文本与已存在音频一致）
+    """
+    if not audio_dir.exists():
+        return script
+
+    updated_scenes = []
+    sync_count = 0
+
+    for scene in script.scenes:
+        meta_path = audio_dir / f"{scene.id}.json"
+        mp3_path = audio_dir / f"{scene.id}.mp3"
+
+        # 只有当音频和元数据都存在时才同步
+        if meta_path.exists() and mp3_path.exists() and _is_probably_mp3(mp3_path):
+            try:
+                with open(meta_path, "r", encoding="utf-8") as f:
+                    meta = json.load(f)
+
+                cached_text = meta.get("text")
+                if cached_text and cached_text != scene.text:
+                    # 用音频元数据中的实际口播文本覆盖脚本文本
+                    old_text = scene.text
+                    scene.text = cached_text
+                    sync_count += 1
+                    print(f"  [同步] {scene.id}: 使用已存在音频的文本")
+                    print(f"    原文本: {old_text[:30]}...")
+                    print(f"    音频文本: {cached_text[:30]}...")
+            except (json.JSONDecodeError, IOError) as e:
+                # 如果元数据损坏，不强制同步，保留原文本
+                print(f"  ⚠️ 警告: {scene.id}.json 读取失败: {e}")
+
+        updated_scenes.append(scene)
+
+    if sync_count > 0:
+        print(f"  ✓ 已同步 {sync_count} 个场景的文本与音频")
+
+    script.scenes = updated_scenes
+    return script
+
+
 async def generate_audio(script: VideoScript, output_dir: Path, config: TTSConfig) -> dict:
     """Generate audio for all scenes"""
     print("\n📢 Phase 2: 生成语音...")
@@ -204,29 +292,6 @@ def prepare_remotion_data(
             print(f"  ✓ 复制素材: {icon_path.name}")
         return f"assets/icons/{icon_path.name}"
 
-    def pick_extra_icon_names(scene_type: str, primary_icon_name: Optional[str]) -> list:
-        # Deterministic + simple: enough density without complex NLP.
-        candidates_by_type = {
-            "hook": ["stock_up", "money", "chart", "company"],
-            "title": ["chart", "trend", "stock"],
-            "question": ["risk", "company", "chart"],
-            "explain": ["report", "money", "growth"],
-            "analogy": ["company", "wallet", "coin"],
-            "example": ["yuan", "dollar", "report"],
-            "comparison": ["risk", "growth", "trend"],
-            "summary": ["exchange", "trend", "money"],
-            "cta": ["trend", "stock", "money"],
-        }
-        names = candidates_by_type.get(scene_type, ["money", "stock", "chart"])
-        # Remove primary, keep unique, limit.
-        out = []
-        for n in names:
-            if primary_icon_name and n == primary_icon_name:
-                continue
-            if n not in out:
-                out.append(n)
-        return out[:4]
-
     for asset in assets:
         # Primary icon
         add_icon_to_public(asset.icon_path)
@@ -251,6 +316,17 @@ def prepare_remotion_data(
             if audio_duration_ms > 0:
                 duration = audio_duration_ms / 1000  # Convert ms to seconds
 
+        # Use icon_keywords for more precise icon matching
+        icon_name = asset.icon_name
+        icon_path = asset.icon_path
+        if hasattr(scene, 'icon_keywords') and scene.icon_keywords:
+            for kw in scene.icon_keywords:
+                p = get_icon_path(kw)
+                if p:
+                    icon_name = kw
+                    icon_path = p
+                    break
+
         scene_data = {
             "id": scene.id,
             "type": scene.type,
@@ -261,21 +337,15 @@ def prepare_remotion_data(
                 "path": None  # 使用 SVG 火柴人
             },
             "icon": {
-                "name": asset.icon_name,
-                "path": add_icon_to_public(asset.icon_path)
-            } if asset.icon_name else None
+                "name": icon_name,
+                "path": add_icon_to_public(icon_path)
+            } if icon_name else None
         }
 
-        # Extra icons to increase visual density (icon cloud).
-        primary_name = asset.icon_name
-        extra_icons = []
-        for name in pick_extra_icon_names(scene.type, primary_name):
-            p = get_icon_path(name)
-            rel = add_icon_to_public(p) if p else None
-            if rel:
-                extra_icons.append({"name": name, "path": rel})
-        if extra_icons:
-            scene_data["extra_icons"] = extra_icons
+        # Pass visual_action from LLM to Remotion
+        visual_action = getattr(scene, 'visual_action', None)
+        if visual_action:
+            scene_data["visual_action"] = visual_action
 
         # Add audio timing if available
         if audio_data and scene.id in audio_data.get("files", {}):
@@ -345,8 +415,13 @@ async def main():
     print("=" * 50)
 
     # Setup configuration
-    # Normalize to absolute path so Remotion render output path is stable regardless of cwd.
-    output_dir = Path(args.output).expanduser().resolve()
+    # Smart output path: use get_output_dir when no explicit --output is given.
+    if args.output == OUTPUT_DIR:
+        # User did not specify --output; use smart path based on topic.
+        topic_for_path = args.topic or "untitled"
+        output_dir = get_output_dir(topic_for_path).expanduser().resolve()
+    else:
+        output_dir = Path(args.output).expanduser().resolve()
     output_dir.mkdir(parents=True, exist_ok=True)
 
     # Determine which voice_id to use.
@@ -389,14 +464,62 @@ async def main():
         print(f"\n📄 加载脚本: {args.script}")
         script = load_script(args.script)
     else:
-        print(f"\n📝 Phase 1: 生成脚本 - 主题: {args.topic}")
-        script = generate_script(
-            topic=args.topic,
-            target_duration=args.duration,
-            style=args.style
+        # Auto-reuse existing script when audio files already exist
+        # to guarantee subtitle text matches the spoken audio.
+        existing_script_path = output_dir / "script.json"
+        existing_audio_dir = output_dir / "audio"
+        has_existing_audio = (
+            existing_audio_dir.exists()
+            and any(existing_audio_dir.glob("*.mp3"))
         )
 
-        # Save script
+        # Check if existing script topic matches the requested topic.
+        # If topics differ, we must regenerate everything to avoid
+        # mismatched audio/subtitle content.
+        topic_matches = True
+        if existing_script_path.exists() and args.topic:
+            try:
+                existing_script = load_script(existing_script_path)
+                if existing_script.topic != args.topic:
+                    topic_matches = False
+                    print(f"\n⚠️ 主题不匹配: 已有脚本为「{existing_script.topic}」，当前请求为「{args.topic}」")
+                    print(f"   自动清理旧脚本和音频，重新生成...")
+                    # Clean up old script and audio to force regeneration
+                    existing_script_path.unlink(missing_ok=True)
+                    if existing_audio_dir.exists():
+                        shutil.rmtree(existing_audio_dir)
+                    has_existing_audio = False
+            except Exception:
+                topic_matches = False
+
+        if existing_script_path.exists() and has_existing_audio and topic_matches and args.skip_tts:
+            print(f"\n📄 检测到已有脚本和音频（主题一致），自动复用以保持字幕与口播一致")
+            print(f"   脚本: {existing_script_path}")
+            script = load_script(existing_script_path)
+        elif existing_script_path.exists() and has_existing_audio and topic_matches and not args.skip_tts:
+            # Even when not skipping TTS, if audio already exists we should
+            # reuse the script to keep everything in sync.  Regenerating
+            # the script would create a mismatch with the cached audio.
+            print(f"\n📄 检测到已有脚本和音频（主题一致），自动复用以保持一致性")
+            print(f"   (如需重新生成脚本，请先删除 {existing_script_path})")
+            script = load_script(existing_script_path)
+        else:
+            print(f"\n📝 Phase 1: 生成脚本 - 主题: {args.topic}")
+            script = generate_script(
+                topic=args.topic,
+                target_duration=args.duration,
+                style=args.style
+            )
+
+    # 关键修复：无论脚本来源，都与音频元数据强制同步
+    # 这确保了字幕文本与实际口播音频永远一致
+    if not args.dry_run:
+        audio_dir = output_dir / "audio"
+        if audio_dir.exists() and any(audio_dir.glob("*.mp3")):
+            print("\n🔄 检测到已存在音频，同步脚本文本...")
+            script = sync_script_to_audio(script, audio_dir)
+
+        # 保存（可能已被同步的）脚本
         script_path = output_dir / "script.json"
         save_script(script, script_path)
         print(f"  ✓ 脚本已保存: {script_path}")
@@ -479,6 +602,9 @@ async def main():
             print(f"\n✅ 完成！视频已生成: {video_path}")
     else:
         print("\n⏭️ 跳过视频渲染")
+
+    # Phase 4: 保存口播文案
+    save_script_document(script, output_dir)
 
     print("\n" + "=" * 50)
     print("📁 输出目录:", output_dir)

@@ -13,11 +13,13 @@ import {
 } from "remotion";
 import { whiteboardTheme } from "../theme/whiteboard";
 
-type TransitionType = "fade" | "slideLeft" | "slideUp" | "wipe" | "zoom";
+type TransitionType = "fade" | "slideLeft" | "slideRight" | "slideUp" | "slideDown" | "wipe" | "zoom" | "flipY" | "scaleFromCenter";
 
 interface TransitionProps {
   type: TransitionType;
   duration?: number;
+  exitDuration?: number;
+  durationInFrames?: number;
   direction?: "in" | "out";
   children: React.ReactNode;
 }
@@ -25,64 +27,123 @@ interface TransitionProps {
 export const Transition: React.FC<TransitionProps> = ({
   type,
   duration = 15,
+  exitDuration = 10,
+  durationInFrames,
   direction = "in",
   children,
 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
-  const progress =
-    direction === "in"
-      ? interpolate(frame, [0, duration], [0, 1], {
-          extrapolateRight: "clamp",
-        })
-      : interpolate(frame, [0, duration], [1, 0], {
-          extrapolateRight: "clamp",
-        });
-
-  const springProgress = spring({
-    frame: direction === "in" ? frame : duration - frame,
-    fps,
-    config: { damping: 15, stiffness: 100 },
+  // Entrance progress
+  const enterProgress = interpolate(frame, [0, duration], [0, 1], {
+    extrapolateRight: "clamp",
   });
 
-  const getTransformStyle = (): React.CSSProperties => {
+  const enterSpring = spring({
+    frame,
+    fps,
+    config: { damping: 14, stiffness: 120 },
+  });
+
+  // Exit progress (fade/slide out at end of scene)
+  let exitProgress = 1; // 1 = fully visible
+  if (durationInFrames && durationInFrames > 0) {
+    const exitStart = Math.max(0, durationInFrames - exitDuration);
+    // Ensure strictly monotonically increasing inputRange
+    if (exitStart < durationInFrames) {
+      exitProgress = interpolate(frame, [exitStart, durationInFrames], [1, 0], {
+        extrapolateLeft: "clamp",
+        extrapolateRight: "clamp",
+      });
+    }
+  }
+
+  const getEnterStyle = (): React.CSSProperties => {
     switch (type) {
       case "fade":
         return {
-          opacity: progress,
+          opacity: enterProgress,
         };
 
       case "slideLeft":
         return {
-          opacity: progress,
-          transform: `translateX(${(1 - springProgress) * 100}px)`,
+          opacity: enterProgress,
+          transform: `translateX(${(1 - enterSpring) * 100}px)`,
+        };
+
+      case "slideRight":
+        return {
+            opacity: enterProgress,
+            transform: `translateX(${-(1 - enterSpring) * 100}px)`,
         };
 
       case "slideUp":
         return {
-          opacity: progress,
-          transform: `translateY(${(1 - springProgress) * 50}px)`,
+          opacity: enterProgress,
+          transform: `translateY(${(1 - enterSpring) * 50}px)`,
         };
 
+      case "slideDown":
+          return {
+              opacity: enterProgress,
+              transform: `translateY(${-(1 - enterSpring) * 50}px)`,
+          };
+
       case "wipe":
+        // Diagonal wipe from top-left
         return {
-          clipPath: `inset(0 ${(1 - progress) * 100}% 0 0)`,
+          clipPath: `polygon(0 0, ${enterProgress * 150}% 0, ${enterProgress * 150 - 50}% 100%, 0 100%)`,
         };
 
       case "zoom":
         return {
-          opacity: progress,
-          transform: `scale(${0.9 + springProgress * 0.1})`,
+          opacity: enterProgress,
+          transform: `scale(${0.9 + enterSpring * 0.1})`,
+        };
+
+      case "flipY":
+        return {
+          opacity: enterProgress,
+          transform: `perspective(1000px) rotateY(${(1 - enterSpring) * 90}deg)`,
+        };
+
+      case "scaleFromCenter":
+        return {
+          opacity: enterProgress,
+          transform: `scale(${0.7 + enterSpring * 0.3})`,
+          transformOrigin: "center center",
         };
 
       default:
-        return { opacity: progress };
+        return { opacity: enterProgress };
     }
   };
 
+  const enterStyle = getEnterStyle();
+
+  // Combine enter and exit: multiply opacity, add exit slide
+  const exitSlideY = exitProgress < 1
+    ? interpolate(exitProgress, [0, 1], [-20, 0], {
+        extrapolateLeft: "clamp",
+        extrapolateRight: "clamp",
+      })
+    : 0;
+
+  const combinedStyle: React.CSSProperties = {
+    ...enterStyle,
+    opacity: ((enterStyle.opacity as number) ?? 1) * exitProgress,
+  };
+
+  // Add exit slide to existing transform if present
+  if (exitProgress < 1 && enterStyle.transform) {
+    combinedStyle.transform = `${enterStyle.transform} translateY(${exitSlideY}px)`;
+  } else if (exitProgress < 1) {
+    combinedStyle.transform = `translateY(${exitSlideY}px)`;
+  }
+
   return (
-    <AbsoluteFill style={getTransformStyle()}>
+    <AbsoluteFill style={combinedStyle}>
       {children}
     </AbsoluteFill>
   );

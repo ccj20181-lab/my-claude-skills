@@ -6,7 +6,7 @@
 export const whiteboardTheme = {
   // Colors
   colors: {
-    background: "#FCFCFA",
+    background: "#FFFFFF",
     surface: "#FFFFFF",
     text: {
       primary: "#1A202C",
@@ -97,14 +97,23 @@ export const whiteboardTheme = {
       vertical: 80,
     },
     logo: {
-      width: 120,
-      top: 40,
-      right: 40,
+      width: 76,
+      top: 36,
+      right: 36,
     },
     watermark: {
       bottom: 40,
-      right: 40,
-      fontSize: 28,
+      left: 40,
+      fontSize: 24,
+    },
+    // Canvas zone system (rule-of-thirds + golden ratio)
+    zones: {
+      brand:      { top: 0,    height: 100 },
+      decoration: { top: 100,  height: 180 },
+      hero:       { top: 280,  height: 500, centerY: 480 },
+      character:  { top: 780,  height: 320 },
+      subtitle:   { top: 1100, height: 260 },
+      footer:     { top: 1360, height: 80 },
     },
   },
 };

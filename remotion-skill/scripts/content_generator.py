@@ -21,6 +21,8 @@ class Scene:
     duration: int
     character: str
     icon: Optional[str] = None
+    visual_action: Optional[str] = None
+    icon_keywords: Optional[List[str]] = None
     notes: Optional[str] = None
 
 
@@ -98,17 +100,37 @@ SYSTEM_PROMPT = """你是"秒懂金融"的首席内容策划师，专门为小�
       "duration": 10,
       "character": "confused",
       "icon": "stock_up",
+      "visual_action": "circle",
+      "icon_keywords": ["期货合约", "杠杆", "K线图"],
       "notes": "可选的制作备注"
     }
   ]
 }
 ```
 
+### visual_action 字段说明（手绘动画效果）
+根据场景内容的语义选择最匹配的手绘动画：
+- circle: 用于强调核心概念、重要数字（如"利率3.5%"）
+- underline: 用于强调关键术语、定义（如"什么是IPO"）
+- arrow: 用于因果关系、流程说明（如"买入→持有→卖出"）
+- checkmark: 用于总结要点、确认事实（如"记住这三点"）
+- bracket: 用于补充说明、旁注（如"换句话说..."）
+- highlight: 用于数据对比、关键数据（如"涨了200%"）
+- none: 不需要手绘效果的场景
+
+### icon_keywords 字段说明
+提供2-3个精准的中文关键词，用于匹配白板手绘风格素材图标。
+关键词应与场景内容直接相关，例如：
+- 讲解股票时：["股票投资", "K线图", "上升趋势箭头"]
+- 讲解风险时：["风险管理", "盾牌保护", "止损"]
+- 讲解银行时：["银行建筑", "人民币纸币", "信用卡"]
+
 请确保：
 1. 总时长控制在目标时长附近（允许±15秒浮动）
 2. 每个场景的文案要适合口播，语速约每秒3-4个字
 3. 选择与内容匹配的角色情绪和图标
 4. 场景之间要有逻辑连贯性
+5. 每个场景都要提供 visual_action 和 icon_keywords 字段
 """
 
 
@@ -116,7 +138,7 @@ def generate_script(
     topic: str,
     target_duration: int = 150,
     style: str = "detailed",
-    model: str = "claude-sonnet-4-20250514"
+    model: str = "claude-opus-4-6-thinking"
 ) -> VideoScript:
     """
     Generate a video script for the given topic
@@ -146,17 +168,35 @@ def generate_script(
 
 请直接输出JSON格式的脚本，不要有其他文字说明。"""
 
-    response = client.messages.create(
-        model=model,
-        max_tokens=4096,
-        system=SYSTEM_PROMPT,
-        messages=[
+    # Build API call parameters
+    api_params = {
+        "model": model,
+        "max_tokens": 16000,
+        "messages": [
+            {"role": "user", "content": SYSTEM_PROMPT + "\n\n" + user_prompt}
+        ],
+    }
+
+    # Thinking models require budget_tokens and don't support system parameter
+    if "thinking" in model:
+        api_params["thinking"] = {
+            "type": "enabled",
+            "budget_tokens": 10000
+        }
+    else:
+        api_params["system"] = SYSTEM_PROMPT
+        api_params["messages"] = [
             {"role": "user", "content": user_prompt}
         ]
-    )
 
-    # Extract JSON from response
-    response_text = response.content[0].text
+    response = client.messages.create(**api_params)
+
+    # Extract text from response (thinking models have multiple content blocks)
+    response_text = ""
+    for block in response.content:
+        if block.type == "text":
+            response_text = block.text
+            break
 
     # Try to parse JSON (handle potential markdown code blocks)
     json_text = response_text
@@ -165,7 +205,28 @@ def generate_script(
     elif "```" in response_text:
         json_text = response_text.split("```")[1].split("```")[0]
 
-    script_data = json.loads(json_text.strip())
+    json_text = json_text.strip()
+
+    # Robust JSON parsing with fallback repair
+    import re
+    try:
+        script_data = json.loads(json_text)
+    except json.JSONDecodeError:
+        # Try to fix common JSON issues from LLM output
+        # Remove trailing commas before } or ]
+        fixed = re.sub(r',\s*([}\]])', r'\1', json_text)
+        # Remove control characters
+        fixed = re.sub(r'[\x00-\x1f\x7f]', ' ', fixed)
+        # Fix unescaped quotes inside strings (best effort)
+        try:
+            script_data = json.loads(fixed)
+        except json.JSONDecodeError:
+            # Last resort: extract the JSON object with regex
+            match = re.search(r'\{[\s\S]*\}', fixed)
+            if match:
+                script_data = json.loads(match.group())
+            else:
+                raise ValueError(f"Failed to parse JSON from LLM response:\n{json_text[:500]}")
 
     # Convert to VideoScript object
     scenes = [
@@ -176,6 +237,8 @@ def generate_script(
             duration=s["duration"],
             character=s.get("character", "neutral"),
             icon=s.get("icon"),
+            visual_action=s.get("visual_action"),
+            icon_keywords=s.get("icon_keywords"),
             notes=s.get("notes")
         )
         for s in script_data["scenes"]
@@ -208,6 +271,8 @@ def load_script(input_path: str) -> VideoScript:
             duration=s["duration"],
             character=s.get("character", "neutral"),
             icon=s.get("icon"),
+            visual_action=s.get("visual_action"),
+            icon_keywords=s.get("icon_keywords"),
             notes=s.get("notes")
         )
         for s in data["scenes"]

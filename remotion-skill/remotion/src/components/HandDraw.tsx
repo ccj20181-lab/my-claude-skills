@@ -12,7 +12,7 @@ import {
 } from "remotion";
 
 interface HandDrawProps {
-  type: "underline" | "circle" | "arrow" | "checkmark" | "cross";
+  type: "underline" | "circle" | "arrow" | "checkmark" | "cross" | "bracket";
   color?: string;
   strokeWidth?: number;
   delay?: number;
@@ -113,6 +113,22 @@ export const HandDraw: React.FC<HandDrawProps> = ({
               strokeLinecap="round"
               strokeDasharray={85}
               strokeDashoffset={85 * (1 - progress)}
+            />
+          </svg>
+        );
+
+      case "bracket":
+        return (
+          <svg width="160" height="100" viewBox="0 0 160 100">
+            <path
+              d="M 10 10 L 10 90 M 10 10 L 30 10 M 10 90 L 30 90 M 150 10 L 150 90 M 150 10 L 130 10 M 150 90 L 130 90"
+              stroke={color}
+              strokeWidth={strokeWidth}
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeDasharray={320}
+              strokeDashoffset={320 * (1 - progress)}
             />
           </svg>
         );

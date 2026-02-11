@@ -4,11 +4,20 @@
  */
 
 import React from "react";
-import { Img, staticFile } from "remotion";
+import { Img, staticFile, useCurrentFrame, interpolate } from "remotion";
 import { whiteboardTheme } from "../theme/whiteboard";
 
 export const Branding: React.FC = () => {
   const { layout, colors, typography } = whiteboardTheme;
+  const frame = useCurrentFrame();
+
+  // 20-frame fade-in for both logo and watermark
+  const logoOpacity = interpolate(frame, [0, 20], [0, 0.85], {
+    extrapolateRight: "clamp",
+  });
+  const watermarkOpacity = interpolate(frame, [0, 20], [0, 0.6], {
+    extrapolateRight: "clamp",
+  });
 
   return (
     <>
@@ -22,19 +31,21 @@ export const Branding: React.FC = () => {
           width: layout.logo.width,
           height: "auto",
           objectFit: "contain",
+          opacity: logoOpacity,
         }}
       />
 
-      {/* 右下角水印 */}
+      {/* 左下角水印 */}
       <div
         style={{
           position: "absolute",
           bottom: layout.watermark.bottom,
-          right: layout.watermark.right,
+          left: (layout.watermark as any).left,
           fontSize: layout.watermark.fontSize,
           fontFamily: typography.fontFamily.body,
           fontWeight: typography.fontWeight.medium,
           color: colors.text.muted,
+          opacity: watermarkOpacity,
         }}
       >
         @秒懂金融

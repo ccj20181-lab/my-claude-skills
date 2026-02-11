@@ -40,6 +40,7 @@ export interface Scene {
   character: CharacterInfo;
   icon: IconInfo | null;
   extra_icons?: IconInfo[];
+  visual_action?: "circle" | "underline" | "arrow" | "checkmark" | "bracket" | "highlight" | "none";
   audio?: AudioInfo;
 }
 
@@ -70,7 +71,7 @@ export const SCENE_STYLES: Record<SceneType, {
   textSize: number;
 }> = {
   hook: {
-    backgroundColor: "#FFFDF7",
+    backgroundColor: "#FFFFFF",
     accentColor: "#FF6B35",
     textSize: 48,
   },
@@ -80,7 +81,7 @@ export const SCENE_STYLES: Record<SceneType, {
     textSize: 64,
   },
   question: {
-    backgroundColor: "#FFF5F5",
+    backgroundColor: "#FFFFFF",
     accentColor: "#E53E3E",
     textSize: 44,
   },
@@ -90,27 +91,27 @@ export const SCENE_STYLES: Record<SceneType, {
     textSize: 40,
   },
   analogy: {
-    backgroundColor: "#F0FFF4",
+    backgroundColor: "#FFFFFF",
     accentColor: "#38A169",
     textSize: 42,
   },
   example: {
-    backgroundColor: "#FFFFF0",
+    backgroundColor: "#FFFFFF",
     accentColor: "#D69E2E",
     textSize: 40,
   },
   comparison: {
-    backgroundColor: "#FAF5FF",
+    backgroundColor: "#FFFFFF",
     accentColor: "#805AD5",
     textSize: 40,
   },
   summary: {
-    backgroundColor: "#EBF8FF",
+    backgroundColor: "#FFFFFF",
     accentColor: "#2B6CB0",
     textSize: 44,
   },
   cta: {
-    backgroundColor: "#FFF5F7",
+    backgroundColor: "#FFFFFF",
     accentColor: "#D53F8C",
     textSize: 48,
   },
