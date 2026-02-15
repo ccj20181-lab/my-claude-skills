@@ -1,0 +1,220 @@
+{
+  "meta": {
+    "topic": "对冲基金",
+    "title": "富豪专享：两分钟看懂对冲基金",
+    "fps": 30,
+    "width": 1080,
+    "height": 1440
+  },
+  "scenes": [
+    {
+      "id": "scene_01",
+      "type": "hook",
+      "text": "无论股市暴跌还是暴涨，为什么富人的财富总能像被保护罩护住一样纹丝不动？传说中只赚不赔的对冲基金到底是如何运作的？",
+      "duration": 9.05,
+      "image": "images/scene_01.png",
+      "visual_action": "none",
+      "audio": {
+        "path": "audio/scene_01.mp3",
+        "duration_ms": 8928,
+        "word_timestamps": null
+      }
+    },
+    {
+      "id": "scene_02",
+      "type": "title",
+      "text": "揭秘华尔街之狼：两分钟彻底看懂对冲基金。",
+      "duration": 3.94,
+      "image": "images/scene_02.png",
+      "visual_action": "none",
+      "audio": {
+        "path": "audio/scene_02.mp3",
+        "duration_ms": 3816,
+        "word_timestamps": null
+      }
+    },
+    {
+      "id": "scene_03",
+      "type": "concept",
+      "text": "对冲基金并非简单的‘对冲’，而是一种利用各种金融工具和复杂的交易策略，在降低风险的同时追求绝对高收益的私人投资工具。",
+      "duration": 10.32,
+      "image": "images/scene_03.png",
+      "visual_action": "none",
+      "audio": {
+        "path": "audio/scene_03.mp3",
+        "duration_ms": 10200,
+        "word_timestamps": null
+      }
+    },
+    {
+      "id": "scene_04",
+      "type": "detail_1",
+      "text": "普通基金像是在骑单车，只能顺着方向前进，依靠天时吃饭；而对冲基金就像是驾驶全地形越野车，既配备油门加速，也拥有刹车系统来控制回撤。",
+      "duration": 11.52,
+      "image": "images/scene_04.png",
+      "visual_action": "none",
+      "audio": {
+        "path": "audio/scene_04.mp3",
+        "duration_ms": 11400,
+        "word_timestamps": null
+      }
+    },
+    {
+      "id": "scene_05",
+      "type": "detail_1",
+      "text": "基金经理使用做空、杠杆和衍生品等高级工具。做空意味着在价格下跌中也能获利，杠杆则是用小资金撬动大资金来放大收益。",
+      "duration": 10.85,
+      "image": "images/scene_05.png",
+      "visual_action": "none",
+      "audio": {
+        "path": "audio/scene_05.mp3",
+        "duration_ms": 10728,
+        "word_timestamps": null
+      }
+    },
+    {
+      "id": "scene_06",
+      "type": "analogy",
+      "text": "打个比方，普通基金是单纯赌哪匹马会赢，全靠运气；而对冲基金则是同时下注这匹马会赢，那匹马会输，无论比赛结果如何，都力求稳赚不赔。",
+      "duration": 11.78,
+      "image": "images/scene_06.png",
+      "visual_action": "none",
+      "audio": {
+        "path": "audio/scene_06.mp3",
+        "duration_ms": 11664,
+        "word_timestamps": null
+      }
+    },
+    {
+      "id": "scene_07",
+      "type": "example",
+      "text": "以索罗斯的量子基金为例，当识别到亚洲货币估值过高时，他们并非单纯买入股票，而是通过高杠杆借入巨量货币抛售，迫使货币贬值从而从差价中疯狂套利。",
+      "duration": 12.26,
+      "image": "images/scene_07.png",
+      "visual_action": "none",
+      "audio": {
+        "path": "audio/scene_07.mp3",
+        "duration_ms": 12144,
+        "word_timestamps": null
+      }
+    },
+    {
+      "id": "scene_08",
+      "type": "example",
+      "text": "再看电影《大空头》，几位独行侠在房市疯狂上涨时，敏锐地察觉到泡沫即将破裂，果断买入信用违约互换，即在房子着火时才能生效的巨额保险。",
+      "duration": 11.35,
+      "image": "images/scene_08.png",
+      "visual_action": "none",
+      "audio": {
+        "path": "audio/scene_08.mp3",
+        "duration_ms": 11232,
+        "word_timestamps": null
+      }
+    },
+    {
+      "id": "scene_09",
+      "type": "data",
+      "text": "数据显示，2023年全球排名前20的对冲基金经理人平均年薪高达惊人的八亿美元。哪怕市场熔断，他们依然能依靠复杂的数学模型收割全球财富。",
+      "duration": 11.64,
+      "image": "images/scene_09.png",
+      "visual_action": "none",
+      "audio": {
+        "path": "audio/scene_09.mp3",
+        "duration_ms": 11520,
+        "word_timestamps": null
+      }
+    },
+    {
+      "id": "scene_10",
+      "type": "summary",
+      "text": "总结一下，对冲基金是富人的游戏场，利用做空和杠杆等手段穿越牛熊。它不仅需要极高的专业知识，更是一场胆识与智慧并存的残酷金融博弈。",
+      "duration": 11.45,
+      "image": "images/scene_10.png",
+      "visual_action": "none",
+      "audio": {
+        "path": "audio/scene_10.mp3",
+        "duration_ms": 11328,
+        "word_timestamps": null
+      }
+    },
+    {
+      "id": "scene_11",
+      "type": "cta",
+      "text": "建立顶级富人思维，欢迎阅读我的新书《秒懂金融》。",
+      "duration": 4.01,
+      "image": "images/scene_11.png",
+      "visual_action": "none",
+      "audio": {
+        "path": "audio/scene_11.mp3",
+        "duration_ms": 4008,
+        "word_timestamps": null
+      }
+    }
+  ],
+  "audio": {
+    "files": {
+      "scene_01": {
+        "path": "audio/scene_01.mp3",
+        "duration_ms": 8928,
+        "word_timestamps": null
+      },
+      "scene_02": {
+        "path": "audio/scene_02.mp3",
+        "duration_ms": 3816,
+        "word_timestamps": null
+      },
+      "scene_03": {
+        "path": "audio/scene_03.mp3",
+        "duration_ms": 10200,
+        "word_timestamps": null
+      },
+      "scene_04": {
+        "path": "audio/scene_04.mp3",
+        "duration_ms": 11400,
+        "word_timestamps": null
+      },
+      "scene_05": {
+        "path": "audio/scene_05.mp3",
+        "duration_ms": 10728,
+        "word_timestamps": null
+      },
+      "scene_06": {
+        "path": "audio/scene_06.mp3",
+        "duration_ms": 11664,
+        "word_timestamps": null
+      },
+      "scene_07": {
+        "path": "audio/scene_07.mp3",
+        "duration_ms": 12144,
+        "word_timestamps": null
+      },
+      "scene_08": {
+        "path": "audio/scene_08.mp3",
+        "duration_ms": 11232,
+        "word_timestamps": null
+      },
+      "scene_09": {
+        "path": "audio/scene_09.mp3",
+        "duration_ms": 11520,
+        "word_timestamps": null
+      },
+      "scene_10": {
+        "path": "audio/scene_10.mp3",
+        "duration_ms": 11328,
+        "word_timestamps": null
+      },
+      "scene_11": {
+        "path": "audio/scene_11.mp3",
+        "duration_ms": 4008,
+        "word_timestamps": null
+      }
+    },
+    "total_duration_ms": 106968
+  },
+  "book_outro": {
+    "enabled": true,
+    "image": "book_cover.jpg",
+    "text": "系统学习，欢迎阅读我的新书《秒懂金融》。",
+    "duration": 3.0
+  }
+}
